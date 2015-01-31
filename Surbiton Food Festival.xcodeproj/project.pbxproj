@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
+		AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC481A7CEC8A007241DC /* AppDelegate.m */; };
+		AEF8BC4C1A7CEC8A007241DC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC4B1A7CEC8A007241DC /* FirstViewController.m */; };
+		AEF8BC4F1A7CEC8A007241DC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC4E1A7CEC8A007241DC /* SecondViewController.m */; };
+		AEF8BC521A7CEC8A007241DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC501A7CEC8A007241DC /* Main.storyboard */; };
+		AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC531A7CEC8A007241DC /* Images.xcassets */; };
+		AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC551A7CEC8A007241DC /* LaunchScreen.xib */; };
+		AEF8BC631A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEF8BC5D1A7CEC8A007241DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEF8BC381A7CEC8A007241DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEF8BC3F1A7CEC8A007241DC;
+			remoteInfo = "Surbiton Food Festival";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AEF8BC401A7CEC8A007241DC /* Surbiton Food Festival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surbiton Food Festival.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF8BC441A7CEC8A007241DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF8BC451A7CEC8A007241DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEF8BC471A7CEC8A007241DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AEF8BC481A7CEC8A007241DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEF8BC4A1A7CEC8A007241DC /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		AEF8BC4B1A7CEC8A007241DC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		AEF8BC4D1A7CEC8A007241DC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		AEF8BC4E1A7CEC8A007241DC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		AEF8BC511A7CEC8A007241DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEF8BC531A7CEC8A007241DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AEF8BC561A7CEC8A007241DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AEF8BC5C1A7CEC8A007241DC /* Surbiton Food FestivalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Surbiton Food FestivalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF8BC611A7CEC8A007241DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Surbiton_Food_FestivalTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEF8BC3D1A7CEC8A007241DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF8BC591A7CEC8A007241DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEF8BC371A7CEC8A007241DC = {
+			isa = PBXGroup;
+			children = (
+				AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */,
+				AEF8BC5F1A7CEC8A007241DC /* Surbiton Food FestivalTests */,
+				AEF8BC411A7CEC8A007241DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AEF8BC411A7CEC8A007241DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEF8BC401A7CEC8A007241DC /* Surbiton Food Festival.app */,
+				AEF8BC5C1A7CEC8A007241DC /* Surbiton Food FestivalTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
+			isa = PBXGroup;
+			children = (
+				AEF8BC471A7CEC8A007241DC /* AppDelegate.h */,
+				AEF8BC481A7CEC8A007241DC /* AppDelegate.m */,
+				AEF8BC4A1A7CEC8A007241DC /* FirstViewController.h */,
+				AEF8BC4B1A7CEC8A007241DC /* FirstViewController.m */,
+				AEF8BC4D1A7CEC8A007241DC /* SecondViewController.h */,
+				AEF8BC4E1A7CEC8A007241DC /* SecondViewController.m */,
+				AEF8BC501A7CEC8A007241DC /* Main.storyboard */,
+				AEF8BC531A7CEC8A007241DC /* Images.xcassets */,
+				AEF8BC551A7CEC8A007241DC /* LaunchScreen.xib */,
+				AEF8BC431A7CEC8A007241DC /* Supporting Files */,
+			);
+			path = "Surbiton Food Festival";
+			sourceTree = "<group>";
+		};
+		AEF8BC431A7CEC8A007241DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEF8BC441A7CEC8A007241DC /* Info.plist */,
+				AEF8BC451A7CEC8A007241DC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEF8BC5F1A7CEC8A007241DC /* Surbiton Food FestivalTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */,
+				AEF8BC601A7CEC8A007241DC /* Supporting Files */,
+			);
+			path = "Surbiton Food FestivalTests";
+			sourceTree = "<group>";
+		};
+		AEF8BC601A7CEC8A007241DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEF8BC611A7CEC8A007241DC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEF8BC3F1A7CEC8A007241DC /* Surbiton Food Festival */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF8BC661A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food Festival" */;
+			buildPhases = (
+				AEF8BC3C1A7CEC8A007241DC /* Sources */,
+				AEF8BC3D1A7CEC8A007241DC /* Frameworks */,
+				AEF8BC3E1A7CEC8A007241DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Surbiton Food Festival";
+			productName = "Surbiton Food Festival";
+			productReference = AEF8BC401A7CEC8A007241DC /* Surbiton Food Festival.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEF8BC5B1A7CEC8A007241DC /* Surbiton Food FestivalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF8BC691A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food FestivalTests" */;
+			buildPhases = (
+				AEF8BC581A7CEC8A007241DC /* Sources */,
+				AEF8BC591A7CEC8A007241DC /* Frameworks */,
+				AEF8BC5A1A7CEC8A007241DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEF8BC5E1A7CEC8A007241DC /* PBXTargetDependency */,
+			);
+			name = "Surbiton Food FestivalTests";
+			productName = "Surbiton Food FestivalTests";
+			productReference = AEF8BC5C1A7CEC8A007241DC /* Surbiton Food FestivalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEF8BC381A7CEC8A007241DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Spirit of Seething";
+				TargetAttributes = {
+					AEF8BC3F1A7CEC8A007241DC = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					AEF8BC5B1A7CEC8A007241DC = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = AEF8BC3F1A7CEC8A007241DC;
+					};
+				};
+			};
+			buildConfigurationList = AEF8BC3B1A7CEC8A007241DC /* Build configuration list for PBXProject "Surbiton Food Festival" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEF8BC371A7CEC8A007241DC;
+			productRefGroup = AEF8BC411A7CEC8A007241DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEF8BC3F1A7CEC8A007241DC /* Surbiton Food Festival */,
+				AEF8BC5B1A7CEC8A007241DC /* Surbiton Food FestivalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEF8BC3E1A7CEC8A007241DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF8BC521A7CEC8A007241DC /* Main.storyboard in Resources */,
+				AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */,
+				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF8BC5A1A7CEC8A007241DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEF8BC3C1A7CEC8A007241DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF8BC4F1A7CEC8A007241DC /* SecondViewController.m in Sources */,
+				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
+				AEF8BC4C1A7CEC8A007241DC /* FirstViewController.m in Sources */,
+				AEF8BC461A7CEC8A007241DC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEF8BC581A7CEC8A007241DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF8BC631A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEF8BC5E1A7CEC8A007241DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEF8BC3F1A7CEC8A007241DC /* Surbiton Food Festival */;
+			targetProxy = AEF8BC5D1A7CEC8A007241DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AEF8BC501A7CEC8A007241DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEF8BC511A7CEC8A007241DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEF8BC551A7CEC8A007241DC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEF8BC561A7CEC8A007241DC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEF8BC641A7CEC8A007241DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AEF8BC651A7CEC8A007241DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEF8BC671A7CEC8A007241DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AEF8BC681A7CEC8A007241DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AEF8BC6A1A7CEC8A007241DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Surbiton Food FestivalTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Surbiton Food Festival.app/Surbiton Food Festival";
+			};
+			name = Debug;
+		};
+		AEF8BC6B1A7CEC8A007241DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Surbiton Food FestivalTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Surbiton Food Festival.app/Surbiton Food Festival";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEF8BC3B1A7CEC8A007241DC /* Build configuration list for PBXProject "Surbiton Food Festival" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF8BC641A7CEC8A007241DC /* Debug */,
+				AEF8BC651A7CEC8A007241DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEF8BC661A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food Festival" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF8BC671A7CEC8A007241DC /* Debug */,
+				AEF8BC681A7CEC8A007241DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AEF8BC691A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food FestivalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF8BC6A1A7CEC8A007241DC /* Debug */,
+				AEF8BC6B1A7CEC8A007241DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEF8BC381A7CEC8A007241DC /* Project object */;
+}
