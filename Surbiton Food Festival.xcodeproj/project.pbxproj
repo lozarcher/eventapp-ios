@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C11A8CBBB200B96570 /* EventBuilder.m */; };
+		AE18C4C51A8CBC3700B96570 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C41A8CBC3700B96570 /* Event.m */; };
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
 		AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC481A7CEC8A007241DC /* AppDelegate.m */; };
 		AEF8BC4C1A7CEC8A007241DC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC4B1A7CEC8A007241DC /* FirstViewController.m */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE18C4C01A8CBBB200B96570 /* EventBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventBuilder.h; sourceTree = "<group>"; };
+		AE18C4C11A8CBBB200B96570 /* EventBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBuilder.m; sourceTree = "<group>"; };
+		AE18C4C31A8CBC3700B96570 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		AE18C4C41A8CBC3700B96570 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		AEF8BC401A7CEC8A007241DC /* Surbiton Food Festival.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surbiton Food Festival.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF8BC441A7CEC8A007241DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEF8BC451A7CEC8A007241DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE18C4B71A8CB5F500B96570 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE18C4C01A8CBBB200B96570 /* EventBuilder.h */,
+				AE18C4C11A8CBBB200B96570 /* EventBuilder.m */,
+				AE18C4C31A8CBC3700B96570 /* Event.h */,
+				AE18C4C41A8CBC3700B96570 /* Event.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		AEF8BC371A7CEC8A007241DC = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +101,7 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AE18C4B71A8CB5F500B96570 /* Models */,
 				AEF8BC471A7CEC8A007241DC /* AppDelegate.h */,
 				AEF8BC481A7CEC8A007241DC /* AppDelegate.m */,
 				AEF8BC4A1A7CEC8A007241DC /* FirstViewController.h */,
@@ -226,8 +244,10 @@
 			files = (
 				AEF8BC4F1A7CEC8A007241DC /* SecondViewController.m in Sources */,
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
+				AE18C4C51A8CBC3700B96570 /* Event.m in Sources */,
 				AEF8BC4C1A7CEC8A007241DC /* FirstViewController.m in Sources */,
 				AEF8BC461A7CEC8A007241DC /* main.m in Sources */,
+				AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +369,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/loz/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +383,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/loz/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +446,7 @@
 				AEF8BC681A7CEC8A007241DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEF8BC691A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food FestivalTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +455,7 @@
 				AEF8BC6B1A7CEC8A007241DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

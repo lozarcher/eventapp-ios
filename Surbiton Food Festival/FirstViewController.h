@@ -10,7 +10,7 @@
 
 @interface FirstViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_events;
-    NSMutableData *_responseData;
+    NSString *storePath;
 }
 
 @property (weak,nonatomic) IBOutlet UITableView *tableView;

@@ -23,13 +23,38 @@
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
     
-    // Create the request.
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    storePath = [NSString stringWithFormat:@"%@/Events.plist", aCachesDirectory];
     
-    // Create url connection and fire request
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+    
+    NSError *parseError;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
+        NSError *readError;
+        NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
+        if (readError != nil) {
+            NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+        } else {
+            NSLog(@"Using cached data");
+            parseError = [self getEventsFromData:data];
+        }
+    }
 
+    if (_events == nil || parseError != nil) {
+        if (parseError != nil) {
+            NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
+            [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+        }
+        NSLog(@"Fetching data from URL");
+
+        // Create the request.
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            
+        // Create url connection and fire request
+        NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -69,17 +94,29 @@
     // so that we can append data to it in the didReceiveData method
     // Furthermore, this method is called each time there is a redirect so reinitializing it
     // also serves to clear it
-    _responseData = [[NSMutableData alloc] init];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     // Append the new data to the instance variable you declared
-    [_responseData appendData:data];
+    [self getEventsFromData:data];
+    [tableView reloadData];
+    
+
+    NSError* writeError;
+    [data writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
+    if (writeError != nil) {
+        NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
+    } else {
+        NSLog(@"Wrote to file %@", storePath);
+    }
+}
+
+-(NSError *)getEventsFromData:(NSData *)data {
     NSError *error = nil;
     NSArray *events = [EventBuilder eventsFromJSON:data error:&error];
     _events = events;
     NSLog(@"Events :%lu", (unsigned long)_events.count);
-    [tableView reloadData];
+    return error;
 }
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection
