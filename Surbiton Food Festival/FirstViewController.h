@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+    NSArray *_events;
+    NSMutableData *_responseData;
+}
 
+@property (weak,nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
