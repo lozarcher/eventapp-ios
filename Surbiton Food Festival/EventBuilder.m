@@ -21,8 +21,8 @@
     }
     
     NSMutableArray *events = [[NSMutableArray alloc] init];
-    NSDictionary *eventObject = [parsedObject valueForKey:@"events"];
-    NSArray *results = [eventObject valueForKey:@"data"];
+    //NSDictionary *eventObject = [parsedObject valueForKey:@"events"];
+    NSArray *results = [parsedObject valueForKey:@"data"];
     NSLog(@"Count %lu", (unsigned long)results.count);
     
     for (NSDictionary *eventDic in results) {

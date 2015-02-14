@@ -12,8 +12,8 @@
 @property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *desc;
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *end_time;
-@property (strong, nonatomic) NSString *start_time;
-@property (strong, nonatomic) NSString *cover;
+@property (strong, nonatomic) NSString *endTime;
+@property (strong, nonatomic) NSString *startTime;
+@property (strong, nonatomic) NSString *coverUrl;
 
 @end

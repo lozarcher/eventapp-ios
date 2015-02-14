@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface FirstViewController : UITableViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_events;
+    NSMutableDictionary *_eventDays;
     NSString *storePath;
 }
 
-@property (weak,nonatomic) IBOutlet UITableView *tableView;
+@property (retain,nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
