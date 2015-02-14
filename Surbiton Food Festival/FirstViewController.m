@@ -180,7 +180,7 @@
         for (Event *event in eventsForDay) {
             NSLog(@"Event %@", event.name);
         }
-        
+    }
 }
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection
