@@ -10,6 +10,6 @@
 
 @implementation Tweet
 
-@synthesize name;
+@synthesize name, text;
 
 @end

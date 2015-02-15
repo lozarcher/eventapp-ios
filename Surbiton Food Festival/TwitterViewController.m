@@ -108,14 +108,14 @@
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
     }
     
     // Cell text (event title)
     Tweet *tweet = [self getTweetForIndexPath:indexPath];
     NSLog(@"Cell label %@", [tweet name]);
     cell.textLabel.text = [tweet name];
-    
+    cell.detailTextLabel.text = [tweet text];
     return cell;
 }
 
