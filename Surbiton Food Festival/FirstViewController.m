@@ -19,6 +19,8 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     
+    _eventDays = [[NSMutableDictionary alloc] init];
+    _eventDayKeys = [[NSMutableArray alloc] init];
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor purpleColor];
@@ -73,12 +75,11 @@
 
 
 #pragma - markup TableView Delegate Methods
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSUInteger eventCount = _events.count;
-    if (eventCount != 0) {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSInteger numberOfDates = [_eventDayKeys count];
+    if (numberOfDates != 0) {
         self.tableView.backgroundView = nil;
-        return _events.count;
+        return [_eventDayKeys count];
     } else {
         // Display a message when the table is empty
         UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -97,20 +98,47 @@
     }
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSDate *sectionDate = [_eventDayKeys objectAtIndex:section];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"eee d MMMM"];
+    
+    NSString *stringFromDate = [formatter stringFromDate:sectionDate];
+    return stringFromDate;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSDate *date = [_eventDayKeys objectAtIndex:section];
+    NSUInteger eventCount = [[_eventDays objectForKey:date] count];
+    return eventCount;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    Event *event = [_events objectAtIndex:indexPath.row];
+
+    Event *event = [self getEventForIndexPath:indexPath];
     NSLog(@"Cell label %@", [event name]);
     cell.textLabel.text = [event name];
     return cell;
 }
 
+- (Event*)getEventForIndexPath:(NSIndexPath *)indexPath {
+    NSInteger section = indexPath.section;
+    NSInteger itemInSection = indexPath.row;
+    NSArray *eventsForDay = [_eventDays objectForKey:[_eventDayKeys objectAtIndex:section]];
+    Event *event = [eventsForDay objectAtIndex:itemInSection];
+    return event;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Event *event = [_events objectAtIndex:indexPath.row];
+    Event *event = [self getEventForIndexPath:indexPath];
+
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert" message:[NSString stringWithFormat:@"Selected Value is %@",[event name]] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     
     [alertView show];
@@ -150,7 +178,8 @@
 }
 
 -(void)createEventDays:(NSArray *)events {
-    [_eventDays initWithCapacity:0];
+    [_eventDayKeys removeAllObjects];
+    [_eventDays removeAllObjects];
     for (Event* event in events) {
         
         // (Step 1) Convert epoch time to SECONDS since 1970
@@ -172,6 +201,7 @@
             [eventsForDay addObject:event];
         }
         [_eventDays setObject:eventsForDay forKey:dateAtMidnight];
+        [_eventDayKeys addObject:dateAtMidnight];
     }
     
     for(id key in _eventDays) {

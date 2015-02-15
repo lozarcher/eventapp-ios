@@ -11,6 +11,7 @@
 @interface FirstViewController : UITableViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_events;
     NSMutableDictionary *_eventDays;
+    NSMutableArray *_eventDayKeys;
     NSString *storePath;
 }
 
