@@ -10,6 +10,7 @@
 #import "FirstViewController.h"
 #import "Event.h"
 #import "EventBuilder.h"
+#import "EventViewController.h"
 
 @implementation FirstViewController
 
@@ -122,9 +123,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
 
+    // Cell text (event title)
     Event *event = [self getEventForIndexPath:indexPath];
     NSLog(@"Cell label %@", [event name]);
     cell.textLabel.text = [event name];
+    
     return cell;
 }
 
@@ -139,9 +142,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Event *event = [self getEventForIndexPath:indexPath];
 
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert" message:[NSString stringWithFormat:@"Selected Value is %@",[event name]] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    
-    [alertView show];
+    EventViewController *eventDetail=[[EventViewController alloc]initWithNibName:@"EventViewController" bundle:[NSBundle mainBundle]];
+    eventDetail.event = event;
+    [self presentViewController:eventDetail
+                       animated:YES
+                     completion:nil];
 }
 
 #pragma mark NSURLConnection Delegate Methods
