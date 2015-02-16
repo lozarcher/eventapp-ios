@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventListViewController : UITableViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface EventListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_events;
     NSMutableDictionary *_eventDays;
     NSMutableArray *_eventDayKeys;
@@ -16,6 +16,7 @@
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
+@property (retain,nonatomic) UIRefreshControl *refreshControl;
 
 @end
 

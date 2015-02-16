@@ -1,61 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Chat-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController title="Chat" id="8rJ-Kc-sve" customClass="TwitterViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLl-oA-ZjB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="8rJ-Kc-sve" id="8yh-jd-fLp"/>
-                            <outlet property="delegate" destination="8rJ-Kc-sve" id="rFK-5y-z2g"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Chat" image="second" id="cPa-gy-q4n"/>
-                    <connections>
-                        <outlet property="tableView" destination="mLl-oA-ZjB" id="D08-KM-QvP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-                <tabBarItem title="Chat" image="second" id="w5d-b4-Fdd"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="360"/>
-        </scene>
         <!--Events-->
-        <scene sceneID="F4N-NQ-MIn">
+        <scene sceneID="G68-68-Msm">
             <objects>
-                <tableViewController title="Events" id="39b-B3-Ddw" customClass="EventListViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xZj-uE-quL">
+                <viewController id="D6S-uH-5WL" customClass="EventListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TNJ-lA-F3H"/>
+                        <viewControllerLayoutGuide type="bottom" id="EOy-O8-pOc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QDN-Hh-6oM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VgS-PU-RFI">
+                                <rect key="frame" x="0.0" y="20" width="600" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QDN-Hh-6oM" id="ZEo-7q-KeQ"/>
+                                    <outlet property="delegate" destination="QDN-Hh-6oM" id="rE3-kd-laj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ngX-D6-5yx">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ngX-D6-5yx" id="ogv-4W-adp">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="39b-B3-Ddw" id="cM7-Rm-qwo"/>
-                            <outlet property="delegate" destination="39b-B3-Ddw" id="Wgk-aA-xRh"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Events" selectedImage="first" id="FIo-Qm-fcc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Events" id="sxr-pE-wSr" userLabel="Events"/>
                     <connections>
-                        <outlet property="tableView" destination="xZj-uE-quL" id="GgR-qr-BVe"/>
+                        <outlet property="tableView" destination="VgS-PU-RFI" id="aas-TQ-pK5"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SM2-b5-HYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmb-2Z-482" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408" y="-927"/>
+            <point key="canvasLocation" x="715" y="-1061"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="ePQ-Hj-K2c">
+            <objects>
+                <viewController id="xsS-Vr-XEA" userLabel="Chat" customClass="TwitterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TPX-at-Lqf"/>
+                        <viewControllerLayoutGuide type="bottom" id="OIZ-n4-Exb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k9i-Oq-alm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="91K-yL-zS3">
+                                <rect key="frame" x="0.0" y="20" width="655" height="423"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xsS-Vr-XEA" id="EyR-ti-6wc"/>
+                                    <outlet property="delegate" destination="xsS-Vr-XEA" id="bnw-aC-OaT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" id="j0M-qv-jSL"/>
+                    <connections>
+                        <outlet property="tableView" destination="91K-yL-zS3" id="hsh-kO-OTM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NX0-jS-AFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="-266"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -68,8 +79,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="39b-B3-Ddw" kind="relationship" relationship="viewControllers" id="IKx-fE-5Ra"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="D6S-uH-5WL" kind="relationship" relationship="viewControllers" id="4uC-mB-6F9"/>
+                        <segue destination="xsS-Vr-XEA" kind="relationship" relationship="viewControllers" id="dji-h7-tLi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -77,8 +88,4 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
-    </resources>
 </document>
