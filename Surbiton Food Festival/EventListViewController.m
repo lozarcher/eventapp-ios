@@ -11,6 +11,7 @@
 #import "Event.h"
 #import "EventBuilder.h"
 #import "EventViewController.h"
+#import "EventViewCell.h"
 
 @implementation EventListViewController
 
@@ -117,17 +118,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
-    UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *simpleTableIdentifier = @"EventTableItem";
+    EventViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        [tableView registerNib:[UINib nibWithNibName:@"EventViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     }
 
     // Cell text (event title)
     Event *event = [self getEventForIndexPath:indexPath];
     NSLog(@"Cell label %@", [event name]);
-    cell.textLabel.text = [event name];
-    
+    [cell populateDataInCell:event];
     return cell;
 }
 
