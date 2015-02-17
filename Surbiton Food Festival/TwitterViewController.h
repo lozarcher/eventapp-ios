@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TweetView.h"
 
 @interface TwitterViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
         NSArray *_tweets;
