@@ -12,6 +12,8 @@
 @interface EventViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (retain,nonatomic) IBOutlet UILabel *eventTitleLabel;
+@property (retain,nonatomic) IBOutlet UILabel *eventDateLabel;
+@property (retain,nonatomic) IBOutlet UIImageView *eventImageView;
 
 @property (retain,nonatomic) Event *event;
 @end

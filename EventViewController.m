@@ -14,7 +14,7 @@
 
 @implementation EventViewController
 
-@synthesize eventTitleLabel, closeButton, event;
+@synthesize eventTitleLabel, eventDateLabel, eventImageView, closeButton, event;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +33,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
+    NSTimeInterval seconds = [event.startTime doubleValue]/1000;
+    NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"dd/MM/yyyy HH:mma";
+    NSString *startDateString = [formatter stringFromDate:startDate];
+    eventDateLabel.text = startDateString;
+    
     
 }
 

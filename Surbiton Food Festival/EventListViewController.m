@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     tableView.dataSource = self;
+    tableView.delegate = self;
     
     _eventDays = [[NSMutableDictionary alloc] init];
     _eventDayKeys = [[NSMutableArray alloc] init];
