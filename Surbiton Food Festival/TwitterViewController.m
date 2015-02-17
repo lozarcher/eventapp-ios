@@ -9,6 +9,7 @@
 #import "TwitterViewController.h"
 #import "Tweet.h"
 #import "TweetBuilder.h"
+#import <Social/Social.h>
 
 @interface TwitterViewController ()
 
@@ -29,6 +30,7 @@
     [self.refreshControl addTarget:self
                             action:@selector(refreshTweets:)
                   forControlEvents:UIControlEventValueChanged];
+    [tableView addSubview:self.refreshControl];
     
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     storePath = [NSString stringWithFormat:@"%@/Tweets.plist", aCachesDirectory];
@@ -193,4 +195,26 @@
         [self.refreshControl endRefreshing];
     }
 }
+
+- (IBAction)tweetButtonClicked:(id)sender {
+    NSLog(@"Tweet button clicked");
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet setInitialText:@"#surbiton "];
+        
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Sorry"
+                                  message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
 @end

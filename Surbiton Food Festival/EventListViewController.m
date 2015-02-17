@@ -30,6 +30,7 @@
     [self.refreshControl addTarget:self
                             action:@selector(refreshEvents:)
                   forControlEvents:UIControlEventValueChanged];
+    [tableView addSubview:self.refreshControl];
     
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     storePath = [NSString stringWithFormat:@"%@/Events.plist", aCachesDirectory];

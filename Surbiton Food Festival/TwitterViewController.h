@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TweetView.h"
 
 @interface TwitterViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
         NSArray *_tweets;
@@ -14,5 +15,7 @@
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *tweetButton;
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
+
 @end
