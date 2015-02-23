@@ -90,6 +90,36 @@
             </objects>
             <point key="canvasLocation" x="1050" y="-264"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="KqG-5E-7gp">
+            <objects>
+                <viewController id="A0K-DH-qd7" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Hl-Bn-zRw"/>
+                        <viewControllerLayoutGuide type="bottom" id="tkh-IY-caV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bnz-kH-WXv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a40-9s-iMi">
+                                <rect key="frame" x="-24" y="64" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="A0K-DH-qd7" id="itQ-ES-rsq"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="YzE-1l-TDA"/>
+                    <connections>
+                        <outlet property="mapView" destination="a40-9s-iMi" id="p8v-FT-lBW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udF-7B-2UY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="689"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -103,6 +133,7 @@
                     <connections>
                         <segue destination="D6S-uH-5WL" kind="relationship" relationship="viewControllers" id="4uC-mB-6F9"/>
                         <segue destination="xsS-Vr-XEA" kind="relationship" relationship="viewControllers" id="dji-h7-tLi"/>
+                        <segue destination="A0K-DH-qd7" kind="relationship" relationship="viewControllers" id="6jp-Dv-YVT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
