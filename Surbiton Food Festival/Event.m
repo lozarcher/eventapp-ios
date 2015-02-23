@@ -10,6 +10,6 @@
 
 @implementation Event
 
-@synthesize name, startTime;
+@synthesize name, startTime, desc, endTime, coverUrl, id;
 
 @end

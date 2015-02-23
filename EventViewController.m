@@ -14,7 +14,7 @@
 
 @implementation EventViewController
 
-@synthesize eventTitleLabel, eventDateLabel, eventImageView, closeButton, event;
+@synthesize eventTitleLabel, eventDateLabel, eventImageView, eventDescriptionLabel, closeButton, event;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,14 +33,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
+    eventDescriptionLabel.text = event.desc;
     NSTimeInterval seconds = [event.startTime doubleValue]/1000;
     NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"dd/MM/yyyy HH:mma";
-    NSString *startDateString = [formatter stringFromDate:startDate];
-    eventDateLabel.text = startDateString;
+    NSDate *endDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd/MM/yyyy HH:mma";
+    NSString *dateText = [dateFormatter stringFromDate:startDate];
+    if (endDate != nil) {
+        NSString *endDateString = [dateFormatter stringFromDate:endDate];
+        NSArray* dates = [[NSArray alloc] initWithObjects:dateText, endDateString, nil];
+        dateText = [dates componentsJoinedByString:@" - "];
+    }
+    eventDateLabel.text = dateText;
     
-    
+    if (![event.coverUrl isKindOfClass:[NSNull class]]) {
+
+        NSString *urlString = [[event coverUrl]  stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: urlString]];
+        NSLog(@"Event cover URL: %@", urlString);
+        NSLog(@"Event cover URL: %lu bytes", (unsigned long)[imageData length]);
+        eventImageView.frame = self.view.bounds;
+
+        dispatch_async(dispatch_get_global_queue(0,0), ^{
+            NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [event coverUrl]]];
+            if ( data == nil )
+                return;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [eventImageView setImage:[UIImage imageWithData: data]];
+            });
+         });
+    }
 }
 
 - (void)didReceiveMemoryWarning {

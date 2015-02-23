@@ -8,6 +8,8 @@
             <connections>
                 <outlet property="closeButton" destination="inR-fF-IvS" id="Q4Q-vk-yCf"/>
                 <outlet property="eventDateLabel" destination="1Ae-xI-Eha" id="Lpq-KA-QBQ"/>
+                <outlet property="eventDescriptionLabel" destination="Gmn-MM-PZl" id="o33-u7-nFe"/>
+                <outlet property="eventImageView" destination="OGy-TT-QuX" id="eU5-jr-JB0"/>
                 <outlet property="eventTitleLabel" destination="wcB-7E-gsq" id="Lvm-I9-tdq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,8 +25,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ae-xI-Eha">
-                    <rect key="frame" x="37" y="73" width="391" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Event Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ae-xI-Eha">
+                    <rect key="frame" x="37" y="61" width="391" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="391" id="Ou4-Ps-r82"/>
                         <constraint firstAttribute="height" constant="21" id="mnU-6M-g9g"/>
@@ -33,15 +35,15 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-TT-QuX">
-                    <rect key="frame" x="32" y="118" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-TT-QuX">
+                    <rect key="frame" x="37" y="225" width="240" height="128"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="240" id="9gm-iw-uAa"/>
                         <constraint firstAttribute="height" constant="128" id="Nte-Gc-5MJ"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-fF-IvS" userLabel="closeButton">
-                    <rect key="frame" x="0.0" y="261" width="600" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-fF-IvS" userLabel="closeButton">
+                    <rect key="frame" x="-143" y="361" width="600" height="30"/>
                     <state key="normal" title="CLOSE">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -49,6 +51,12 @@
                         <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="kt0-1h-Bax"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-MM-PZl">
+                    <rect key="frame" x="37" y="90" width="240" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
