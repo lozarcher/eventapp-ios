@@ -37,7 +37,7 @@
     storePath = [NSString stringWithFormat:@"%@/Events.plist", aCachesDirectory];
     
     //Delete the cache file
-    //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+    [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
     
     NSError *parseError;
     if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
@@ -111,6 +111,10 @@
     return stringFromDate;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 30;
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSDate *date = [_eventDayKeys objectAtIndex:section];
@@ -164,8 +168,6 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     // Append the new data to the instance variable you declared
     [self getEventsFromData:data];
-    [tableView reloadData];
-    
 
     NSError* writeError;
     [data writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
@@ -182,6 +184,7 @@
     _events = events;
     [self createEventDays:events];
     NSLog(@"Events :%lu", (unsigned long)_events.count);
+
     return error;
 }
 
@@ -205,11 +208,11 @@
         NSMutableArray *eventsForDay = [_eventDays objectForKey:dateAtMidnight];
         if (eventsForDay == nil) {
             eventsForDay = [NSMutableArray arrayWithObject:event];
+            [_eventDayKeys addObject:dateAtMidnight];
         } else {
             [eventsForDay addObject:event];
         }
         [_eventDays setObject:eventsForDay forKey:dateAtMidnight];
-        [_eventDayKeys addObject:dateAtMidnight];
     }
     
     for(id key in _eventDays) {
@@ -230,32 +233,19 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // The request is complete and data has been received
     // You can parse the stuff in your instance variable now
-    [self endRefresh];
+    //[self updateRefreshText];
+    [self.refreshControl endRefreshing];
     [tableView reloadData];
+
     
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     // The request has failed for some reason!
     // Check the error var
-    [self endRefresh];
-    NSLog(@"Error %@; %@", error, [error localizedDescription]);
-}
+    [self.refreshControl endRefreshing];
 
--(void)endRefresh {
-    // End the refreshing
-    if (self.refreshControl) {
-        
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"MMM d, h:mm a"];
-        NSString *title = [NSString stringWithFormat:@"Last update: %@", [formatter stringFromDate:[NSDate date]]];
-        NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:[UIColor whiteColor]
-                                                                    forKey:NSForegroundColorAttributeName];
-        NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:attrsDictionary];
-        self.refreshControl.attributedTitle = attributedTitle;
-        
-        [self.refreshControl endRefreshing];
-    }
+    NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
 @end
