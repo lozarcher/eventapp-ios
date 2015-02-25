@@ -27,6 +27,8 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, METERS_PER_MILE, METERS_PER_MILE);
     
     [mapView setRegion:viewRegion animated:YES];
+    
+    [self refreshVenues:self];
 }
 
 - (void)viewDidLoad {
@@ -38,27 +40,8 @@
     
     //Delete the cache file
     //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
-    NSError *parseError;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
-        NSError *readError;
-        NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
-        if (readError != nil) {
-            NSLog(@"Could not read from file: %@", [readError localizedDescription]);
-        } else {
-            NSLog(@"Using cached data");
-            parseError = [self getVenuesFromData:data];
-            [self plotVenues];
-        }
-    }
     
-    if (_venues == nil || parseError != nil) {
-        if (parseError != nil) {
-            NSLog(@"Local venue cache parse error: %@", [parseError localizedDescription]);
-            [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
-        }
-        [self refreshVenues:self];
-    }
-    // Do any additional setup after loading the view.
+    [self refreshVenues:self];
 }
 
 - (void)refreshVenues:(id)sender {
@@ -134,6 +117,25 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     // The request has failed for some reason!
     // Check the error var
+    NSError *parseError;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
+        NSError *readError;
+        NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
+        if (readError != nil) {
+            NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+        } else {
+            NSLog(@"Using cached data");
+            parseError = [self getVenuesFromData:data];
+            [self plotVenues];
+        }
+    }
+    
+    if (_venues == nil || parseError != nil) {
+        if (parseError != nil) {
+            NSLog(@"Local venue cache parse error: %@", [parseError localizedDescription]);
+            [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+        }
+    }
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 

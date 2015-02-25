@@ -17,9 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VgS-PU-RFI">
-                                <rect key="frame" x="0.0" y="20" width="600" height="533"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VgS-PU-RFI">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="2nw-Nk-f3k"/>
+                                    <constraint firstAttribute="width" constant="600" id="wuY-0f-bn2"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="QDN-Hh-6oM" id="ZEo-7q-KeQ"/>
                                     <outlet property="delegate" destination="QDN-Hh-6oM" id="rE3-kd-laj"/>
@@ -27,6 +31,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="VgS-PU-RFI" secondAttribute="trailing" constant="-16" id="8Vc-SH-Ocv"/>
+                            <constraint firstItem="VgS-PU-RFI" firstAttribute="bottom" secondItem="EOy-O8-pOc" secondAttribute="top" id="h5V-yH-BIb"/>
+                            <constraint firstItem="VgS-PU-RFI" firstAttribute="top" secondItem="TNJ-lA-F3H" secondAttribute="bottom" id="hWA-Hi-Twc"/>
+                            <constraint firstItem="VgS-PU-RFI" firstAttribute="leading" secondItem="QDN-Hh-6oM" secondAttribute="leadingMargin" constant="-16" id="kZn-yK-ooT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" id="sxr-pE-wSr" userLabel="Events"/>
                     <connections>
@@ -35,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmb-2Z-482" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="715" y="-1061"/>
+            <point key="canvasLocation" x="686" y="-1003"/>
         </scene>
         <!--Chat-->
         <scene sceneID="ePQ-Hj-K2c">
@@ -50,18 +60,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="91K-yL-zS3">
-                                <rect key="frame" x="0.0" y="20" width="600" height="423"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="468"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="423" id="awf-bZ-Ykp"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="xsS-Vr-XEA" id="EyR-ti-6wc"/>
                                     <outlet property="delegate" destination="xsS-Vr-XEA" id="bnw-aC-OaT"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h84-LQ-yVR" customClass="s">
-                                <rect key="frame" x="16" y="479" width="584" height="30"/>
+                                <rect key="frame" x="8" y="513" width="584" height="30"/>
                                 <state key="normal" title="Tweet">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,12 +79,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OIZ-n4-Exb" firstAttribute="top" secondItem="h84-LQ-yVR" secondAttribute="bottom" constant="42" id="QCK-5g-5v2"/>
-                            <constraint firstItem="91K-yL-zS3" firstAttribute="leading" secondItem="k9i-Oq-alm" secondAttribute="leading" id="RSA-rC-Jue"/>
-                            <constraint firstAttribute="trailing" secondItem="91K-yL-zS3" secondAttribute="trailing" id="bSj-Ly-0by"/>
-                            <constraint firstItem="h84-LQ-yVR" firstAttribute="top" secondItem="91K-yL-zS3" secondAttribute="bottom" constant="36" id="jJc-xf-Zh4"/>
-                            <constraint firstAttribute="trailing" secondItem="h84-LQ-yVR" secondAttribute="trailing" id="kuM-Md-seA"/>
-                            <constraint firstItem="h84-LQ-yVR" firstAttribute="leading" secondItem="k9i-Oq-alm" secondAttribute="leadingMargin" id="mDy-mO-Rbv"/>
+                            <constraint firstItem="91K-yL-zS3" firstAttribute="centerX" secondItem="h84-LQ-yVR" secondAttribute="centerX" id="589-KH-1eB"/>
+                            <constraint firstItem="91K-yL-zS3" firstAttribute="top" secondItem="TPX-at-Lqf" secondAttribute="bottom" id="9ke-fa-Wgo"/>
+                            <constraint firstItem="OIZ-n4-Exb" firstAttribute="top" secondItem="h84-LQ-yVR" secondAttribute="bottom" constant="8" id="QCK-5g-5v2"/>
+                            <constraint firstItem="h84-LQ-yVR" firstAttribute="top" secondItem="91K-yL-zS3" secondAttribute="bottom" constant="25" id="ZRJ-JW-tkc"/>
+                            <constraint firstAttribute="trailing" secondItem="h84-LQ-yVR" secondAttribute="trailing" constant="8" id="kuM-Md-seA"/>
+                            <constraint firstItem="h84-LQ-yVR" firstAttribute="leading" secondItem="k9i-Oq-alm" secondAttribute="leadingMargin" constant="-8" id="mDy-mO-Rbv"/>
+                            <constraint firstItem="91K-yL-zS3" firstAttribute="leading" secondItem="k9i-Oq-alm" secondAttribute="leading" id="ypn-fv-mW3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" id="j0M-qv-jSL"/>
@@ -88,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NX0-jS-AFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="-264"/>
+            <point key="canvasLocation" x="1050" y="-271"/>
         </scene>
         <!--Map-->
         <scene sceneID="KqG-5E-7gp">
@@ -103,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a40-9s-iMi">
-                                <rect key="frame" x="-24" y="64" width="600" height="600"/>
+                                <rect key="frame" x="-24" y="20" width="624" height="644"/>
                                 <connections>
                                     <outlet property="delegate" destination="A0K-DH-qd7" id="itQ-ES-rsq"/>
                                 </connections>

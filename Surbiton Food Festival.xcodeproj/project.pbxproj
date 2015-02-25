@@ -14,6 +14,7 @@
 		AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369F91A9BCBC000F15869 /* VenueBuilder.m */; };
 		AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369FC1A9BCC3400F15869 /* Venue.m */; };
 		AE936A001A9BE0D700F15869 /* VenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369FF1A9BE0D700F15869 /* VenueAnnotation.m */; };
+		AEB4482D1A9E5EEC00A92D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB4482B1A9E5EEC00A92D09 /* Main.storyboard */; };
 		AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB281A90A956008C6329 /* EventViewController.m */; };
 		AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB9DB291A90A956008C6329 /* EventViewController.xib */; };
 		AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
@@ -25,7 +26,6 @@
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
 		AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC481A7CEC8A007241DC /* AppDelegate.m */; };
 		AEF8BC4C1A7CEC8A007241DC /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC4B1A7CEC8A007241DC /* EventListViewController.m */; };
-		AEF8BC521A7CEC8A007241DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC501A7CEC8A007241DC /* Main.storyboard */; };
 		AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC531A7CEC8A007241DC /* Images.xcassets */; };
 		AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC551A7CEC8A007241DC /* LaunchScreen.xib */; };
 		AEF8BC631A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */; };
@@ -58,6 +58,7 @@
 		AE9369FC1A9BCC3400F15869 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		AE9369FE1A9BE0D700F15869 /* VenueAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAnnotation.h; sourceTree = "<group>"; };
 		AE9369FF1A9BE0D700F15869 /* VenueAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAnnotation.m; sourceTree = "<group>"; };
+		AEB4482C1A9E5EEC00A92D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEB9DB271A90A956008C6329 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = ../EventViewController.h; sourceTree = "<group>"; };
 		AEB9DB281A90A956008C6329 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = ../EventViewController.m; sourceTree = "<group>"; };
 		AEB9DB291A90A956008C6329 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventViewController.xib; path = ../EventViewController.xib; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		AEF8BC481A7CEC8A007241DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AEF8BC4A1A7CEC8A007241DC /* EventListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
 		AEF8BC4B1A7CEC8A007241DC /* EventListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
-		AEF8BC511A7CEC8A007241DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEF8BC531A7CEC8A007241DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AEF8BC561A7CEC8A007241DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AEF8BC5C1A7CEC8A007241DC /* Surbiton Food FestivalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Surbiton Food FestivalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +129,19 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		AEB4482A1A9E427700A92D09 /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				AEF8BC471A7CEC8A007241DC /* AppDelegate.h */,
+				AEF8BC481A7CEC8A007241DC /* AppDelegate.m */,
+				AEF8BC551A7CEC8A007241DC /* LaunchScreen.xib */,
+				AEB4482B1A9E5EEC00A92D09 /* Main.storyboard */,
+				AEF520971A9E2C7600C05D84 /* MTConfiguration.m */,
+				AEF520961A9E2C7600C05D84 /* MTConfiguration.h */,
+			);
+			name = CoreApp;
+			sourceTree = "<group>";
+		};
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,9 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				AEF8BC4A1A7CEC8A007241DC /* EventListViewController.h */,
+				AEF8BC4B1A7CEC8A007241DC /* EventListViewController.m */,
 				AEFF2E891A925872005DBCBB /* TwitterViewController.h */,
 				AEFF2E8A1A925872005DBCBB /* TwitterViewController.m */,
-				AEF8BC4B1A7CEC8A007241DC /* EventListViewController.m */,
 				AEB9DB271A90A956008C6329 /* EventViewController.h */,
 				AEB9DB281A90A956008C6329 /* EventViewController.m */,
 				AEB9DB291A90A956008C6329 /* EventViewController.xib */,
@@ -188,15 +201,12 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AEB4482A1A9E427700A92D09 /* CoreApp */,
 				AEBBF1F31A9BE98F00B5D3F8 /* Images */,
 				AEED6CC61A939D2A00B8D84B /* Controllers */,
 				AEED6CC51A939D1400B8D84B /* Views */,
 				AE18C4B71A8CB5F500B96570 /* Models */,
-				AEF8BC471A7CEC8A007241DC /* AppDelegate.h */,
-				AEF8BC481A7CEC8A007241DC /* AppDelegate.m */,
 				AEF8BC531A7CEC8A007241DC /* Images.xcassets */,
-				AEF8BC501A7CEC8A007241DC /* Main.storyboard */,
-				AEF8BC551A7CEC8A007241DC /* LaunchScreen.xib */,
 				AEF8BC431A7CEC8A007241DC /* Supporting Files */,
 			);
 			path = "Surbiton Food Festival";
@@ -205,8 +215,6 @@
 		AEF8BC431A7CEC8A007241DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AEF520971A9E2C7600C05D84 /* MTConfiguration.m */,
-				AEF520961A9E2C7600C05D84 /* MTConfiguration.h */,
 				AEF8BC441A7CEC8A007241DC /* Info.plist */,
 				AEF8BC451A7CEC8A007241DC /* main.m */,
 				AEF520941A9E2C1000C05D84 /* Configurations.plist */,
@@ -280,6 +288,7 @@
 				TargetAttributes = {
 					AEF8BC3F1A7CEC8A007241DC = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = EAE6QP8NKM;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -316,7 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEF8BC521A7CEC8A007241DC /* Main.storyboard in Resources */,
+				AEB4482D1A9E5EEC00A92D09 /* Main.storyboard in Resources */,
 				AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */,
 				AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */,
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
@@ -377,10 +386,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AEF8BC501A7CEC8A007241DC /* Main.storyboard */ = {
+		AEB4482B1A9E5EEC00A92D09 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AEF8BC511A7CEC8A007241DC /* Base */,
+				AEB4482C1A9E5EEC00A92D09 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -441,10 +450,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Development;
 		};
@@ -512,10 +524,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Production;
 		};
@@ -618,10 +633,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -629,10 +647,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

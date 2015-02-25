@@ -22,7 +22,8 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
-    
+    [self connectionOK];
+
     _eventDays = [[NSMutableDictionary alloc] init];
     _eventDayKeys = [[NSMutableArray alloc] init];
     // Initialize the refresh control.
@@ -33,32 +34,11 @@
                             action:@selector(refreshEvents:)
                   forControlEvents:UIControlEventValueChanged];
     [tableView addSubview:self.refreshControl];
-    
+
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     storePath = [NSString stringWithFormat:@"%@/Events.plist", aCachesDirectory];
     
-    //Delete the cache file
-    [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
-    
-    NSError *parseError;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
-        NSError *readError;
-        NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
-        if (readError != nil) {
-            NSLog(@"Could not read from file: %@", [readError localizedDescription]);
-        } else {
-            NSLog(@"Using cached data");
-            parseError = [self getEventsFromData:data];
-        }
-    }
-
-    if (_events == nil || parseError != nil) {
-        if (parseError != nil) {
-            NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
-            [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
-        }
-        [self refreshEvents:self];
-    }
+    [self refreshEvents:self];
 }
 
 - (void)refreshEvents:(id)sender {
@@ -183,10 +163,16 @@
 -(NSError *)getEventsFromData:(NSData *)data {
     NSError *error = nil;
     NSArray *events = [EventBuilder eventsFromJSON:data error:&error];
-    _events = events;
+    if ([events count] > 0) {
+        _events = events;
+    } else {
+        [self connectionError];
+    }
     [self createEventDays:events];
-    NSLog(@"Events :%lu", (unsigned long)_events.count);
-
+    if (error != nil) {
+        NSLog(@"Error : %@", [error description]);
+    }
+    NSLog(@"Got %lu events from data", (unsigned long)events.count);
     return error;
 }
 
@@ -236,6 +222,8 @@
     // The request is complete and data has been received
     // You can parse the stuff in your instance variable now
     //[self updateRefreshText];
+    [self connectionOK];
+
     [self.refreshControl endRefreshing];
     [tableView reloadData];
 
@@ -245,9 +233,40 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     // The request has failed for some reason!
     // Check the error var
+    [self connectionError];
     [self.refreshControl endRefreshing];
-
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
+    
+    //Delete the cache file
+    //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+
+    // Get events from cache instead
+    NSError *parseError;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
+        NSError *readError;
+        NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
+        if (readError != nil) {
+            NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+        } else {
+            NSLog(@"Using cached data");
+            [self getEventsFromData:data];
+            [tableView reloadData];
+        }
+    }
+    
+    if (_events == nil || parseError != nil) {
+        if (parseError != nil) {
+            NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
+            [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+        }
+    }
 }
 
+-(void)connectionError {
+    NSLog(@"Connection Error");
+}
+
+-(void)connectionOK {
+    NSLog(@"Connection OK");
+}
 @end

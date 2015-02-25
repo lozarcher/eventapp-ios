@@ -17,6 +17,7 @@
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
+- (void)refreshEvents:(id)sender;
 
 @end
 

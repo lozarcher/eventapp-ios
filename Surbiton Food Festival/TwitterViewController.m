@@ -40,25 +40,7 @@
     //Delete the cache file
     //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
     
-    NSError *parseError;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
-        NSError *readError;
-        NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
-        if (readError != nil) {
-            NSLog(@"Could not read from file: %@", [readError localizedDescription]);
-        } else {
-            NSLog(@"Using cached data");
-            parseError = [self getEventsFromData:data];
-        }
-    }
-    
-    if (_tweets == nil || parseError != nil) {
-        if (parseError != nil) {
-            NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
-            [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
-        }
-        [self refreshTweets:self];
-    }
+    [self refreshTweets:self];
 }
 
 - (void)refreshTweets:(id)sender {
@@ -141,7 +123,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     // Append the new data to the instance variable you declared
-    [self getEventsFromData:data];
+    [self getTweetsFromData:data];
     [tableView reloadData];
     
     
@@ -154,11 +136,16 @@
     }
 }
 
--(NSError *)getEventsFromData:(NSData *)data {
+-(NSError *)getTweetsFromData:(NSData *)data {
     NSError *error = nil;
     NSArray *tweets = [TweetBuilder tweetsFromJSON:data error:&error];
-    _tweets = tweets;
-    NSLog(@"Tweets :%lu", (unsigned long)_tweets.count);
+    if ([tweets count] > 0) {
+        _tweets = tweets;
+    }
+    if (error != nil) {
+        NSLog(@"Error : %@", [error description]);
+    }
+    NSLog(@"Got %lu tweets from data", (unsigned long)tweets.count);
     return error;
 }
 
@@ -180,6 +167,25 @@
     // The request has failed for some reason!
     // Check the error var
     [self endRefresh];
+    NSError *parseError;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
+        NSError *readError;
+        NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
+        if (readError != nil) {
+            NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+        } else {
+            NSLog(@"Using cached data");
+            parseError = [self getTweetsFromData:data];
+            [tableView reloadData];
+        }
+    }
+    
+    if (_tweets == nil || parseError != nil) {
+        if (parseError != nil) {
+            NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
+            [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+        }
+    }
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
