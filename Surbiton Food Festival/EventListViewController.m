@@ -12,6 +12,7 @@
 #import "EventBuilder.h"
 #import "EventViewController.h"
 #import "EventViewCell.h"
+#import "MTConfiguration.h"
 
 @implementation EventListViewController
 
@@ -62,7 +63,8 @@
 
 - (void)refreshEvents:(id)sender {
     NSLog(@"Fetching data from URL");
-    NSString *urlAsString = @"http://localhost:8080/events";
+    NSString *serviceHostname = [MTConfiguration serviceHostname];
+    NSString *urlAsString = [NSString stringWithFormat:@"%@/events", serviceHostname];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
     // Create the request.

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MTConfiguration.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSLog(@"Configuration > %@", [MTConfiguration configuration]);
+    
+    NSLog(@"Environment name > %@", [MTConfiguration environmentName]);
+    
     return YES;
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Production</key>
+	<dict>
+		<key>serviceHostname</key>
+		<string>http://eventapp.elasticbeanstalk.com</string>
+		<key>environmentName</key>
+		<string>Prod</string>
+	</dict>
+	<key>Development</key>
+	<dict>
+		<key>serviceHostname</key>
+		<string>http://localhost:8080</string>
+		<key>environmentName</key>
+		<string>Dev</string>
+	</dict>
+</dict>
+</plist>

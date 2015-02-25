@@ -9,6 +9,8 @@
 #import "TwitterViewController.h"
 #import "Tweet.h"
 #import "TweetBuilder.h"
+#import "MTConfiguration.h"
+
 #import <Social/Social.h>
 
 @interface TwitterViewController ()
@@ -61,7 +63,8 @@
 
 - (void)refreshTweets:(id)sender {
     NSLog(@"Fetching data from URL");
-    NSString *urlAsString = @"http://localhost:8080/tweets";
+    NSString *serviceHostname = [MTConfiguration serviceHostname];
+    NSString *urlAsString = [NSString stringWithFormat:@"%@/tweets", serviceHostname];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
     // Create the request.

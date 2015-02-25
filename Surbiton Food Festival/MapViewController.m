@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 #import "Venue.h"
 #import "VenueAnnotation.h"
+#import "MTConfiguration.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -62,7 +63,8 @@
 
 - (void)refreshVenues:(id)sender {
     NSLog(@"Fetching data from URL");
-    NSString *urlAsString = @"http://localhost:8080/venues";
+    NSString *serviceHostname = [MTConfiguration serviceHostname];
+    NSString *urlAsString = [NSString stringWithFormat:@"%@/venues", serviceHostname];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
     // Create the request.
