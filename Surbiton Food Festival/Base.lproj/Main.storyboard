@@ -110,14 +110,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a40-9s-iMi">
-                                <rect key="frame" x="-24" y="20" width="624" height="644"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a40-9s-iMi">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="VAU-wp-dY2"/>
+                                    <constraint firstAttribute="height" constant="531" id="jcd-op-mc1"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="A0K-DH-qd7" id="itQ-ES-rsq"/>
                                 </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="a40-9s-iMi" secondAttribute="trailing" constant="-16" id="25t-Qc-Bkd"/>
+                            <constraint firstItem="a40-9s-iMi" firstAttribute="top" secondItem="2Hl-Bn-zRw" secondAttribute="bottom" id="e23-xt-Hdg"/>
+                            <constraint firstItem="a40-9s-iMi" firstAttribute="leading" secondItem="bnz-kH-WXv" secondAttribute="leadingMargin" constant="-16" id="h3Y-fW-6op"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="YzE-1l-TDA"/>
                     <connections>
@@ -126,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udF-7B-2UY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="689"/>
+            <point key="canvasLocation" x="880" y="807"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

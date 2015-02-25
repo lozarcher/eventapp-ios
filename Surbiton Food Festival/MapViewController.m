@@ -20,14 +20,6 @@
 @synthesize mapView;
 
 -(void)viewWillAppear:(BOOL)animated {
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 51.392476574943;
-    zoomLocation.longitude= -0.30439213051241;
-    
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, METERS_PER_MILE, METERS_PER_MILE);
-    
-    [mapView setRegion:viewRegion animated:YES];
-    
     [self refreshVenues:self];
 }
 
@@ -41,7 +33,16 @@
     //Delete the cache file
     //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
     
-    [self refreshVenues:self];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 51.392029539135;
+    zoomLocation.longitude= -0.31130046171006;
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 2*METERS_PER_MILE, 2*METERS_PER_MILE);
+    
+    [mapView setRegion:viewRegion animated:YES];
 }
 
 - (void)refreshVenues:(id)sender {
