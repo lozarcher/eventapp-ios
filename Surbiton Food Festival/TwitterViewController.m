@@ -10,6 +10,7 @@
 #import "Tweet.h"
 #import "TweetBuilder.h"
 #import "MTConfiguration.h"
+#import "SWRevealViewController.h"
 
 #import <Social/Social.h>
 
@@ -39,6 +40,17 @@
     
     //Delete the cache file
     //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+    
+    self.title = NSLocalizedString(@"Twitter Chat", nil);
+    
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    //[self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
+    
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
+                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+    
+    self.navigationItem.leftBarButtonItem = revealButtonItem;
     
     [self refreshTweets:self];
 }

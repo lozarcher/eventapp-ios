@@ -12,6 +12,7 @@
 #import "Venue.h"
 #import "VenueAnnotation.h"
 #import "MTConfiguration.h"
+#import "SWRevealViewController.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -33,6 +34,21 @@
     //Delete the cache file
     //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
     
+    self.title = NSLocalizedString(@"Map", nil);
+    
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    //[self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
+    
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
+                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+    
+    self.navigationItem.leftBarButtonItem = revealButtonItem;
+    
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
+                                                                              style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
+    
+    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
 }
 
 -(void)viewDidAppear:(BOOL)animated {

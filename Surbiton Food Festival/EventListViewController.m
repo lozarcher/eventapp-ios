@@ -13,6 +13,7 @@
 #import "EventViewController.h"
 #import "EventViewCell.h"
 #import "MTConfiguration.h"
+#import "SWRevealViewController.h"
 
 @implementation EventListViewController
 
@@ -23,7 +24,7 @@
     tableView.dataSource = self;
     tableView.delegate = self;
     [self connectionOK];
-
+    
     _eventDays = [[NSMutableDictionary alloc] init];
     _eventDayKeys = [[NSMutableArray alloc] init];
     // Initialize the refresh control.
@@ -34,9 +35,20 @@
                             action:@selector(refreshEvents:)
                   forControlEvents:UIControlEventValueChanged];
     [tableView addSubview:self.refreshControl];
-
+    
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     storePath = [NSString stringWithFormat:@"%@/Events.plist", aCachesDirectory];
+    
+    self.title = NSLocalizedString(@"Event Calendar", nil);
+    
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    //[self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
+    
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
+                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+    
+    self.navigationItem.leftBarButtonItem = revealButtonItem;
     
     [self refreshEvents:self];
 }
@@ -112,7 +124,7 @@
         [tableView registerNib:[UINib nibWithNibName:@"EventViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
         cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     }
-
+    
     // Cell text (event title)
     Event *event = [self getEventForIndexPath:indexPath];
     NSLog(@"Cell label %@", [event name]);
@@ -130,7 +142,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Event *event = [self getEventForIndexPath:indexPath];
-
+    
     EventViewController *eventDetail=[[EventViewController alloc]initWithNibName:@"EventViewController" bundle:[NSBundle mainBundle]];
     eventDetail.event = event;
     [self presentViewController:eventDetail
@@ -150,7 +162,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     // Append the new data to the instance variable you declared
     [self getEventsFromData:data];
-
+    
     NSError* writeError;
     [data writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
@@ -192,7 +204,7 @@
         comps.minute = 0;
         comps.second = 0;
         NSDate *dateAtMidnight = [calendar dateFromComponents:comps];
-
+        
         NSMutableArray *eventsForDay = [_eventDays objectForKey:dateAtMidnight];
         if (eventsForDay == nil) {
             eventsForDay = [NSMutableArray arrayWithObject:event];
@@ -223,10 +235,10 @@
     // You can parse the stuff in your instance variable now
     //[self updateRefreshText];
     [self connectionOK];
-
+    
     [self.refreshControl endRefreshing];
     [tableView reloadData];
-
+    
     
 }
 
@@ -239,7 +251,7 @@
     
     //Delete the cache file
     //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
-
+    
     // Get events from cache instead
     NSError *parseError;
     if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {

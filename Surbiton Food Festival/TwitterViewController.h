@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TwitterViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
-        NSArray *_tweets;
-        NSString *storePath;
+    NSArray *_tweets;
+    NSString *storePath;
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
