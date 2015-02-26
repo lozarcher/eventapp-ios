@@ -11,6 +11,7 @@
 @interface TwitterViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_tweets;
     NSString *storePath;
+    NSMutableData *receivedData;
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;

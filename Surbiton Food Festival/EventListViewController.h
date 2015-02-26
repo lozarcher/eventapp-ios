@@ -13,6 +13,7 @@
     NSMutableDictionary *_eventDays;
     NSMutableArray *_eventDayKeys;
     NSString *storePath;
+    NSMutableData *receivedData;
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;

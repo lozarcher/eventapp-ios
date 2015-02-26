@@ -12,6 +12,7 @@
 @interface MapViewController : UIViewController <NSURLConnectionDelegate, MKMapViewDelegate> {
     NSString *storePath;
     NSArray *_venues;
+    NSMutableData *receivedData;
 }
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

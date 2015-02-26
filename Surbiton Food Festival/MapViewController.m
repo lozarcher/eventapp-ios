@@ -68,10 +68,26 @@
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
     // Create the request.
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *theRequest=[NSURLRequest requestWithURL:url
+                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                          timeoutInterval:10.0];
     
-    // Create url connection and fire request
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    // Create the NSMutableData to hold the received data.
+    // receivedData is an instance variable declared elsewhere.
+    receivedData = [NSMutableData dataWithCapacity: 0];
+    
+    // create the connection with the request
+    // and start loading the data
+    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+    if (!theConnection) {
+        // Release the receivedData object.
+        receivedData = nil;
+        
+        // Inform the user that the connection failed.
+        NSLog(@"Error making connection");
+        
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,48 +108,40 @@
 #pragma mark NSURLConnection Delegate Methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    // A response has been received, this is where we initialize the instance var you created
-    // so that we can append data to it in the didReceiveData method
-    // Furthermore, this method is called each time there is a redirect so reinitializing it
-    // also serves to clear it
+    // This method is called when the server has determined that it
+    // has enough information to create the NSURLResponse object.
+    
+    // It can be called multiple times, for example in the case of a
+    // redirect, so each time we reset the data.
+    
+    // receivedData is an instance variable declared elsewhere.
+    [receivedData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     // Append the new data to the instance variable you declared
-    [self getVenuesFromData:data];
-    [self plotVenues];
-    NSError* writeError;
-    [data writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
-    if (writeError != nil) {
-        NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
-    } else {
-        NSLog(@"Wrote to file %@", storePath);
-    }
+    [receivedData appendData:data];
 }
 
--(NSError *)getVenuesFromData:(NSData *)data {
-    NSError *error = nil;
-    NSArray *venues = [VenueBuilder venuesFromJSON:data error:&error];
-    _venues = venues;
-    NSLog(@"Venues :%lu", (unsigned long)_venues.count);
-    return error;
-}
-
-- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
-                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
-    // Return nil to indicate not necessary to store a cached response for this connection
-    return nil;
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    // The request is complete and data has been received
-    // You can parse the stuff in your instance variable now
-
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    // The request has failed for some reason!
-    // Check the error var
+- (void)connection:(NSURLConnection *)connection
+  didFailWithError:(NSError *)error
+{
+    // Release the connection and the data object
+    // by setting the properties (declared elsewhere)
+    // to nil.  Note that a real-world app usually
+    // requires the delegate to manage more than one
+    // connection at a time, so these lines would
+    // typically be replaced by code to iterate through
+    // whatever data structures you are using.
+    connection = nil;
+    receivedData = nil;
+    
+    // inform the user
+    NSLog(@"Connection failed! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+    
+    // Get events from cache instead
     NSError *parseError;
     if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
         NSError *readError;
@@ -155,6 +163,50 @@
     }
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    // do something with the data
+    // receivedData is declared as a property elsewhere
+    NSLog(@"Succeeded! Received %lu bytes of data", (unsigned long)receivedData.length);
+    
+    [self getVenuesFromData:receivedData];
+    [self plotVenues];
+    
+    NSError* writeError;
+    [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
+    if (writeError != nil) {
+        NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
+    } else {
+        NSLog(@"Wrote to file %@", storePath);
+    }
+    
+    // Release the connection and the data object
+    // by setting the properties (declared elsewhere)
+    // to nil.  Note that a real-world app usually
+    // requires the delegate to manage more than one
+    // connection at a time, so these lines would
+    // typically be replaced by code to iterate through
+    // whatever data structures you are using.
+    connection = nil;
+    receivedData = nil;
+    
+}
+
+-(NSError *)getVenuesFromData:(NSData *)data {
+    NSError *error = nil;
+    NSArray *venues = [VenueBuilder venuesFromJSON:data error:&error];
+    _venues = venues;
+    NSLog(@"Venues :%lu", (unsigned long)_venues.count);
+    return error;
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
+    // Return nil to indicate not necessary to store a cached response for this connection
+    return nil;
+}
+
 
 -(void)plotVenues {
     for (Venue *venue in _venues) {

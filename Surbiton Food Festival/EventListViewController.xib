@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-8L-gYZ">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-8L-gYZ">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -25,6 +25,12 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KLF-8L-gYZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KOe-gy-rJQ"/>
+                <constraint firstAttribute="trailing" secondItem="KLF-8L-gYZ" secondAttribute="trailing" id="SW3-Ar-o7X"/>
+                <constraint firstItem="KLF-8L-gYZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZAg-YH-9OS"/>
+                <constraint firstAttribute="bottom" secondItem="KLF-8L-gYZ" secondAttribute="bottom" id="aLv-RG-ERe"/>
+            </constraints>
             <point key="canvasLocation" x="355" y="418"/>
         </view>
     </objects>
