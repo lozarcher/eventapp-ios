@@ -144,6 +144,9 @@
     Event *event = [self getEventForIndexPath:indexPath];
     NSLog(@"Cell label %@", [event name]);
     [cell populateDataInCell:event];
+    
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    
     return cell;
 }
 
@@ -155,15 +158,14 @@
     return event;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     Event *event = [self getEventForIndexPath:indexPath];
     
     EventViewController *eventDetail=[[EventViewController alloc]initWithNibName:@"EventViewController" bundle:[NSBundle mainBundle]];
     eventDetail.event = event;
-    [self presentViewController:eventDetail
-                       animated:YES
-                     completion:nil];
+    [self presentViewController:eventDetail animated:YES completion:nil];
 }
+
 
 #pragma mark NSURLConnection Delegate Methods
 

@@ -218,8 +218,6 @@
 		AE1BCBBD1A9FCEB100E79935 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AEB9DB271A90A956008C6329 /* EventViewController.h */,
-				AEB9DB281A90A956008C6329 /* EventViewController.m */,
 				AE1BCBA21A9FC60E00E79935 /* FrontViewController.h */,
 				AE1BCBA31A9FC60E00E79935 /* FrontViewController.m */,
 				AE9369F01A9BC55800F15869 /* MapViewController.h */,
@@ -227,8 +225,6 @@
 				AE1BCBBE1A9FCEB600E79935 /* Navigation */,
 				AE1BCBC01A9FCF6300E79935 /* TwitterViewController.h */,
 				AE1BCBC11A9FCF6300E79935 /* TwitterViewController.m */,
-				AE1BCBCB1A9FD0A400E79935 /* EventListViewController.h */,
-				AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -254,8 +250,6 @@
 				AE18C4B71A8CB5F500B96570 /* Models */,
 				AE9369FE1A9BE0D700F15869 /* VenueAnnotation.h */,
 				AE9369FF1A9BE0D700F15869 /* VenueAnnotation.m */,
-				AEFF2E8C1A925ED8005DBCBB /* EventViewCell.h */,
-				AEFF2E8D1A925ED8005DBCBB /* EventViewCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -314,7 +308,6 @@
 		AEED6CC51A939D1400B8D84B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */,
 				AE1BCBC21A9FCF6300E79935 /* TwitterViewController.xib */,
 				AEB9DB291A90A956008C6329 /* EventViewController.xib */,
 				AE1BCBAA1A9FC87200E79935 /* FrontViewController.xib */,
@@ -322,6 +315,20 @@
 				AEFF2E8E1A925ED8005DBCBB /* EventViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		AEEE5FB91AA06E1F00CA7774 /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF2E8C1A925ED8005DBCBB /* EventViewCell.h */,
+				AEFF2E8D1A925ED8005DBCBB /* EventViewCell.m */,
+				AEB9DB271A90A956008C6329 /* EventViewController.h */,
+				AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */,
+				AEB9DB281A90A956008C6329 /* EventViewController.m */,
+				AE1BCBCB1A9FD0A400E79935 /* EventListViewController.h */,
+				AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */,
+			);
+			name = EventList;
 			sourceTree = "<group>";
 		};
 		AEF8BC371A7CEC8A007241DC = {
@@ -349,6 +356,7 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AEEE5FB91AA06E1F00CA7774 /* EventList */,
 				AE1BCBBF1A9FCF0000E79935 /* Classes */,
 				AE1BCBBD1A9FCEB100E79935 /* Controllers */,
 				AEB4482A1A9E427700A92D09 /* CoreApp */,
