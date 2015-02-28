@@ -65,6 +65,8 @@
 		AE2521E11AA1DAE7006A442A /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521CF1AA1DAE7006A442A /* UIImageView+HighlightedWebCache.m */; };
 		AE2521E21AA1DAE7006A442A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521D11AA1DAE7006A442A /* UIImageView+WebCache.m */; };
 		AE2521E31AA1DAE7006A442A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521D31AA1DAE7006A442A /* UIView+WebCacheOperation.m */; };
+		AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521E51AA20040006A442A /* VoucherViewController.m */; };
+		AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2521E61AA20040006A442A /* VoucherViewController.xib */; };
 		AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D13601AA14B1900166951 /* VoucherListCell.m */; };
 		AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13611AA14B1900166951 /* VoucherListCell.xib */; };
 		AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */; };
@@ -188,6 +190,9 @@
 		AE2521D11AA1DAE7006A442A /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		AE2521D21AA1DAE7006A442A /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		AE2521D31AA1DAE7006A442A /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		AE2521E41AA20040006A442A /* VoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherViewController.h; sourceTree = "<group>"; };
+		AE2521E51AA20040006A442A /* VoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherViewController.m; sourceTree = "<group>"; };
+		AE2521E61AA20040006A442A /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
 		AE8D135F1AA14B1900166951 /* VoucherListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListCell.h; sourceTree = "<group>"; };
 		AE8D13601AA14B1900166951 /* VoucherListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListCell.m; sourceTree = "<group>"; };
 		AE8D13611AA14B1900166951 /* VoucherListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListCell.xib; sourceTree = "<group>"; };
@@ -261,6 +266,9 @@
 				AE8D136E1AA14DBE00166951 /* VoucherListViewController.h */,
 				AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */,
 				AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */,
+				AE2521E41AA20040006A442A /* VoucherViewController.h */,
+				AE2521E51AA20040006A442A /* VoucherViewController.m */,
+				AE2521E61AA20040006A442A /* VoucherViewController.xib */,
 			);
 			name = VoucherList;
 			sourceTree = "<group>";
@@ -638,6 +646,7 @@
 				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
 				AE1BCBBC1A9FCAC500E79935 /* RightViewController.xib in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
+				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
 				AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */,
 				AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */,
 				AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */,
@@ -684,6 +693,7 @@
 				AE2521DA1AA1DAE7006A442A /* SDWebImageDownloaderOperation.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE2521E11AA1DAE7006A442A /* UIImageView+HighlightedWebCache.m in Sources */,
+				AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */,
 				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
 				AE1BCBA71A9FC62100E79935 /* RearViewController.m in Sources */,
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,

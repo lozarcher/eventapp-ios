@@ -14,6 +14,7 @@
 #import "SWRevealViewController.h"
 #import "VoucherListCell.h"
 #import "UIImageView+WebCache.h"
+#import "VoucherViewController.h"
 
 @implementation VoucherListViewController
 
@@ -127,7 +128,8 @@
                                 }
      ];
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;
 }
 
@@ -139,13 +141,19 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     Voucher *voucher = [self getVoucherForIndexPath:indexPath];
-    //Show voucher
-    /*
-     EventViewController *eventDetail=[[EventViewController alloc]initWithNibName:@"EventViewController" bundle:[NSBundle mainBundle]];
-     eventDetail.voucher = voucher;
-     [self presentViewController:eventDetail animated:YES completion:nil];
-     */
+    NSString *thumbnail = voucher.url;
+    
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    [manager downloadImageWithURL:[NSURL URLWithString:thumbnail] options:0
+        progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    }
+        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            VoucherViewController *cont = [[VoucherViewController alloc  ]initWithImage:image];
+            [self presentViewController:cont animated:YES completion:nil];
+        }];
+    
 }
      
 - (CGFloat)tableView:(UITableView *)tableView
@@ -288,4 +296,5 @@
 -(void)connectionOK {
     NSLog(@"Connection OK");
 }
+
 @end
