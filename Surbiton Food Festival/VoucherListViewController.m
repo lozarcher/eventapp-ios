@@ -1,21 +1,20 @@
 //
-//  FirstViewController.m
+//  VoucherListViewController.m
 //  Surbiton Food Festival
 //
-//  Created by Loz on 31/01/2015.
+//  Created by Loz on 28/02/2015.
 //  Copyright (c) 2015 Spirit of Seething. All rights reserved.
 //
 
-
-#import "EventListViewController.h"
-#import "Event.h"
-#import "EventBuilder.h"
-#import "EventViewController.h"
-#import "EventViewCell.h"
+#import "VoucherListViewController.h"
+#import "Voucher.h"
+#import "VoucherBuilder.h"
+#import "VoucherListCell.h"
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
+#import "VoucherListCell.h"
 
-@implementation EventListViewController
+@implementation VoucherListViewController
 
 @synthesize tableView;
 
@@ -24,21 +23,19 @@
     tableView.dataSource = self;
     tableView.delegate = self;
     
-    _eventDays = [[NSMutableDictionary alloc] init];
-    _eventDayKeys = [[NSMutableArray alloc] init];
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor purpleColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
-                            action:@selector(refreshEvents:)
+                            action:@selector(refreshVouchers:)
                   forControlEvents:UIControlEventValueChanged];
     [tableView addSubview:self.refreshControl];
     
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    storePath = [NSString stringWithFormat:@"%@/Events.plist", aCachesDirectory];
+    storePath = [NSString stringWithFormat:@"%@/Vouchers.plist", aCachesDirectory];
     
-    self.title = NSLocalizedString(@"Event Calendar", nil);
+    self.title = NSLocalizedString(@"Vouchers", nil);
     
     SWRevealViewController *revealController = [self revealViewController];
     
@@ -49,13 +46,13 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
-    [self refreshEvents:self];
+    [self refreshVouchers:self];
 }
 
-- (void)refreshEvents:(id)sender {
+- (void)refreshVouchers:(id)sender {
     NSLog(@"Fetching data from URL");
     NSString *serviceHostname = [MTConfiguration serviceHostname];
-    NSString *urlAsString = [NSString stringWithFormat:@"%@/events", serviceHostname];
+    NSString *urlAsString = [NSString stringWithFormat:@"%@/vouchers", serviceHostname];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
     // Create the request.
@@ -78,7 +75,7 @@
         NSLog(@"Error making connection");
         
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,81 +86,50 @@
 
 #pragma - markup TableView Delegate Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSInteger numberOfDates = [_eventDayKeys count];
-    if (numberOfDates != 0) {
-        self.tableView.backgroundView = nil;
-        return [_eventDayKeys count];
-    } else {
-        // Display a message when the table is empty
-        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-        
-        messageLabel.text = @"No data is currently available. Please pull down to refresh.";
-        messageLabel.textColor = [UIColor blackColor];
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = NSTextAlignmentCenter;
-        messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
-        [messageLabel sizeToFit];
-        
-        self.tableView.backgroundView = messageLabel;
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
-        return 0;
-    }
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSDate *sectionDate = [_eventDayKeys objectAtIndex:section];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"eee d MMMM"];
-    
-    NSString *stringFromDate = [formatter stringFromDate:sectionDate];
-    return stringFromDate;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 30;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSDate *date = [_eventDayKeys objectAtIndex:section];
-    NSUInteger eventCount = [[_eventDays objectForKey:date] count];
-    return eventCount;
+    return _vouchers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *simpleTableIdentifier = @"EventTableItem";
-    EventViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *simpleTableIdentifier = @"VoucherTableItem";
+    VoucherListCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"EventViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
+        [tableView registerNib:[UINib nibWithNibName:@"VoucherListCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
         cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     }
     
     // Cell text (event title)
-    Event *event = [self getEventForIndexPath:indexPath];
-    NSLog(@"Cell label %@", [event name]);
-    [cell populateDataInCell:event];
+    Voucher *voucher = [self getVoucherForIndexPath:indexPath];
+    NSLog(@"Cell label %@", [voucher title]);
+    [cell populateDataInCell:voucher];
     
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
     return cell;
 }
 
-- (Event*)getEventForIndexPath:(NSIndexPath *)indexPath {
-    NSInteger section = indexPath.section;
+- (Voucher*)getVoucherForIndexPath:(NSIndexPath *)indexPath {
     NSInteger itemInSection = indexPath.row;
-    NSArray *eventsForDay = [_eventDays objectForKey:[_eventDayKeys objectAtIndex:section]];
-    Event *event = [eventsForDay objectAtIndex:itemInSection];
-    return event;
+    Voucher *voucher = [_vouchers objectAtIndex:itemInSection];
+    return voucher;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Event *event = [self getEventForIndexPath:indexPath];
-    
-    EventViewController *eventDetail=[[EventViewController alloc]initWithNibName:@"EventViewController" bundle:[NSBundle mainBundle]];
-    eventDetail.event = event;
-    [self presentViewController:eventDetail animated:YES completion:nil];
+    Voucher *voucher = [self getVoucherForIndexPath:indexPath];
+    //Show voucher
+    /*
+     EventViewController *eventDetail=[[EventViewController alloc]initWithNibName:@"EventViewController" bundle:[NSBundle mainBundle]];
+     eventDetail.voucher = voucher;
+     [self presentViewController:eventDetail animated:YES completion:nil];
+     */
 }
 
 
@@ -216,12 +182,12 @@
             NSLog(@"Could not read from file: %@", [readError localizedDescription]);
         } else {
             NSLog(@"Using cached data");
-            [self getEventsFromData:data];
+            [self getVouchersFromData:data];
             [tableView reloadData];
         }
     }
     
-    if (_events == nil || parseError != nil) {
+    if (_vouchers == nil || parseError != nil) {
         if (parseError != nil) {
             NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
             [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
@@ -236,7 +202,7 @@
     NSLog(@"Succeeded! Received %lu bytes of data", (unsigned long)receivedData.length);
     
     [self.refreshControl endRefreshing];
-    [self getEventsFromData:receivedData];
+    [self getVouchersFromData:receivedData];
     [tableView reloadData];
     [self connectionOK];
     
@@ -261,57 +227,21 @@
 }
 
 
--(NSError *)getEventsFromData:(NSData *)data {
+-(NSError *)getVouchersFromData:(NSData *)data {
     NSError *error = nil;
-    NSArray *events = [EventBuilder eventsFromJSON:data error:&error];
-    if ([events count] > 0) {
-        _events = events;
+    NSArray *vouchers = [VoucherBuilder vouchersFromJSON:data error:&error];
+    if ([vouchers count] > 0) {
+        _vouchers = vouchers;
     } else {
         [self connectionError];
     }
-    [self createEventDays:events];
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
     }
-    NSLog(@"Got %lu events from data", (unsigned long)events.count);
+    NSLog(@"Got %lu vouchers from data", (unsigned long)vouchers.count);
     return error;
 }
 
--(void)createEventDays:(NSArray *)events {
-    [_eventDayKeys removeAllObjects];
-    [_eventDays removeAllObjects];
-    for (Event* event in events) {
-        
-        // (Step 1) Convert epoch time to SECONDS since 1970
-        NSTimeInterval seconds = [event.startTime doubleValue]/1000;
-        NSDate *epochNSDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
-        
-        unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *comps = [calendar components:unitFlags fromDate:epochNSDate];
-        comps.hour   = 0;
-        comps.minute = 0;
-        comps.second = 0;
-        NSDate *dateAtMidnight = [calendar dateFromComponents:comps];
-        
-        NSMutableArray *eventsForDay = [_eventDays objectForKey:dateAtMidnight];
-        if (eventsForDay == nil) {
-            eventsForDay = [NSMutableArray arrayWithObject:event];
-            [_eventDayKeys addObject:dateAtMidnight];
-        } else {
-            [eventsForDay addObject:event];
-        }
-        [_eventDays setObject:eventsForDay forKey:dateAtMidnight];
-    }
-    
-    for(id key in _eventDays) {
-        NSLog(@"Date: %@", key);
-        NSArray *eventsForDay = [_eventDays objectForKey:key];
-        for (Event *event in eventsForDay) {
-            NSLog(@"Event %@", event.name);
-        }
-    }
-}
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection
                   willCacheResponse:(NSCachedURLResponse*)cachedResponse {

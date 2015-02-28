@@ -33,6 +33,7 @@
 #import "MapViewController.h"
 #import "EventListViewController.h"
 #import "TwitterViewController.h"
+#import "VoucherListViewController.h"
 
 @interface RearViewController()
 {
@@ -61,7 +62,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 5;
 }
 
 
@@ -92,6 +93,10 @@
     else if (row == 3)
     {
         text = @"Maps";
+    }
+    else if (row == 4)
+    {
+        text = @"Vouchers";
     }
 
     cell.textLabel.text = NSLocalizedString( text,nil );
@@ -151,7 +156,12 @@
     {
         newFrontController = [[MapViewController alloc] init];
     }
-
+    
+    else if (row == 4)
+    {
+        newFrontController = [[VoucherListViewController alloc] init];
+    }
+    
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newFrontController];
     [revealController pushFrontViewController:navigationController animated:YES];
     
