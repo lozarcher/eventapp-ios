@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
+		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
 		AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C11A8CBBB200B96570 /* EventBuilder.m */; };
 		AE18C4C51A8CBC3700B96570 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C41A8CBC3700B96570 /* Event.m */; };
 		AE1BCB9D1A9FAFAA00E79935 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCB9C1A9FAFAA00E79935 /* SWRevealViewController.m */; };
@@ -47,6 +49,10 @@
 		AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */; };
 		AE1BCBF91A9FDC3300E79935 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork */; };
 		AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x */; };
+		AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D13601AA14B1900166951 /* VoucherListCell.m */; };
+		AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13611AA14B1900166951 /* VoucherListCell.xib */; };
+		AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */; };
+		AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */; };
 		AE9369F21A9BC55800F15869 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369F11A9BC55800F15869 /* MapViewController.m */; };
 		AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9369F31A9BC5E300F15869 /* MapKit.framework */; };
 		AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369F91A9BCBC000F15869 /* VenueBuilder.m */; };
@@ -80,6 +86,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE1382611AA1422B00714884 /* Voucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
+		AE1382621AA1422B00714884 /* Voucher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
+		AE1382641AA1426D00714884 /* VoucherBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherBuilder.h; sourceTree = "<group>"; };
+		AE1382651AA1426D00714884 /* VoucherBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherBuilder.m; sourceTree = "<group>"; };
 		AE18C4C01A8CBBB200B96570 /* EventBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventBuilder.h; sourceTree = "<group>"; };
 		AE18C4C11A8CBBB200B96570 /* EventBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBuilder.m; sourceTree = "<group>"; };
 		AE18C4C31A8CBC3700B96570 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
@@ -129,6 +139,12 @@
 		AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		AE1BCBE51A9FDC3300E79935 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		AE8D135F1AA14B1900166951 /* VoucherListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListCell.h; sourceTree = "<group>"; };
+		AE8D13601AA14B1900166951 /* VoucherListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListCell.m; sourceTree = "<group>"; };
+		AE8D13611AA14B1900166951 /* VoucherListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListCell.xib; sourceTree = "<group>"; };
+		AE8D136E1AA14DBE00166951 /* VoucherListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListViewController.h; sourceTree = "<group>"; };
+		AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListViewController.m; sourceTree = "<group>"; };
+		AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListViewController.xib; sourceTree = "<group>"; };
 		AE9369F01A9BC55800F15869 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		AE9369F11A9BC55800F15869 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		AE9369F31A9BC5E300F15869 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -187,6 +203,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE1382671AA142DE00714884 /* VoucherList */ = {
+			isa = PBXGroup;
+			children = (
+				AE8D135F1AA14B1900166951 /* VoucherListCell.h */,
+				AE8D13601AA14B1900166951 /* VoucherListCell.m */,
+				AE8D13611AA14B1900166951 /* VoucherListCell.xib */,
+				AE8D136E1AA14DBE00166951 /* VoucherListViewController.h */,
+				AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */,
+				AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */,
+			);
+			name = VoucherList;
+			sourceTree = "<group>";
+		};
 		AE18C4B71A8CB5F500B96570 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +231,10 @@
 				AE9369F91A9BCBC000F15869 /* VenueBuilder.m */,
 				AE9369FB1A9BCC3400F15869 /* Venue.h */,
 				AE9369FC1A9BCC3400F15869 /* Venue.m */,
+				AE1382611AA1422B00714884 /* Voucher.h */,
+				AE1382621AA1422B00714884 /* Voucher.m */,
+				AE1382641AA1426D00714884 /* VoucherBuilder.h */,
+				AE1382651AA1426D00714884 /* VoucherBuilder.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -356,6 +389,7 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AE1382671AA142DE00714884 /* VoucherList */,
 				AEEE5FB91AA06E1F00CA7774 /* EventList */,
 				AE1BCBBF1A9FCF0000E79935 /* Classes */,
 				AE1BCBBD1A9FCEB100E79935 /* Controllers */,
@@ -498,10 +532,12 @@
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
 				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
+				AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
 				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
 				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
+				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
 				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
 				AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */,
 				AE1BCBF11A9FDC3300E79935 /* Icon-Small.png in Resources */,
@@ -536,13 +572,17 @@
 			files = (
 				AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */,
 				AE936A001A9BE0D700F15869 /* VenueAnnotation.m in Sources */,
+				AE1382631AA1422B00714884 /* Voucher.m in Sources */,
 				AEFF2E8F1A925ED8005DBCBB /* EventViewCell.m in Sources */,
+				AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */,
 				AE1BCBA01A9FC59A00E79935 /* CustomAnimationController.m in Sources */,
 				AE1BCBCE1A9FD0A400E79935 /* EventListViewController.m in Sources */,
 				AE1BCBBB1A9FCAC500E79935 /* RightViewController.m in Sources */,
 				AEB9DB311A90C564008C6329 /* Tweet.m in Sources */,
 				AE1BCBC31A9FCF6300E79935 /* TwitterViewController.m in Sources */,
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
+				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
+				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
 				AE1BCBA71A9FC62100E79935 /* RearViewController.m in Sources */,
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
 				AE18C4C51A8CBC3700B96570 /* Event.m in Sources */,
