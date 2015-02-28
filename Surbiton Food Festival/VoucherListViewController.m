@@ -13,16 +13,18 @@
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
 #import "VoucherListCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation VoucherListViewController
 
-@synthesize tableView;
+@synthesize tableView, heightsCache;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
     
+    self.heightsCache = [[NSMutableDictionary alloc] initWithCapacity:0];
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor purpleColor];
@@ -45,7 +47,6 @@
                                                                          style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
-    
     [self refreshVouchers:self];
 }
 
@@ -89,13 +90,11 @@
     return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _vouchers.count;
 }
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -109,8 +108,24 @@
     // Cell text (event title)
     Voucher *voucher = [self getVoucherForIndexPath:indexPath];
     NSLog(@"Cell label %@", [voucher title]);
-    [cell populateDataInCell:voucher];
     
+    NSString *title = voucher.title ?: NSLocalizedString(@"[No Title]", nil);
+    [cell.voucherTitleLabel setText:title];
+   
+    NSString *thumbnail = voucher.url;
+    [cell.voucherImage sd_setImageWithURL:[NSURL URLWithString:thumbnail]
+                         placeholderImage:[UIImage imageNamed:thumbnail]
+                                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                    // save height of an image to some cache
+                                    [self.heightsCache setValue:[NSNumber numberWithFloat:cell.voucherImage.frame.size.height]
+                                                      forKey:voucher.url];
+                                    
+                                    [tableView beginUpdates];
+                                    [tableView reloadRowsAtIndexPaths:@[indexPath]
+                                                     withRowAnimation:UITableViewRowAnimationFade];
+                                    [tableView endUpdates];
+                                }
+     ];
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
     return cell;
@@ -118,6 +133,7 @@
 
 - (Voucher*)getVoucherForIndexPath:(NSIndexPath *)indexPath {
     NSInteger itemInSection = indexPath.row;
+    NSLog(@"Selecting row %ld from %lu vouchers", (long)indexPath.row, (unsigned long)_vouchers.count);
     Voucher *voucher = [_vouchers objectAtIndex:itemInSection];
     return voucher;
 }
@@ -131,7 +147,23 @@
      [self presentViewController:eventDetail animated:YES completion:nil];
      */
 }
+     
+- (CGFloat)tableView:(UITableView *)tableView
+                  heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    // try to get image height from your own heights cache
+    // if its is not there return default one
+    
+    return 220;
+    
+    // TODO - THERE'S A BUG HERE. On the second load, there's an array out of index
+    NSLog(@"Finding voucher %ld in %lu", (long)indexPath.row, (unsigned long)_vouchers.count);
+    Voucher *voucher = [self getVoucherForIndexPath:indexPath];
+    CGFloat height = [[self.heightsCache valueForKey:voucher.url] floatValue];
+    height = height + 50;
+    return height;
+    
+}
 
 #pragma mark NSURLConnection Delegate Methods
 
@@ -229,7 +261,7 @@
 
 -(NSError *)getVouchersFromData:(NSData *)data {
     NSError *error = nil;
-    NSArray *vouchers = [VoucherBuilder vouchersFromJSON:data error:&error];
+    NSMutableArray *vouchers = [VoucherBuilder vouchersFromJSON:data error:&error];
     if ([vouchers count] > 0) {
         _vouchers = vouchers;
     } else {

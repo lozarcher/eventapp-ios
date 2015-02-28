@@ -11,6 +11,6 @@
 @interface Voucher : NSObject
 @property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *thumbnail;
+@property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) NSString *position;
 @end

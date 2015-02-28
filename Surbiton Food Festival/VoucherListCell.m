@@ -10,7 +10,7 @@
 
 @implementation VoucherListCell
 
-@synthesize voucherTitleLabel;
+@synthesize voucherTitleLabel, voucherImage;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -22,7 +22,4 @@
     // Configure the view for the selected state
 }
 
--(void)populateDataInCell:(Voucher *)voucher {
-    voucherTitleLabel.text = [voucher title];
-}
 @end

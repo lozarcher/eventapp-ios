@@ -10,6 +10,6 @@
 
 @implementation Voucher
 
-@synthesize id, title, thumbnail, position;
+@synthesize id, title, url, position;
 
 @end

@@ -11,6 +11,6 @@
 
 @interface VoucherListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *voucherTitleLabel;
--(void)populateDataInCell:(Voucher *)voucher;
+@property (weak, nonatomic) IBOutlet UIImageView *voucherImage;
 
 @end

@@ -16,6 +16,7 @@
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
+@property (retain,nonatomic) NSMutableDictionary *heightsCache;
 - (void)refreshVouchers:(id)sender;
 
 @end
