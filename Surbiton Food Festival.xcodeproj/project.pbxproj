@@ -440,7 +440,6 @@
 			isa = PBXGroup;
 			children = (
 				AE1BCBC21A9FCF6300E79935 /* TwitterViewController.xib */,
-				AEB9DB291A90A956008C6329 /* EventViewController.xib */,
 				AE1BCBAA1A9FC87200E79935 /* FrontViewController.xib */,
 				AE1BCBAC1A9FC87200E79935 /* MapViewController.xib */,
 				AEFF2E8E1A925ED8005DBCBB /* EventViewCell.xib */,
@@ -456,6 +455,7 @@
 				AEB9DB271A90A956008C6329 /* EventViewController.h */,
 				AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */,
 				AEB9DB281A90A956008C6329 /* EventViewController.m */,
+				AEB9DB291A90A956008C6329 /* EventViewController.xib */,
 				AE1BCBCB1A9FD0A400E79935 /* EventListViewController.h */,
 				AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */,
 			);

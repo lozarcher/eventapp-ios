@@ -7,6 +7,7 @@
 //
 
 #import "EventViewController.h"
+#import "UIImageView+WebCache.h"
 
 @interface EventViewController ()
 
@@ -49,20 +50,15 @@
     
     if (![event.coverUrl isKindOfClass:[NSNull class]]) {
 
-        NSString *urlString = [[event coverUrl]  stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: urlString]];
-        NSLog(@"Event cover URL: %@", urlString);
-        NSLog(@"Event cover URL: %lu bytes", (unsigned long)[imageData length]);
         eventImageView.frame = self.view.bounds;
 
-        dispatch_async(dispatch_get_global_queue(0,0), ^{
-            NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [event coverUrl]]];
-            if ( data == nil )
-                return;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [eventImageView setImage:[UIImage imageWithData: data]];
-            });
-         });
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadImageWithURL:[NSURL URLWithString:[event coverUrl]] options:0
+                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                             }
+                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                [eventImageView setImage:image];
+                            }];
     }
 }
 
