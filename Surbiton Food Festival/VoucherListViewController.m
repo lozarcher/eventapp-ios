@@ -100,12 +100,14 @@
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *simpleTableIdentifier = @"VoucherTableItem";
-    VoucherListCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+
+    VoucherListCell *cell = (VoucherListCell *)[view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+
     if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"VoucherListCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VoucherListCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
-    
+
     // Cell text (event title)
     Voucher *voucher = [self getVoucherForIndexPath:indexPath];
     NSLog(@"Cell label %@", [voucher title]);
@@ -120,11 +122,12 @@
                                     // save height of an image to some cache
                                     [self.heightsCache setValue:[NSNumber numberWithFloat:cell.voucherImage.frame.size.height]
                                                       forKey:voucher.url];
-                                    
-                                    [tableView beginUpdates];
-                                    [tableView reloadRowsAtIndexPaths:@[indexPath]
+                                    /*
+                                    [view beginUpdates];
+                                    [view reloadRowsAtIndexPaths:@[indexPath]
                                                      withRowAnimation:UITableViewRowAnimationFade];
-                                    [tableView endUpdates];
+                                    [view endUpdates];
+                                     */
                                 }
      ];
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
