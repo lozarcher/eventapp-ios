@@ -11,6 +11,7 @@
 #import "TweetBuilder.h"
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
+#import "TwitterViewCell.h"
 
 #import <Social/Social.h>
 
@@ -118,19 +119,24 @@
     return _tweets.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 90;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
-    UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *simpleTableIdentifier = @"TwitterTableItem";
+    TwitterViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
+        [tableView registerNib:[UINib nibWithNibName:@"TwitterViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     }
     
     // Cell text (event title)
     Tweet *tweet = [self getTweetForIndexPath:indexPath];
     NSLog(@"Cell label %@", [tweet name]);
-    cell.textLabel.text = [tweet name];
-    cell.detailTextLabel.text = [tweet text];
+    [cell populateDataInCell:tweet];
+    
     return cell;
 }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -20,14 +21,18 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcB-7E-gsq">
-                    <rect key="frame" x="37" y="69" width="85.5" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcB-7E-gsq">
+                    <rect key="frame" x="37" y="68" width="85.5" height="20.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ae-xI-Eha">
-                    <rect key="frame" x="37" y="94" width="68.5" height="16.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ae-xI-Eha">
+                    <rect key="frame" x="37" y="94" width="69" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="69" id="iLP-l9-9vZ"/>
+                        <constraint firstAttribute="height" constant="17" id="wbM-3g-CZo"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -45,37 +50,51 @@
                         <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="kt0-1h-Bax"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-MM-PZl">
-                    <rect key="frame" x="37" y="112" width="505" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-MM-PZl">
+                    <rect key="frame" x="37" y="111" width="505" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="23" id="DuC-4L-1nA"/>
+                        <constraint firstAttribute="height" constant="50" id="TV1-Q2-MKJ"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-TT-QuX">
-                    <rect key="frame" x="38" y="169" width="527" height="272.5"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-TT-QuX">
+                    <rect key="frame" x="37" y="176" width="531.5" height="400.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="OGy-TT-QuX" secondAttribute="height" multiplier="118:61" id="NAd-5y-tSJ"/>
-                        <constraint firstAttribute="height" constant="183" id="gnl-y8-fYp"/>
+                        <constraint firstAttribute="width" secondItem="OGy-TT-QuX" secondAttribute="height" multiplier="531:400" id="3aQ-q2-KMI"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="1Ae-xI-Eha" firstAttribute="top" secondItem="wcB-7E-gsq" secondAttribute="bottom" constant="5.5" id="1Ka-qZ-xgp"/>
                 <constraint firstItem="inR-fF-IvS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="4NV-Bj-2fp"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gmn-MM-PZl" secondAttribute="trailing" constant="58" id="6kr-bY-e8Z"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OGy-TT-QuX" secondAttribute="trailing" constant="31.5" id="7IT-AU-Zrh"/>
+                <constraint firstItem="Gmn-MM-PZl" firstAttribute="top" secondItem="1Ae-xI-Eha" secondAttribute="bottom" id="Ann-pG-41W"/>
                 <constraint firstItem="inR-fF-IvS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-237" id="CFx-q2-KPI"/>
-                <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="OGy-TT-QuX" secondAttribute="leading" id="Nbf-dB-twc"/>
-                <constraint firstAttribute="trailing" secondItem="Gmn-MM-PZl" secondAttribute="trailing" constant="58" id="WQF-DI-dAf"/>
+                <constraint firstItem="1Ae-xI-Eha" firstAttribute="top" secondItem="wcB-7E-gsq" secondAttribute="bottom" constant="4" id="Jqm-RW-9lU"/>
+                <constraint firstItem="OGy-TT-QuX" firstAttribute="top" secondItem="Gmn-MM-PZl" secondAttribute="bottom" constant="22" id="Utf-O6-35g"/>
                 <constraint firstItem="OGy-TT-QuX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="37" id="Wf6-5T-jiI"/>
-                <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="1Ae-xI-Eha" secondAttribute="leading" id="btA-4T-BzV"/>
-                <constraint firstItem="OGy-TT-QuX" firstAttribute="top" secondItem="Gmn-MM-PZl" secondAttribute="bottom" constant="8" symbolic="YES" id="hTS-PV-Jdt"/>
-                <constraint firstAttribute="trailing" secondItem="OGy-TT-QuX" secondAttribute="trailing" constant="36" id="mDG-5L-wy0"/>
-                <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="wcB-7E-gsq" secondAttribute="leading" id="v1E-ut-7RL"/>
+                <constraint firstAttribute="trailing" secondItem="Gmn-MM-PZl" secondAttribute="trailing" constant="58" id="ajg-nW-1ip"/>
+                <constraint firstItem="OGy-TT-QuX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="37" id="bsS-Wv-aM1"/>
+                <constraint firstAttribute="trailing" secondItem="OGy-TT-QuX" secondAttribute="trailing" constant="31.5" id="mDG-5L-wy0"/>
+                <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="1Ae-xI-Eha" secondAttribute="leading" id="peg-A4-JTG"/>
+                <constraint firstItem="inR-fF-IvS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="tFo-Le-jyg"/>
+                <constraint firstItem="wcB-7E-gsq" firstAttribute="top" secondItem="inR-fF-IvS" secondAttribute="bottom" constant="10" id="ufX-qO-4fb"/>
+                <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="wcB-7E-gsq" secondAttribute="leading" id="vcU-jG-87L"/>
+                <constraint firstItem="OGy-TT-QuX" firstAttribute="top" secondItem="Gmn-MM-PZl" secondAttribute="bottom" constant="15" id="zAh-rk-vbP"/>
+                <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="37" id="zF9-Q9-K6w"/>
+                <constraint firstItem="Gmn-MM-PZl" firstAttribute="top" secondItem="1Ae-xI-Eha" secondAttribute="bottom" constant="1" id="zrm-fV-Ddo"/>
             </constraints>
-            <point key="canvasLocation" x="198" y="238"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Jqm-RW-9lU"/>
+                    <exclude reference="zrm-fV-Ddo"/>
+                    <exclude reference="Utf-O6-35g"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="82" y="238"/>
         </view>
     </objects>
 </document>

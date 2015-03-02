@@ -12,5 +12,8 @@
 @property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *text;
+@property (strong, nonatomic) NSString *screenName;
+@property (strong, nonatomic) NSString *createdDate;
+@property (strong, nonatomic) NSString *profilePic;
 
 @end
