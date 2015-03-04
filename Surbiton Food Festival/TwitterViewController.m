@@ -21,11 +21,21 @@
 
 @implementation TwitterViewController
 
-@synthesize tableView, refreshControl;
+@synthesize tableView, refreshControl, spinner, messageLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     tableView.dataSource = self;
+    
+    //initialise the message label
+    messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    messageLabel.text = @"No data is currently available. Please pull down to refresh.";
+    messageLabel.textColor = [UIColor blackColor];
+    messageLabel.numberOfLines = 0;
+    messageLabel.textAlignment = NSTextAlignmentCenter;
+    messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+    [messageLabel sizeToFit];
     
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -53,6 +63,7 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
+    [self activateSpinner:YES];
     [self refreshTweets:self];
 }
 
@@ -96,19 +107,12 @@
     NSInteger numberOfTweets = [_tweets count];
     if (numberOfTweets != 0) {
         self.tableView.backgroundView = nil;
+        [messageLabel removeFromSuperview];
         return 1;
     } else {
         // Display a message when the table is empty
-        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
         
-        messageLabel.text = @"No data is currently available. Please pull down to refresh.";
-        messageLabel.textColor = [UIColor blackColor];
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = NSTextAlignmentCenter;
-        messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
-        [messageLabel sizeToFit];
-        
-        self.tableView.backgroundView = messageLabel;
+        [self.view addSubview:messageLabel];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         return 0;
@@ -149,13 +153,6 @@
 #pragma mark NSURLConnection Delegate Methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    // This method is called when the server has determined that it
-    // has enough information to create the NSURLResponse object.
-    
-    // It can be called multiple times, for example in the case of a
-    // redirect, so each time we reset the data.
-    
-    // receivedData is an instance variable declared elsewhere.
     [receivedData setLength:0];
 }
 
@@ -169,13 +166,6 @@
 - (void)connection:(NSURLConnection *)connection
   didFailWithError:(NSError *)error
 {
-    // Release the connection and the data object
-    // by setting the properties (declared elsewhere)
-    // to nil.  Note that a real-world app usually
-    // requires the delegate to manage more than one
-    // connection at a time, so these lines would
-    // typically be replaced by code to iterate through
-    // whatever data structures you are using.
     connection = nil;
     receivedData = nil;
     
@@ -224,13 +214,6 @@
         NSLog(@"Wrote to file %@", storePath);
     }
     
-    // Release the connection and the data object
-    // by setting the properties (declared elsewhere)
-    // to nil.  Note that a real-world app usually
-    // requires the delegate to manage more than one
-    // connection at a time, so these lines would
-    // typically be replaced by code to iterate through
-    // whatever data structures you are using.
     connection = nil;
     receivedData = nil;
         
@@ -270,6 +253,7 @@
         self.refreshControl.attributedTitle = attributedTitle;
         
         [self.refreshControl endRefreshing];
+        [self activateSpinner:NO];
     }
 }
 
@@ -291,6 +275,21 @@
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
         [alertView show];
+    }
+}
+
+
+-(void)activateSpinner:(BOOL)activate {
+    if (activate) {
+        spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        spinner.center = CGPointMake(160, 240);
+        spinner.hidesWhenStopped = YES;
+        [self.view addSubview:spinner];
+        [spinner startAnimating];
+    } else {
+        if (spinner) {
+            [spinner stopAnimating];
+        }
     }
 }
 

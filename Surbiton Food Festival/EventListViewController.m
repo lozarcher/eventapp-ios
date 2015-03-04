@@ -17,7 +17,7 @@
 
 @implementation EventListViewController
 
-@synthesize tableView;
+@synthesize tableView, spinner, messageLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,6 +26,18 @@
     
     _eventDays = [[NSMutableDictionary alloc] init];
     _eventDayKeys = [[NSMutableArray alloc] init];
+    
+    //initialise the message label
+    messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    messageLabel.text = @"No data is currently available. Please pull down to refresh.";
+    messageLabel.textColor = [UIColor blackColor];
+    messageLabel.numberOfLines = 0;
+    messageLabel.textAlignment = NSTextAlignmentCenter;
+    messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+    [messageLabel sizeToFit];
+
+    
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor purpleColor];
@@ -49,7 +61,12 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
+    [self activateSpinner:YES];
     [self refreshEvents:self];
+}
+
+- (void)initialRefreshEvents:(id)sender {
+
 }
 
 - (void)refreshEvents:(id)sender {
@@ -78,7 +95,6 @@
         NSLog(@"Error making connection");
         
     }
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,22 +107,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger numberOfDates = [_eventDayKeys count];
     if (numberOfDates != 0) {
-        self.tableView.backgroundView = nil;
+        [messageLabel removeFromSuperview];
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         return [_eventDayKeys count];
     } else {
         // Display a message when the table is empty
-        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-        
-        messageLabel.text = @"No data is currently available. Please pull down to refresh.";
-        messageLabel.textColor = [UIColor blackColor];
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = NSTextAlignmentCenter;
-        messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
-        [messageLabel sizeToFit];
-        
-        self.tableView.backgroundView = messageLabel;
+        [self.view addSubview:messageLabel];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
         return 0;
     }
 }
@@ -205,7 +212,7 @@
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
     
-    [self connectionError];
+    [self activateSpinner:NO];
     [self.refreshControl endRefreshing];
     // Get events from cache instead
     NSError *parseError;
@@ -238,8 +245,7 @@
     [self.refreshControl endRefreshing];
     [self getEventsFromData:receivedData];
     [tableView reloadData];
-    [self connectionOK];
-    
+    [self activateSpinner:NO];
     NSError* writeError;
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
@@ -267,7 +273,7 @@
     if ([events count] > 0) {
         _events = events;
     } else {
-        [self connectionError];
+        [self activateSpinner:NO];
     }
     [self createEventDays:events];
     if (error != nil) {
@@ -319,11 +325,17 @@
     return nil;
 }
 
--(void)connectionError {
-    NSLog(@"Connection Error");
-}
-
--(void)connectionOK {
-    NSLog(@"Connection OK");
+-(void)activateSpinner:(BOOL)activate {
+    if (activate) {
+        spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        spinner.center = CGPointMake(160, 240);
+        spinner.hidesWhenStopped = YES;
+        [self.view addSubview:spinner];
+        [spinner startAnimating];
+    } else {
+        if (spinner) {
+            [spinner stopAnimating];
+        }
+    }
 }
 @end

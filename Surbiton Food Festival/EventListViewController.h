@@ -18,6 +18,8 @@
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
+@property (retain,nonatomic) UIActivityIndicatorView *spinner;
+@property (retain,nonatomic) UILabel *messageLabel;
 - (void)refreshEvents:(id)sender;
 
 @end
