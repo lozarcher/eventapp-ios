@@ -252,7 +252,7 @@
 {
     //launch a new view upon touching the disclosure indicator
     VenueViewController *venueVc = [[VenueViewController alloc] initWithNibName:@"VenueViewController" bundle:nil];
-    venueVc.venueNameLabel.text = @"Venue...";
+    venueVc.venueNameLabel.text = [view.annotation title];
     [self presentViewController:venueVc animated:YES completion:nil];
 }
 
