@@ -67,6 +67,8 @@
 		AE2521E31AA1DAE7006A442A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521D31AA1DAE7006A442A /* UIView+WebCacheOperation.m */; };
 		AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521E51AA20040006A442A /* VoucherViewController.m */; };
 		AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2521E61AA20040006A442A /* VoucherViewController.xib */; };
+		AE6E97B21AA85FFA00DD31A0 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E97B01AA85FFA00DD31A0 /* VenueViewController.m */; };
+		AE6E97B31AA85FFA00DD31A0 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6E97B11AA85FFA00DD31A0 /* VenueViewController.xib */; };
 		AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D13601AA14B1900166951 /* VoucherListCell.m */; };
 		AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13611AA14B1900166951 /* VoucherListCell.xib */; };
 		AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */; };
@@ -195,6 +197,9 @@
 		AE2521E41AA20040006A442A /* VoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherViewController.h; sourceTree = "<group>"; };
 		AE2521E51AA20040006A442A /* VoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherViewController.m; sourceTree = "<group>"; };
 		AE2521E61AA20040006A442A /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
+		AE6E97AF1AA85FFA00DD31A0 /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
+		AE6E97B01AA85FFA00DD31A0 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
+		AE6E97B11AA85FFA00DD31A0 /* VenueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueViewController.xib; sourceTree = "<group>"; };
 		AE8D135F1AA14B1900166951 /* VoucherListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListCell.h; sourceTree = "<group>"; };
 		AE8D13601AA14B1900166951 /* VoucherListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListCell.m; sourceTree = "<group>"; };
 		AE8D13611AA14B1900166951 /* VoucherListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListCell.xib; sourceTree = "<group>"; };
@@ -315,8 +320,6 @@
 			children = (
 				AE1BCBA21A9FC60E00E79935 /* FrontViewController.h */,
 				AE1BCBA31A9FC60E00E79935 /* FrontViewController.m */,
-				AE9369F01A9BC55800F15869 /* MapViewController.h */,
-				AE9369F11A9BC55800F15869 /* MapViewController.m */,
 				AE1BCBBE1A9FCEB600E79935 /* Navigation */,
 			);
 			name = Controllers;
@@ -341,8 +344,6 @@
 			isa = PBXGroup;
 			children = (
 				AE18C4B71A8CB5F500B96570 /* Models */,
-				AE9369FE1A9BE0D700F15869 /* VenueAnnotation.h */,
-				AE9369FF1A9BE0D700F15869 /* VenueAnnotation.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -415,6 +416,21 @@
 			path = ../../SDWebImage/SDWebImage;
 			sourceTree = "<group>";
 		};
+		AE6E97AE1AA85DB300DD31A0 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				AE9369FE1A9BE0D700F15869 /* VenueAnnotation.h */,
+				AE9369FF1A9BE0D700F15869 /* VenueAnnotation.m */,
+				AE9369F01A9BC55800F15869 /* MapViewController.h */,
+				AE9369F11A9BC55800F15869 /* MapViewController.m */,
+				AE1BCBAC1A9FC87200E79935 /* MapViewController.xib */,
+				AE6E97AF1AA85FFA00DD31A0 /* VenueViewController.h */,
+				AE6E97B01AA85FFA00DD31A0 /* VenueViewController.m */,
+				AE6E97B11AA85FFA00DD31A0 /* VenueViewController.xib */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
 		AEA0568D1AA4F7F1003E095F /* TwitterList */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,7 +472,6 @@
 			isa = PBXGroup;
 			children = (
 				AE1BCBAA1A9FC87200E79935 /* FrontViewController.xib */,
-				AE1BCBAC1A9FC87200E79935 /* MapViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -502,6 +517,7 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AE6E97AE1AA85DB300DD31A0 /* MapView */,
 				AEA0568D1AA4F7F1003E095F /* TwitterList */,
 				AE2521B21AA1DAE7006A442A /* SDWebImage */,
 				AE1382671AA142DE00714884 /* VoucherList */,
@@ -641,6 +657,7 @@
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
+				AE6E97B31AA85FFA00DD31A0 /* VenueViewController.xib in Resources */,
 				AE1BCBAF1A9FC87200E79935 /* MapViewController.xib in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
 				AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */,
@@ -691,6 +708,7 @@
 				AE2521DD1AA1DAE7006A442A /* UIButton+WebCache.m in Sources */,
 				AE2521DB1AA1DAE7006A442A /* SDWebImageManager.m in Sources */,
 				AE936A001A9BE0D700F15869 /* VenueAnnotation.m in Sources */,
+				AE6E97B21AA85FFA00DD31A0 /* VenueViewController.m in Sources */,
 				AE1382631AA1422B00714884 /* Voucher.m in Sources */,
 				AEFF2E8F1A925ED8005DBCBB /* EventViewCell.m in Sources */,
 				AE2521D91AA1DAE7006A442A /* SDWebImageDownloader.m in Sources */,

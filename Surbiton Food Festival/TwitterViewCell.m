@@ -51,18 +51,18 @@
     if(ti < 1) {
         return @"never";
     } else 	if (ti < 60) {
-        return @"just now";
+        return @"now";
     } else if (ti < 3600) {
         int diff = round(ti / 60);
-        return [NSString stringWithFormat:@"%d mins", diff];
+        return [NSString stringWithFormat:@"%dm", diff];
     } else if (ti < 86400) {
         int diff = round(ti / 60 / 60);
-        return[NSString stringWithFormat:@"%d hours", diff];
+        return[NSString stringWithFormat:@"%dh", diff];
     } else if (ti < 2629743) {
         int diff = round(ti / 60 / 60 / 24);
-        return[NSString stringWithFormat:@"%d days", diff];
+        return[NSString stringWithFormat:@"%dd", diff];
     } else {
-        return @"never";
+        return @"";
     }	
 }
 

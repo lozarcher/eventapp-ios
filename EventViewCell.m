@@ -11,7 +11,7 @@
 
 @implementation EventViewCell
 
-@synthesize eventNameLabel, eventTimeLabel;
+@synthesize eventNameLabel, eventTimeLabel, venueLabel;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -31,8 +31,9 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"HH:mm";
     NSString *startDateString = [formatter stringFromDate:startDate];
-    
     eventTimeLabel.text = startDateString;
+    
+    venueLabel.text = event.location;
 }
 
 

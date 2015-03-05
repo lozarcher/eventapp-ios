@@ -13,6 +13,7 @@
 #import "VenueAnnotation.h"
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
+#import "VenueViewController.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -219,7 +220,7 @@
             address = @"";
         }
         VenueAnnotation *annotation = [[VenueAnnotation alloc] initWithName:venue.location address:address coordinate:coordinate] ;
-        
+
         [mapView addAnnotation:annotation];
     }
 }
@@ -233,6 +234,8 @@
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
+            annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+
             annotationView.image = [UIImage imageNamed:@"pin.png"];//here we use a nice image instead of the default pins
 
         } else {
@@ -243,6 +246,14 @@
     }
     
     return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    //launch a new view upon touching the disclosure indicator
+    VenueViewController *venueVc = [[VenueViewController alloc] initWithNibName:@"VenueViewController" bundle:nil];
+    venueVc.venueNameLabel.text = @"Venue...";
+    [self presentViewController:venueVc animated:YES completion:nil];
 }
 
 @end
