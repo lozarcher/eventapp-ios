@@ -15,6 +15,10 @@
 
 @implementation VenueViewController
 
+- (IBAction)closeButton:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 @synthesize venueNameLabel;
 
 - (void)viewDidLoad {

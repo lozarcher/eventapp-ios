@@ -11,6 +11,6 @@
 
 @implementation Venue
 
-@synthesize id, location, latitude, longitude, street, city, postcode;
+@synthesize id, location, latitude, longitude, street, city, postcode, phone, website;
 
 @end

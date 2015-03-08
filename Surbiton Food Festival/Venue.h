@@ -16,5 +16,8 @@
 @property (strong, nonatomic) NSString *latitude;
 @property (strong, nonatomic) NSString *longitude;
 @property (strong, nonatomic) NSString *location;
+@property (strong, nonatomic) NSString *phone;
+@property (strong, nonatomic) NSString *website;
+
 
 @end
