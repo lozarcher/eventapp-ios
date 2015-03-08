@@ -11,5 +11,7 @@
 
 @interface VenueViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *venueNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
 
 @end
