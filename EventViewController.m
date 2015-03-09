@@ -47,11 +47,9 @@
         dateText = [dates componentsJoinedByString:@" - "];
     }
     eventDateLabel.text = dateText;
-    
+    eventImageView.frame = self.view.bounds;
+
     if (![event.coverUrl isKindOfClass:[NSNull class]]) {
-
-        eventImageView.frame = self.view.bounds;
-
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         [manager downloadImageWithURL:[NSURL URLWithString:[event coverUrl]] options:0
                              progress:^(NSInteger receivedSize, NSInteger expectedSize) {

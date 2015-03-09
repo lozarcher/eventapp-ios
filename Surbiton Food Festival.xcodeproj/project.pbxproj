@@ -23,6 +23,7 @@
 		AE02BC371AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC251AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m */; };
 		AE02BC381AA8F4650025E7CC /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC271AA8F4650025E7CC /* UIImageView+WebCache.m */; };
 		AE02BC391AA8F4650025E7CC /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC291AA8F4650025E7CC /* UIView+WebCacheOperation.m */; };
+		AE02BC3B1AAE0CEA0025E7CC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = AE02BC3A1AAE0CEA0025E7CC /* splash.png */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
 		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
 		AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C11A8CBBB200B96570 /* EventBuilder.m */; };
@@ -141,6 +142,7 @@
 		AE02BC271AA8F4650025E7CC /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		AE02BC281AA8F4650025E7CC /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		AE02BC291AA8F4650025E7CC /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		AE02BC3A1AAE0CEA0025E7CC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		AE1382611AA1422B00714884 /* Voucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
 		AE1382621AA1422B00714884 /* Voucher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
 		AE1382641AA1426D00714884 /* VoucherBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherBuilder.h; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE02BC3A1AAE0CEA0025E7CC /* splash.png */,
 				AE1BCBD21A9FDC2500E79935 /* icons */,
 				AE1BCBD01A9FD3CC00E79935 /* logo.jpg */,
 				AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */,
@@ -516,7 +519,6 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
-				AE02BC081AA8F4650025E7CC /* SDWebImage */,
 				AE6E97AE1AA85DB300DD31A0 /* MapView */,
 				AEA0568D1AA4F7F1003E095F /* TwitterList */,
 				AE1382671AA142DE00714884 /* VoucherList */,
@@ -535,6 +537,7 @@
 		AEF8BC431A7CEC8A007241DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE02BC081AA8F4650025E7CC /* SDWebImage */,
 				AE1BCB9A1A9FAFAA00E79935 /* SWRevealViewController */,
 				AEF8BC441A7CEC8A007241DC /* Info.plist */,
 				AEF8BC451A7CEC8A007241DC /* main.m */,
@@ -653,6 +656,7 @@
 				AE1BCBF71A9FDC3300E79935 /* Icon.png in Resources */,
 				AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */,
 				AE1BCBB51A9FC9C700E79935 /* reveal-icon@2x.png in Resources */,
+				AE02BC3B1AAE0CEA0025E7CC /* splash.png in Resources */,
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,

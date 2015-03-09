@@ -44,11 +44,12 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="91E-3o-lHs" secondAttribute="trailing" constant="20" id="6bi-DE-sTn"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="91E-3o-lHs" secondAttribute="trailing" constant="10" id="6bi-DE-sTn"/>
                     <constraint firstAttribute="bottomMargin" secondItem="4Io-Fu-NXh" secondAttribute="bottom" constant="1" id="BYN-5e-66d"/>
                     <constraint firstItem="wam-w0-qEA" firstAttribute="leading" secondItem="4Io-Fu-NXh" secondAttribute="trailing" constant="8" id="VkW-yI-pqc"/>
-                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wam-w0-qEA" secondAttribute="trailing" constant="20" id="bH9-gE-LgP"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wam-w0-qEA" secondAttribute="trailing" constant="10" id="bH9-gE-LgP"/>
                     <constraint firstItem="91E-3o-lHs" firstAttribute="top" secondItem="wam-w0-qEA" secondAttribute="bottom" constant="1" id="bvx-hs-C6p"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="91E-3o-lHs" secondAttribute="bottom" constant="5" id="g4n-bw-VzK"/>
                     <constraint firstItem="wam-w0-qEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="kI2-q3-cbQ"/>
                     <constraint firstItem="91E-3o-lHs" firstAttribute="leading" secondItem="4Io-Fu-NXh" secondAttribute="trailing" constant="7" id="mJb-r0-7En"/>
                     <constraint firstItem="4Io-Fu-NXh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="s89-ZO-oRG"/>
