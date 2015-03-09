@@ -34,8 +34,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
-    eventDescriptionLabel.text = event.desc;
-    venueLabel.text  = event.location;
+    if (![[event desc] isKindOfClass:[NSNull class]]) {
+        eventDescriptionLabel.text = event.desc;
+    } else {
+        eventDescriptionLabel.text = @"";
+    }
+    if (![[event location] isKindOfClass:[NSNull class]]) {
+        venueLabel.text = event.location;
+    } else {
+        venueLabel.text = @"Surbiton";
+    }
     
     NSTimeInterval startSeconds = [event.startTime doubleValue]/1000;
     NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:startSeconds];
@@ -69,6 +77,8 @@
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                 [eventImageView setImage:image];
                             }];
+    } else {
+        [eventImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
 }
 

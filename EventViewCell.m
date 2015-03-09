@@ -51,6 +51,8 @@
                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                             [eventImage setImage:image];
                         }];
+    } else {
+        [eventImage setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
 }
 
