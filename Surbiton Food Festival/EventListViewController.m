@@ -121,7 +121,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     NSDate *sectionDate = [_eventDayKeys objectAtIndex:section];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"eee d MMMM"];
+    [formatter setDateFormat:@"eee d MMMM yyyy"];
     
     NSString *stringFromDate = [formatter stringFromDate:sectionDate];
     return stringFromDate;
