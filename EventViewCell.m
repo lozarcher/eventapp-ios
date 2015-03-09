@@ -31,9 +31,16 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"HH:mm";
     NSString *startDateString = [formatter stringFromDate:startDate];
-    eventTimeLabel.text = startDateString;
     
-    venueLabel.text = event.location;
+    if ([startDateString isEqualToString:@"01:00"]) {
+        startDateString = @"All day";
+    }
+    
+    NSString *location = event.location;
+    if ([location isKindOfClass:[NSNull class]]) {
+        location = @"Surbiton";
+    }
+    venueLabel.text = [NSString stringWithFormat:@"%@ @ %@",startDateString, location];
 }
 
 

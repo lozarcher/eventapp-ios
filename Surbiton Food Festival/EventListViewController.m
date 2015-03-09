@@ -149,10 +149,12 @@
     
     // Cell text (event title)
     Event *event = [self getEventForIndexPath:indexPath];
+    
     NSLog(@"Cell label %@", [event name]);
+    
     [cell populateDataInCell:event];
     
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
