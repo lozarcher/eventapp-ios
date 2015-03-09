@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *venueLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 -(void)populateDataInCell:(Event *)event;
 
 @end

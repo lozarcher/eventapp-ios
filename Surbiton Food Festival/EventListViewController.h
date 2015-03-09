@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventViewCell.h"
 
 @interface EventListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_events;
@@ -20,6 +21,7 @@
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
 @property (retain,nonatomic) UIActivityIndicatorView *spinner;
 @property (retain,nonatomic) UILabel *messageLabel;
+@property (nonatomic, strong) EventViewCell *prototypeCell;
 - (void)refreshEvents:(id)sender;
 
 @end

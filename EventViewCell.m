@@ -8,10 +8,11 @@
 
 #import "EventViewCell.h"
 #import "Event.h"
+#import "UIImageView+WebCache.h"
 
 @implementation EventViewCell
 
-@synthesize eventNameLabel, eventTimeLabel, venueLabel;
+@synthesize eventNameLabel, eventTimeLabel, venueLabel, eventImage;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -41,6 +42,16 @@
         location = @"Surbiton";
     }
     venueLabel.text = [NSString stringWithFormat:@"%@ @ %@",startDateString, location];
+    
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    if (![[event coverUrl] isKindOfClass:[NSNull class]]) {
+        [manager downloadImageWithURL:[NSURL URLWithString:[event coverUrl]] options:0
+                         progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                         }
+                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                            [eventImage setImage:image];
+                        }];
+    }
 }
 
 

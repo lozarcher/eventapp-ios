@@ -27,6 +27,10 @@
     _eventDays = [[NSMutableDictionary alloc] init];
     _eventDayKeys = [[NSMutableArray alloc] init];
     
+    // Register cell Nib
+    UINib *cellNib = [UINib nibWithNibName:@"EventViewCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"EventViewCell"];
+    
     //initialise the message label
     messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -140,23 +144,30 @@
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *simpleTableIdentifier = @"EventTableItem";
-    EventViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"EventViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    }
-    
+    EventViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"EventViewCell"];;
+
     // Cell text (event title)
     Event *event = [self getEventForIndexPath:indexPath];
-    
     NSLog(@"Cell label %@", [event name]);
-    
     [cell populateDataInCell:event];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (!self.prototypeCell)
+    {
+        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"EventViewCell"];
+    }
+    Event *event = [self getEventForIndexPath:indexPath];
+    [self.prototypeCell populateDataInCell:event];
+    
+    [self.prototypeCell layoutIfNeeded];
+    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height;
 }
 
 - (Event*)getEventForIndexPath:(NSIndexPath *)indexPath {
