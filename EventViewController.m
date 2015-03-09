@@ -15,7 +15,7 @@
 
 @implementation EventViewController
 
-@synthesize eventTitleLabel, eventDateLabel, eventImageView, eventDescriptionLabel, closeButton, event;
+@synthesize eventTitleLabel, eventDateLabel, eventImageView, eventDescriptionLabel, closeButton, event, eventTimeLabel, venueLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,18 +35,30 @@
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
     eventDescriptionLabel.text = event.desc;
-    NSTimeInterval seconds = [event.startTime doubleValue]/1000;
-    NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
-    NSDate *endDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"dd/MM/yyyy HH:mma";
-    NSString *dateText = [dateFormatter stringFromDate:startDate];
-    if (endDate != nil) {
-        NSString *endDateString = [dateFormatter stringFromDate:endDate];
-        NSArray* dates = [[NSArray alloc] initWithObjects:dateText, endDateString, nil];
-        dateText = [dates componentsJoinedByString:@" - "];
+    venueLabel.text  = event.location;
+    
+    NSTimeInterval startSeconds = [event.startTime doubleValue]/1000;
+    NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:startSeconds];
+    NSDate *endDate = nil;
+    if ([event.endTime isKindOfClass:[NSNull class]]) {
+        endDate = nil;
+    } else {
+        NSTimeInterval endSeconds = [event.endTime doubleValue]/1000;
+        endDate = [[NSDate alloc] initWithTimeIntervalSince1970:endSeconds];
     }
-    eventDateLabel.text = dateText;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"eee d MMMM yyyy"];
+    eventDateLabel.text = [dateFormatter stringFromDate:startDate];
+    
+    [dateFormatter setDateFormat:@"HH:mm"];
+    NSString *timeText = [dateFormatter stringFromDate:startDate];
+    if (endDate != nil) {
+        [dateFormatter setDateFormat:@"HH:mm"];
+        NSString *endDateString = [dateFormatter stringFromDate:endDate];
+        NSArray* dates = [[NSArray alloc] initWithObjects:timeText, endDateString, nil];
+        timeText = [dates componentsJoinedByString:@" - "];
+    }
+    eventTimeLabel.text = timeText;
     eventImageView.frame = self.view.bounds;
 
     if (![event.coverUrl isKindOfClass:[NSNull class]]) {

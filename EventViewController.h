@@ -15,6 +15,8 @@
 @property (retain,nonatomic) IBOutlet UILabel *eventDateLabel;
 @property (retain,nonatomic) IBOutlet UIImageView *eventImageView;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eventTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *venueLabel;
 
 @property (retain,nonatomic) Event *event;
 @end
