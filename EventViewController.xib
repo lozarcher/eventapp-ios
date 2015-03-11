@@ -14,6 +14,7 @@
                 <outlet property="eventImageView" destination="OGy-TT-QuX" id="eU5-jr-JB0"/>
                 <outlet property="eventTimeLabel" destination="sva-8t-ahH" id="aTf-yb-OQ7"/>
                 <outlet property="eventTitleLabel" destination="wcB-7E-gsq" id="Lvm-I9-tdq"/>
+                <outlet property="remindMeButton" destination="gbz-GB-Pxq" id="EEb-Yh-T1y"/>
                 <outlet property="venueLabel" destination="uZn-ms-reu" id="wQh-g0-YIi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,13 +25,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcB-7E-gsq">
-                    <rect key="frame" x="8" y="145" width="582" height="21"/>
+                    <rect key="frame" x="8" y="145" width="582" height="20.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-MM-PZl">
-                    <rect key="frame" x="10" y="199" width="580" height="24"/>
+                    <rect key="frame" x="10" y="198" width="580" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="Am9-1K-NhD"/>
                     </constraints>
@@ -69,7 +70,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZn-ms-reu">
-                    <rect key="frame" x="8" y="174" width="582" height="17"/>
+                    <rect key="frame" x="8" y="173" width="582" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="dvT-Uu-Ioz"/>
                         <constraint firstAttribute="width" constant="582" id="jz7-di-hmN"/>
@@ -88,6 +89,15 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbz-GB-Pxq">
+                    <rect key="frame" x="69" y="30" width="79" height="30"/>
+                    <state key="normal" title="Remind Me">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="remindMePressed:" destination="-1" eventType="touchUpInside" id="Ylx-cs-1LG"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -102,6 +112,7 @@
                 <constraint firstItem="wcB-7E-gsq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="IHI-e8-Gap"/>
                 <constraint firstItem="OGy-TT-QuX" firstAttribute="leading" secondItem="sva-8t-ahH" secondAttribute="trailing" constant="10" id="J2q-sf-LRV"/>
                 <constraint firstItem="OGy-TT-QuX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="LfB-IV-YUh"/>
+                <constraint firstItem="gbz-GB-Pxq" firstAttribute="leading" secondItem="inR-fF-IvS" secondAttribute="trailing" constant="8" id="Nz2-nq-fO8"/>
                 <constraint firstItem="sva-8t-ahH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="S63-eR-Ne4"/>
                 <constraint firstItem="inR-fF-IvS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="VUu-AE-dF5"/>
                 <constraint firstItem="Gmn-MM-PZl" firstAttribute="top" secondItem="uZn-ms-reu" secondAttribute="bottom" constant="8" id="aLy-tf-swr"/>

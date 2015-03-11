@@ -8,8 +8,12 @@
 
 #import "EventViewController.h"
 #import "UIImageView+WebCache.h"
+#import <EventKit/EventKit.h>
+#import "EventManager.h"
 
 @interface EventViewController ()
+
+@property EventManager *eventManager;
 
 @end
 
@@ -23,6 +27,7 @@
     if (self) {
         // Custom initialization
     }
+    self.eventManager = [[EventManager alloc] init];
     return self;
 }
 
@@ -98,4 +103,39 @@
 */
 
 
+- (IBAction)remindMePressed:(id)sender {
+    NSLog(@"Remind me pressed %@", [event name]);
+        
+    // Create a new event object.
+    EKEvent *ekEvent = [EKEvent eventWithEventStore:self.eventManager.eventStore];
+        
+    ekEvent.title = [event name];
+    ekEvent.location = [event location];
+    ekEvent.notes = [event desc];
+    EKAlarm *alarm = [EKAlarm alarmWithRelativeOffset:-60 * 60];
+    [ekEvent addAlarm:alarm];
+    
+    // Set its calendar.
+    ekEvent.calendar = [self.eventManager.eventStore calendarWithIdentifier:self.eventManager.selectedCalendarIdentifier];
+        
+    // Set the start and end dates to the event.
+    NSTimeInterval startSeconds = [event.startTime doubleValue]/1000;
+    NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:startSeconds];
+    ekEvent.startDate = startDate;
+    
+    if (![event.endTime isKindOfClass:[NSNull class]]) {
+        NSTimeInterval endSeconds = [event.startTime doubleValue]/1000;
+        NSDate *endDate = [[NSDate alloc] initWithTimeIntervalSince1970:endSeconds];
+        ekEvent.endDate = endDate;
+    }
+        
+    // Save and commit the event.
+    NSError *error;
+    if ([self.eventManager.eventStore saveEvent:ekEvent span:EKSpanFutureEvents commit:YES error:&error]) {
+        // Call the delegate method to notify the caller class (the ViewController class) that the event was saved.
+        NSLog(@"Successfully saved event");
+    } else {
+        NSLog(@"Error saving event");
+    }
+}
 @end

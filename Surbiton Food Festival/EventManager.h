@@ -1,21 +1,37 @@
 //
 //  EventManager.h
-//  Surbiton Food Festival
+//  EventKitDemo
 //
-//  Created by Loz on 12/02/2015.
-//  Copyright (c) 2015 Spirit of Seething. All rights reserved.
+//  Created by Gabriel Theodoropoulos on 11/7/14.
+//  Copyright (c) 2014 Appcoda. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "EventManagerDelegate.h"
-#import "EventCommunicatorDelegate.h"
+#import <EventKit/EventKit.h>
 
-@class EventCommunicator;
+@interface EventManager : NSObject
 
-@interface EventManager : NSObject<EventCommunicatorDelegate>
-@property (strong, nonatomic) EventCommunicator *communicator;
-@property (weak, nonatomic) id<EventManagerDelegate> delegate;
+@property (nonatomic, strong) EKEventStore *eventStore;
 
--(void)fetchEvents;
+@property (nonatomic, strong) NSString *selectedCalendarIdentifier;
+
+@property (nonatomic, strong) NSString *selectedEventIdentifier;
+
+@property (nonatomic) BOOL eventsAccessGranted;
+
+
+-(NSArray *)getLocalEventCalendars;
+
+-(void)saveCustomCalendarIdentifier:(NSString *)identifier;
+
+-(BOOL)checkIfCalendarIsCustomWithIdentifier:(NSString *)identifier;
+
+-(void)removeCalendarIdentifier:(NSString *)identifier;
+
+-(NSString *)getStringFromDate:(NSDate *)date;
+
+-(NSArray *)getEventsOfSelectedCalendar;
+
+-(void)deleteEventWithIdentifier:(NSString *)identifier;
 
 @end

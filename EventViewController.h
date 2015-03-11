@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *venueLabel;
+@property (weak, nonatomic) IBOutlet UIButton *remindMeButton;
+- (IBAction)remindMePressed:(id)sender;
 
 @property (retain,nonatomic) Event *event;
 @end
