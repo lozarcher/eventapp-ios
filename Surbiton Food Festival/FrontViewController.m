@@ -26,6 +26,7 @@
 
 #import "FrontViewController.h"
 #import "SWRevealViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface FrontViewController()
 
@@ -41,7 +42,7 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
+    
 	self.title = NSLocalizedString(@"", nil);
     
     SWRevealViewController *revealController = [self revealViewController];
@@ -54,6 +55,11 @@
         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
+   
+    FBLoginView *loginView = [[FBLoginView alloc] initWithPublishPermissions:@[@"rsvp_event"] defaultAudience:FBSessionDefaultAudienceEveryone];
+    // Align the button in the center horizontally
+    loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), self.view.center.y - (loginView.frame.size.height / 2));
+    [self.view addSubview:loginView];
     
 }
 
@@ -65,7 +71,6 @@
 	stubController.view.backgroundColor = [UIColor whiteColor];
 	[self.navigationController pushViewController:stubController animated:YES];
 }
-
 
 //- (void)viewWillAppear:(BOOL)animated
 //{

@@ -87,6 +87,7 @@
 		AEB9DB311A90C564008C6329 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB301A90C564008C6329 /* Tweet.m */; };
 		AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */; };
 		AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED6CCB1A939DB700B8D84B /* Social.framework */; };
+		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF520941A9E2C1000C05D84 /* Configurations.plist */; };
 		AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF520971A9E2C7600C05D84 /* MTConfiguration.m */; };
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
@@ -229,6 +230,7 @@
 		AEB9DB301A90C564008C6329 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		AEED6CCB1A939DB700B8D84B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF520941A9E2C1000C05D84 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		AEF520961A9E2C7600C05D84 /* MTConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTConfiguration.h; sourceTree = "<group>"; };
 		AEF520971A9E2C7600C05D84 /* MTConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTConfiguration.m; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1BCBB71A9FCA4D00E79935 /* CoreGraphics.framework in Frameworks */,
+				AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */,
 				AE1BCBA91A9FC77200E79935 /* UIKit.framework in Frameworks */,
 				AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */,
 				AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */,
@@ -357,14 +360,15 @@
 			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
-		AE1BCBBD1A9FCEB100E79935 /* Controllers */ = {
+		AE1BCBBD1A9FCEB100E79935 /* Front Page */ = {
 			isa = PBXGroup;
 			children = (
 				AE1BCBA21A9FC60E00E79935 /* FrontViewController.h */,
+				AE1BCBAA1A9FC87200E79935 /* FrontViewController.xib */,
 				AE1BCBA31A9FC60E00E79935 /* FrontViewController.m */,
 				AE1BCBBE1A9FCEB600E79935 /* Navigation */,
 			);
-			name = Controllers;
+			name = "Front Page";
 			sourceTree = "<group>";
 		};
 		AE1BCBBE1A9FCEB600E79935 /* Navigation */ = {
@@ -473,7 +477,6 @@
 		AEED6CC51A939D1400B8D84B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AE1BCBAA1A9FC87200E79935 /* FrontViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 		AEF8BC371A7CEC8A007241DC = {
 			isa = PBXGroup;
 			children = (
+				AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */,
 				AE1BCBB61A9FCA4D00E79935 /* CoreGraphics.framework */,
 				AE1BCBA81A9FC77200E79935 /* UIKit.framework */,
 				AE9369F31A9BC5E300F15869 /* MapKit.framework */,
@@ -524,7 +528,7 @@
 				AE1382671AA142DE00714884 /* VoucherList */,
 				AEEE5FB91AA06E1F00CA7774 /* EventList */,
 				AE1BCBBF1A9FCF0000E79935 /* Classes */,
-				AE1BCBBD1A9FCEB100E79935 /* Controllers */,
+				AE1BCBBD1A9FCEB100E79935 /* Front Page */,
 				AEB4482A1A9E427700A92D09 /* CoreApp */,
 				AEBBF1F31A9BE98F00B5D3F8 /* Images */,
 				AEED6CC51A939D1400B8D84B /* Views */,
@@ -831,6 +835,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/loz/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -906,6 +915,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/loz/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1017,6 +1031,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/loz/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1032,6 +1051,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/loz/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

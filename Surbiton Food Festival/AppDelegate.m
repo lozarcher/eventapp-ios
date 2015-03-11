@@ -13,6 +13,7 @@
 #import "RearViewController.h"
 #import "RightViewController.h"
 #import "CustomAnimationController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()<SWRevealViewControllerDelegate>
 @end
@@ -25,6 +26,8 @@
     NSLog(@"Configuration > %@", [MTConfiguration configuration]);
     
     NSLog(@"Environment name > %@", [MTConfiguration environmentName]);
+    
+    [FBLoginView class];
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
@@ -51,6 +54,21 @@
     
     
 }
+
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    
+    // You can add your app-specific url handling code here if needed
+    
+    return wasHandled;
+}
+
 
 #pragma mark - SWRevealViewDelegate
 
