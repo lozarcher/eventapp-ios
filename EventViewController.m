@@ -9,11 +9,17 @@
 #import "EventViewController.h"
 #import "UIImageView+WebCache.h"
 #import <EventKit/EventKit.h>
-#import "EventManager.h"
 
 @interface EventViewController ()
 
-@property EventManager *eventManager;
+
+// The database with calendar events and reminders
+@property (strong, nonatomic) EKEventStore *eventStore;
+// Indicates whether app has access to event store.
+@property (nonatomic) BOOL isAccessToEventStoreGranted;
+// The data source for the table view
+@property (strong, nonatomic) NSMutableArray *todoItems;
+@property (strong, nonatomic) EKCalendar *calendar;
 
 @end
 
@@ -27,8 +33,49 @@
     if (self) {
         // Custom initialization
     }
-    self.eventManager = [[EventManager alloc] init];
     return self;
+}
+
+- (EKEventStore *)eventStore {
+    if (!_eventStore) {
+        _eventStore = [[EKEventStore alloc] init];
+    }
+    return _eventStore;
+}
+
+- (void)updateAuthorizationStatusToAccessEventStore {
+    // 2
+    EKAuthorizationStatus authorizationStatus = [EKEventStore authorizationStatusForEntityType:EKEntityTypeReminder];
+    
+    switch (authorizationStatus) {
+            // 3
+        case EKAuthorizationStatusDenied:
+        case EKAuthorizationStatusRestricted: {
+            self.isAccessToEventStoreGranted = NO;
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Access Denied"
+                                                                message:@"This app doesn't have access to your Reminders." delegate:nil
+                                                      cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            [alertView show];
+            break;
+        }
+            
+            // 4
+        case EKAuthorizationStatusAuthorized:
+            self.isAccessToEventStoreGranted = YES;
+            break;
+            
+            // 5
+        case EKAuthorizationStatusNotDetermined: {
+            __weak EventViewController *weakSelf = self;
+            [self.eventStore requestAccessToEntityType:EKEntityTypeReminder
+                                            completion:^(BOOL granted, NSError *error) {
+                                                dispatch_async(dispatch_get_main_queue(), ^{
+                                                    weakSelf.isAccessToEventStoreGranted = granted;
+                                                });
+                                            }];
+            break;
+        }
+    }
 }
 
 - (IBAction)closeButtonPressed:(id)sender {
@@ -102,40 +149,83 @@
 }
 */
 
+- (EKCalendar *)calendar {
+    if (!_calendar) {
+        
+        // 1
+        NSArray *calendars = [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
+        
+        // 2
+        NSString *calendarTitle = @"Surbiton Food Festival";
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", calendarTitle];
+        NSArray *filtered = [calendars filteredArrayUsingPredicate:predicate];
+        
+        if ([filtered count]) {
+            _calendar = [filtered firstObject];
+        } else {
+            
+            // 3
+            _calendar = [EKCalendar calendarForEntityType:EKEntityTypeReminder eventStore:self.eventStore];
+            _calendar.title = @"Surbiton Food Festival";
+            _calendar.source = self.eventStore.defaultCalendarForNewReminders.source;
+            
+            // 4
+            NSError *calendarErr = nil;
+            BOOL calendarSuccess = [self.eventStore saveCalendar:_calendar commit:YES error:&calendarErr];
+            if (!calendarSuccess) {
+                // Handle error
+            }
+        }
+    }
+    return _calendar;
+}
+
+- (NSDateComponents *)dateComponentsForDefaultDueDate:(NSString *)startTimeStr {
+    NSTimeInterval startSeconds = [startTimeStr doubleValue]/1000;
+
+    NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:startSeconds];
+
+    NSDateComponents *oneDayComponents = [[NSDateComponents alloc] init];
+    oneDayComponents.day = 1;
+    
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSUInteger unitFlags = NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
+    NSDateComponents *startDateComponents = [gregorianCalendar components:unitFlags fromDate:startDate];
+    return startDateComponents;
+}
 
 - (IBAction)remindMePressed:(id)sender {
     NSLog(@"Remind me pressed %@", [event name]);
-        
-    // Create a new event object.
-    EKEvent *ekEvent = [EKEvent eventWithEventStore:self.eventManager.eventStore];
-        
-    ekEvent.title = [event name];
-    ekEvent.location = [event location];
-    ekEvent.notes = [event desc];
-    EKAlarm *alarm = [EKAlarm alarmWithRelativeOffset:-60 * 60];
-    [ekEvent addAlarm:alarm];
     
-    // Set its calendar.
-    ekEvent.calendar = [self.eventManager.eventStore calendarWithIdentifier:self.eventManager.selectedCalendarIdentifier];
-        
-    // Set the start and end dates to the event.
-    NSTimeInterval startSeconds = [event.startTime doubleValue]/1000;
-    NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:startSeconds];
-    ekEvent.startDate = startDate;
+    [self updateAuthorizationStatusToAccessEventStore];
+
     
-    if (![event.endTime isKindOfClass:[NSNull class]]) {
-        NSTimeInterval endSeconds = [event.startTime doubleValue]/1000;
-        NSDate *endDate = [[NSDate alloc] initWithTimeIntervalSince1970:endSeconds];
-        ekEvent.endDate = endDate;
-    }
+    // 1
+    if (!self.isAccessToEventStoreGranted)
+        return;
+    
+    // 2
+    EKReminder *reminder = [EKReminder reminderWithEventStore:self.eventStore];
+    reminder.title = [event name];
+    reminder.calendar = self.calendar;
+    reminder.dueDateComponents = [self dateComponentsForDefaultDueDate:[event startTime]];
+
+    if (reminder.dueDateComponents) {
         
-    // Save and commit the event.
-    NSError *error;
-    if ([self.eventManager.eventStore saveEvent:ekEvent span:EKSpanFutureEvents commit:YES error:&error]) {
-        // Call the delegate method to notify the caller class (the ViewController class) that the event was saved.
-        NSLog(@"Successfully saved event");
-    } else {
-        NSLog(@"Error saving event");
     }
+
+    // 3
+    NSError *error = nil;
+    BOOL success = [self.eventStore saveReminder:reminder commit:YES error:&error];
+    if (!success) {
+        // Handle error.
+    }
+    
+    // 4
+    NSString *message = (success) ? @"Reminder was successfully added!" : @"Failed to add reminder!";
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+    [alertView show];
+
 }
 @end

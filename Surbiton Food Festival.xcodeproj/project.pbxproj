@@ -68,7 +68,6 @@
 		AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x */; };
 		AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521E51AA20040006A442A /* VoucherViewController.m */; };
 		AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2521E61AA20040006A442A /* VoucherViewController.xib */; };
-		AE594CB91AB0D7AD00E4B015 /* EventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE594CB81AB0D7AD00E4B015 /* EventManager.m */; };
 		AE6E97B21AA85FFA00DD31A0 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6E97B01AA85FFA00DD31A0 /* VenueViewController.m */; };
 		AE6E97B31AA85FFA00DD31A0 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6E97B11AA85FFA00DD31A0 /* VenueViewController.xib */; };
 		AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D13601AA14B1900166951 /* VoucherListCell.m */; };
@@ -201,8 +200,6 @@
 		AE2521E41AA20040006A442A /* VoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherViewController.h; sourceTree = "<group>"; };
 		AE2521E51AA20040006A442A /* VoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherViewController.m; sourceTree = "<group>"; };
 		AE2521E61AA20040006A442A /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
-		AE594CB71AB0D7AD00E4B015 /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
-		AE594CB81AB0D7AD00E4B015 /* EventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventManager.m; sourceTree = "<group>"; };
 		AE6E97AF1AA85FFA00DD31A0 /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
 		AE6E97B01AA85FFA00DD31A0 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
 		AE6E97B11AA85FFA00DD31A0 /* VenueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueViewController.xib; sourceTree = "<group>"; };
@@ -496,8 +493,6 @@
 				AEB9DB291A90A956008C6329 /* EventViewController.xib */,
 				AE1BCBCB1A9FD0A400E79935 /* EventListViewController.h */,
 				AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */,
-				AE594CB71AB0D7AD00E4B015 /* EventManager.h */,
-				AE594CB81AB0D7AD00E4B015 /* EventManager.m */,
 			);
 			name = EventList;
 			sourceTree = "<group>";
@@ -734,7 +729,6 @@
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE02BC331AA8F4650025E7CC /* UIButton+WebCache.m in Sources */,
-				AE594CB91AB0D7AD00E4B015 /* EventManager.m in Sources */,
 				AE02BC341AA8F4650025E7CC /* UIImage+GIF.m in Sources */,
 				AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */,
 				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
