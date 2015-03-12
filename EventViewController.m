@@ -20,12 +20,13 @@
 // The data source for the table view
 @property (strong, nonatomic) NSMutableArray *todoItems;
 @property (strong, nonatomic) EKCalendar *calendar;
+@property (copy, nonatomic) NSArray *reminders;
 
 @end
 
 @implementation EventViewController
 
-@synthesize eventTitleLabel, eventDateLabel, eventImageView, eventDescriptionLabel, closeButton, event, eventTimeLabel, venueLabel;
+@synthesize eventTitleLabel, eventDateLabel, eventImageView, eventDescriptionLabel, closeButton, event, eventTimeLabel, venueLabel, remindMeButton, deleteReminderButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -84,6 +85,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self fetchReminders];
+    [self updateReminderButton];
+
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
     if (![[event desc] isKindOfClass:[NSNull class]]) {
@@ -195,7 +200,7 @@
     return startDateComponents;
 }
 
-- (IBAction)remindMePressed:(id)sender {
+- (IBAction)addReminder:(id)sender {
     NSLog(@"Remind me pressed %@", [event name]);
     
     [self updateAuthorizationStatusToAccessEventStore];
@@ -205,27 +210,110 @@
     if (!self.isAccessToEventStoreGranted)
         return;
     
+    // 1
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", [event name]];
+    NSArray *results = [self.reminders filteredArrayUsingPredicate:predicate];
+    if ([results count]) {
+        NSString *message = @"You have already added this reminder!";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+        [alertView show];
+        return;
+    }
+    
     // 2
     EKReminder *reminder = [EKReminder reminderWithEventStore:self.eventStore];
     reminder.title = [event name];
     reminder.calendar = self.calendar;
     reminder.dueDateComponents = [self dateComponentsForDefaultDueDate:[event startTime]];
 
-    if (reminder.dueDateComponents) {
-        
-    }
-
+    
+    NSTimeInterval alarmSeconds = ([[event startTime] doubleValue]/1000) - 60*60;
+    NSDate *alarmDate = [[NSDate alloc] initWithTimeIntervalSince1970:alarmSeconds];
+    EKAlarm *alarm = [EKAlarm alarmWithAbsoluteDate:alarmDate];
+    [reminder addAlarm:alarm];
+    
     // 3
     NSError *error = nil;
     BOOL success = [self.eventStore saveReminder:reminder commit:YES error:&error];
     if (!success) {
         // Handle error.
+    } else {
+        [self fetchReminders];
     }
     
     // 4
     NSString *message = (success) ? @"Reminder was successfully added!" : @"Failed to add reminder!";
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
     [alertView show];
+    
+    [self updateReminderButton];
 
 }
+
+
+- (void)fetchReminders {
+    [self updateAuthorizationStatusToAccessEventStore];
+
+    if (self.isAccessToEventStoreGranted) {
+        // 1
+        NSPredicate *predicate =
+        [self.eventStore predicateForRemindersInCalendars:@[self.calendar]];
+        
+        // 2
+        [self.eventStore fetchRemindersMatchingPredicate:predicate completion:^(NSArray *reminders) {
+            // 3
+            self.reminders = reminders;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 4
+                // TODO - Update label whether a reminder is set or not
+            });
+        }];
+    }
+}
+
+- (IBAction)deleteReminder {
+    // 1
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", [event name]];
+    NSArray *results = [self.reminders filteredArrayUsingPredicate:predicate];
+    
+    // 2
+    if ([results count]) {
+        [results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSError *error = nil;
+            // 3
+            BOOL success = [self.eventStore removeReminder:obj commit:YES error:&error];
+            if (!success) {
+                return;
+            }
+        }];
+        
+        // 4
+        NSError *commitErr = nil;
+        BOOL success = [self.eventStore commit:&commitErr];
+        NSString *message = (success) ? @"Reminder was successfully deleted!" : @"Failed to delete reminder!";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+        [alertView show];
+        [self updateReminderButton];
+
+    } else {
+        NSString *message = @"There is no reminder to delete!";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+        [alertView show];
+        [self updateReminderButton];
+    }
+}
+
+-(void)updateReminderButton {
+    [self fetchReminders];
+    BOOL hasReminder = [self eventHasReminder];
+    [remindMeButton setHidden:hasReminder];
+    [deleteReminderButton setHidden:!hasReminder];
+}
+
+-(BOOL)eventHasReminder {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", [event name]];
+    NSArray *results = [self.reminders filteredArrayUsingPredicate:predicate];
+    return [results count];
+}
+
 @end
