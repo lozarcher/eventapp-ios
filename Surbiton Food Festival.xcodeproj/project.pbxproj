@@ -88,6 +88,7 @@
 		AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */; };
 		AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED6CCB1A939DB700B8D84B /* Social.framework */; };
 		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
+		AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */; };
 		AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF520941A9E2C1000C05D84 /* Configurations.plist */; };
 		AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF520971A9E2C7600C05D84 /* MTConfiguration.m */; };
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
@@ -231,6 +232,7 @@
 		AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		AEED6CCB1A939DB700B8D84B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
 		AEF520941A9E2C1000C05D84 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		AEF520961A9E2C7600C05D84 /* MTConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTConfiguration.h; sourceTree = "<group>"; };
 		AEF520971A9E2C7600C05D84 /* MTConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTConfiguration.m; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 				AE1BCBD81A9FDC3300E79935 /* Icon-76.png */,
 				AE1BCBD91A9FDC3300E79935 /* Icon-76@2x.png */,
 				AE1BCBDA1A9FDC3300E79935 /* Icon-76@3x.png */,
+				AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */,
 				AE1BCBDB1A9FDC3300E79935 /* Icon-Small-50.png */,
 				AE1BCBDC1A9FDC3300E79935 /* Icon-Small-50@2x.png */,
 				AE1BCBDD1A9FDC3300E79935 /* Icon-Small.png */,
@@ -663,6 +666,7 @@
 				AE02BC3B1AAE0CEA0025E7CC /* splash.png in Resources */,
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
+				AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AE6E97B31AA85FFA00DD31A0 /* VenueViewController.xib in Resources */,
 				AE1BCBAF1A9FC87200E79935 /* MapViewController.xib in Resources */,
