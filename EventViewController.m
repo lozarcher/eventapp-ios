@@ -85,10 +85,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self fetchReminders];
-    [self updateReminderButton];
 
+    
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
     if (![[event desc] isKindOfClass:[NSNull class]]) {
@@ -137,6 +135,9 @@
     } else {
         [eventImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
+    [self updateAuthorizationStatusToAccessEventStore];
+    [self fetchReminders];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -217,6 +218,7 @@
         NSString *message = @"You have already added this reminder!";
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
         [alertView show];
+        [self updateReminderButton];
         return;
     }
     
@@ -266,6 +268,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 4
                 // TODO - Update label whether a reminder is set or not
+                [self updateReminderButton];
             });
         }];
     }
@@ -284,17 +287,14 @@
             BOOL success = [self.eventStore removeReminder:obj commit:YES error:&error];
             if (!success) {
                 return;
+            } else {
+                [self fetchReminders];
+                NSString *message = (success) ? @"Reminder was successfully deleted!" : @"Failed to delete reminder!";
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+                [alertView show];
+                [self updateReminderButton];
             }
         }];
-        
-        // 4
-        NSError *commitErr = nil;
-        BOOL success = [self.eventStore commit:&commitErr];
-        NSString *message = (success) ? @"Reminder was successfully deleted!" : @"Failed to delete reminder!";
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
-        [alertView show];
-        [self updateReminderButton];
-
     } else {
         NSString *message = @"There is no reminder to delete!";
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
