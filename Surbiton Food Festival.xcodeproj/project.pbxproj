@@ -89,6 +89,9 @@
 		AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED6CCB1A939DB700B8D84B /* Social.framework */; };
 		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */; };
+		AEF3AB001AB1F09200B2C6A9 /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AAFF1AB1F09200B2C6A9 /* KILabel.m */; };
+		AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */; };
+		AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */; };
 		AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF520941A9E2C1000C05D84 /* Configurations.plist */; };
 		AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF520971A9E2C7600C05D84 /* MTConfiguration.m */; };
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
@@ -233,6 +236,11 @@
 		AEED6CCB1A939DB700B8D84B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
+		AEF3AAFE1AB1F09200B2C6A9 /* KILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KILabel.h; sourceTree = "<group>"; };
+		AEF3AAFF1AB1F09200B2C6A9 /* KILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KILabel.m; sourceTree = "<group>"; };
+		AEF3AB011AB1F7E700B2C6A9 /* TweetLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetLinkViewController.h; sourceTree = "<group>"; };
+		AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetLinkViewController.m; sourceTree = "<group>"; };
+		AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetLinkViewController.xib; sourceTree = "<group>"; };
 		AEF520941A9E2C1000C05D84 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		AEF520961A9E2C7600C05D84 /* MTConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTConfiguration.h; sourceTree = "<group>"; };
 		AEF520971A9E2C7600C05D84 /* MTConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTConfiguration.m; sourceTree = "<group>"; };
@@ -448,6 +456,9 @@
 				AEA0568E1AA4F82B003E095F /* TwitterViewCell.h */,
 				AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */,
 				AEA056901AA4F82B003E095F /* TwitterViewCell.xib */,
+				AEF3AB011AB1F7E700B2C6A9 /* TweetLinkViewController.h */,
+				AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */,
+				AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */,
 			);
 			name = TwitterList;
 			sourceTree = "<group>";
@@ -500,6 +511,15 @@
 			name = EventList;
 			sourceTree = "<group>";
 		};
+		AEF3AAFD1AB1F07900B2C6A9 /* KILabel */ = {
+			isa = PBXGroup;
+			children = (
+				AEF3AAFE1AB1F09200B2C6A9 /* KILabel.h */,
+				AEF3AAFF1AB1F09200B2C6A9 /* KILabel.m */,
+			);
+			name = KILabel;
+			sourceTree = "<group>";
+		};
 		AEF8BC371A7CEC8A007241DC = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +564,7 @@
 		AEF8BC431A7CEC8A007241DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AEF3AAFD1AB1F07900B2C6A9 /* KILabel */,
 				AE02BC081AA8F4650025E7CC /* SDWebImage */,
 				AE1BCB9A1A9FAFAA00E79935 /* SWRevealViewController */,
 				AEF8BC441A7CEC8A007241DC /* Info.plist */,
@@ -689,6 +710,7 @@
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
 				AE1BCBBC1A9FCAC500E79935 /* RightViewController.xib in Resources */,
+				AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
 				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
 				AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */,
@@ -719,6 +741,7 @@
 				AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */,
 				AE936A001A9BE0D700F15869 /* VenueAnnotation.m in Sources */,
 				AE6E97B21AA85FFA00DD31A0 /* VenueViewController.m in Sources */,
+				AEF3AB001AB1F09200B2C6A9 /* KILabel.m in Sources */,
 				AE1382631AA1422B00714884 /* Voucher.m in Sources */,
 				AEFF2E8F1A925ED8005DBCBB /* EventViewCell.m in Sources */,
 				AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */,
@@ -740,6 +763,7 @@
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
 				AE18C4C51A8CBC3700B96570 /* Event.m in Sources */,
 				AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */,
+				AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */,
 				AE02BC2C1AA8F4650025E7CC /* SDImageCache.m in Sources */,
 				AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */,
 				AE02BC311AA8F4650025E7CC /* SDWebImageManager.m in Sources */,

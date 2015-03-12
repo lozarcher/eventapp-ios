@@ -12,6 +12,7 @@
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
 #import "TwitterViewCell.h"
+#import "TweetLinkViewController.h"
 
 #import <Social/Social.h>
 
@@ -113,7 +114,7 @@
         // Display a message when the table is empty
         
         [self.view addSubview:messageLabel];
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         
         return 0;
     }
@@ -140,7 +141,7 @@
     Tweet *tweet = [self getTweetForIndexPath:indexPath];
     NSLog(@"Cell label %@", [tweet name]);
     [cell populateDataInCell:tweet];
-    
+    cell.delegate = self;
     return cell;
 }
 
@@ -291,6 +292,21 @@
             [spinner stopAnimating];
         }
     }
+}
+
+-(void)loadURL:(NSString *)urlString {
+    NSLog(@"Loading URL %@ from view controller", urlString);
+    
+    TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
+    webVc.title = @"External site";
+    
+    //webViewController.view.backgroundColor = [UIColor redColor];
+    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [webVc.webView loadRequest:request];
+    //[webVc.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+    [self presentViewController:webVc animated:YES completion:nil];
+    
 }
 
 @end

@@ -8,13 +8,20 @@
 
 #import "TwitterViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "TweetLinkViewController.h"
 
 @implementation TwitterViewCell
 
-@synthesize nameLabel, profilePic, textLabel, screennameLabel, dateCreatedLabel;
+@synthesize nameLabel, profilePic, textLabel, screennameLabel, dateCreatedLabel, delegate;
 
 - (void)awakeFromNib {
     // Initialization code
+    textLabel.linkURLTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
+        //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];//Load the url in Safari
+        NSLog(@"Clicked link");
+        [self.delegate loadURL:urlString];
+        
+    };
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -24,6 +31,7 @@
 }
 
 -(void)populateDataInCell:(Tweet *)tweet {
+    
     nameLabel.text = tweet.name;
     screennameLabel.text = [NSString stringWithFormat:@"@%@", tweet.screenName];
     textLabel.text = tweet.text;
