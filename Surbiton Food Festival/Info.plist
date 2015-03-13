@@ -6,6 +6,18 @@
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon-60.png</string>
+		<string>Icon-60@2x.png</string>
+		<string>Icon-76.png</string>
+		<string>Icon-76@2x.png</string>
+		<string>Icon-Spotlight-40.png</string>
+		<string>Icon-Spotlight-40@2x.png</string>
+		<string>Icon-Small.png</string>
+		<string>Icon-Small@2x.png</string>
+		<string>Icon-128.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -27,19 +39,6 @@
 			</array>
 		</dict>
 	</array>
-    <key>CFBundleIconFiles</key>
-    <array>
-        <string>Icon-60.png</string>
-        <string>Icon-60@2x.png</string>
-        <string>Icon-76.png</string>
-        <string>Icon-76@2x.png</string>
-        <string>Icon-Spotlight-40.png</string>
-        <string>Icon-Spotlight-40@2x.png</string>
-        <string>Icon-Small.png</string>
-        <string>Icon-Small@2x.png</string>
-        <string>Icon-128.png</string>
-    </array>
-
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Configuration</key>
@@ -69,8 +68,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

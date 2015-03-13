@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TweetLinkViewController : UINavigationController <UIWebViewDelegate>
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
-
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+-(void)loadUrlString:(NSString *)urlString;
 @end

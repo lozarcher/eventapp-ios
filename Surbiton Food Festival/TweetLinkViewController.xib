@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetLinkViewController">
             <connections>
-                <outlet property="webView" destination="vyG-gN-NV8" id="1qS-q8-9Ao"/>
+                <outlet property="webView" destination="3ss-Zc-4gg" id="DZl-gc-jIS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,22 +24,23 @@
                         <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="rW2-wn-zfb"/>
                     </connections>
                 </button>
-                <webView contentMode="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-gN-NV8">
-                    <rect key="frame" x="0.0" y="57" width="600" height="543"/>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ss-Zc-4gg">
+                    <rect key="frame" x="0.0" y="57" width="600" height="549"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="8A8-aZ-dVd"/>
+                        <outlet property="delegate" destination="-1" id="I8c-8D-G8b"/>
                     </connections>
                 </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="vyG-gN-NV8" secondAttribute="bottom" id="7GX-BE-tTh"/>
-                <constraint firstItem="vyG-gN-NV8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aii-aj-oQ7"/>
+                <constraint firstItem="3ss-Zc-4gg" firstAttribute="top" secondItem="rEB-TE-niK" secondAttribute="bottom" constant="8" id="Hgr-Lh-oDq"/>
+                <constraint firstAttribute="trailing" secondItem="3ss-Zc-4gg" secondAttribute="trailing" id="R6b-GR-qRH"/>
+                <constraint firstItem="rEB-TE-niK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="XCO-lz-JMz"/>
                 <constraint firstItem="rEB-TE-niK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="c4y-LR-psf"/>
                 <constraint firstItem="rEB-TE-niK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="d1p-ex-uH9"/>
-                <constraint firstAttribute="trailing" secondItem="vyG-gN-NV8" secondAttribute="trailing" id="f2b-o7-8n5"/>
-                <constraint firstItem="vyG-gN-NV8" firstAttribute="top" secondItem="rEB-TE-niK" secondAttribute="bottom" constant="8" id="jkQ-2q-rdn"/>
+                <constraint firstAttribute="bottom" secondItem="3ss-Zc-4gg" secondAttribute="bottom" constant="-6" id="d8f-ep-wXz"/>
+                <constraint firstItem="3ss-Zc-4gg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fAm-JP-FBF"/>
             </constraints>
         </view>
     </objects>

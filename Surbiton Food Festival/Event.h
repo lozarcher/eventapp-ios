@@ -15,5 +15,6 @@
 @property (strong, nonatomic) NSString *endTime;
 @property (strong, nonatomic) NSString *startTime;
 @property (strong, nonatomic) NSString *coverUrl;
+@property (strong, nonatomic) NSString *profileUrl;
 @property (strong, nonatomic) NSString *location;
 @end

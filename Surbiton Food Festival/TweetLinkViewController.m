@@ -14,16 +14,17 @@
 
 @implementation TweetLinkViewController
 
-@synthesize webView;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    webView = [[UIWebView alloc] init];
 
-    [self.view addSubview:webView];
+    //[self.view addSubview:webView];
     //[webView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.bbc.co.uk/"]]];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)loadUrlString:(NSString *)urlString {
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+    [self.view addSubview:_webView];
 }
 
 - (void)didReceiveMemoryWarning {

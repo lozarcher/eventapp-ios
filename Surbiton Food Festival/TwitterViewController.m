@@ -298,9 +298,9 @@
     NSLog(@"Loading URL %@ from view controller", urlString);
     
     TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
-    
+    [webVc loadUrlString:urlString];
     [self presentViewController:webVc animated:YES completion:nil];
-    [webVc.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+
 
 }
 

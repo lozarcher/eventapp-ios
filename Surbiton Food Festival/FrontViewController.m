@@ -56,10 +56,13 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
    
-    FBLoginView *loginView = [[FBLoginView alloc] initWithPublishPermissions:@[@"rsvp_event"] defaultAudience:FBSessionDefaultAudienceEveryone];
+    /*
+     FBLoginView *loginView = [[FBLoginView alloc] initWithPublishPermissions:@[@"rsvp_event"] defaultAudience:FBSessionDefaultAudienceEveryone];
     // Align the button in the center horizontally
     loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), self.view.center.y - (loginView.frame.size.height / 2));
     [self.view addSubview:loginView];
+     */
+    
     
 }
 
