@@ -18,9 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    //webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    webView = [[UIWebView alloc] init];
+
     [self.view addSubview:webView];
-    [webView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.bbc.co.uk/"]]];
+    //[webView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.bbc.co.uk/"]]];
     // Do any additional setup after loading the view from its nib.
 }
 

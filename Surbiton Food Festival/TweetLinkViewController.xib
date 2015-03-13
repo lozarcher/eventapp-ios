@@ -24,8 +24,8 @@
                         <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="rW2-wn-zfb"/>
                     </connections>
                 </button>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-gN-NV8">
-                    <rect key="frame" x="0.0" y="51" width="600" height="549"/>
+                <webView contentMode="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-gN-NV8">
+                    <rect key="frame" x="0.0" y="57" width="600" height="543"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="8A8-aZ-dVd"/>
@@ -34,19 +34,13 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="vyG-gN-NV8" secondAttribute="trailing" id="3kY-qR-0QQ"/>
-                <constraint firstItem="rEB-TE-niK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="CU4-tN-Ff6"/>
-                <constraint firstItem="vyG-gN-NV8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="QNy-wb-7CN"/>
-                <constraint firstItem="vyG-gN-NV8" firstAttribute="top" secondItem="rEB-TE-niK" secondAttribute="bottom" constant="2" id="Rl6-CP-UsD"/>
-                <constraint firstAttribute="bottom" secondItem="vyG-gN-NV8" secondAttribute="bottom" id="eN0-qf-bpw"/>
-                <constraint firstItem="rEB-TE-niK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="fpZ-T3-IM6"/>
-                <constraint firstItem="vyG-gN-NV8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iu9-fM-CWw"/>
+                <constraint firstAttribute="bottom" secondItem="vyG-gN-NV8" secondAttribute="bottom" id="7GX-BE-tTh"/>
+                <constraint firstItem="vyG-gN-NV8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aii-aj-oQ7"/>
+                <constraint firstItem="rEB-TE-niK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="c4y-LR-psf"/>
+                <constraint firstItem="rEB-TE-niK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="d1p-ex-uH9"/>
+                <constraint firstAttribute="trailing" secondItem="vyG-gN-NV8" secondAttribute="trailing" id="f2b-o7-8n5"/>
+                <constraint firstItem="vyG-gN-NV8" firstAttribute="top" secondItem="rEB-TE-niK" secondAttribute="bottom" constant="8" id="jkQ-2q-rdn"/>
             </constraints>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="QNy-wb-7CN"/>
-                </mask>
-            </variation>
         </view>
     </objects>
 </document>
