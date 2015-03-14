@@ -20,12 +20,20 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSLog(@"Configuration > %@", [MTConfiguration configuration]);
     
     NSLog(@"Environment name > %@", [MTConfiguration environmentName]);
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    
+    //In ViewDidLoad
+    if(IS_OS_8_OR_LATER) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
     
     [FBLoginView class];
     

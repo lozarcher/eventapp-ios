@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h> 
 
 @class SWRevealViewController;
 
@@ -14,5 +15,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) SWRevealViewController *viewController;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
 @end
 

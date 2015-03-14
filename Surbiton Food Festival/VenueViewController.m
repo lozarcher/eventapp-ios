@@ -7,6 +7,10 @@
 //
 
 #import "VenueViewController.h"
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h> 
+
+#define METERS_PER_MILE 1609.344
 
 @interface VenueViewController ()
 
@@ -25,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.mapView.delegate = self;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -46,4 +52,60 @@
 - (IBAction)closeButtonPressed:(id)sender {
            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(void)createVenue:(Venue *)venueDic location:(NSString *)location {
+    self.venue = [[Venue alloc] init];
+    self.venue.location = location;
+    self.venue.street = [venueDic valueForKey:@"street"];
+    self.venue.city = [venueDic valueForKey:@"city"];
+    self.venue.latitude = [venueDic valueForKey:@"latitude"];
+    self.venue.longitude = [venueDic valueForKey:@"longitude"];
+    if ([self.venue.street isKindOfClass:[NSNull class]]) {
+        self.venue.street = @"";
+    }
+    if ([self.venue.city isKindOfClass:[NSNull class]]) {
+        self.venue.city = @"";
+    }
+    self.venueLabel.text = location;
+    self.streetLabel.text = self.venue.street;
+    self.cityLabel.text = self.venue.city;
+
+    [self goToCoordinate:self.venue.latitude  longitude:self.venue.longitude];
+
+}
+-(void)goToCoordinate:(NSString *)latitudeStr longitude:(NSString *)longitudeStr {
+    BOOL showPin = YES;
+    if ([latitudeStr isKindOfClass:[NSNull class]] || [longitudeStr isKindOfClass:[NSNull class]]) {
+        showPin = NO;
+        latitudeStr = @"51.394698417784";
+        longitudeStr = @"-0.30764091236066";
+    }
+    double latitude = [latitudeStr doubleValue];
+    double longitude = [longitudeStr doubleValue];
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = latitude;
+    zoomLocation.longitude = longitude;
+
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 1*METERS_PER_MILE, 1*METERS_PER_MILE);
+
+    [_mapView setRegion:viewRegion animated:YES];
+    
+    if (showPin) {
+        // Add an annotation
+        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+        point.coordinate = zoomLocation;
+        point.title = self.venue.location;
+        point.subtitle = self.venue.street;
+        
+    
+        [self.mapView addAnnotation:point];
+        [self.mapView selectAnnotation:point animated:YES];
+    }
+
+    self.mapView.showsUserLocation = YES;
+
+}
+
+
+
 @end

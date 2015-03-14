@@ -97,10 +97,6 @@
     }
     if (![[event location] isKindOfClass:[NSNull class]]) {
         venueLabel.text = event.location;
-        venueLabel.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tapGesture =
-        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadVenueView)];
-        [venueLabel addGestureRecognizer:tapGesture];
     } else {
         venueLabel.text = @"Surbiton";
     }
@@ -140,28 +136,11 @@
     } else {
         [eventImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
+    
+    self.mapButton.hidden = ([event.venue isKindOfClass:[NSNull class]]) ;
+
     [self updateAuthorizationStatusToAccessEventStore];
     [self fetchReminders];
-
-}
-
--(void)loadVenueView {
-    VenueViewController *venueVc = [[VenueViewController alloc] initWithNibName:@"VenueViewController" bundle:nil];
-    NSString *location = event.location;
-    NSString *street = [event.venue valueForKey:@"street"];
-    NSString *city = [event.venue valueForKey:@"city"];
-    
-    [self presentViewController:venueVc animated:YES completion:nil];
-    if (location) {
-        venueVc.venueLabel.text = location;
-    }
-    if (street) {
-        venueVc.streetLabel.text = street;
-    }
-    if (city) {
-        venueVc.cityLabel.text = city;
-    }
-
 
 }
 
@@ -339,6 +318,12 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", [event name]];
     NSArray *results = [self.reminders filteredArrayUsingPredicate:predicate];
     return [results count];
+}
+
+- (IBAction)mapButtonPressed:(id)sender {
+    VenueViewController *venueVc = [[VenueViewController alloc] initWithNibName:@"VenueViewController" bundle:nil];
+    [self presentViewController:venueVc animated:YES completion:nil];
+    [venueVc createVenue:event.venue location:event.location];
 }
 
 @end

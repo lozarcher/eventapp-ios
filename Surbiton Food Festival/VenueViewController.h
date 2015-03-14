@@ -10,12 +10,15 @@
 #import "Venue.h"
 #import <MapKit/MapKit.h>
 
-@interface VenueViewController : UIViewController
+@interface VenueViewController : UIViewController <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UILabel *venueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *streetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)closeButtonPressed:(id)sender;
+-(void)createVenue:(Venue *)venueDic location:(NSString *)location;
+@property Venue *venue;
+-(void)goToCoordinate:(NSString *)latitude longitude:(NSString *)longitude;
 
 @end
