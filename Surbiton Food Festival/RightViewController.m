@@ -23,7 +23,6 @@
 */
 
 #import "RightViewController.h"
-#import "MapViewController.h"
 #import "SWRevealViewController.h"
 
 @interface RightViewController ()
@@ -94,10 +93,6 @@
 
 - (IBAction)toggleFront:(id)sender
 {
-    MapViewController *mapViewController = [[MapViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
-    
-    [self.revealViewController pushFrontViewController:navigationController animated:YES];
 }
 
 

@@ -2,12 +2,11 @@
 //  VenueViewController.m
 //  Surbiton Food Festival
 //
-//  Created by Laurence Archer on 05/03/2015.
+//  Created by Laurence Archer on 13/03/2015.
 //  Copyright (c) 2015 Spirit of Seething. All rights reserved.
 //
 
 #import "VenueViewController.h"
-#import "Venue.h"
 
 @interface VenueViewController ()
 
@@ -15,11 +14,14 @@
 
 @implementation VenueViewController
 
-- (IBAction)closeButton:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
-
-@synthesize venueNameLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,4 +43,7 @@
 }
 */
 
+- (IBAction)closeButtonPressed:(id)sender {
+           [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
 @end

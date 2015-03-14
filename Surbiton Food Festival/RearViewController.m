@@ -30,7 +30,6 @@
 
 #import "SWRevealViewController.h"
 #import "FrontViewController.h"
-#import "MapViewController.h"
 #import "EventListViewController.h"
 #import "TwitterViewController.h"
 #import "VoucherListViewController.h"
@@ -62,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 4;
 }
 
 
@@ -91,10 +90,6 @@
         text = @"Chat";
     }
     else if (row == 3)
-    {
-        text = @"Maps";
-    }
-    else if (row == 4)
     {
         text = @"Vouchers";
     }
@@ -153,11 +148,6 @@
     }
     
     else if (row == 3)
-    {
-        newFrontController = [[MapViewController alloc] init];
-    }
-    
-    else if (row == 4)
     {
         newFrontController = [[VoucherListViewController alloc] init];
     }
