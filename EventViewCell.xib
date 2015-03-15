@@ -16,10 +16,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="91E-3o-lHs">
-                        <rect key="frame" x="95" y="35" width="200" height="19"/>
+                        <rect key="frame" x="95" y="35" width="50" height="19"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="R0q-oU-W4q"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="pTs-4A-VTG"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="R0q-oU-W4q"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="19" id="pTs-4A-VTG"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -33,9 +33,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Event Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="wam-w0-qEA">
-                        <rect key="frame" x="96" y="15" width="200" height="19"/>
+                        <rect key="frame" x="96" y="15" width="80" height="19"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="7aC-HB-z44"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="7aC-HB-z44"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="WR1-FM-nsX"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
