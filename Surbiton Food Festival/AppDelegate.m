@@ -11,7 +11,6 @@
 #import "SWRevealViewController.h"
 #import "FrontViewController.h"
 #import "RearViewController.h"
-#import "RightViewController.h"
 #import "CustomAnimationController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
@@ -49,11 +48,6 @@
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
     revealController.delegate = self;
     
-    RightViewController *rightViewController = rightViewController = [[RightViewController alloc] init];
-    rightViewController.view.backgroundColor = [UIColor greenColor];
-    
-    revealController.rightViewController = rightViewController;
-    
     self.viewController = revealController;
     
     self.window.rootViewController = self.viewController;
@@ -84,15 +78,6 @@
 {
     if ( operation != SWRevealControllerOperationReplaceRightController )
         return nil;
-    
-    if ( [toVC isKindOfClass:[RightViewController class]] )
-    {
-        if ( [(RightViewController*)toVC wantsCustomAnimation] )
-        {
-            id<UIViewControllerAnimatedTransitioning> animationController = [[CustomAnimationController alloc] init];
-            return animationController;
-        }
-    }
     
     return nil;
 }

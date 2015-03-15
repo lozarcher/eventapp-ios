@@ -88,11 +88,11 @@
     }
     else if (row == 2)
     {
-        text = @"Chat";
+        text = @"Traders";
     }
     else if (row == 3)
     {
-        text = @"Traders";
+        text = @"Chat";
     }
     else if (row == 4)
     {
@@ -149,12 +149,12 @@
     
     else if (row == 2)
     {
-        newFrontController = [[TwitterViewController alloc] init];
+        newFrontController = [[TraderListViewController alloc] init];
     }
     
     else if (row == 3)
     {
-        newFrontController = [[TraderListViewController alloc] init];
+        newFrontController = [[TwitterViewController alloc] init];
     }
     
     else if (row == 4)

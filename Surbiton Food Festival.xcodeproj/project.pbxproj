@@ -38,8 +38,6 @@
 		AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */; };
 		AE1BCBB51A9FC9C700E79935 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB31A9FC9C700E79935 /* reveal-icon@2x.png */; };
 		AE1BCBB71A9FCA4D00E79935 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1BCBB61A9FCA4D00E79935 /* CoreGraphics.framework */; };
-		AE1BCBBB1A9FCAC500E79935 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBB91A9FCAC500E79935 /* RightViewController.m */; };
-		AE1BCBBC1A9FCAC500E79935 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBBA1A9FCAC500E79935 /* RightViewController.xib */; };
 		AE1BCBC31A9FCF6300E79935 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBC11A9FCF6300E79935 /* TwitterViewController.m */; };
 		AE1BCBC41A9FCF6300E79935 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBC21A9FCF6300E79935 /* TwitterViewController.xib */; };
 		AE1BCBCE1A9FD0A400E79935 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */; };
@@ -175,9 +173,6 @@
 		AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 		AE1BCBB31A9FC9C700E79935 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
 		AE1BCBB61A9FCA4D00E79935 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AE1BCBB81A9FCAC500E79935 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
-		AE1BCBB91A9FCAC500E79935 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
-		AE1BCBBA1A9FCAC500E79935 /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
 		AE1BCBC01A9FCF6300E79935 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
 		AE1BCBC11A9FCF6300E79935 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
 		AE1BCBC21A9FCF6300E79935 /* TwitterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewController.xib; sourceTree = "<group>"; };
@@ -406,9 +401,6 @@
 				AE1BCBB01A9FC8A600E79935 /* RearViewController.xib */,
 				AE1BCBA51A9FC62100E79935 /* RearViewController.h */,
 				AE1BCBA61A9FC62100E79935 /* RearViewController.m */,
-				AE1BCBB81A9FCAC500E79935 /* RightViewController.h */,
-				AE1BCBB91A9FCAC500E79935 /* RightViewController.m */,
-				AE1BCBBA1A9FCAC500E79935 /* RightViewController.xib */,
 			);
 			name = Navigation;
 			sourceTree = "<group>";
@@ -724,7 +716,6 @@
 				AE1BCBED1A9FDC3300E79935 /* Icon-76@2x.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
-				AE1BCBBC1A9FCAC500E79935 /* RightViewController.xib in Resources */,
 				AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
 				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
@@ -765,7 +756,6 @@
 				AEF3AB2A1AB45D8000B2C6A9 /* Trader.m in Sources */,
 				AE02BC321AA8F4650025E7CC /* SDWebImagePrefetcher.m in Sources */,
 				AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */,
-				AE1BCBBB1A9FCAC500E79935 /* RightViewController.m in Sources */,
 				AEB9DB311A90C564008C6329 /* Tweet.m in Sources */,
 				AE1BCBC31A9FCF6300E79935 /* TwitterViewController.m in Sources */,
 				AE02BC351AA8F4650025E7CC /* UIImage+MultiFormat.m in Sources */,
