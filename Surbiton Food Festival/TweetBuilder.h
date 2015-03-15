@@ -10,5 +10,6 @@
 
 @interface TweetBuilder : NSObject
 + (NSArray *)tweetsFromJSON:(NSData *)objectNotation error:(NSError **)error;
++ (NSString *)nextPageFromJSON:(NSData *)objectNotation;
 
 @end

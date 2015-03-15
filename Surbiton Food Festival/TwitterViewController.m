@@ -65,13 +65,18 @@
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
     [self activateSpinner:YES];
+    isPaginatedLoad = NO;
     [self refreshTweets:self];
 }
 
 - (void)refreshTweets:(id)sender {
     NSLog(@"Fetching data from URL");
     NSString *serviceHostname = [MTConfiguration serviceHostname];
-    NSString *urlAsString = [NSString stringWithFormat:@"%@/tweets", serviceHostname];
+    NSString *loadUrl = @"/tweets";
+    if (isPaginatedLoad && self.nextPage) {
+        loadUrl = self.nextPage;
+    }
+    NSString *urlAsString = [NSString stringWithFormat:@"%@%@", serviceHostname, loadUrl];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
     
@@ -121,11 +126,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _tweets.count;
+    if (![self.nextPage isKindOfClass:[NSNull class]]) {
+        return _tweets.count + 1;
+    } else {
+        return _tweets.count;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 90;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ( indexPath.row == [_tweets count]) { //  Only call the function if we're selecting the last row
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        NSString *loadingText = @"Loading...";
+        if (![cell.textLabel.text isEqualToString:loadingText]) {
+            cell.textLabel.text = @"Loading...";
+            NSLog(@"Load More requested"); // Add a function here to add more data to your array and reload the content
+            isPaginatedLoad = YES;
+            [self refreshTweets:self];
+        }
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -142,13 +164,32 @@
     NSLog(@"Cell label %@", [tweet name]);
     [cell populateDataInCell:tweet];
     cell.delegate = self;
+    
+    
+    // Only call this if there is a next page
+    if (![self.nextPage isKindOfClass:[NSNull class]]) {
+        if(indexPath.row == [_tweets count] ) { // Here we check if we reached the end of the index, so the +1 row
+            if (cell == nil) {
+                cell = [[TwitterViewCell alloc] initWithFrame:CGRectZero];
+            }
+            // Reset previous content of the cell, I have these defined in a UITableCell subclass, change them where needed
+            cell.imageView.image = nil;
+            cell.nameLabel.text = nil;
+            cell.screennameLabel.text = nil;
+            cell.textLabel.text = @"Tap to load more...";
+        }
+    }
     return cell;
 }
 
 - (Tweet*)getTweetForIndexPath:(NSIndexPath *)indexPath {
-    NSInteger itemInSection = indexPath.row;
-    Tweet *tweet = [_tweets objectAtIndex:itemInSection];
-    return tweet;
+    if (indexPath.row >= [_tweets count]) {
+        return [[Tweet alloc] init];
+    } else {
+        NSInteger itemInSection = indexPath.row;
+        Tweet *tweet = [_tweets objectAtIndex:itemInSection];
+        return tweet;
+    }
 }
 
 #pragma mark NSURLConnection Delegate Methods
@@ -224,8 +265,14 @@
 -(NSError *)getTweetsFromData:(NSData *)data {
     NSError *error = nil;
     NSArray *tweets = [TweetBuilder tweetsFromJSON:data error:&error];
+    self.nextPage = [TweetBuilder nextPageFromJSON:data];
     if ([tweets count] > 0) {
-        _tweets = tweets;
+        if (isPaginatedLoad) {
+            [_tweets addObjectsFromArray:tweets];
+        } else {
+            _tweets = tweets;
+        }
+        isPaginatedLoad = NO;
     }
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);

@@ -10,9 +10,10 @@
 #import "TwitterViewCell.h"
 
 @interface TwitterViewController : UIViewController <tweetLinkProtocol, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
-    NSArray *_tweets;
+    NSMutableArray *_tweets;
     NSString *storePath;
     NSMutableData *receivedData;
+    BOOL isPaginatedLoad;
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
@@ -20,5 +21,7 @@
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
 @property (retain,nonatomic) UIActivityIndicatorView *spinner;
 @property (retain,nonatomic) UILabel *messageLabel;
+@property (retain,nonatomic) NSString *nextPage;
+
 
 @end

@@ -40,4 +40,19 @@
     
     return tweets;
 }
+
++ (NSString *)nextPageFromJSON:(NSData *)objectNotation
+{
+    NSError *localError = nil;
+    NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:objectNotation options:0 error:&localError];
+    
+    if (localError != nil) {
+        return nil;
+    }
+    
+    NSString *nextPage = [parsedObject valueForKey:@"next"];
+    NSLog(@"Got next page url: %@", nextPage);
+        
+    return nextPage;
+}
 @end
