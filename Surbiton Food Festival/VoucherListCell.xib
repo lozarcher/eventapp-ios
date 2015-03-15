@@ -35,8 +35,8 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="KHn-In-vtA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="5OH-ng-dGX"/>
-                    <constraint firstItem="nEt-Gf-ScI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="OJ4-eR-Liq"/>
+                    <constraint firstAttribute="centerX" secondItem="KHn-In-vtA" secondAttribute="centerX" id="6un-jm-pzb"/>
+                    <constraint firstAttribute="centerX" secondItem="nEt-Gf-ScI" secondAttribute="centerX" id="PZR-mj-wo3"/>
                     <constraint firstItem="KHn-In-vtA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="nw0-md-rS0"/>
                     <constraint firstItem="nEt-Gf-ScI" firstAttribute="top" secondItem="KHn-In-vtA" secondAttribute="bottom" constant="7" id="uin-5I-GZD"/>
                 </constraints>

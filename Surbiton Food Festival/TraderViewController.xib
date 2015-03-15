@@ -49,10 +49,22 @@
                         <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="XtO-Yh-Bb6"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There'll be more trader contact details here" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDa-ht-2go">
+                    <rect key="frame" x="135" y="369" width="330" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="MCd-gY-uDd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="g1k-gx-TwD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="4Jh-7T-C5m"/>
+                <constraint firstAttribute="centerX" secondItem="UDa-ht-2go" secondAttribute="centerX" id="7xt-OA-fFV"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UDa-ht-2go" secondAttribute="trailing" constant="5" id="9Vn-K9-Swb"/>
+                <constraint firstItem="UDa-ht-2go" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="CKT-YK-rYr"/>
                 <constraint firstAttribute="centerX" secondItem="KOf-Rj-bZV" secondAttribute="centerX" id="CRx-6v-SXA"/>
                 <constraint firstItem="KOf-Rj-bZV" firstAttribute="top" secondItem="edj-Lw-4Gn" secondAttribute="bottom" constant="8" id="EiG-fC-gEq"/>
                 <constraint firstItem="z9U-pK-fic" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Oi0-TP-Ge1"/>
@@ -60,6 +72,7 @@
                 <constraint firstItem="z9U-pK-fic" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="asf-Go-CQI"/>
                 <constraint firstAttribute="trailing" secondItem="z9U-pK-fic" secondAttribute="trailing" id="eLd-SY-Itx"/>
                 <constraint firstItem="edj-Lw-4Gn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="egJ-HW-obX"/>
+                <constraint firstItem="UDa-ht-2go" firstAttribute="top" secondItem="KOf-Rj-bZV" secondAttribute="bottom" constant="21" id="ix2-eb-Eiq"/>
                 <constraint firstItem="edj-Lw-4Gn" firstAttribute="top" secondItem="g1k-gx-TwD" secondAttribute="bottom" constant="11" id="kfI-sS-oJb"/>
                 <constraint firstAttribute="trailing" secondItem="g1k-gx-TwD" secondAttribute="trailing" constant="8" id="lZa-pX-19p"/>
                 <constraint firstAttribute="trailing" secondItem="edj-Lw-4Gn" secondAttribute="trailing" constant="8" id="wzR-rK-g2Z"/>
