@@ -87,6 +87,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [remindMeButton setHidden:NO];
+    [deleteReminderButton setHidden:YES];
     
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
