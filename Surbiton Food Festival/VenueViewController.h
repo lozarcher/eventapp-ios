@@ -12,10 +12,10 @@
 
 @interface VenueViewController : UIViewController <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
-@property (weak, nonatomic) IBOutlet UILabel *venueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *streetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 - (IBAction)closeButtonPressed:(id)sender;
 -(void)createVenue:(Venue *)venueDic location:(NSString *)location;
 @property Venue *venue;

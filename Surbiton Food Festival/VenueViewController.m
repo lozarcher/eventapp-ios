@@ -66,7 +66,7 @@
     if ([self.venue.city isKindOfClass:[NSNull class]]) {
         self.venue.city = @"";
     }
-    self.venueLabel.text = location;
+    self.navBar.topItem.title = location;
     self.streetLabel.text = self.venue.street;
     self.cityLabel.text = self.venue.city;
 
