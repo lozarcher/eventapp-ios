@@ -183,7 +183,7 @@
     
     EventViewController *eventDetail=[[EventViewController alloc]initWithNibName:@"EventViewController" bundle:[NSBundle mainBundle]];
     eventDetail.event = event;
-    [self presentViewController:eventDetail animated:YES completion:nil];
+    [self.navigationController pushViewController:eventDetail animated:YES];
 }
 
 

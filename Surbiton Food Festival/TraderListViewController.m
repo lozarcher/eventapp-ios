@@ -148,7 +148,7 @@
     
     TraderViewController *traderDetail=[[TraderViewController alloc]initWithNibName:@"TraderViewController" bundle:[NSBundle mainBundle]];
     traderDetail.trader = trader;
-    [self presentViewController:traderDetail animated:YES completion:nil];
+    [self.navigationController pushViewController:traderDetail animated:YES];
 }
 
 

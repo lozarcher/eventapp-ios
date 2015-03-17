@@ -19,8 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *venueLabel;
 @property (weak, nonatomic) IBOutlet UIButton *remindMeButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteReminderButton;
-@property (weak, nonatomic) IBOutlet UIButton *mapButton;
 - (IBAction)mapButtonPressed:(id)sender;
+@property (nonatomic, weak) IBOutletCollection(NSLayoutConstraint) NSArray *topConstraint;
 
 @property (retain,nonatomic) Event *event;
 @end

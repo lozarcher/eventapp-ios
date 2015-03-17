@@ -89,6 +89,8 @@
 		AEE46FA01AB82A9100F52708 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */; };
 		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
 		AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
+		AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */; };
+		AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FAA1AB8866B00F52708 /* bell-lg-filled@2x.png */; };
 		AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED6CCB1A939DB700B8D84B /* Social.framework */; };
 		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */; };
@@ -248,6 +250,8 @@
 		AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarCompose@2x.png"; sourceTree = "<group>"; };
 		AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIAccessoryButtonX@2x.png"; sourceTree = "<group>"; };
+		AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-lg-outline@2x.png"; sourceTree = "<group>"; };
+		AEE46FAA1AB8866B00F52708 /* bell-lg-filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-lg-filled@2x.png"; sourceTree = "<group>"; };
 		AEED6CCB1A939DB700B8D84B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
@@ -523,6 +527,8 @@
 		AEE46FA11AB8747600F52708 /* Navbar icons */ = {
 			isa = PBXGroup;
 			children = (
+				AEE46FAA1AB8866B00F52708 /* bell-lg-filled@2x.png */,
+				AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */,
 				AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */,
 				AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */,
 			);
@@ -745,6 +751,7 @@
 				AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
+				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
 				AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */,
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
@@ -775,6 +782,7 @@
 				AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */,
 				AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */,
 				AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */,
+				AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */,
 				AE1BCBF31A9FDC3300E79935 /* Icon-Small@3x.png in Resources */,
 				AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */,
 				AE1BCBF91A9FDC3300E79935 /* iTunesArtwork in Resources */,

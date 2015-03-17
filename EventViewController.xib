@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -8,17 +8,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventViewController">
             <connections>
-                <outlet property="closeButton" destination="inR-fF-IvS" id="Q4Q-vk-yCf"/>
                 <outlet property="deleteReminderButton" destination="Ba2-jY-vZE" id="22i-HT-aFT"/>
                 <outlet property="eventDateLabel" destination="1Ae-xI-Eha" id="Lpq-KA-QBQ"/>
                 <outlet property="eventDescriptionLabel" destination="Gmn-MM-PZl" id="o33-u7-nFe"/>
                 <outlet property="eventImageView" destination="OGy-TT-QuX" id="eU5-jr-JB0"/>
                 <outlet property="eventTimeLabel" destination="sva-8t-ahH" id="aTf-yb-OQ7"/>
                 <outlet property="eventTitleLabel" destination="wcB-7E-gsq" id="Lvm-I9-tdq"/>
-                <outlet property="mapButton" destination="qlA-kb-G9C" id="g9n-BO-o5D"/>
                 <outlet property="remindMeButton" destination="gbz-GB-Pxq" id="EEb-Yh-T1y"/>
                 <outlet property="venueLabel" destination="uZn-ms-reu" id="wQh-g0-YIi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="topConstraint" destination="bJW-jF-Pfi" id="ssI-14-E3Q"/>
+                <outletCollection property="topConstraint" destination="W1p-Wc-JW0" id="tYS-Qx-0M0"/>
+                <outletCollection property="topConstraint" destination="KfH-qR-Isk" id="IOh-bD-5Ky"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -81,17 +82,8 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbz-GB-Pxq">
-                    <rect key="frame" x="69" y="30" width="79" height="30"/>
-                    <state key="normal" title="Remind Me">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="addReminder:" destination="-1" eventType="touchUpInside" id="7up-42-R2f"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ba2-jY-vZE">
-                    <rect key="frame" x="156" y="30" width="114" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ba2-jY-vZE">
+                    <rect key="frame" x="96" y="30" width="114" height="30"/>
                     <state key="normal" title="Delete Reminder">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -99,38 +91,23 @@
                         <action selector="deleteReminder" destination="-1" eventType="touchUpInside" id="bvS-0o-6Ni"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-fF-IvS" userLabel="closeButton">
-                    <rect key="frame" x="8" y="30" width="51" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="jop-GW-LBD"/>
-                        <constraint firstAttribute="width" constant="51" id="ksI-wM-hHe"/>
-                    </constraints>
-                    <state key="normal" title="CLOSE">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbz-GB-Pxq">
+                    <rect key="frame" x="9" y="30" width="79" height="30"/>
+                    <state key="normal" title="Remind Me">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="kt0-1h-Bax"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlA-kb-G9C">
-                    <rect key="frame" x="57" y="167" width="31" height="30"/>
-                    <state key="normal" title="Map">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="mapButtonPressed:" destination="-1" eventType="touchUpInside" id="zTM-gS-Xrw"/>
+                        <action selector="addReminder:" destination="-1" eventType="touchUpInside" id="7up-42-R2f"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="1Ae-xI-Eha" firstAttribute="top" secondItem="inR-fF-IvS" secondAttribute="bottom" constant="8" id="3k6-Oa-ZiH"/>
-                <constraint firstItem="inR-fF-IvS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="6hO-gY-e97"/>
+                <constraint firstItem="1Ae-xI-Eha" firstAttribute="top" secondItem="gbz-GB-Pxq" secondAttribute="bottom" constant="8" id="5EG-lC-Sbt"/>
                 <constraint firstItem="wcB-7E-gsq" firstAttribute="top" secondItem="sva-8t-ahH" secondAttribute="bottom" constant="35" id="CZG-dZ-LgT"/>
                 <constraint firstItem="uZn-ms-reu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="DAA-i4-j3d"/>
-                <constraint firstItem="Ba2-jY-vZE" firstAttribute="leading" secondItem="inR-fF-IvS" secondAttribute="trailing" constant="10" id="F5B-x1-XIz"/>
-                <constraint firstItem="qlA-kb-G9C" firstAttribute="top" secondItem="wcB-7E-gsq" secondAttribute="bottom" constant="1" id="FfG-4y-spU"/>
                 <constraint firstItem="OGy-TT-QuX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="KfH-qR-Isk"/>
+                <constraint firstItem="Ba2-jY-vZE" firstAttribute="leading" secondItem="gbz-GB-Pxq" secondAttribute="trailing" constant="8" id="Ndn-jS-So0"/>
                 <constraint firstItem="1Ae-xI-Eha" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="PHz-5T-f8p"/>
                 <constraint firstItem="uZn-ms-reu" firstAttribute="top" secondItem="wcB-7E-gsq" secondAttribute="bottom" constant="7" id="QHS-UO-Mr0"/>
                 <constraint firstItem="sva-8t-ahH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="TgE-1X-uUF"/>
@@ -138,14 +115,12 @@
                 <constraint firstItem="wcB-7E-gsq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="WOr-Om-5qa"/>
                 <constraint firstAttribute="trailing" secondItem="wcB-7E-gsq" secondAttribute="trailing" constant="10" id="XXx-DV-r8g"/>
                 <constraint firstItem="Ba2-jY-vZE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="bJW-jF-Pfi"/>
-                <constraint firstItem="inR-fF-IvS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="bhh-as-CJ6"/>
-                <constraint firstItem="qlA-kb-G9C" firstAttribute="leading" secondItem="uZn-ms-reu" secondAttribute="trailing" constant="10" id="c9b-IP-3hg"/>
+                <constraint firstItem="gbz-GB-Pxq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="9" id="cFJ-aa-Ug5"/>
                 <constraint firstItem="Gmn-MM-PZl" firstAttribute="top" secondItem="uZn-ms-reu" secondAttribute="bottom" constant="8" id="cMY-Ky-vmz"/>
                 <constraint firstAttribute="trailing" secondItem="Gmn-MM-PZl" secondAttribute="trailing" constant="12" id="ckY-PC-DYc"/>
                 <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="hIO-J9-um8"/>
                 <constraint firstAttribute="trailing" secondItem="OGy-TT-QuX" secondAttribute="trailing" constant="10" id="iOD-iB-aGl"/>
                 <constraint firstItem="sva-8t-ahH" firstAttribute="top" secondItem="1Ae-xI-Eha" secondAttribute="bottom" constant="8" id="xe1-bc-qSr"/>
-                <constraint firstItem="gbz-GB-Pxq" firstAttribute="leading" secondItem="inR-fF-IvS" secondAttribute="trailing" constant="10" id="zLn-nx-4j6"/>
             </constraints>
             <point key="canvasLocation" x="80" y="283"/>
         </view>

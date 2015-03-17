@@ -33,6 +33,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Check to see if we are running on iOS 6
+    if (![self respondsToSelector:@selector(topLayoutGuide)]) {
+        self.topConstraint.constant = self.topConstraint.constant - 64;
+    }
     
     // Do any additional setup after loading the view from its nib.
     traderTitleLabel.text = trader.name;

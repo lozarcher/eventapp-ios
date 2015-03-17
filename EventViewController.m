@@ -87,6 +87,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    // Check to see if we are running on iOS 6
+    if (![self respondsToSelector:@selector(topLayoutGuide)]) {
+        for (NSLayoutConstraint *constraint in self.topConstraint) {
+            constraint.constant = constraint.constant - 64;
+        }
+    }
+    
     [remindMeButton setHidden:NO];
     [deleteReminderButton setHidden:YES];
     
@@ -139,7 +146,11 @@
         [eventImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
     
-    self.mapButton.hidden = ([event.venue isKindOfClass:[NSNull class]]) ;
+    
+    if (![event.venue isKindOfClass:[NSNull class]]) {
+        UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(mapButtonPressed:)];
+        self.navigationItem.rightBarButtonItem = mapButton;
+    }
 
     [self updateAuthorizationStatusToAccessEventStore];
     [self fetchReminders];
