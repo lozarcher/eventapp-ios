@@ -5,9 +5,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageViewController">
             <connections>
-                <outlet property="tableView" destination="THF-1w-Ryz" id="vv7-SB-UAI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,21 +15,17 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="THF-1w-Ryz">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Gz-Lr-GMc">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="Ksn-Cg-lsV"/>
-                        <outlet property="delegate" destination="-1" id="phK-xH-9rm"/>
-                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="THF-1w-Ryz" secondAttribute="trailing" id="5XX-6t-dP1"/>
-                <constraint firstAttribute="bottom" secondItem="THF-1w-Ryz" secondAttribute="bottom" id="JJ2-DR-eX3"/>
-                <constraint firstItem="THF-1w-Ryz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gwd-sO-Q3y"/>
-                <constraint firstItem="THF-1w-Ryz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iw9-WB-rXc"/>
+                <constraint firstItem="1Gz-Lr-GMc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9QU-Ba-BQW"/>
+                <constraint firstAttribute="trailing" secondItem="1Gz-Lr-GMc" secondAttribute="trailing" id="FDZ-xn-rTU"/>
+                <constraint firstItem="1Gz-Lr-GMc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kGq-Jk-e0y"/>
+                <constraint firstAttribute="bottom" secondItem="1Gz-Lr-GMc" secondAttribute="bottom" id="oOb-Vj-zv1"/>
             </constraints>
         </view>
     </objects>

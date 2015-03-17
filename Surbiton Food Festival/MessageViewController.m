@@ -6,21 +6,18 @@
 //  Copyright (c) 2015 Spirit of Seething. All rights reserved.
 //
 
-#import "TwitterViewController.h"
-#import "Tweet.h"
-#import "TweetBuilder.h"
+#import "MessageViewController.h"
+#import "Message.h"
+#import "MessageBuilder.h"
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
-#import "TwitterViewCell.h"
-#import "TweetLinkViewController.h"
+#import "MessageViewCell.h"
 
-#import <Social/Social.h>
-
-@interface TwitterViewController ()
+@interface MessageViewController ()
 
 @end
 
-@implementation TwitterViewController
+@implementation MessageViewController
 
 @synthesize tableView, refreshControl, spinner, messageLabel;
 
@@ -43,17 +40,17 @@
     self.refreshControl.backgroundColor = [UIColor purpleColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
-                            action:@selector(refreshTweets:)
+                            action:@selector(refreshMessages:)
                   forControlEvents:UIControlEventValueChanged];
     [tableView addSubview:self.refreshControl];
     
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    storePath = [NSString stringWithFormat:@"%@/Tweets.plist", aCachesDirectory];
+    storePath = [NSString stringWithFormat:@"%@/Messages", aCachesDirectory];
     
     //Delete the cache file
     //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
     
-    self.title = NSLocalizedString(@"Twitter Chat", nil);
+    self.title = NSLocalizedString(@"Messaging", nil);
     
     SWRevealViewController *revealController = [self revealViewController];
     
@@ -64,20 +61,24 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
-    UIBarButtonItem *tweetButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"UIButtonBarCompose.png"]
-                                                                          style:UIBarButtonItemStyleBordered target:self action:@selector(tweetButtonClicked:)];
+    UIBarButtonItem *newMessageeButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"UIButtonBarCompose.png"]
+                                                                         style:UIBarButtonItemStyleBordered target:self action:@selector(newMessage:)];
     
-    self.navigationItem.rightBarButtonItem = tweetButton;
+    self.navigationItem.rightBarButtonItem = newMessageeButton;
     
     [self activateSpinner:YES];
     isPaginatedLoad = NO;
-    [self refreshTweets:self];
+    [self refreshMessages:self];
 }
 
-- (void)refreshTweets:(id)sender {
+-(void)newMessage:(id)sender {
+    NSLog(@"New sender pressed");
+}
+
+- (void)refreshMessages:(id)sender {
     NSLog(@"Fetching data from URL");
     NSString *serviceHostname = [MTConfiguration serviceHostname];
-    NSString *loadUrl = @"/tweets";
+    NSString *loadUrl = @"/messages";
     if (isPaginatedLoad && self.nextPage) {
         loadUrl = self.nextPage;
     }
@@ -103,7 +104,7 @@
         
         // Inform the user that the connection failed.
         NSLog(@"Error making connection");
-    
+        
     }
 }
 
@@ -115,8 +116,8 @@
 
 #pragma - markup TableView Delegate Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSInteger numberOfTweets = [_tweets count];
-    if (numberOfTweets != 0) {
+    NSInteger numberOfMessages = [_messages count];
+    if (numberOfMessages != 0) {
         self.tableView.backgroundView = nil;
         [messageLabel removeFromSuperview];
         return 1;
@@ -132,9 +133,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (![self.nextPage isKindOfClass:[NSNull class]]) {
-        return _tweets.count + 1;
+        return _messages.count + 1;
     } else {
-        return _tweets.count;
+        return _messages.count;
     }
 }
 
@@ -143,57 +144,55 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ( indexPath.row == [_tweets count]) { //  Only call the function if we're selecting the last row
+    if ( indexPath.row == [_messages count]) { //  Only call the function if we're selecting the last row
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         NSString *loadingText = @"Loading...";
         if (![cell.textLabel.text isEqualToString:loadingText]) {
             cell.textLabel.text = @"Loading...";
             NSLog(@"Load More requested"); // Add a function here to add more data to your array and reload the content
             isPaginatedLoad = YES;
-            [self refreshTweets:self];
+            [self refreshMessages:self];
         }
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *simpleTableIdentifier = @"TwitterTableItem";
-    TwitterViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    static NSString *simpleTableIdentifier = @"MessageTableCell";
+    MessageViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"TwitterViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
+        [tableView registerNib:[UINib nibWithNibName:@"MessageTableCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
         cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     }
     
     // Cell text (event title)
-    Tweet *tweet = [self getTweetForIndexPath:indexPath];
-    NSLog(@"Cell label %@", [tweet name]);
-    [cell populateDataInCell:tweet];
-    cell.delegate = self;
+    Message *message = [self getMessageForIndexPath:indexPath];
+    NSLog(@"Cell label %@", [message name]);
+    [cell populateDataInCell:message];
     
     
     // Only call this if there is a next page
     if (![self.nextPage isKindOfClass:[NSNull class]]) {
-        if(indexPath.row == [_tweets count] ) { // Here we check if we reached the end of the index, so the +1 row
+        if(indexPath.row == [_messages count] ) { // Here we check if we reached the end of the index, so the +1 row
             if (cell == nil) {
-                cell = [[TwitterViewCell alloc] initWithFrame:CGRectZero];
+                cell = [[MessageViewCell alloc] initWithFrame:CGRectZero];
             }
             // Reset previous content of the cell, I have these defined in a UITableCell subclass, change them where needed
             cell.imageView.image = nil;
             cell.nameLabel.text = nil;
-            cell.screennameLabel.text = nil;
             cell.textLabel.text = @"Tap to load more...";
         }
     }
     return cell;
 }
 
-- (Tweet*)getTweetForIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row >= [_tweets count]) {
-        return [[Tweet alloc] init];
+- (Message*)getMessageForIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= [_messages count]) {
+        return [[Message alloc] init];
     } else {
         NSInteger itemInSection = indexPath.row;
-        Tweet *tweet = [_tweets objectAtIndex:itemInSection];
-        return tweet;
+        Message *message = [_messages objectAtIndex:itemInSection];
+        return message;
     }
 }
 
@@ -206,7 +205,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     // Append the new data to the instance variable you declared
     [receivedData appendData:data];
-
+    
 }
 
 
@@ -230,12 +229,12 @@
             NSLog(@"Could not read from file: %@", [readError localizedDescription]);
         } else {
             NSLog(@"Using cached data");
-            parseError = [self getTweetsFromData:data];
+            parseError = [self getMessagesFromData:data];
             [tableView reloadData];
         }
     }
     
-    if (_tweets == nil || parseError != nil) {
+    if (_messages == nil || parseError != nil) {
         if (parseError != nil) {
             NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
             [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
@@ -248,9 +247,9 @@
     // do something with the data
     // receivedData is declared as a property elsewhere
     NSLog(@"Succeeded! Received %lu bytes of data", (unsigned long)receivedData.length);
-   
+    
     [self endRefresh];
-    [self getTweetsFromData:receivedData];
+    [self getMessagesFromData:receivedData];
     [tableView reloadData];
     
     NSError* writeError;
@@ -263,26 +262,26 @@
     
     connection = nil;
     receivedData = nil;
-        
+    
 }
 
 
--(NSError *)getTweetsFromData:(NSData *)data {
+-(NSError *)getMessagesFromData:(NSData *)data {
     NSError *error = nil;
-    NSArray *tweets = [TweetBuilder tweetsFromJSON:data error:&error];
-    self.nextPage = [TweetBuilder nextPageFromJSON:data];
-    if ([tweets count] > 0) {
+    NSArray *messages = [MessageBuilder messagesFromJSON:data error:&error];
+    self.nextPage = [MessageBuilder nextPageFromJSON:data];
+    if ([messages count] > 0) {
         if (isPaginatedLoad) {
-            [_tweets addObjectsFromArray:tweets];
+            [_messages addObjectsFromArray:messages];
         } else {
-            _tweets = tweets;
+            _messages = messages;
         }
         isPaginatedLoad = NO;
     }
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
     }
-    NSLog(@"Got %lu tweets from data", (unsigned long)tweets.count);
+    NSLog(@"Got %lu messages from data", (unsigned long)messages.count);
     return error;
 }
 
@@ -310,27 +309,6 @@
     }
 }
 
-- (IBAction)tweetButtonClicked:(id)sender {
-    NSLog(@"Tweet button clicked");
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-    {
-        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:@"#surbiton "];
-        
-        [self presentViewController:tweetSheet animated:YES completion:nil];
-    }
-    else
-    {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Sorry"
-                                  message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
-                                  delegate:self
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
-    }
-}
-
 
 -(void)activateSpinner:(BOOL)activate {
     if (activate) {
@@ -346,14 +324,5 @@
     }
 }
 
--(void)loadURL:(NSString *)urlString {
-    NSLog(@"Loading URL %@ from view controller", urlString);
-    
-    TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
-    [webVc loadUrlString:urlString];
-    [self presentViewController:webVc animated:YES completion:nil];
-
-
-}
 
 @end

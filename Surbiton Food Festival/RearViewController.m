@@ -34,6 +34,7 @@
 #import "TwitterViewController.h"
 #import "VoucherListViewController.h"
 #import "TraderListViewController.h"
+#import "MessageViewController.h"
 
 @interface RearViewController()
 {
@@ -62,7 +63,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 6;
 }
 
 
@@ -92,9 +93,13 @@
     }
     else if (row == 3)
     {
-        text = @"Chat";
+        text = @"Messaging";
     }
     else if (row == 4)
+    {
+        text = @"Twitter";
+    }
+    else if (row == 5)
     {
         text = @"Vouchers";
     }
@@ -151,13 +156,18 @@
     {
         newFrontController = [[TraderListViewController alloc] init];
     }
-    
+  
     else if (row == 3)
+    {
+        newFrontController = [[MessageViewController alloc] init];
+    }
+
+    else if (row == 4)
     {
         newFrontController = [[TwitterViewController alloc] init];
     }
     
-    else if (row == 4)
+    else if (row == 5)
     {
         newFrontController = [[VoucherListViewController alloc] init];
     }

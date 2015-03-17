@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TwitterViewCell.h"
+#import "MessageViewCell.h"
 
-@interface TwitterViewController : UIViewController <tweetLinkProtocol, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
-    NSMutableArray *_tweets;
+@interface MessageViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+    NSMutableArray *_messages;
     NSString *storePath;
     NSMutableData *receivedData;
     BOOL isPaginatedLoad;

@@ -81,6 +81,14 @@
 		AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */; };
 		AEBFA5611AB3632800B25A11 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBFA55F1AB3632800B25A11 /* VenueViewController.m */; };
 		AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBFA5601AB3632800B25A11 /* VenueViewController.xib */; };
+		AEE46F931AB8280000F52708 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F921AB8280000F52708 /* Message.m */; };
+		AEE46F961AB8283100F52708 /* MessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F951AB8283100F52708 /* MessageBuilder.m */; };
+		AEE46F9A1AB828CF00F52708 /* MessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F981AB828CF00F52708 /* MessageViewCell.m */; };
+		AEE46F9B1AB828CF00F52708 /* MessageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46F991AB828CF00F52708 /* MessageViewCell.xib */; };
+		AEE46F9F1AB82A9100F52708 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F9D1AB82A9100F52708 /* MessageViewController.m */; };
+		AEE46FA01AB82A9100F52708 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */; };
+		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
+		AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
 		AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED6CCB1A939DB700B8D84B /* Social.framework */; };
 		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */; };
@@ -228,6 +236,18 @@
 		AEBFA55E1AB3632800B25A11 /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
 		AEBFA55F1AB3632800B25A11 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
 		AEBFA5601AB3632800B25A11 /* VenueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueViewController.xib; sourceTree = "<group>"; };
+		AEE46F911AB827FF00F52708 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		AEE46F921AB8280000F52708 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		AEE46F941AB8283100F52708 /* MessageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBuilder.h; sourceTree = "<group>"; };
+		AEE46F951AB8283100F52708 /* MessageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBuilder.m; sourceTree = "<group>"; };
+		AEE46F971AB828CF00F52708 /* MessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewCell.h; sourceTree = "<group>"; };
+		AEE46F981AB828CF00F52708 /* MessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewCell.m; sourceTree = "<group>"; };
+		AEE46F991AB828CF00F52708 /* MessageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewCell.xib; sourceTree = "<group>"; };
+		AEE46F9C1AB82A9100F52708 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		AEE46F9D1AB82A9100F52708 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarCompose@2x.png"; sourceTree = "<group>"; };
+		AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIAccessoryButtonX@2x.png"; sourceTree = "<group>"; };
 		AEED6CCB1A939DB700B8D84B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
@@ -369,6 +389,10 @@
 				AEF3AB291AB45D8000B2C6A9 /* Trader.m */,
 				AEF3AB2B1AB45D9000B2C6A9 /* TraderBuilder.h */,
 				AEF3AB2C1AB45D9000B2C6A9 /* TraderBuilder.m */,
+				AEE46F911AB827FF00F52708 /* Message.h */,
+				AEE46F921AB8280000F52708 /* Message.m */,
+				AEE46F941AB8283100F52708 /* MessageBuilder.h */,
+				AEE46F951AB8283100F52708 /* MessageBuilder.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -472,6 +496,7 @@
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AEE46FA11AB8747600F52708 /* Navbar icons */,
 				AE02BC3A1AAE0CEA0025E7CC /* splash.png */,
 				AE1BCBD21A9FDC2500E79935 /* icons */,
 				AE1BCBD01A9FD3CC00E79935 /* logo.jpg */,
@@ -480,6 +505,28 @@
 				AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		AEE46F901AB827EC00F52708 /* MessageList */ = {
+			isa = PBXGroup;
+			children = (
+				AEE46F971AB828CF00F52708 /* MessageViewCell.h */,
+				AEE46F981AB828CF00F52708 /* MessageViewCell.m */,
+				AEE46F991AB828CF00F52708 /* MessageViewCell.xib */,
+				AEE46F9C1AB82A9100F52708 /* MessageViewController.h */,
+				AEE46F9D1AB82A9100F52708 /* MessageViewController.m */,
+				AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */,
+			);
+			name = MessageList;
+			sourceTree = "<group>";
+		};
+		AEE46FA11AB8747600F52708 /* Navbar icons */ = {
+			isa = PBXGroup;
+			children = (
+				AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */,
+				AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */,
+			);
+			name = "Navbar icons";
 			sourceTree = "<group>";
 		};
 		AEEE5FB91AA06E1F00CA7774 /* EventList */ = {
@@ -552,6 +599,7 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AEE46F901AB827EC00F52708 /* MessageList */,
 				AEF3AB091AB4576C00B2C6A9 /* TraderList */,
 				AEA0568D1AA4F7F1003E095F /* TwitterList */,
 				AE1382671AA142DE00714884 /* VoucherList */,
@@ -702,19 +750,23 @@
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
 				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
 				AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */,
+				AEE46F9B1AB828CF00F52708 /* MessageViewCell.xib in Resources */,
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
 				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
 				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
+				AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */,
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
 				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
 				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
 				AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */,
 				AE1BCBF11A9FDC3300E79935 /* Icon-Small.png in Resources */,
 				AE1BCBAD1A9FC87200E79935 /* FrontViewController.xib in Resources */,
+				AEE46FA01AB82A9100F52708 /* MessageViewController.xib in Resources */,
 				AE1BCBED1A9FDC3300E79935 /* Icon-76@2x.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
+				AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */,
 				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
 				AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
@@ -755,6 +807,7 @@
 				AE02BC301AA8F4650025E7CC /* SDWebImageDownloaderOperation.m in Sources */,
 				AEF3AB2A1AB45D8000B2C6A9 /* Trader.m in Sources */,
 				AE02BC321AA8F4650025E7CC /* SDWebImagePrefetcher.m in Sources */,
+				AEE46F961AB8283100F52708 /* MessageBuilder.m in Sources */,
 				AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */,
 				AEB9DB311A90C564008C6329 /* Tweet.m in Sources */,
 				AE1BCBC31A9FCF6300E79935 /* TwitterViewController.m in Sources */,
@@ -768,11 +821,13 @@
 				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
 				AE1BCBA71A9FC62100E79935 /* RearViewController.m in Sources */,
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
+				AEE46F931AB8280000F52708 /* Message.m in Sources */,
 				AE18C4C51A8CBC3700B96570 /* Event.m in Sources */,
 				AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */,
 				AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */,
 				AE02BC2C1AA8F4650025E7CC /* SDImageCache.m in Sources */,
 				AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */,
+				AEE46F9A1AB828CF00F52708 /* MessageViewCell.m in Sources */,
 				AE02BC311AA8F4650025E7CC /* SDWebImageManager.m in Sources */,
 				AE02BC361AA8F4650025E7CC /* UIImage+WebP.m in Sources */,
 				AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */,
@@ -788,6 +843,7 @@
 				AE02BC2E1AA8F4650025E7CC /* SDWebImageDecoder.m in Sources */,
 				AE02BC2D1AA8F4650025E7CC /* SDWebImageCompat.m in Sources */,
 				AE02BC371AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m in Sources */,
+				AEE46F9F1AB82A9100F52708 /* MessageViewController.m in Sources */,
 				AEBFA5611AB3632800B25A11 /* VenueViewController.m in Sources */,
 				AE02BC2B1AA8F4650025E7CC /* NSData+ImageContentType.m in Sources */,
 			);
