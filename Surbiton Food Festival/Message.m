@@ -12,4 +12,8 @@
 
 @synthesize name, text, createdDate, profilePic;
 
+-(NSDictionary *)dictionary {
+    return [NSDictionary dictionaryWithObjectsAndKeys:self.name,@"name",self.text, @"text",self.profilePic, @"profilePic", nil];
+}
+
 @end

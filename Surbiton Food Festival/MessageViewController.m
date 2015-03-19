@@ -29,6 +29,10 @@
     //initialise the message label
     messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     
+    // Register cell Nib
+    UINib *cellNib = [UINib nibWithNibName:@"MessageViewCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"MessageViewCell"];
+    
     messageLabel.text = @"No data is currently available. Please pull down to refresh.";
     messageLabel.textColor = [UIColor blackColor];
     messageLabel.numberOfLines = 0;
@@ -141,8 +145,18 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90;
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (!self.prototypeCell)
+    {
+        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"MessageViewCell"];
+    }
+    Message *message = [self getMessageForIndexPath:indexPath];
+    [self.prototypeCell populateDataInCell:message];
+    
+    [self.prototypeCell layoutIfNeeded];
+    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -160,18 +174,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *simpleTableIdentifier = @"MessageTableCell";
-    MessageViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"MessageTableCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    }
+    MessageViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MessageViewCell"];;
     
     // Cell text (event title)
     Message *message = [self getMessageForIndexPath:indexPath];
     NSLog(@"Cell label %@", [message name]);
     [cell populateDataInCell:message];
-    
     
     // Only call this if there is a next page
     if (![self.nextPage isKindOfClass:[NSNull class]]) {

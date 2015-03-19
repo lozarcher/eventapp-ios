@@ -18,5 +18,6 @@
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UITextField *messageField;
+@property (weak, nonatomic) IBOutlet UIView *messageEntryDialog;
 
 @end

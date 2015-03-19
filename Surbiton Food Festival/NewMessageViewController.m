@@ -8,6 +8,7 @@
 
 #import "NewMessageViewController.h"
 #import "Message.h"
+#import "MTConfiguration.h"
 
 @interface NewMessageViewController ()
 
@@ -42,6 +43,7 @@
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     self.statusLabel.text = @"You're logged in as";
+    [self.messageEntryDialog setHidden:NO];
 }
 
 // Logged-out user experience
@@ -49,6 +51,7 @@
     self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
     self.statusLabel.text= @"You're not logged in!";
+    [self.messageEntryDialog setHidden:YES];
 }
 - (IBAction)sendButtonPressed:(id)sender {
     NSLog(@"Sending message from %@", self.nameLabel.text);
@@ -59,8 +62,33 @@
     [message setProfilePic:profilePicUrl];
     [message setName:self.nameLabel.text];
     [message setText:self.messageField.text];
-    
-    
+
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[message dictionary] options:0 error:&error];
+    if (jsonData) {
+        NSString *postUrl = [NSString stringWithFormat:@"%@/messages/post", [MTConfiguration serviceHostname]];
+        
+        // Create the request.
+        NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:postUrl]
+                                                             cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                         timeoutInterval:10.0];
+        
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPMethod:@"POST"];
+        [request setHTTPBody:jsonData];
+        NSURLResponse* response;
+        NSData* responseData = nil;
+        
+        NSLog(@"Sending request to %@", postUrl);
+        responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        NSLog(@"Error :%@", [error debugDescription]);
+        NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"the final output is:%@",responseString);
+
+    } else {
+        NSLog(@"Unable to serialize the data %@: %@", [message dictionary], error);
+    }
 }
 
 /*

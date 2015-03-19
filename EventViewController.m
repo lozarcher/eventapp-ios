@@ -330,7 +330,6 @@
 }
 
 -(void)updateReminderButton {
-    [self fetchReminders];
     BOOL hasReminder = [self eventHasReminder];
     if (hasReminder) {
         [self.navigationItem.rightBarButtonItem setImage:[UIImage imageNamed:@"bell-lg-filled.png"]];
@@ -341,8 +340,13 @@
 
 -(BOOL)eventHasReminder {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title matches %@", [event name]];
-    NSArray *results = [self.reminders filteredArrayUsingPredicate:predicate];
-    return [results count];
+    if (![self.reminders isKindOfClass:[NSNull class]]) {
+        NSArray *results = [self.reminders filteredArrayUsingPredicate:predicate];
+        return [results count];
+    } else {
+        NSLog(@"Reminders were null");
+        return 0;
+    }
 }
 
 - (IBAction)mapButtonPressed:(id)sender {
