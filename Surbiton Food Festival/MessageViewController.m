@@ -12,6 +12,7 @@
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
 #import "MessageViewCell.h"
+#import "NewMessageViewController.h"
 
 @interface MessageViewController ()
 
@@ -72,7 +73,8 @@
 }
 
 -(void)newMessage:(id)sender {
-    NSLog(@"New sender pressed");
+    NewMessageViewController *newMessage=[[NewMessageViewController alloc]initWithNibName:@"NewMessageViewController" bundle:[NSBundle mainBundle]];
+    [self.navigationController pushViewController:newMessage animated:YES];
 }
 
 - (void)refreshMessages:(id)sender {

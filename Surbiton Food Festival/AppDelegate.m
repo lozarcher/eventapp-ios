@@ -35,7 +35,8 @@
     [self.locationManager startUpdatingLocation];
     
     [FBLoginView class];
-    
+    [FBProfilePictureView class];
+
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
     

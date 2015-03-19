@@ -72,6 +72,8 @@
 		AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9369F31A9BC5E300F15869 /* MapKit.framework */; };
 		AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369F91A9BCBC000F15869 /* VenueBuilder.m */; };
 		AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369FC1A9BCC3400F15869 /* Venue.m */; };
+		AE9865321ABACF7D00A1008F /* NewMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9865301ABACF7D00A1008F /* NewMessageViewController.m */; };
+		AE9865331ABACF7D00A1008F /* NewMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9865311ABACF7D00A1008F /* NewMessageViewController.xib */; };
 		AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */; };
 		AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA056901AA4F82B003E095F /* TwitterViewCell.xib */; };
 		AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB281A90A956008C6329 /* EventViewController.m */; };
@@ -224,6 +226,9 @@
 		AE9369F91A9BCBC000F15869 /* VenueBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueBuilder.m; sourceTree = "<group>"; };
 		AE9369FB1A9BCC3400F15869 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		AE9369FC1A9BCC3400F15869 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		AE98652F1ABACF7D00A1008F /* NewMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMessageViewController.h; sourceTree = "<group>"; };
+		AE9865301ABACF7D00A1008F /* NewMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMessageViewController.m; sourceTree = "<group>"; };
+		AE9865311ABACF7D00A1008F /* NewMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewMessageViewController.xib; sourceTree = "<group>"; };
 		AEA0568E1AA4F82B003E095F /* TwitterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewCell.h; sourceTree = "<group>"; };
 		AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewCell.m; sourceTree = "<group>"; };
 		AEA056901AA4F82B003E095F /* TwitterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewCell.xib; sourceTree = "<group>"; };
@@ -520,6 +525,9 @@
 				AEE46F9C1AB82A9100F52708 /* MessageViewController.h */,
 				AEE46F9D1AB82A9100F52708 /* MessageViewController.m */,
 				AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */,
+				AE98652F1ABACF7D00A1008F /* NewMessageViewController.h */,
+				AE9865301ABACF7D00A1008F /* NewMessageViewController.m */,
+				AE9865311ABACF7D00A1008F /* NewMessageViewController.xib */,
 			);
 			name = MessageList;
 			sourceTree = "<group>";
@@ -784,6 +792,7 @@
 				AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */,
 				AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */,
 				AE1BCBF31A9FDC3300E79935 /* Icon-Small@3x.png in Resources */,
+				AE9865331ABACF7D00A1008F /* NewMessageViewController.xib in Resources */,
 				AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */,
 				AE1BCBF91A9FDC3300E79935 /* iTunesArtwork in Resources */,
 			);
@@ -814,6 +823,7 @@
 				AE1BCBCE1A9FD0A400E79935 /* EventListViewController.m in Sources */,
 				AE02BC301AA8F4650025E7CC /* SDWebImageDownloaderOperation.m in Sources */,
 				AEF3AB2A1AB45D8000B2C6A9 /* Trader.m in Sources */,
+				AE9865321ABACF7D00A1008F /* NewMessageViewController.m in Sources */,
 				AE02BC321AA8F4650025E7CC /* SDWebImagePrefetcher.m in Sources */,
 				AEE46F961AB8283100F52708 /* MessageBuilder.m in Sources */,
 				AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */,
