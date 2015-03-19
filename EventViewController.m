@@ -27,7 +27,7 @@
 
 @implementation EventViewController
 
-@synthesize eventTitleLabel, eventDateLabel, eventImageView, eventDescriptionLabel, closeButton, event, eventTimeLabel, venueLabel, remindMeButton, deleteReminderButton;
+@synthesize eventTitleLabel, eventDateLabel, eventImageView, eventDescriptionLabel, closeButton, event, eventTimeLabel, venueLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -94,8 +94,12 @@
         }
     }
     
-    [remindMeButton setHidden:NO];
-    [deleteReminderButton setHidden:YES];
+    self.reminderSet = NO;
+    UIBarButtonItem *reminderButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bell-lg-outline.png"]
+                                                                           style:UIBarButtonItemStyleBordered target:self action:@selector(reminderButtonPressed:)];
+    
+    self.navigationItem.rightBarButtonItem = reminderButtonItem;
+    [self updateReminderButton];
     
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
@@ -147,11 +151,8 @@
     }
     
     
-    if (![event.venue isKindOfClass:[NSNull class]]) {
-        UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(mapButtonPressed:)];
-        self.navigationItem.rightBarButtonItem = mapButton;
-    }
-
+    [self.mapButton setHidden:[event.venue isKindOfClass:[NSNull class]]];
+    
     [self updateAuthorizationStatusToAccessEventStore];
     [self fetchReminders];
 
@@ -320,11 +321,22 @@
     }
 }
 
+-(void)reminderButtonPressed:(id)sender {
+    if ([self eventHasReminder]) {
+        [self deleteReminder];
+    } else {
+        [self addReminder:self];
+    }
+}
+
 -(void)updateReminderButton {
     [self fetchReminders];
     BOOL hasReminder = [self eventHasReminder];
-    [remindMeButton setHidden:hasReminder];
-    [deleteReminderButton setHidden:!hasReminder];
+    if (hasReminder) {
+        [self.navigationItem.rightBarButtonItem setImage:[UIImage imageNamed:@"bell-lg-filled.png"]];
+    } else {
+        [self.navigationItem.rightBarButtonItem setImage:[UIImage imageNamed:@"bell-lg-outline.png"]];
+    }
 }
 
 -(BOOL)eventHasReminder {

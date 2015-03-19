@@ -17,10 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *venueLabel;
-@property (weak, nonatomic) IBOutlet UIButton *remindMeButton;
-@property (weak, nonatomic) IBOutlet UIButton *deleteReminderButton;
 - (IBAction)mapButtonPressed:(id)sender;
 @property (nonatomic, weak) IBOutletCollection(NSLayoutConstraint) NSArray *topConstraint;
-
+@property (nonatomic) BOOL reminderSet;
 @property (retain,nonatomic) Event *event;
+@property (weak, nonatomic) IBOutlet UIButton *mapButton;
 @end
