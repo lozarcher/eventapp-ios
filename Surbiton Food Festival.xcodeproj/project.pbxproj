@@ -93,6 +93,11 @@
 		AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
 		AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */; };
 		AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FAA1AB8866B00F52708 /* bell-lg-filled@2x.png */; };
+		AEE46FAD1ABB4A1700F52708 /* KingstonPound-small-15.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */; };
+		AEE46FD01ABB55CC00F52708 /* AboutAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46FCE1ABB55CC00F52708 /* AboutAppViewController.m */; };
+		AEE46FD11ABB55CC00F52708 /* AboutAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FCF1ABB55CC00F52708 /* AboutAppViewController.xib */; };
+		AEE46FD51ABB55E600F52708 /* AboutKingstonPoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46FD31ABB55E600F52708 /* AboutKingstonPoundViewController.m */; };
+		AEE46FD61ABB55E600F52708 /* AboutKingstonPoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FD41ABB55E600F52708 /* AboutKingstonPoundViewController.xib */; };
 		AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED6CCB1A939DB700B8D84B /* Social.framework */; };
 		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */; };
@@ -257,6 +262,13 @@
 		AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIAccessoryButtonX@2x.png"; sourceTree = "<group>"; };
 		AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-lg-outline@2x.png"; sourceTree = "<group>"; };
 		AEE46FAA1AB8866B00F52708 /* bell-lg-filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-lg-filled@2x.png"; sourceTree = "<group>"; };
+		AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KingstonPound-small-15.png"; sourceTree = "<group>"; };
+		AEE46FCD1ABB55CC00F52708 /* AboutAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutAppViewController.h; sourceTree = "<group>"; };
+		AEE46FCE1ABB55CC00F52708 /* AboutAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAppViewController.m; sourceTree = "<group>"; };
+		AEE46FCF1ABB55CC00F52708 /* AboutAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutAppViewController.xib; sourceTree = "<group>"; };
+		AEE46FD21ABB55E600F52708 /* AboutKingstonPoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutKingstonPoundViewController.h; sourceTree = "<group>"; };
+		AEE46FD31ABB55E600F52708 /* AboutKingstonPoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutKingstonPoundViewController.m; sourceTree = "<group>"; };
+		AEE46FD41ABB55E600F52708 /* AboutKingstonPoundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutKingstonPoundViewController.xib; sourceTree = "<group>"; };
 		AEED6CCB1A939DB700B8D84B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
@@ -505,6 +517,7 @@
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */,
 				AEE46FA11AB8747600F52708 /* Navbar icons */,
 				AE02BC3A1AAE0CEA0025E7CC /* splash.png */,
 				AE1BCBD21A9FDC2500E79935 /* icons */,
@@ -541,6 +554,19 @@
 				AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */,
 			);
 			name = "Navbar icons";
+			sourceTree = "<group>";
+		};
+		AEE46FAE1ABB4DDA00F52708 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				AEE46FCD1ABB55CC00F52708 /* AboutAppViewController.h */,
+				AEE46FCE1ABB55CC00F52708 /* AboutAppViewController.m */,
+				AEE46FCF1ABB55CC00F52708 /* AboutAppViewController.xib */,
+				AEE46FD21ABB55E600F52708 /* AboutKingstonPoundViewController.h */,
+				AEE46FD31ABB55E600F52708 /* AboutKingstonPoundViewController.m */,
+				AEE46FD41ABB55E600F52708 /* AboutKingstonPoundViewController.xib */,
+			);
+			name = About;
 			sourceTree = "<group>";
 		};
 		AEEE5FB91AA06E1F00CA7774 /* EventList */ = {
@@ -613,6 +639,7 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AEE46FAE1ABB4DDA00F52708 /* About */,
 				AEE46F901AB827EC00F52708 /* MessageList */,
 				AEF3AB091AB4576C00B2C6A9 /* TraderList */,
 				AEA0568D1AA4F7F1003E095F /* TwitterList */,
@@ -749,6 +776,8 @@
 				AE1BCBC41A9FCF6300E79935 /* TwitterViewController.xib in Resources */,
 				AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */,
 				AE1BCBEB1A9FDC3300E79935 /* Icon-72@2x.png in Resources */,
+				AEE46FAD1ABB4A1700F52708 /* KingstonPound-small-15.png in Resources */,
+				AEE46FD61ABB55E600F52708 /* AboutKingstonPoundViewController.xib in Resources */,
 				AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */,
 				AE1BCBF71A9FDC3300E79935 /* Icon.png in Resources */,
 				AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */,
@@ -771,6 +800,7 @@
 				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
 				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
 				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
+				AEE46FD11ABB55CC00F52708 /* AboutAppViewController.xib in Resources */,
 				AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */,
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
 				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
@@ -830,6 +860,7 @@
 				AEB9DB311A90C564008C6329 /* Tweet.m in Sources */,
 				AE1BCBC31A9FCF6300E79935 /* TwitterViewController.m in Sources */,
 				AE02BC351AA8F4650025E7CC /* UIImage+MultiFormat.m in Sources */,
+				AEE46FD01ABB55CC00F52708 /* AboutAppViewController.m in Sources */,
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
@@ -861,6 +892,7 @@
 				AE02BC2E1AA8F4650025E7CC /* SDWebImageDecoder.m in Sources */,
 				AE02BC2D1AA8F4650025E7CC /* SDWebImageCompat.m in Sources */,
 				AE02BC371AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m in Sources */,
+				AEE46FD51ABB55E600F52708 /* AboutKingstonPoundViewController.m in Sources */,
 				AEE46F9F1AB82A9100F52708 /* MessageViewController.m in Sources */,
 				AEBFA5611AB3632800B25A11 /* VenueViewController.m in Sources */,
 				AE02BC2B1AA8F4650025E7CC /* NSData+ImageContentType.m in Sources */,

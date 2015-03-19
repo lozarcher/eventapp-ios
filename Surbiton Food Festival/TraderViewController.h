@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *websiteLabel;
 @property (weak, nonatomic) IBOutlet UIButton *phoneLabel;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topConstraint;
+@property (weak, nonatomic) IBOutlet UIImageView *kingstonPoundImage;
 
 @property (retain,nonatomic) Trader *trader;
 @end

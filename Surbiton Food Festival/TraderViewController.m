@@ -15,7 +15,7 @@
 
 @implementation TraderViewController
 
-@synthesize traderDescriptionLabel, traderTitleLabel, traderImageView, phoneLabel, websiteLabel, closeButton, trader;
+@synthesize traderDescriptionLabel, traderTitleLabel, traderImageView, phoneLabel, websiteLabel, closeButton, trader, kingstonPoundImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,6 +48,7 @@
     
     traderImageView.frame = self.view.bounds;
     
+    [kingstonPoundImage setHidden:(![trader.kingstonPound intValue] == 1)];
     if (![trader.coverImg isKindOfClass:[NSNull class]]) {
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         [manager downloadImageWithURL:[NSURL URLWithString:[trader coverImg]] options:0

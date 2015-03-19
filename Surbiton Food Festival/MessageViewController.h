@@ -22,6 +22,6 @@
 @property (retain,nonatomic) UILabel *messageLabel;
 @property (retain,nonatomic) NSString *nextPage;
 @property (nonatomic, strong) MessageViewCell *prototypeCell;
-
+- (void)refreshMessages:(id)sender;
 
 @end

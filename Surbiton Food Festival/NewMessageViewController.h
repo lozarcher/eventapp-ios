@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "MessageViewController.h"
 
 @interface NewMessageViewController : UIViewController <FBLoginViewDelegate>
 
@@ -19,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UITextField *messageField;
 @property (weak, nonatomic) IBOutlet UIView *messageEntryDialog;
+@property (weak, nonatomic) MessageViewController *parent;
 
 @end

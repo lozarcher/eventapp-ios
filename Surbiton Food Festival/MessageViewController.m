@@ -55,7 +55,7 @@
     //Delete the cache file
     //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
     
-    self.title = NSLocalizedString(@"Messaging", nil);
+    self.title = NSLocalizedString(@"Group Messaging", nil);
     
     SWRevealViewController *revealController = [self revealViewController];
     
@@ -78,6 +78,7 @@
 
 -(void)newMessage:(id)sender {
     NewMessageViewController *newMessage=[[NewMessageViewController alloc]initWithNibName:@"NewMessageViewController" bundle:[NSBundle mainBundle]];
+    newMessage.parent = self;
     [self.navigationController pushViewController:newMessage animated:YES];
 }
 

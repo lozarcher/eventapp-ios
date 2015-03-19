@@ -9,6 +9,7 @@
 #import "NewMessageViewController.h"
 #import "Message.h"
 #import "MTConfiguration.h"
+#import "MessageViewController.h"
 
 @interface NewMessageViewController ()
 
@@ -85,8 +86,18 @@
         NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
         
         NSLog(@"the final output is:%@",responseString);
-
+        BOOL success = !error && responseString;
+        NSString *message = (success) ? @"Your message has been sent!" : @"Sorry, the message failed, try again later";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+        [alertView show];
+        if (success) {
+            [self.parent refreshMessages:self];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
     } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Sorry, the message failed, try again later" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
+        [alertView show];
+
         NSLog(@"Unable to serialize the data %@: %@", [message dictionary], error);
     }
 }

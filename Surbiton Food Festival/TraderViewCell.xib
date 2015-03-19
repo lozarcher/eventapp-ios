@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1GZ-Pa-6Fk">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1GZ-Pa-6Fk">
                         <rect key="frame" x="8" y="7" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="KTL-G6-Ok1"/>
@@ -28,20 +28,31 @@
                             </mask>
                         </variation>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnn-Z3-I8e">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnn-Z3-I8e">
                         <rect key="frame" x="92" y="31" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KingstonPound-small-15.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5w-qQ-GkR">
+                        <rect key="frame" x="321" y="27" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="64O-p9-3Uk"/>
+                            <constraint firstAttribute="height" constant="30" id="Ujh-Bl-5dx"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="centerY" secondItem="cnn-Z3-I8e" secondAttribute="centerY" constant="0.25" id="55H-M6-pft"/>
+                    <constraint firstItem="c5w-qQ-GkR" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="6Ma-sG-2wQ"/>
                     <constraint firstItem="1GZ-Pa-6Fk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="8nS-d0-KxA"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="cnn-Z3-I8e" secondAttribute="bottom" constant="24" id="BCA-M6-kra"/>
                     <constraint firstAttribute="bottomMargin" secondItem="1GZ-Pa-6Fk" secondAttribute="bottom" constant="-1" id="GE3-mt-B1r"/>
                     <constraint firstItem="cnn-Z3-I8e" firstAttribute="leading" secondItem="1GZ-Pa-6Fk" secondAttribute="trailing" constant="15" id="JAk-F5-svF"/>
-                    <constraint firstItem="cnn-Z3-I8e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="23" id="ihX-7H-Tjy"/>
+                    <constraint firstItem="c5w-qQ-GkR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cnn-Z3-I8e" secondAttribute="trailing" constant="10" id="TN0-B2-6Fi"/>
+                    <constraint firstAttribute="centerY" secondItem="c5w-qQ-GkR" secondAttribute="centerY" constant="-0.25" id="Ves-VV-dxI"/>
+                    <constraint firstItem="c5w-qQ-GkR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="hYX-5I-W2D"/>
                     <constraint firstItem="1GZ-Pa-6Fk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kB6-XU-Awk"/>
+                    <constraint firstItem="c5w-qQ-GkR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="nbf-ZR-WrQ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="1GZ-Pa-6Fk" secondAttribute="bottom" constant="-1" id="vtf-y8-cWG"/>
                     <constraint firstItem="1GZ-Pa-6Fk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="ytM-Oj-0ci"/>
                 </constraints>
@@ -49,14 +60,19 @@
                     <mask key="constraints">
                         <exclude reference="GE3-mt-B1r"/>
                         <exclude reference="ytM-Oj-0ci"/>
+                        <exclude reference="nbf-ZR-WrQ"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="kingstonPoundImage" destination="c5w-qQ-GkR" id="11g-q1-fbS"/>
                 <outlet property="traderImage" destination="1GZ-Pa-6Fk" id="ZeQ-8n-afm"/>
                 <outlet property="traderNameLabel" destination="cnn-Z3-I8e" id="WuZ-tJ-ThN"/>
             </connections>
             <point key="canvasLocation" x="688.5" y="509"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="KingstonPound-small-15.png" width="100" height="99"/>
+    </resources>
 </document>

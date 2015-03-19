@@ -12,7 +12,7 @@
 
 @implementation TraderViewCell
 
-@synthesize traderNameLabel, traderImage;
+@synthesize traderNameLabel, traderImage, kingstonPoundImage;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -26,14 +26,9 @@
 
 -(void)populateDataInCell:(Trader *)trader {
     //traderNameLabel.text = [trader name];
-    NSString *kPound;
     NSLog(@"Kingston pound: %@", trader.kingstonPound);
-    if ([trader.kingstonPound intValue] == 1) {
-        kPound = @"£K";
-    } else {
-        kPound = @"";
-    }
-    traderNameLabel.text = [NSString stringWithFormat:@"%@ %@", [trader name], kPound];
+    [kingstonPoundImage setHidden:(![trader.kingstonPound intValue] == 1)];
+    traderNameLabel.text = [trader name];
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     if (![[trader profileImg] isKindOfClass:[NSNull class]]) {

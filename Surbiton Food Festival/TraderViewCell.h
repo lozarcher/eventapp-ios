@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *traderNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *traderImage;
 -(void)populateDataInCell:(Trader *)trader;
+@property (weak, nonatomic) IBOutlet UIImageView *kingstonPoundImage;
 
 @end

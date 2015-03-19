@@ -35,6 +35,8 @@
 #import "VoucherListViewController.h"
 #import "TraderListViewController.h"
 #import "MessageViewController.h"
+#import "AboutAppViewController.h"
+#import "AboutKingstonPoundViewController.h"
 
 @interface RearViewController()
 {
@@ -63,7 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 8;
 }
 
 
@@ -93,7 +95,7 @@
     }
     else if (row == 3)
     {
-        text = @"Messaging";
+        text = @"Group Messaging";
     }
     else if (row == 4)
     {
@@ -103,7 +105,14 @@
     {
         text = @"Vouchers";
     }
-
+    else if (row == 6)
+    {
+        text = @"Kingston Pound";
+    }
+    else if (row == 7)
+    {
+        text = @"About";
+    }
     cell.textLabel.text = NSLocalizedString( text,nil );
 	
     return cell;
@@ -172,6 +181,15 @@
         newFrontController = [[VoucherListViewController alloc] init];
     }
     
+    else if (row == 6)
+    {
+        newFrontController = [[AboutKingstonPoundViewController alloc] init];
+    }
+    
+    else if (row == 7)
+    {
+        newFrontController = [[AboutAppViewController alloc] init];
+    }
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newFrontController];
     [revealController pushFrontViewController:navigationController animated:YES];
     
