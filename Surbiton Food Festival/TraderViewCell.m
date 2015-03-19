@@ -25,7 +25,15 @@
 }
 
 -(void)populateDataInCell:(Trader *)trader {
-    traderNameLabel.text = [trader name];
+    //traderNameLabel.text = [trader name];
+    NSString *kPound;
+    NSLog(@"Kingston pound: %@", trader.kingstonPound);
+    if ([trader.kingstonPound intValue] == 1) {
+        kPound = @"£K";
+    } else {
+        kPound = @"";
+    }
+    traderNameLabel.text = [NSString stringWithFormat:@"%@ %@", [trader name], kPound];
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     if (![[trader profileImg] isKindOfClass:[NSNull class]]) {

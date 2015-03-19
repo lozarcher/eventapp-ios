@@ -17,4 +17,5 @@
 @property (strong, nonatomic) NSString *profileImg;
 @property (strong, nonatomic) NSString *website;
 @property (strong, nonatomic) NSString *phone;
+@property (strong, nonatomic) NSString *kingstonPound;
 @end
