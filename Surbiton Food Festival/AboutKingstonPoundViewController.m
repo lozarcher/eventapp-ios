@@ -34,6 +34,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)signUpCustomersButtonPressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://kingstonpound.org/customer-pilot-sign/"]];
+
+}
+- (IBAction)signUpBusinessesButtonPressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://kingstonpound.org/business-sign/"]];
+}
 
 /*
 #pragma mark - Navigation

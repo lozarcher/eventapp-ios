@@ -65,6 +65,7 @@
 		AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x */; };
 		AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521E51AA20040006A442A /* VoucherViewController.m */; };
 		AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2521E61AA20040006A442A /* VoucherViewController.xib */; };
+		AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */; };
 		AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D13601AA14B1900166951 /* VoucherListCell.m */; };
 		AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13611AA14B1900166951 /* VoucherListCell.xib */; };
 		AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */; };
@@ -220,6 +221,7 @@
 		AE2521E41AA20040006A442A /* VoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherViewController.h; sourceTree = "<group>"; };
 		AE2521E51AA20040006A442A /* VoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherViewController.m; sourceTree = "<group>"; };
 		AE2521E61AA20040006A442A /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
+		AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "team-surbiton-festival.jpg"; sourceTree = "<group>"; };
 		AE8D135F1AA14B1900166951 /* VoucherListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListCell.h; sourceTree = "<group>"; };
 		AE8D13601AA14B1900166951 /* VoucherListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListCell.m; sourceTree = "<group>"; };
 		AE8D13611AA14B1900166951 /* VoucherListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListCell.xib; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */,
 				AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */,
 				AEE46FA11AB8747600F52708 /* Navbar icons */,
 				AE02BC3A1AAE0CEA0025E7CC /* splash.png */,
@@ -797,6 +800,7 @@
 				AEE46F9B1AB828CF00F52708 /* MessageViewCell.xib in Resources */,
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
+				AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */,
 				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
 				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
 				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
