@@ -21,6 +21,7 @@
 @property (retain,nonatomic) UIActivityIndicatorView *spinner;
 @property (retain,nonatomic) UILabel *messageLabel;
 @property (retain,nonatomic) NSString *nextPage;
+@property (nonatomic, strong) TwitterViewCell *prototypeCell;
 
 
 @end

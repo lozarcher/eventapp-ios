@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="KGk-i7-Jjw" customClass="MessageViewCell">
+        <tableViewCell contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MessageViewCell">
             <rect key="frame" x="0.0" y="0.0" width="368" height="92"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -18,14 +18,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sui-zj-peG">
                         <rect key="frame" x="106" y="7" width="210" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="245" id="ec4-Jj-Tak"/>
                             <constraint firstAttribute="height" constant="21" id="wSN-On-iFw"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i5-gl-6EX">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i5-gl-6EX">
                         <rect key="frame" x="324" y="7" width="36" height="21"/>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -36,19 +35,12 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="75" id="Hlj-iy-A4N"/>
                             <constraint firstAttribute="height" constant="75" id="Jjr-XQ-0gw"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="uXL-Th-c0g"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="uXL-Th-c0g"/>
-                            </mask>
-                        </variation>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLr-Kh-qDU">
-                        <rect key="frame" x="106" y="36" width="254" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="jLr-Kh-qDU">
+                        <rect key="frame" x="106" y="37" width="254" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="HTi-M5-vFr"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="SbO-eC-gbU"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="21" id="SbO-eC-gbU"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -56,20 +48,26 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="6i5-gl-6EX" firstAttribute="leading" secondItem="Sui-zj-peG" secondAttribute="trailing" constant="8" id="4oG-Je-Yzr"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="jLr-Kh-qDU" secondAttribute="bottom" id="68w-0X-M7c"/>
-                    <constraint firstItem="Sui-zj-peG" firstAttribute="baseline" secondItem="6i5-gl-6EX" secondAttribute="baseline" id="Abp-rp-Vul"/>
-                    <constraint firstItem="jLr-Kh-qDU" firstAttribute="leading" secondItem="oan-HD-vD0" secondAttribute="trailing" constant="6" id="FXg-SU-Ftk"/>
-                    <constraint firstItem="jLr-Kh-qDU" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="G6d-eS-v8B"/>
-                    <constraint firstItem="Sui-zj-peG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="MY2-qJ-Qt6"/>
-                    <constraint firstItem="Sui-zj-peG" firstAttribute="leading" secondItem="jLr-Kh-qDU" secondAttribute="leading" id="bUl-AX-jgi"/>
-                    <constraint firstItem="jLr-Kh-qDU" firstAttribute="top" secondItem="Sui-zj-peG" secondAttribute="bottom" constant="8" id="bib-4N-7aP"/>
-                    <constraint firstItem="6i5-gl-6EX" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="czN-sG-6fV"/>
-                    <constraint firstItem="oan-HD-vD0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ghX-64-vK7"/>
-                    <constraint firstItem="6i5-gl-6EX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="kXR-pp-9mR"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="oan-HD-vD0" secondAttribute="bottom" id="q1j-fP-Fge"/>
-                    <constraint firstItem="oan-HD-vD0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="sq7-Ae-zhN"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="jLr-Kh-qDU" secondAttribute="bottom" id="00M-pl-vuF"/>
+                    <constraint firstItem="jLr-Kh-qDU" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="JeB-gG-KGv"/>
+                    <constraint firstItem="jLr-Kh-qDU" firstAttribute="top" secondItem="Sui-zj-peG" secondAttribute="bottom" constant="8" id="JrN-NY-q2P"/>
+                    <constraint firstItem="oan-HD-vD0" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="LYf-Lm-gdz"/>
+                    <constraint firstItem="6i5-gl-6EX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="LsC-Sj-ZG1"/>
+                    <constraint firstItem="Sui-zj-peG" firstAttribute="leading" secondItem="oan-HD-vD0" secondAttribute="trailing" constant="23" id="UBK-yS-C3P"/>
+                    <constraint firstItem="6i5-gl-6EX" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="bqF-I5-JMc"/>
+                    <constraint firstItem="oan-HD-vD0" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" priority="250" id="csu-eW-naR"/>
+                    <constraint firstItem="oan-HD-vD0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="iD6-Sw-hyd"/>
+                    <constraint firstItem="oan-HD-vD0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jkM-sB-lBo"/>
+                    <constraint firstItem="Sui-zj-peG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="pz5-KU-N5L"/>
+                    <constraint firstItem="jLr-Kh-qDU" firstAttribute="leading" secondItem="Sui-zj-peG" secondAttribute="trailing" constant="-210" id="s5D-f9-v5z"/>
+                    <constraint firstItem="jLr-Kh-qDU" firstAttribute="leading" secondItem="oan-HD-vD0" secondAttribute="trailing" constant="23" id="z3C-MF-M9F"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="LYf-Lm-gdz"/>
+                        <exclude reference="s5D-f9-v5z"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateCreatedLabel" destination="6i5-gl-6EX" id="jbI-Na-jt2"/>

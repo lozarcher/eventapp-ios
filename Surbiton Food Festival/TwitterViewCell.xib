@@ -8,16 +8,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="167" id="KGk-i7-Jjw" customClass="TwitterViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="392" height="167"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="TwitterViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cje-Bq-hUp">
                         <rect key="frame" x="8" y="8" width="48" height="48"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="48" id="PGq-hI-bfk"/>
                             <constraint firstAttribute="height" constant="48" id="mTX-PZ-tJx"/>
                         </constraints>
                     </imageView>
@@ -39,7 +40,7 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nq-bh-zXK" customClass="KILabel">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="6nq-bh-zXK" customClass="KILabel">
                         <rect key="frame" x="64" y="22" width="320" height="46"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="a6m-GG-vt1"/>
@@ -60,27 +61,19 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="AFX-EO-jyC" firstAttribute="leading" secondItem="Cje-Bq-hUp" secondAttribute="trailing" constant="8" id="0oU-up-h9x"/>
-                    <constraint firstItem="AFX-EO-jyC" firstAttribute="bottom" secondItem="ttg-2l-6L0" secondAttribute="bottom" constant="-1" id="35x-cU-jMk"/>
-                    <constraint firstItem="AFX-EO-jyC" firstAttribute="leading" secondItem="Cje-Bq-hUp" secondAttribute="trailing" constant="8" symbolic="YES" id="3Ml-Iw-Dbp"/>
-                    <constraint firstItem="Cje-Bq-hUp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="AUz-ng-axF"/>
-                    <constraint firstItem="Cje-Bq-hUp" firstAttribute="centerY" secondItem="6nq-bh-zXK" secondAttribute="centerY" id="BNN-d1-3D4"/>
-                    <constraint firstItem="AFX-EO-jyC" firstAttribute="leading" secondItem="6nq-bh-zXK" secondAttribute="leading" id="JuZ-CN-NqZ"/>
-                    <constraint firstItem="6nq-bh-zXK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Krk-Yr-vKt"/>
-                    <constraint firstItem="AFX-EO-jyC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="64" id="NF9-sS-B0A"/>
-                    <constraint firstItem="6nq-bh-zXK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="14" id="dKR-ki-gYp"/>
-                    <constraint firstItem="3VW-WO-j78" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="egk-ap-Adc"/>
-                    <constraint firstItem="AFX-EO-jyC" firstAttribute="top" secondItem="ttg-2l-6L0" secondAttribute="top" constant="-1" id="heX-Vf-Ea0"/>
-                    <constraint firstItem="AFX-EO-jyC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="kTf-W5-nnu"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ttg-2l-6L0" secondAttribute="trailing" constant="5" id="qKQ-So-wBh"/>
-                    <constraint firstItem="3VW-WO-j78" firstAttribute="leading" secondItem="AFX-EO-jyC" secondAttribute="trailing" constant="5" id="u29-qL-9Va"/>
-                    <constraint firstItem="Cje-Bq-hUp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="x2f-Og-MMf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6nq-bh-zXK" secondAttribute="bottom" id="8LD-0b-Lya"/>
+                    <constraint firstItem="ttg-2l-6L0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="Fjj-Tp-kWc"/>
+                    <constraint firstItem="Cje-Bq-hUp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="GNZ-Aa-UuM"/>
+                    <constraint firstItem="6nq-bh-zXK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="QNi-q6-fh5"/>
+                    <constraint firstItem="AFX-EO-jyC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="QTe-TR-kcL"/>
+                    <constraint firstItem="ttg-2l-6L0" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="QbZ-6o-veo"/>
+                    <constraint firstItem="AFX-EO-jyC" firstAttribute="leading" secondItem="Cje-Bq-hUp" secondAttribute="trailing" constant="8" id="Xe0-qG-MtH"/>
+                    <constraint firstItem="6nq-bh-zXK" firstAttribute="top" secondItem="AFX-EO-jyC" secondAttribute="bottom" constant="-1" id="av2-B7-mUI"/>
+                    <constraint firstItem="Cje-Bq-hUp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="jOl-TF-imq"/>
+                    <constraint firstItem="3VW-WO-j78" firstAttribute="leading" secondItem="AFX-EO-jyC" secondAttribute="trailing" constant="5" id="k5b-Zt-iJi"/>
+                    <constraint firstItem="6nq-bh-zXK" firstAttribute="leading" secondItem="Cje-Bq-hUp" secondAttribute="trailing" constant="8" id="qXt-aQ-L9p"/>
+                    <constraint firstItem="3VW-WO-j78" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="ueq-ba-1Fp"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="BNN-d1-3D4"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateCreatedLabel" destination="ttg-2l-6L0" id="cnA-qt-SFT"/>
@@ -89,7 +82,7 @@
                 <outlet property="screennameLabel" destination="3VW-WO-j78" id="GBq-1M-IEV"/>
                 <outlet property="textLabel" destination="6nq-bh-zXK" id="2Ze-iw-mNC"/>
             </connections>
-            <point key="canvasLocation" x="216" y="292.5"/>
+            <point key="canvasLocation" x="216" y="251.5"/>
         </tableViewCell>
     </objects>
 </document>

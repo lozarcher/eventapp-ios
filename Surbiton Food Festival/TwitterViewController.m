@@ -28,6 +28,10 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     
+    // Register cell Nib
+    UINib *cellNib = [UINib nibWithNibName:@"TwitterViewCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"TwitterViewCell"];
+    
     //initialise the message label
     messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -137,7 +141,16 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90;
+    if (!self.prototypeCell)
+    {
+        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"TwitterViewCell"];
+    }
+    Tweet *tweet = [self getTweetForIndexPath:indexPath];
+    [self.prototypeCell populateDataInCell:tweet];
+    
+    [self.prototypeCell layoutIfNeeded];
+    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -155,12 +168,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *simpleTableIdentifier = @"TwitterTableItem";
-    TwitterViewCell *cell = [view dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"TwitterViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    }
+    TwitterViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TwitterViewCell"];;
     
     // Cell text (event title)
     Tweet *tweet = [self getTweetForIndexPath:indexPath];
