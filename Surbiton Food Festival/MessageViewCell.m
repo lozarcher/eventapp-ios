@@ -49,9 +49,7 @@
     NSDate *todayDate = [NSDate date];
     double ti = [date timeIntervalSinceDate:todayDate];
     ti = ti * -1;
-    if(ti < 1) {
-        return @"never";
-    } else 	if (ti < 60) {
+    if (ti < 60) {
         return @"now";
     } else if (ti < 3600) {
         int diff = round(ti / 60);
