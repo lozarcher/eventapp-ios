@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Trader.h"
+#import <MessageUI/MFMessageComposeViewController.h>
 
-@interface TraderViewController : UIViewController
+@interface TraderViewController : UIViewController <MFMessageComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (retain,nonatomic) IBOutlet UILabel *traderTitleLabel;
 @property (retain,nonatomic) IBOutlet UIImageView *traderImageView;
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *phoneLabel;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UIImageView *kingstonPoundImage;
+@property (weak, nonatomic) IBOutlet UIButton *linkLabel;
 
 @property (retain,nonatomic) Trader *trader;
 @end

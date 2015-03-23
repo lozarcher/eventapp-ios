@@ -15,7 +15,7 @@
 
 @implementation TraderViewController
 
-@synthesize traderDescriptionLabel, traderTitleLabel, traderImageView, phoneLabel, websiteLabel, closeButton, trader, kingstonPoundImage;
+@synthesize traderDescriptionLabel, traderTitleLabel, traderImageView, phoneLabel, websiteLabel, closeButton, trader, kingstonPoundImage, linkLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,11 +60,75 @@
     } else {
         [traderImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
+    
+    //) {
+    if (![trader.website isKindOfClass:[NSNull class]]) {
+        NSURL *nsurl = [NSURL URLWithString:trader.website];
+        if ([[UIApplication sharedApplication] canOpenURL:nsurl]) {
+            [websiteLabel setHidden:NO];
+        } else {
+            [websiteLabel setHidden:YES];
+
+        }
+    } else {
+        [websiteLabel setHidden:YES];
+    }
+ 
+    [phoneLabel setHidden:[trader.phone isKindOfClass:[NSNull class]]];
+    [linkLabel setHidden:[trader.link isKindOfClass:[NSNull class]]];
+    if (![trader.phone isKindOfClass:[NSNull class]]) {
+        [phoneLabel setTitle:[NSString stringWithFormat:@"Text %@", trader.name] forState:UIControlStateNormal];
+    }
+    
+}
+- (IBAction)websiteClicked:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:trader.website]];
+    NSLog(@"Opening %@", trader.website);
+
+}
+- (IBAction)fbPageClicked:(id)sender {
+    NSString *fbUrl = [NSString stringWithFormat:@"fb://profile/%@", trader.id];
+    NSURL *nsurl = [ [ NSURL alloc ] initWithString: fbUrl ];
+    if (![[UIApplication sharedApplication] canOpenURL:nsurl])
+        nsurl = [ [ NSURL alloc ] initWithString: trader.link ];
+    [[UIApplication sharedApplication] openURL:nsurl];
+
+}
+- (IBAction)phoneClicked:(id)sender {
+    NSString *phoneUrl = [NSString stringWithFormat:@"tel:%@", trader.phone];
+    NSLog(@"Texting %@", trader.phone);
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneUrl]];
+    [self sendSMS:@"" recipientList:[NSArray arrayWithObjects:trader.phone, nil]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)sendSMS:(NSString *)bodyOfMessage recipientList:(NSArray *)recipients
+{
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+    if([MFMessageComposeViewController canSendText])
+    {
+        controller.body = bodyOfMessage;
+        controller.recipients = recipients;
+        controller.messageComposeDelegate = self;
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    if (result == MessageComposeResultCancelled) {
+        NSLog(@"Message cancelled");
+    } else if (result == MessageComposeResultSent) {
+        NSLog(@"Message sent");
+    } else {
+        NSLog(@"Message failed");
+    }
+    [controller dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 /*
