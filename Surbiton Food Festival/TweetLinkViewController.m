@@ -14,17 +14,18 @@
 
 @implementation TweetLinkViewController
 
+@synthesize spinner;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webView.delegate = self;
 
-    //[self.view addSubview:webView];
-    //[webView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.bbc.co.uk/"]]];
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void)loadUrlString:(NSString *)urlString {
+    [self activateSpinner:YES];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
-    [self.view addSubview:_webView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,19 +34,40 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    NSLog(@"Started load");
+    [self activateSpinner:YES];
 };
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    [self activateSpinner:NO];
     NSLog(@"Error");
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"Finished load");
+    [self activateSpinner:NO];
 }
+
+
+
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     return YES;
 }
 - (IBAction)closeButton:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)activateSpinner:(BOOL)activate {
+    if (activate) {
+        if (!spinner) {
+            spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+            [self.view addSubview:spinner];
+            spinner.center = CGPointMake(160, 240);
+            spinner.hidesWhenStopped = YES;
+        }
+        [spinner startAnimating];
+    } else {
+        if (spinner) {
+            [spinner stopAnimating];
+            [spinner removeFromSuperview];
+        }
+    }
 }
 /*
  

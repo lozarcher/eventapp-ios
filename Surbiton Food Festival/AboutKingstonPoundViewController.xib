@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -13,14 +13,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="364" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BfP-CQ-w6J">
-                    <rect key="frame" x="0.0" y="8" width="364" height="592"/>
+                    <rect key="frame" x="0.0" y="8" width="600" height="592"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="team-surbiton-festival.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sUl-mt-sbx">
-                            <rect key="frame" x="0.0" y="0.0" width="364" height="168"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="168"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="168" id="qfN-mu-vpf"/>
                             </constraints>
@@ -33,7 +33,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="bOW-af-SE6">
-                            <rect key="frame" x="29" y="183" width="306" height="295"/>
+                            <rect key="frame" x="29" y="183" width="542" height="295"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="295" id="KLR-Sd-tcH"/>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="QMB-3e-UTv"/>
@@ -49,7 +49,7 @@
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWZ-vo-BM7">
-                            <rect key="frame" x="104" y="486" width="157" height="30"/>
+                            <rect key="frame" x="222" y="486" width="157" height="30"/>
                             <state key="normal" title="Sign Up for Customers">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -58,7 +58,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZX-LK-92y">
-                            <rect key="frame" x="102" y="524" width="160" height="30"/>
+                            <rect key="frame" x="220" y="524" width="160" height="30"/>
                             <state key="normal" title="Sign Up for Businesses">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>

@@ -18,8 +18,8 @@
     // Initialization code
     textLabel.linkURLTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
         //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];//Load the url in Safari
-        //NSLog(@"Clicked link");
-        //[self.delegate loadURL:urlString];
+        NSLog(@"Clicked link");
+        [self.delegate loadURL:urlString];
         
     };
 }

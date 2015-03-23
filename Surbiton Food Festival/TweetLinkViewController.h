@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TweetLinkViewController : UINavigationController <UIWebViewDelegate>
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@interface TweetLinkViewController : UIViewController <UIWebViewDelegate>
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 -(void)loadUrlString:(NSString *)urlString;
+@property (retain,nonatomic) UIActivityIndicatorView *spinner;
 @end
