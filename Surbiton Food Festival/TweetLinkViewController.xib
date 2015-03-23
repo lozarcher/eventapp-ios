@@ -17,8 +17,15 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2x8-nZ-5s0">
-                    <rect key="frame" x="0.0" y="21" width="600" height="44"/>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTP-Tj-BJd">
+                    <rect key="frame" x="0.0" y="71" width="600" height="529"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="wuR-mh-ffh"/>
+                    </connections>
+                </webView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x8-nZ-5s0">
+                    <rect key="frame" x="0.0" y="27" width="600" height="44"/>
                     <items>
                         <navigationItem id="Gcf-pp-68h">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="LrR-LK-KRF">
@@ -33,23 +40,31 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" style="plain" id="l0Q-JS-WUd">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BmS-5m-wwt">
+                                    <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Open in Safari">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="openInSafariPressed:" destination="-1" eventType="touchUpInside" id="4hb-4n-o4r"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <webView contentMode="scaleToFill" scalesPageToFit="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTP-Tj-BJd">
-                    <rect key="frame" x="0.0" y="65" width="600" height="535"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="wuR-mh-ffh"/>
-                    </connections>
-                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="2x8-nZ-5s0" secondAttribute="trailing" id="El1-Ye-GmC"/>
                 <constraint firstAttribute="bottom" secondItem="bTP-Tj-BJd" secondAttribute="bottom" id="LwY-EZ-doa"/>
                 <constraint firstItem="bTP-Tj-BJd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nyl-Ui-oNS"/>
+                <constraint firstItem="2x8-nZ-5s0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eLu-FT-sZG"/>
+                <constraint firstItem="bTP-Tj-BJd" firstAttribute="top" secondItem="2x8-nZ-5s0" secondAttribute="bottom" id="ePz-nH-0ad"/>
                 <constraint firstAttribute="trailing" secondItem="bTP-Tj-BJd" secondAttribute="trailing" id="kgL-PW-lrS"/>
-                <constraint firstItem="bTP-Tj-BJd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="v0l-wc-AaF"/>
+                <constraint firstItem="bTP-Tj-BJd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="71" id="v0l-wc-AaF"/>
             </constraints>
             <point key="canvasLocation" x="98" y="306"/>
         </view>

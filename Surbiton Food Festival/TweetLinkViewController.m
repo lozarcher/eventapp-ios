@@ -69,6 +69,12 @@
         }
     }
 }
+
+- (IBAction)openInSafariPressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.webView.request.URL.absoluteString]];
+
+}
+
 /*
  
 #pragma mark - Navigation

@@ -12,7 +12,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -32,8 +32,8 @@
                                 <constraint firstAttribute="height" constant="49" id="kZq-OZ-L12"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="bOW-af-SE6">
-                            <rect key="frame" x="29" y="183" width="542" height="295"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="bOW-af-SE6">
+                            <rect key="frame" x="29" y="183" width="542" height="169"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="295" id="KLR-Sd-tcH"/>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="QMB-3e-UTv"/>
@@ -48,17 +48,8 @@
                                 </mask>
                             </variation>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWZ-vo-BM7">
-                            <rect key="frame" x="222" y="486" width="157" height="30"/>
-                            <state key="normal" title="Sign Up for Customers">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="signUpCustomersButtonPressed:" destination="-1" eventType="touchUpInside" id="LUf-jb-n4l"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZX-LK-92y">
-                            <rect key="frame" x="220" y="524" width="160" height="30"/>
+                            <rect key="frame" x="220" y="384" width="160" height="30"/>
                             <state key="normal" title="Sign Up for Businesses">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -66,18 +57,27 @@
                                 <action selector="signUpBusinessesButtonPressed:" destination="-1" eventType="touchUpInside" id="19D-Ek-zLC"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWZ-vo-BM7">
+                            <rect key="frame" x="222" y="328" width="157" height="30"/>
+                            <state key="normal" title="Sign Up for Customers">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="signUpCustomersButtonPressed:" destination="-1" eventType="touchUpInside" id="LUf-jb-n4l"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="leading" secondItem="O7O-V3-EFR" secondAttribute="trailing" constant="-61" id="0Dg-l8-di5"/>
-                        <constraint firstItem="MWZ-vo-BM7" firstAttribute="top" secondItem="bOW-af-SE6" secondAttribute="bottom" constant="8" id="6td-fr-W8j"/>
+                        <constraint firstItem="MWZ-vo-BM7" firstAttribute="top" secondItem="bOW-af-SE6" secondAttribute="bottom" id="6td-fr-W8j"/>
                         <constraint firstAttribute="trailing" secondItem="bOW-af-SE6" secondAttribute="trailing" constant="29" id="Dku-JM-zLY"/>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="top" secondItem="BfP-CQ-w6J" secondAttribute="top" id="KMr-Gh-7nn"/>
                         <constraint firstAttribute="centerX" secondItem="lZX-LK-92y" secondAttribute="centerX" id="XcC-xj-0oU"/>
                         <constraint firstAttribute="centerX" secondItem="MWZ-vo-BM7" secondAttribute="centerX" constant="-0.5" id="YpH-Vm-wCB"/>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="leading" secondItem="BfP-CQ-w6J" secondAttribute="leading" id="Za1-hd-crJ"/>
                         <constraint firstItem="bOW-af-SE6" firstAttribute="centerX" secondItem="MWZ-vo-BM7" secondAttribute="centerX" id="dzt-OW-m8I"/>
-                        <constraint firstItem="bOW-af-SE6" firstAttribute="top" secondItem="sUl-mt-sbx" secondAttribute="bottom" constant="15" id="fCN-Ue-7y1"/>
-                        <constraint firstItem="lZX-LK-92y" firstAttribute="top" secondItem="MWZ-vo-BM7" secondAttribute="bottom" constant="8" id="h2M-sg-Y4d"/>
+                        <constraint firstItem="bOW-af-SE6" firstAttribute="top" secondItem="sUl-mt-sbx" secondAttribute="bottom" constant="-10" id="fCN-Ue-7y1"/>
+                        <constraint firstItem="lZX-LK-92y" firstAttribute="top" secondItem="MWZ-vo-BM7" secondAttribute="bottom" constant="10" id="h2M-sg-Y4d"/>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="top" secondItem="O7O-V3-EFR" secondAttribute="bottom" constant="-59" id="vFc-p2-Vif"/>
                         <constraint firstAttribute="bottom" secondItem="lZX-LK-92y" secondAttribute="bottom" constant="48" id="vPq-sR-V3I"/>
                         <constraint firstItem="bOW-af-SE6" firstAttribute="leading" secondItem="BfP-CQ-w6J" secondAttribute="leading" constant="29" id="xbL-xO-zDE"/>
