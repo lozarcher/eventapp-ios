@@ -27,9 +27,6 @@
 #import "FrontViewController.h"
 #import "SWRevealViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
-#import "GAIFields.h"
 
 @interface FrontViewController()
 
@@ -70,8 +67,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    id<GAITracker> tracker = [GAI sharedInstance].defaultTracker;
-    [tracker send:[[[GAIDictionaryBuilder createAppView] set:@"Home Screen" forKey:kGAIScreenName] build]];
+    self.screenName = @"Home Screen";
+    //id<GAITracker> tracker = [GAI sharedInstance].defaultTracker;
+    //[tracker send:[[[GAIDictionaryBuilder createAppView] set:@"Home Screen" forKey:kGAIScreenName] build]];
 }
 
 #pragma mark - Example Code

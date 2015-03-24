@@ -33,6 +33,21 @@
 		AE19E5A11AC18A3A00B3F69F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE19E5A01AC18A3A00B3F69F /* libz.dylib */; };
 		AE19E5A31AC18A4600B3F69F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE19E5A21AC18A4600B3F69F /* libsqlite3.dylib */; };
 		AE19E5A51AC18C1B00B3F69F /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE19E5A41AC18C1B00B3F69F /* libGoogleAnalyticsServices.a */; };
+		AE19E5B11AC1B24100B3F69F /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5A71AC1B24100B3F69F /* bubbleMine.png */; };
+		AE19E5B21AC1B24100B3F69F /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5A81AC1B24100B3F69F /* bubbleMine@2x.png */; };
+		AE19E5B31AC1B24100B3F69F /* bubbleSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5A91AC1B24100B3F69F /* bubbleSomeone.png */; };
+		AE19E5B41AC1B24100B3F69F /* bubbleSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5AA1AC1B24100B3F69F /* bubbleSomeone@2x.png */; };
+		AE19E5B51AC1B24100B3F69F /* missingAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5AB1AC1B24100B3F69F /* missingAvatar.png */; };
+		AE19E5B61AC1B24100B3F69F /* missingAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5AC1AC1B24100B3F69F /* missingAvatar@2x.png */; };
+		AE19E5B71AC1B24100B3F69F /* typingMine.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5AD1AC1B24100B3F69F /* typingMine.png */; };
+		AE19E5B81AC1B24100B3F69F /* typingMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5AE1AC1B24100B3F69F /* typingMine@2x.png */; };
+		AE19E5B91AC1B24100B3F69F /* typingSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5AF1AC1B24100B3F69F /* typingSomeone.png */; };
+		AE19E5BA1AC1B24100B3F69F /* typingSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE19E5B01AC1B24100B3F69F /* typingSomeone@2x.png */; };
+		AE19E5C71AC1B25D00B3F69F /* NSBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19E5BD1AC1B25D00B3F69F /* NSBubbleData.m */; };
+		AE19E5C81AC1B25D00B3F69F /* UIBubbleHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19E5BF1AC1B25D00B3F69F /* UIBubbleHeaderTableViewCell.m */; };
+		AE19E5C91AC1B25D00B3F69F /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19E5C11AC1B25D00B3F69F /* UIBubbleTableView.m */; };
+		AE19E5CA1AC1B25D00B3F69F /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19E5C31AC1B25D00B3F69F /* UIBubbleTableViewCell.m */; };
+		AE19E5CB1AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19E5C61AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.m */; };
 		AE1BCB9D1A9FAFAA00E79935 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCB9C1A9FAFAA00E79935 /* SWRevealViewController.m */; };
 		AE1BCBA01A9FC59A00E79935 /* CustomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCB9F1A9FC59A00E79935 /* CustomAnimationController.m */; };
 		AE1BCBA41A9FC60E00E79935 /* FrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBA31A9FC60E00E79935 /* FrontViewController.m */; };
@@ -91,8 +106,6 @@
 		AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBFA5601AB3632800B25A11 /* VenueViewController.xib */; };
 		AEE46F931AB8280000F52708 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F921AB8280000F52708 /* Message.m */; };
 		AEE46F961AB8283100F52708 /* MessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F951AB8283100F52708 /* MessageBuilder.m */; };
-		AEE46F9A1AB828CF00F52708 /* MessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F981AB828CF00F52708 /* MessageViewCell.m */; };
-		AEE46F9B1AB828CF00F52708 /* MessageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46F991AB828CF00F52708 /* MessageViewCell.xib */; };
 		AEE46F9F1AB82A9100F52708 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F9D1AB82A9100F52708 /* MessageViewController.m */; };
 		AEE46FA01AB82A9100F52708 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */; };
 		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
@@ -197,6 +210,27 @@
 		AE19E5A01AC18A3A00B3F69F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AE19E5A21AC18A4600B3F69F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AE19E5A41AC18C1B00B3F69F /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../Downloads/GoogleAnalyticsServicesiOS_3.10/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		AE19E5A71AC1B24100B3F69F /* bubbleMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleMine.png; sourceTree = "<group>"; };
+		AE19E5A81AC1B24100B3F69F /* bubbleMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleMine@2x.png"; sourceTree = "<group>"; };
+		AE19E5A91AC1B24100B3F69F /* bubbleSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSomeone.png; sourceTree = "<group>"; };
+		AE19E5AA1AC1B24100B3F69F /* bubbleSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleSomeone@2x.png"; sourceTree = "<group>"; };
+		AE19E5AB1AC1B24100B3F69F /* missingAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missingAvatar.png; sourceTree = "<group>"; };
+		AE19E5AC1AC1B24100B3F69F /* missingAvatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missingAvatar@2x.png"; sourceTree = "<group>"; };
+		AE19E5AD1AC1B24100B3F69F /* typingMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingMine.png; sourceTree = "<group>"; };
+		AE19E5AE1AC1B24100B3F69F /* typingMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingMine@2x.png"; sourceTree = "<group>"; };
+		AE19E5AF1AC1B24100B3F69F /* typingSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingSomeone.png; sourceTree = "<group>"; };
+		AE19E5B01AC1B24100B3F69F /* typingSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingSomeone@2x.png"; sourceTree = "<group>"; };
+		AE19E5BC1AC1B25D00B3F69F /* NSBubbleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBubbleData.h; sourceTree = "<group>"; };
+		AE19E5BD1AC1B25D00B3F69F /* NSBubbleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBubbleData.m; sourceTree = "<group>"; };
+		AE19E5BE1AC1B25D00B3F69F /* UIBubbleHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleHeaderTableViewCell.h; sourceTree = "<group>"; };
+		AE19E5BF1AC1B25D00B3F69F /* UIBubbleHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleHeaderTableViewCell.m; sourceTree = "<group>"; };
+		AE19E5C01AC1B25D00B3F69F /* UIBubbleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableView.h; sourceTree = "<group>"; };
+		AE19E5C11AC1B25D00B3F69F /* UIBubbleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTableView.m; sourceTree = "<group>"; };
+		AE19E5C21AC1B25D00B3F69F /* UIBubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewCell.h; sourceTree = "<group>"; };
+		AE19E5C31AC1B25D00B3F69F /* UIBubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTableViewCell.m; sourceTree = "<group>"; };
+		AE19E5C41AC1B25D00B3F69F /* UIBubbleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewDataSource.h; sourceTree = "<group>"; };
+		AE19E5C51AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTypingTableViewCell.h; sourceTree = "<group>"; };
+		AE19E5C61AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
 		AE1BCB9B1A9FAFAA00E79935 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		AE1BCB9C1A9FAFAA00E79935 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		AE1BCB9E1A9FC59A00E79935 /* CustomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimationController.h; sourceTree = "<group>"; };
@@ -274,9 +308,6 @@
 		AEE46F921AB8280000F52708 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		AEE46F941AB8283100F52708 /* MessageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBuilder.h; sourceTree = "<group>"; };
 		AEE46F951AB8283100F52708 /* MessageBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBuilder.m; sourceTree = "<group>"; };
-		AEE46F971AB828CF00F52708 /* MessageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewCell.h; sourceTree = "<group>"; };
-		AEE46F981AB828CF00F52708 /* MessageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewCell.m; sourceTree = "<group>"; };
-		AEE46F991AB828CF00F52708 /* MessageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewCell.xib; sourceTree = "<group>"; };
 		AEE46F9C1AB82A9100F52708 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		AEE46F9D1AB82A9100F52708 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
@@ -462,6 +493,41 @@
 			name = "Google Analytics";
 			sourceTree = "<group>";
 		};
+		AE19E5A61AC1B23000B3F69F /* UIBubbleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				AE19E5A71AC1B24100B3F69F /* bubbleMine.png */,
+				AE19E5A81AC1B24100B3F69F /* bubbleMine@2x.png */,
+				AE19E5A91AC1B24100B3F69F /* bubbleSomeone.png */,
+				AE19E5AA1AC1B24100B3F69F /* bubbleSomeone@2x.png */,
+				AE19E5AB1AC1B24100B3F69F /* missingAvatar.png */,
+				AE19E5AC1AC1B24100B3F69F /* missingAvatar@2x.png */,
+				AE19E5AD1AC1B24100B3F69F /* typingMine.png */,
+				AE19E5AE1AC1B24100B3F69F /* typingMine@2x.png */,
+				AE19E5AF1AC1B24100B3F69F /* typingSomeone.png */,
+				AE19E5B01AC1B24100B3F69F /* typingSomeone@2x.png */,
+			);
+			name = UIBubbleTableView;
+			sourceTree = "<group>";
+		};
+		AE19E5BB1AC1B24800B3F69F /* UIBubbleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				AE19E5BC1AC1B25D00B3F69F /* NSBubbleData.h */,
+				AE19E5BD1AC1B25D00B3F69F /* NSBubbleData.m */,
+				AE19E5BE1AC1B25D00B3F69F /* UIBubbleHeaderTableViewCell.h */,
+				AE19E5BF1AC1B25D00B3F69F /* UIBubbleHeaderTableViewCell.m */,
+				AE19E5C01AC1B25D00B3F69F /* UIBubbleTableView.h */,
+				AE19E5C11AC1B25D00B3F69F /* UIBubbleTableView.m */,
+				AE19E5C21AC1B25D00B3F69F /* UIBubbleTableViewCell.h */,
+				AE19E5C31AC1B25D00B3F69F /* UIBubbleTableViewCell.m */,
+				AE19E5C41AC1B25D00B3F69F /* UIBubbleTableViewDataSource.h */,
+				AE19E5C51AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.h */,
+				AE19E5C61AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.m */,
+			);
+			name = UIBubbleTableView;
+			sourceTree = "<group>";
+		};
 		AE1BCB9A1A9FAFAA00E79935 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +627,7 @@
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE19E5A61AC1B23000B3F69F /* UIBubbleTableView */,
 				AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */,
 				AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */,
 				AEE46FA11AB8747600F52708 /* Navbar icons */,
@@ -577,9 +644,6 @@
 		AEE46F901AB827EC00F52708 /* MessageList */ = {
 			isa = PBXGroup;
 			children = (
-				AEE46F971AB828CF00F52708 /* MessageViewCell.h */,
-				AEE46F981AB828CF00F52708 /* MessageViewCell.m */,
-				AEE46F991AB828CF00F52708 /* MessageViewCell.xib */,
 				AEE46F9C1AB82A9100F52708 /* MessageViewController.h */,
 				AEE46F9D1AB82A9100F52708 /* MessageViewController.m */,
 				AEE46F9E1AB82A9100F52708 /* MessageViewController.xib */,
@@ -708,6 +772,7 @@
 		AEF8BC431A7CEC8A007241DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE19E5BB1AC1B24800B3F69F /* UIBubbleTableView */,
 				AE19E5911AC189CD00B3F69F /* Google Analytics */,
 				AEF3AAFD1AB1F07900B2C6A9 /* KILabel */,
 				AE02BC081AA8F4650025E7CC /* SDWebImage */,
@@ -825,6 +890,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE19E5BA1AC1B24100B3F69F /* typingSomeone@2x.png in Resources */,
+				AE19E5B41AC1B24100B3F69F /* bubbleSomeone@2x.png in Resources */,
 				AEF3AB221AB45D1400B2C6A9 /* TraderListViewController.xib in Resources */,
 				AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */,
 				AE1BCBC41A9FCF6300E79935 /* TwitterViewController.xib in Resources */,
@@ -845,10 +912,11 @@
 				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
 				AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */,
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
+				AE19E5B51AC1B24100B3F69F /* missingAvatar.png in Resources */,
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
 				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
+				AE19E5B21AC1B24100B3F69F /* bubbleMine@2x.png in Resources */,
 				AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */,
-				AEE46F9B1AB828CF00F52708 /* MessageViewCell.xib in Resources */,
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */,
@@ -861,24 +929,30 @@
 				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
 				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
 				AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */,
+				AE19E5B81AC1B24100B3F69F /* typingMine@2x.png in Resources */,
 				AE1BCBF11A9FDC3300E79935 /* Icon-Small.png in Resources */,
 				AE1BCBAD1A9FC87200E79935 /* FrontViewController.xib in Resources */,
 				AEE46FA01AB82A9100F52708 /* MessageViewController.xib in Resources */,
 				AE1BCBED1A9FDC3300E79935 /* Icon-76@2x.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */,
+				AE19E5B71AC1B24100B3F69F /* typingMine.png in Resources */,
 				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
 				AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */,
+				AE19E5B61AC1B24100B3F69F /* missingAvatar@2x.png in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
 				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
 				AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */,
+				AE19E5B91AC1B24100B3F69F /* typingSomeone.png in Resources */,
 				AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */,
 				AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */,
 				AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */,
 				AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */,
+				AE19E5B31AC1B24100B3F69F /* bubbleSomeone.png in Resources */,
 				AE1BCBF31A9FDC3300E79935 /* Icon-Small@3x.png in Resources */,
 				AE9865331ABACF7D00A1008F /* NewMessageViewController.xib in Resources */,
 				AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */,
+				AE19E5B11AC1B24100B3F69F /* bubbleMine.png in Resources */,
 				AE1BCBF91A9FDC3300E79935 /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,8 +977,10 @@
 				AE1382631AA1422B00714884 /* Voucher.m in Sources */,
 				AEF3AB2D1AB45D9000B2C6A9 /* TraderBuilder.m in Sources */,
 				AEFF2E8F1A925ED8005DBCBB /* EventViewCell.m in Sources */,
+				AE19E5C81AC1B25D00B3F69F /* UIBubbleHeaderTableViewCell.m in Sources */,
 				AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */,
 				AE1BCBA01A9FC59A00E79935 /* CustomAnimationController.m in Sources */,
+				AE19E5CA1AC1B25D00B3F69F /* UIBubbleTableViewCell.m in Sources */,
 				AE1BCBCE1A9FD0A400E79935 /* EventListViewController.m in Sources */,
 				AE02BC301AA8F4650025E7CC /* SDWebImageDownloaderOperation.m in Sources */,
 				AEF3AB2A1AB45D8000B2C6A9 /* Trader.m in Sources */,
@@ -920,6 +996,8 @@
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE02BC331AA8F4650025E7CC /* UIButton+WebCache.m in Sources */,
+				AE19E5C71AC1B25D00B3F69F /* NSBubbleData.m in Sources */,
+				AE19E5C91AC1B25D00B3F69F /* UIBubbleTableView.m in Sources */,
 				AE02BC341AA8F4650025E7CC /* UIImage+GIF.m in Sources */,
 				AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */,
 				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
@@ -931,7 +1009,6 @@
 				AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */,
 				AE02BC2C1AA8F4650025E7CC /* SDImageCache.m in Sources */,
 				AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */,
-				AEE46F9A1AB828CF00F52708 /* MessageViewCell.m in Sources */,
 				AE02BC311AA8F4650025E7CC /* SDWebImageManager.m in Sources */,
 				AE02BC361AA8F4650025E7CC /* UIImage+WebP.m in Sources */,
 				AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */,
@@ -942,6 +1019,7 @@
 				AE02BC381AA8F4650025E7CC /* UIImageView+WebCache.m in Sources */,
 				AE02BC2F1AA8F4650025E7CC /* SDWebImageDownloader.m in Sources */,
 				AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */,
+				AE19E5CB1AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.m in Sources */,
 				AE02BC2A1AA8F4650025E7CC /* MKAnnotationView+WebCache.m in Sources */,
 				AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */,
 				AE02BC2E1AA8F4650025E7CC /* SDWebImageDecoder.m in Sources */,

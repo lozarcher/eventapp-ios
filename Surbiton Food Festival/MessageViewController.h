@@ -7,22 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MessageViewCell.h"
 #import "GAITrackedViewController.h"
+#import "UIBubbleTableViewDataSource.h"
 
-@interface MessageViewController : GAITrackedViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface MessageViewController : GAITrackedViewController <NSURLConnectionDelegate, UIBubbleTableViewDataSource> {
     NSMutableArray *_messages;
+    NSMutableArray *_bubbleData;
     NSString *storePath;
     NSMutableData *receivedData;
     BOOL isPaginatedLoad;
 }
 
-@property (retain,nonatomic) IBOutlet UITableView *tableView;
+@property (retain,nonatomic) IBOutlet UIBubbleTableView *tableView;
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
 @property (retain,nonatomic) UIActivityIndicatorView *spinner;
 @property (retain,nonatomic) UILabel *messageLabel;
 @property (retain,nonatomic) NSString *nextPage;
-@property (nonatomic, strong) MessageViewCell *prototypeCell;
 - (void)refreshMessages:(id)sender;
 
 @end

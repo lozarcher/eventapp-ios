@@ -11,8 +11,9 @@
 #import "MessageBuilder.h"
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
-#import "MessageViewCell.h"
 #import "NewMessageViewController.h"
+#import "NSBubbleData.h"
+#import "UIBubbleTableView.h"
 
 @interface MessageViewController ()
 
@@ -20,18 +21,15 @@
 
 @implementation MessageViewController
 
-@synthesize tableView, refreshControl, spinner, messageLabel;
+@synthesize refreshControl, spinner, messageLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    tableView.dataSource = self;
+    
+    self.tableView.bubbleDataSource = self;
     
     //initialise the message label
     messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-    
-    // Register cell Nib
-    UINib *cellNib = [UINib nibWithNibName:@"MessageViewCell" bundle:nil];
-    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"MessageViewCell"];
     
     messageLabel.text = @"No data is currently available. Please pull down to refresh.";
     messageLabel.textColor = [UIColor blackColor];
@@ -47,7 +45,7 @@
     [self.refreshControl addTarget:self
                             action:@selector(refreshMessages:)
                   forControlEvents:UIControlEventValueChanged];
-    [tableView addSubview:self.refreshControl];
+    [self.tableView addSubview:self.refreshControl];
     
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     storePath = [NSString stringWithFormat:@"%@/Messages", aCachesDirectory];
@@ -126,91 +124,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-#pragma - markup TableView Delegate Methods
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSInteger numberOfMessages = [_messages count];
-    if (numberOfMessages != 0) {
-        self.tableView.backgroundView = nil;
-        [messageLabel removeFromSuperview];
-        return 1;
-    } else {
-        // Display a message when the table is empty
-        
-        [self.view addSubview:messageLabel];
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        
-        return 0;
-    }
+- (NSInteger)rowsForBubbleTable:(UIBubbleTableView *)tableView {
+    return [_bubbleData count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (![self.nextPage isKindOfClass:[NSNull class]]) {
-        return _messages.count + 1;
-    } else {
-        return _messages.count;
-    }
-}
-
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (!self.prototypeCell)
-    {
-        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"MessageViewCell"];
-    }
-    Message *message = [self getMessageForIndexPath:indexPath];
-    [self.prototypeCell populateDataInCell:message];
-    
-    [self.prototypeCell layoutIfNeeded];
-    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ( indexPath.row == [_messages count]) { //  Only call the function if we're selecting the last row
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        NSString *loadingText = @"Loading...";
-        if (![cell.textLabel.text isEqualToString:loadingText]) {
-            cell.textLabel.text = @"Loading...";
-            NSLog(@"Load More requested"); // Add a function here to add more data to your array and reload the content
-            isPaginatedLoad = YES;
-            [self refreshMessages:self];
-        }
-    }
-}
-
-- (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    MessageViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MessageViewCell"];;
-    
-    // Cell text (event title)
-    Message *message = [self getMessageForIndexPath:indexPath];
-    NSLog(@"Cell label %@", [message name]);
-    [cell populateDataInCell:message];
-    
-    // Only call this if there is a next page
-    if (![self.nextPage isKindOfClass:[NSNull class]]) {
-        if(indexPath.row == [_messages count] ) { // Here we check if we reached the end of the index, so the +1 row
-            if (cell == nil) {
-                cell = [[MessageViewCell alloc] initWithFrame:CGRectZero];
-            }
-            // Reset previous content of the cell, I have these defined in a UITableCell subclass, change them where needed
-            cell.imageView.image = nil;
-            cell.nameLabel.text = nil;
-            cell.textLabel.text = @"Tap to load more...";
-        }
-    }
-    return cell;
-}
-
-- (Message*)getMessageForIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row >= [_messages count]) {
-        return [[Message alloc] init];
-    } else {
-        NSInteger itemInSection = indexPath.row;
-        Message *message = [_messages objectAtIndex:itemInSection];
-        return message;
-    }
+- (NSBubbleData *)bubbleTableView:(UIBubbleTableView *)tableView dataForRow:(NSInteger)row {
+    return [_bubbleData objectAtIndex:row];
 }
 
 #pragma mark NSURLConnection Delegate Methods
@@ -224,7 +143,6 @@
     [receivedData appendData:data];
     
 }
-
 
 - (void)connection:(NSURLConnection *)connection
   didFailWithError:(NSError *)error
@@ -247,7 +165,8 @@
         } else {
             NSLog(@"Using cached data");
             parseError = [self getMessagesFromData:data];
-            [tableView reloadData];
+            [self.tableView reloadData];
+            [self.tableView scrollBubbleViewToBottomAnimated:YES];
         }
     }
     
@@ -267,8 +186,9 @@
     
     [self endRefresh];
     [self getMessagesFromData:receivedData];
-    [tableView reloadData];
-    
+    [self.tableView reloadData];
+    [self.tableView scrollBubbleViewToBottomAnimated:YES];
+
     NSError* writeError;
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
@@ -282,6 +202,19 @@
     
 }
 
+-(void)setBubbleDataFromMessages:(NSArray *)messages {
+    _bubbleData = [[NSMutableArray alloc] init];
+    for (Message *message in messages) {
+        
+        NSTimeInterval createdSeconds = [message.createdDate doubleValue]/1000;
+        NSDate *createdDate = [[NSDate alloc] initWithTimeIntervalSince1970:createdSeconds];
+        
+        NSString *textStr = [NSString stringWithFormat:@"%@: %@", message.name, message.text];
+        
+        NSBubbleData *bubbleData = [[NSBubbleData alloc] initWithText:textStr date:createdDate type:0];
+        [_bubbleData addObject:bubbleData];
+    }
+}
 
 -(NSError *)getMessagesFromData:(NSData *)data {
     NSError *error = nil;
@@ -298,7 +231,9 @@
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
     }
-    NSLog(@"Got %lu messages from data", (unsigned long)messages.count);
+    [self setBubbleDataFromMessages:_messages];
+    [self.tableView reloadInputViews];
+    NSLog(@"Got %lu messages from data", (unsigned long)_bubbleData.count);
     return error;
 }
 
