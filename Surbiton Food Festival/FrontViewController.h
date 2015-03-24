@@ -25,7 +25,8 @@
 */
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface FrontViewController : UIViewController
+@interface FrontViewController : GAITrackedViewController
 
 @end

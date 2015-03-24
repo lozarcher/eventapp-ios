@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
+#import "GAITrackedViewController.h"
 
-@interface EventViewController : UIViewController
+@interface EventViewController : GAITrackedViewController
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (retain,nonatomic) IBOutlet UILabel *eventTitleLabel;
 @property (retain,nonatomic) IBOutlet UILabel *eventDateLabel;

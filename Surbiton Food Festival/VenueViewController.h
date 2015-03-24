@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Venue.h"
 #import <MapKit/MapKit.h>
+#import "GAITrackedViewController.h"
 
-@interface VenueViewController : UIViewController <MKMapViewDelegate>
+@interface VenueViewController : GAITrackedViewController <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UILabel *streetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;

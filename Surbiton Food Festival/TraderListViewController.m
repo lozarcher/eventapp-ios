@@ -66,6 +66,12 @@
     [self refreshTraders:self];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Trader List View";
+}
+
+
 - (void)refreshTraders:(id)sender {
     NSLog(@"Fetching data from URL");
     NSString *serviceHostname = [MTConfiguration serviceHostname];

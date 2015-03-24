@@ -51,12 +51,9 @@
 
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    //NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
-    //[[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+    self.screenName = @"Voucher View";
 }
 
 - (void)viewWillDisappear:(BOOL)animated

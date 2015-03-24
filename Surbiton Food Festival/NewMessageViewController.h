@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "MessageViewController.h"
+#import "GAITrackedViewController.h"
 
-@interface NewMessageViewController : UIViewController <FBLoginViewDelegate>
+@interface NewMessageViewController : GAITrackedViewController <FBLoginViewDelegate>
 
 @property (strong, nonatomic) IBOutlet FBLoginView *loginView;
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;

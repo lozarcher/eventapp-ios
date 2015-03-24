@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TraderViewCell.h"
+#import "GAITrackedViewController.h"
 
-@interface TraderListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface TraderListViewController : GAITrackedViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_traders;
     NSString *storePath;
     NSMutableData *receivedData;

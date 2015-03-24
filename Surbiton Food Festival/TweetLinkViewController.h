@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface TweetLinkViewController : UIViewController <UIWebViewDelegate>
+@interface TweetLinkViewController : GAITrackedViewController <UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 -(void)loadUrlString:(NSString *)urlString;

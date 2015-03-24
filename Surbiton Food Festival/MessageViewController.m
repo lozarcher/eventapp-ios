@@ -76,6 +76,12 @@
     [self refreshMessages:self];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Message List View";
+}
+
+
 -(void)newMessage:(id)sender {
     NewMessageViewController *newMessage=[[NewMessageViewController alloc]initWithNibName:@"NewMessageViewController" bundle:[NSBundle mainBundle]];
     newMessage.parent = self;

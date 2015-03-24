@@ -51,6 +51,12 @@
     [self refreshVouchers:self];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Voucher List View";
+}
+
+
 - (void)refreshVouchers:(id)sender {
     NSLog(@"Fetching data from URL");
     NSString *serviceHostname = [MTConfiguration serviceHostname];

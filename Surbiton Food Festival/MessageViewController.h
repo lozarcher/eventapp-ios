@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MessageViewCell.h"
+#import "GAITrackedViewController.h"
 
-@interface MessageViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface MessageViewController : GAITrackedViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_messages;
     NSString *storePath;
     NSMutableData *receivedData;

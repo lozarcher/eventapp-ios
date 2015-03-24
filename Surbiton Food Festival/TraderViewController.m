@@ -81,6 +81,13 @@
     }
     
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Trader View";
+}
+
+
 - (IBAction)websiteClicked:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:trader.website]];
     NSLog(@"Opening %@", trader.website);

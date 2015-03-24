@@ -76,6 +76,12 @@
     [self refreshTweets:self];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Twitter List View";
+}
+
+
 - (void)refreshTweets:(id)sender {
     NSLog(@"Fetching data from URL");
     NSString *serviceHostname = [MTConfiguration serviceHostname];

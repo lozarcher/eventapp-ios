@@ -13,6 +13,7 @@
 #import "RearViewController.h"
 #import "CustomAnimationController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "GAI.h"
 
 @interface AppDelegate ()<SWRevealViewControllerDelegate>
 @end
@@ -24,6 +25,17 @@
     NSLog(@"Configuration > %@", [MTConfiguration configuration]);
     
     NSLog(@"Environment name > %@", [MTConfiguration environmentName]);
+    
+    // GOOGLE ANALYTICS
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+    [GAI sharedInstance].dispatchInterval = 20;
+    // Optional: set Logger to VERBOSE for debug information.
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    // Initialize tracker. Replace with your tracking ID.
+    id globalTracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-61137155-1"];
+    [GAI sharedInstance].defaultTracker = globalTracker;
     
     self.locationManager = [[CLLocationManager alloc] init];
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)

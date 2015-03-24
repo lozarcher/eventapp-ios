@@ -27,6 +27,9 @@
 #import "FrontViewController.h"
 #import "SWRevealViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 
 @interface FrontViewController()
 
@@ -62,8 +65,13 @@
     loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), self.view.center.y - (loginView.frame.size.height / 2));
     [self.view addSubview:loginView];
      */
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    
+    id<GAITracker> tracker = [GAI sharedInstance].defaultTracker;
+    [tracker send:[[[GAIDictionaryBuilder createAppView] set:@"Home Screen" forKey:kGAIScreenName] build]];
 }
 
 #pragma mark - Example Code

@@ -23,6 +23,12 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"Tweet Link View";
+}
+
+
 -(void)loadUrlString:(NSString *)urlString {
     [self activateSpinner:YES];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
