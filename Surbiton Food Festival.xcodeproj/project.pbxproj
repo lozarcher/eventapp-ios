@@ -118,6 +118,16 @@
 		AEE46FD51ABB55E600F52708 /* AboutKingstonPoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46FD31ABB55E600F52708 /* AboutKingstonPoundViewController.m */; };
 		AEE46FD61ABB55E600F52708 /* AboutKingstonPoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FD41ABB55E600F52708 /* AboutKingstonPoundViewController.xib */; };
 		AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED6CCB1A939DB700B8D84B /* Social.framework */; };
+		AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D191AD3F096003256FD /* blue-plate.png */; };
+		AEEF3D241AD3F096003256FD /* Cloth-BG-Green.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D1A1AD3F096003256FD /* Cloth-BG-Green.png */; };
+		AEEF3D251AD3F096003256FD /* green-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D1B1AD3F096003256FD /* green-plate.png */; };
+		AEEF3D261AD3F096003256FD /* indigo-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D1C1AD3F096003256FD /* indigo-plate.png */; };
+		AEEF3D271AD3F096003256FD /* magenta-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D1D1AD3F096003256FD /* magenta-plate.png */; };
+		AEEF3D281AD3F096003256FD /* orange-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D1E1AD3F096003256FD /* orange-plate.png */; };
+		AEEF3D291AD3F096003256FD /* red-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D1F1AD3F096003256FD /* red-plate.png */; };
+		AEEF3D2A1AD3F096003256FD /* SFF-Logo-700-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */; };
+		AEEF3D2B1AD3F096003256FD /* white-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D211AD3F096003256FD /* white-plate.png */; };
+		AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D221AD3F096003256FD /* yellow-plate.png */; };
 		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */; };
 		AEF3AB001AB1F09200B2C6A9 /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AAFF1AB1F09200B2C6A9 /* KILabel.m */; };
@@ -323,6 +333,16 @@
 		AEE46FD31ABB55E600F52708 /* AboutKingstonPoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutKingstonPoundViewController.m; sourceTree = "<group>"; };
 		AEE46FD41ABB55E600F52708 /* AboutKingstonPoundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutKingstonPoundViewController.xib; sourceTree = "<group>"; };
 		AEED6CCB1A939DB700B8D84B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		AEEF3D191AD3F096003256FD /* blue-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-plate.png"; sourceTree = "<group>"; };
+		AEEF3D1A1AD3F096003256FD /* Cloth-BG-Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cloth-BG-Green.png"; sourceTree = "<group>"; };
+		AEEF3D1B1AD3F096003256FD /* green-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-plate.png"; sourceTree = "<group>"; };
+		AEEF3D1C1AD3F096003256FD /* indigo-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indigo-plate.png"; sourceTree = "<group>"; };
+		AEEF3D1D1AD3F096003256FD /* magenta-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magenta-plate.png"; sourceTree = "<group>"; };
+		AEEF3D1E1AD3F096003256FD /* orange-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-plate.png"; sourceTree = "<group>"; };
+		AEEF3D1F1AD3F096003256FD /* red-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-plate.png"; sourceTree = "<group>"; };
+		AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SFF-Logo-700-shadow.png"; sourceTree = "<group>"; };
+		AEEF3D211AD3F096003256FD /* white-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-plate.png"; sourceTree = "<group>"; };
+		AEEF3D221AD3F096003256FD /* yellow-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-plate.png"; sourceTree = "<group>"; };
 		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
 		AEF3AAFE1AB1F09200B2C6A9 /* KILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KILabel.h; sourceTree = "<group>"; };
@@ -627,6 +647,7 @@
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AEEF3D181AD3F077003256FD /* plates */,
 				AE19E5A61AC1B23000B3F69F /* UIBubbleTableView */,
 				AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */,
 				AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */,
@@ -695,6 +716,23 @@
 				AEBFA5601AB3632800B25A11 /* VenueViewController.xib */,
 			);
 			name = EventList;
+			sourceTree = "<group>";
+		};
+		AEEF3D181AD3F077003256FD /* plates */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF3D191AD3F096003256FD /* blue-plate.png */,
+				AEEF3D1A1AD3F096003256FD /* Cloth-BG-Green.png */,
+				AEEF3D1B1AD3F096003256FD /* green-plate.png */,
+				AEEF3D1C1AD3F096003256FD /* indigo-plate.png */,
+				AEEF3D1D1AD3F096003256FD /* magenta-plate.png */,
+				AEEF3D1E1AD3F096003256FD /* orange-plate.png */,
+				AEEF3D1F1AD3F096003256FD /* red-plate.png */,
+				AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */,
+				AEEF3D211AD3F096003256FD /* white-plate.png */,
+				AEEF3D221AD3F096003256FD /* yellow-plate.png */,
+			);
+			name = plates;
 			sourceTree = "<group>";
 		};
 		AEF3AAFD1AB1F07900B2C6A9 /* KILabel */ = {
@@ -893,6 +931,7 @@
 				AE19E5BA1AC1B24100B3F69F /* typingSomeone@2x.png in Resources */,
 				AE19E5B41AC1B24100B3F69F /* bubbleSomeone@2x.png in Resources */,
 				AEF3AB221AB45D1400B2C6A9 /* TraderListViewController.xib in Resources */,
+				AEEF3D271AD3F096003256FD /* magenta-plate.png in Resources */,
 				AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */,
 				AE1BCBC41A9FCF6300E79935 /* TwitterViewController.xib in Resources */,
 				AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */,
@@ -902,24 +941,29 @@
 				AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */,
 				AE1BCBF71A9FDC3300E79935 /* Icon.png in Resources */,
 				AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */,
+				AEEF3D261AD3F096003256FD /* indigo-plate.png in Resources */,
+				AEEF3D2A1AD3F096003256FD /* SFF-Logo-700-shadow.png in Resources */,
 				AE1BCBB51A9FC9C700E79935 /* reveal-icon@2x.png in Resources */,
 				AE02BC3B1AAE0CEA0025E7CC /* splash.png in Resources */,
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
 				AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
+				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
 				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
 				AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */,
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
 				AE19E5B51AC1B24100B3F69F /* missingAvatar.png in Resources */,
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
+				AEEF3D241AD3F096003256FD /* Cloth-BG-Green.png in Resources */,
 				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
 				AE19E5B21AC1B24100B3F69F /* bubbleMine@2x.png in Resources */,
 				AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */,
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */,
+				AEEF3D291AD3F096003256FD /* red-plate.png in Resources */,
 				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
 				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
 				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
@@ -937,17 +981,21 @@
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */,
 				AE19E5B71AC1B24100B3F69F /* typingMine.png in Resources */,
+				AEEF3D251AD3F096003256FD /* green-plate.png in Resources */,
 				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
 				AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */,
+				AEEF3D281AD3F096003256FD /* orange-plate.png in Resources */,
 				AE19E5B61AC1B24100B3F69F /* missingAvatar@2x.png in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
 				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
+				AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */,
 				AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */,
 				AE19E5B91AC1B24100B3F69F /* typingSomeone.png in Resources */,
 				AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */,
 				AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */,
 				AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */,
 				AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */,
+				AEEF3D2B1AD3F096003256FD /* white-plate.png in Resources */,
 				AE19E5B31AC1B24100B3F69F /* bubbleSomeone.png in Resources */,
 				AE1BCBF31A9FDC3300E79935 /* Icon-Small@3x.png in Resources */,
 				AE9865331ABACF7D00A1008F /* NewMessageViewController.xib in Resources */,

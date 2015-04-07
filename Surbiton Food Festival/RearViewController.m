@@ -56,7 +56,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    self.plates = [[NSArray alloc] initWithObjects:@"blue-plate.png", @"green-plate.png", @"indigo-plate.png", @"magenta-plate.png", @"orange-plate.png", @"red-plate.png", @"yellow-plate.png", @"white-plate.png", nil];
     self.title = NSLocalizedString(@"", nil);
 }
 
@@ -68,17 +68,18 @@
     return 8;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSInteger row = indexPath.row;
-
+    
     if (nil == cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
+    cell.imageView.image = [UIImage imageNamed:[self.plates objectAtIndex:row]];
+
 	
     NSString *text = nil;
     if (row == 0)

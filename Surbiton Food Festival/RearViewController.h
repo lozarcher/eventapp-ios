@@ -29,6 +29,6 @@
 @interface RearViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, retain) IBOutlet UITableView *rearTableView;
-
+@property (nonatomic, retain) NSArray *plates;
 
 @end
