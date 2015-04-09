@@ -55,6 +55,8 @@
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
     RearViewController *rearViewController = [[RearViewController alloc] init];
     
+    homeViewController.rearViewController = rearViewController;
+    
     UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
     
