@@ -29,7 +29,7 @@
 #import "RearViewController.h"
 
 #import "SWRevealViewController.h"
-#import "FrontViewController.h"
+#import "HomeViewController.h"
 #import "EventListViewController.h"
 #import "TwitterViewController.h"
 #import "VoucherListViewController.h"
@@ -154,7 +154,7 @@
 
     if (row == 0)
     {
-        newFrontController = [[FrontViewController alloc] init];
+        newFrontController = [[HomeViewController alloc] init];
     }
     
     else if (row == 1)

@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
-#import "FrontViewController.h"
+#import "HomeViewController.h"
 #import "RearViewController.h"
 #import "CustomAnimationController.h"
 #import <FacebookSDK/FacebookSDK.h>
@@ -52,10 +52,10 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
     
-    FrontViewController *frontViewController = [[FrontViewController alloc] init];
+    HomeViewController *homeViewController = [[HomeViewController alloc] init];
     RearViewController *rearViewController = [[RearViewController alloc] init];
     
-    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
     
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];

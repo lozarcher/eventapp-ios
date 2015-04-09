@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2513" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="greenPlate" destination="AEX-NS-7KP" id="IAp-lq-u1f"/>
+                <outlet property="indigoPlate" destination="OaR-xQ-TkS" id="5tc-MF-lSK"/>
+                <outlet property="magentaPlate" destination="3Q8-87-17S" id="JnW-MY-qNy"/>
+                <outlet property="orangePlate" destination="fj1-EX-ZME" id="QD2-Sx-IzT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yellowPlate" destination="Kcu-pl-eRT" id="fRc-7D-fn3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cloth-BG-Green.png" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-HI-pi4">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="SFF-Logo-700-shadow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-2d-HvK">
+                    <rect key="frame" x="0.0" y="31" width="414" height="228"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Vh0-2d-HvK" secondAttribute="height" multiplier="69:38" id="HZ7-wz-1S1"/>
+                        <constraint firstAttribute="width" secondItem="Vh0-2d-HvK" secondAttribute="height" multiplier="69:38" id="Nyt-Mj-lN2"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Nyt-Mj-lN2"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8l-o5-99U">
+                    <rect key="frame" x="0.0" y="241" width="313" height="469"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-NS-7KP">
+                            <rect key="frame" x="8" y="-6" width="145" height="145"/>
+                        </imageView>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="indigo-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="OaR-xQ-TkS">
+                            <rect key="frame" x="148" y="-6" width="145" height="145"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Traders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fux-Wg-cLX">
+                            <rect key="frame" x="191" y="56" width="59" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="magenta-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-87-17S">
+                            <rect key="frame" x="8" y="112" width="145" height="145"/>
+                        </imageView>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="fj1-EX-ZME">
+                            <rect key="frame" x="148" y="112" width="145" height="145"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2a-Mg-sao">
+                            <rect key="frame" x="191" y="174" width="59" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="qDO-Ut-dRP">
+                            <rect key="frame" x="8" y="231" width="145" height="145"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vouchers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwy-5B-aYM">
+                            <rect key="frame" x="44" y="293" width="73" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellow-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-pl-eRT">
+                            <rect key="frame" x="148" y="231" width="145" height="145"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="K£" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-XB-grN">
+                            <rect key="frame" x="191" y="293" width="59" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-Xy-lY2">
+                            <rect key="frame" x="51" y="56" width="58" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messaging" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lss-0Q-zDh">
+                            <rect key="frame" x="40" y="174" width="81" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vh0-2d-HvK" secondAttribute="trailing" id="laN-kB-XdE"/>
+                <constraint firstItem="Vh0-2d-HvK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wrv-8o-mKk"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Cloth-BG-Green.png" width="1417" height="1417"/>
+        <image name="SFF-Logo-700-shadow.png" width="700" height="400"/>
+        <image name="green-plate.png" width="300" height="300"/>
+        <image name="indigo-plate.png" width="300" height="300"/>
+        <image name="magenta-plate.png" width="300" height="300"/>
+        <image name="orange-plate.png" width="300" height="300"/>
+        <image name="red-plate.png" width="300" height="300"/>
+        <image name="yellow-plate.png" width="300" height="300"/>
+    </resources>
+</document>

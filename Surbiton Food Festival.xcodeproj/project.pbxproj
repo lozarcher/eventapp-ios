@@ -50,10 +50,8 @@
 		AE19E5CB1AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE19E5C61AC1B25D00B3F69F /* UIBubbleTypingTableViewCell.m */; };
 		AE1BCB9D1A9FAFAA00E79935 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCB9C1A9FAFAA00E79935 /* SWRevealViewController.m */; };
 		AE1BCBA01A9FC59A00E79935 /* CustomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCB9F1A9FC59A00E79935 /* CustomAnimationController.m */; };
-		AE1BCBA41A9FC60E00E79935 /* FrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBA31A9FC60E00E79935 /* FrontViewController.m */; };
 		AE1BCBA71A9FC62100E79935 /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBA61A9FC62100E79935 /* RearViewController.m */; };
 		AE1BCBA91A9FC77200E79935 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1BCBA81A9FC77200E79935 /* UIKit.framework */; };
-		AE1BCBAD1A9FC87200E79935 /* FrontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBAA1A9FC87200E79935 /* FrontViewController.xib */; };
 		AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB01A9FC8A600E79935 /* RearViewController.xib */; };
 		AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */; };
 		AE1BCBB51A9FC9C700E79935 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB31A9FC9C700E79935 /* reveal-icon@2x.png */; };
@@ -128,6 +126,8 @@
 		AEEF3D2A1AD3F096003256FD /* SFF-Logo-700-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */; };
 		AEEF3D2B1AD3F096003256FD /* white-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D211AD3F096003256FD /* white-plate.png */; };
 		AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D221AD3F096003256FD /* yellow-plate.png */; };
+		AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3D381AD5B17E003256FD /* HomeViewController.m */; };
+		AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D391AD5B17E003256FD /* HomeViewController.xib */; };
 		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */; };
 		AEF3AB001AB1F09200B2C6A9 /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AAFF1AB1F09200B2C6A9 /* KILabel.m */; };
@@ -245,12 +245,9 @@
 		AE1BCB9C1A9FAFAA00E79935 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		AE1BCB9E1A9FC59A00E79935 /* CustomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimationController.h; sourceTree = "<group>"; };
 		AE1BCB9F1A9FC59A00E79935 /* CustomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationController.m; sourceTree = "<group>"; };
-		AE1BCBA21A9FC60E00E79935 /* FrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontViewController.h; sourceTree = "<group>"; };
-		AE1BCBA31A9FC60E00E79935 /* FrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontViewController.m; sourceTree = "<group>"; };
 		AE1BCBA51A9FC62100E79935 /* RearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewController.h; sourceTree = "<group>"; };
 		AE1BCBA61A9FC62100E79935 /* RearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewController.m; sourceTree = "<group>"; };
 		AE1BCBA81A9FC77200E79935 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		AE1BCBAA1A9FC87200E79935 /* FrontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrontViewController.xib; sourceTree = "<group>"; };
 		AE1BCBB01A9FC8A600E79935 /* RearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RearViewController.xib; sourceTree = "<group>"; };
 		AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 		AE1BCBB31A9FC9C700E79935 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
@@ -343,6 +340,9 @@
 		AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SFF-Logo-700-shadow.png"; sourceTree = "<group>"; };
 		AEEF3D211AD3F096003256FD /* white-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-plate.png"; sourceTree = "<group>"; };
 		AEEF3D221AD3F096003256FD /* yellow-plate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-plate.png"; sourceTree = "<group>"; };
+		AEEF3D371AD5B17E003256FD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		AEEF3D381AD5B17E003256FD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		AEEF3D391AD5B17E003256FD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
 		AEF3AAFE1AB1F09200B2C6A9 /* KILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KILabel.h; sourceTree = "<group>"; };
@@ -560,10 +560,10 @@
 		AE1BCBBD1A9FCEB100E79935 /* Front Page */ = {
 			isa = PBXGroup;
 			children = (
-				AE1BCBA21A9FC60E00E79935 /* FrontViewController.h */,
-				AE1BCBAA1A9FC87200E79935 /* FrontViewController.xib */,
-				AE1BCBA31A9FC60E00E79935 /* FrontViewController.m */,
 				AE1BCBBE1A9FCEB600E79935 /* Navigation */,
+				AEEF3D371AD5B17E003256FD /* HomeViewController.h */,
+				AEEF3D381AD5B17E003256FD /* HomeViewController.m */,
+				AEEF3D391AD5B17E003256FD /* HomeViewController.xib */,
 			);
 			name = "Front Page";
 			sourceTree = "<group>";
@@ -975,7 +975,7 @@
 				AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */,
 				AE19E5B81AC1B24100B3F69F /* typingMine@2x.png in Resources */,
 				AE1BCBF11A9FDC3300E79935 /* Icon-Small.png in Resources */,
-				AE1BCBAD1A9FC87200E79935 /* FrontViewController.xib in Resources */,
+				AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */,
 				AEE46FA01AB82A9100F52708 /* MessageViewController.xib in Resources */,
 				AE1BCBED1A9FDC3300E79935 /* Icon-76@2x.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
@@ -1042,6 +1042,7 @@
 				AEE46FD01ABB55CC00F52708 /* AboutAppViewController.m in Sources */,
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
+				AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE02BC331AA8F4650025E7CC /* UIButton+WebCache.m in Sources */,
 				AE19E5C71AC1B25D00B3F69F /* NSBubbleData.m in Sources */,
@@ -1061,7 +1062,6 @@
 				AE02BC361AA8F4650025E7CC /* UIImage+WebP.m in Sources */,
 				AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */,
 				AEF3AB261AB45D5200B2C6A9 /* TraderViewCell.m in Sources */,
-				AE1BCBA41A9FC60E00E79935 /* FrontViewController.m in Sources */,
 				AE1BCB9D1A9FAFAA00E79935 /* SWRevealViewController.m in Sources */,
 				AEF8BC461A7CEC8A007241DC /* main.m in Sources */,
 				AE02BC381AA8F4650025E7CC /* UIImageView+WebCache.m in Sources */,
