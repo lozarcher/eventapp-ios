@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
+#import "RearViewController.h"
 
 @interface HomeViewController : GAITrackedViewController
 @property (weak, nonatomic) IBOutlet UIImageView *greenPlate;
@@ -16,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *orangePlate;
 @property (weak, nonatomic) IBOutlet UIImageView *redPlate;
 @property (weak, nonatomic) IBOutlet UIImageView *yellowPlate;
+@property (strong, nonatomic) RearViewController *rearViewController;
+-(void)setUpButtons;
 
 @end

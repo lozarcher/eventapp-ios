@@ -79,6 +79,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     cell.imageView.image = [UIImage imageNamed:[self.plates objectAtIndex:row]];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
 	
     NSString *text = nil;
@@ -154,7 +155,9 @@
 
     if (row == 0)
     {
-        newFrontController = [[HomeViewController alloc] init];
+        HomeViewController *homeView = [[HomeViewController alloc] init];
+        homeView.rearViewController = self;
+        newFrontController = homeView;
     }
     
     else if (row == 1)
@@ -192,8 +195,9 @@
         newFrontController = [[AboutAppViewController alloc] init];
     }
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newFrontController];
+
     [revealController pushFrontViewController:navigationController animated:YES];
-    
+
     _presentedRow = row;  // <- store the presented row
 }
 

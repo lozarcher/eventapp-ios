@@ -31,28 +31,62 @@
                                                                          style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
-    
-    /*
-     FBLoginView *loginView = [[FBLoginView alloc] initWithPublishPermissions:@[@"rsvp_event"] defaultAudience:FBSessionDefaultAudienceEveryone];
-     // Align the button in the center horizontally
-     loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), self.view.center.y - (loginView.frame.size.height / 2));
-     [self.view addSubview:loginView];
-     */
+}
+
+-(void)loadEvents{
+    NSLog(@"Tapped load events");
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
+    [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
+}
+-(void)loadTraders{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
+    [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
+}
+-(void)loadMessaging{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+    [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
+}
+-(void)loadTwitter{
+     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
+     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
+}
+-(void)loadVouchers{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
+    [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
+}
+-(void)loadKingstonPound{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:6 inSection:0];
+    [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     self.screenName = @"Home Screen";
+    [self setUpButtons];
 }
 
-#pragma mark - Example Code
-
-- (IBAction)pushExample:(id)sender
-{
-    UIViewController *stubController = [[UIViewController alloc] init];
-    stubController.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:stubController animated:YES];
+-(void)setUpButtons {
+    // Button taps
+    UITapGestureRecognizer *eventsTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadEvents)];
+    eventsTap.numberOfTapsRequired = 1;
+    [self.greenPlate addGestureRecognizer:eventsTap];
+    UITapGestureRecognizer *traderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadTraders)];
+    traderTap.numberOfTapsRequired = 1;    
+    [self.indigoPlate addGestureRecognizer:traderTap];
+    UITapGestureRecognizer *messagingTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadMessaging)];
+    messagingTap.numberOfTapsRequired = 1;
+    [self.magentaPlate addGestureRecognizer:messagingTap];
+    UITapGestureRecognizer *twitterTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadTwitter)];
+    twitterTap.numberOfTapsRequired = 1;
+    [self.orangePlate addGestureRecognizer:twitterTap];
+    UITapGestureRecognizer *voucherTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadVouchers)];
+    voucherTap.numberOfTapsRequired = 1;
+    [self.redPlate addGestureRecognizer:voucherTap];
+    UITapGestureRecognizer *kPoundTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadKingstonPound)];
+    kPoundTap.numberOfTapsRequired = 1;
+    [self.yellowPlate addGestureRecognizer:kPoundTap];
 }
+
 
 @end
