@@ -49,7 +49,7 @@
 
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    self.statusLabel.text = @"You're logged in as";
+    self.statusLabel.text = @"Hi";
     [self.messageEntryDialog setHidden:NO];
 }
 
@@ -57,7 +57,7 @@
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
-    self.statusLabel.text= @"You're not logged in!";
+    self.statusLabel.text= @"Please login to post a message";
     [self.messageEntryDialog setHidden:YES];
 }
 - (IBAction)sendButtonPressed:(id)sender {
