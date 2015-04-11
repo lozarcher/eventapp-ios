@@ -102,6 +102,11 @@
 		AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */; };
 		AEBFA5611AB3632800B25A11 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBFA55F1AB3632800B25A11 /* VenueViewController.m */; };
 		AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBFA5601AB3632800B25A11 /* VenueViewController.xib */; };
+		AEC425421AD913ED0021049E /* cutlery_chopsticks.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC4253D1AD913ED0021049E /* cutlery_chopsticks.png */; };
+		AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC4253E1AD913ED0021049E /* cutlery_knife.png */; };
+		AEC425441AD913ED0021049E /* cutlery_fork.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC4253F1AD913ED0021049E /* cutlery_fork.png */; };
+		AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC425401AD913ED0021049E /* cutlery_spoon.png */; };
+		AEC425461AD913ED0021049E /* cutlery_teaspoon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC425411AD913ED0021049E /* cutlery_teaspoon.png */; };
 		AEE46F931AB8280000F52708 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F921AB8280000F52708 /* Message.m */; };
 		AEE46F961AB8283100F52708 /* MessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F951AB8283100F52708 /* MessageBuilder.m */; };
 		AEE46F9F1AB82A9100F52708 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46F9D1AB82A9100F52708 /* MessageViewController.m */; };
@@ -311,6 +316,11 @@
 		AEBFA55E1AB3632800B25A11 /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
 		AEBFA55F1AB3632800B25A11 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
 		AEBFA5601AB3632800B25A11 /* VenueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueViewController.xib; sourceTree = "<group>"; };
+		AEC4253D1AD913ED0021049E /* cutlery_chopsticks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_chopsticks.png; sourceTree = "<group>"; };
+		AEC4253E1AD913ED0021049E /* cutlery_knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_knife.png; sourceTree = "<group>"; };
+		AEC4253F1AD913ED0021049E /* cutlery_fork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_fork.png; sourceTree = "<group>"; };
+		AEC425401AD913ED0021049E /* cutlery_spoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_spoon.png; sourceTree = "<group>"; };
+		AEC425411AD913ED0021049E /* cutlery_teaspoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_teaspoon.png; sourceTree = "<group>"; };
 		AEE46F911AB827FF00F52708 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		AEE46F921AB8280000F52708 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		AEE46F941AB8283100F52708 /* MessageBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBuilder.h; sourceTree = "<group>"; };
@@ -721,6 +731,11 @@
 		AEEF3D181AD3F077003256FD /* plates */ = {
 			isa = PBXGroup;
 			children = (
+				AEC4253D1AD913ED0021049E /* cutlery_chopsticks.png */,
+				AEC4253E1AD913ED0021049E /* cutlery_knife.png */,
+				AEC4253F1AD913ED0021049E /* cutlery_fork.png */,
+				AEC425401AD913ED0021049E /* cutlery_spoon.png */,
+				AEC425411AD913ED0021049E /* cutlery_teaspoon.png */,
 				AEEF3D191AD3F096003256FD /* blue-plate.png */,
 				AEEF3D1A1AD3F096003256FD /* Cloth-BG-Green.png */,
 				AEEF3D1B1AD3F096003256FD /* green-plate.png */,
@@ -932,6 +947,7 @@
 				AE19E5B41AC1B24100B3F69F /* bubbleSomeone@2x.png in Resources */,
 				AEF3AB221AB45D1400B2C6A9 /* TraderListViewController.xib in Resources */,
 				AEEF3D271AD3F096003256FD /* magenta-plate.png in Resources */,
+				AEC425441AD913ED0021049E /* cutlery_fork.png in Resources */,
 				AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */,
 				AE1BCBC41A9FCF6300E79935 /* TwitterViewController.xib in Resources */,
 				AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */,
@@ -948,6 +964,7 @@
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
 				AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */,
+				AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
@@ -970,6 +987,7 @@
 				AEE46FD11ABB55CC00F52708 /* AboutAppViewController.xib in Resources */,
 				AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */,
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
+				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
 				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
 				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
 				AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */,
@@ -986,11 +1004,13 @@
 				AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */,
 				AEEF3D281AD3F096003256FD /* orange-plate.png in Resources */,
 				AE19E5B61AC1B24100B3F69F /* missingAvatar@2x.png in Resources */,
+				AEC425421AD913ED0021049E /* cutlery_chopsticks.png in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
 				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
 				AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */,
 				AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */,
 				AE19E5B91AC1B24100B3F69F /* typingSomeone.png in Resources */,
+				AEC425461AD913ED0021049E /* cutlery_teaspoon.png in Resources */,
 				AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */,
 				AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */,
 				AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */,
