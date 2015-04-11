@@ -24,6 +24,9 @@
         self.topConstraint.constant = self.topConstraint.constant - 64;
     }
     
+    self.title = NSLocalizedString(@"Send a message", nil);
+
+    
     self.loginView.readPermissions = @[@"public_profile"];
     self.loginView.delegate = self;
     // Do any additional setup after loading the view from its nib.
@@ -49,7 +52,7 @@
 
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    self.statusLabel.text = @"Hi";
+    self.statusLabel.text = @"Logged in as";
     [self.messageEntryDialog setHidden:NO];
 }
 
