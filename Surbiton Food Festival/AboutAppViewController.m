@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"About", nil);
+    self.title = NSLocalizedString(@"Contact / Help", nil);
     
     SWRevealViewController *revealController = [self revealViewController];
     
@@ -41,14 +41,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)lozButtonClicked:(id)sender {
+    NSLog(@"Texting Loz");
+    [self sendSMS:@"" recipientList:[NSArray arrayWithObjects:@"07954579444", nil]];
 }
-*/
+
+- (void)sendSMS:(NSString *)bodyOfMessage recipientList:(NSArray *)recipients
+{
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+    if([MFMessageComposeViewController canSendText])
+    {
+        controller.body = bodyOfMessage;
+        controller.recipients = recipients;
+        controller.messageComposeDelegate = self;
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
 
 @end

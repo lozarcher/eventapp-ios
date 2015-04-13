@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -58,7 +58,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWZ-vo-BM7">
-                            <rect key="frame" x="222" y="328" width="157" height="30"/>
+                            <rect key="frame" x="222" y="346" width="157" height="30"/>
                             <state key="normal" title="Sign Up for Customers">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -69,14 +69,14 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="leading" secondItem="O7O-V3-EFR" secondAttribute="trailing" constant="-61" id="0Dg-l8-di5"/>
-                        <constraint firstItem="MWZ-vo-BM7" firstAttribute="top" secondItem="bOW-af-SE6" secondAttribute="bottom" id="6td-fr-W8j"/>
+                        <constraint firstItem="MWZ-vo-BM7" firstAttribute="top" secondItem="bOW-af-SE6" secondAttribute="bottom" constant="-40" id="6td-fr-W8j"/>
                         <constraint firstAttribute="trailing" secondItem="bOW-af-SE6" secondAttribute="trailing" constant="29" id="Dku-JM-zLY"/>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="top" secondItem="BfP-CQ-w6J" secondAttribute="top" id="KMr-Gh-7nn"/>
                         <constraint firstAttribute="centerX" secondItem="lZX-LK-92y" secondAttribute="centerX" id="XcC-xj-0oU"/>
                         <constraint firstAttribute="centerX" secondItem="MWZ-vo-BM7" secondAttribute="centerX" constant="-0.5" id="YpH-Vm-wCB"/>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="leading" secondItem="BfP-CQ-w6J" secondAttribute="leading" id="Za1-hd-crJ"/>
                         <constraint firstItem="bOW-af-SE6" firstAttribute="centerX" secondItem="MWZ-vo-BM7" secondAttribute="centerX" id="dzt-OW-m8I"/>
-                        <constraint firstItem="bOW-af-SE6" firstAttribute="top" secondItem="sUl-mt-sbx" secondAttribute="bottom" constant="-10" id="fCN-Ue-7y1"/>
+                        <constraint firstItem="bOW-af-SE6" firstAttribute="top" secondItem="sUl-mt-sbx" secondAttribute="bottom" constant="-30" id="fCN-Ue-7y1"/>
                         <constraint firstItem="lZX-LK-92y" firstAttribute="top" secondItem="MWZ-vo-BM7" secondAttribute="bottom" constant="10" id="h2M-sg-Y4d"/>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="top" secondItem="O7O-V3-EFR" secondAttribute="bottom" constant="-59" id="vFc-p2-Vif"/>
                         <constraint firstAttribute="bottom" secondItem="lZX-LK-92y" secondAttribute="bottom" constant="48" id="vPq-sR-V3I"/>

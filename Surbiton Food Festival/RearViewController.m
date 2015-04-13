@@ -113,7 +113,7 @@
     }
     else if (row == 7)
     {
-        text = @"About";
+        text = @"Contact / Help";
     }
     cell.textLabel.text = NSLocalizedString( text,nil );
 	
