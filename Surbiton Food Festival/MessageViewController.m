@@ -209,7 +209,11 @@
         NSTimeInterval createdSeconds = [message.createdDate doubleValue]/1000;
         NSDate *createdDate = [[NSDate alloc] initWithTimeIntervalSince1970:createdSeconds];
         
-        NSString *textStr = [NSString stringWithFormat:@"%@: %@", message.name, message.text];
+        const char *rawMsg = [message.text UTF8String];
+        NSData *rawData = [NSData dataWithBytes:rawMsg length:strlen(rawMsg)];
+        NSString *decodedMsg = [[NSString alloc] initWithData:rawData encoding:NSNonLossyASCIIStringEncoding];
+        
+        NSString *textStr = [NSString stringWithFormat:@"%@: %@", message.name, decodedMsg];
         
         NSBubbleData *bubbleData = [[NSBubbleData alloc] initWithText:textStr date:createdDate type:0];
         [_bubbleData addObject:bubbleData];

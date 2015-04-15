@@ -127,6 +127,8 @@
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
     if (result == MessageComposeResultCancelled) {
         NSLog(@"Message cancelled");
     } else if (result == MessageComposeResultSent) {
@@ -134,8 +136,6 @@
     } else {
         NSLog(@"Message failed");
     }
-    [controller dismissViewControllerAnimated:YES completion:nil];
-
 }
 
 /*

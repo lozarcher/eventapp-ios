@@ -75,7 +75,11 @@
     Message *message = [[Message alloc] init];
     [message setProfilePic:profilePicUrl];
     [message setName:self.nameLabel.text];
-    [message setText:self.messageField.text];
+    
+    NSString *messageTextUni = [NSString stringWithUTF8String:[self.messageField.text UTF8String]];
+    NSData *messageData = [messageTextUni dataUsingEncoding:NSNonLossyASCIIStringEncoding];
+    NSString *encodedText = [[NSString alloc] initWithData:messageData encoding:NSUTF8StringEncoding];
+    [message setText:encodedText];
 
     NSError *error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[message dictionary] options:0 error:&error];
@@ -87,13 +91,15 @@
                                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                          timeoutInterval:10.0];
         
-        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
         [request setHTTPMethod:@"POST"];
         [request setHTTPBody:jsonData];
         NSURLResponse* response;
         NSData* responseData = nil;
         
         NSLog(@"Sending request to %@", postUrl);
+        NSLog(@"Sending json %@", jsonData);
+
         responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         NSLog(@"Error :%@", [error debugDescription]);
         NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
