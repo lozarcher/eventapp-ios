@@ -327,7 +327,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:@"#surbiton "];
+        [tweetSheet setInitialText:@"#surbitonfood "];
         
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
