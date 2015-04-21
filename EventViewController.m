@@ -54,10 +54,6 @@
         case EKAuthorizationStatusDenied:
         case EKAuthorizationStatusRestricted: {
             self.isAccessToEventStoreGranted = NO;
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Access Denied"
-                                                                message:@"This app doesn't have access to your Reminders." delegate:nil
-                                                      cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-            [alertView show];
             break;
         }
             
