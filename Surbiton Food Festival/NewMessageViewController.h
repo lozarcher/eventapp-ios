@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIView *messageEntryDialog;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) MessageViewController *parent;
+@property (weak, nonatomic) IBOutlet UIButton *privacyPolicyButton;
 
 @end

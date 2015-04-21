@@ -84,6 +84,8 @@
 		AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521E51AA20040006A442A /* VoucherViewController.m */; };
 		AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2521E61AA20040006A442A /* VoucherViewController.xib */; };
 		AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */; };
+		AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */; };
+		AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
 		AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D13601AA14B1900166951 /* VoucherListCell.m */; };
 		AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13611AA14B1900166951 /* VoucherListCell.xib */; };
 		AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */; };
@@ -288,6 +290,9 @@
 		AE2521E51AA20040006A442A /* VoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherViewController.m; sourceTree = "<group>"; };
 		AE2521E61AA20040006A442A /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
 		AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "team-surbiton-festival.jpg"; sourceTree = "<group>"; };
+		AE72028E1AE5557300D2B730 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
+		AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
+		AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivacyPolicyViewController.xib; sourceTree = "<group>"; };
 		AE8D135F1AA14B1900166951 /* VoucherListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListCell.h; sourceTree = "<group>"; };
 		AE8D13601AA14B1900166951 /* VoucherListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListCell.m; sourceTree = "<group>"; };
 		AE8D13611AA14B1900166951 /* VoucherListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListCell.xib; sourceTree = "<group>"; };
@@ -705,6 +710,9 @@
 				AEE46FD21ABB55E600F52708 /* AboutKingstonPoundViewController.h */,
 				AEE46FD31ABB55E600F52708 /* AboutKingstonPoundViewController.m */,
 				AEE46FD41ABB55E600F52708 /* AboutKingstonPoundViewController.xib */,
+				AE72028E1AE5557300D2B730 /* PrivacyPolicyViewController.h */,
+				AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */,
+				AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -1020,6 +1028,7 @@
 				AE1BCBF31A9FDC3300E79935 /* Icon-Small@3x.png in Resources */,
 				AE9865331ABACF7D00A1008F /* NewMessageViewController.xib in Resources */,
 				AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */,
+				AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */,
 				AE19E5B11AC1B24100B3F69F /* bubbleMine.png in Resources */,
 				AE1BCBF91A9FDC3300E79935 /* iTunesArtwork in Resources */,
 			);
@@ -1062,6 +1071,7 @@
 				AEE46FD01ABB55CC00F52708 /* AboutAppViewController.m in Sources */,
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
+				AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */,
 				AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE02BC331AA8F4650025E7CC /* UIButton+WebCache.m in Sources */,
