@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Event.h"
 #import "GAITrackedViewController.h"
+#import "KILabel.h"
 
 @interface EventViewController : GAITrackedViewController
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (retain,nonatomic) IBOutlet UILabel *eventTitleLabel;
 @property (retain,nonatomic) IBOutlet UILabel *eventDateLabel;
 @property (retain,nonatomic) IBOutlet UIImageView *eventImageView;
-@property (weak, nonatomic) IBOutlet UILabel *eventDescriptionLabel;
+@property (weak, nonatomic) IBOutlet KILabel *eventDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *venueLabel;
 - (IBAction)mapButtonPressed:(id)sender;

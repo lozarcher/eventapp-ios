@@ -10,6 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import <EventKit/EventKit.h>
 #import "VenueViewController.h"
+#import "TweetLinkViewController.h"
 
 @interface EventViewController ()
 
@@ -36,6 +37,17 @@
         // Custom initialization
     }
     return self;
+}
+
+-(void)loadURL:(NSString *)urlString {
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NSString stringWithFormat:@"http://%@", urlString];
+    }
+    NSLog(@"Loading URL %@ from view controller", urlString);
+    
+    TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
+    [self presentViewController:webVc animated:YES completion:nil];
+    [webVc loadUrlString:urlString];
 }
 
 - (EKEventStore *)eventStore {
@@ -82,13 +94,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // Check to see if we are running on iOS 6
     if (![self respondsToSelector:@selector(topLayoutGuide)]) {
         for (NSLayoutConstraint *constraint in self.topConstraint) {
             constraint.constant = constraint.constant - 64;
         }
     }
+    
+    eventDescriptionLabel.linkURLTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
+        NSLog(@"Clicked link: %@", urlString);
+       
+        [self loadURL:urlString];
+    };
     
     self.reminderSet = NO;
     UIBarButtonItem *reminderButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bell-lg-outline.png"]
