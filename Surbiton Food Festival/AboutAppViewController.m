@@ -8,6 +8,7 @@
 
 #import "AboutAppViewController.h"
 #import "SWRevealViewController.h"
+#import "PrivacyPolicyViewController.h"
 
 @interface AboutAppViewController ()
 
@@ -59,6 +60,12 @@
         controller.messageComposeDelegate = self;
         [self presentViewController:controller animated:YES completion:nil];
     }
+}
+- (IBAction)privacyPolicyButton:(id)sender {
+    NSLog(@"Privacy Policy pressed");
+    PrivacyPolicyViewController *webVc = [[PrivacyPolicyViewController alloc] initWithNibName:@"PrivacyPolicyViewController" bundle:nil];
+    [self presentViewController:webVc animated:YES completion:nil];
+    [webVc loadUrlString:@"http://www.surbitonfoodfestival.org/application-privacy-statement/"];
 }
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result

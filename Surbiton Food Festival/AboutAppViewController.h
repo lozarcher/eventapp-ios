@@ -13,5 +13,6 @@
 @interface AboutAppViewController : GAITrackedViewController <MFMessageComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *lozButton;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *privacyPolicyButton;
 
 @end

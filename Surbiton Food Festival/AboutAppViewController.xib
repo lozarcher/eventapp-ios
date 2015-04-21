@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutAppViewController">
             <connections>
                 <outlet property="lozButton" destination="OAH-pA-Weu" id="pii-ns-z2A"/>
+                <outlet property="privacyPolicyButton" destination="XVy-oT-WO9" id="raS-zo-lr4"/>
                 <outlet property="versionLabel" destination="NAE-uN-7JS" id="iMg-9U-akh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -75,6 +76,15 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVy-oT-WO9">
+                    <rect key="frame" x="112" y="434" width="96" height="30"/>
+                    <state key="normal" title="Privacy Policy">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="privacyPolicyButton:" destination="-1" eventType="touchUpInside" id="yIf-0N-W3O"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -94,7 +104,9 @@
                 <constraint firstItem="rQ8-nW-HF4" firstAttribute="top" secondItem="OAH-pA-Weu" secondAttribute="bottom" constant="8" id="iJY-XZ-VtG"/>
                 <constraint firstAttribute="trailing" secondItem="yfa-Md-iy9" secondAttribute="trailing" constant="-2" id="miV-S2-1oA"/>
                 <constraint firstAttribute="centerX" secondItem="8YE-1J-Krj" secondAttribute="centerX" constant="-1" id="pfj-ZI-tcK"/>
+                <constraint firstAttribute="centerX" secondItem="XVy-oT-WO9" secondAttribute="centerX" id="pwS-6T-Hyq"/>
                 <constraint firstAttribute="centerX" secondItem="Xzv-iB-mgx" secondAttribute="centerX" constant="-0.5" id="qSF-ws-2WX"/>
+                <constraint firstItem="XVy-oT-WO9" firstAttribute="top" secondItem="NAE-uN-7JS" secondAttribute="bottom" constant="8" id="rnN-TY-Vdl"/>
                 <constraint firstAttribute="centerX" secondItem="kRV-bT-Vp3" secondAttribute="centerX" id="tBN-gd-G0X"/>
                 <constraint firstItem="NAE-uN-7JS" firstAttribute="top" secondItem="8YE-1J-Krj" secondAttribute="bottom" constant="20" id="x2b-p4-RSC"/>
             </constraints>
