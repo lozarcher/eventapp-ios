@@ -44,8 +44,8 @@
     venueLabel.text = [NSString stringWithFormat:@"%@ @ %@",startDateString, location];
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    if (![[event coverUrl] isKindOfClass:[NSNull class]]) {
-        [manager downloadImageWithURL:[NSURL URLWithString:[event coverUrl]] options:0
+    if (![[event profileUrl] isKindOfClass:[NSNull class]]) {
+        [manager downloadImageWithURL:[NSURL URLWithString:[event profileUrl]] options:0
                          progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                          }
                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
