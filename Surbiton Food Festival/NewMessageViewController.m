@@ -68,12 +68,6 @@
     [self.scrollView sendSubviewToBack:self.messageEntryDialog];
     [self.messageEntryDialog setHidden:YES];
 }
-- (IBAction)privacyPolicyPressed:(id)sender {
-    NSLog(@"Privacy Policy pressed");
-    PrivacyPolicyViewController *webVc = [[PrivacyPolicyViewController alloc] initWithNibName:@"PrivacyPolicyViewController" bundle:nil];
-    [self presentViewController:webVc animated:YES completion:nil];
-    [webVc loadUrlString:@"http://www.surbitonfoodfestival.org/application-privacy-statement/"];
-}
 
 - (IBAction)sendButtonPressed:(id)sender {
     NSLog(@"Sending message from %@", self.nameLabel.text);

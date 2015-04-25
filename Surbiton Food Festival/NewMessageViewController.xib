@@ -11,7 +11,6 @@
                 <outlet property="messageEntryDialog" destination="5gZ-dO-HgJ" id="tbr-5d-poz"/>
                 <outlet property="messageField" destination="Blx-CX-boY" id="dRM-kO-VVK"/>
                 <outlet property="nameLabel" destination="aTM-tm-pHQ" id="ZgX-7N-uKu"/>
-                <outlet property="privacyPolicyButton" destination="ktT-p0-At0" id="9ek-xm-Zjz"/>
                 <outlet property="profilePictureView" destination="gRb-EG-941" id="WGp-7K-OSh"/>
                 <outlet property="scrollView" destination="O4m-hJ-Dkp" id="QYo-L0-IS1"/>
                 <outlet property="sendButton" destination="Gih-RY-Gc4" id="f63-2B-qgh"/>
@@ -81,15 +80,6 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktT-p0-At0" userLabel="Privacy Policy">
-                                    <rect key="frame" x="198" y="38" width="101" height="30"/>
-                                    <state key="normal" title="Privacy Policy">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="privacyPolicyPressed:" destination="-1" eventType="touchUpInside" id="2XM-yt-VNt"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>

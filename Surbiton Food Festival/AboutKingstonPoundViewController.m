@@ -26,7 +26,6 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
-
     // Do any additional setup after loading the view from its nib.
 }
 

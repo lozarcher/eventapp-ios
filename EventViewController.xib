@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -96,7 +96,7 @@
                         <constraint firstItem="OGy-TT-QuX" firstAttribute="top" secondItem="GQq-j8-8vG" secondAttribute="top" id="QDO-ZW-A57"/>
                         <constraint firstItem="S1Z-jy-FmH" firstAttribute="top" secondItem="OGy-TT-QuX" secondAttribute="bottom" constant="8" symbolic="YES" id="QiW-kc-cKq"/>
                         <constraint firstItem="uZn-ms-reu" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leadingMargin" id="Vl5-uP-aZP"/>
-                        <constraint firstAttribute="bottom" secondItem="Gmn-MM-PZl" secondAttribute="bottom" constant="142" id="YKD-bg-37Z"/>
+                        <constraint firstAttribute="bottom" secondItem="Gmn-MM-PZl" secondAttribute="bottom" constant="20" id="YKD-bg-37Z"/>
                         <constraint firstItem="1Ae-xI-Eha" firstAttribute="top" secondItem="OGy-TT-QuX" secondAttribute="bottom" constant="14" id="ZrQ-hq-Pbx"/>
                         <constraint firstItem="OGy-TT-QuX" firstAttribute="centerX" secondItem="1Ae-xI-Eha" secondAttribute="centerX" id="bu9-yK-NTe"/>
                         <constraint firstItem="wcB-7E-gsq" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leading" constant="5" id="cCS-uY-EOO"/>

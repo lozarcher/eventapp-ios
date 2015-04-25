@@ -11,7 +11,7 @@
 #import <MessageUI/MFMessageComposeViewController.h>
 #import "GAITrackedViewController.h"
 
-@interface TraderViewController : GAITrackedViewController <MFMessageComposeViewControllerDelegate>
+@interface TraderViewController : GAITrackedViewController
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (retain,nonatomic) IBOutlet UILabel *traderTitleLabel;
 @property (retain,nonatomic) IBOutlet UIImageView *traderImageView;

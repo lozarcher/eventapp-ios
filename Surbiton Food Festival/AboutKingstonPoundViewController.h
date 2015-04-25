@@ -10,5 +10,6 @@
 #import "GAITrackedViewController.h"
 
 @interface AboutKingstonPoundViewController : GAITrackedViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

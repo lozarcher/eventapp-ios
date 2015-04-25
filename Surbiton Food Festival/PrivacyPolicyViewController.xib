@@ -30,9 +30,9 @@
                         <navigationItem id="DkZ-vh-ZRT">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="aQt-wp-3b2">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ncM-iI-7sc">
-                                    <rect key="frame" x="8" y="89" width="51" height="30"/>
+                                    <rect key="frame" x="16" y="7" width="40" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="CLOSE">
+                                    <state key="normal" title="Close">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -45,7 +45,7 @@
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" style="plain" id="52T-gH-x9q">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QUJ-Jw-Asj">
-                                    <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                    <rect key="frame" x="451" y="7" width="110" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Open in Safari">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

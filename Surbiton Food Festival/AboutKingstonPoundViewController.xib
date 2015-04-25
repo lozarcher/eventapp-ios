@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutKingstonPoundViewController">
             <connections>
+                <outlet property="scrollView" destination="BfP-CQ-w6J" id="LoE-pM-RAr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,14 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfP-CQ-w6J">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" alwaysBounceVertical="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfP-CQ-w6J">
                     <rect key="frame" x="0.0" y="8" width="600" height="592"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="team-surbiton-festival.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sUl-mt-sbx">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="168"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="team-surbiton-festival.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sUl-mt-sbx">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="168"/>
                             <constraints>
+                                <constraint firstAttribute="width" secondItem="sUl-mt-sbx" secondAttribute="height" multiplier="48:21" id="64k-En-YRi"/>
                                 <constraint firstAttribute="height" constant="168" id="qfN-mu-vpf"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="qfN-mu-vpf"/>
+                                </mask>
+                            </variation>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KingstonPound-small-15.png" translatesAutoresizingMaskIntoConstraints="NO" id="O7O-V3-EFR">
                             <rect key="frame" x="10" y="10" width="51" height="49"/>
@@ -40,7 +48,7 @@
                             </constraints>
                             <string key="text">The Kingston Pound (£K) is money made for the borough of Kingston upon Thames. It will bring more business to the independent traders of Kingston, strengthen the local economy and keep our high streets diverse and distinct – one of Kingston’s great characteristics. One Kingston Pound is worth one Pound Sterling, but carries many other beneﬁts. You can get Kingston Pounds either by purchasing them with sterling, accepting them as payment or as change from a member business.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -71,9 +79,11 @@
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="leading" secondItem="O7O-V3-EFR" secondAttribute="trailing" constant="-61" id="0Dg-l8-di5"/>
                         <constraint firstItem="MWZ-vo-BM7" firstAttribute="top" secondItem="bOW-af-SE6" secondAttribute="bottom" constant="-40" id="6td-fr-W8j"/>
                         <constraint firstAttribute="trailing" secondItem="bOW-af-SE6" secondAttribute="trailing" constant="29" id="Dku-JM-zLY"/>
+                        <constraint firstItem="O7O-V3-EFR" firstAttribute="top" secondItem="BfP-CQ-w6J" secondAttribute="top" constant="10" id="Hbd-9P-QO9"/>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="top" secondItem="BfP-CQ-w6J" secondAttribute="top" id="KMr-Gh-7nn"/>
+                        <constraint firstItem="O7O-V3-EFR" firstAttribute="leading" secondItem="BfP-CQ-w6J" secondAttribute="leading" constant="10" id="T2f-Ex-xvV"/>
                         <constraint firstAttribute="centerX" secondItem="lZX-LK-92y" secondAttribute="centerX" id="XcC-xj-0oU"/>
-                        <constraint firstAttribute="centerX" secondItem="MWZ-vo-BM7" secondAttribute="centerX" constant="-0.5" id="YpH-Vm-wCB"/>
+                        <constraint firstAttribute="centerX" secondItem="MWZ-vo-BM7" secondAttribute="centerX" id="YpH-Vm-wCB"/>
                         <constraint firstItem="sUl-mt-sbx" firstAttribute="leading" secondItem="BfP-CQ-w6J" secondAttribute="leading" id="Za1-hd-crJ"/>
                         <constraint firstItem="bOW-af-SE6" firstAttribute="centerX" secondItem="MWZ-vo-BM7" secondAttribute="centerX" id="dzt-OW-m8I"/>
                         <constraint firstItem="bOW-af-SE6" firstAttribute="top" secondItem="sUl-mt-sbx" secondAttribute="bottom" constant="-30" id="fCN-Ue-7y1"/>
@@ -83,6 +93,12 @@
                         <constraint firstItem="bOW-af-SE6" firstAttribute="leading" secondItem="BfP-CQ-w6J" secondAttribute="leading" constant="29" id="xbL-xO-zDE"/>
                         <constraint firstAttribute="trailing" secondItem="sUl-mt-sbx" secondAttribute="trailing" id="zV2-E0-jtM"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0Dg-l8-di5"/>
+                            <exclude reference="vFc-p2-Vif"/>
+                        </mask>
+                    </variation>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

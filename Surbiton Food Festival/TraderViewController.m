@@ -77,7 +77,7 @@
     [phoneLabel setHidden:[trader.phone isKindOfClass:[NSNull class]]];
     [linkLabel setHidden:[trader.link isKindOfClass:[NSNull class]]];
     if (![trader.phone isKindOfClass:[NSNull class]]) {
-        [phoneLabel setTitle:[NSString stringWithFormat:@"Text %@", trader.name] forState:UIControlStateNormal];
+        [phoneLabel setTitle:[NSString stringWithFormat:@"Call %@", trader.name] forState:UIControlStateNormal];
     }
     
 }
@@ -103,9 +103,9 @@
 }
 - (IBAction)phoneClicked:(id)sender {
     NSString *phoneUrl = [NSString stringWithFormat:@"tel:%@", trader.phone];
-    NSLog(@"Texting %@", trader.phone);
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneUrl]];
-    [self sendSMS:@"" recipientList:[NSArray arrayWithObjects:trader.phone, nil]];
+    NSLog(@"Calling %@", trader.phone);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneUrl]];
+    //[self sendSMS:@"" recipientList:[NSArray arrayWithObjects:trader.phone, nil]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,30 +113,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)sendSMS:(NSString *)bodyOfMessage recipientList:(NSArray *)recipients
-{
-    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
-    if([MFMessageComposeViewController canSendText])
-    {
-        controller.body = bodyOfMessage;
-        controller.recipients = recipients;
-        controller.messageComposeDelegate = self;
-        [self presentViewController:controller animated:YES completion:nil];
-    }
-}
-
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-    if (result == MessageComposeResultCancelled) {
-        NSLog(@"Message cancelled");
-    } else if (result == MessageComposeResultSent) {
-        NSLog(@"Message sent");
-    } else {
-        NSLog(@"Message failed");
-    }
-}
 
 /*
  #pragma mark - Navigation
