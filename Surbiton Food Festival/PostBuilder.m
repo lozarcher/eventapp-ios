@@ -1,16 +1,16 @@
 //
-//  MessageBuilder.m
-//  Surbiton Food Festival
+//  PostBuilder.m
+//  IYAF 2015
 //
-//  Created by Loz Archer on 17/03/2015.
+//  Created by Loz Archer on 29/05/2015.
 //  Copyright (c) 2015 Spirit of Seething. All rights reserved.
 //
 
-#import "Message.h"
-#import "MessageBuilder.h"
+#import "PostBuilder.h"
+#import "Post.h"
 
-@implementation MessageBuilder
-+ (NSArray *)messagesFromJSON:(NSData *)objectNotation error:(NSError **)error
+@implementation PostBuilder
++ (NSArray *)postsFromJSON:(NSData *)objectNotation error:(NSError **)error
 {
     NSError *localError = nil;
     NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:objectNotation options:0 error:&localError];
@@ -20,25 +20,24 @@
         return nil;
     }
     
-    NSMutableArray *messages = [[NSMutableArray alloc] init];
-    //NSDictionary *eventObject = [parsedObject valueForKey:@"events"];
+    NSMutableArray *posts = [[NSMutableArray alloc] init];
     NSArray *results = [parsedObject valueForKey:@"data"];
     NSLog(@"Count %lu", (unsigned long)results.count);
     
     for (NSDictionary *eventDic in results) {
-        Message *message = [[Message alloc] init];
+        Post *post = [[Post alloc] init];
         
         for (NSString *key in eventDic) {
-            if ([message respondsToSelector:NSSelectorFromString(key)]) {
+            if ([post respondsToSelector:NSSelectorFromString(key)]) {
                 NSString *mappedKey = key;
-                [message setValue:[eventDic valueForKey:key] forKey:mappedKey];
+                [post setValue:[eventDic valueForKey:key] forKey:mappedKey];
             }
         }
         
-        [messages addObject:message];
+        [posts addObject:post];
     }
     
-    return messages;
+    return posts;
 }
 
 + (NSString *)nextPageFromJSON:(NSData *)objectNotation
@@ -55,5 +54,4 @@
     
     return nextPage;
 }
-
 @end

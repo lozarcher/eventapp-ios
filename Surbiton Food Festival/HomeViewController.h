@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GAITrackedViewController.h"
 #import "RearViewController.h"
 
-@interface HomeViewController : GAITrackedViewController
+@interface HomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *greenPlate;
 @property (weak, nonatomic) IBOutlet UIImageView *indigoPlate;
 @property (weak, nonatomic) IBOutlet UIImageView *magentaPlate;

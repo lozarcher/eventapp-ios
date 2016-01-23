@@ -71,10 +71,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.screenName = @"Event List";
-    
-    //id<GAITracker> tracker = [GAI sharedInstance].defaultTracker;
-    //[tracker send:[[[GAIDictionaryBuilder createAppView] set:@"Event List" forKey:kGAIScreenName] build]];
 }
 
 - (void)initialRefreshEvents:(id)sender {

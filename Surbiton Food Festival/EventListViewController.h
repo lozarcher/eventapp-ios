@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "EventViewCell.h"
-#import "GAITrackedViewController.h"
 
-@interface EventListViewController : GAITrackedViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface EventListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_events;
     NSMutableDictionary *_eventDays;
     NSMutableArray *_eventDayKeys;

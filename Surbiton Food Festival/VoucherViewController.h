@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GAITrackedViewController.h"
 
-@interface VoucherViewController : GAITrackedViewController {
+@interface VoucherViewController : UIViewController {
     UIImage* image;
 }
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *tappedImage;

@@ -1,36 +1,31 @@
 //
-//  NewEventListViewController.m
-//  Surbiton Food Festival
+//  FirstViewController.m
+//  IYAF 2015
 //
-//  Created by Laurence Archer on 16/02/2015.
+//  Created by Loz on 31/01/2015.
 //  Copyright (c) 2015 Spirit of Seething. All rights reserved.
 //
 
-#import "TwitterViewController.h"
-#import "Tweet.h"
-#import "TweetBuilder.h"
+#import "PostListViewController.h"
+#import "Post.h"
+#import "PostBuilder.h"
+#import "PostViewCell.h"
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
-#import "TwitterViewCell.h"
 #import "TweetLinkViewController.h"
 
-#import <Social/Social.h>
+@implementation PostListViewController
 
-@interface TwitterViewController ()
-
-@end
-
-@implementation TwitterViewController
-
-@synthesize tableView, refreshControl, spinner, messageLabel;
+@synthesize tableView, spinner, messageLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     tableView.dataSource = self;
+    tableView.delegate = self;
     
     // Register cell Nib
-    UINib *cellNib = [UINib nibWithNibName:@"TwitterViewCell" bundle:nil];
-    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"TwitterViewCell"];
+    UINib *cellNib = [UINib nibWithNibName:@"PostViewCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"PostViewCell"];
     
     //initialise the message label
     messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -42,56 +37,53 @@
     messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
     [messageLabel sizeToFit];
     
+    
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor purpleColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
-                            action:@selector(refreshTweets:)
+                            action:@selector(refreshPosts:)
                   forControlEvents:UIControlEventValueChanged];
     [tableView addSubview:self.refreshControl];
     
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    storePath = [NSString stringWithFormat:@"%@/Tweets.plist", aCachesDirectory];
+    storePath = [NSString stringWithFormat:@"%@/Posts.plist", aCachesDirectory];
     
-    //Delete the cache file
-    //[[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
-    
-    self.title = NSLocalizedString(@"Twitter", nil);
+    self.title = NSLocalizedString(@"News", nil);
     
     SWRevealViewController *revealController = [self revealViewController];
+    
+    //[self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
     
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
                                                                          style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
-    
-    UIBarButtonItem *tweetButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"UIButtonBarCompose.png"]
-                                                                          style:UIBarButtonItemStyleBordered target:self action:@selector(tweetButtonClicked:)];
-    
-    self.navigationItem.rightBarButtonItem = tweetButton;
-    
-    [self activateSpinner:YES];
     isPaginatedLoad = NO;
-    [self refreshTweets:self];
+
+    [self activateSpinner:YES];
+    [self refreshPosts:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
+- (void) viewDidLayoutSubviews {
+    self.spinner.center = self.view.center;
+}
 
-- (void)refreshTweets:(id)sender {
+- (void)refreshPosts:(id)sender {
     NSLog(@"Fetching data from URL");
     NSString *serviceHostname = [MTConfiguration serviceHostname];
-    NSString *loadUrl = @"/tweets";
+    NSString *loadUrl = @"/posts";
     if (isPaginatedLoad && self.nextPage) {
         loadUrl = self.nextPage;
     }
     NSString *urlAsString = [NSString stringWithFormat:@"%@%@", serviceHostname, loadUrl];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
-    
     // Create the request.
     NSURLRequest *theRequest=[NSURLRequest requestWithURL:url
                                               cachePolicy:NSURLRequestUseProtocolCachePolicy
@@ -110,7 +102,7 @@
         
         // Inform the user that the connection failed.
         NSLog(@"Error making connection");
-    
+        
     }
 }
 
@@ -122,108 +114,132 @@
 
 #pragma - markup TableView Delegate Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSInteger numberOfTweets = [_tweets count];
-    if (numberOfTweets != 0) {
-        self.tableView.backgroundView = nil;
-        [messageLabel removeFromSuperview];
-        return 1;
-    } else {
-        // Display a message when the table is empty
-        
-        [self.view addSubview:messageLabel];
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        
-        return 0;
-    }
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (![self.nextPage isKindOfClass:[NSNull class]]) {
-        return _tweets.count + 1;
+    if (_posts.count > 0 && ![self.nextPage isKindOfClass:[NSNull class]]) {
+        return _posts.count + 1;
     } else {
-        return _tweets.count;
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!self.prototypeCell)
-    {
-        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"TwitterViewCell"];
-    }
-    Tweet *tweet = [self getTweetForIndexPath:indexPath];
-    [self.prototypeCell populateDataInCell:tweet];
-    
-    [self.prototypeCell layoutIfNeeded];
-    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ( indexPath.row == [_tweets count]) { //  Only call the function if we're selecting the last row
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        NSString *loadingText = @"Loading...";
-        if (![cell.textLabel.text isEqualToString:loadingText]) {
-            cell.textLabel.text = @"Loading...";
-            NSLog(@"Load More requested"); // Add a function here to add more data to your array and reload the content
-            isPaginatedLoad = YES;
-            [self refreshTweets:self];
-        }
+        return _posts.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TwitterViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TwitterViewCell"];;
+    PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];;
     
     // Cell text (event title)
-    Tweet *tweet = [self getTweetForIndexPath:indexPath];
-    NSLog(@"Cell label %@", [tweet name]);
-    [cell populateDataInCell:tweet];
+    Post *post = [self getPostForIndexPath:indexPath];
+    NSLog(@"Cell label %@", [post name]);
+    [self populateDataInCell:post cell:cell];
     cell.delegate = self;
-    
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     // Only call this if there is a next page
     if (![self.nextPage isKindOfClass:[NSNull class]]) {
-        if(indexPath.row == [_tweets count] ) { // Here we check if we reached the end of the index, so the +1 row
+        if(indexPath.row == [_posts count] ) { // Here we check if we reached the end of the index, so the +1 row
             if (cell == nil) {
-                cell = [[TwitterViewCell alloc] initWithFrame:CGRectZero];
+                cell = [[PostViewCell alloc] initWithFrame:CGRectZero];
             }
             // Reset previous content of the cell, I have these defined in a UITableCell subclass, change them where needed
             cell.imageView.image = nil;
-            cell.nameLabel.text = nil;
-            cell.screennameLabel.text = nil;
-            cell.textLabel.text = @"Tap to load more...";
+            cell.dateLabel.text = @"";
+            cell.messageLabel.text = @"Tap to load more...";
         }
     }
+    
     return cell;
 }
 
-- (Tweet*)getTweetForIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row >= [_tweets count]) {
-        return [[Tweet alloc] init];
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (!self.prototypeCell)
+    {
+        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];
+    }
+    Post *post = [self getPostForIndexPath:indexPath];
+    [self populateDataInCell:post cell:self.prototypeCell];
+    
+    [self.prototypeCell layoutIfNeeded];
+    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingExpandedSize];
+    return size.height;
+}
+
+- (void)tableView:(UITableView *)localTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ( indexPath.row == [_posts count]) { //  Only call the function if we're selecting the last row
+        isPaginatedLoad = YES;
+        [self refreshPosts:self];
+    }
+}
+
+- (Post*)getPostForIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= [_posts count]) {
+        return [[Post alloc] init];
     } else {
         NSInteger itemInSection = indexPath.row;
-        Tweet *tweet = [_tweets objectAtIndex:itemInSection];
-        return tweet;
+        Post *post = [_posts objectAtIndex:itemInSection];
+        return post;
     }
+}
+
+-(void)populateDataInCell:(Post *)post cell:(PostViewCell *)cell {
+    //traderNameLabel.text = [trader name];
+    cell.textLabel.text = @"";
+    NSString *message = @"";
+    if (![[post message] isKindOfClass:[NSNull class]]) {
+        message = [post message];
+    }
+    if (![[post link] isKindOfClass:[NSNull class]]) {
+        if ([message isEqualToString:@""]) {
+            message = [post link];
+        } else {
+            // dedupe links if already present in message
+            if (![message containsString:[post link]]) {
+                message = [NSString stringWithFormat:@"%@\n\n%@", message, [post link]];
+            }
+        }
+    }
+    if (![[post createdDate] isKindOfClass:[NSNull class]]) {
+        NSTimeInterval createdSeconds = [post.createdDate doubleValue]/1000;
+        NSDate *createdDate = [[NSDate alloc] initWithTimeIntervalSince1970:createdSeconds];
+        cell.dateLabel.text = [self dateDiff:createdDate];
+    }
+    
+    cell.messageLabel.text = message;
 }
 
 #pragma mark NSURLConnection Delegate Methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // This method is called when the server has determined that it
+    // has enough information to create the NSURLResponse object.
+    
+    // It can be called multiple times, for example in the case of a
+    // redirect, so each time we reset the data.
+    
+    // receivedData is an instance variable declared elsewhere.
     [receivedData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     // Append the new data to the instance variable you declared
     [receivedData appendData:data];
-
+    
 }
 
 
 - (void)connection:(NSURLConnection *)connection
   didFailWithError:(NSError *)error
 {
+    // Release the connection and the data object
+    // by setting the properties (declared elsewhere)
+    // to nil.  Note that a real-world app usually
+    // requires the delegate to manage more than one
+    // connection at a time, so these lines would
+    // typically be replaced by code to iterate through
+    // whatever data structures you are using.
     connection = nil;
     receivedData = nil;
     
@@ -232,7 +248,9 @@
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
     
-    [self endRefresh];
+    [self activateSpinner:NO];
+    [self.refreshControl endRefreshing];
+    // Get events from cache instead
     NSError *parseError;
     if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
         NSError *readError;
@@ -241,14 +259,14 @@
             NSLog(@"Could not read from file: %@", [readError localizedDescription]);
         } else {
             NSLog(@"Using cached data");
-            parseError = [self getTweetsFromData:data];
+            [self getPostFromData:data];
             [tableView reloadData];
         }
     }
     
-    if (_tweets == nil || parseError != nil) {
+    if (_posts == nil || parseError != nil) {
         if (parseError != nil) {
-            NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
+            NSLog(@"Local post cache parse error: %@", [parseError localizedDescription]);
             [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
         }
     }
@@ -259,11 +277,11 @@
     // do something with the data
     // receivedData is declared as a property elsewhere
     NSLog(@"Succeeded! Received %lu bytes of data", (unsigned long)receivedData.length);
-   
-    [self endRefresh];
-    [self getTweetsFromData:receivedData];
-    [tableView reloadData];
     
+    [self.refreshControl endRefreshing];
+    [self getPostFromData:receivedData];
+    [tableView reloadData];
+    [self activateSpinner:NO];
     NSError* writeError;
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
@@ -272,28 +290,35 @@
         NSLog(@"Wrote to file %@", storePath);
     }
     
+    // Release the connection and the data object
+    // by setting the properties (declared elsewhere)
+    // to nil.  Note that a real-world app usually
+    // requires the delegate to manage more than one
+    // connection at a time, so these lines would
+    // typically be replaced by code to iterate through
+    // whatever data structures you are using.
     connection = nil;
     receivedData = nil;
-        
+    
 }
 
 
--(NSError *)getTweetsFromData:(NSData *)data {
+-(NSError *)getPostFromData:(NSData *)data {
     NSError *error = nil;
-    NSArray *tweets = [TweetBuilder tweetsFromJSON:data error:&error];
-    self.nextPage = [TweetBuilder nextPageFromJSON:data];
-    if ([tweets count] > 0) {
+    NSArray *posts = [PostBuilder postsFromJSON:data error:&error];
+    self.nextPage = [PostBuilder nextPageFromJSON:data];
+    if ([posts count] > 0) {
         if (isPaginatedLoad) {
-            [_tweets addObjectsFromArray:tweets];
+            [_posts addObjectsFromArray:posts];
         } else {
-            _tweets = tweets;
+            _posts = posts;
         }
         isPaginatedLoad = NO;
     }
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
     }
-    NSLog(@"Got %lu tweets from data", (unsigned long)tweets.count);
+    NSLog(@"Got %lu posts from data", (unsigned long)posts.count);
     return error;
 }
 
@@ -303,50 +328,9 @@
     return nil;
 }
 
-
--(void)endRefresh {
-    // End the refreshing
-    if (self.refreshControl) {
-        
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"MMM d, h:mm a"];
-        NSString *title = [NSString stringWithFormat:@"Last update: %@", [formatter stringFromDate:[NSDate date]]];
-        NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:[UIColor whiteColor]
-                                                                    forKey:NSForegroundColorAttributeName];
-        NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:attrsDictionary];
-        self.refreshControl.attributedTitle = attributedTitle;
-        
-        [self.refreshControl endRefreshing];
-        [self activateSpinner:NO];
-    }
-}
-
-- (IBAction)tweetButtonClicked:(id)sender {
-    NSLog(@"Tweet button clicked");
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-    {
-        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:@"#surbitonfood "];
-        
-        [self presentViewController:tweetSheet animated:YES completion:nil];
-    }
-    else
-    {
-        UIAlertView *alertView = [[UIAlertView alloc]
-                                  initWithTitle:@"Sorry"
-                                  message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
-                                  delegate:self
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil];
-        [alertView show];
-    }
-}
-
-
 -(void)activateSpinner:(BOOL)activate {
     if (activate) {
         spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        spinner.center = CGPointMake(160, 240);
         spinner.hidesWhenStopped = YES;
         [self.view addSubview:spinner];
         [spinner startAnimating];
@@ -362,10 +346,47 @@
     
     TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
     [self presentViewController:webVc animated:YES completion:nil];
-
+    
     [webVc loadUrlString:urlString];
+}
 
-
+-(NSString *)dateDiff:(NSDate *)date {
+    NSDate *todayDate = [NSDate date];
+    double ti = [date timeIntervalSinceDate:todayDate];
+    ti = ti * -1;
+    if(ti < 1) {
+        return @"Just now";
+    } else 	if (ti < 60) {
+        return @"Just now";
+    } else if (ti < 3600) {
+        int diff = round(ti / 60);
+        if (diff == 1) {
+            return [NSString stringWithFormat:@"%d minute ago", diff];
+        } else {
+            return [NSString stringWithFormat:@"%d minutes ago", diff];
+        }
+    } else if (ti < 86400) {
+        int diff = round(ti / 60 / 60);
+        if (diff == 1) {
+            return[NSString stringWithFormat:@"%d hour ago", diff];
+        } else {
+            return[NSString stringWithFormat:@"%d hours ago", diff];
+        }
+    } else if (ti < 2629743) {
+        int diff = round(ti / 60 / 60 / 24);
+        if (diff == 1) {
+            return[NSString stringWithFormat:@"%d day ago", diff];
+        } else {
+            return[NSString stringWithFormat:@"%d days ago", diff];
+        }
+    } else {
+        int diff = round(ti / 60 / 60 / 24 / 30);
+        if (diff == 1) {
+            return[NSString stringWithFormat:@"%d month ago", diff];
+        } else {
+            return[NSString stringWithFormat:@"%d months ago", diff];
+        }
+    }
 }
 
 @end

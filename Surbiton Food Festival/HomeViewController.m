@@ -62,7 +62,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.screenName = @"Home Screen";
     [self setUpButtons];
 }
 

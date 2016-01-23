@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GAITrackedViewController.h"
 
-@interface VoucherListViewController : GAITrackedViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface VoucherListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSArray *_vouchers;
     NSString *storePath;
     NSMutableData *receivedData;

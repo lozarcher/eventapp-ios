@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Trader.h"
 #import <MessageUI/MFMessageComposeViewController.h>
-#import "GAITrackedViewController.h"
 
-@interface TraderViewController : GAITrackedViewController
+@interface TraderViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (retain,nonatomic) IBOutlet UILabel *traderTitleLabel;
 @property (retain,nonatomic) IBOutlet UIImageView *traderImageView;

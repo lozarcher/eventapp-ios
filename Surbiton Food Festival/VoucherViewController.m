@@ -53,7 +53,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.screenName = @"Voucher View";
 }
 
 - (void)viewWillDisappear:(BOOL)animated

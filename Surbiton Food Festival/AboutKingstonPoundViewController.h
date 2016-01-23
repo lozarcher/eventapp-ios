@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GAITrackedViewController.h"
 
-@interface AboutKingstonPoundViewController : GAITrackedViewController
+@interface AboutKingstonPoundViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

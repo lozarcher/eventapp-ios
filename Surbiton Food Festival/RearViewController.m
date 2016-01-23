@@ -34,7 +34,7 @@
 #import "TwitterViewController.h"
 #import "VoucherListViewController.h"
 #import "TraderListViewController.h"
-#import "MessageViewController.h"
+#import "PostListViewController.h"
 #import "AboutAppViewController.h"
 #import "AboutKingstonPoundViewController.h"
 
@@ -97,7 +97,7 @@
     }
     else if (row == 3)
     {
-        text = @"Group Messaging";
+        text = @"News";
     }
     else if (row == 4)
     {
@@ -172,7 +172,7 @@
   
     else if (row == 3)
     {
-        newFrontController = [[MessageViewController alloc] init];
+        newFrontController = [[PostListViewController alloc] init];
     }
 
     else if (row == 4)

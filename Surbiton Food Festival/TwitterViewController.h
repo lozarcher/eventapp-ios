@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TwitterViewCell.h"
-#import "GAITrackedViewController.h"
 
-@interface TwitterViewController : GAITrackedViewController <tweetLinkProtocol, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface TwitterViewController : UIViewController <tweetLinkProtocol, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_tweets;
     NSString *storePath;
     NSMutableData *receivedData;
