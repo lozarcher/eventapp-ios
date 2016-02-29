@@ -82,6 +82,7 @@
 		AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369FC1A9BCC3400F15869 /* Venue.m */; };
 		AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */; };
 		AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA056901AA4F82B003E095F /* TwitterViewCell.xib */; };
+		AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEAE299D1C848B5200533C60 /* Home@2x.png */; };
 		AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB281A90A956008C6329 /* EventViewController.m */; };
 		AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB9DB291A90A956008C6329 /* EventViewController.xib */; };
 		AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
@@ -263,6 +264,7 @@
 		AEA0568E1AA4F82B003E095F /* TwitterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewCell.h; sourceTree = "<group>"; };
 		AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewCell.m; sourceTree = "<group>"; };
 		AEA056901AA4F82B003E095F /* TwitterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewCell.xib; sourceTree = "<group>"; };
+		AEAE299D1C848B5200533C60 /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
 		AEB9DB271A90A956008C6329 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = ../EventViewController.h; sourceTree = "<group>"; };
 		AEB9DB281A90A956008C6329 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = ../EventViewController.m; sourceTree = "<group>"; };
 		AEB9DB291A90A956008C6329 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventViewController.xib; path = ../EventViewController.xib; sourceTree = "<group>"; };
@@ -582,6 +584,7 @@
 		AEE46FA11AB8747600F52708 /* Navbar icons */ = {
 			isa = PBXGroup;
 			children = (
+				AEAE299D1C848B5200533C60 /* Home@2x.png */,
 				AEE46FAA1AB8866B00F52708 /* bell-lg-filled@2x.png */,
 				AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */,
 				AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */,
@@ -859,6 +862,7 @@
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
+				AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */,
 				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
 				AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */,
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
@@ -1055,8 +1059,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Laurence Archer (22DUY8VHJW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Laurence Archer (22DUY8VHJW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1139,8 +1143,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Laurence Archer (22DUY8VHJW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Laurence Archer (22DUY8VHJW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1260,8 +1264,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Laurence Archer (22DUY8VHJW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Laurence Archer (22DUY8VHJW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1283,8 +1287,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Laurence Archer (22DUY8VHJW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Laurence Archer (22DUY8VHJW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
