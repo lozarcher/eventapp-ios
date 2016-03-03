@@ -41,7 +41,7 @@
      NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
      [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
--(void)loadVouchers{
+-(void)loadGallery{
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
@@ -70,9 +70,9 @@
     UITapGestureRecognizer *twitterTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadTwitter)];
     twitterTap.numberOfTapsRequired = 1;
     [self.orangePlate addGestureRecognizer:twitterTap];
-    UITapGestureRecognizer *voucherTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadVouchers)];
-    voucherTap.numberOfTapsRequired = 1;
-    [self.redPlate addGestureRecognizer:voucherTap];
+    UITapGestureRecognizer *galleryTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadGallery)];
+    galleryTap.numberOfTapsRequired = 1;
+    [self.redPlate addGestureRecognizer:galleryTap];
     UITapGestureRecognizer *kPoundTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loadKingstonPound)];
     kPoundTap.numberOfTapsRequired = 1;
     [self.yellowPlate addGestureRecognizer:kPoundTap];

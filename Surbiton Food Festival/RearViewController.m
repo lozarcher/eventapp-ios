@@ -32,11 +32,11 @@
 #import "HomeViewController.h"
 #import "EventListViewController.h"
 #import "TwitterViewController.h"
-#import "VoucherListViewController.h"
 #import "TraderListViewController.h"
 #import "PostListViewController.h"
 #import "AboutAppViewController.h"
 #import "AboutKingstonPoundViewController.h"
+#import "GalleryViewController.h"
 
 @interface RearViewController()
 {
@@ -105,7 +105,7 @@
     }
     else if (row == 5)
     {
-        text = @"Vouchers";
+        text = @"Gallery";
     }
     else if (row == 6)
     {
@@ -182,7 +182,7 @@
     
     else if (row == 5)
     {
-        newFrontController = [[VoucherListViewController alloc] init];
+        newFrontController = [[GalleryViewController alloc] init];
     }
     
     else if (row == 6)
@@ -195,13 +195,10 @@
         newFrontController = [[AboutAppViewController alloc] init];
     }
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newFrontController];
-
     [revealController pushFrontViewController:navigationController animated:YES];
 
     _presentedRow = row;  // <- store the presented row
 }
-
-
 
 //- (void)viewWillAppear:(BOOL)animated
 //{

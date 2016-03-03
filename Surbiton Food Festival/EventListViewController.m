@@ -13,7 +13,6 @@
 #import "EventViewController.h"
 #import "EventViewCell.h"
 #import "MTConfiguration.h"
-#import "SWRevealViewController.h"
 #import "AppDelegate.h"
 
 @implementation EventListViewController

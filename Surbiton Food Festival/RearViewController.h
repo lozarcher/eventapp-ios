@@ -30,6 +30,7 @@
 
 @property (nonatomic, retain) IBOutlet UITableView *rearTableView;
 @property (nonatomic, retain) NSArray *plates;
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

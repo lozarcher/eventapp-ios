@@ -73,6 +73,7 @@
 		AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB9DB291A90A956008C6329 /* EventViewController.xib */; };
 		AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
 		AEB9DB311A90C564008C6329 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB301A90C564008C6329 /* Tweet.m */; };
+		AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91B71C88641200708484 /* GalleryViewController.m */; };
 		AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */; };
 		AEBFA5611AB3632800B25A11 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBFA55F1AB3632800B25A11 /* VenueViewController.m */; };
 		AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBFA5601AB3632800B25A11 /* VenueViewController.xib */; };
@@ -228,6 +229,8 @@
 		AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetBuilder.m; sourceTree = "<group>"; };
 		AEB9DB2F1A90C564008C6329 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		AEB9DB301A90C564008C6329 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		AEBA91B61C88641200708484 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		AEBA91B71C88641200708484 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		AEBFA55E1AB3632800B25A11 /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
 		AEBFA55F1AB3632800B25A11 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
@@ -486,6 +489,15 @@
 			name = CoreApp;
 			sourceTree = "<group>";
 		};
+		AEBA91B51C885ECD00708484 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA91B61C88641200708484 /* GalleryViewController.h */,
+				AEBA91B71C88641200708484 /* GalleryViewController.m */,
+			);
+			name = Gallery;
+			sourceTree = "<group>";
+		};
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,6 +630,7 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AEBA91B51C885ECD00708484 /* Gallery */,
 				AE7003D71C4CF9C600556EF6 /* PostList */,
 				AEE46FAE1ABB4DDA00F52708 /* About */,
 				AEF3AB091AB4576C00B2C6A9 /* TraderList */,
@@ -932,6 +945,7 @@
 				AEF3AB261AB45D5200B2C6A9 /* TraderViewCell.m in Sources */,
 				AE1BCB9D1A9FAFAA00E79935 /* SWRevealViewController.m in Sources */,
 				AEF8BC461A7CEC8A007241DC /* main.m in Sources */,
+				AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */,
 				AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */,
 				AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */,
 				AE7003D11C4CF99300556EF6 /* Post.m in Sources */,

@@ -7,8 +7,8 @@
 //
 
 #import "AboutAppViewController.h"
-#import "SWRevealViewController.h"
 #import "PrivacyPolicyViewController.h"
+#import "AppDelegate.h"
 
 @interface AboutAppViewController ()
 
@@ -20,15 +20,18 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"Contact / Help", nil);
     
-    SWRevealViewController *revealController = [self revealViewController];
     
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-    
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
+                                                                         style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
 
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)loadHome:(id)sender {
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.homeViewController loadHome];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
