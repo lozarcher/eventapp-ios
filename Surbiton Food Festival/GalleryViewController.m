@@ -8,57 +8,89 @@
 
 #import "GalleryViewController.h"
 #import "AppDelegate.h"
+#import "MTConfiguration.h"
+#import "GalleryBuilder.h"
+#import "Gallery.h"
+#import "UploadPhotoViewController.h"
 
 @interface GalleryViewController ()
-@property (weak, nonatomic) IBOutlet UIView *browserView;
+@property MWPhotoBrowser *browser;
 
 @end
 
 @implementation GalleryViewController
 
+@synthesize spinner;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Create array of MWPhoto objects
-    self.photos = [NSMutableArray array];
-    self.thumbs = [NSMutableArray array];
-
-    // Add photos
-    [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/1897682_691767674222766_6681107116807073405_n.png?oh=e2df6f86291ced1e35e9dfec7c2fdf7e&oe=57620002"]]];
-    [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xat1/t31.0-8/1921222_688346764564857_1962211635_o.jpg"]]];
-    [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://scontent-lhr3-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/1535444_688279277904939_464169478_n.png?oh=e107f4c21c75d7827c8065a79a3c817f&oe=579654E1"]]];
-    [self.photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/1549261_691767704222763_1390333702370167352_n.png?oh=5cf7f285d87cd115ea59e939c577dbf7&oe=575471C9"]]];
-
-    [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-0/p206x206/1897682…_6681107116807073405_n.png?oh=0f4f6b01eba29c7c57ff323a07fe079a&oe=574B17CC"]]];
-    [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-0/p206x206/1004865…764564857_1962211635_n.jpg?oh=c3ae6cdbaabc78aa45e0461c8c18e1fd&oe=576CA9BA"]]];
-    [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://scontent-lhr3-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-0/p206x206/1535444…9277904939_464169478_n.png?oh=7dd154453042c8f751c378b9b5222631&oe=57698063"]]];
-    [self.thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-0/p206x206/1549261…_1390333702370167352_n.png?oh=38fd39538e43936b44065cc5f865ba9d&oe=576BFD07"]]];
-
-
-    // Create browser (must be done each time photo browser is
-    // displayed. Photo browser objects cannot be re-used)
-    
-    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-    
-    // Set options
-    browser.displayActionButton = YES; // Show action button to allow sharing, copying, etc (defaults to YES)
-    browser.displayNavArrows = YES; // Whether to display left and right nav arrows on toolbar (defaults to NO)
-    browser.displaySelectionButtons = NO; // Whether selection buttons are shown on each image (defaults to NO)
-    browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
-    browser.alwaysShowControls = YES; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
-    browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
-    browser.startOnGrid = YES; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
-    browser.autoPlayOnAppear = NO; // Auto-play first video
     
     self.title = NSLocalizedString(@"Gallery", nil);
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
                                                                          style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     self.navigationItem.leftBarButtonItem = revealButtonItem;
+    UIBarButtonItem *cameraButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"camera-icon.png"]
+                                                                         style:UIBarButtonItemStylePlain target:self action:@selector(doAddPhoto:)];
+    self.navigationItem.rightBarButtonItem = cameraButtonItem;
+    
     // Do any additional setup after loading the view.
     
-    [self.navigationController addChildViewController:browser];
+    NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    storePath = [NSString stringWithFormat:@"%@/Gallery.plist", aCachesDirectory];
     
+    _browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    // Set options
+    _browser.displayActionButton = YES; // Show action button to allow sharing, copying, etc (defaults to YES)
+    _browser.displayNavArrows = YES; // Whether to display left and right nav arrows on toolbar (defaults to NO)
+    _browser.displaySelectionButtons = NO; // Whether selection buttons are shown on each image (defaults to NO)
+    _browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
+    _browser.alwaysShowControls = YES; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
+    _browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
+    _browser.startOnGrid = YES; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
+    _browser.autoPlayOnAppear = NO; // Auto-play first video
+
+    [self.navigationController addChildViewController:_browser];
+    
+    [self activateSpinner:YES];
+    [self refreshGallery:self];
+
 }
+
+-(IBAction)doAddPhoto:(id)sender
+{
+    UploadPhotoViewController *vc = [[UploadPhotoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)refreshGallery:(id)sender {
+    NSLog(@"Fetching data from URL");
+    NSString *serviceHostname = [MTConfiguration serviceHostname];
+    NSString *loadUrl = @"/gallery";
+    NSString *urlAsString = [NSString stringWithFormat:@"%@%@", serviceHostname, loadUrl];
+    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    NSLog(@"%@", url);
+    // Create the request.
+    NSURLRequest *theRequest=[NSURLRequest requestWithURL:url
+                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                          timeoutInterval:10.0];
+    
+    // Create the NSMutableData to hold the received data.
+    // receivedData is an instance variable declared elsewhere.
+    receivedData = [NSMutableData dataWithCapacity: 0];
+    
+    // create the connection with the request
+    // and start loading the data
+    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+    if (!theConnection) {
+        // Release the receivedData object.
+        receivedData = nil;
+        
+        // Inform the user that the connection failed.
+        NSLog(@"Error making connection");
+        
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -71,14 +103,19 @@
 
 - (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
     if (index < self.photos.count) {
-        return [self.photos objectAtIndex:index];
+        Gallery *gallery = [self.photos objectAtIndex:index];
+        MWPhoto *photo = [MWPhoto photoWithURL:[NSURL URLWithString:gallery.picture]];
+        return photo;
     }
     return nil;
 }
 
 - (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
-    if (index < self.photos.count)
-        return [self.photos objectAtIndex:index];
+    if (index < self.photos.count) {
+        Gallery *gallery = [self.photos objectAtIndex:index];
+        MWPhoto *thumb = [MWPhoto photoWithURL:[NSURL URLWithString:gallery.thumb]];
+        return thumb;
+    }
     return nil;
 }
 
@@ -96,5 +133,128 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+#pragma mark NSURLConnection Delegate Methods
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // This method is called when the server has determined that it
+    // has enough information to create the NSURLResponse object.
+    
+    // It can be called multiple times, for example in the case of a
+    // redirect, so each time we reset the data.
+    
+    // receivedData is an instance variable declared elsewhere.
+    [receivedData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    // Append the new data to the instance variable you declared
+    [receivedData appendData:data];
+    
+}
+
+
+- (void)connection:(NSURLConnection *)connection
+  didFailWithError:(NSError *)error
+{
+    // Release the connection and the data object
+    // by setting the properties (declared elsewhere)
+    // to nil.  Note that a real-world app usually
+    // requires the delegate to manage more than one
+    // connection at a time, so these lines would
+    // typically be replaced by code to iterate through
+    // whatever data structures you are using.
+    connection = nil;
+    receivedData = nil;
+    
+    // inform the user
+    NSLog(@"Connection failed! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+    
+    [self activateSpinner:NO];
+    // Get events from cache instead
+    NSError *parseError;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:storePath]) {
+        NSError *readError;
+        NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
+        if (readError != nil) {
+            NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+        } else {
+            NSLog(@"Using cached data");
+            [self getGalleryFromData:data];
+        }
+    }
+    
+    if (_photos == nil || parseError != nil) {
+        if (parseError != nil) {
+            NSLog(@"Local post cache parse error: %@", [parseError localizedDescription]);
+            [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+        }
+    }
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    // do something with the data
+    // receivedData is declared as a property elsewhere
+    NSLog(@"Succeeded! Received %lu bytes of data", (unsigned long)receivedData.length);
+    
+    [self getGalleryFromData:receivedData];
+    [self activateSpinner:NO];
+    NSError* writeError;
+    [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
+    if (writeError != nil) {
+        NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
+    } else {
+        NSLog(@"Wrote to file %@", storePath);
+    }
+    
+    // Release the connection and the data object
+    // by setting the properties (declared elsewhere)
+    // to nil.  Note that a real-world app usually
+    // requires the delegate to manage more than one
+    // connection at a time, so these lines would
+    // typically be replaced by code to iterate through
+    // whatever data structures you are using.
+    connection = nil;
+    receivedData = nil;
+
+}
+
+
+-(NSError *)getGalleryFromData:(NSData *)data {
+    NSError *error = nil;
+    NSArray *gallery = [GalleryBuilder galleryFromJSON:data error:&error];
+    if ([gallery count] > 0) {
+        _photos = gallery;
+    }
+    if (error != nil) {
+        NSLog(@"Error : %@", [error description]);
+    }
+    NSLog(@"Got %lu photos from gallery data", (unsigned long)gallery.count);
+    [_browser reloadData];
+    return error;
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
+    // Return nil to indicate not necessary to store a cached response for this connection
+    return nil;
+}
+
+-(void)activateSpinner:(BOOL)activate {
+    if (activate) {
+        spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        spinner.hidesWhenStopped = YES;
+        [self.view addSubview:spinner];
+        [spinner startAnimating];
+    } else {
+        if (spinner) {
+            [spinner stopAnimating];
+        }
+    }
+}
+
 
 @end

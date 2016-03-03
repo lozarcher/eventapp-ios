@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MWPhotoBrowser.h"
 
-@interface GalleryViewController : UIViewController <MWPhotoBrowserDelegate>
+@interface GalleryViewController : UIViewController <MWPhotoBrowserDelegate, NSURLConnectionDelegate> {
+    NSString *storePath;
+    NSMutableData *receivedData;
+}
 
 @property (nonatomic, strong) NSMutableArray *photos;
-@property (nonatomic, strong) NSMutableArray *thumbs;
+@property (retain,nonatomic) UIActivityIndicatorView *spinner;
 
 @end

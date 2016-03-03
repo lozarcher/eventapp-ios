@@ -74,6 +74,11 @@
 		AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
 		AEB9DB311A90C564008C6329 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB301A90C564008C6329 /* Tweet.m */; };
 		AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91B71C88641200708484 /* GalleryViewController.m */; };
+		AEBA91BC1C8871E000708484 /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91BB1C8871E000708484 /* Gallery.m */; };
+		AEBA91BF1C8872AC00708484 /* GalleryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91BE1C8872AC00708484 /* GalleryBuilder.m */; };
+		AEBA91C21C888A3000708484 /* camera-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBA91C11C888A3000708484 /* camera-icon@2x.png */; };
+		AEBA91C61C88A3FB00708484 /* UploadPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91C41C88A3FB00708484 /* UploadPhotoViewController.m */; };
+		AEBA91C71C88A3FB00708484 /* UploadPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBA91C51C88A3FB00708484 /* UploadPhotoViewController.xib */; };
 		AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */; };
 		AEBFA5611AB3632800B25A11 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBFA55F1AB3632800B25A11 /* VenueViewController.m */; };
 		AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBFA5601AB3632800B25A11 /* VenueViewController.xib */; };
@@ -231,6 +236,14 @@
 		AEB9DB301A90C564008C6329 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		AEBA91B61C88641200708484 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		AEBA91B71C88641200708484 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		AEBA91BB1C8871E000708484 /* Gallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gallery.m; sourceTree = "<group>"; };
+		AEBA91BD1C8871F100708484 /* Gallery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gallery.h; sourceTree = "<group>"; };
+		AEBA91BE1C8872AC00708484 /* GalleryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryBuilder.m; sourceTree = "<group>"; };
+		AEBA91C01C8872B700708484 /* GalleryBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalleryBuilder.h; sourceTree = "<group>"; };
+		AEBA91C11C888A3000708484 /* camera-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-icon@2x.png"; sourceTree = "<group>"; };
+		AEBA91C31C88A3FB00708484 /* UploadPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPhotoViewController.h; sourceTree = "<group>"; };
+		AEBA91C41C88A3FB00708484 /* UploadPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPhotoViewController.m; sourceTree = "<group>"; };
+		AEBA91C51C88A3FB00708484 /* UploadPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadPhotoViewController.xib; sourceTree = "<group>"; };
 		AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		AEBFA55E1AB3632800B25A11 /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
 		AEBFA55F1AB3632800B25A11 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
@@ -377,6 +390,10 @@
 				AEF3AB291AB45D8000B2C6A9 /* Trader.m */,
 				AEF3AB2B1AB45D9000B2C6A9 /* TraderBuilder.h */,
 				AEF3AB2C1AB45D9000B2C6A9 /* TraderBuilder.m */,
+				AEBA91BB1C8871E000708484 /* Gallery.m */,
+				AEBA91BD1C8871F100708484 /* Gallery.h */,
+				AEBA91BE1C8872AC00708484 /* GalleryBuilder.m */,
+				AEBA91C01C8872B700708484 /* GalleryBuilder.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -494,6 +511,9 @@
 			children = (
 				AEBA91B61C88641200708484 /* GalleryViewController.h */,
 				AEBA91B71C88641200708484 /* GalleryViewController.m */,
+				AEBA91C31C88A3FB00708484 /* UploadPhotoViewController.h */,
+				AEBA91C41C88A3FB00708484 /* UploadPhotoViewController.m */,
+				AEBA91C51C88A3FB00708484 /* UploadPhotoViewController.xib */,
 			);
 			name = Gallery;
 			sourceTree = "<group>";
@@ -508,6 +528,7 @@
 				AE02BC3A1AAE0CEA0025E7CC /* splash.png */,
 				AE1BCBD21A9FDC2500E79935 /* icons */,
 				AE1BCBD01A9FD3CC00E79935 /* logo.jpg */,
+				AEBA91C11C888A3000708484 /* camera-icon@2x.png */,
 				AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */,
 				AE1BCBB31A9FC9C700E79935 /* reveal-icon@2x.png */,
 				AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */,
@@ -821,6 +842,7 @@
 				AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */,
 				AEAE29A21C8839B000533C60 /* Podfile in Resources */,
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
+				AEBA91C21C888A3000708484 /* camera-icon@2x.png in Resources */,
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
 				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
 				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
@@ -830,6 +852,7 @@
 				AE1BCBED1A9FDC3300E79935 /* Icon-76@2x.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */,
+				AEBA91C71C88A3FB00708484 /* UploadPhotoViewController.xib in Resources */,
 				AEEF3D251AD3F096003256FD /* green-plate.png in Resources */,
 				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
 				AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */,
@@ -930,6 +953,7 @@
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
 				AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */,
+				AEBA91C61C88A3FB00708484 /* UploadPhotoViewController.m in Sources */,
 				AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE7003D31C4CF99300556EF6 /* PostListViewController.m in Sources */,
@@ -937,6 +961,7 @@
 				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
 				AE1BCBA71A9FC62100E79935 /* RearViewController.m in Sources */,
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
+				AEBA91BC1C8871E000708484 /* Gallery.m in Sources */,
 				AE18C4C51A8CBC3700B96570 /* Event.m in Sources */,
 				AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */,
 				AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */,
@@ -947,6 +972,7 @@
 				AEF8BC461A7CEC8A007241DC /* main.m in Sources */,
 				AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */,
 				AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */,
+				AEBA91BF1C8872AC00708484 /* GalleryBuilder.m in Sources */,
 				AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */,
 				AE7003D11C4CF99300556EF6 /* Post.m in Sources */,
 				AEE46FD51ABB55E600F52708 /* AboutKingstonPoundViewController.m in Sources */,
