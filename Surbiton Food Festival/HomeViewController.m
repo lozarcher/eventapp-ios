@@ -7,7 +7,6 @@
 //
 
 #import "HomeViewController.h"
-#import "SWRevealViewController.h"
 
 @interface HomeViewController ()
 
@@ -19,22 +18,14 @@
 {
     [super viewDidLoad];
     
-    //self.title = NSLocalizedString(@"", nil);
     self.navigationController.navigationBar.hidden = YES;
-    
-    SWRevealViewController *revealController = [self revealViewController];
-
-    [revealController panGestureRecognizer];
-    [revealController tapGestureRecognizer];
-    
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-    
-    self.navigationItem.leftBarButtonItem = revealButtonItem;
 }
 
+-(void)loadHome {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
+}
 -(void)loadEvents{
-    NSLog(@"Tapped load events");
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }

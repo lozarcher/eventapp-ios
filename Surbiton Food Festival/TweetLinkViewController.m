@@ -43,7 +43,7 @@
 };
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [self activateSpinner:NO];
-    NSLog(@"Error");
+    NSLog(@"Error : %@",error);
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self activateSpinner:NO];

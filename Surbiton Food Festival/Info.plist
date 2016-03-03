@@ -42,10 +42,10 @@
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
-		<false/>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>eventapp.elasticbeanstalk.com</key>
+			<key>eventapp.eu-west-1.elasticbeanstalk.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>

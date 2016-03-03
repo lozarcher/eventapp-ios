@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *yellowPlate;
 @property (strong, nonatomic) RearViewController *rearViewController;
 -(void)setUpButtons;
+-(void)loadHome;
 
 @end

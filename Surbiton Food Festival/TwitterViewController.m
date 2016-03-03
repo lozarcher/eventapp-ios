@@ -10,7 +10,7 @@
 #import "Tweet.h"
 #import "TweetBuilder.h"
 #import "MTConfiguration.h"
-#import "SWRevealViewController.h"
+#import "AppDelegate.h"
 #import "TwitterViewCell.h"
 #import "TweetLinkViewController.h"
 
@@ -59,10 +59,8 @@
     
     self.title = NSLocalizedString(@"Twitter", nil);
     
-    SWRevealViewController *revealController = [self revealViewController];
-    
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
+                                                                         style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
@@ -80,6 +78,10 @@
     [super viewWillAppear:animated];
 }
 
+-(void)loadHome:(id)sender {
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.homeViewController loadHome];
+}
 
 - (void)refreshTweets:(id)sender {
     NSLog(@"Fetching data from URL");

@@ -16,7 +16,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    textLabel.linkURLTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
+    textLabel.urlLinkTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
         NSLog(@"Clicked link");
         [self.delegate loadURL:urlString];
         

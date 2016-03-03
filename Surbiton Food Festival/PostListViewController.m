@@ -11,8 +11,9 @@
 #import "PostBuilder.h"
 #import "PostViewCell.h"
 #import "MTConfiguration.h"
-#import "SWRevealViewController.h"
 #import "TweetLinkViewController.h"
+#import "UIImageView+WebCache.h"
+#import "AppDelegate.h"
 
 @implementation PostListViewController
 
@@ -52,14 +53,10 @@
     
     self.title = NSLocalizedString(@"News", nil);
     
-    SWRevealViewController *revealController = [self revealViewController];
-    
-    //[self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
-    
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-    
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
+                                                                         style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     self.navigationItem.leftBarButtonItem = revealButtonItem;
+    
     isPaginatedLoad = NO;
 
     [self activateSpinner:YES];
@@ -72,6 +69,11 @@
 
 - (void) viewDidLayoutSubviews {
     self.spinner.center = self.view.center;
+}
+
+-(void)loadHome:(id)sender {
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.homeViewController loadHome];
 }
 
 - (void)refreshPosts:(id)sender {
@@ -191,6 +193,16 @@
     if (![[post message] isKindOfClass:[NSNull class]]) {
         message = [post message];
     }
+    if (![[post pictureUrl] isKindOfClass:[NSNull class]]) {
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadImageWithURL:[NSURL URLWithString:[post pictureUrl]] options:0
+                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                             }
+                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                [cell.postImageView setImage:image];
+                                [cell setNeedsLayout];
+                            }];
+    }
     if (![[post link] isKindOfClass:[NSNull class]]) {
         if ([message isEqualToString:@""]) {
             message = [post link];
@@ -201,6 +213,7 @@
             }
         }
     }
+    
     if (![[post createdDate] isKindOfClass:[NSNull class]]) {
         NSTimeInterval createdSeconds = [post.createdDate doubleValue]/1000;
         NSDate *createdDate = [[NSDate alloc] initWithTimeIntervalSince1970:createdSeconds];

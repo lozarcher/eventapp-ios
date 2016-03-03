@@ -14,6 +14,7 @@
 #import "EventViewCell.h"
 #import "MTConfiguration.h"
 #import "SWRevealViewController.h"
+#import "AppDelegate.h"
 
 @implementation EventListViewController
 
@@ -56,18 +57,19 @@
     
     self.title = NSLocalizedString(@"Event Calendar", nil);
     
-    SWRevealViewController *revealController = [self revealViewController];
-    
-    //[self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
-    
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-    
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
+                                                                         style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
     [self activateSpinner:YES];
     [self refreshEvents:self];
 }
+
+-(void)loadHome:(id)sender {
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.homeViewController loadHome];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

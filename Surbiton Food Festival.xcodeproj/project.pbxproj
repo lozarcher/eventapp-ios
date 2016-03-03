@@ -7,22 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE02BC2A1AA8F4650025E7CC /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC0A1AA8F4650025E7CC /* MKAnnotationView+WebCache.m */; };
-		AE02BC2B1AA8F4650025E7CC /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC0C1AA8F4650025E7CC /* NSData+ImageContentType.m */; };
-		AE02BC2C1AA8F4650025E7CC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC0E1AA8F4650025E7CC /* SDImageCache.m */; };
-		AE02BC2D1AA8F4650025E7CC /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC101AA8F4650025E7CC /* SDWebImageCompat.m */; };
-		AE02BC2E1AA8F4650025E7CC /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC121AA8F4650025E7CC /* SDWebImageDecoder.m */; };
-		AE02BC2F1AA8F4650025E7CC /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC141AA8F4650025E7CC /* SDWebImageDownloader.m */; };
-		AE02BC301AA8F4650025E7CC /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC161AA8F4650025E7CC /* SDWebImageDownloaderOperation.m */; };
-		AE02BC311AA8F4650025E7CC /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC181AA8F4650025E7CC /* SDWebImageManager.m */; };
-		AE02BC321AA8F4650025E7CC /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC1B1AA8F4650025E7CC /* SDWebImagePrefetcher.m */; };
-		AE02BC331AA8F4650025E7CC /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC1D1AA8F4650025E7CC /* UIButton+WebCache.m */; };
-		AE02BC341AA8F4650025E7CC /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC1F1AA8F4650025E7CC /* UIImage+GIF.m */; };
-		AE02BC351AA8F4650025E7CC /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC211AA8F4650025E7CC /* UIImage+MultiFormat.m */; };
-		AE02BC361AA8F4650025E7CC /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC231AA8F4650025E7CC /* UIImage+WebP.m */; };
-		AE02BC371AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC251AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m */; };
-		AE02BC381AA8F4650025E7CC /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC271AA8F4650025E7CC /* UIImageView+WebCache.m */; };
-		AE02BC391AA8F4650025E7CC /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE02BC291AA8F4650025E7CC /* UIView+WebCacheOperation.m */; };
+		67BE8099601B35C784374B0D /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7EF5F88BFD131248207177 /* libPods-Surbiton Food Festival.a */; };
 		AE02BC3B1AAE0CEA0025E7CC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = AE02BC3A1AAE0CEA0025E7CC /* splash.png */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
 		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
@@ -83,6 +68,7 @@
 		AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */; };
 		AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA056901AA4F82B003E095F /* TwitterViewCell.xib */; };
 		AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEAE299D1C848B5200533C60 /* Home@2x.png */; };
+		AEAE29A21C8839B000533C60 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEAE29A11C8839B000533C60 /* Podfile */; };
 		AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB281A90A956008C6329 /* EventViewController.m */; };
 		AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB9DB291A90A956008C6329 /* EventViewController.xib */; };
 		AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
@@ -118,8 +104,6 @@
 		AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3D381AD5B17E003256FD /* HomeViewController.m */; };
 		AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D391AD5B17E003256FD /* HomeViewController.xib */; };
 		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
-		AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */; };
-		AEF3AB001AB1F09200B2C6A9 /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AAFF1AB1F09200B2C6A9 /* KILabel.m */; };
 		AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */; };
 		AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */; };
 		AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB1F1AB45D1400B2C6A9 /* TraderListViewController.m */; };
@@ -152,39 +136,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE02BC091AA8F4650025E7CC /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
-		AE02BC0A1AA8F4650025E7CC /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
-		AE02BC0B1AA8F4650025E7CC /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
-		AE02BC0C1AA8F4650025E7CC /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
-		AE02BC0D1AA8F4650025E7CC /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
-		AE02BC0E1AA8F4650025E7CC /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
-		AE02BC0F1AA8F4650025E7CC /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
-		AE02BC101AA8F4650025E7CC /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
-		AE02BC111AA8F4650025E7CC /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
-		AE02BC121AA8F4650025E7CC /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
-		AE02BC131AA8F4650025E7CC /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
-		AE02BC141AA8F4650025E7CC /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
-		AE02BC151AA8F4650025E7CC /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
-		AE02BC161AA8F4650025E7CC /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
-		AE02BC171AA8F4650025E7CC /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
-		AE02BC181AA8F4650025E7CC /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
-		AE02BC191AA8F4650025E7CC /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
-		AE02BC1A1AA8F4650025E7CC /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
-		AE02BC1B1AA8F4650025E7CC /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
-		AE02BC1C1AA8F4650025E7CC /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
-		AE02BC1D1AA8F4650025E7CC /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
-		AE02BC1E1AA8F4650025E7CC /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
-		AE02BC1F1AA8F4650025E7CC /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
-		AE02BC201AA8F4650025E7CC /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
-		AE02BC211AA8F4650025E7CC /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
-		AE02BC221AA8F4650025E7CC /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
-		AE02BC231AA8F4650025E7CC /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
-		AE02BC241AA8F4650025E7CC /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
-		AE02BC251AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
-		AE02BC261AA8F4650025E7CC /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
-		AE02BC271AA8F4650025E7CC /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		AE02BC281AA8F4650025E7CC /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
-		AE02BC291AA8F4650025E7CC /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		216CA38FD346A39C991929E0 /* Pods-Surbiton Food Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.release.xcconfig"; sourceTree = "<group>"; };
+		86F5681239063F50355849AC /* Pods-Surbiton Food Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.production.xcconfig"; sourceTree = "<group>"; };
+		A711FD2F296F14C67B518ABC /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
+		AB7EF5F88BFD131248207177 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE02BC3A1AAE0CEA0025E7CC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		AE1382611AA1422B00714884 /* Voucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
 		AE1382621AA1422B00714884 /* Voucher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
@@ -265,6 +220,7 @@
 		AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewCell.m; sourceTree = "<group>"; };
 		AEA056901AA4F82B003E095F /* TwitterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewCell.xib; sourceTree = "<group>"; };
 		AEAE299D1C848B5200533C60 /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
+		AEAE29A11C8839B000533C60 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AEB9DB271A90A956008C6329 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = ../EventViewController.h; sourceTree = "<group>"; };
 		AEB9DB281A90A956008C6329 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = ../EventViewController.m; sourceTree = "<group>"; };
 		AEB9DB291A90A956008C6329 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventViewController.xib; path = ../EventViewController.xib; sourceTree = "<group>"; };
@@ -307,9 +263,6 @@
 		AEEF3D381AD5B17E003256FD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AEEF3D391AD5B17E003256FD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
-		AEF3AAFE1AB1F09200B2C6A9 /* KILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KILabel.h; sourceTree = "<group>"; };
-		AEF3AAFF1AB1F09200B2C6A9 /* KILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KILabel.m; sourceTree = "<group>"; };
 		AEF3AB011AB1F7E700B2C6A9 /* TweetLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetLinkViewController.h; sourceTree = "<group>"; };
 		AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetLinkViewController.m; sourceTree = "<group>"; };
 		AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetLinkViewController.xib; sourceTree = "<group>"; };
@@ -342,6 +295,7 @@
 		AEFF2E8C1A925ED8005DBCBB /* EventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewCell.h; path = ../EventViewCell.h; sourceTree = "<group>"; };
 		AEFF2E8D1A925ED8005DBCBB /* EventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewCell.m; path = ../EventViewCell.m; sourceTree = "<group>"; };
 		AEFF2E8E1A925ED8005DBCBB /* EventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventViewCell.xib; path = ../EventViewCell.xib; sourceTree = "<group>"; };
+		CB4E3AA4C49890EF5DEC5516 /* Pods-Surbiton Food Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +309,7 @@
 				AE1BCBA91A9FC77200E79935 /* UIKit.framework in Frameworks */,
 				AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */,
 				AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */,
+				67BE8099601B35C784374B0D /* libPods-Surbiton Food Festival.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,44 +323,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE02BC081AA8F4650025E7CC /* SDWebImage */ = {
+		742685F13202720A629598A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AE02BC091AA8F4650025E7CC /* MKAnnotationView+WebCache.h */,
-				AE02BC0A1AA8F4650025E7CC /* MKAnnotationView+WebCache.m */,
-				AE02BC0B1AA8F4650025E7CC /* NSData+ImageContentType.h */,
-				AE02BC0C1AA8F4650025E7CC /* NSData+ImageContentType.m */,
-				AE02BC0D1AA8F4650025E7CC /* SDImageCache.h */,
-				AE02BC0E1AA8F4650025E7CC /* SDImageCache.m */,
-				AE02BC0F1AA8F4650025E7CC /* SDWebImageCompat.h */,
-				AE02BC101AA8F4650025E7CC /* SDWebImageCompat.m */,
-				AE02BC111AA8F4650025E7CC /* SDWebImageDecoder.h */,
-				AE02BC121AA8F4650025E7CC /* SDWebImageDecoder.m */,
-				AE02BC131AA8F4650025E7CC /* SDWebImageDownloader.h */,
-				AE02BC141AA8F4650025E7CC /* SDWebImageDownloader.m */,
-				AE02BC151AA8F4650025E7CC /* SDWebImageDownloaderOperation.h */,
-				AE02BC161AA8F4650025E7CC /* SDWebImageDownloaderOperation.m */,
-				AE02BC171AA8F4650025E7CC /* SDWebImageManager.h */,
-				AE02BC181AA8F4650025E7CC /* SDWebImageManager.m */,
-				AE02BC191AA8F4650025E7CC /* SDWebImageOperation.h */,
-				AE02BC1A1AA8F4650025E7CC /* SDWebImagePrefetcher.h */,
-				AE02BC1B1AA8F4650025E7CC /* SDWebImagePrefetcher.m */,
-				AE02BC1C1AA8F4650025E7CC /* UIButton+WebCache.h */,
-				AE02BC1D1AA8F4650025E7CC /* UIButton+WebCache.m */,
-				AE02BC1E1AA8F4650025E7CC /* UIImage+GIF.h */,
-				AE02BC1F1AA8F4650025E7CC /* UIImage+GIF.m */,
-				AE02BC201AA8F4650025E7CC /* UIImage+MultiFormat.h */,
-				AE02BC211AA8F4650025E7CC /* UIImage+MultiFormat.m */,
-				AE02BC221AA8F4650025E7CC /* UIImage+WebP.h */,
-				AE02BC231AA8F4650025E7CC /* UIImage+WebP.m */,
-				AE02BC241AA8F4650025E7CC /* UIImageView+HighlightedWebCache.h */,
-				AE02BC251AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m */,
-				AE02BC261AA8F4650025E7CC /* UIImageView+WebCache.h */,
-				AE02BC271AA8F4650025E7CC /* UIImageView+WebCache.m */,
-				AE02BC281AA8F4650025E7CC /* UIView+WebCacheOperation.h */,
-				AE02BC291AA8F4650025E7CC /* UIView+WebCacheOperation.m */,
+				AB7EF5F88BFD131248207177 /* libPods-Surbiton Food Festival.a */,
 			);
-			path = SDWebImage;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AE1382671AA142DE00714884 /* VoucherList */ = {
@@ -506,7 +429,6 @@
 				AE1BCBD81A9FDC3300E79935 /* Icon-76.png */,
 				AE1BCBD91A9FDC3300E79935 /* Icon-76@2x.png */,
 				AE1BCBDA1A9FDC3300E79935 /* Icon-76@3x.png */,
-				AEF3AAEE1AB1B46300B2C6A9 /* Icon-128.png */,
 				AE1BCBDB1A9FDC3300E79935 /* Icon-Small-50.png */,
 				AE1BCBDC1A9FDC3300E79935 /* Icon-Small-50@2x.png */,
 				AE1BCBDD1A9FDC3300E79935 /* Icon-Small.png */,
@@ -650,15 +572,6 @@
 			name = plates;
 			sourceTree = "<group>";
 		};
-		AEF3AAFD1AB1F07900B2C6A9 /* KILabel */ = {
-			isa = PBXGroup;
-			children = (
-				AEF3AAFE1AB1F09200B2C6A9 /* KILabel.h */,
-				AEF3AAFF1AB1F09200B2C6A9 /* KILabel.m */,
-			);
-			name = KILabel;
-			sourceTree = "<group>";
-		};
 		AEF3AB091AB4576C00B2C6A9 /* TraderList */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,6 +591,7 @@
 		AEF8BC371A7CEC8A007241DC = {
 			isa = PBXGroup;
 			children = (
+				AEAE29A11C8839B000533C60 /* Podfile */,
 				AE19E59E1AC18A2B00B3F69F /* SystemConfiguration.framework */,
 				AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */,
 				AE1BCBB61A9FCA4D00E79935 /* CoreGraphics.framework */,
@@ -687,6 +601,8 @@
 				AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */,
 				AEF8BC5F1A7CEC8A007241DC /* Surbiton Food FestivalTests */,
 				AEF8BC411A7CEC8A007241DC /* Products */,
+				B8B0060A1676D8F8C79563F3 /* Pods */,
+				742685F13202720A629598A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -721,8 +637,6 @@
 		AEF8BC431A7CEC8A007241DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AEF3AAFD1AB1F07900B2C6A9 /* KILabel */,
-				AE02BC081AA8F4650025E7CC /* SDWebImage */,
 				AE1BCB9A1A9FAFAA00E79935 /* SWRevealViewController */,
 				AEF8BC441A7CEC8A007241DC /* Info.plist */,
 				AEF8BC451A7CEC8A007241DC /* main.m */,
@@ -748,6 +662,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B8B0060A1676D8F8C79563F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB4E3AA4C49890EF5DEC5516 /* Pods-Surbiton Food Festival.debug.xcconfig */,
+				86F5681239063F50355849AC /* Pods-Surbiton Food Festival.production.xcconfig */,
+				A711FD2F296F14C67B518ABC /* Pods-Surbiton Food Festival.development.xcconfig */,
+				216CA38FD346A39C991929E0 /* Pods-Surbiton Food Festival.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -755,9 +680,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEF8BC661A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food Festival" */;
 			buildPhases = (
+				4FAAED42C554D8B782299B45 /* Check Pods Manifest.lock */,
 				AEF8BC3C1A7CEC8A007241DC /* Sources */,
 				AEF8BC3D1A7CEC8A007241DC /* Frameworks */,
 				AEF8BC3E1A7CEC8A007241DC /* Resources */,
+				346D571FD590A8DB05086CAE /* Embed Pods Frameworks */,
+				8B535B7972A4B203CEB8BBD7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -857,7 +785,6 @@
 				AE02BC3B1AAE0CEA0025E7CC /* splash.png in Resources */,
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
-				AEF3AAEF1AB1B46300B2C6A9 /* Icon-128.png in Resources */,
 				AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
@@ -879,6 +806,7 @@
 				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
 				AEE46FD11ABB55CC00F52708 /* AboutAppViewController.xib in Resources */,
 				AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */,
+				AEAE29A21C8839B000533C60 /* Podfile in Resources */,
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
 				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
@@ -920,14 +848,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		346D571FD590A8DB05086CAE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FAAED42C554D8B782299B45 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B535B7972A4B203CEB8BBD7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AEF8BC3C1A7CEC8A007241DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE02BC391AA8F4650025E7CC /* UIView+WebCacheOperation.m in Sources */,
 				AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */,
-				AEF3AB001AB1F09200B2C6A9 /* KILabel.m in Sources */,
 				AE7003D51C4CF99300556EF6 /* PostViewCell.m in Sources */,
 				AE1382631AA1422B00714884 /* Voucher.m in Sources */,
 				AEF3AB2D1AB45D9000B2C6A9 /* TraderBuilder.m in Sources */,
@@ -935,13 +909,10 @@
 				AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */,
 				AE1BCBA01A9FC59A00E79935 /* CustomAnimationController.m in Sources */,
 				AE1BCBCE1A9FD0A400E79935 /* EventListViewController.m in Sources */,
-				AE02BC301AA8F4650025E7CC /* SDWebImageDownloaderOperation.m in Sources */,
 				AEF3AB2A1AB45D8000B2C6A9 /* Trader.m in Sources */,
-				AE02BC321AA8F4650025E7CC /* SDWebImagePrefetcher.m in Sources */,
 				AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */,
 				AEB9DB311A90C564008C6329 /* Tweet.m in Sources */,
 				AE1BCBC31A9FCF6300E79935 /* TwitterViewController.m in Sources */,
-				AE02BC351AA8F4650025E7CC /* UIImage+MultiFormat.m in Sources */,
 				AEE46FD01ABB55CC00F52708 /* AboutAppViewController.m in Sources */,
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
@@ -949,8 +920,6 @@
 				AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE7003D31C4CF99300556EF6 /* PostListViewController.m in Sources */,
-				AE02BC331AA8F4650025E7CC /* UIButton+WebCache.m in Sources */,
-				AE02BC341AA8F4650025E7CC /* UIImage+GIF.m in Sources */,
 				AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */,
 				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
 				AE1BCBA71A9FC62100E79935 /* RearViewController.m in Sources */,
@@ -958,26 +927,16 @@
 				AE18C4C51A8CBC3700B96570 /* Event.m in Sources */,
 				AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */,
 				AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */,
-				AE02BC2C1AA8F4650025E7CC /* SDImageCache.m in Sources */,
 				AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */,
-				AE02BC311AA8F4650025E7CC /* SDWebImageManager.m in Sources */,
-				AE02BC361AA8F4650025E7CC /* UIImage+WebP.m in Sources */,
 				AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */,
 				AEF3AB261AB45D5200B2C6A9 /* TraderViewCell.m in Sources */,
 				AE1BCB9D1A9FAFAA00E79935 /* SWRevealViewController.m in Sources */,
 				AEF8BC461A7CEC8A007241DC /* main.m in Sources */,
-				AE02BC381AA8F4650025E7CC /* UIImageView+WebCache.m in Sources */,
-				AE02BC2F1AA8F4650025E7CC /* SDWebImageDownloader.m in Sources */,
 				AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */,
-				AE02BC2A1AA8F4650025E7CC /* MKAnnotationView+WebCache.m in Sources */,
 				AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */,
-				AE02BC2E1AA8F4650025E7CC /* SDWebImageDecoder.m in Sources */,
-				AE02BC2D1AA8F4650025E7CC /* SDWebImageCompat.m in Sources */,
-				AE02BC371AA8F4650025E7CC /* UIImageView+HighlightedWebCache.m in Sources */,
 				AE7003D11C4CF99300556EF6 /* Post.m in Sources */,
 				AEE46FD51ABB55E600F52708 /* AboutKingstonPoundViewController.m in Sources */,
 				AEBFA5611AB3632800B25A11 /* VenueViewController.m in Sources */,
-				AE02BC2B1AA8F4650025E7CC /* NSData+ImageContentType.m in Sources */,
 				AE7003D21C4CF99300556EF6 /* PostBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1056,8 +1015,9 @@
 		};
 		AEF5208F1A9E2B4600C05D84 /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A711FD2F296F14C67B518ABC /* Pods-Surbiton Food Festival.development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1140,8 +1100,9 @@
 		};
 		AEF520921A9E2B5500C05D84 /* Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F5681239063F50355849AC /* Pods-Surbiton Food Festival.production.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1261,8 +1222,9 @@
 		};
 		AEF8BC671A7CEC8A007241DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB4E3AA4C49890EF5DEC5516 /* Pods-Surbiton Food Festival.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1284,8 +1246,9 @@
 		};
 		AEF8BC681A7CEC8A007241DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 216CA38FD346A39C991929E0 /* Pods-Surbiton Food Festival.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

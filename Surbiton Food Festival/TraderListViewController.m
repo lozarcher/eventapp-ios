@@ -12,8 +12,8 @@
 #import "TraderBuilder.h"
 #import "TraderViewCell.h"
 #import "MTConfiguration.h"
-#import "SWRevealViewController.h"
 #import "TraderViewController.h"
+#import "AppDelegate.h"
 
 @implementation TraderListViewController
 
@@ -53,13 +53,8 @@
     
     self.title = NSLocalizedString(@"Traders", nil);
     
-    SWRevealViewController *revealController = [self revealViewController];
-    
-    //[self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
-    
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-    
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
+                                                                         style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
     [self activateSpinner:YES];
@@ -70,6 +65,10 @@
     [super viewWillAppear:animated];
 }
 
+-(void)loadHome:(id)sender {
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.homeViewController loadHome];
+}
 
 - (void)refreshTraders:(id)sender {
     NSLog(@"Fetching data from URL");

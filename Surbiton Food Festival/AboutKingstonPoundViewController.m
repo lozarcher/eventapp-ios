@@ -7,7 +7,7 @@
 //
 
 #import "AboutKingstonPoundViewController.h"
-#import "SWRevealViewController.h"
+#import "AppDelegate.h"
 
 @interface AboutKingstonPoundViewController ()
 
@@ -19,10 +19,8 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"Kingston Pound", nil);
     
-    SWRevealViewController *revealController = [self revealViewController];
-    
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-                                                                         style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
+                                                                         style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
@@ -33,6 +31,10 @@
     [super viewWillAppear:animated];
 }
 
+-(void)loadHome:(id)sender {
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.homeViewController loadHome];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

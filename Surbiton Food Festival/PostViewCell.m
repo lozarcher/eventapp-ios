@@ -12,11 +12,11 @@
 
 @implementation PostViewCell
 
-@synthesize messageLabel, delegate, linkLabel, dateLabel, cardView;
+@synthesize messageLabel, delegate, linkLabel, dateLabel, cardView, postImageView;
 
 - (void)awakeFromNib {
     // Initialization code
-    messageLabel.linkURLTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
+    messageLabel.urlLinkTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
         NSLog(@"Clicked link");
         [self.delegate loadURL:urlString];
         
@@ -24,6 +24,7 @@
 }
 
 - (void) layoutSubviews {
+    [super layoutSubviews];
     [self.cardView setAlpha:1];
     self.cardView.layer.masksToBounds = NO;
     self.cardView.layer.cornerRadius = 4;

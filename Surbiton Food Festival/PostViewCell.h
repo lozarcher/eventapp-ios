@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet KILabel *linkLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIView *cardView;
+@property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 
 @end

@@ -102,7 +102,7 @@
         }
     }
     
-    eventDescriptionLabel.linkURLTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
+    eventDescriptionLabel.urlLinkTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
         NSLog(@"Clicked link: %@", urlString);
        
         [self loadURL:urlString];

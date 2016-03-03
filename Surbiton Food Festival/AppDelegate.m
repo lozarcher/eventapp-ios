@@ -40,12 +40,12 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
     
-    HomeViewController *homeViewController = [[HomeViewController alloc] init];
+    self.homeViewController = [[HomeViewController alloc] init];
     RearViewController *rearViewController = [[RearViewController alloc] init];
     
-    homeViewController.rearViewController = rearViewController;
+    self.homeViewController.rearViewController = rearViewController;
     
-    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
     UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
     
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
