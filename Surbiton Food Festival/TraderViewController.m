@@ -8,6 +8,7 @@
 
 #import "TraderViewController.h"
 #import "UIImageView+WebCache.h"
+#import "CoverHelper.h"
 
 @interface TraderViewController ()
 
@@ -55,7 +56,15 @@
                              progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                              }
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                                [traderImageView setImage:image];
+                                CoverHelper *coverHelper = [[CoverHelper alloc] init];
+                                float coverRatio = (float)784/(float)400;
+                                UIImage *croppedImage = [coverHelper clipCover:image fbOffsetX:trader.coverOffsetX fbOffsetY:trader.coverOffsetY ratio:coverRatio];
+                                NSLog(@"Original image size %f %f", image.size.width, image.size.height);
+                                
+                                NSLog(@"Cropped image size %f %f", croppedImage.size.width, croppedImage.size.height);
+                                [traderImageView setImage:croppedImage];
+                                
+                                //[traderImageView setImage:image];
                             }];
     } else {
         [traderImageView setImage:[UIImage imageNamed:@"logo.jpg"]];

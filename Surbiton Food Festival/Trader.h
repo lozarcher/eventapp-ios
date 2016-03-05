@@ -13,6 +13,8 @@
 @property (strong, nonatomic) NSString *about;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *coverImg;
+@property (strong, nonatomic) NSString *coverOffsetX;
+@property (strong, nonatomic) NSString *coverOffsetY;
 @property (strong, nonatomic) NSString *link;
 @property (strong, nonatomic) NSString *profileImg;
 @property (strong, nonatomic) NSString *website;

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -27,7 +28,7 @@
                     <rect key="frame" x="-2" y="0.0" width="602" height="600"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edj-Lw-4Gn">
-                            <rect key="frame" x="9" y="256" width="584" height="21"/>
+                            <rect key="frame" x="9" y="363" width="584" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="L41-fK-SBr"/>
                             </constraints>
@@ -36,16 +37,22 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-gx-TwD">
-                            <rect key="frame" x="10" y="220" width="584" height="21"/>
+                            <rect key="frame" x="10" y="327" width="584" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-pK-fic">
-                            <rect key="frame" x="0.0" y="0.0" width="602" height="200"/>
+                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-pK-fic">
+                            <rect key="frame" x="0.0" y="0.0" width="602" height="307"/>
                             <constraints>
+                                <constraint firstAttribute="width" secondItem="z9U-pK-fic" secondAttribute="height" multiplier="784:400" id="vMF-Ff-lVF"/>
                                 <constraint firstAttribute="height" constant="200" id="xbc-GK-nE5"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="xbc-GK-nE5"/>
+                                </mask>
+                            </variation>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KingstonPound-small-15.png" translatesAutoresizingMaskIntoConstraints="NO" id="6qg-0U-0U1">
                             <rect key="frame" x="517" y="8" width="75" height="75"/>
@@ -73,7 +80,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXk-5r-ZKr">
-                            <rect key="frame" x="279" y="372" width="44" height="30"/>
+                            <rect key="frame" x="279" y="479" width="44" height="30"/>
                             <state key="normal" title="Phone">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>

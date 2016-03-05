@@ -10,6 +10,6 @@
 
 @implementation Trader
 
-@synthesize id, name, about, phone, website, coverImg, profileImg, link, kingstonPound;
+@synthesize id, name, about, phone, website, coverImg, coverOffsetX, coverOffsetY, profileImg, link, kingstonPound;
 
 @end

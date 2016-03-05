@@ -87,6 +87,7 @@
 		AEC425441AD913ED0021049E /* cutlery_fork.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC4253F1AD913ED0021049E /* cutlery_fork.png */; };
 		AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC425401AD913ED0021049E /* cutlery_spoon.png */; };
 		AEC425461AD913ED0021049E /* cutlery_teaspoon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC425411AD913ED0021049E /* cutlery_teaspoon.png */; };
+		AEDF8D2B1C8AD8D0007391C7 /* CoverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */; };
 		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
 		AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
 		AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */; };
@@ -253,6 +254,8 @@
 		AEC4253F1AD913ED0021049E /* cutlery_fork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_fork.png; sourceTree = "<group>"; };
 		AEC425401AD913ED0021049E /* cutlery_spoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_spoon.png; sourceTree = "<group>"; };
 		AEC425411AD913ED0021049E /* cutlery_teaspoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_teaspoon.png; sourceTree = "<group>"; };
+		AEDF8D291C8AD8D0007391C7 /* CoverHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverHelper.h; sourceTree = "<group>"; };
+		AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverHelper.m; sourceTree = "<group>"; };
 		AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarCompose@2x.png"; sourceTree = "<group>"; };
 		AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIAccessoryButtonX@2x.png"; sourceTree = "<group>"; };
 		AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-lg-outline@2x.png"; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 				AEBA91BD1C8871F100708484 /* Gallery.h */,
 				AEBA91BE1C8872AC00708484 /* GalleryBuilder.m */,
 				AEBA91C01C8872B700708484 /* GalleryBuilder.h */,
+				AEDF8D291C8AD8D0007391C7 /* CoverHelper.h */,
+				AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -952,6 +957,7 @@
 				AEE46FD01ABB55CC00F52708 /* AboutAppViewController.m in Sources */,
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
+				AEDF8D2B1C8AD8D0007391C7 /* CoverHelper.m in Sources */,
 				AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */,
 				AEBA91C61C88A3FB00708484 /* UploadPhotoViewController.m in Sources */,
 				AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */,
