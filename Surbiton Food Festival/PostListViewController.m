@@ -134,7 +134,7 @@
     // Cell text (event title)
     Post *post = [self getPostForIndexPath:indexPath];
     NSLog(@"Cell label %@", [post name]);
-    [self populateDataInCell:post cell:cell];
+    [self populateDataInCell:post cell:cell indexPath:indexPath];
     cell.delegate = self;
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -157,16 +157,27 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if (!self.prototypeCell)
     {
         self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];
     }
     Post *post = [self getPostForIndexPath:indexPath];
-    [self populateDataInCell:post cell:self.prototypeCell];
+    [self populateDataInCell:post cell:self.prototypeCell indexPath:indexPath];
     
     [self.prototypeCell layoutIfNeeded];
+    
     CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingExpandedSize];
     return size.height;
+//    CGFloat imageHeight = [[heightsCache objectForKey:post.pictureUrl] floatValue];
+//    
+//    NSLog(@"Returning row height %f for row %ld", size.height, (long)indexPath.row);
+//    
+//    CGFloat originalHeight = size.height;
+//    
+//    CGFloat newHeight = originalHeight - self.prototypeCell.imageView.frame.size.height + imageHeight;
+//    return newHeight;
+    
 }
 
 - (void)tableView:(UITableView *)localTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -186,23 +197,30 @@
     }
 }
 
--(void)populateDataInCell:(Post *)post cell:(PostViewCell *)cell {
+-(void)populateDataInCell:(Post *)post cell:(PostViewCell *)cell indexPath:(NSIndexPath *)indexPath {
     //traderNameLabel.text = [trader name];
     cell.textLabel.text = @"";
     NSString *message = @"";
     if (![[post message] isKindOfClass:[NSNull class]]) {
         message = [post message];
     }
-    if (![[post pictureUrl] isKindOfClass:[NSNull class]]) {
-        SDWebImageManager *manager = [SDWebImageManager sharedManager];
-        [manager downloadImageWithURL:[NSURL URLWithString:[post pictureUrl]] options:0
-                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                             }
-                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                                [cell.postImageView setImage:image];
-                                [cell setNeedsLayout];
-                            }];
-    }
+//    if (![[post pictureUrl] isKindOfClass:[NSNull class]]) {
+//        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+//        [manager downloadImageWithURL:[NSURL URLWithString:[post pictureUrl]] options:0
+//                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//                             }
+//                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+//                                [cell.postImageView setImage:image];
+//                                [heightsCache setObject:[NSNumber numberWithFloat:image.size.height]
+//                                                      forKey:imageURL];
+//                                NSLog(@"Setting image height %f for %@", image.size.height, post.pictureUrl);
+
+                                //[tableView beginUpdates];
+                                //[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                                //[tableView endUpdates];
+//                            }];
+//    } else {
+//    }
     if (![[post link] isKindOfClass:[NSNull class]]) {
         if ([message isEqualToString:@""]) {
             message = [post link];

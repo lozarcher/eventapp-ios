@@ -14,6 +14,7 @@
     NSString *storePath;
     NSMutableData *receivedData;
     BOOL isPaginatedLoad;
+    NSMutableDictionary *heightsCache;
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
