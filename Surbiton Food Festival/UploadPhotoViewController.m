@@ -92,7 +92,7 @@
             imageFileName = [NSString stringWithFormat:@"%@.jpg", stringUUID];
 
             NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-            [params setValue:_nameLabel.text forKey:@"name"];
+            [params setValue:_nameField.text forKey:@"name"];
             [params setValue:@"caption" forKey:@"caption"];
             [params setValue:imageFileName forKey:@"filename"];
 
