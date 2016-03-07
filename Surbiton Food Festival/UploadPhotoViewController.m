@@ -7,6 +7,10 @@
 //
 
 #import "UploadPhotoViewController.h"
+#import "MTConfiguration.h"
+#import "AppDelegate.h"
+
+@import MobileCoreServices;    // only needed in iOS
 
 @interface UploadPhotoViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *takePhotoButton;
@@ -28,6 +32,7 @@
     _nameField.hidden = TRUE;
     _takePhotoButton.hidden = FALSE;
     _cameraRollButton.hidden = FALSE;
+    self.httpQueue = [[NSOperationQueue alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,64 +76,122 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)uploadPhoto:(id)sender {
+// method to convert user image to JPEG representation
+- (IBAction) uploadPhoto:(id)sender {
+    {
+        NSData   *imageFileData;
+        NSString *imageFileName;
+        // check if there is an image to upload
+        if (self.imageView != nil) {
+            // yes, let's convert the image
+            // UIImageJPEGRepresentation accepts a UIImage and compression parameter
+            // use UIImagePNGRepresentation(self.userImage) for .PNG types
+            imageFileData = UIImageJPEGRepresentation(self.imageView.image, 0.33f);
+            NSUUID  *UUID = [NSUUID UUID];
+            NSString* stringUUID = [UUID UUIDString];
+            imageFileName = [NSString stringWithFormat:@"%@.jpg", stringUUID];
 
-    /* creating path to document directory and appending filename with extension */
-    
-    NSUUID  *UUID = [NSUUID UUID];
-    NSString* fileName = [NSString stringWithFormat:@"%@.jpg", [UUID UUIDString]];
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:fileName];
-    
-    NSData *file1Data = [[NSData alloc] initWithContentsOfFile:filePath];
-    
-    // NSString *urlString = @”http://www.yourserver.com/applink/fileup.php&#8221;;
-    NSString *urlString = @"http://www.yourserver.com/applink/fileup.php&#8221";
-    
-    /* creating URL request to send data */
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    
-    [request setURL:[NSURL URLWithString:urlString]];
-    
-    [request setHTTPMethod:@"POST"];
-    
-    NSString *boundary = @"—————————14737809831466499882746641449";
-    
-    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
-    
-    [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
-    
-    /* adding content as a body to post */
-    
-    NSMutableData *body = [NSMutableData data];
-    
-    NSString *header = [NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\".%@\"\r\n",[fileName stringByDeletingPathExtension],[fileName pathExtension]];
-    
-    [body appendData:[[NSString stringWithFormat:@"\r\n–%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [body appendData:[[NSString stringWithString:header] dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [body appendData:[NSData dataWithData:file1Data]];
-    
-    [body appendData:[[NSString stringWithFormat:@"\r\n–%@–\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [request setHTTPBody:body];
-    
-    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    
-    NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding] ;
-    NSLog(@"return string =%@",returnString);
+            NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+            [params setValue:_nameLabel.text forKey:@"name"];
+            [params setValue:@"caption" forKey:@"caption"];
+            [params setValue:imageFileName forKey:@"filename"];
 
-    [self.navigationController popViewControllerAnimated:YES];
+            [self uploadToServerUsingImage:imageFileData andFileName:imageFileName andParams:params];
+        } else {
+            NSLog(@"processImageThenPostToServer:self.userImage IS nil.");
+        }
+    }
 }
 
+// HTTP method to upload file to web server
+- (void)uploadToServerUsingImage:(NSData *)imageData andFileName:(NSString *)filename andParams:(NSDictionary*)paramsDict {
+    // set this to your server's address
+    
+    NSString *serviceHostname = [MTConfiguration serviceHostname];
+    NSString *loadUrl = @"/gallery";
+    NSString *urlAsString = [NSString stringWithFormat:@"%@%@", serviceHostname, loadUrl];
+    
+    NSURL *theURL = [NSURL URLWithString:urlAsString];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:theURL];
+        
+    // setting the HTTP method
+    [request setHTTPMethod:@"POST"];
+        
+    // we want a JSON response
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        
+    // the boundary string. Can be whatever we want, as long as it doesn't appear as part of "proper" fields
+    NSString *boundary = @"qqqq___winter_is_coming_!___qqqq";
+        
+    // setting the Content-type and the boundary
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
+    [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
+        
+    // we need a buffer of mutable data where we will write the body of the request
+    NSMutableData *body = [NSMutableData data];
+    
+    // writing the basic parameters
+    for (NSString *key in paramsDict) {
+        [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+        [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", key] dataUsingEncoding:NSUTF8StringEncoding]];
+        [body appendData:[[NSString stringWithFormat:@"%@\r\n", [paramsDict objectForKey:key]] dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+        
+    // if we have successfully obtained a NSData representation of the image
+    if (imageData) {
+        [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+        [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"photo\"; filename=\"%@\"\r\n", filename] dataUsingEncoding:NSUTF8StringEncoding]];
+        [body appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+        [body appendData:imageData];
+        [body appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+    else
+        NSLog(@"no image data!!!");
+        
+    // we close the body with one last boundary
+    [body appendData:[[NSString stringWithFormat:@"--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    // assigning the completed NSMutableData buffer as the body of the HTTP POST request
+    [request setHTTPBody:body];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Thank you for your photo! After moderation, it will appear on the gallery" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
+    
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.homeViewController loadHome];
+    
+    // send the request
+    [NSURLConnection sendAsynchronousRequest:request
+                                           queue:self.httpQueue
+                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+                                   NSLog(@"completion handler with response: %@", [NSHTTPURLResponse localizedStringForStatusCode:[(NSHTTPURLResponse*)response statusCode]]);
+                                   NSLog(@"response: %li",(long)[(NSHTTPURLResponse*)response statusCode]);
+                                   
+                                   NSInteger status = [(NSHTTPURLResponse*)response statusCode];
+                                   
+                                   if(error){
+                                       NSLog(@"http request error: %@", error.localizedDescription);
+                                       // handle the error
+                                   }
+                                   else{
+                                       if (status == 200) {
+                                           NSLog(@"Photo uploaded successfully");
+                                           NSLog(@"response %@", response);
+
+                                       }
+                                           // handle the success
+                                       else {
+                                           NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                           UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Sorry, there was an error uploading your photo" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                                           [alertView show];
+                                           NSLog(@"Photo did not upload: %@", result);
+                                       }
+                                   }
+                               }];
+        
+    }
 /*
 #pragma mark - Navigation
 

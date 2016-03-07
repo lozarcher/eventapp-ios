@@ -12,5 +12,5 @@
 
 @property (nonatomic, weak) UIImage *image;
 @property (nonatomic, weak) NSString *name;
-
+@property (nonatomic, strong) NSOperationQueue *httpQueue;
 @end
