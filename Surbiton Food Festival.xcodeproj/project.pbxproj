@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		67BE8099601B35C784374B0D /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7EF5F88BFD131248207177 /* libPods-Surbiton Food Festival.a */; };
-		AE02BC3B1AAE0CEA0025E7CC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = AE02BC3A1AAE0CEA0025E7CC /* splash.png */; };
+		AE0D6D8A1C970688006726CC /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D891C970688006726CC /* launchimage.png */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
 		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
 		AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C11A8CBBB200B96570 /* EventBuilder.m */; };
@@ -147,7 +147,7 @@
 		86F5681239063F50355849AC /* Pods-Surbiton Food Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.production.xcconfig"; sourceTree = "<group>"; };
 		A711FD2F296F14C67B518ABC /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
 		AB7EF5F88BFD131248207177 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE02BC3A1AAE0CEA0025E7CC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		AE0D6D891C970688006726CC /* launchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage.png; sourceTree = "<group>"; };
 		AE1382611AA1422B00714884 /* Voucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
 		AE1382621AA1422B00714884 /* Voucher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
 		AE1382641AA1426D00714884 /* VoucherBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherBuilder.h; sourceTree = "<group>"; };
@@ -446,6 +446,7 @@
 		AE1BCBD21A9FDC2500E79935 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				AE0D6D891C970688006726CC /* launchimage.png */,
 				AE1BCBD31A9FDC3300E79935 /* Icon-60.png */,
 				AE1BCBD41A9FDC3300E79935 /* Icon-60@2x.png */,
 				AE1BCBD51A9FDC3300E79935 /* Icon-60@3x.png */,
@@ -530,7 +531,6 @@
 				AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */,
 				AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */,
 				AEE46FA11AB8747600F52708 /* Navbar icons */,
-				AE02BC3A1AAE0CEA0025E7CC /* splash.png */,
 				AE1BCBD21A9FDC2500E79935 /* icons */,
 				AE1BCBD01A9FD3CC00E79935 /* logo.jpg */,
 				AEBA91C11C888A3000708484 /* camera-icon@2x.png */,
@@ -821,7 +821,6 @@
 				AEEF3D261AD3F096003256FD /* indigo-plate.png in Resources */,
 				AEEF3D2A1AD3F096003256FD /* SFF-Logo-700-shadow.png in Resources */,
 				AE1BCBB51A9FC9C700E79935 /* reveal-icon@2x.png in Resources */,
-				AE02BC3B1AAE0CEA0025E7CC /* splash.png in Resources */,
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
 				AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */,
@@ -832,6 +831,7 @@
 				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
 				AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */,
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
+				AE0D6D8A1C970688006726CC /* launchimage.png in Resources */,
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
 				AEEF3D241AD3F096003256FD /* Cloth-BG-Green.png in Resources */,
 				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
