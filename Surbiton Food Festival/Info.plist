@@ -37,6 +37,8 @@
 	<string>928002470546276</string>
 	<key>FacebookDisplayName</key>
 	<string>Surbiton Food Festival</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

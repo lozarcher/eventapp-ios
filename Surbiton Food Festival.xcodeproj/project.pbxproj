@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		67BE8099601B35C784374B0D /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7EF5F88BFD131248207177 /* libPods-Surbiton Food Festival.a */; };
 		AE0D6D8A1C970688006726CC /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D891C970688006726CC /* launchimage.png */; };
+		AE0D6D941C971141006726CC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D8F1C971141006726CC /* Default-568h@2x.png */; };
+		AE0D6D951C971141006726CC /* Default-iPhone6.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D901C971141006726CC /* Default-iPhone6.png */; };
+		AE0D6D961C971141006726CC /* Default-iPhone6Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D911C971141006726CC /* Default-iPhone6Plus.png */; };
+		AE0D6D971C971141006726CC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D921C971141006726CC /* Default.png */; };
+		AE0D6D981C971141006726CC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D931C971141006726CC /* Default@2x.png */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
 		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
 		AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C11A8CBBB200B96570 /* EventBuilder.m */; };
@@ -148,6 +153,11 @@
 		A711FD2F296F14C67B518ABC /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
 		AB7EF5F88BFD131248207177 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0D6D891C970688006726CC /* launchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage.png; sourceTree = "<group>"; };
+		AE0D6D8F1C971141006726CC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Surbiton Food Festival/Default-568h@2x.png"; sourceTree = "<group>"; };
+		AE0D6D901C971141006726CC /* Default-iPhone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-iPhone6.png"; path = "Surbiton Food Festival/Default-iPhone6.png"; sourceTree = "<group>"; };
+		AE0D6D911C971141006726CC /* Default-iPhone6Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-iPhone6Plus.png"; path = "Surbiton Food Festival/Default-iPhone6Plus.png"; sourceTree = "<group>"; };
+		AE0D6D921C971141006726CC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Surbiton Food Festival/Default.png"; sourceTree = "<group>"; };
+		AE0D6D931C971141006726CC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Surbiton Food Festival/Default@2x.png"; sourceTree = "<group>"; };
 		AE1382611AA1422B00714884 /* Voucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
 		AE1382621AA1422B00714884 /* Voucher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
 		AE1382641AA1426D00714884 /* VoucherBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherBuilder.h; sourceTree = "<group>"; };
@@ -630,6 +640,11 @@
 			isa = PBXGroup;
 			children = (
 				AEAE29A11C8839B000533C60 /* Podfile */,
+				AE0D6D8F1C971141006726CC /* Default-568h@2x.png */,
+				AE0D6D901C971141006726CC /* Default-iPhone6.png */,
+				AE0D6D911C971141006726CC /* Default-iPhone6Plus.png */,
+				AE0D6D921C971141006726CC /* Default.png */,
+				AE0D6D931C971141006726CC /* Default@2x.png */,
 				AE19E59E1AC18A2B00B3F69F /* SystemConfiguration.framework */,
 				AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */,
 				AE1BCBB61A9FCA4D00E79935 /* CoreGraphics.framework */,
@@ -811,6 +826,7 @@
 				AEBFA5621AB3632800B25A11 /* VenueViewController.xib in Resources */,
 				AE7003D41C4CF99300556EF6 /* PostListViewController.xib in Resources */,
 				AE1BCBC41A9FCF6300E79935 /* TwitterViewController.xib in Resources */,
+				AE0D6D971C971141006726CC /* Default.png in Resources */,
 				AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */,
 				AE1BCBEB1A9FDC3300E79935 /* Icon-72@2x.png in Resources */,
 				AEE46FAD1ABB4A1700F52708 /* KingstonPound-small-15.png in Resources */,
@@ -823,11 +839,13 @@
 				AE1BCBB51A9FC9C700E79935 /* reveal-icon@2x.png in Resources */,
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
+				AE0D6D981C971141006726CC /* Default@2x.png in Resources */,
 				AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
 				AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */,
+				AE0D6D941C971141006726CC /* Default-568h@2x.png in Resources */,
 				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
 				AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */,
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
@@ -851,6 +869,7 @@
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
 				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
 				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
+				AE0D6D961C971141006726CC /* Default-iPhone6Plus.png in Resources */,
 				AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */,
 				AE1BCBF11A9FDC3300E79935 /* Icon-Small.png in Resources */,
 				AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */,
@@ -867,6 +886,7 @@
 				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
 				AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */,
 				AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */,
+				AE0D6D951C971141006726CC /* Default-iPhone6.png in Resources */,
 				AEC425461AD913ED0021049E /* cutlery_teaspoon.png in Resources */,
 				AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */,
 				AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */,
@@ -1064,7 +1084,6 @@
 			baseConfigurationReference = A711FD2F296F14C67B518ABC /* Pods-Surbiton Food Festival.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1149,7 +1168,6 @@
 			baseConfigurationReference = 86F5681239063F50355849AC /* Pods-Surbiton Food Festival.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1271,7 +1289,6 @@
 			baseConfigurationReference = CB4E3AA4C49890EF5DEC5516 /* Pods-Surbiton Food Festival.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1295,7 +1312,6 @@
 			baseConfigurationReference = 216CA38FD346A39C991929E0 /* Pods-Surbiton Food Festival.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
