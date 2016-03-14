@@ -105,6 +105,13 @@
     if (index < self.photos.count) {
         Gallery *gallery = [self.photos objectAtIndex:index];
         MWPhoto *photo = [MWPhoto photoWithURL:[NSURL URLWithString:gallery.picture]];
+        NSString *caption;
+        if (![gallery.caption isEqualToString:@""]) {
+            caption = [[NSString alloc] initWithFormat:@"%@\r\n%@", gallery.caption, gallery.user];
+        } else {
+            caption = [[NSString alloc] initWithFormat:@"%@", gallery.user];
+        }
+        photo.caption = caption;
         return photo;
     }
     return nil;

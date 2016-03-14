@@ -37,14 +37,14 @@
                         <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UmF-6F-lLq">
                             <rect key="frame" x="29" y="8" width="364" height="369"/>
                             <subviews>
-                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="green-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-NS-7KP">
+                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="magenta-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-NS-7KP">
                                     <rect key="frame" x="28" y="-8" width="145" height="145"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="145" id="72o-lI-OHy"/>
                                         <constraint firstAttribute="height" constant="145" id="pZP-3Q-mZg"/>
                                     </constraints>
                                 </imageView>
-                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="indigo-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="OaR-xQ-TkS">
+                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="orange-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="OaR-xQ-TkS">
                                     <rect key="frame" x="182" y="-8" width="145" height="145"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="145" id="8lh-dn-Lhx"/>
@@ -57,14 +57,14 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="magenta-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-87-17S">
+                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="blue-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Q8-87-17S">
                                     <rect key="frame" x="28" y="112" width="145" height="145"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="145" id="9ge-N1-E25"/>
                                         <constraint firstAttribute="height" constant="145" id="qzq-AF-fm1"/>
                                     </constraints>
                                 </imageView>
-                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="orange-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="fj1-EX-ZME">
+                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="red-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="fj1-EX-ZME">
                                     <rect key="frame" x="182" y="112" width="145" height="145"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="145" id="f0X-W0-95X"/>
@@ -77,7 +77,7 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="red-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="qDO-Ut-dRP">
+                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="green-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="qDO-Ut-dRP">
                                     <rect key="frame" x="28" y="236" width="145" height="145"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="145" id="UPU-Kp-eAg"/>
@@ -90,7 +90,7 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="yellow-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-pl-eRT">
+                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="indigo-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-pl-eRT">
                                     <rect key="frame" x="182" y="236" width="145" height="145"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="145" id="3Wz-hU-FY8"/>
@@ -202,6 +202,7 @@
     <resources>
         <image name="Cloth-BG-Green.png" width="1417" height="1417"/>
         <image name="SFF-Logo-700-shadow.png" width="700" height="400"/>
+        <image name="blue-plate.png" width="300" height="300"/>
         <image name="cutlery_chopsticks.png" width="72" height="281"/>
         <image name="cutlery_fork.png" width="71" height="233"/>
         <image name="cutlery_knife.png" width="51" height="246"/>
@@ -212,6 +213,5 @@
         <image name="magenta-plate.png" width="300" height="300"/>
         <image name="orange-plate.png" width="300" height="300"/>
         <image name="red-plate.png" width="300" height="300"/>
-        <image name="yellow-plate.png" width="300" height="300"/>
     </resources>
 </document>

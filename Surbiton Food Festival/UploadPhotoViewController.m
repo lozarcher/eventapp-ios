@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *captionField;
+@property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 
 @end
 
@@ -30,6 +32,8 @@
     _submitButton.hidden = TRUE;
     _nameLabel.hidden = TRUE;
     _nameField.hidden = TRUE;
+    _captionField.hidden = TRUE;
+    _captionLabel.hidden = TRUE;
     _takePhotoButton.hidden = FALSE;
     _cameraRollButton.hidden = FALSE;
     self.httpQueue = [[NSOperationQueue alloc] init];
@@ -70,6 +74,8 @@
     _imageView.image=image;
     _nameLabel.hidden = NO;
     _nameField.hidden = NO;
+    _captionLabel.hidden = NO;
+    _captionField.hidden = NO;
     _submitButton.hidden=NO;
     _cameraRollButton.hidden = YES;
     _takePhotoButton.hidden = YES;
@@ -81,6 +87,11 @@
     {
         NSData   *imageFileData;
         NSString *imageFileName;
+        if ([_nameField.text isEqualToString:@""]) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Please enter your name" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alertView show];
+            return;
+        }
         // check if there is an image to upload
         if (self.imageView != nil) {
             // yes, let's convert the image
@@ -93,7 +104,7 @@
 
             NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
             [params setValue:_nameField.text forKey:@"name"];
-            [params setValue:@"caption" forKey:@"caption"];
+            [params setValue:_captionField.text forKey:@"caption"];
             [params setValue:imageFileName forKey:@"filename"];
 
             [self uploadToServerUsingImage:imageFileData andFileName:imageFileName andParams:params];
