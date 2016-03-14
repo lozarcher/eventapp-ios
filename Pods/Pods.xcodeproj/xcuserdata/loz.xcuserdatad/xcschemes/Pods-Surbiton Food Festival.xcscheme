@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DDDD4A19CE422E828C77669B'
+               BlueprintIdentifier = 'B7854651D5934CA68B8BC905'
                BlueprintName = 'Pods-Surbiton Food Festival'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Surbiton Food Festival.a'>

@@ -51,7 +51,7 @@
                                         <constraint firstAttribute="height" constant="145" id="C3c-ug-9g8"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Traders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fux-Wg-cLX">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fux-Wg-cLX">
                                     <rect key="frame" x="218" y="54" width="74" height="22"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,8 +71,8 @@
                                         <constraint firstAttribute="height" constant="145" id="oE7-Ol-f9Y"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2a-Mg-sao">
-                                    <rect key="frame" x="225" y="174" width="59" height="22"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Traders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2a-Mg-sao">
+                                    <rect key="frame" x="223" y="174" width="64" height="22"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -84,7 +84,7 @@
                                         <constraint firstAttribute="height" constant="145" id="YWQ-Z5-8FD"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwy-5B-aYM">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vouchers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwy-5B-aYM">
                                     <rect key="frame" x="64" y="298" width="73" height="22"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,15 +144,20 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KingstonPound-small-15.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-Un-Glh">
-                                    <rect key="frame" x="218" y="272" width="74" height="74"/>
-                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsu-hD-ROC">
+                                    <rect key="frame" x="223" y="298" width="64" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="OaR-xQ-TkS" firstAttribute="leading" secondItem="gih-bO-stt" secondAttribute="trailing" constant="-35" id="4Zk-xc-2OD"/>
                                 <constraint firstItem="AEX-NS-7KP" firstAttribute="leading" secondItem="UmF-6F-lLq" secondAttribute="leading" constant="28" id="7x7-Fi-btQ"/>
                                 <constraint firstItem="OaR-xQ-TkS" firstAttribute="top" secondItem="UmF-6F-lLq" secondAttribute="top" constant="-8" id="9UG-mg-OxX"/>
                                 <constraint firstItem="AEX-NS-7KP" firstAttribute="top" secondItem="UmF-6F-lLq" secondAttribute="top" constant="-8" id="9Um-R2-lCA"/>
+                                <constraint firstItem="zsu-hD-ROC" firstAttribute="centerY" secondItem="Kcu-pl-eRT" secondAttribute="centerY" id="CEl-IG-zVv"/>
+                                <constraint firstItem="zsu-hD-ROC" firstAttribute="centerX" secondItem="Kcu-pl-eRT" secondAttribute="centerX" id="CoY-5R-IQi"/>
                                 <constraint firstItem="Lwq-DV-qkJ" firstAttribute="leading" secondItem="3Q8-87-17S" secondAttribute="trailing" constant="-76" id="DKt-7q-0qL"/>
                                 <constraint firstItem="aRN-o0-6Kl" firstAttribute="leading" secondItem="Kcu-pl-eRT" secondAttribute="trailing" constant="-25" id="FcN-VG-q4p"/>
                                 <constraint firstItem="qDO-Ut-dRP" firstAttribute="leading" secondItem="UmF-6F-lLq" secondAttribute="leading" constant="28" id="Lrt-8E-5ZV"/>
@@ -196,7 +201,6 @@
     </objects>
     <resources>
         <image name="Cloth-BG-Green.png" width="1417" height="1417"/>
-        <image name="KingstonPound-small-15.png" width="100" height="99"/>
         <image name="SFF-Logo-700-shadow.png" width="700" height="400"/>
         <image name="cutlery_chopsticks.png" width="72" height="281"/>
         <image name="cutlery_fork.png" width="71" height="233"/>

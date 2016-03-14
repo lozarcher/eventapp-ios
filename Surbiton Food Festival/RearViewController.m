@@ -35,7 +35,7 @@
 #import "TraderListViewController.h"
 #import "PostListViewController.h"
 #import "AboutAppViewController.h"
-#import "AboutKingstonPoundViewController.h"
+#import "VoucherListViewController.h"
 #import "GalleryViewController.h"
 
 @interface RearViewController()
@@ -109,7 +109,7 @@
     }
     else if (row == 6)
     {
-        text = @"Kingston Pound";
+        text = @"Vouchers";
     }
     else if (row == 7)
     {
@@ -167,7 +167,7 @@
     
     else if (row == 2)
     {
-        newFrontController = [[TraderListViewController alloc] init];
+        newFrontController = [[GalleryViewController alloc] init];
     }
   
     else if (row == 3)
@@ -177,17 +177,17 @@
 
     else if (row == 4)
     {
-        newFrontController = [[TwitterViewController alloc] init];
+        newFrontController = [[TraderListViewController alloc] init];
     }
     
     else if (row == 5)
     {
-        newFrontController = [[GalleryViewController alloc] init];
+        newFrontController = [[VoucherListViewController alloc] init];
     }
     
     else if (row == 6)
     {
-        newFrontController = [[AboutKingstonPoundViewController alloc] init];
+        newFrontController = [[TwitterViewController alloc] init];
     }
     
     else if (row == 7)
