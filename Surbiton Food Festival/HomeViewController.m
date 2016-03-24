@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    UIImage *patternImage = [UIImage imageNamed:@"yellow-cloth-tile.png"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
     self.navigationController.navigationBar.hidden = YES;
 }
 

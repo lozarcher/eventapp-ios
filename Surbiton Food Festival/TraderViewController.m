@@ -57,7 +57,7 @@
                              }
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                 CoverHelper *coverHelper = [[CoverHelper alloc] init];
-                                float coverRatio = (float)784/(float)400;
+                                float coverRatio = (float)851/(float)315;
                                 UIImage *croppedImage = [coverHelper clipCover:image fbOffsetX:trader.coverOffsetX fbOffsetY:trader.coverOffsetY ratio:coverRatio];
                                 NSLog(@"Original image size %f %f", image.size.width, image.size.height);
                                 

@@ -167,7 +167,7 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 
-    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Thank you for your photo! After moderation, it will appear on the gallery" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Thank you for your photo! It will appear on the gallery shortly" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alertView show];
     
     AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;

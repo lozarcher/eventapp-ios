@@ -39,7 +39,7 @@
     NSLog(@"CGRectMake offsetX/Y %f %f width height %f %f", offsetX, offsetY, width, height);
     
     UIGraphicsBeginImageContext(cropRect.size);
-    [image drawAtPoint:CGPointMake(offsetX, -offsetY)];
+    [image drawAtPoint:CGPointMake(-offsetX, -offsetY)];
     UIImage *croppedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     

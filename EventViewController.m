@@ -159,16 +159,15 @@
                              progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                              }
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                                CoverHelper *coverHelper = [[CoverHelper alloc] init];
-                                float coverRatio = (float)784/(float)400;
-                                UIImage *croppedImage = [coverHelper clipCover:image fbOffsetX:event.coverOffsetX fbOffsetY:event.coverOffsetY ratio:coverRatio];
-                                NSLog(@"Original image size %f %f", image.size.width, image.size.height);
-
-                                NSLog(@"Cropped image size %f %f", croppedImage.size.width, croppedImage.size.height);
-                                [eventImageView setImage:croppedImage];
-                                
-                                //[eventImageView setImage:image];
-                            }];
+                                [eventImageView setImage:image];
+//                                CoverHelper *coverHelper = [[CoverHelper alloc] init];
+//                                float coverRatio = (float)851/(float)315;
+//                                UIImage *croppedImage = [coverHelper clipCover:image fbOffsetX:event.coverOffsetX fbOffsetY:event.coverOffsetY ratio:coverRatio];
+//                                NSLog(@"Original image size %f %f", image.size.width, image.size.height);
+//
+//                                NSLog(@"Cropped image size %f %f", croppedImage.size.width, croppedImage.size.height);
+//                                [eventImageView setImage:croppedImage];
+                                }];
     } else {
         [eventImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
