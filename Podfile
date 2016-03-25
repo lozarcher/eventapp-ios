@@ -8,7 +8,6 @@ workspace 'Surbiton Food Festival'
 target 'Surbiton Food Festival' do
     pod 'MWPhotoBrowser'
     pod 'KILabel'
-    pod 'CoreTextToy', '~> 1.0'
     #pod 'DZNEmptyDataSet'
     #pod 'iRate'
     #pod 'FontAwesomeKit'

@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CoreTextToy.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>DACircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>084C5EA65082187FAC4C0B39874D9502</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>37663AFAE60FAC7D446B8386D637AD45</key>
+		<key>378527619CA4049B97564F850F320A16</key>
 		<dict>
 			<key>primary</key>
 			<true/>
