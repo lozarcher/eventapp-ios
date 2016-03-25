@@ -9,8 +9,7 @@
 #import "InfoViewController.h"
 #import "UIImageView+WebCache.h"
 #import "CoverHelper.h"
-#import "UILabel+MarkupExtensions.h"
-#import "UIImage+ResizeMagick.h"
+#import "TweetLinkViewController.h"
 
 @interface InfoViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
@@ -43,11 +42,25 @@
     
     // Do any additional setup after loading the view from its nib.
     infoTitle.text = info.title;
-    [infoContent setMarkup:info.content];
-
-    [super viewDidLoad];
-
+    infoContent.text = info.content;
     
+    infoContent.urlLinkTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
+        NSLog(@"Clicked link: %@", urlString);
+        [self loadURL:urlString];
+    };
+    
+    [super viewDidLoad];
+}
+
+-(void)loadURL:(NSString *)urlString {
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NSString stringWithFormat:@"http://%@", urlString];
+    }
+    NSLog(@"Loading URL %@ from view controller", urlString);
+    
+    TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
+    [self presentViewController:webVc animated:YES completion:nil];
+    [webVc loadUrlString:urlString];
 }
 
 -(void) viewDidAppear:(BOOL)animated {

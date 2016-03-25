@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CoreTextToy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DACircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,11 +34,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MarkupLabel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Surbiton Food Festival.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,25 +44,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIImage-ResizeMagick.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>084C5EA65082187FAC4C0B39874D9502</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37663AFAE60FAC7D446B8386D637AD45</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>51B426E1E4D41BB025A219FE9989EBF7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6079BB52E5333457A03946B7592C23F7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6B79808207F041754C8E0CDAB1620ADB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,11 +78,6 @@
 			<true/>
 		</dict>
 		<key>B96285E7CD473DAFFBCF3969FFEB8EAD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ECFBB75C383BAF16D624FF1F31B60CFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

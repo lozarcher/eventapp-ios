@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Info.h"
-#import "UILabel+MarkupExtensions.h"
+#import "KILabel.h"
 
 @interface InfoViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *infoImage;
 @property (weak, nonatomic) IBOutlet UILabel *infoTitle;
-@property (weak, nonatomic) IBOutlet UILabel *infoContent;
+@property (weak, nonatomic) IBOutlet KILabel *infoContent;
 @property (retain,nonatomic) Info *info;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topConstraint;
 @end
