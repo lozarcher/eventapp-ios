@@ -78,6 +78,10 @@
     [super viewWillAppear:animated];
 }
 
+- (void) viewDidLayoutSubviews {
+    self.spinner.center = self.view.center;
+}
+
 -(void)loadHome:(id)sender {
     AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
     [appDelegate.homeViewController loadHome];
@@ -348,7 +352,6 @@
 -(void)activateSpinner:(BOOL)activate {
     if (activate) {
         spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        spinner.center = CGPointMake(160, 240);
         spinner.hidesWhenStopped = YES;
         [self.view addSubview:spinner];
         [spinner startAnimating];
