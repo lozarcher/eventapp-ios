@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsm-Yx-q0y">
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsm-Yx-q0y">
                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                     <items>
                         <navigationItem id="n0d-OC-DGf"/>

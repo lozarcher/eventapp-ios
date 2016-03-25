@@ -68,6 +68,14 @@
 		AE9055D11CA44B9500E9C369 /* Default-iPhone6Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055CC1CA44B9500E9C369 /* Default-iPhone6Plus.png */; };
 		AE9055D21CA44B9500E9C369 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055CD1CA44B9500E9C369 /* Default.png */; };
 		AE9055D31CA44B9500E9C369 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055CE1CA44B9500E9C369 /* Default@2x.png */; };
+		AE9055D81CA53AB000E9C369 /* InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055D61CA53AB000E9C369 /* InfoListViewController.m */; };
+		AE9055D91CA53AB000E9C369 /* InfoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055D71CA53AB000E9C369 /* InfoListViewController.xib */; };
+		AE9055DB1CA53B6200E9C369 /* Info.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055DA1CA53B6200E9C369 /* Info.m */; };
+		AE9055DF1CA53BF200E9C369 /* InfoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055DE1CA53BF200E9C369 /* InfoBuilder.m */; };
+		AE9055E31CA53EF300E9C369 /* InfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055E11CA53EF300E9C369 /* InfoViewCell.m */; };
+		AE9055E41CA53EF300E9C369 /* InfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055E21CA53EF300E9C369 /* InfoViewCell.xib */; };
+		AE9055E81CA5416300E9C369 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055E61CA5416300E9C369 /* InfoViewController.m */; };
+		AE9055E91CA5416300E9C369 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055E71CA5416300E9C369 /* InfoViewController.xib */; };
 		AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9369F31A9BC5E300F15869 /* MapKit.framework */; };
 		AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369F91A9BCBC000F15869 /* VenueBuilder.m */; };
 		AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369FC1A9BCC3400F15869 /* Venue.m */; };
@@ -229,6 +237,19 @@
 		AE9055CC1CA44B9500E9C369 /* Default-iPhone6Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-iPhone6Plus.png"; path = "Surbiton Food Festival/Default-iPhone6Plus.png"; sourceTree = "<group>"; };
 		AE9055CD1CA44B9500E9C369 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Surbiton Food Festival/Default.png"; sourceTree = "<group>"; };
 		AE9055CE1CA44B9500E9C369 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Surbiton Food Festival/Default@2x.png"; sourceTree = "<group>"; };
+		AE9055D51CA53AB000E9C369 /* InfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoListViewController.h; sourceTree = "<group>"; };
+		AE9055D61CA53AB000E9C369 /* InfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoListViewController.m; sourceTree = "<group>"; };
+		AE9055D71CA53AB000E9C369 /* InfoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoListViewController.xib; sourceTree = "<group>"; };
+		AE9055DA1CA53B6200E9C369 /* Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Info.m; sourceTree = "<group>"; };
+		AE9055DC1CA53B6D00E9C369 /* Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
+		AE9055DD1CA53BF200E9C369 /* InfoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoBuilder.h; sourceTree = "<group>"; };
+		AE9055DE1CA53BF200E9C369 /* InfoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoBuilder.m; sourceTree = "<group>"; };
+		AE9055E01CA53EF300E9C369 /* InfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewCell.h; sourceTree = "<group>"; };
+		AE9055E11CA53EF300E9C369 /* InfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewCell.m; sourceTree = "<group>"; };
+		AE9055E21CA53EF300E9C369 /* InfoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewCell.xib; sourceTree = "<group>"; };
+		AE9055E51CA5416300E9C369 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		AE9055E61CA5416300E9C369 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		AE9055E71CA5416300E9C369 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		AE9369F31A9BC5E300F15869 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AE9369F81A9BCBC000F15869 /* VenueBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueBuilder.h; sourceTree = "<group>"; };
 		AE9369F91A9BCBC000F15869 /* VenueBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueBuilder.m; sourceTree = "<group>"; };
@@ -409,6 +430,10 @@
 				AEBA91C01C8872B700708484 /* GalleryBuilder.h */,
 				AEDF8D291C8AD8D0007391C7 /* CoverHelper.h */,
 				AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */,
+				AE9055DA1CA53B6200E9C369 /* Info.m */,
+				AE9055DC1CA53B6D00E9C369 /* Info.h */,
+				AE9055DD1CA53BF200E9C369 /* InfoBuilder.h */,
+				AE9055DE1CA53BF200E9C369 /* InfoBuilder.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -492,6 +517,22 @@
 				AE7003D01C4CF99300556EF6 /* PostViewCell.xib */,
 			);
 			name = PostList;
+			sourceTree = "<group>";
+		};
+		AE9055D41CA53A8B00E9C369 /* InfoList */ = {
+			isa = PBXGroup;
+			children = (
+				AE9055D51CA53AB000E9C369 /* InfoListViewController.h */,
+				AE9055D61CA53AB000E9C369 /* InfoListViewController.m */,
+				AE9055D71CA53AB000E9C369 /* InfoListViewController.xib */,
+				AE9055E01CA53EF300E9C369 /* InfoViewCell.h */,
+				AE9055E11CA53EF300E9C369 /* InfoViewCell.m */,
+				AE9055E21CA53EF300E9C369 /* InfoViewCell.xib */,
+				AE9055E51CA5416300E9C369 /* InfoViewController.h */,
+				AE9055E61CA5416300E9C369 /* InfoViewController.m */,
+				AE9055E71CA5416300E9C369 /* InfoViewController.xib */,
+			);
+			name = InfoList;
 			sourceTree = "<group>";
 		};
 		AEA0568D1AA4F7F1003E095F /* TwitterList */ = {
@@ -671,6 +712,7 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AE9055D41CA53A8B00E9C369 /* InfoList */,
 				AEBA91B51C885ECD00708484 /* Gallery */,
 				AE7003D71C4CF9C600556EF6 /* PostList */,
 				AEE46FAE1ABB4DDA00F52708 /* About */,
@@ -829,6 +871,7 @@
 				AE9055D21CA44B9500E9C369 /* Default.png in Resources */,
 				AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */,
 				AE1BCBEB1A9FDC3300E79935 /* Icon-72@2x.png in Resources */,
+				AE9055E91CA5416300E9C369 /* InfoViewController.xib in Resources */,
 				AEE46FAD1ABB4A1700F52708 /* KingstonPound-small-15.png in Resources */,
 				AEE46FD61ABB55E600F52708 /* AboutKingstonPoundViewController.xib in Resources */,
 				AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */,
@@ -859,10 +902,12 @@
 				AEEF3D291AD3F096003256FD /* red-plate.png in Resources */,
 				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
 				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
+				AE9055E41CA53EF300E9C369 /* InfoViewCell.xib in Resources */,
 				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
 				AEE46FD11ABB55CC00F52708 /* AboutAppViewController.xib in Resources */,
 				AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */,
 				AEAE29A21C8839B000533C60 /* Podfile in Resources */,
+				AE9055D91CA53AB000E9C369 /* InfoListViewController.xib in Resources */,
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
 				AEBA91C21C888A3000708484 /* camera-icon@2x.png in Resources */,
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
@@ -979,6 +1024,7 @@
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
 				AEDF8D2B1C8AD8D0007391C7 /* CoverHelper.m in Sources */,
 				AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */,
+				AE9055DB1CA53B6200E9C369 /* Info.m in Sources */,
 				AEBA91C61C88A3FB00708484 /* UploadPhotoViewController.m in Sources */,
 				AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */,
 				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
@@ -995,14 +1041,18 @@
 				AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */,
 				AEF3AB261AB45D5200B2C6A9 /* TraderViewCell.m in Sources */,
 				AE1BCB9D1A9FAFAA00E79935 /* SWRevealViewController.m in Sources */,
+				AE9055D81CA53AB000E9C369 /* InfoListViewController.m in Sources */,
 				AEF8BC461A7CEC8A007241DC /* main.m in Sources */,
 				AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */,
+				AE9055E81CA5416300E9C369 /* InfoViewController.m in Sources */,
 				AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */,
 				AEBA91BF1C8872AC00708484 /* GalleryBuilder.m in Sources */,
 				AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */,
+				AE9055E31CA53EF300E9C369 /* InfoViewCell.m in Sources */,
 				AE7003D11C4CF99300556EF6 /* Post.m in Sources */,
 				AEE46FD51ABB55E600F52708 /* AboutKingstonPoundViewController.m in Sources */,
 				AEBFA5611AB3632800B25A11 /* VenueViewController.m in Sources */,
+				AE9055DF1CA53BF200E9C369 /* InfoBuilder.m in Sources */,
 				AE7003D21C4CF99300556EF6 /* PostBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,7 +35,7 @@
 #import "TraderListViewController.h"
 #import "PostListViewController.h"
 #import "AboutAppViewController.h"
-#import "VoucherListViewController.h"
+#import "InfoListViewController.h"
 #import "GalleryViewController.h"
 
 @interface RearViewController()
@@ -182,7 +182,7 @@
     
     else if (row == 5)
     {
-        newFrontController = [[VoucherListViewController alloc] init];
+        newFrontController = [[InfoListViewController alloc] init];
     }
     
     else if (row == 6)
