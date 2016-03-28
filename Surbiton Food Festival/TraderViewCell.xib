@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="359" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1GZ-Pa-6Fk">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1GZ-Pa-6Fk">
                         <rect key="frame" x="8" y="7" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="KTL-G6-Ok1"/>
@@ -46,23 +46,12 @@
                     <constraint firstAttribute="centerY" secondItem="cnn-Z3-I8e" secondAttribute="centerY" constant="0.25" id="55H-M6-pft"/>
                     <constraint firstItem="c5w-qQ-GkR" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="6Ma-sG-2wQ"/>
                     <constraint firstItem="1GZ-Pa-6Fk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="8nS-d0-KxA"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="1GZ-Pa-6Fk" secondAttribute="bottom" constant="-1" id="GE3-mt-B1r"/>
-                    <constraint firstItem="cnn-Z3-I8e" firstAttribute="leading" secondItem="1GZ-Pa-6Fk" secondAttribute="trailing" constant="15" id="JAk-F5-svF"/>
+                    <constraint firstItem="cnn-Z3-I8e" firstAttribute="leading" secondItem="1GZ-Pa-6Fk" secondAttribute="trailing" constant="14" id="JAk-F5-svF"/>
                     <constraint firstItem="c5w-qQ-GkR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cnn-Z3-I8e" secondAttribute="trailing" constant="10" id="TN0-B2-6Fi"/>
                     <constraint firstAttribute="centerY" secondItem="c5w-qQ-GkR" secondAttribute="centerY" constant="-0.25" id="Ves-VV-dxI"/>
-                    <constraint firstItem="c5w-qQ-GkR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="hYX-5I-W2D"/>
                     <constraint firstItem="1GZ-Pa-6Fk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kB6-XU-Awk"/>
-                    <constraint firstItem="c5w-qQ-GkR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="nbf-ZR-WrQ"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="1GZ-Pa-6Fk" secondAttribute="bottom" constant="-1" id="vtf-y8-cWG"/>
-                    <constraint firstItem="1GZ-Pa-6Fk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="ytM-Oj-0ci"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="1GZ-Pa-6Fk" secondAttribute="bottom" constant="-2" id="vtf-y8-cWG"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="GE3-mt-B1r"/>
-                        <exclude reference="ytM-Oj-0ci"/>
-                        <exclude reference="nbf-ZR-WrQ"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="kingstonPoundImage" destination="c5w-qQ-GkR" id="11g-q1-fbS"/>

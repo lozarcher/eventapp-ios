@@ -46,29 +46,27 @@
     } else {
         traderDescriptionLabel.text = @"";
     }
-    
-    traderImageView.frame = self.view.bounds;
-    
-    [kingstonPoundImage setHidden:(![trader.kingstonPound intValue] == 1)];
-    if (![trader.coverImg isKindOfClass:[NSNull class]]) {
-        SDWebImageManager *manager = [SDWebImageManager sharedManager];
-        [manager downloadImageWithURL:[NSURL URLWithString:[trader coverImg]] options:0
-                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                             }
-                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                                CoverHelper *coverHelper = [[CoverHelper alloc] init];
-                                float coverRatio = (float)851/(float)315;
-                                UIImage *croppedImage = [coverHelper clipCover:image fbOffsetX:trader.coverOffsetX fbOffsetY:trader.coverOffsetY ratio:coverRatio];
-                                NSLog(@"Original image size %f %f", image.size.width, image.size.height);
-                                
-                                NSLog(@"Cropped image size %f %f", croppedImage.size.width, croppedImage.size.height);
-                                [traderImageView setImage:croppedImage];
-                                
-                                //[traderImageView setImage:image];
-                            }];
-    } else {
-        [traderImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
-    }
+        
+    [kingstonPoundImage setHidden:([trader.kingstonPound intValue] != 1)];
+//    if (![trader.coverImg isKindOfClass:[NSNull class]]) {
+//        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+//        [manager downloadImageWithURL:[NSURL URLWithString:[trader coverImg]] options:0
+//                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//                             }
+//                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+//                                CoverHelper *coverHelper = [[CoverHelper alloc] init];
+//                                float coverRatio = (float)851/(float)315;
+//                                UIImage *croppedImage = [coverHelper clipCover:image fbOffsetX:trader.coverOffsetX fbOffsetY:trader.coverOffsetY ratio:coverRatio];
+//                                NSLog(@"Original image size %f %f", image.size.width, image.size.height);
+//                                
+//                                NSLog(@"Cropped image size %f %f", croppedImage.size.width, croppedImage.size.height);
+//                                [traderImageView setImage:croppedImage];
+//                                
+//                                //[traderImageView setImage:image];
+//                            }];
+//    } else {
+//        [traderImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
+//    }
     
     //) {
     if (![trader.website isKindOfClass:[NSNull class]]) {
@@ -89,6 +87,25 @@
         [phoneLabel setTitle:[NSString stringWithFormat:@"Call %@", trader.name] forState:UIControlStateNormal];
     }
     
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    _imageHeightConstraint.constant = 0.0;
+    
+    if (![trader.coverImg isKindOfClass:[NSNull class]]) {
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadImageWithURL:[NSURL URLWithString:[trader coverImg]] options:0
+                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                             }
+                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                
+                                float aspect = image.size.height / image.size.width;
+                                float newHeight = traderImageView.frame.size.width * aspect;
+                                _imageHeightConstraint.constant = newHeight;
+                                [traderImageView setImage:image];
+                                
+                            }];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {

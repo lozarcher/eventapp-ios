@@ -20,6 +20,7 @@
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UIImageView *kingstonPoundImage;
 @property (weak, nonatomic) IBOutlet UIButton *linkLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
 
 @property (retain,nonatomic) Trader *trader;
 @end
