@@ -204,23 +204,16 @@
     if (![[post message] isKindOfClass:[NSNull class]]) {
         message = [post message];
     }
-//    if (![[post pictureUrl] isKindOfClass:[NSNull class]]) {
-//        SDWebImageManager *manager = [SDWebImageManager sharedManager];
-//        [manager downloadImageWithURL:[NSURL URLWithString:[post pictureUrl]] options:0
-//                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-//                             }
-//                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-//                                [cell.postImageView setImage:image];
-//                                [heightsCache setObject:[NSNumber numberWithFloat:image.size.height]
-//                                                      forKey:imageURL];
-//                                NSLog(@"Setting image height %f for %@", image.size.height, post.pictureUrl);
-
-                                //[tableView beginUpdates];
-                                //[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
-                                //[tableView endUpdates];
-//                            }];
-//    } else {
-//    }
+    if (![[post pictureUrl] isKindOfClass:[NSNull class]]) {
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadImageWithURL:[NSURL URLWithString:[post pictureUrl]] options:0
+                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                             }
+                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                [self setImage:image cell:cell];
+                            }];
+    } else {
+    }
     if (![[post link] isKindOfClass:[NSNull class]]) {
         if ([message isEqualToString:@""]) {
             message = [post link];
@@ -239,6 +232,17 @@
     }
     
     cell.messageLabel.text = message;
+}
+
+-(void)setImage:(UIImage *)image cell:(PostViewCell *)cell {
+    [cell.postImageView setImage:image];
+    NSLog(@"Image width %f height %f", cell.postImageView.image.size.width, cell.postImageView.image.size.height);
+    NSLog(@"ImageView width %f height %f", cell.postImageView.frame.size.width, cell.postImageView.frame.size.height);
+    if (cell.postImageView.frame.size.width < (cell.postImageView.image.size.width)) {
+        cell.imageHeightConstraint.constant = cell.postImageView.frame.size.width / (cell.postImageView.image.size.width) * (cell.postImageView.image.size.height);
+    } else {
+        cell.imageHeightConstraint.constant = image.size.height;
+    }
 }
 
 #pragma mark NSURLConnection Delegate Methods

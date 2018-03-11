@@ -5,14 +5,14 @@
 	<key>Production</key>
 	<dict>
 		<key>serviceHostname</key>
-		<string>http://eventapp.eu-west-1.elasticbeanstalk.com</string>
+		<string>https://eventapp.lozarcher.co.uk</string>
 		<key>environmentName</key>
 		<string>Prod</string>
 	</dict>
 	<key>Development</key>
 	<dict>
 		<key>serviceHostname</key>
-		<string>http://192.168.0.2:8080</string>
+		<string>http://192.168.0.36:5000</string>
 		<key>environmentName</key>
 		<string>Dev</string>
 	</dict>

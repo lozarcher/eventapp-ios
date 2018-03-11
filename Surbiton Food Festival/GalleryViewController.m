@@ -49,10 +49,10 @@
     _browser.startOnGrid = NO; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
     _browser.autoPlayOnAppear = NO; // Auto-play first video
 
-    [self.navigationController addChildViewController:_browser];
-    
     [self activateSpinner:YES];
     [self refreshGallery:self];
+
+    [self.navigationController addChildViewController:_browser];
 
 }
 

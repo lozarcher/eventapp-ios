@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="350" height="84"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="350" height="83"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="83.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Ee-vvx">
@@ -21,40 +24,45 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-gP-mdd" userLabel="Date">
                                 <rect key="frame" x="8" y="8" width="321" height="16"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-tI-208">
+                                <rect key="frame" x="47" y="-31" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="e4U-zI-csz"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="oHB-9a-KW7" userLabel="Message" customClass="KILabel">
                                 <rect key="frame" x="8" y="29" width="321" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="oHB-9a-KW7" secondAttribute="bottom" constant="22" id="4ti-lz-ppn"/>
-                            <constraint firstItem="oHB-9a-KW7" firstAttribute="leading" secondItem="hS2-Ee-vvx" secondAttribute="leading" constant="8" id="BNo-jW-vOI"/>
-                            <constraint firstItem="Ei3-gP-mdd" firstAttribute="leading" secondItem="hS2-Ee-vvx" secondAttribute="leading" constant="8" id="C31-aI-m1w"/>
-                            <constraint firstAttribute="trailing" secondItem="oHB-9a-KW7" secondAttribute="trailing" constant="5" id="Eng-iB-hIa"/>
-                            <constraint firstItem="Ei3-gP-mdd" firstAttribute="top" secondItem="hS2-Ee-vvx" secondAttribute="top" constant="8" id="SYe-Md-Zpa"/>
-                            <constraint firstItem="oHB-9a-KW7" firstAttribute="top" secondItem="Ei3-gP-mdd" secondAttribute="bottom" constant="5" id="sQ9-nO-8lG"/>
-                            <constraint firstAttribute="trailing" secondItem="Ei3-gP-mdd" secondAttribute="trailing" constant="5" id="tLq-RZ-Vlu"/>
+                            <constraint firstAttribute="trailing" secondItem="rvA-tI-208" secondAttribute="trailing" id="9ES-Xd-URE"/>
+                            <constraint firstItem="Ei3-gP-mdd" firstAttribute="leading" secondItem="hS2-Ee-vvx" secondAttribute="leading" constant="8" id="9W3-J0-5N3"/>
+                            <constraint firstAttribute="bottom" secondItem="oHB-9a-KW7" secondAttribute="bottom" constant="22" id="AUK-Uk-cCR"/>
+                            <constraint firstItem="oHB-9a-KW7" firstAttribute="leading" secondItem="hS2-Ee-vvx" secondAttribute="leading" constant="8" id="IKj-Z3-FW9"/>
+                            <constraint firstItem="Ei3-gP-mdd" firstAttribute="top" secondItem="hS2-Ee-vvx" secondAttribute="top" constant="8" id="Jjk-05-tJR"/>
+                            <constraint firstAttribute="trailing" secondItem="Ei3-gP-mdd" secondAttribute="trailing" constant="5" id="VdP-7F-qoF"/>
+                            <constraint firstItem="rvA-tI-208" firstAttribute="top" secondItem="Ei3-gP-mdd" secondAttribute="bottom" constant="-55" id="Xlb-Yh-hCc"/>
+                            <constraint firstItem="oHB-9a-KW7" firstAttribute="top" secondItem="rvA-tI-208" secondAttribute="bottom" constant="-68" id="a9L-yM-gmp"/>
+                            <constraint firstAttribute="trailing" secondItem="oHB-9a-KW7" secondAttribute="trailing" constant="5" id="hwh-k0-0E3"/>
+                            <constraint firstItem="rvA-tI-208" firstAttribute="leading" secondItem="hS2-Ee-vvx" secondAttribute="leading" id="j2c-EC-qWi"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                <constraints>
-                    <constraint firstAttribute="leadingMargin" secondItem="hS2-Ee-vvx" secondAttribute="leading" id="4ak-2o-NSd"/>
-                    <constraint firstAttribute="topMargin" secondItem="hS2-Ee-vvx" secondAttribute="top" id="acV-Ha-Sh9"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="hS2-Ee-vvx" secondAttribute="bottom" id="dmH-Ce-jhE"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="hS2-Ee-vvx" secondAttribute="trailing" id="ieN-td-fMW"/>
-                </constraints>
+                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cardView" destination="hS2-Ee-vvx" id="6yU-eg-u3E"/>
                 <outlet property="dateLabel" destination="Ei3-gP-mdd" id="pSa-qY-VLs"/>
+                <outlet property="imageHeightConstraint" destination="e4U-zI-csz" id="9cH-nY-4SG"/>
                 <outlet property="messageLabel" destination="oHB-9a-KW7" id="fdf-0W-H5G"/>
+                <outlet property="postImageView" destination="rvA-tI-208" id="jVa-1n-5vh"/>
             </connections>
             <point key="canvasLocation" x="153" y="231"/>
         </tableViewCell>

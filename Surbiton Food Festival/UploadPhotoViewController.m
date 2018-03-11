@@ -21,10 +21,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *captionField;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
+@property (retain,nonatomic) UIActivityIndicatorView *spinner;
 
 @end
 
 @implementation UploadPhotoViewController
+
+@synthesize spinner;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -117,7 +120,7 @@
 // HTTP method to upload file to web server
 - (void)uploadToServerUsingImage:(NSData *)imageData andFileName:(NSString *)filename andParams:(NSDictionary*)paramsDict {
     // set this to your server's address
-    
+    [self showProgressView:YES];
     NSString *serviceHostname = [MTConfiguration serviceHostname];
     NSString *loadUrl = @"/gallery";
     NSString *urlAsString = [NSString stringWithFormat:@"%@%@", serviceHostname, loadUrl];
@@ -165,14 +168,6 @@
     // assigning the completed NSMutableData buffer as the body of the HTTP POST request
     [request setHTTPBody:body];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
-
-    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Thank you for your photo! It will appear on the gallery shortly" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alertView show];
-    
-    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
-    [appDelegate.homeViewController loadHome];
-    
     // send the request
     [NSURLConnection sendAsynchronousRequest:request
                                            queue:self.httpQueue
@@ -185,18 +180,24 @@
                                    if(error){
                                        NSLog(@"http request error: %@", error.localizedDescription);
                                        // handle the error
+                                       [self performSelectorOnMainThread:@selector(showMessage:)
+                                                              withObject:@"Sorry, there was a network error when uploading your photo. Please try later"
+                                                           waitUntilDone:YES];
                                    }
                                    else{
                                        if (status == 200) {
                                            NSLog(@"Photo uploaded successfully");
                                            NSLog(@"response %@", response);
-
+                                           [self performSelectorOnMainThread:@selector(showMessage:)
+                                                                  withObject:@"Thank you for your photo! It will appear on the gallery shortly"
+                                                               waitUntilDone:YES];
                                        }
                                            // handle the success
                                        else {
                                            NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                           UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Sorry, there was an error uploading your photo" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-                                           [alertView show];
+                                           [self performSelectorOnMainThread:@selector(showMessage:)
+                                                                  withObject:@"Sorry, there was a server error when trying to add your photo. Please try later"
+                                                               waitUntilDone:YES];
                                            NSLog(@"Photo did not upload: %@", result);
                                        }
                                    }
@@ -212,5 +213,31 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)showMessage:(NSString *) message {
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
+    [self showProgressView:NO];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.homeViewController loadHome];
+}
+
+-(void)showProgressView:(BOOL) activate {
+    if (activate) {
+        spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        spinner.hidesWhenStopped = YES;
+        CGRect frame = spinner.frame;
+        frame.origin.x = self.imageView.frame.size.width / 2 - frame.size.width / 2;
+        frame.origin.y = self.imageView.frame.size.height / 2 - frame.size.height / 2;
+        spinner.frame = frame;
+        [self.imageView addSubview:spinner];
+        [spinner startAnimating];
+    } else {
+        if (spinner) {
+            [spinner stopAnimating];
+        }
+    }
+}
 
 @end

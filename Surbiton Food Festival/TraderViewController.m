@@ -89,27 +89,32 @@
     
 }
 
--(void) viewDidAppear:(BOOL)animated {
-    _imageHeightConstraint.constant = 0.0;
-    
-    if (![trader.coverImg isKindOfClass:[NSNull class]]) {
-        SDWebImageManager *manager = [SDWebImageManager sharedManager];
-        [manager downloadImageWithURL:[NSURL URLWithString:[trader coverImg]] options:0
-                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                             }
-                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                                
-                                float aspect = image.size.height / image.size.width;
-                                float newHeight = traderImageView.frame.size.width * aspect;
-                                _imageHeightConstraint.constant = newHeight;
-                                [traderImageView setImage:image];
-                                
-                            }];
-    }
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    if (![trader.coverImg isKindOfClass:[NSNull class]]) {
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadImageWithURL:[NSURL URLWithString:[trader coverImg]]
+                              options:0
+                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                                 // progression tracking code
+                             }
+                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                if (image) {
+                                    [self setImage:image];
+                                }
+                            }
+         ];
+    } else {
+        [self setImage:[UIImage imageNamed:@"logo.jpg"]];
+    }
+}
+
+-(void)setImage:(UIImage *)image {
+    [traderImageView setImage:image];
+    if (traderImageView.frame.size.width < (traderImageView.image.size.width)) {
+        _imageHeightConstraint.constant = traderImageView.frame.size.width / (traderImageView.image.size.width) * (traderImageView.image.size.height);
+    }
 }
 
 

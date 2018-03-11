@@ -29,7 +29,7 @@
     NSLog(@"Kingston pound: %@", trader.kingstonPound);
     [kingstonPoundImage setHidden:(![trader.kingstonPound intValue] == 1)];
     traderNameLabel.text = [trader name];
-    
+        
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     if (![[trader profileImg] isKindOfClass:[NSNull class]]) {
         [manager downloadImageWithURL:[NSURL URLWithString:[trader profileImg]] options:0
@@ -41,6 +41,7 @@
     } else {
         [traderImage setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
+
 }
 
 

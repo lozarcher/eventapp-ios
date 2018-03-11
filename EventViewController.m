@@ -95,17 +95,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Check to see if we are running on iOS 6
-    if (![self respondsToSelector:@selector(topLayoutGuide)]) {
-        for (NSLayoutConstraint *constraint in self.topConstraint) {
-            constraint.constant = constraint.constant - 64;
-        }
-    }
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
     eventDescriptionLabel.urlLinkTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
         NSLog(@"Clicked link: %@", urlString);
-       
+        
         [self loadURL:urlString];
     };
     
@@ -115,6 +112,23 @@
     
     self.navigationItem.rightBarButtonItem = reminderButtonItem;
     [self updateReminderButton];
+    
+    if (![event.coverUrl isKindOfClass:[NSNull class]]) {
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadImageWithURL:[NSURL URLWithString:[event coverUrl]]
+                              options:0
+                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                                 // progression tracking code
+                             }
+                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                if (image) {
+                                    [self setImage:image];
+                                }
+                            }
+         ];
+    } else {
+        [self setImage:[UIImage imageNamed:@"logo.jpg"]];
+    }
     
     // Do any additional setup after loading the view from its nib.
     eventTitleLabel.text = event.name;
@@ -151,26 +165,6 @@
         timeText = [dates componentsJoinedByString:@" - "];
     }
     eventTimeLabel.text = timeText;
-    eventImageView.frame = self.view.bounds;
-
-    if (![event.coverUrl isKindOfClass:[NSNull class]]) {
-        SDWebImageManager *manager = [SDWebImageManager sharedManager];
-        [manager downloadImageWithURL:[NSURL URLWithString:[event coverUrl]] options:0
-                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                             }
-                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                                [eventImageView setImage:image];
-//                                CoverHelper *coverHelper = [[CoverHelper alloc] init];
-//                                float coverRatio = (float)851/(float)315;
-//                                UIImage *croppedImage = [coverHelper clipCover:image fbOffsetX:event.coverOffsetX fbOffsetY:event.coverOffsetY ratio:coverRatio];
-//                                NSLog(@"Original image size %f %f", image.size.width, image.size.height);
-//
-//                                NSLog(@"Cropped image size %f %f", croppedImage.size.width, croppedImage.size.height);
-//                                [eventImageView setImage:croppedImage];
-                                }];
-    } else {
-        [eventImageView setImage:[UIImage imageNamed:@"logo.jpg"]];
-    }
     
     [self.mapButton setHidden:[event.venue isKindOfClass:[NSNull class]]];
     
@@ -179,10 +173,16 @@
 
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+-(void)setImage:(UIImage *)image {
+    [eventImageView setImage:image];
+    NSLog(@"Image width %f height %f", eventImageView.image.size.width, eventImageView.image.size.height);
+    NSLog(@"ImageView width %f height %f", eventImageView.frame.size.width, eventImageView.frame.size.height);
+    if (eventImageView.frame.size.width < (eventImageView.image.size.width)) {
+        _imageHeightConstraint.constant = eventImageView.frame.size.width / (eventImageView.image.size.width) * (eventImageView.image.size.height);
+    } else {
+        _imageHeightConstraint.constant = image.size.height;
+    }
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

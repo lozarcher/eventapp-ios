@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TraderViewController">
             <connections>
-                <outlet property="imageHeightConstraint" destination="xbc-GK-nE5" id="Fba-m7-14Z"/>
+                <outlet property="imageHeightConstraint" destination="yua-hk-5aZ" id="nRz-MJ-Mep"/>
                 <outlet property="kingstonPoundImage" destination="6qg-0U-0U1" id="xeM-Py-mdN"/>
                 <outlet property="linkLabel" destination="M8z-aR-5W0" id="iVr-fe-LkV"/>
                 <outlet property="phoneLabel" destination="KXk-5r-ZKr" id="zSo-AB-p2y"/>
@@ -21,76 +25,71 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ePo-ud-egd">
-                    <rect key="frame" x="-2" y="0.0" width="602" height="600"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePo-ud-egd">
+                    <rect key="frame" x="-2" y="0.0" width="377" height="667"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-gx-TwD">
-                            <rect key="frame" x="8" y="20" width="586" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-gx-TwD">
+                            <rect key="frame" x="8" y="20" width="361" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-pK-fic">
-                            <rect key="frame" x="0.0" y="0.0" width="602" height="0.0"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="377" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-pK-fic">
+                            <rect key="frame" x="0.0" y="0.0" width="377" height="0.0"/>
                             <constraints>
-                                <constraint firstAttribute="height" id="xbc-GK-nE5"/>
+                                <constraint firstAttribute="height" id="yua-hk-5aZ"/>
                             </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="xbc-GK-nE5"/>
-                                </mask>
-                            </variation>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KingstonPound-small-15.png" translatesAutoresizingMaskIntoConstraints="NO" id="6qg-0U-0U1">
-                            <rect key="frame" x="517" y="8" width="75" height="75"/>
+                            <rect key="frame" x="292" y="8" width="75" height="75"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="75" id="0Mp-xs-1hf"/>
                                 <constraint firstAttribute="width" constant="75" id="TLG-Fb-LEr"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-7x-eID">
-                            <rect key="frame" x="8" y="92" width="586" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-7x-eID">
+                            <rect key="frame" x="-104.5" y="92" width="586" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="586" id="u0n-nN-j6o"/>
                             </constraints>
                             <state key="normal" title="Website">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="websiteClicked:" destination="-1" eventType="touchUpInside" id="z83-CU-uwu"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8z-aR-5W0">
-                            <rect key="frame" x="8" y="132" width="586" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8z-aR-5W0">
+                            <rect key="frame" x="-104.5" y="132" width="586" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="586" id="qPi-Kb-APy"/>
                             </constraints>
                             <state key="normal" title="Facebook Page">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="fbPageClicked:" destination="-1" eventType="touchUpInside" id="fo7-BL-GoM"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXk-5r-ZKr">
-                            <rect key="frame" x="9" y="172" width="585" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXk-5r-ZKr">
+                            <rect key="frame" x="-103.5" y="172" width="585" height="30"/>
                             <state key="normal" title="Phone">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="phoneClicked:" destination="-1" eventType="touchUpInside" id="BAP-UY-1pD"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edj-Lw-4Gn">
-                            <rect key="frame" x="8" y="56" width="585" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edj-Lw-4Gn">
+                            <rect key="frame" x="8" y="56" width="360" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="L41-fK-SBr"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -118,7 +117,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ePo-ud-egd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ffc-Of-VuC"/>
                 <constraint firstItem="ePo-ud-egd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="Gjo-mF-fXQ"/>
