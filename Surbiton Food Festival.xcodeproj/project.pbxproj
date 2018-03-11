@@ -46,8 +46,6 @@
 		AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */; };
 		AE1BCBF91A9FDC3300E79935 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork */; };
 		AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x */; };
-		AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521E51AA20040006A442A /* VoucherViewController.m */; };
-		AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2521E61AA20040006A442A /* VoucherViewController.xib */; };
 		AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */; };
 		AE7003D11C4CF99300556EF6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003C81C4CF99300556EF6 /* Post.m */; };
 		AE7003D21C4CF99300556EF6 /* PostBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CA1C4CF99300556EF6 /* PostBuilder.m */; };
@@ -57,10 +55,6 @@
 		AE7003D61C4CF99300556EF6 /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7003D01C4CF99300556EF6 /* PostViewCell.xib */; };
 		AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */; };
 		AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
-		AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D13601AA14B1900166951 /* VoucherListCell.m */; };
-		AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13611AA14B1900166951 /* VoucherListCell.xib */; };
-		AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */; };
-		AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */; };
 		AE9055BF1CA43C8D00E9C369 /* yellow-cloth-tile.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055BE1CA43C8D00E9C369 /* yellow-cloth-tile.png */; };
 		AE9055CF1CA44B9500E9C369 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055CA1CA44B9500E9C369 /* Default-568h@2x.png */; };
 		AE9055D01CA44B9500E9C369 /* Default-iPhone6.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055CB1CA44B9500E9C369 /* Default-iPhone6.png */; };
@@ -123,7 +117,6 @@
 		AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D221AD3F096003256FD /* yellow-plate.png */; };
 		AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3D381AD5B17E003256FD /* HomeViewController.m */; };
 		AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D391AD5B17E003256FD /* HomeViewController.xib */; };
-		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */; };
 		AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */; };
 		AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB1F1AB45D1400B2C6A9 /* TraderListViewController.m */; };
@@ -143,6 +136,7 @@
 		AEF8BC631A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */; };
 		AEFF2E8F1A925ED8005DBCBB /* EventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF2E8D1A925ED8005DBCBB /* EventViewCell.m */; };
 		AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFF2E8E1A925ED8005DBCBB /* EventViewCell.xib */; };
+		B814C2499CE3C30DEE3623D3 /* libPods-Surbiton Food FestivalTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCD89720AFCCB49CF569CF2 /* libPods-Surbiton Food FestivalTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +150,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5FCD89720AFCCB49CF569CF2 /* libPods-Surbiton Food FestivalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food FestivalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		747706AF059784C3C9E5E8C2 /* Pods-Surbiton Food FestivalTests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food FestivalTests.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests.development.xcconfig"; sourceTree = "<group>"; };
 		7570F939FC9713D0CCDD4705 /* Pods-Surbiton Food Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.production.xcconfig"; sourceTree = "<group>"; };
 		77D2604E22D054019D6F6BB2 /* Pods-Surbiton Food Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,9 +206,6 @@
 		AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		AE1BCBE51A9FDC3300E79935 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
-		AE2521E41AA20040006A442A /* VoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherViewController.h; sourceTree = "<group>"; };
-		AE2521E51AA20040006A442A /* VoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherViewController.m; sourceTree = "<group>"; };
-		AE2521E61AA20040006A442A /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
 		AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "team-surbiton-festival.jpg"; sourceTree = "<group>"; };
 		AE7003C71C4CF99300556EF6 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		AE7003C81C4CF99300556EF6 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
@@ -228,12 +220,6 @@
 		AE72028E1AE5557300D2B730 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
 		AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
 		AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivacyPolicyViewController.xib; sourceTree = "<group>"; };
-		AE8D135F1AA14B1900166951 /* VoucherListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListCell.h; sourceTree = "<group>"; };
-		AE8D13601AA14B1900166951 /* VoucherListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListCell.m; sourceTree = "<group>"; };
-		AE8D13611AA14B1900166951 /* VoucherListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListCell.xib; sourceTree = "<group>"; };
-		AE8D136E1AA14DBE00166951 /* VoucherListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListViewController.h; sourceTree = "<group>"; };
-		AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListViewController.m; sourceTree = "<group>"; };
-		AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListViewController.xib; sourceTree = "<group>"; };
 		AE9055BE1CA43C8D00E9C369 /* yellow-cloth-tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-cloth-tile.png"; sourceTree = "<group>"; };
 		AE9055CA1CA44B9500E9C369 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Surbiton Food Festival/Default-568h@2x.png"; sourceTree = "<group>"; };
 		AE9055CB1CA44B9500E9C369 /* Default-iPhone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-iPhone6.png"; path = "Surbiton Food Festival/Default-iPhone6.png"; sourceTree = "<group>"; };
@@ -316,7 +302,6 @@
 		AEEF3D371AD5B17E003256FD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		AEEF3D381AD5B17E003256FD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AEEF3D391AD5B17E003256FD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF3AB011AB1F7E700B2C6A9 /* TweetLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetLinkViewController.h; sourceTree = "<group>"; };
 		AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetLinkViewController.m; sourceTree = "<group>"; };
 		AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetLinkViewController.xib; sourceTree = "<group>"; };
@@ -360,7 +345,6 @@
 				AEA3453E205426D7002765E9 /* libPods-Surbiton Food Festival.a in Frameworks */,
 				AE19E59F1AC18A2B00B3F69F /* SystemConfiguration.framework in Frameworks */,
 				AE1BCBB71A9FCA4D00E79935 /* CoreGraphics.framework in Frameworks */,
-				AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */,
 				AE1BCBA91A9FC77200E79935 /* UIKit.framework in Frameworks */,
 				AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */,
 				AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */,
@@ -371,6 +355,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B814C2499CE3C30DEE3623D3 /* libPods-Surbiton Food FestivalTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,24 +381,9 @@
 			isa = PBXGroup;
 			children = (
 				AEA3453F205426D7002765E9 /* libPods-Surbiton Food Festival.a */,
+				5FCD89720AFCCB49CF569CF2 /* libPods-Surbiton Food FestivalTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AE1382671AA142DE00714884 /* VoucherList */ = {
-			isa = PBXGroup;
-			children = (
-				AE8D135F1AA14B1900166951 /* VoucherListCell.h */,
-				AE8D13601AA14B1900166951 /* VoucherListCell.m */,
-				AE8D13611AA14B1900166951 /* VoucherListCell.xib */,
-				AE8D136E1AA14DBE00166951 /* VoucherListViewController.h */,
-				AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */,
-				AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */,
-				AE2521E41AA20040006A442A /* VoucherViewController.h */,
-				AE2521E51AA20040006A442A /* VoucherViewController.m */,
-				AE2521E61AA20040006A442A /* VoucherViewController.xib */,
-			);
-			name = VoucherList;
 			sourceTree = "<group>";
 		};
 		AE18C4B71A8CB5F500B96570 /* Models */ = {
@@ -706,7 +676,6 @@
 				AE9055CE1CA44B9500E9C369 /* Default@2x.png */,
 				AEAE29A11C8839B000533C60 /* Podfile */,
 				AE19E59E1AC18A2B00B3F69F /* SystemConfiguration.framework */,
-				AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */,
 				AE1BCBB61A9FCA4D00E79935 /* CoreGraphics.framework */,
 				AE1BCBA81A9FC77200E79935 /* UIKit.framework */,
 				AE9369F31A9BC5E300F15869 /* MapKit.framework */,
@@ -737,7 +706,6 @@
 				AEE46FAE1ABB4DDA00F52708 /* About */,
 				AEF3AB091AB4576C00B2C6A9 /* TraderList */,
 				AEA0568D1AA4F7F1003E095F /* TwitterList */,
-				AE1382671AA142DE00714884 /* VoucherList */,
 				AEEE5FB91AA06E1F00CA7774 /* EventList */,
 				AE1BCBBF1A9FCF0000E79935 /* Classes */,
 				AE1BCBBD1A9FCEB100E79935 /* Front Page */,
@@ -906,7 +874,6 @@
 				AE0D6D8A1C970688006726CC /* launchimage.png in Resources */,
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
 				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
-				AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */,
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */,
@@ -922,7 +889,6 @@
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
 				AEBA91C21C888A3000708484 /* camera-icon@2x.png in Resources */,
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
-				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
 				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
 				AE9055D11CA44B9500E9C369 /* Default-iPhone6Plus.png in Resources */,
 				AE9055BF1CA43C8D00E9C369 /* yellow-cloth-tile.png in Resources */,
@@ -939,7 +905,6 @@
 				AEEF3D281AD3F096003256FD /* orange-plate.png in Resources */,
 				AEC425421AD913ED0021049E /* cutlery_chopsticks.png in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
-				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
 				AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */,
 				AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */,
 				AE9055D01CA44B9500E9C369 /* Default-iPhone6.png in Resources */,
@@ -1092,10 +1057,7 @@
 				AE9055DB1CA53B6200E9C369 /* Info.m in Sources */,
 				AEBA91C61C88A3FB00708484 /* UploadPhotoViewController.m in Sources */,
 				AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */,
-				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE7003D31C4CF99300556EF6 /* PostListViewController.m in Sources */,
-				AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */,
-				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
 				AE1BCBA71A9FC62100E79935 /* RearViewController.m in Sources */,
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
 				AEBA91BC1C8871E000708484 /* Gallery.m in Sources */,
@@ -1225,10 +1187,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"$(inherited)",
-					"-ObjC",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1329,10 +1288,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"$(inherited)",
-					"-ObjC",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '866A568834C921609744C6CF'
-               BlueprintName = 'Pods-Surbiton Food Festival'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-Surbiton Food Festival.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EF5CC83FE54406273F93A69FF51E316E"
+               BlueprintName = "Pods-Surbiton Food Festival"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libPods-Surbiton Food Festival.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
