@@ -235,7 +235,6 @@
 }
 
 -(void)setImage:(UIImage *)image cell:(PostViewCell *)cell {
-    [cell.postImageView setImage:image];
     NSLog(@"Image width %f height %f", cell.postImageView.image.size.width, cell.postImageView.image.size.height);
     NSLog(@"ImageView width %f height %f", cell.postImageView.frame.size.width, cell.postImageView.frame.size.height);
     if (cell.postImageView.frame.size.width < (cell.postImageView.image.size.width)) {
@@ -243,6 +242,9 @@
     } else {
         cell.imageHeightConstraint.constant = image.size.height;
     }
+    [cell.postImageView setImage:image];
+    [cell setNeedsUpdateConstraints];
+
 }
 
 #pragma mark NSURLConnection Delegate Methods
