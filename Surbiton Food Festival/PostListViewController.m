@@ -167,7 +167,7 @@
     
     [self.prototypeCell layoutIfNeeded];
     
-    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingExpandedSize];
+    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     return size.height;
 //    CGFloat imageHeight = [[heightsCache objectForKey:post.pictureUrl] floatValue];
 //    
