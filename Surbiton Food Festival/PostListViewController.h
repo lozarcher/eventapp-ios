@@ -23,6 +23,7 @@
 @property (retain,nonatomic) UILabel *messageLabel;
 @property (nonatomic, strong) PostViewCell *prototypeCell;
 @property (retain,nonatomic) NSString *nextPage;
+@property (retain,nonatomic) NSMutableArray *cells;
 - (void)refreshPosts:(id)sender;
 
 @end

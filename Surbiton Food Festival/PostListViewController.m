@@ -132,13 +132,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];;
-    cell.fd_enforceFrameLayout = YES;
+    //PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];;
+    PostViewCell *cell = [self.cells objectAtIndex:indexPath.row];
 
+    
+    
     // Cell text (event title)
     Post *post = [self getPostForIndexPath:indexPath];
     NSLog(@"Cell label %@", [post name]);
-    [cell populateDataInCell:post indexPath:indexPath];
+    [cell populateDataInCell:post indexPath:indexPath tableView:view];
     cell.delegate = self;
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -162,7 +164,7 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [tableView fd_heightForCellWithIdentifier:@"PostViewCell" configuration:^(id cell) {
-        [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath];
+        [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath tableView:self.tableView];
     }];
     
 //    if (!self.prototypeCell)
@@ -275,7 +277,6 @@
     
     [self.refreshControl endRefreshing];
     [self getPostFromData:receivedData];
-    [tableView reloadData];
     [self activateSpinner:NO];
     NSError* writeError;
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
@@ -295,6 +296,8 @@
     connection = nil;
     receivedData = nil;
     
+    [tableView reloadData];
+
 }
 
 
@@ -314,6 +317,16 @@
         NSLog(@"Error : %@", [error description]);
     }
     NSLog(@"Got %lu posts from data", (unsigned long)posts.count);
+    
+    self.cells = nil;
+    
+    self.cells = [NSMutableArray arrayWithCapacity:receivedData.length+1];
+    
+    for (int i=0; i<posts.count+1; i++) {
+        PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];
+        cell.postImageView.image = nil;
+        [self.cells insertObject:cell atIndex:i];
+    }
     return error;
 }
 

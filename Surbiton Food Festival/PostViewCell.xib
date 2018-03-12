@@ -18,23 +18,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="588" height="208.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Ee-vvx">
+                    <view contentMode="scaleToFill" verticalHuggingPriority="999" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Ee-vvx">
                         <rect key="frame" x="5" y="8" width="578" height="195.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-gP-mdd" userLabel="Date">
-                                <rect key="frame" x="5" y="5" width="568" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="999" verticalCompressionResistancePriority="999" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-gP-mdd" userLabel="Date">
+                                <rect key="frame" x="5" y="10" width="568" height="16"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-tI-208">
-                                <rect key="frame" x="0.0" y="26" width="578" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-tI-208">
+                                <rect key="frame" x="0.0" y="36" width="578" height="123.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="e4U-zI-csz"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="oHB-9a-KW7" userLabel="Message" customClass="KILabel">
-                                <rect key="frame" x="5" y="71" width="568" height="119.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="oHB-9a-KW7" userLabel="Message" customClass="KILabel">
+                                <rect key="frame" x="5" y="169.5" width="568" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -44,12 +44,12 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rvA-tI-208" secondAttribute="trailing" id="9ES-Xd-URE"/>
                             <constraint firstItem="Ei3-gP-mdd" firstAttribute="leading" secondItem="hS2-Ee-vvx" secondAttribute="leading" constant="5" id="9W3-J0-5N3"/>
-                            <constraint firstAttribute="bottom" secondItem="oHB-9a-KW7" secondAttribute="bottom" constant="5" id="AUK-Uk-cCR"/>
+                            <constraint firstAttribute="bottom" secondItem="oHB-9a-KW7" secondAttribute="bottom" constant="10" id="AUK-Uk-cCR"/>
                             <constraint firstItem="oHB-9a-KW7" firstAttribute="leading" secondItem="hS2-Ee-vvx" secondAttribute="leading" constant="5" id="IKj-Z3-FW9"/>
-                            <constraint firstItem="Ei3-gP-mdd" firstAttribute="top" secondItem="hS2-Ee-vvx" secondAttribute="top" constant="5" id="Jjk-05-tJR"/>
+                            <constraint firstItem="Ei3-gP-mdd" firstAttribute="top" secondItem="hS2-Ee-vvx" secondAttribute="top" constant="10" id="Jjk-05-tJR"/>
                             <constraint firstAttribute="trailing" secondItem="Ei3-gP-mdd" secondAttribute="trailing" constant="5" id="VdP-7F-qoF"/>
-                            <constraint firstItem="rvA-tI-208" firstAttribute="top" secondItem="Ei3-gP-mdd" secondAttribute="bottom" constant="5" id="Xlb-Yh-hCc"/>
-                            <constraint firstItem="oHB-9a-KW7" firstAttribute="top" secondItem="rvA-tI-208" secondAttribute="bottom" constant="5" id="a9L-yM-gmp"/>
+                            <constraint firstItem="rvA-tI-208" firstAttribute="top" secondItem="Ei3-gP-mdd" secondAttribute="bottom" constant="10" id="Xlb-Yh-hCc"/>
+                            <constraint firstItem="oHB-9a-KW7" firstAttribute="top" secondItem="rvA-tI-208" secondAttribute="bottom" constant="10" id="a9L-yM-gmp"/>
                             <constraint firstAttribute="trailing" secondItem="oHB-9a-KW7" secondAttribute="trailing" constant="5" id="hwh-k0-0E3"/>
                             <constraint firstItem="rvA-tI-208" firstAttribute="leading" secondItem="hS2-Ee-vvx" secondAttribute="leading" id="j2c-EC-qWi"/>
                         </constraints>
@@ -66,7 +66,7 @@
             <connections>
                 <outlet property="cardView" destination="hS2-Ee-vvx" id="6yU-eg-u3E"/>
                 <outlet property="dateLabel" destination="Ei3-gP-mdd" id="pSa-qY-VLs"/>
-                <outlet property="imageHeightConstraint" destination="e4U-zI-csz" id="9cH-nY-4SG"/>
+                <outlet property="imageHeightConstraint" destination="e4U-zI-csz" id="Bhn-fG-PYq"/>
                 <outlet property="messageLabel" destination="oHB-9a-KW7" id="fdf-0W-H5G"/>
                 <outlet property="postImageView" destination="rvA-tI-208" id="jVa-1n-5vh"/>
             </connections>

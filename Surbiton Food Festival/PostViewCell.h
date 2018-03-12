@@ -22,7 +22,10 @@
 @property (weak, nonatomic) IBOutlet UIView *cardView;
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
--(void)populateDataInCell:(Post *)post indexPath:(NSIndexPath *)indexPath;
+@property CGFloat postImageHeight;
+@property (weak, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) NSIndexPath *indexPath;
 
+-(void)populateDataInCell:(Post *)post indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
 
 @end
