@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE097BA22055BB2B00CAEAF0 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */; };
+		AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
+		AE097BA42055BB2B00CAEAF0 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA02055BB2B00CAEAF0 /* EventViewController.m */; };
+		AE097BA72055BB5A00CAEAF0 /* EventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA62055BB5A00CAEAF0 /* EventViewCell.m */; };
 		AE0D6D8A1C970688006726CC /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D891C970688006726CC /* launchimage.png */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
 		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
@@ -46,8 +50,6 @@
 		AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */; };
 		AE1BCBF91A9FDC3300E79935 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork */; };
 		AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x */; };
-		AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2521E51AA20040006A442A /* VoucherViewController.m */; };
-		AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2521E61AA20040006A442A /* VoucherViewController.xib */; };
 		AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */; };
 		AE7003D11C4CF99300556EF6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003C81C4CF99300556EF6 /* Post.m */; };
 		AE7003D21C4CF99300556EF6 /* PostBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CA1C4CF99300556EF6 /* PostBuilder.m */; };
@@ -57,10 +59,6 @@
 		AE7003D61C4CF99300556EF6 /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7003D01C4CF99300556EF6 /* PostViewCell.xib */; };
 		AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */; };
 		AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
-		AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D13601AA14B1900166951 /* VoucherListCell.m */; };
-		AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13611AA14B1900166951 /* VoucherListCell.xib */; };
-		AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */; };
-		AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */; };
 		AE9055BF1CA43C8D00E9C369 /* yellow-cloth-tile.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055BE1CA43C8D00E9C369 /* yellow-cloth-tile.png */; };
 		AE9055CF1CA44B9500E9C369 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055CA1CA44B9500E9C369 /* Default-568h@2x.png */; };
 		AE9055D01CA44B9500E9C369 /* Default-iPhone6.png in Resources */ = {isa = PBXBuildFile; fileRef = AE9055CB1CA44B9500E9C369 /* Default-iPhone6.png */; };
@@ -80,11 +78,8 @@
 		AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369FC1A9BCC3400F15869 /* Venue.m */; };
 		AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */; };
 		AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA056901AA4F82B003E095F /* TwitterViewCell.xib */; };
-		AEA3453E205426D7002765E9 /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA3453F205426D7002765E9 /* libPods-Surbiton Food Festival.a */; };
 		AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEAE299D1C848B5200533C60 /* Home@2x.png */; };
 		AEAE29A21C8839B000533C60 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEAE29A11C8839B000533C60 /* Podfile */; };
-		AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB281A90A956008C6329 /* EventViewController.m */; };
-		AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB9DB291A90A956008C6329 /* EventViewController.xib */; };
 		AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
 		AEB9DB311A90C564008C6329 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB301A90C564008C6329 /* Tweet.m */; };
 		AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91B71C88641200708484 /* GalleryViewController.m */; };
@@ -123,7 +118,6 @@
 		AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D221AD3F096003256FD /* yellow-plate.png */; };
 		AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3D381AD5B17E003256FD /* HomeViewController.m */; };
 		AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D391AD5B17E003256FD /* HomeViewController.xib */; };
-		AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */; };
 		AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */; };
 		AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */; };
 		AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB1F1AB45D1400B2C6A9 /* TraderListViewController.m */; };
@@ -141,8 +135,6 @@
 		AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC531A7CEC8A007241DC /* Images.xcassets */; };
 		AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC551A7CEC8A007241DC /* LaunchScreen.xib */; };
 		AEF8BC631A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */; };
-		AEFF2E8F1A925ED8005DBCBB /* EventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFF2E8D1A925ED8005DBCBB /* EventViewCell.m */; };
-		AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFF2E8E1A925ED8005DBCBB /* EventViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +155,12 @@
 		90628C835934F524217A592D /* Pods-Surbiton Food Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.debug.xcconfig"; sourceTree = "<group>"; };
 		972532AF6AB3EF6F9033FCD9 /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
 		9B21F41E6EC7E69F1E327214 /* Pods-Surbiton Food FestivalTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food FestivalTests.production.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests.production.xcconfig"; sourceTree = "<group>"; };
+		AE097B9D2055BB2A00CAEAF0 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewCell.xib; sourceTree = "<group>"; };
+		AE097BA02055BB2B00CAEAF0 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		AE097BA52055BB5A00CAEAF0 /* EventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewCell.h; sourceTree = "<group>"; };
+		AE097BA62055BB5A00CAEAF0 /* EventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewCell.m; sourceTree = "<group>"; };
 		AE0D6D891C970688006726CC /* launchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage.png; sourceTree = "<group>"; };
 		AE1382611AA1422B00714884 /* Voucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
 		AE1382621AA1422B00714884 /* Voucher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
@@ -211,9 +209,6 @@
 		AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		AE1BCBE51A9FDC3300E79935 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
-		AE2521E41AA20040006A442A /* VoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherViewController.h; sourceTree = "<group>"; };
-		AE2521E51AA20040006A442A /* VoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherViewController.m; sourceTree = "<group>"; };
-		AE2521E61AA20040006A442A /* VoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherViewController.xib; sourceTree = "<group>"; };
 		AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "team-surbiton-festival.jpg"; sourceTree = "<group>"; };
 		AE7003C71C4CF99300556EF6 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		AE7003C81C4CF99300556EF6 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
@@ -228,12 +223,6 @@
 		AE72028E1AE5557300D2B730 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
 		AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
 		AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivacyPolicyViewController.xib; sourceTree = "<group>"; };
-		AE8D135F1AA14B1900166951 /* VoucherListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListCell.h; sourceTree = "<group>"; };
-		AE8D13601AA14B1900166951 /* VoucherListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListCell.m; sourceTree = "<group>"; };
-		AE8D13611AA14B1900166951 /* VoucherListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListCell.xib; sourceTree = "<group>"; };
-		AE8D136E1AA14DBE00166951 /* VoucherListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherListViewController.h; sourceTree = "<group>"; };
-		AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherListViewController.m; sourceTree = "<group>"; };
-		AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoucherListViewController.xib; sourceTree = "<group>"; };
 		AE9055BE1CA43C8D00E9C369 /* yellow-cloth-tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-cloth-tile.png"; sourceTree = "<group>"; };
 		AE9055CA1CA44B9500E9C369 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Surbiton Food Festival/Default-568h@2x.png"; sourceTree = "<group>"; };
 		AE9055CB1CA44B9500E9C369 /* Default-iPhone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-iPhone6.png"; path = "Surbiton Food Festival/Default-iPhone6.png"; sourceTree = "<group>"; };
@@ -261,12 +250,8 @@
 		AEA0568E1AA4F82B003E095F /* TwitterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewCell.h; sourceTree = "<group>"; };
 		AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewCell.m; sourceTree = "<group>"; };
 		AEA056901AA4F82B003E095F /* TwitterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewCell.xib; sourceTree = "<group>"; };
-		AEA3453F205426D7002765E9 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAE299D1C848B5200533C60 /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
 		AEAE29A11C8839B000533C60 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AEB9DB271A90A956008C6329 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewController.h; path = ../EventViewController.h; sourceTree = "<group>"; };
-		AEB9DB281A90A956008C6329 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewController.m; path = ../EventViewController.m; sourceTree = "<group>"; };
-		AEB9DB291A90A956008C6329 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventViewController.xib; path = ../EventViewController.xib; sourceTree = "<group>"; };
 		AEB9DB2C1A90C559008C6329 /* TweetBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetBuilder.h; sourceTree = "<group>"; };
 		AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetBuilder.m; sourceTree = "<group>"; };
 		AEB9DB2F1A90C564008C6329 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
@@ -316,7 +301,6 @@
 		AEEF3D371AD5B17E003256FD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		AEEF3D381AD5B17E003256FD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AEEF3D391AD5B17E003256FD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		AEF3AB011AB1F7E700B2C6A9 /* TweetLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetLinkViewController.h; sourceTree = "<group>"; };
 		AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetLinkViewController.m; sourceTree = "<group>"; };
 		AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetLinkViewController.xib; sourceTree = "<group>"; };
@@ -346,9 +330,6 @@
 		AEF8BC5C1A7CEC8A007241DC /* Surbiton Food FestivalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Surbiton Food FestivalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF8BC611A7CEC8A007241DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Surbiton_Food_FestivalTests.m; sourceTree = "<group>"; };
-		AEFF2E8C1A925ED8005DBCBB /* EventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventViewCell.h; path = ../EventViewCell.h; sourceTree = "<group>"; };
-		AEFF2E8D1A925ED8005DBCBB /* EventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventViewCell.m; path = ../EventViewCell.m; sourceTree = "<group>"; };
-		AEFF2E8E1A925ED8005DBCBB /* EventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventViewCell.xib; path = ../EventViewCell.xib; sourceTree = "<group>"; };
 		F8EBB55E721075F2AA4FE827 /* Pods-Surbiton Food FestivalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food FestivalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -357,10 +338,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEA3453E205426D7002765E9 /* libPods-Surbiton Food Festival.a in Frameworks */,
 				AE19E59F1AC18A2B00B3F69F /* SystemConfiguration.framework in Frameworks */,
 				AE1BCBB71A9FCA4D00E79935 /* CoreGraphics.framework in Frameworks */,
-				AEF3AAED1AAFABA200B2C6A9 /* FacebookSDK.framework in Frameworks */,
 				AE1BCBA91A9FC77200E79935 /* UIKit.framework in Frameworks */,
 				AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */,
 				AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */,
@@ -395,25 +374,8 @@
 		5749656D9CB7325C8DCC423D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AEA3453F205426D7002765E9 /* libPods-Surbiton Food Festival.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AE1382671AA142DE00714884 /* VoucherList */ = {
-			isa = PBXGroup;
-			children = (
-				AE8D135F1AA14B1900166951 /* VoucherListCell.h */,
-				AE8D13601AA14B1900166951 /* VoucherListCell.m */,
-				AE8D13611AA14B1900166951 /* VoucherListCell.xib */,
-				AE8D136E1AA14DBE00166951 /* VoucherListViewController.h */,
-				AE8D136F1AA14DBE00166951 /* VoucherListViewController.m */,
-				AE8D13701AA14DBE00166951 /* VoucherListViewController.xib */,
-				AE2521E41AA20040006A442A /* VoucherViewController.h */,
-				AE2521E51AA20040006A442A /* VoucherViewController.m */,
-				AE2521E61AA20040006A442A /* VoucherViewController.xib */,
-			);
-			name = VoucherList;
 			sourceTree = "<group>";
 		};
 		AE18C4B71A8CB5F500B96570 /* Models */ = {
@@ -642,13 +604,13 @@
 		AEEE5FB91AA06E1F00CA7774 /* EventList */ = {
 			isa = PBXGroup;
 			children = (
-				AEFF2E8C1A925ED8005DBCBB /* EventViewCell.h */,
-				AEFF2E8D1A925ED8005DBCBB /* EventViewCell.m */,
-				AEFF2E8E1A925ED8005DBCBB /* EventViewCell.xib */,
-				AEB9DB271A90A956008C6329 /* EventViewController.h */,
+				AE097BA52055BB5A00CAEAF0 /* EventViewCell.h */,
+				AE097BA62055BB5A00CAEAF0 /* EventViewCell.m */,
+				AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */,
+				AE097B9D2055BB2A00CAEAF0 /* EventViewController.h */,
+				AE097BA02055BB2B00CAEAF0 /* EventViewController.m */,
+				AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */,
 				AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */,
-				AEB9DB281A90A956008C6329 /* EventViewController.m */,
-				AEB9DB291A90A956008C6329 /* EventViewController.xib */,
 				AE1BCBCB1A9FD0A400E79935 /* EventListViewController.h */,
 				AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */,
 				AEBFA55E1AB3632800B25A11 /* VenueViewController.h */,
@@ -706,7 +668,6 @@
 				AE9055CE1CA44B9500E9C369 /* Default@2x.png */,
 				AEAE29A11C8839B000533C60 /* Podfile */,
 				AE19E59E1AC18A2B00B3F69F /* SystemConfiguration.framework */,
-				AEF3AAEC1AAFABA200B2C6A9 /* FacebookSDK.framework */,
 				AE1BCBB61A9FCA4D00E79935 /* CoreGraphics.framework */,
 				AE1BCBA81A9FC77200E79935 /* UIKit.framework */,
 				AE9369F31A9BC5E300F15869 /* MapKit.framework */,
@@ -737,7 +698,6 @@
 				AEE46FAE1ABB4DDA00F52708 /* About */,
 				AEF3AB091AB4576C00B2C6A9 /* TraderList */,
 				AEA0568D1AA4F7F1003E095F /* TwitterList */,
-				AE1382671AA142DE00714884 /* VoucherList */,
 				AEEE5FB91AA06E1F00CA7774 /* EventList */,
 				AE1BCBBF1A9FCF0000E79935 /* Classes */,
 				AE1BCBBD1A9FCEB100E79935 /* Front Page */,
@@ -872,6 +832,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE097BA22055BB2B00CAEAF0 /* EventViewController.xib in Resources */,
 				AE7003D61C4CF99300556EF6 /* PostViewCell.xib in Resources */,
 				AEF3AB221AB45D1400B2C6A9 /* TraderListViewController.xib in Resources */,
 				AEEF3D271AD3F096003256FD /* magenta-plate.png in Resources */,
@@ -885,7 +846,6 @@
 				AE9055E91CA5416300E9C369 /* InfoViewController.xib in Resources */,
 				AEE46FAD1ABB4A1700F52708 /* KingstonPound-small-15.png in Resources */,
 				AEE46FD61ABB55E600F52708 /* AboutKingstonPoundViewController.xib in Resources */,
-				AEB9DB2B1A90A956008C6329 /* EventViewController.xib in Resources */,
 				AE1BCBF71A9FDC3300E79935 /* Icon.png in Resources */,
 				AEF8BC571A7CEC8A007241DC /* LaunchScreen.xib in Resources */,
 				AEEF3D261AD3F096003256FD /* indigo-plate.png in Resources */,
@@ -906,7 +866,6 @@
 				AE0D6D8A1C970688006726CC /* launchimage.png in Resources */,
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
 				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
-				AE8D13631AA14B1900166951 /* VoucherListCell.xib in Resources */,
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */,
@@ -922,7 +881,6 @@
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
 				AEBA91C21C888A3000708484 /* camera-icon@2x.png in Resources */,
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
-				AE8D13721AA14DBE00166951 /* VoucherListViewController.xib in Resources */,
 				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
 				AE9055D11CA44B9500E9C369 /* Default-iPhone6Plus.png in Resources */,
 				AE9055BF1CA43C8D00E9C369 /* yellow-cloth-tile.png in Resources */,
@@ -939,20 +897,19 @@
 				AEEF3D281AD3F096003256FD /* orange-plate.png in Resources */,
 				AEC425421AD913ED0021049E /* cutlery_chopsticks.png in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
-				AE2521E81AA20040006A442A /* VoucherViewController.xib in Resources */,
 				AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */,
 				AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */,
 				AE9055D01CA44B9500E9C369 /* Default-iPhone6.png in Resources */,
 				AEC425461AD913ED0021049E /* cutlery_teaspoon.png in Resources */,
 				AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */,
 				AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x in Resources */,
-				AEFF2E901A925ED8005DBCBB /* EventViewCell.xib in Resources */,
 				AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */,
 				AEEF3D2B1AD3F096003256FD /* white-plate.png in Resources */,
 				AE1BCBF31A9FDC3300E79935 /* Icon-Small@3x.png in Resources */,
 				AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */,
 				AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */,
 				AE1BCBF91A9FDC3300E79935 /* iTunesArtwork in Resources */,
+				AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1076,12 +1033,12 @@
 				AE7003D51C4CF99300556EF6 /* PostViewCell.m in Sources */,
 				AE1382631AA1422B00714884 /* Voucher.m in Sources */,
 				AEF3AB2D1AB45D9000B2C6A9 /* TraderBuilder.m in Sources */,
-				AEFF2E8F1A925ED8005DBCBB /* EventViewCell.m in Sources */,
 				AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */,
 				AE1BCBA01A9FC59A00E79935 /* CustomAnimationController.m in Sources */,
 				AE1BCBCE1A9FD0A400E79935 /* EventListViewController.m in Sources */,
 				AEF3AB2A1AB45D8000B2C6A9 /* Trader.m in Sources */,
 				AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */,
+				AE097BA42055BB2B00CAEAF0 /* EventViewController.m in Sources */,
 				AEB9DB311A90C564008C6329 /* Tweet.m in Sources */,
 				AE1BCBC31A9FCF6300E79935 /* TwitterViewController.m in Sources */,
 				AEE46FD01ABB55CC00F52708 /* AboutAppViewController.m in Sources */,
@@ -1092,15 +1049,11 @@
 				AE9055DB1CA53B6200E9C369 /* Info.m in Sources */,
 				AEBA91C61C88A3FB00708484 /* UploadPhotoViewController.m in Sources */,
 				AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */,
-				AE8D13621AA14B1900166951 /* VoucherListCell.m in Sources */,
 				AE7003D31C4CF99300556EF6 /* PostListViewController.m in Sources */,
-				AE2521E71AA20040006A442A /* VoucherViewController.m in Sources */,
-				AE8D13711AA14DBE00166951 /* VoucherListViewController.m in Sources */,
 				AE1BCBA71A9FC62100E79935 /* RearViewController.m in Sources */,
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
 				AEBA91BC1C8871E000708484 /* Gallery.m in Sources */,
 				AE18C4C51A8CBC3700B96570 /* Event.m in Sources */,
-				AEB9DB2A1A90A956008C6329 /* EventViewController.m in Sources */,
 				AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */,
 				AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */,
 				AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */,
@@ -1111,6 +1064,7 @@
 				AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */,
 				AE9055E81CA5416300E9C369 /* InfoViewController.m in Sources */,
 				AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */,
+				AE097BA72055BB5A00CAEAF0 /* EventViewCell.m in Sources */,
 				AEBA91BF1C8872AC00708484 /* GalleryBuilder.m in Sources */,
 				AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */,
 				AE9055E31CA53EF300E9C369 /* InfoViewCell.m in Sources */,

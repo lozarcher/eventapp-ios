@@ -11,6 +11,7 @@ target 'Surbiton Food Festival' do
 
     pod 'MWPhotoBrowser',  '~> 2.1.2'
     pod 'KILabel'
+    pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
     #pod 'DZNEmptyDataSet'
     #pod 'iRate'
     #pod 'FontAwesomeKit'
