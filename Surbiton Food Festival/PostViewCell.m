@@ -26,6 +26,7 @@
 
 -(void)populateDataInCell:(Post *)post indexPath:(NSIndexPath *)indexPath {
     //traderNameLabel.text = [trader name];
+
     self.textLabel.text = @"";
     NSString *message = @"";
     if (![[post message] isKindOfClass:[NSNull class]]) {
@@ -62,6 +63,8 @@
 }
 
 -(void)setPostImage:(UIImage *)image {
+    [self.postImageView setImage:image];
+
     NSLog(@"Image width %f height %f", self.postImageView.image.size.width, self.postImageView.image.size.height);
     NSLog(@"ImageView width %f height %f", self.postImageView.frame.size.width, self.postImageView.frame.size.height);
     if (self.postImageView.frame.size.width < (self.postImageView.image.size.width)) {
@@ -69,9 +72,19 @@
     } else {
         self.imageHeightConstraint.constant = image.size.height;
     }
-    [self.postImageView setImage:image];
+
     [self setNeedsUpdateConstraints];
-    
+}
+
+// If you are not using auto layout, override this method, enable it by setting
+// "fd_enforceFrameLayout" to YES.
+- (CGSize)sizeThatFits:(CGSize)size {
+    CGFloat totalHeight = 0;
+    totalHeight += [self.dateLabel sizeThatFits:size].height;
+    totalHeight += [self.messageLabel sizeThatFits:size].height;
+    totalHeight += [self.postImageView sizeThatFits:size].height;
+    totalHeight += 30; // margins
+    return CGSizeMake(size.width, totalHeight);
 }
 
 -(NSString *)dateDiff:(NSDate *)date {

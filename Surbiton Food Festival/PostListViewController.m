@@ -15,6 +15,8 @@
 #import "UIImageView+WebCache.h"
 #import "AppDelegate.h"
 
+#import "UITableView+FDTemplateLayoutCell.h"
+
 @implementation PostListViewController
 
 @synthesize tableView, spinner, messageLabel;
@@ -23,7 +25,8 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
-    
+    tableView.fd_debugLogEnabled = YES;
+
     // Register cell Nib
     UINib *cellNib = [UINib nibWithNibName:@"PostViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"PostViewCell"];
@@ -130,7 +133,8 @@
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];;
-    
+    cell.fd_enforceFrameLayout = YES;
+
     // Cell text (event title)
     Post *post = [self getPostForIndexPath:indexPath];
     NSLog(@"Cell label %@", [post name]);
@@ -151,24 +155,27 @@
             cell.messageLabel.text = @"Tap to load more...";
         }
     }
-    
+
     return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    return [tableView fd_heightForCellWithIdentifier:@"PostViewCell" configuration:^(id cell) {
+        [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath];
+    }];
     
-    if (!self.prototypeCell)
-    {
-        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];
-    }
-    Post *post = [self getPostForIndexPath:indexPath];
-    [self.prototypeCell populateDataInCell:post indexPath:indexPath];
-    
-    [self.prototypeCell layoutIfNeeded];
-    
-    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
+//    if (!self.prototypeCell)
+//    {
+//        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];
+//    }
+//    Post *post = [self getPostForIndexPath:indexPath];
+//    [self.prototypeCell populateDataInCell:post indexPath:indexPath];
+//
+//    [self.prototypeCell layoutIfNeeded];
+//
+//    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    return size.height;
 //    CGFloat imageHeight = [[heightsCache objectForKey:post.pictureUrl] floatValue];
 //    
 //    NSLog(@"Returning row height %f for row %ld", size.height, (long)indexPath.row);
