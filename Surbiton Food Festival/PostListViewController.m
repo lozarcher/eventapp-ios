@@ -27,6 +27,9 @@
     tableView.delegate = self;
     tableView.fd_debugLogEnabled = YES;
 
+    tableView.estimatedRowHeight = UITableViewAutomaticDimension;
+    tableView.rowHeight = UITableViewAutomaticDimension;
+    
     // Register cell Nib
     UINib *cellNib = [UINib nibWithNibName:@"PostViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"PostViewCell"];
@@ -132,14 +135,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    //PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];;
-    PostViewCell *cell = [self.cells objectAtIndex:indexPath.row];
+    PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];;
 
-    
-    
     // Cell text (event title)
     Post *post = [self getPostForIndexPath:indexPath];
     NSLog(@"Cell label %@", [post name]);
+    cell.postImageView.image = NULL;
+    cell.postImageHeight = 0;
+    cell.imageHeightConstraint.constant = 0;
+    
     [cell populateDataInCell:post indexPath:indexPath tableView:view];
     cell.delegate = self;
     cell.accessoryType = UITableViewCellAccessoryNone;
@@ -303,7 +307,7 @@
 
 -(NSError *)getPostFromData:(NSData *)data {
     NSError *error = nil;
-    NSArray *posts = [PostBuilder postsFromJSON:data error:&error];
+    NSMutableArray *posts = [[PostBuilder postsFromJSON:data error:&error] mutableCopy];
     self.nextPage = [PostBuilder nextPageFromJSON:data];
     if ([posts count] > 0) {
         if (isPaginatedLoad) {
@@ -318,15 +322,6 @@
     }
     NSLog(@"Got %lu posts from data", (unsigned long)posts.count);
     
-    self.cells = nil;
-    
-    self.cells = [NSMutableArray arrayWithCapacity:receivedData.length+1];
-    
-    for (int i=0; i<posts.count+1; i++) {
-        PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];
-        cell.postImageView.image = nil;
-        [self.cells insertObject:cell atIndex:i];
-    }
     return error;
 }
 

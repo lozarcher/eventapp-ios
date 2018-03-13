@@ -108,7 +108,7 @@
     
     self.reminderSet = NO;
     UIBarButtonItem *reminderButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bell-lg-outline.png"]
-                                                                           style:UIBarButtonItemStyleBordered target:self action:@selector(reminderButtonPressed:)];
+                                                                           style:UIBarButtonItemStylePlain target:self action:@selector(reminderButtonPressed:)];
     
     self.navigationItem.rightBarButtonItem = reminderButtonItem;
     [self updateReminderButton];
@@ -238,7 +238,7 @@
     NSDateComponents *oneDayComponents = [[NSDateComponents alloc] init];
     oneDayComponents.day = 1;
     
-    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
     NSUInteger unitFlags = NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
     NSDateComponents *startDateComponents = [gregorianCalendar components:unitFlags fromDate:startDate];

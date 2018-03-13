@@ -232,7 +232,7 @@
 
 -(NSError *)getGalleryFromData:(NSData *)data {
     NSError *error = nil;
-    NSArray *gallery = [GalleryBuilder galleryFromJSON:data error:&error];
+    NSMutableArray *gallery = [[GalleryBuilder galleryFromJSON:data error:&error] mutableCopy];
     if ([gallery count] > 0) {
         _photos = gallery;
     }

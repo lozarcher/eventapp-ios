@@ -15,6 +15,7 @@
 @synthesize traderNameLabel, traderImage, kingstonPoundImage;
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     // Initialization code
 }
 
@@ -27,7 +28,7 @@
 -(void)populateDataInCell:(Trader *)trader {
     //traderNameLabel.text = [trader name];
     NSLog(@"Kingston pound: %@", trader.kingstonPound);
-    [kingstonPoundImage setHidden:(![trader.kingstonPound intValue] == 1)];
+    [kingstonPoundImage setHidden:([trader.kingstonPound intValue] != 1)];
     traderNameLabel.text = [trader name];
         
     SDWebImageManager *manager = [SDWebImageManager sharedManager];

@@ -65,7 +65,7 @@
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
     UIBarButtonItem *tweetButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"UIButtonBarCompose.png"]
-                                                                          style:UIBarButtonItemStyleBordered target:self action:@selector(tweetButtonClicked:)];
+                                                                          style:UIBarButtonItemStylePlain target:self action:@selector(tweetButtonClicked:)];
     
     self.navigationItem.rightBarButtonItem = tweetButton;
     
@@ -286,7 +286,7 @@
 
 -(NSError *)getTweetsFromData:(NSData *)data {
     NSError *error = nil;
-    NSArray *tweets = [TweetBuilder tweetsFromJSON:data error:&error];
+    NSMutableArray *tweets = [[TweetBuilder tweetsFromJSON:data error:&error] mutableCopy];
     self.nextPage = [TweetBuilder nextPageFromJSON:data];
     if ([tweets count] > 0) {
         if (isPaginatedLoad) {
