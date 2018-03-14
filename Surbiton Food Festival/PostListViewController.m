@@ -140,7 +140,7 @@
     // Cell text (event title)
     Post *post = [self getPostForIndexPath:indexPath];
     NSLog(@"Cell label %@", [post name]);
-    cell.postImageView.image = NULL;
+
     cell.postImageHeight = 0;
     cell.imageHeightConstraint.constant = 0;
     

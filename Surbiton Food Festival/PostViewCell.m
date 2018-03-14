@@ -35,7 +35,7 @@
     //traderNameLabel.text = [trader name];
     self.tableView = tableView;
     self.indexPath = indexPath;
-    
+    [self.postImageView initWithImage:nil];
     self.textLabel.text = @"";
     NSString *message = @"";
     if (![[post message] isKindOfClass:[NSNull class]]) {
@@ -84,19 +84,19 @@
 }
 
 -(void)setPostImage:(UIImage *)image {
-    [self.postImageView setImage:image];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat newFrameWidth = screenRect.size.width;
     CGFloat newFrameHeight = image.size.height * (newFrameWidth / image.size.width);
     CGRect newFrame = CGRectMake(0, 0, newFrameWidth, newFrameHeight);
     [self.postImageView setFrame:newFrame];
-    
+    [self.postImageView setImage:image];
+
     self.imageHeightConstraint.constant = newFrameHeight;
     self.postImageHeight = newFrameHeight;
     
-    [self.tableView beginUpdates];
-    [self.tableView endUpdates];
+    //[self.tableView beginUpdates];
+    //[self.tableView endUpdates];
 
 }
 
@@ -115,7 +115,7 @@
 //    NSLog(@"Sizing postImageView : %f", self.postImageView.frame.size.height);
 //    NSLog(@"Sizing margins : %f", 40.0);
 //    NSLog(@"Setting total height %f",totalHeight);
-
+    NSLog(@"%f self.postImageView.frame.size.height",self.postImageView.frame.size.height);
     return CGSizeMake(size.width, totalHeight);
 }
 
