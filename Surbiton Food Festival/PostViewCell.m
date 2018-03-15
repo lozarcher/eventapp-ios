@@ -106,6 +106,8 @@
     totalHeight += [self.dateLabel sizeThatFits:size].height;
     totalHeight += [self.messageLabel sizeThatFits:size].height;
     //totalHeight += self.postImageView.frame.size.height;
+    
+    // MESSAGE LABEL??!!
     totalHeight += [self.messageLabel sizeThatFits:size].height;
     //totalHeight += self.postImageHeight;  // this is the same value I think?
     totalHeight += 60.0; // margins
