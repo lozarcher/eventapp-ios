@@ -143,7 +143,6 @@
 
     cell.postImageHeight = 0;
     cell.imageHeightConstraint.constant = 0;
-    [cell.postImageView setImage:nil];
     
     [cell populateDataInCell:post indexPath:indexPath tableView:view];
     cell.delegate = self;
