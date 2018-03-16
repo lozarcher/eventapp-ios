@@ -37,6 +37,16 @@
     self.tableView = tableView;
     self.textLabel.text = @"";
     NSString *message = @"";
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat newFrameWidth = screenRect.size.width;
+    CGFloat newFrameHeight = 0;
+    CGRect newFrame = CGRectMake(0, 0, newFrameWidth, newFrameHeight);
+//    self.postImageHeight = 0;
+//    self.imageHeightConstraint.constant = 0;
+    [self.postImageView setFrame:newFrame];
+    [self.postImageView setImage:nil];
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
     if (![[post message] isKindOfClass:[NSNull class]]) {
         message = [post message];
     }
@@ -52,17 +62,20 @@
                 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                 }
                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                if ((image != nil) && (weakSelf.tag == indexPath.row))
+                if ( (self.tag == indexPath.row))
                     //dispatch_async(dispatch_get_main_queue(), ^{
                         // display it, after resizing for the screen
-                        [weakSelf setPostImage:image];
-                        [weakSelf setNeedsLayout];
-                        [weakSelf layoutIfNeeded];
+                        [self setPostImage:image];
+                        [self setNeedsLayout];
+                        [self layoutIfNeeded];
                     //});
                 }];
         }else {
             //self.imageHeightConstraint = 0;
         }
+    } else {
+        NSLog(@"Image is null");
+        self.imageHeightConstraint.constant = 0;
     }
     if (![[post link] isKindOfClass:[NSNull class]]) {
         if ([message isEqualToString:@""]) {
@@ -125,7 +138,10 @@
     NSNumber *cachedHeight = [appDelegate.heightsCache objectForKey:[NSNumber numberWithLong:self.tag]];
     NSLog(@"**************************");
 
-    NSLog(@"Getting post image height %f key %d", [cachedHeight floatValue], self.tag);
+    NSLog(@"sizeThatFits cachedHeight %f key %d", [cachedHeight floatValue], self.tag);
+    NSLog(@"sizeThatFits self.imageHeightConstraint.constant %f", self.imageHeightConstraint.constant);
+    NSLog(@"sizeThatFits self.postImageView.frame.size.height %f", self.postImageView.frame.size.height);
+    NSLog(@"sizeThatFits [self.postImageView sizeThatFits:size].height %f", [self.postImageView sizeThatFits:size].height);
     //totalHeight += [cachedHeight floatValue];
     totalHeight += self.imageHeightConstraint.constant;
     //totalHeight += self.postImageView.frame.size.height;
