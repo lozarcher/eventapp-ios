@@ -113,6 +113,8 @@
         self.imageHeightConstraint.constant = 0;
         [self.postImageView setImage:nil];
     }
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
     
 }
 
