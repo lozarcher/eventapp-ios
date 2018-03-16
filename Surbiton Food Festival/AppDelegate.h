@@ -18,7 +18,6 @@
 @property (strong, nonatomic) SWRevealViewController *viewController;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) HomeViewController *homeViewController;
-@property (strong, nonatomic) NSMutableDictionary *heightsCache;
 
 @end
 

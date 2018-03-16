@@ -50,9 +50,27 @@
     if (![[post message] isKindOfClass:[NSNull class]]) {
         message = [post message];
     }
-
+    if (![[post link] isKindOfClass:[NSNull class]]) {
+        if ([message isEqualToString:@""]) {
+            message = [post link];
+        } else {
+            // dedupe links if already present in message
+            if (![message containsString:[post link]]) {
+                message = [NSString stringWithFormat:@"%@\n\n%@", message, [post link]];
+            }
+        }
+    }
+    [self.messageLabel setText:message];
+    [self setNeedsLayout];
+    
+    if (![[post createdDate] isKindOfClass:[NSNull class]]) {
+        NSTimeInterval createdSeconds = [post.createdDate doubleValue]/1000;
+        NSDate *createdDate = [[NSDate alloc] initWithTimeIntervalSince1970:createdSeconds];
+        [self.dateLabel setText:[self dateDiff:createdDate]];
+        [self setNeedsLayout];
+    }
     self.tag = indexPath.row;
-    __weak typeof(self) weakSelf = self;
+
     
     if (![[post pictureUrl] isKindOfClass:[NSNull class]]) {
         // asynchronously download the image
@@ -77,48 +95,21 @@
         NSLog(@"Image is null");
         self.imageHeightConstraint.constant = 0;
     }
-    if (![[post link] isKindOfClass:[NSNull class]]) {
-        if ([message isEqualToString:@""]) {
-            message = [post link];
-        } else {
-            // dedupe links if already present in message
-            if (![message containsString:[post link]]) {
-                message = [NSString stringWithFormat:@"%@\n\n%@", message, [post link]];
-            }
-        }
-    }
+
     
-    if (![[post createdDate] isKindOfClass:[NSNull class]]) {
-        NSTimeInterval createdSeconds = [post.createdDate doubleValue]/1000;
-        NSDate *createdDate = [[NSDate alloc] initWithTimeIntervalSince1970:createdSeconds];
-        self.dateLabel.text = [self dateDiff:createdDate];
-    }
-    
-    self.messageLabel.text = message;
     
 }
 
 -(void)setPostImage:(UIImage *)image {
-    
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat newFrameWidth = screenRect.size.width;
     CGFloat newFrameHeight = image.size.height * (newFrameWidth / image.size.width);
     CGRect newFrame = CGRectMake(0, 0, newFrameWidth, newFrameHeight);
     [self.postImageView setFrame:newFrame];
     [self.postImageView setImage:image];
-
+    
     self.imageHeightConstraint.constant = newFrameHeight;
     self.postImageHeight = newFrameHeight;
-    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
-    [appDelegate.heightsCache setObject:[NSNumber numberWithFloat:newFrameHeight] forKey:[NSNumber numberWithLong:self.tag]];
-    NSLog(@"****************");
-    NSLog(@"Setting height in cache %f key %d", newFrameHeight, self.tag);
-    NSNumber *cachedHeight = [appDelegate.heightsCache objectForKey:[NSNumber numberWithLong:self.tag]];
-    NSLog(@"Checking it's been set ok %f key %d", newFrameHeight, self.tag);
-
-    //[self.tableView beginUpdates];
-
-    //[self.tableView endUpdates];
 }
 
 // If you are not using auto layout, override this method, enable it by setting
@@ -127,26 +118,18 @@
     CGFloat totalHeight = 0;
     totalHeight += [self.dateLabel sizeThatFits:size].height;
     totalHeight += [self.messageLabel sizeThatFits:size].height;
-    //totalHeight += self.postImageView.image.size.height;
     
-    // MESSAGE LABEL??!!
-    //totalHeight += [self.postImageView sizeThatFits:size].height;
-    //totalHeight += self.imageHeightConstraint.constant;
-
-    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
-
-    NSNumber *cachedHeight = [appDelegate.heightsCache objectForKey:[NSNumber numberWithLong:self.tag]];
     NSLog(@"**************************");
 
-    NSLog(@"sizeThatFits cachedHeight %f key %d", [cachedHeight floatValue], self.tag);
     NSLog(@"sizeThatFits self.imageHeightConstraint.constant %f", self.imageHeightConstraint.constant);
+    NSLog(@"sizeThatFits self.postImageHeight %f", self.postImageHeight);
     NSLog(@"sizeThatFits self.postImageView.frame.size.height %f", self.postImageView.frame.size.height);
     NSLog(@"sizeThatFits [self.postImageView sizeThatFits:size].height %f", [self.postImageView sizeThatFits:size].height);
     //totalHeight += [cachedHeight floatValue];
     totalHeight += self.imageHeightConstraint.constant;
     //totalHeight += self.postImageView.frame.size.height;
     //totalHeight += self.postImageHeight;  // this is the same value I think?
-    totalHeight += 40.0; // margins
+    totalHeight += 60.0; // margins
     
 //    NSLog(@"Sizing datelabel : %f", [self.dateLabel sizeThatFits:size].height);
 //    NSLog(@"Sizing messageLabel : %f", [self.messageLabel sizeThatFits:size].height);
