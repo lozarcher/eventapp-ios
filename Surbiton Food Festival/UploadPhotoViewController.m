@@ -39,6 +39,8 @@
     _captionLabel.hidden = TRUE;
     _takePhotoButton.hidden = FALSE;
     _cameraRollButton.hidden = FALSE;
+    self.title = NSLocalizedString(@"Upload a Photo", nil);
+
     self.httpQueue = [[NSOperationQueue alloc] init];
 }
 
