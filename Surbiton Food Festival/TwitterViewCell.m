@@ -11,14 +11,14 @@
 
 @implementation TwitterViewCell
 
-@synthesize nameLabel, profilePic, textLabel, screennameLabel, dateCreatedLabel, delegate;
+@synthesize nameLabel, profilePic, textLabel, screennameLabel, dateCreatedLabel;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
     textLabel.urlLinkTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
         NSLog(@"Clicked link");
-        [self.delegate loadURL:urlString];
+
         
     };
 }

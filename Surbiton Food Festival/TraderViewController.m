@@ -99,8 +99,13 @@
 
 
 - (IBAction)websiteClicked:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:trader.website]];
-    NSLog(@"Opening %@", trader.website);
+    NSString *urlString = trader.website;
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NSString stringWithFormat:@"http://%@", urlString];
+    }
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    
+    NSLog(@"Opening %@", urlString);
 
 }
 - (IBAction)fbPageClicked:(id)sender {

@@ -178,9 +178,7 @@
     // Cell text (event title)
     Tweet *tweet = [self getTweetForIndexPath:indexPath];
     NSLog(@"Cell label %@", [tweet name]);
-    [cell populateDataInCell:tweet];
-    cell.delegate = self;
-    
+    [cell populateDataInCell:tweet];    
     
     // Only call this if there is a next page
     if (![self.nextPage isKindOfClass:[NSNull class]]) {
@@ -358,6 +356,9 @@
 
 -(void)loadURL:(NSString *)urlString {
     NSLog(@"Loading URL %@ from view controller", urlString);
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NSString stringWithFormat:@"http://%@", urlString];
+    }
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 

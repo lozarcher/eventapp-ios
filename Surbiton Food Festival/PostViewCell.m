@@ -64,19 +64,35 @@
     self.indexPath = indexPath;
     self.tableView = tableView;
     self.textLabel.text = @"";
-    NSString *message = @"";
+    NSString *message = @" ";
 
 
     if (![[post message] isKindOfClass:[NSNull class]]) {
         message = [post message];
     }
     if (![[post link] isKindOfClass:[NSNull class]]) {
-        if ([message isEqualToString:@""]) {
-            message = [post link];
-        } else {
-            // dedupe links if already present in message
-            if (![message containsString:[post link]]) {
-                message = [NSString stringWithFormat:@"%@\n\n%@", message, [post link]];
+        NSString *link = [post link];
+
+        NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"http.*www\\.facebook\\.com.*\\/photos\\/"
+                                                                          options:0
+                                                                            error:nil];
+        
+        if (link != NULL) {
+            long matches = [regex numberOfMatchesInString:link
+                                            options:0
+                                              range:NSMakeRange(0, [link length])];
+            
+            
+            if (!matches){
+                //Matches
+                if ([message isEqualToString:@""]) {
+                    message = [post link];
+                } else {
+                    // dedupe links if already present in message
+                    if (![message containsString:[post link]]) {
+                        message = [NSString stringWithFormat:@"%@\n\n%@", message, [post link]];
+                    }
+                }
             }
         }
     }

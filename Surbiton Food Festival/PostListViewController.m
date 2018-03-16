@@ -325,7 +325,10 @@
 }
 
 -(void)loadURL:(NSString *)urlString {
-    NSLog(@"Loading URL %@ from view controller", urlString);
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NSString stringWithFormat:@"http://%@", urlString];
+    }
+    NSLog(@"Loading URL %@", urlString);
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TwitterViewCell.h"
 
-@interface TwitterViewController : UIViewController <tweetLinkProtocol, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface TwitterViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_tweets;
     NSString *storePath;
     NSMutableData *receivedData;

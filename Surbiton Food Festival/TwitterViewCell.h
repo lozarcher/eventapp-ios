@@ -10,13 +10,7 @@
 #import "Tweet.h"
 #import "KILabel.h"
 
-@protocol tweetLinkProtocol <NSObject>
--(void)loadURL:(NSString *)urlString;
-@end
-
 @interface TwitterViewCell : UITableViewCell
-
-@property (nonatomic, retain) id<tweetLinkProtocol> delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *dateCreatedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
