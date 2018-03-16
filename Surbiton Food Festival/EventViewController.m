@@ -95,7 +95,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
+    
     eventDescriptionLabel.urlLinkTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
         NSLog(@"Clicked link: %@", urlString);
         
@@ -171,8 +171,6 @@
 
 -(void)setImage:(UIImage *)image {
     [eventImageView setImage:image];
-    NSLog(@"Image width %f height %f", eventImageView.image.size.width, eventImageView.image.size.height);
-    NSLog(@"ImageView width %f height %f", eventImageView.frame.size.width, eventImageView.frame.size.height);
     if (eventImageView.frame.size.width < (eventImageView.image.size.width)) {
         _imageHeightConstraint.constant = eventImageView.frame.size.width / (eventImageView.image.size.width) * (eventImageView.image.size.height);
     } else {
