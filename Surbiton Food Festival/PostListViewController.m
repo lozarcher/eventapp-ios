@@ -172,26 +172,6 @@
         [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath tableView:tableView];
     }];
     
-//    if (!self.prototypeCell)
-//    {
-//        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];
-//    }
-//    Post *post = [self getPostForIndexPath:indexPath];
-//    [self.prototypeCell populateDataInCell:post indexPath:indexPath];
-//
-//    [self.prototypeCell layoutIfNeeded];
-//
-//    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-//    return size.height;
-//    CGFloat imageHeight = [[heightsCache objectForKey:post.pictureUrl] floatValue];
-//    
-//    NSLog(@"Returning row height %f for row %ld", size.height, (long)indexPath.row);
-//    
-//    CGFloat originalHeight = size.height;
-//    
-//    CGFloat newHeight = originalHeight - self.prototypeCell.imageView.frame.size.height + imageHeight;
-//    return newHeight;
-    
 }
 
 - (void)tableView:(UITableView *)localTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

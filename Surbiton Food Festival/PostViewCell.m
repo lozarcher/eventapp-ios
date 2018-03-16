@@ -61,18 +61,17 @@
         }
     }
     [self.messageLabel setText:message];
-    [self setNeedsLayout];
     
     if (![[post createdDate] isKindOfClass:[NSNull class]]) {
         NSTimeInterval createdSeconds = [post.createdDate doubleValue]/1000;
         NSDate *createdDate = [[NSDate alloc] initWithTimeIntervalSince1970:createdSeconds];
         [self.dateLabel setText:[self dateDiff:createdDate]];
-        [self setNeedsLayout];
+    
     }
     self.tag = indexPath.row;
 
     
-    if (![[post pictureUrl] isKindOfClass:[NSNull class]]) {
+    if ((post.id != nil) && ![[post pictureUrl] isKindOfClass:[NSNull class]]) {
         // asynchronously download the image
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         if (self.postImageView.image == nil) {
