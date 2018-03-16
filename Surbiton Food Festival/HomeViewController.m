@@ -53,7 +53,14 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    CGFloat topPadding = 20;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        if (window.safeAreaInsets.top > topPadding)
+            topPadding = window.safeAreaInsets.top;
+    }
+    self.topMargin.constant = topPadding;
+
     [self setUpButtons];
 }
 
