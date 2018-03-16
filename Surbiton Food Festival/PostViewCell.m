@@ -116,27 +116,17 @@
 - (CGSize)sizeThatFits:(CGSize)size {
     CGFloat totalHeight = 0;
     totalHeight += [self.dateLabel sizeThatFits:size].height;
-    totalHeight += [self.messageLabel sizeThatFits:size].height;
-    
-    NSLog(@"**************************");
-
-    NSLog(@"sizeThatFits self.imageHeightConstraint.constant %f", self.imageHeightConstraint.constant);
-    NSLog(@"sizeThatFits self.postImageHeight %f", self.postImageHeight);
-    NSLog(@"sizeThatFits self.postImageView.frame.size.height %f", self.postImageView.frame.size.height);
-    NSLog(@"sizeThatFits [self.postImageView sizeThatFits:size].height %f", [self.postImageView sizeThatFits:size].height);
-    //totalHeight += [cachedHeight floatValue];
+    if ([self.dateLabel sizeThatFits:size].height != 0) {
+        totalHeight += 10;
+    }
     totalHeight += self.imageHeightConstraint.constant;
-    //totalHeight += self.postImageView.frame.size.height;
-    //totalHeight += self.postImageHeight;  // this is the same value I think?
-    totalHeight += 60.0; // margins
-    
-//    NSLog(@"Sizing datelabel : %f", [self.dateLabel sizeThatFits:size].height);
-//    NSLog(@"Sizing messageLabel : %f", [self.messageLabel sizeThatFits:size].height);
-//    NSLog(@"Sizing postImageView : %f", self.postImageView.frame.size.height);
-//    NSLog(@"Sizing margins : %f", 40.0);
-//    NSLog(@"Setting total height %f",totalHeight);
-    NSLog(@"%f self.postImageView.frame.size.height",self.postImageView.frame.size.height);
-    NSLog(@"%f [self.messageLabel sizeThatFits:size].height",[self.messageLabel sizeThatFits:size].height);
+    if (self.imageHeightConstraint.constant != 0) {
+        totalHeight += 40;
+    }
+    totalHeight += [self.messageLabel sizeThatFits:size].height;
+    if ([self.messageLabel sizeThatFits:size].height != 0) {
+        totalHeight += 10;
+    }
     return CGSizeMake(size.width, totalHeight);
 }
 
