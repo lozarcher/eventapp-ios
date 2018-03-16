@@ -9,7 +9,6 @@
 #import "InfoViewController.h"
 #import "UIImageView+WebCache.h"
 #import "CoverHelper.h"
-#import "TweetLinkViewController.h"
 
 @interface InfoViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
@@ -57,10 +56,7 @@
         urlString = [NSString stringWithFormat:@"http://%@", urlString];
     }
     NSLog(@"Loading URL %@ from view controller", urlString);
-    
-    TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
-    [self presentViewController:webVc animated:YES completion:nil];
-    [webVc loadUrlString:urlString];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 
 -(void) viewDidAppear:(BOOL)animated {

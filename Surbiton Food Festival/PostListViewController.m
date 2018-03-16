@@ -11,7 +11,6 @@
 #import "PostBuilder.h"
 #import "PostViewCell.h"
 #import "MTConfiguration.h"
-#import "TweetLinkViewController.h"
 #import "UIImageView+WebCache.h"
 #import "AppDelegate.h"
 
@@ -327,11 +326,7 @@
 
 -(void)loadURL:(NSString *)urlString {
     NSLog(@"Loading URL %@ from view controller", urlString);
-    
-    TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
-    [self presentViewController:webVc animated:YES completion:nil];
-    
-    [webVc loadUrlString:urlString];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 
 @end

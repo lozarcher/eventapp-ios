@@ -10,7 +10,6 @@
 #import "UIImageView+WebCache.h"
 #import <EventKit/EventKit.h>
 #import "VenueViewController.h"
-#import "TweetLinkViewController.h"
 #import "CoverHelper.h"
 
 @interface EventViewController ()
@@ -45,10 +44,7 @@
         urlString = [NSString stringWithFormat:@"http://%@", urlString];
     }
     NSLog(@"Loading URL %@ from view controller", urlString);
-    
-    TweetLinkViewController *webVc = [[TweetLinkViewController alloc] initWithNibName:@"TweetLinkViewController" bundle:nil];
-    [self presentViewController:webVc animated:YES completion:nil];
-    [webVc loadUrlString:urlString];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 
 - (EKEventStore *)eventStore {

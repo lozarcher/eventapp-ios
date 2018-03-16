@@ -118,8 +118,6 @@
 		AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D221AD3F096003256FD /* yellow-plate.png */; };
 		AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3D381AD5B17E003256FD /* HomeViewController.m */; };
 		AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D391AD5B17E003256FD /* HomeViewController.xib */; };
-		AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */; };
-		AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */; };
 		AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB1F1AB45D1400B2C6A9 /* TraderListViewController.m */; };
 		AEF3AB221AB45D1400B2C6A9 /* TraderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB201AB45D1400B2C6A9 /* TraderListViewController.xib */; };
 		AEF3AB261AB45D5200B2C6A9 /* TraderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB241AB45D5200B2C6A9 /* TraderViewCell.m */; };
@@ -301,9 +299,6 @@
 		AEEF3D371AD5B17E003256FD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		AEEF3D381AD5B17E003256FD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AEEF3D391AD5B17E003256FD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		AEF3AB011AB1F7E700B2C6A9 /* TweetLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetLinkViewController.h; sourceTree = "<group>"; };
-		AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetLinkViewController.m; sourceTree = "<group>"; };
-		AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetLinkViewController.xib; sourceTree = "<group>"; };
 		AEF3AB1E1AB45D1400B2C6A9 /* TraderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraderListViewController.h; sourceTree = "<group>"; };
 		AEF3AB1F1AB45D1400B2C6A9 /* TraderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraderListViewController.m; sourceTree = "<group>"; };
 		AEF3AB201AB45D1400B2C6A9 /* TraderListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TraderListViewController.xib; sourceTree = "<group>"; };
@@ -525,9 +520,6 @@
 				AEA0568E1AA4F82B003E095F /* TwitterViewCell.h */,
 				AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */,
 				AEA056901AA4F82B003E095F /* TwitterViewCell.xib */,
-				AEF3AB011AB1F7E700B2C6A9 /* TweetLinkViewController.h */,
-				AEF3AB021AB1F7E700B2C6A9 /* TweetLinkViewController.m */,
-				AEF3AB031AB1F7E700B2C6A9 /* TweetLinkViewController.xib */,
 			);
 			name = TwitterList;
 			sourceTree = "<group>";
@@ -893,7 +885,6 @@
 				AEBA91C71C88A3FB00708484 /* UploadPhotoViewController.xib in Resources */,
 				AEEF3D251AD3F096003256FD /* green-plate.png in Resources */,
 				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
-				AEF3AB051AB1F7E700B2C6A9 /* TweetLinkViewController.xib in Resources */,
 				AEEF3D281AD3F096003256FD /* orange-plate.png in Resources */,
 				AEC425421AD913ED0021049E /* cutlery_chopsticks.png in Resources */,
 				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
@@ -1054,7 +1045,6 @@
 				AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */,
 				AEBA91BC1C8871E000708484 /* Gallery.m in Sources */,
 				AE18C4C51A8CBC3700B96570 /* Event.m in Sources */,
-				AEF3AB041AB1F7E700B2C6A9 /* TweetLinkViewController.m in Sources */,
 				AEA056911AA4F82B003E095F /* TwitterViewCell.m in Sources */,
 				AE9369FA1A9BCBC000F15869 /* VenueBuilder.m in Sources */,
 				AEF3AB261AB45D5200B2C6A9 /* TraderViewCell.m in Sources */,

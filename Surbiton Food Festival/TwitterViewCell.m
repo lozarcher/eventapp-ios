@@ -8,7 +8,6 @@
 
 #import "TwitterViewCell.h"
 #import "UIImageView+WebCache.h"
-#import "TweetLinkViewController.h"
 
 @implementation TwitterViewCell
 
