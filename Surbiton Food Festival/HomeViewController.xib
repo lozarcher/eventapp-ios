@@ -15,6 +15,8 @@
                 <outlet property="greenPlate" destination="AEX-NS-7KP" id="IAp-lq-u1f"/>
                 <outlet property="indigoPlate" destination="OaR-xQ-TkS" id="5tc-MF-lSK"/>
                 <outlet property="magentaPlate" destination="3Q8-87-17S" id="JnW-MY-qNy"/>
+                <outlet property="menuBottom" destination="HtU-n1-zt7" id="Ijv-Cs-qqz"/>
+                <outlet property="menuTop" destination="j5h-NS-xSq" id="c4D-Zo-huK"/>
                 <outlet property="orangePlate" destination="fj1-EX-ZME" id="QD2-Sx-IzT"/>
                 <outlet property="redPlate" destination="qDO-Ut-dRP" id="lBO-df-TWK"/>
                 <outlet property="topMargin" destination="xA8-rv-g3b" id="Cak-kS-aja"/>

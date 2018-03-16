@@ -61,6 +61,11 @@
     }
     self.topMargin.constant = topPadding;
 
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat extraScreenHeight = screenRect.size.height - 568;
+    self.menuTop.constant = self.menuTop.constant + (extraScreenHeight * 0.2);
+    self.menuBottom.constant = self.menuBottom.constant + (extraScreenHeight * 0.8);
+    
     [self setUpButtons];
 }
 

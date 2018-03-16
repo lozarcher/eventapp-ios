@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *yellowPlate;
 @property (strong, nonatomic) RearViewController *rearViewController;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuBottom;
 -(void)setUpButtons;
 -(void)loadHome;
 
