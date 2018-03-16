@@ -25,7 +25,7 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
-    tableView.fd_debugLogEnabled = YES;
+    tableView.fd_debugLogEnabled = NO;
 
     tableView.estimatedRowHeight = UITableViewAutomaticDimension;
     tableView.rowHeight = UITableViewAutomaticDimension;
@@ -139,13 +139,13 @@
 
     // Cell text (event title)
     Post *post = [self getPostForIndexPath:indexPath];
-    NSLog(@"Cell label %@", [post name]);
 
     cell.postImageHeight = 0;
     cell.imageHeightConstraint.constant = 0;
-    [cell.postImageView setImage:nil];
     
+    [cell preloadImage:post];
     [cell populateDataInCell:post indexPath:indexPath tableView:self.tableView];
+    
     cell.delegate = self;
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -169,6 +169,7 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [tableView fd_heightForCellWithIdentifier:@"PostViewCell" configuration:^(id cell) {
+        [cell preloadImage:[self getPostForIndexPath:indexPath]];
         [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath tableView:tableView];
     }];
     

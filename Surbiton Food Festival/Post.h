@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface Post : NSObject
 @property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *message;
@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *caption;
 @property (strong, nonatomic) NSString *createdDate;
+@property (strong, nonatomic) UIImage *cachedImage;
 
 @end

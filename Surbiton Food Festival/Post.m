@@ -10,6 +10,6 @@
 
 @implementation Post
 
-@synthesize id, message, pictureUrl, link, name, caption, createdDate;
+@synthesize id, message, pictureUrl, link, name, caption, createdDate, cachedImage;
 
 @end

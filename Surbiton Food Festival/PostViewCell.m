@@ -24,6 +24,15 @@
 
     self.fd_enforceFrameLayout = YES;
 
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat newFrameWidth = screenRect.size.width;
+    CGFloat newFrameHeight = 0;
+    CGRect newFrame = CGRectMake(0, 0, newFrameWidth, newFrameHeight);
+    //    self.postImageHeight = 0;
+    //    self.imageHeightConstraint.constant = 0;
+    [self.postImageView setFrame:newFrame];
+    [self.postImageView setImage:nil];
+    
     // Initialization code
     messageLabel.urlLinkTapHandler = ^(KILabel *label, NSString *urlString, NSRange range) {
         NSLog(@"Clicked link");
@@ -32,21 +41,32 @@
     };
 }
 
+-(void)preloadImage:(Post *)post {
+    if ((post.id != nil) && ![[post pictureUrl] isKindOfClass:[NSNull class]]) {
+        // asynchronously download the image
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        if (post.cachedImage== nil) {
+            [manager downloadImageWithURL:[NSURL URLWithString:[post pictureUrl]] options:0
+                                 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                                 }
+                                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                    post.cachedImage = image;
+                                    [self.postImageView setImage:image];
+                                    [self.tableView beginUpdates];
+                                    [self.tableView endUpdates];
+                                    //});
+                                }];
+        }
+    }
+}
+
 -(void)populateDataInCell:(Post *)post indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
     self.indexPath = indexPath;
     self.tableView = tableView;
     self.textLabel.text = @"";
     NSString *message = @"";
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat newFrameWidth = screenRect.size.width;
-    CGFloat newFrameHeight = 0;
-    CGRect newFrame = CGRectMake(0, 0, newFrameWidth, newFrameHeight);
-//    self.postImageHeight = 0;
-//    self.imageHeightConstraint.constant = 0;
-    [self.postImageView setFrame:newFrame];
-    [self.postImageView setImage:nil];
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
+
+
     if (![[post message] isKindOfClass:[NSNull class]]) {
         message = [post message];
     }
@@ -70,28 +90,10 @@
     }
     self.tag = indexPath.row;
 
-    
-    if ((post.id != nil) && ![[post pictureUrl] isKindOfClass:[NSNull class]]) {
-        // asynchronously download the image
-        SDWebImageManager *manager = [SDWebImageManager sharedManager];
-        if (self.postImageView.image == nil) {
-            [manager downloadImageWithURL:[NSURL URLWithString:[post pictureUrl]] options:0
-                progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                }
-                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                if ( (self.tag == indexPath.row))
-                    //dispatch_async(dispatch_get_main_queue(), ^{
-                        // display it, after resizing for the screen
-                        [self setPostImage:image];
-                        [self setNeedsLayout];
-                        [self layoutIfNeeded];
-                    //});
-                }];
-        }else {
-            //self.imageHeightConstraint = 0;
-        }
+    if (post.cachedImage != nil) {
+        [self setPostImage:post.cachedImage];
     } else {
-        NSLog(@"Image is null");
+        // image is null
         self.imageHeightConstraint.constant = 0;
     }
 
@@ -117,15 +119,15 @@
     CGFloat totalHeight = 0;
     totalHeight += [self.dateLabel sizeThatFits:size].height;
     if ([self.dateLabel sizeThatFits:size].height != 0) {
-        totalHeight += 10;
+        totalHeight += 5;
     }
     totalHeight += self.imageHeightConstraint.constant;
     if (self.imageHeightConstraint.constant != 0) {
-        totalHeight += 40;
+        totalHeight += 20;
     }
     totalHeight += [self.messageLabel sizeThatFits:size].height;
     if ([self.messageLabel sizeThatFits:size].height != 0) {
-        totalHeight += 10;
+        totalHeight += 60;
     }
     return CGSizeMake(size.width, totalHeight);
 }

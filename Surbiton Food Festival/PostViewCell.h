@@ -27,5 +27,6 @@
 @property (weak, nonatomic) NSIndexPath *indexPath;
 
 -(void)populateDataInCell:(Post *)post indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
+-(void)preloadImage:(Post *)post;
 
 @end
