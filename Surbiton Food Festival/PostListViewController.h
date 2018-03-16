@@ -9,19 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "PostViewCell.h"
 
-@interface PostListViewController : UIViewController <tweetLinkProtocol, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface PostListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_posts;
     NSString *storePath;
     NSMutableData *receivedData;
     BOOL isPaginatedLoad;
-    NSMutableDictionary *heightsCache;
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
 @property (retain,nonatomic) UIActivityIndicatorView *spinner;
 @property (retain,nonatomic) UILabel *messageLabel;
-@property (nonatomic, strong) PostViewCell *prototypeCell;
+@property (retain, nonatomic) PostViewCell *prototypeCell;
 @property (retain,nonatomic) NSString *nextPage;
 - (void)refreshPosts:(id)sender;
 

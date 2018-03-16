@@ -145,7 +145,7 @@
     cell.imageHeightConstraint.constant = 0;
     [cell.postImageView setImage:nil];
     
-    [cell populateDataInCell:post indexPath:indexPath tableView:view];
+    [cell populateDataInCell:post indexPath:indexPath tableView:self.tableView];
     cell.delegate = self;
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -169,7 +169,7 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [tableView fd_heightForCellWithIdentifier:@"PostViewCell" configuration:^(id cell) {
-        [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath tableView:self.tableView];
+        [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath tableView:tableView];
     }];
     
 //    if (!self.prototypeCell)

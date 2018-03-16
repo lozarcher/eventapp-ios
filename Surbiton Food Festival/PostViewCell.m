@@ -7,10 +7,11 @@
 //
 
 #import "PostViewCell.h"
-#import "Post.h"
+#import "PostListViewController.h"
 #import "UIImageView+WebCache.h"
 #import "UITableView+FDTemplateLayoutCell.h"
 #import <AVFoundation/AVFoundation.h>
+#import "AppDelegate.h"
 
 @implementation PostViewCell
 
@@ -32,9 +33,8 @@
 }
 
 -(void)populateDataInCell:(Post *)post indexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
-    //traderNameLabel.text = [trader name];
-    self.tableView = tableView;
     self.indexPath = indexPath;
+    self.tableView = tableView;
     self.textLabel.text = @"";
     NSString *message = @"";
     if (![[post message] isKindOfClass:[NSNull class]]) {
@@ -53,12 +53,15 @@
                 }
                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                 if ((image != nil) && (weakSelf.tag == indexPath.row))
-                    dispatch_async(dispatch_get_main_queue(), ^{
+                    //dispatch_async(dispatch_get_main_queue(), ^{
                         // display it, after resizing for the screen
                         [weakSelf setPostImage:image];
-                    });
+                        [weakSelf setNeedsLayout];
+                        [weakSelf layoutIfNeeded];
+                    //});
                 }];
         }else {
+            //self.imageHeightConstraint = 0;
         }
     }
     if (![[post link] isKindOfClass:[NSNull class]]) {
@@ -93,10 +96,16 @@
 
     self.imageHeightConstraint.constant = newFrameHeight;
     self.postImageHeight = newFrameHeight;
-    
-    //[self.tableView beginUpdates];
-    //[self.tableView endUpdates];
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+    [appDelegate.heightsCache setObject:[NSNumber numberWithFloat:newFrameHeight] forKey:[NSNumber numberWithLong:self.tag]];
+    NSLog(@"****************");
+    NSLog(@"Setting height in cache %f key %d", newFrameHeight, self.tag);
+    NSNumber *cachedHeight = [appDelegate.heightsCache objectForKey:[NSNumber numberWithLong:self.tag]];
+    NSLog(@"Checking it's been set ok %f key %d", newFrameHeight, self.tag);
 
+    //[self.tableView beginUpdates];
+
+    //[self.tableView endUpdates];
 }
 
 // If you are not using auto layout, override this method, enable it by setting
@@ -105,12 +114,23 @@
     CGFloat totalHeight = 0;
     totalHeight += [self.dateLabel sizeThatFits:size].height;
     totalHeight += [self.messageLabel sizeThatFits:size].height;
-    //totalHeight += self.postImageView.frame.size.height;
+    //totalHeight += self.postImageView.image.size.height;
     
     // MESSAGE LABEL??!!
-    totalHeight += [self.messageLabel sizeThatFits:size].height;
+    //totalHeight += [self.postImageView sizeThatFits:size].height;
+    //totalHeight += self.imageHeightConstraint.constant;
+
+    AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
+
+    NSNumber *cachedHeight = [appDelegate.heightsCache objectForKey:[NSNumber numberWithLong:self.tag]];
+    NSLog(@"**************************");
+
+    NSLog(@"Getting post image height %f key %d", [cachedHeight floatValue], self.tag);
+    //totalHeight += [cachedHeight floatValue];
+    totalHeight += self.imageHeightConstraint.constant;
+    //totalHeight += self.postImageView.frame.size.height;
     //totalHeight += self.postImageHeight;  // this is the same value I think?
-    totalHeight += 60.0; // margins
+    totalHeight += 40.0; // margins
     
 //    NSLog(@"Sizing datelabel : %f", [self.dateLabel sizeThatFits:size].height);
 //    NSLog(@"Sizing messageLabel : %f", [self.messageLabel sizeThatFits:size].height);
