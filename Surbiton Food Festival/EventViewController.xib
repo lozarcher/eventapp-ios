@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventViewController">
             <connections>
+                <outlet property="buyTicketsButton" destination="KTO-0B-RXy" id="vBy-bX-4WH"/>
                 <outlet property="eventDateLabel" destination="1Ae-xI-Eha" id="Lpq-KA-QBQ"/>
                 <outlet property="eventDescriptionLabel" destination="Gmn-MM-PZl" id="o33-u7-nFe"/>
                 <outlet property="eventImageView" destination="OGy-TT-QuX" id="eU5-jr-JB0"/>
@@ -95,21 +96,30 @@
                                 <action selector="mapButtonPressed:" destination="-1" eventType="touchUpInside" id="dHc-XU-JeN"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTO-0B-RXy">
+                            <rect key="frame" x="147" y="198" width="80" height="30"/>
+                            <state key="normal" title="Buy Tickets"/>
+                            <connections>
+                                <action selector="ticketsButtonPressed:" destination="-1" eventType="touchUpInside" id="sT6-th-EIN"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="OGy-TT-QuX" secondAttribute="trailing" id="2wg-dP-8uA"/>
                         <constraint firstAttribute="centerX" secondItem="Gmn-MM-PZl" secondAttribute="centerX" id="8TP-7d-Tqi"/>
+                        <constraint firstItem="Gmn-MM-PZl" firstAttribute="top" secondItem="uZn-ms-reu" secondAttribute="bottom" priority="250" constant="10" id="9b8-aX-0zR"/>
                         <constraint firstItem="S1Z-jy-FmH" firstAttribute="centerX" secondItem="GQq-j8-8vG" secondAttribute="centerX" id="Gtv-KA-Caw"/>
+                        <constraint firstAttribute="bottom" secondItem="KTO-0B-RXy" secondAttribute="bottom" constant="377" id="K6c-UR-UBa"/>
                         <constraint firstItem="uZn-ms-reu" firstAttribute="leading" secondItem="1Ae-xI-Eha" secondAttribute="leading" id="KY4-kO-Thx"/>
                         <constraint firstItem="OGy-TT-QuX" firstAttribute="top" secondItem="GQq-j8-8vG" secondAttribute="top" id="QDO-ZW-A57"/>
                         <constraint firstItem="uZn-ms-reu" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leadingMargin" id="Vl5-uP-aZP"/>
-                        <constraint firstAttribute="bottom" secondItem="Gmn-MM-PZl" secondAttribute="bottom" constant="20" id="YKD-bg-37Z"/>
                         <constraint firstItem="1Ae-xI-Eha" firstAttribute="top" secondItem="OGy-TT-QuX" secondAttribute="bottom" constant="14" id="ZrQ-hq-Pbx"/>
                         <constraint firstItem="Gmn-MM-PZl" firstAttribute="top" secondItem="S1Z-jy-FmH" secondAttribute="bottom" constant="10" id="aW7-TI-Yng"/>
                         <constraint firstItem="S1Z-jy-FmH" firstAttribute="top" secondItem="uZn-ms-reu" secondAttribute="bottom" constant="10" id="beG-VJ-N84"/>
                         <constraint firstItem="OGy-TT-QuX" firstAttribute="centerX" secondItem="1Ae-xI-Eha" secondAttribute="centerX" id="bu9-yK-NTe"/>
                         <constraint firstItem="wcB-7E-gsq" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leading" constant="5" id="cCS-uY-EOO"/>
                         <constraint firstAttribute="centerX" secondItem="uZn-ms-reu" secondAttribute="centerX" id="eHO-ZV-L5A"/>
+                        <constraint firstAttribute="bottom" secondItem="Gmn-MM-PZl" secondAttribute="bottom" priority="250" constant="415" id="eed-eC-8mz"/>
                         <constraint firstItem="wcB-7E-gsq" firstAttribute="top" secondItem="sva-8t-ahH" secondAttribute="bottom" constant="10" id="gSX-uM-QfA"/>
                         <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leading" constant="5" id="jYh-PB-Jva"/>
                         <constraint firstItem="sva-8t-ahH" firstAttribute="top" secondItem="1Ae-xI-Eha" secondAttribute="bottom" constant="10" id="k9Y-gT-dkO"/>
@@ -118,6 +128,8 @@
                         <constraint firstItem="OGy-TT-QuX" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leading" id="nR7-zs-csJ"/>
                         <constraint firstItem="sva-8t-ahH" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leading" constant="47" id="oE8-I2-Vgq"/>
                         <constraint firstItem="uZn-ms-reu" firstAttribute="top" secondItem="wcB-7E-gsq" secondAttribute="bottom" constant="10" id="rLE-uy-yAz"/>
+                        <constraint firstItem="KTO-0B-RXy" firstAttribute="top" secondItem="Gmn-MM-PZl" secondAttribute="bottom" constant="10" id="yZy-am-Ihf"/>
+                        <constraint firstItem="KTO-0B-RXy" firstAttribute="centerX" secondItem="GQq-j8-8vG" secondAttribute="centerX" id="yr3-fe-67C"/>
                         <constraint firstAttribute="centerX" secondItem="1Ae-xI-Eha" secondAttribute="centerX" id="zqR-Rx-XjY"/>
                     </constraints>
                 </scrollView>

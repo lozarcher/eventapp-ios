@@ -10,6 +10,6 @@
 
 @implementation Event
 
-@synthesize name, startTime, desc, endTime, coverUrl, coverOffsetX, coverOffsetY, id, location, profileUrl, venue;
+@synthesize name, startTime, desc, endTime, coverUrl, coverOffsetX, coverOffsetY, id, location, profileUrl, venue, ticketUrl;
 
 @end

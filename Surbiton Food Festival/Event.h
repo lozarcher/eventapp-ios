@@ -20,5 +20,6 @@
 @property (strong, nonatomic) NSString *coverOffsetY;
 @property (strong, nonatomic) NSString *profileUrl;
 @property (strong, nonatomic) NSString *location;
+@property (strong, nonatomic) NSString *ticketUrl;
 @property (strong, nonatomic) Venue *venue;
 @end

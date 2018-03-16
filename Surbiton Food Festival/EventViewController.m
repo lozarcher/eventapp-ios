@@ -162,7 +162,14 @@
     }
     eventTimeLabel.text = timeText;
     
-    [self.mapButton setHidden:[event.venue isKindOfClass:[NSNull class]]];
+    //[self.mapButton setHidden:[event.venue isKindOfClass:[NSNull class]]];
+    if ([event.venue isKindOfClass:[NSNull class]]) {
+        [self.mapButton removeFromSuperview];
+    }
+    
+    if ([event.ticketUrl isKindOfClass:[NSNull class]]) {
+        [self.buyTicketsButton removeFromSuperview];
+    }
     
     [self updateAuthorizationStatusToAccessEventStore];
     [self fetchReminders];
@@ -373,6 +380,15 @@
     VenueViewController *venueVc = [[VenueViewController alloc] initWithNibName:@"VenueViewController" bundle:nil];
     [self presentViewController:venueVc animated:YES completion:nil];
     [venueVc createVenue:event.venue location:event.location];
+}
+
+- (IBAction)ticketsButtonPressed:(id)sender {
+    NSString *urlString = event.ticketUrl;
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NSString stringWithFormat:@"http://%@", urlString];
+    }
+    NSLog(@"Loading URL %@", urlString);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 
 @end
