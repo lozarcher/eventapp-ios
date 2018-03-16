@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIView *cardView;
 @property (retain, nonatomic) IBOutlet UIImageView *postImageView;
 @property (retain, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
-@property CGFloat postImageHeight;
 @property (weak, nonatomic) UITableView *tableView;
 @property (weak, nonatomic) NSIndexPath *indexPath;
 

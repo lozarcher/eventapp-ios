@@ -140,7 +140,6 @@
     // Cell text (event title)
     Post *post = [self getPostForIndexPath:indexPath];
 
-    cell.postImageHeight = 0;
     cell.imageHeightConstraint.constant = 0;
     
     [cell preloadImage:post];

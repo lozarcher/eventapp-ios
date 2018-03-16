@@ -95,9 +95,8 @@
     } else {
         // image is null
         self.imageHeightConstraint.constant = 0;
+        [self.postImageView setImage:nil];
     }
-
-    
     
 }
 
@@ -108,9 +107,7 @@
     CGRect newFrame = CGRectMake(0, 0, newFrameWidth, newFrameHeight);
     [self.postImageView setFrame:newFrame];
     [self.postImageView setImage:image];
-    
     self.imageHeightConstraint.constant = newFrameHeight;
-    self.postImageHeight = newFrameHeight;
 }
 
 // If you are not using auto layout, override this method, enable it by setting
