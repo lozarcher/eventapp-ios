@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PostViewCell.h"
+#import "PostViewMoreCellTableViewCell.h"
 
 @interface PostListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_posts;

@@ -14,7 +14,7 @@ target 'Surbiton Food Festival' do
     pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
     #pod 'DZNEmptyDataSet'
     #pod 'iRate'
-    #pod 'FontAwesomeKit'
+    pod 'FontAwesomeKit'
 end
 
 target 'Surbiton Food FestivalTests' do

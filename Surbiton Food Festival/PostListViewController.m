@@ -13,6 +13,7 @@
 #import "MTConfiguration.h"
 #import "UIImageView+WebCache.h"
 #import "AppDelegate.h"
+#import "FontAwesomeKit/FAKFontAwesome.h"
 
 #import "UITableView+FDTemplateLayoutCell.h"
 
@@ -32,6 +33,9 @@
     // Register cell Nib
     UINib *cellNib = [UINib nibWithNibName:@"PostViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"PostViewCell"];
+    
+    UINib *cellMoreNib = [UINib nibWithNibName:@"PostViewMoreCellTableViewCell" bundle:nil];
+    [self.tableView registerNib:cellMoreNib forCellReuseIdentifier:@"MoreCell"];
     
     //initialise the message label
     messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -134,6 +138,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // Only call this if there is a next page
+    if (![self.nextPage isKindOfClass:[NSNull class]]) {
+        if(indexPath.row == [_posts count] ) { // Here we check if we reached the end of the index, so the +1 row
+            return [self getMoreLinkCell];
+        }
+    }
+    
     PostViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostViewCell"];;
 
     // Cell text (event title)
@@ -147,29 +158,27 @@
     cell.delegate = self;
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    // Only call this if there is a next page
-    if (![self.nextPage isKindOfClass:[NSNull class]]) {
-        if(indexPath.row == [_posts count] ) { // Here we check if we reached the end of the index, so the +1 row
-            if (cell == nil) {
-                cell = [[PostViewCell alloc] initWithFrame:CGRectZero];
-            }
-            // Reset previous content of the cell, I have these defined in a UITableCell subclass, change them where needed
-            cell.imageView.image = nil;
-            cell.dateLabel.text = @"";
-            cell.messageLabel.text = @"Tap to load more...";
-        }
-    }
-
     return cell;
+}
+
+-(PostViewMoreCellTableViewCell *)getMoreLinkCell {
+    PostViewMoreCellTableViewCell *moreCell = [self.tableView dequeueReusableCellWithIdentifier:@"MoreCell"];
+    FAKFontAwesome *moreIcon = [FAKFontAwesome chevronCircleDownIconWithSize:40];
+
+    [moreCell.moreImage setImage:[moreIcon imageWithSize:CGSizeMake(40,40)]];
+    return moreCell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [tableView fd_heightForCellWithIdentifier:@"PostViewCell" configuration:^(id cell) {
-        [cell preloadImage:[self getPostForIndexPath:indexPath]];
-        [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath tableView:tableView];
-    }];
+    if (indexPath.row == _posts.count) {
+        return [tableView fd_heightForCellWithIdentifier:@"MoreCell" configuration:^(id cell) {}];
+    } else {
+        return [tableView fd_heightForCellWithIdentifier:@"PostViewCell" configuration:^(id cell) {
+            [cell preloadImage:[self getPostForIndexPath:indexPath]];
+            [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath tableView:tableView];
+        }];
+    }
     
 }
 
