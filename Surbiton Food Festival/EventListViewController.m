@@ -124,6 +124,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    CGFloat bottomPadding = 50;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        if (window.safeAreaInsets.bottom > 0)
+            bottomPadding += window.safeAreaInsets.bottom;
+    }
+    self.tabBarHeight.constant = bottomPadding;
+    
     [self setFilteredEvents];
     [self createEventDays:_filteredEvents];
     [tableView reloadData];

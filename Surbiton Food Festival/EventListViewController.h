@@ -30,6 +30,7 @@
 @property NSMutableDictionary *favourites;
 - (void)refreshEvents:(id)sender;
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tabBarHeight;
 -(void)setFavourite:(NSString *)eventId;
 @end
 
