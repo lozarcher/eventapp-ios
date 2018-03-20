@@ -21,7 +21,6 @@
 - (IBAction)mapButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageTopOffset;
-@property (nonatomic) BOOL reminderSet;
 @property (weak, nonatomic) IBOutlet UIButton *buyTicketsButton;
 @property (retain,nonatomic) Event *event;
 @property (weak, nonatomic) IBOutlet UIButton *mapButton;

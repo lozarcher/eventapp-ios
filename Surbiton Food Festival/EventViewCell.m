@@ -9,14 +9,16 @@
 #import "EventViewCell.h"
 #import "Event.h"
 #import "UIImageView+WebCache.h"
+#import "FontAwesomeKit/FAKFontAwesome.h"
 
 @implementation EventViewCell
 
-@synthesize eventNameLabel, eventTimeLabel, venueLabel, eventImage;
+@synthesize eventNameLabel, eventTimeLabel, venueLabel, eventImage, favouriteImage, favourited, event;
 
 - (void)awakeFromNib {
     // Initialization code
     [super awakeFromNib];
+    self.favourited = false;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -25,7 +27,8 @@
     // Configure the view for the selected state
 }
 
--(void)populateDataInCell:(Event *)event {
+-(void)populateDataInCell:(Event *)event isFavourite:(BOOL)isFavourite {
+    self.event = event;
     eventNameLabel.text = [event name];
     
     NSTimeInterval seconds = [event.startTime doubleValue]/1000;
@@ -43,6 +46,14 @@
         location = @"Surbiton";
     }
     venueLabel.text = [NSString stringWithFormat:@"%@ @ %@",startDateString, location];
+
+    self.favourited = isFavourite;
+    [self setFavouritedIcon:self.favourited];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favouriteTapDetected)];
+    singleTap.numberOfTapsRequired = 1;
+    [self.favouriteImage setUserInteractionEnabled:YES];
+    [self.favouriteImage addGestureRecognizer:singleTap];
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     if (![[event profileUrl] isKindOfClass:[NSNull class]]) {
@@ -57,5 +68,27 @@
     }
 }
 
+-(void)favouriteTapDetected{
+    self.favourited = !self.favourited;
+    [self setFavouritedIcon:self.favourited];
+    //trigger event
+    self.event.isFavourite = self.favourited;
+
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:self.event forKey:@"event"];
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"favouriteEvent"
+     object:dict
+     userInfo:dict];
+    }
+
+-(void)setFavouritedIcon:(BOOL)favourited {
+    FAKFontAwesome *favIcon;
+    if (favourited) {
+        favIcon = [FAKFontAwesome heartIconWithSize:21];
+    } else {
+        favIcon = [FAKFontAwesome heartOIconWithSize:21];
+    }
+    [self.favouriteImage setImage:[favIcon imageWithSize:CGSizeMake(21,21)]];
+}
 
 @end

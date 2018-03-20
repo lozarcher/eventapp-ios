@@ -17,7 +17,7 @@
 
 @implementation EventListViewController
 
-@synthesize tableView, spinner, messageLabel;
+@synthesize tableView, spinner, showFavourites, favourites;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,17 +30,6 @@
     // Register cell Nib
     UINib *cellNib = [UINib nibWithNibName:@"EventViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"EventViewCell"];
-    
-    //initialise the message label
-    messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-    
-    messageLabel.text = @"No data is currently available. Please pull down to refresh.";
-    messageLabel.textColor = [UIColor blackColor];
-    messageLabel.numberOfLines = 0;
-    messageLabel.textAlignment = NSTextAlignmentCenter;
-    messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
-    [messageLabel sizeToFit];
-
     
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -60,8 +49,71 @@
                                                                          style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
+    // Favourite icons
+    FAKFontAwesome *favIcon = [FAKFontAwesome heartIconWithSize:21];
+    self.favouritesTab.image = [favIcon imageWithSize:CGSizeMake(21,21)];
+    FAKFontAwesome *listIcon = [FAKFontAwesome listAltIconWithSize:21];
+    self.allEventsTab.image = [listIcon imageWithSize:CGSizeMake(21,21)];
+    self.showFavourites = NO;
+    
+    // Load favourites from NSUserDefaults
+    [self loadFavourites];
+    
+    // set up notification from eventviewcell, when user sets or unsets a favourite
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(favouriteEventHandler:)
+     name:@"favouriteEvent"
+     object:nil ];
+    
+    [self.tabBar setSelectedItem:[self.tabBar.items objectAtIndex:0]];
     [self activateSpinner:YES];
     [self refreshEvents:self];
+    [self setFilteredEvents];
+}
+
+
+//event handler when event occurs
+-(void)favouriteEventHandler: (NSNotification *) notification
+{
+    NSDictionary* userInfo = notification.userInfo;
+    Event* event = (Event *)userInfo[@"event"];
+    if (event) {
+        [self setFavourite:event.id];
+    } else {
+        NSLog(@"Error: did not receive cell in event list notification handler");
+    }
+}
+
+-(void)setFilteredEvents {
+    NSMutableArray *filteredEvents = [[NSMutableArray alloc] init];
+    if (showFavourites) {
+        for (Event *event in _events) {
+            if ([self.favourites objectForKey:event.id]) {
+                [filteredEvents addObject:event];
+            }
+        }
+    } else {
+        filteredEvents = [_events mutableCopy];
+    }
+    _filteredEvents = filteredEvents;
+}
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    NSLog(@"Tab Bar select detected %@",tabBar.selectedItem);
+    showFavourites = [self.tabBar.selectedItem isEqual:self.favouritesTab];
+    if (showFavourites) {
+        self.title = @"Your Favourite Events";
+        NSLog(@"Showing favourites");
+    } else {
+        self.title = @"Event Calendar";
+        NSLog(@"Showing all events");
+
+    }
+    [self setFilteredEvents];
+    [self createEventDays:_filteredEvents];
+
+    [tableView reloadData];
 }
 
 -(void)loadHome:(id)sender {
@@ -72,14 +124,49 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self setFilteredEvents];
+    [self createEventDays:_filteredEvents];
+    [tableView reloadData];
 }
 
 - (void) viewDidLayoutSubviews {
     self.spinner.center = self.view.center;
 }
 
-- (void)initialRefreshEvents:(id)sender {
+-(void)setFavourite:(NSString *)eventId {
+    if (!self.favourites) {
+        self.favourites = [[NSMutableDictionary alloc] init];
+    }
+    if ([self.favourites objectForKey:eventId]) {
+        [self.favourites removeObjectForKey:eventId];
+    } else {
+        [self.favourites setValue:@"set" forKey:eventId];
+    }
+    
+    if (showFavourites) {
+        [self setFilteredEvents];
+        [self createEventDays:_filteredEvents];
+        [tableView reloadData];
+    }
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.favourites];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:data forKey:@"favourites"];
+    [defaults synchronize];
+}
 
+-(void)loadFavourites {
+    NSData *data = [[NSUserDefaults standardUserDefaults] dataForKey:@"favourites"];
+    NSDictionary *dict = (NSDictionary*) [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    self.favourites = [dict mutableCopy];
+}
+
+-(BOOL)isFavourited:(NSString *)eventId {
+    NSString *set = [self.favourites objectForKey:eventId];
+    if (set)
+        return YES;
+    else
+        return NO;
 }
 
 - (void)refreshEvents:(id)sender {
@@ -118,15 +205,24 @@
 
 #pragma - markup TableView Delegate Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    [self spinner];
+    self.tableView.backgroundView = nil;
     NSInteger numberOfDates = [_eventDayKeys count];
     if (numberOfDates != 0) {
-        [messageLabel removeFromSuperview];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         return [_eventDayKeys count];
     } else {
         // Display a message when the table is empty
-        [self.view addSubview:messageLabel];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        if (showFavourites) {
+            UILabel *noDataLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height)];
+            noDataLabel.text             = @"You don't have any favourite events yet";
+            noDataLabel.numberOfLines = 0;
+            noDataLabel.textColor        = [UIColor blackColor];
+            noDataLabel.textAlignment    = NSTextAlignmentCenter;
+            self.tableView.backgroundView = noDataLabel;
+        }
+        
         return 0;
     }
 }
@@ -151,14 +247,16 @@
     return eventCount;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     EventViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"EventViewCell"];;
-
+    
     // Cell text (event title)
     Event *event = [self getEventForIndexPath:indexPath];
     NSLog(@"Cell label %@", [event name]);
-    [cell populateDataInCell:event];
+    
+    [cell populateDataInCell:event isFavourite:[self isFavourited:[event id]]];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
@@ -172,7 +270,7 @@
         self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"EventViewCell"];
     }
     Event *event = [self getEventForIndexPath:indexPath];
-    [self.prototypeCell populateDataInCell:event];
+    [self.prototypeCell populateDataInCell:event isFavourite:[self isFavourited:[event id]]];
     
     [self.prototypeCell layoutIfNeeded];
     CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
@@ -293,6 +391,7 @@
 -(NSError *)getEventsFromData:(NSData *)data {
     NSError *error = nil;
     NSArray *events = [EventBuilder eventsFromJSON:data error:&error];
+    
     if ([events count] > 0) {
         _events = events;
     } else {
@@ -303,11 +402,13 @@
         NSLog(@"Error : %@", [error description]);
     }
     NSLog(@"Got %lu events from data", (unsigned long)events.count);
+
     return error;
 }
 
 -(void)createEventDays:(NSArray *)events {
     [_eventDayKeys removeAllObjects];
+    
     [_eventDays removeAllObjects];
     for (Event* event in events) {
         

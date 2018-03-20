@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *venueLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
--(void)populateDataInCell:(Event *)event;
-
+@property (weak, nonatomic) IBOutlet UIImageView *favouriteImage;
+@property BOOL favourited;
+-(void)populateDataInCell:(Event *)event isFavourite:(BOOL)isFavourite;
+@property Event *event;
 @end

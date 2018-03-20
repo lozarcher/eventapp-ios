@@ -84,15 +84,39 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/ionicons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Production" ]]; then
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/ionicons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Development" ]]; then
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/ionicons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/ionicons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf"
+  install_resource "${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle"
 fi
 
