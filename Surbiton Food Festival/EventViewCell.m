@@ -72,7 +72,6 @@
     self.favourited = !self.favourited;
     [self setFavouritedIcon:self.favourited];
     //trigger event
-    self.event.isFavourite = self.favourited;
 
     NSDictionary *dict = [NSDictionary dictionaryWithObject:self.event forKey:@"event"];
     [[NSNotificationCenter defaultCenter]
@@ -83,6 +82,7 @@
 
 -(void)setFavouritedIcon:(BOOL)favourited {
     FAKFontAwesome *favIcon;
+    self.event.isFavourite = favourited;
     if (favourited) {
         favIcon = [FAKFontAwesome heartIconWithSize:21];
     } else {
