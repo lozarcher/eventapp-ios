@@ -32,12 +32,15 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)viewDidLoad {
-    
-    // Check to see if we are running on iOS 6
-    if (![self respondsToSelector:@selector(topLayoutGuide)]) {
-        self.topConstraint.constant = self.topConstraint.constant - 64;
+-(void)loadURL:(NSString *)urlString {
+    if (![urlString hasPrefix:@"http"]) {
+        urlString = [NSString stringWithFormat:@"http://%@", urlString];
     }
+    NSLog(@"Loading URL %@ from view controller", urlString);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
     
     // Do any additional setup after loading the view from its nib.
     infoTitle.text = info.title;
@@ -48,41 +51,26 @@
         [self loadURL:urlString];
     };
     
-    [super viewDidLoad];
-}
-
--(void)loadURL:(NSString *)urlString {
-    if (![urlString hasPrefix:@"http"]) {
-        urlString = [NSString stringWithFormat:@"http://%@", urlString];
-    }
-    NSLog(@"Loading URL %@ from view controller", urlString);
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-}
-
--(void) viewDidAppear:(BOOL)animated {
-    _imageHeightConstraint.constant = 0.0;
-
     if (![info.picture isKindOfClass:[NSNull class]]) {
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         [manager downloadImageWithURL:[NSURL URLWithString:[info picture]] options:0
                              progress:^(NSInteger receivedSize, NSInteger expectedSize) {
                              }
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                                
-                                float aspect = image.size.height / image.size.width;
-                                float newHeight = infoImage.frame.size.width * aspect;
-                                _imageHeightConstraint.constant = newHeight;
-                                [infoImage setImage:image];
-                                _imageHeightConstraint.constant = newHeight;
-
+                                [self setImage:image];
                             }];
     } else {
-        [infoImage setImage:[UIImage imageNamed:@"logo.jpg"]];
+        [self setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+-(void)setImage:(UIImage *)image {
+    [infoImage setImage:image];
+    if (infoImage.frame.size.width < (infoImage.image.size.width)) {
+        _imageHeightConstraint.constant = infoImage.frame.size.width / (infoImage.image.size.width) * (infoImage.image.size.height);
+    } else {
+        _imageHeightConstraint.constant = image.size.height;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

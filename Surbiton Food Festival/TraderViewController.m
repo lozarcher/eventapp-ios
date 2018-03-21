@@ -31,13 +31,9 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Check to see if we are running on iOS 6
-    if (![self respondsToSelector:@selector(topLayoutGuide)]) {
-        self.topConstraint.constant = self.topConstraint.constant - 64;
-    }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     // Do any additional setup after loading the view from its nib.
     traderTitleLabel.text = trader.name;
@@ -46,32 +42,27 @@
     } else {
         traderDescriptionLabel.text = @"";
     }
-        
+    
     [kingstonPoundImage setHidden:([trader.kingstonPound intValue] != 1)];
-
+    
     if (![trader.website isKindOfClass:[NSNull class]]) {
         NSURL *nsurl = [NSURL URLWithString:trader.website];
         if ([[UIApplication sharedApplication] canOpenURL:nsurl]) {
             [websiteLabel setHidden:NO];
         } else {
             [websiteLabel setHidden:YES];
-
+            
         }
     } else {
         [websiteLabel setHidden:YES];
     }
- 
+    
     [phoneLabel setHidden:[trader.phone isKindOfClass:[NSNull class]]];
     [linkLabel setHidden:[trader.link isKindOfClass:[NSNull class]]];
     if (![trader.phone isKindOfClass:[NSNull class]]) {
         [phoneLabel setTitle:[NSString stringWithFormat:@"Call %@", trader.name] forState:UIControlStateNormal];
     }
     
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     if (![trader.coverImg isKindOfClass:[NSNull class]]) {
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         [manager downloadImageWithURL:[NSURL URLWithString:[trader coverImg]]
@@ -94,6 +85,8 @@
     [traderImageView setImage:image];
     if (traderImageView.frame.size.width < (traderImageView.image.size.width)) {
         _imageHeightConstraint.constant = traderImageView.frame.size.width / (traderImageView.image.size.width) * (traderImageView.image.size.height);
+    } else {
+        _imageHeightConstraint.constant = image.size.height;
     }
 }
 
