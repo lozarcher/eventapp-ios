@@ -63,9 +63,23 @@
 
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat extraScreenHeight = screenRect.size.height - 568;
-    self.menuTop.constant = self.menuTop.constant + (extraScreenHeight * 0.2);
-    self.menuBottom.constant = self.menuBottom.constant + (extraScreenHeight * 0.8);
-    
+
+    CGFloat newTopConstraint;
+    CGFloat newBottomConstraint;
+    if (extraScreenHeight < 0) {
+        // allow scrolling in tiny views; 4S and iPad compatibility mode
+        newTopConstraint = 0;
+        newBottomConstraint = 0;
+        self.scrollView.scrollEnabled = YES;
+    } else {
+        newTopConstraint = self.menuTop.constant + (extraScreenHeight * 0.2);
+        newBottomConstraint = self.menuBottom.constant + (extraScreenHeight * 0.8);
+        self.scrollView.scrollEnabled = NO;
+    }
+
+    self.menuTop.constant = newTopConstraint;
+    self.menuBottom.constant = newBottomConstraint;
+
     [self setUpButtons];
 }
 

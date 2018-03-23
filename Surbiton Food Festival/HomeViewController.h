@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuBottom;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 -(void)setUpButtons;
 -(void)loadHome;
 
