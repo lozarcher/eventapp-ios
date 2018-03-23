@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "EventViewCell.h"
 #import "FontAwesomeKit/FAKFontAwesome.h"
+#import <UserNotifications/UserNotifications.h>
 
-@interface EventListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate> {
+@interface EventListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate, UNUserNotificationCenterDelegate> {
     NSArray *_events;
     NSMutableArray *_filteredEvents;
     NSMutableDictionary *_eventDays;
@@ -31,6 +32,7 @@
 - (void)refreshEvents:(id)sender;
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tabBarHeight;
--(void)setFavourite:(NSString *)eventId;
+-(void)setFavourite:(Event *)event;
+
 @end
 

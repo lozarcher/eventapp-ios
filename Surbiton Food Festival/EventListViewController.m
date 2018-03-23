@@ -24,6 +24,8 @@
     tableView.dataSource = self;
     tableView.delegate = self;
     
+    [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];;
+
     _eventDays = [[NSMutableDictionary alloc] init];
     _eventDayKeys = [[NSMutableArray alloc] init];
     
@@ -79,7 +81,7 @@
     NSDictionary* userInfo = notification.userInfo;
     Event* event = (Event *)userInfo[@"event"];
     if (event) {
-        [self setFavourite:event.id];
+        [self setFavourite:event];
     } else {
         NSLog(@"Error: did not receive cell in event list notification handler");
     }
@@ -142,14 +144,68 @@
     self.spinner.center = self.view.center;
 }
 
--(void)setFavourite:(NSString *)eventId {
+-(void)setFavourite:(Event *)event {
     if (!self.favourites) {
         self.favourites = [[NSMutableDictionary alloc] init];
     }
-    if ([self.favourites objectForKey:eventId]) {
-        [self.favourites removeObjectForKey:eventId];
+    if ([self.favourites objectForKey:event.id]) {
+        [self.favourites removeObjectForKey:event.id];
+        UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+        [center removePendingNotificationRequestsWithIdentifiers:[NSArray arrayWithObjects:[NSString stringWithFormat:@"%@", event.id], nil]];
     } else {
-        [self.favourites setValue:@"set" forKey:eventId];
+        [self.favourites setValue:@"set" forKey:event.id];
+    
+        
+        UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
+
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"HH:mm"];
+        NSTimeInterval startSeconds = [event.startTime doubleValue]/1000;
+        NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:startSeconds];
+        NSString *startTimeString = [dateFormatter stringFromDate:startDate];
+        
+        content.title = [NSString localizedUserNotificationStringForKey:@"Event starting soon" arguments:nil];
+        NSString *message = [NSString stringWithFormat:@"%@ will be starting at %@", event.name, startTimeString];
+        content.body = [NSString localizedUserNotificationStringForKey:message
+                                                             arguments:nil];
+        content.sound = [UNNotificationSound defaultSound];
+        [content setValue:@"Yes" forKey: @"shouldAlwaysAlertWhileAppIsForeground"];
+
+        
+        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
+        NSDateComponents *timeOffset= [[NSDateComponents alloc] init];
+        
+//        For testing, set to now + 10 seconds
+//        [timeOffset setSecond:10];
+//        NSDate *offsetDate=[calendar dateByAddingComponents:timeOffset toDate:[NSDate date] options:0];
+        
+        // Set to event start time minus one hour
+        [timeOffset setHour:-1];
+        NSDate *offsetDate=[calendar dateByAddingComponents:timeOffset toDate:startDate options:0];
+        
+        calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
+        
+        NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:offsetDate];
+        UNCalendarNotificationTrigger* trigger = [UNCalendarNotificationTrigger
+                                                  triggerWithDateMatchingComponents:components repeats:NO];
+        UNNotificationRequest* request = [UNNotificationRequest
+                                          requestWithIdentifier:[NSString stringWithFormat:@"%@", event.id] content:content trigger:trigger];
+        UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)
+                              completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                                  // Enable or disable features based on authorization.
+                                  if (granted) {
+                                      [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+                                          if (error != nil) {
+                                              NSLog(@"%@", error.localizedDescription);
+                                          } else {
+                                              NSLog(@"Set notification for %@", components);
+                                          }
+                                      }];
+                                  } else {
+                                      NSLog(@"Notification permission not granted");
+                                  }
+                              }];
     }
     
     if (showFavourites) {
@@ -163,6 +219,7 @@
     [defaults setObject:data forKey:@"favourites"];
     [defaults synchronize];
 }
+
 
 -(void)loadFavourites {
     NSData *data = [[NSUserDefaults standardUserDefaults] dataForKey:@"favourites"];

@@ -129,10 +129,7 @@
     FAKFontAwesome *favIcon;
     if (self.event.isFavourite) {
         favIcon = [FAKFontAwesome heartIconWithSize:20];
-        NSLog(@"FAV");
     } else {
-        NSLog(@"NOT FAV");
-
         favIcon = [FAKFontAwesome heartOIconWithSize:20];
     }
     

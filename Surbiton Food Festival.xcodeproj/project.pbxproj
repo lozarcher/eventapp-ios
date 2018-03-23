@@ -83,6 +83,7 @@
 		AEAE29A21C8839B000533C60 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEAE29A11C8839B000533C60 /* Podfile */; };
 		AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
 		AEB9DB311A90C564008C6329 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB301A90C564008C6329 /* Tweet.m */; };
+		AEB9FFE520652AE000F60E67 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB9FFE420652AE000F60E67 /* UserNotifications.framework */; };
 		AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91B71C88641200708484 /* GalleryViewController.m */; };
 		AEBA91BC1C8871E000708484 /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91BB1C8871E000708484 /* Gallery.m */; };
 		AEBA91BF1C8872AC00708484 /* GalleryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91BE1C8872AC00708484 /* GalleryBuilder.m */; };
@@ -256,6 +257,7 @@
 		AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetBuilder.m; sourceTree = "<group>"; };
 		AEB9DB2F1A90C564008C6329 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		AEB9DB301A90C564008C6329 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		AEB9FFE420652AE000F60E67 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		AEBA91B61C88641200708484 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		AEBA91B71C88641200708484 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		AEBA91BB1C8871E000708484 /* Gallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gallery.m; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB9FFE520652AE000F60E67 /* UserNotifications.framework in Frameworks */,
 				AE19E59F1AC18A2B00B3F69F /* SystemConfiguration.framework in Frameworks */,
 				AE1BCBB71A9FCA4D00E79935 /* CoreGraphics.framework in Frameworks */,
 				AE1BCBA91A9FC77200E79935 /* UIKit.framework in Frameworks */,
@@ -374,6 +377,7 @@
 		5749656D9CB7325C8DCC423D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEB9FFE420652AE000F60E67 /* UserNotifications.framework */,
 				CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */,
 				FB8ADC5D5EDD2954199418CB /* libPods-Surbiton Food FestivalTests.a */,
 			);
