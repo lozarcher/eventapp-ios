@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
 - (IBAction)closeButtonPressed:(id)sender;
 -(void)createVenue:(Venue *)venueDic location:(NSString *)location;
 @property Venue *venue;
