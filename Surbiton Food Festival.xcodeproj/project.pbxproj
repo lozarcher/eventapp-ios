@@ -816,9 +816,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AEDD1A3120663ECE001BD259 /* IYAF */ = {
+		AEDD1A3120663ECE001BD259 /* International Youth Arts Festival */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AEDD1AB520663ECE001BD259 /* Build configuration list for PBXNativeTarget "IYAF" */;
+			buildConfigurationList = AEDD1AB520663ECE001BD259 /* Build configuration list for PBXNativeTarget "International Youth Arts Festival" */;
 			buildPhases = (
 				4F7E3512F4E51819E8BAA2A6 /* [CP] Check Pods Manifest.lock */,
 				AEDD1A3320663ECE001BD259 /* Sources */,
@@ -831,7 +831,7 @@
 			);
 			dependencies = (
 			);
-			name = IYAF;
+			name = "International Youth Arts Festival";
 			productName = "Surbiton Food Festival";
 			productReference = AEDD1ABA20663ECE001BD259 /* IYAF.app */;
 			productType = "com.apple.product-type.application";
@@ -896,7 +896,7 @@
 			projectRoot = "";
 			targets = (
 				AEF8BC3F1A7CEC8A007241DC /* Surbiton Food Festival */,
-				AEDD1A3120663ECE001BD259 /* IYAF */,
+				AEDD1A3120663ECE001BD259 /* International Youth Arts Festival */,
 			);
 		};
 /* End PBXProject section */
@@ -1275,7 +1275,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1308,7 +1308,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1341,7 +1341,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1369,7 +1369,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1698,7 +1698,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AEDD1AB520663ECE001BD259 /* Build configuration list for PBXNativeTarget "IYAF" */ = {
+		AEDD1AB520663ECE001BD259 /* Build configuration list for PBXNativeTarget "International Youth Arts Festival" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AEDD1AB620663ECE001BD259 /* Debug */,
