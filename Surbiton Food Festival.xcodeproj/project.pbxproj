@@ -61,6 +61,9 @@
 		AE60A08720664D6400592997 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE60A07720664BB100592997 /* HomeViewController.m */; };
 		AE60A08820664D6700592997 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE60A07820664BB100592997 /* HomeViewController.xib */; };
 		AE60A08A20664DC500592997 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08920664DC400592997 /* Info.plist */; };
+		AE60A0932066655C00592997 /* background-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08D2066634F00592997 /* background-bottom.png */; };
+		AE60A0942066655F00592997 /* background-top.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08E2066634F00592997 /* background-top.png */; };
+		AE60A0952066656100592997 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08F2066635000592997 /* background.png */; };
 		AE7003D11C4CF99300556EF6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003C81C4CF99300556EF6 /* Post.m */; };
 		AE7003D21C4CF99300556EF6 /* PostBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CA1C4CF99300556EF6 /* PostBuilder.m */; };
 		AE7003D31C4CF99300556EF6 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CC1C4CF99300556EF6 /* PostListViewController.m */; };
@@ -319,6 +322,9 @@
 		AE60A07820664BB100592997 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		AE60A07920664BB100592997 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		AE60A08920664DC400592997 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE60A08D2066634F00592997 /* background-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-bottom.png"; sourceTree = "<group>"; };
+		AE60A08E2066634F00592997 /* background-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-top.png"; sourceTree = "<group>"; };
+		AE60A08F2066635000592997 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		AE7003C71C4CF99300556EF6 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		AE7003C81C4CF99300556EF6 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		AE7003C91C4CF99300556EF6 /* PostBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostBuilder.h; sourceTree = "<group>"; };
@@ -600,6 +606,9 @@
 		AE60A07A20664BB700592997 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AE60A08D2066634F00592997 /* background-bottom.png */,
+				AE60A08E2066634F00592997 /* background-top.png */,
+				AE60A08F2066635000592997 /* background.png */,
 				AE60A05B2066496E00592997 /* menu_events.png */,
 				AE60A05A2066496D00592997 /* menu_gallery.png */,
 				AE60A05C2066496E00592997 /* menu_info.png */,
@@ -993,6 +1002,7 @@
 				AEDD1A8920663ECE001BD259 /* TraderViewController.xib in Resources */,
 				AEDD1A8A20663ECE001BD259 /* Icon@2x.png in Resources */,
 				AEDD1A8B20663ECE001BD259 /* PostViewMoreCellTableViewCell.xib in Resources */,
+				AE60A0952066656100592997 /* background.png in Resources */,
 				AEDD1A8E20663ECE001BD259 /* Icon-Spotlight-40.png in Resources */,
 				AEDD1A8F20663ECE001BD259 /* InfoViewCell.xib in Resources */,
 				AE60A06F206649F700592997 /* menu_info.png in Resources */,
@@ -1004,10 +1014,12 @@
 				AEDD1A9520663ECE001BD259 /* TraderViewCell.xib in Resources */,
 				AEDD1A9620663ECE001BD259 /* camera-icon@2x.png in Resources */,
 				AE60A071206649FD00592997 /* menu_performers.png in Resources */,
+				AE60A0932066655C00592997 /* background-bottom.png in Resources */,
 				AEDD1A9820663ECE001BD259 /* Icon-72.png in Resources */,
 				AE60A07220664A0000592997 /* menu_twitter.png in Resources */,
 				AEDD1A9A20663ECE001BD259 /* Icon-60.png in Resources */,
 				AEDD1A9B20663ECE001BD259 /* Icon-Small.png in Resources */,
+				AE60A0942066655F00592997 /* background-top.png in Resources */,
 				AEDD1A9D20663ECE001BD259 /* Icon-76@2x.png in Resources */,
 				AEDD1A9E20663ECE001BD259 /* RearViewController.xib in Resources */,
 				AEDD1A9F20663ECE001BD259 /* UIAccessoryButtonX@2x.png in Resources */,
