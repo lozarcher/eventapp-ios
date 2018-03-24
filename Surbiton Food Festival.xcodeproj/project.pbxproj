@@ -18,6 +18,9 @@
 		AE17783620669D230037E3D3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08920664DC400592997 /* Info.plist */; };
 		AE17783C2066BAD80037E3D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE17783B2066BAD80037E3D3 /* Images.xcassets */; };
 		AE1778402066BC1B0037E3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE17783F2066BC1A0037E3D3 /* LaunchScreen.storyboard */; };
+		AE1778432066BD160037E3D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1778412066BD120037E3D3 /* Images.xcassets */; };
+		AE1778462066C16C0037E3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1778442066C1680037E3D3 /* LaunchScreen.storyboard */; };
+		AE17784C2066C28D0037E3D3 /* creativeyouth.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1778492066C2510037E3D3 /* creativeyouth.png */; };
 		AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C11A8CBBB200B96570 /* EventBuilder.m */; };
 		AE18C4C51A8CBC3700B96570 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C41A8CBC3700B96570 /* Event.m */; };
 		AE19E59F1AC18A2B00B3F69F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE19E59E1AC18A2B00B3F69F /* SystemConfiguration.framework */; };
@@ -232,6 +235,9 @@
 		AE1382651AA1426D00714884 /* VoucherBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherBuilder.m; sourceTree = "<group>"; };
 		AE17783B2066BAD80037E3D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AE17783F2066BC1A0037E3D3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE1778412066BD120037E3D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AE1778442066C1680037E3D3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE1778492066C2510037E3D3 /* creativeyouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creativeyouth.png; sourceTree = "<group>"; };
 		AE18C4C01A8CBBB200B96570 /* EventBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventBuilder.h; sourceTree = "<group>"; };
 		AE18C4C11A8CBBB200B96570 /* EventBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBuilder.m; sourceTree = "<group>"; };
 		AE18C4C31A8CBC3700B96570 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
@@ -511,6 +517,8 @@
 		AE60A07520664BA100592997 /* IYAF skin */ = {
 			isa = PBXGroup;
 			children = (
+				AE1778442066C1680037E3D3 /* LaunchScreen.storyboard */,
+				AE1778412066BD120037E3D3 /* Images.xcassets */,
 				AE60A08920664DC400592997 /* Info.plist */,
 				AE60A07620664BAB00592997 /* Home Screen */,
 			);
@@ -531,6 +539,7 @@
 		AE60A07A20664BB700592997 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AE1778492066C2510037E3D3 /* creativeyouth.png */,
 				AE60A08D2066634F00592997 /* background-bottom.png */,
 				AE60A08E2066634F00592997 /* background-top.png */,
 				AE60A08F2066635000592997 /* background.png */,
@@ -906,6 +915,8 @@
 				AEDD1A7020663ECE001BD259 /* TwitterViewController.xib in Resources */,
 				AEDD1A7120663ECE001BD259 /* logo.jpg in Resources */,
 				AEDD1A7320663ECE001BD259 /* InfoViewController.xib in Resources */,
+				AE17784C2066C28D0037E3D3 /* creativeyouth.png in Resources */,
+				AE1778462066C16C0037E3D3 /* LaunchScreen.storyboard in Resources */,
 				AEDD1A7420663ECE001BD259 /* KingstonPound-small-15.png in Resources */,
 				AEDD1A7520663ECE001BD259 /* AboutKingstonPoundViewController.xib in Resources */,
 				AEDD1A7920663ECE001BD259 /* reveal-icon@2x.png in Resources */,
@@ -922,6 +933,7 @@
 				AEDD1A8B20663ECE001BD259 /* PostViewMoreCellTableViewCell.xib in Resources */,
 				AE60A0952066656100592997 /* background.png in Resources */,
 				AEDD1A8F20663ECE001BD259 /* InfoViewCell.xib in Resources */,
+				AE1778432066BD160037E3D3 /* Images.xcassets in Resources */,
 				AE60A06F206649F700592997 /* menu_info.png in Resources */,
 				AEDD1A9120663ECE001BD259 /* AboutAppViewController.xib in Resources */,
 				AEDD1A9220663ECE001BD259 /* UIButtonBarCompose@2x.png in Resources */,
@@ -1246,6 +1258,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 163746E490982A8BA42FC68C /* Pods-IYAF.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1273,6 +1286,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CB95BF103961E7B9DF70CEF /* Pods-IYAF.production.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1305,6 +1319,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91B2820AA88861415693CF0A /* Pods-IYAF.development.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1337,6 +1352,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52F838FDCE68F3E1B2D9ADF1 /* Pods-IYAF.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;

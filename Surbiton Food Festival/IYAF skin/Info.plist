@@ -6,6 +6,8 @@
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIcons</key>
+	<dict/>
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>IYAF</string>
+	<string>IYAF 2018</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -53,7 +55,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Use your camera to upload a photo to our photo gallery</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We'll only use this to show your location on the map</string>
+	<string>We&apos;ll only use this to show your location on the map</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This permission will let you send photos to our photo gallery</string>
 	<key>NSRemindersUsageDescription</key>
