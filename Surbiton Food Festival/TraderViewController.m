@@ -8,7 +8,6 @@
 
 #import "TraderViewController.h"
 #import "UIImageView+WebCache.h"
-#import "CoverHelper.h"
 
 @interface TraderViewController ()
 

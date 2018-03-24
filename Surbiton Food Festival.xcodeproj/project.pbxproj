@@ -121,7 +121,6 @@
 		AEDD1A4020663ECE001BD259 /* AboutAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46FCE1ABB55CC00F52708 /* AboutAppViewController.m */; };
 		AEDD1A4120663ECE001BD259 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
 		AEDD1A4220663ECE001BD259 /* TraderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB2F1AB462E100B2C6A9 /* TraderViewController.m */; };
-		AEDD1A4320663ECE001BD259 /* CoverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */; };
 		AEDD1A4420663ECE001BD259 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */; };
 		AEDD1A4520663ECE001BD259 /* Info.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055DA1CA53B6200E9C369 /* Info.m */; };
 		AEDD1A4620663ECE001BD259 /* UploadPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91C41C88A3FB00708484 /* UploadPhotoViewController.m */; };
@@ -212,7 +211,6 @@
 		AEDD1AB120663ECE001BD259 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */; };
 		AEDD1AB220663ECE001BD259 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
 		AEDD1ABF20663F2C001BD259 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC441A7CEC8A007241DC /* Info.plist */; };
-		AEDF8D2B1C8AD8D0007391C7 /* CoverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */; };
 		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
 		AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
 		AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */; };
@@ -388,8 +386,6 @@
 		AEC425401AD913ED0021049E /* cutlery_spoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_spoon.png; sourceTree = "<group>"; };
 		AEC425411AD913ED0021049E /* cutlery_teaspoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_teaspoon.png; sourceTree = "<group>"; };
 		AEDD1ABA20663ECE001BD259 /* IYAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IYAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEDF8D291C8AD8D0007391C7 /* CoverHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverHelper.h; sourceTree = "<group>"; };
-		AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverHelper.m; sourceTree = "<group>"; };
 		AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarCompose@2x.png"; sourceTree = "<group>"; };
 		AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIAccessoryButtonX@2x.png"; sourceTree = "<group>"; };
 		AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-lg-outline@2x.png"; sourceTree = "<group>"; };
@@ -528,8 +524,6 @@
 				AEBA91BD1C8871F100708484 /* Gallery.h */,
 				AEBA91BE1C8872AC00708484 /* GalleryBuilder.m */,
 				AEBA91C01C8872B700708484 /* GalleryBuilder.h */,
-				AEDF8D291C8AD8D0007391C7 /* CoverHelper.h */,
-				AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */,
 				AE9055DA1CA53B6200E9C369 /* Info.m */,
 				AE9055DC1CA53B6D00E9C369 /* Info.h */,
 				AE9055DD1CA53BF200E9C369 /* InfoBuilder.h */,
@@ -1266,7 +1260,6 @@
 				AEDD1A4020663ECE001BD259 /* AboutAppViewController.m in Sources */,
 				AEDD1A4120663ECE001BD259 /* TweetBuilder.m in Sources */,
 				AEDD1A4220663ECE001BD259 /* TraderViewController.m in Sources */,
-				AEDD1A4320663ECE001BD259 /* CoverHelper.m in Sources */,
 				AEDD1A4420663ECE001BD259 /* PrivacyPolicyViewController.m in Sources */,
 				AEDD1A4520663ECE001BD259 /* Info.m in Sources */,
 				AEDD1A4620663ECE001BD259 /* UploadPhotoViewController.m in Sources */,
@@ -1317,7 +1310,6 @@
 				AEE46FD01ABB55CC00F52708 /* AboutAppViewController.m in Sources */,
 				AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */,
 				AEF3AB311AB462E100B2C6A9 /* TraderViewController.m in Sources */,
-				AEDF8D2B1C8AD8D0007391C7 /* CoverHelper.m in Sources */,
 				AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */,
 				AE9055DB1CA53B6200E9C369 /* Info.m in Sources */,
 				AEBA91C61C88A3FB00708484 /* UploadPhotoViewController.m in Sources */,
@@ -1529,6 +1521,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 972532AF6AB3EF6F9033FCD9 /* Pods-Surbiton Food Festival.development.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1612,6 +1606,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7570F939FC9713D0CCDD4705 /* Pods-Surbiton Food Festival.production.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1739,6 +1735,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90628C835934F524217A592D /* Pods-Surbiton Food Festival.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1766,6 +1764,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77D2604E22D054019D6F6BB2 /* Pods-Surbiton Food Festival.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;

@@ -8,7 +8,6 @@
 
 #import "InfoViewController.h"
 #import "UIImageView+WebCache.h"
-#import "CoverHelper.h"
 
 @interface InfoViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
