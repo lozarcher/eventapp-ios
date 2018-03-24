@@ -13,10 +13,11 @@
 		AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
 		AE097BA42055BB2B00CAEAF0 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA02055BB2B00CAEAF0 /* EventViewController.m */; };
 		AE097BA72055BB5A00CAEAF0 /* EventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA62055BB5A00CAEAF0 /* EventViewCell.m */; };
-		AE0D6D8A1C970688006726CC /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D891C970688006726CC /* launchimage.png */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
 		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
 		AE17783620669D230037E3D3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08920664DC400592997 /* Info.plist */; };
+		AE17783C2066BAD80037E3D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE17783B2066BAD80037E3D3 /* Images.xcassets */; };
+		AE1778402066BC1B0037E3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE17783F2066BC1A0037E3D3 /* LaunchScreen.storyboard */; };
 		AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C11A8CBBB200B96570 /* EventBuilder.m */; };
 		AE18C4C51A8CBC3700B96570 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C41A8CBC3700B96570 /* Event.m */; };
 		AE19E59F1AC18A2B00B3F69F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE19E59E1AC18A2B00B3F69F /* SystemConfiguration.framework */; };
@@ -33,26 +34,6 @@
 		AE1BCBCE1A9FD0A400E79935 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */; };
 		AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */; };
 		AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD01A9FD3CC00E79935 /* logo.jpg */; };
-		AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD31A9FDC3300E79935 /* Icon-60.png */; };
-		AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD41A9FDC3300E79935 /* Icon-60@2x.png */; };
-		AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD51A9FDC3300E79935 /* Icon-60@3x.png */; };
-		AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD61A9FDC3300E79935 /* Icon-72.png */; };
-		AE1BCBEB1A9FDC3300E79935 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD71A9FDC3300E79935 /* Icon-72@2x.png */; };
-		AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD81A9FDC3300E79935 /* Icon-76.png */; };
-		AE1BCBED1A9FDC3300E79935 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD91A9FDC3300E79935 /* Icon-76@2x.png */; };
-		AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDA1A9FDC3300E79935 /* Icon-76@3x.png */; };
-		AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDB1A9FDC3300E79935 /* Icon-Small-50.png */; };
-		AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDC1A9FDC3300E79935 /* Icon-Small-50@2x.png */; };
-		AE1BCBF11A9FDC3300E79935 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDD1A9FDC3300E79935 /* Icon-Small.png */; };
-		AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDE1A9FDC3300E79935 /* Icon-Small@2x.png */; };
-		AE1BCBF31A9FDC3300E79935 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDF1A9FDC3300E79935 /* Icon-Small@3x.png */; };
-		AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE01A9FDC3300E79935 /* Icon-Spotlight-40.png */; };
-		AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE11A9FDC3300E79935 /* Icon-Spotlight-40@2x.png */; };
-		AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE21A9FDC3300E79935 /* Icon-Spotlight-40@3x.png */; };
-		AE1BCBF71A9FDC3300E79935 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE31A9FDC3300E79935 /* Icon.png */; };
-		AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */; };
-		AE1BCBF91A9FDC3300E79935 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */; };
-		AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */; };
 		AE60A06D206649F100592997 /* menu_events.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05B2066496E00592997 /* menu_events.png */; };
 		AE60A06E206649F400592997 /* menu_gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05A2066496D00592997 /* menu_gallery.png */; };
 		AE60A06F206649F700592997 /* menu_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05C2066496E00592997 /* menu_info.png */; };
@@ -166,53 +147,32 @@
 		AEDD1A6F20663ECE001BD259 /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7003CD1C4CF99300556EF6 /* PostListViewController.xib */; };
 		AEDD1A7020663ECE001BD259 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBC21A9FCF6300E79935 /* TwitterViewController.xib */; };
 		AEDD1A7120663ECE001BD259 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD01A9FD3CC00E79935 /* logo.jpg */; };
-		AEDD1A7220663ECE001BD259 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD71A9FDC3300E79935 /* Icon-72@2x.png */; };
 		AEDD1A7320663ECE001BD259 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055E71CA5416300E9C369 /* InfoViewController.xib */; };
 		AEDD1A7420663ECE001BD259 /* KingstonPound-small-15.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */; };
 		AEDD1A7520663ECE001BD259 /* AboutKingstonPoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FD41ABB55E600F52708 /* AboutKingstonPoundViewController.xib */; };
-		AEDD1A7620663ECE001BD259 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE31A9FDC3300E79935 /* Icon.png */; };
 		AEDD1A7920663ECE001BD259 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB31A9FC9C700E79935 /* reveal-icon@2x.png */; };
 		AEDD1A7A20663ECE001BD259 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */; };
-		AEDD1A7B20663ECE001BD259 /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE21A9FDC3300E79935 /* Icon-Spotlight-40@3x.png */; };
 		AEDD1A7C20663ECE001BD259 /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = AE83538920602637007CD747 /* Screenshots */; };
-		AEDD1A7E20663ECE001BD259 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD51A9FDC3300E79935 /* Icon-60@3x.png */; };
 		AEDD1A8020663ECE001BD259 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF520941A9E2C1000C05D84 /* Configurations.plist */; };
 		AEDD1A8120663ECE001BD259 /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEAE299D1C848B5200533C60 /* Home@2x.png */; };
 		AEDD1A8220663ECE001BD259 /* bell-lg-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */; };
-		AEDD1A8320663ECE001BD259 /* Icon-76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDA1A9FDC3300E79935 /* Icon-76@3x.png */; };
 		AEDD1A8420663ECE001BD259 /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */; };
-		AEDD1A8520663ECE001BD259 /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D891C970688006726CC /* launchimage.png */; };
-		AEDD1A8620663ECE001BD259 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDE1A9FDC3300E79935 /* Icon-Small@2x.png */; };
-		AEDD1A8820663ECE001BD259 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD41A9FDC3300E79935 /* Icon-60@2x.png */; };
 		AEDD1A8920663ECE001BD259 /* TraderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB301AB462E100B2C6A9 /* TraderViewController.xib */; };
-		AEDD1A8A20663ECE001BD259 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */; };
 		AEDD1A8B20663ECE001BD259 /* PostViewMoreCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE835386205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib */; };
-		AEDD1A8E20663ECE001BD259 /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE01A9FDC3300E79935 /* Icon-Spotlight-40.png */; };
 		AEDD1A8F20663ECE001BD259 /* InfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055E21CA53EF300E9C369 /* InfoViewCell.xib */; };
-		AEDD1A9020663ECE001BD259 /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE11A9FDC3300E79935 /* Icon-Spotlight-40@2x.png */; };
 		AEDD1A9120663ECE001BD259 /* AboutAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FCF1ABB55CC00F52708 /* AboutAppViewController.xib */; };
 		AEDD1A9220663ECE001BD259 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
 		AEDD1A9320663ECE001BD259 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEAE29A11C8839B000533C60 /* Podfile */; };
 		AEDD1A9420663ECE001BD259 /* InfoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055D71CA53AB000E9C369 /* InfoListViewController.xib */; };
 		AEDD1A9520663ECE001BD259 /* TraderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB251AB45D5200B2C6A9 /* TraderViewCell.xib */; };
 		AEDD1A9620663ECE001BD259 /* camera-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBA91C11C888A3000708484 /* camera-icon@2x.png */; };
-		AEDD1A9820663ECE001BD259 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD61A9FDC3300E79935 /* Icon-72.png */; };
-		AEDD1A9A20663ECE001BD259 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD31A9FDC3300E79935 /* Icon-60.png */; };
-		AEDD1A9B20663ECE001BD259 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDD1A9FDC3300E79935 /* Icon-Small.png */; };
-		AEDD1A9D20663ECE001BD259 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD91A9FDC3300E79935 /* Icon-76@2x.png */; };
 		AEDD1A9E20663ECE001BD259 /* RearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB01A9FC8A600E79935 /* RearViewController.xib */; };
 		AEDD1A9F20663ECE001BD259 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
 		AEDD1AA020663ECE001BD259 /* UploadPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBA91C51C88A3FB00708484 /* UploadPhotoViewController.xib */; };
-		AEDD1AA220663ECE001BD259 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD81A9FDC3300E79935 /* Icon-76.png */; };
-		AEDD1AA520663ECE001BD259 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDB1A9FDC3300E79935 /* Icon-Small-50.png */; };
 		AEDD1AA720663ECE001BD259 /* TwitterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA056901AA4F82B003E095F /* TwitterViewCell.xib */; };
-		AEDD1AAA20663ECE001BD259 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDC1A9FDC3300E79935 /* Icon-Small-50@2x.png */; };
-		AEDD1AAB20663ECE001BD259 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */; };
 		AEDD1AAC20663ECE001BD259 /* bell-lg-filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FAA1AB8866B00F52708 /* bell-lg-filled@2x.png */; };
-		AEDD1AAE20663ECE001BD259 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDF1A9FDC3300E79935 /* Icon-Small@3x.png */; };
 		AEDD1AAF20663ECE001BD259 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */; };
 		AEDD1AB020663ECE001BD259 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
-		AEDD1AB120663ECE001BD259 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */; };
 		AEDD1AB220663ECE001BD259 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
 		AEDD1ABF20663F2C001BD259 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC441A7CEC8A007241DC /* Info.plist */; };
 		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
@@ -266,11 +226,12 @@
 		AE097BA02055BB2B00CAEAF0 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
 		AE097BA52055BB5A00CAEAF0 /* EventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewCell.h; sourceTree = "<group>"; };
 		AE097BA62055BB5A00CAEAF0 /* EventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewCell.m; sourceTree = "<group>"; };
-		AE0D6D891C970688006726CC /* launchimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage.png; sourceTree = "<group>"; };
 		AE1382611AA1422B00714884 /* Voucher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
 		AE1382621AA1422B00714884 /* Voucher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
 		AE1382641AA1426D00714884 /* VoucherBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoucherBuilder.h; sourceTree = "<group>"; };
 		AE1382651AA1426D00714884 /* VoucherBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoucherBuilder.m; sourceTree = "<group>"; };
+		AE17783B2066BAD80037E3D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AE17783F2066BC1A0037E3D3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE18C4C01A8CBBB200B96570 /* EventBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventBuilder.h; sourceTree = "<group>"; };
 		AE18C4C11A8CBBB200B96570 /* EventBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBuilder.m; sourceTree = "<group>"; };
 		AE18C4C31A8CBC3700B96570 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
@@ -294,26 +255,6 @@
 		AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
 		AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListViewController.xib; sourceTree = "<group>"; };
 		AE1BCBD01A9FD3CC00E79935 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
-		AE1BCBD31A9FDC3300E79935 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
-		AE1BCBD41A9FDC3300E79935 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
-		AE1BCBD51A9FDC3300E79935 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
-		AE1BCBD61A9FDC3300E79935 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		AE1BCBD71A9FDC3300E79935 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
-		AE1BCBD81A9FDC3300E79935 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
-		AE1BCBD91A9FDC3300E79935 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
-		AE1BCBDA1A9FDC3300E79935 /* Icon-76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@3x.png"; sourceTree = "<group>"; };
-		AE1BCBDB1A9FDC3300E79935 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
-		AE1BCBDC1A9FDC3300E79935 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
-		AE1BCBDD1A9FDC3300E79935 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		AE1BCBDE1A9FDC3300E79935 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		AE1BCBDF1A9FDC3300E79935 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
-		AE1BCBE01A9FDC3300E79935 /* Icon-Spotlight-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40.png"; sourceTree = "<group>"; };
-		AE1BCBE11A9FDC3300E79935 /* Icon-Spotlight-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@2x.png"; sourceTree = "<group>"; };
-		AE1BCBE21A9FDC3300E79935 /* Icon-Spotlight-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-40@3x.png"; sourceTree = "<group>"; };
-		AE1BCBE31A9FDC3300E79935 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		AE60A04C2066487300592997 /* app-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-background.png"; sourceTree = "<group>"; };
 		AE60A05A2066496D00592997 /* menu_gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_gallery.png; sourceTree = "<group>"; };
 		AE60A05B2066496E00592997 /* menu_events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_events.png; sourceTree = "<group>"; };
@@ -567,34 +508,6 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		AE1BCBD21A9FDC2500E79935 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				AE0D6D891C970688006726CC /* launchimage.png */,
-				AE1BCBD31A9FDC3300E79935 /* Icon-60.png */,
-				AE1BCBD41A9FDC3300E79935 /* Icon-60@2x.png */,
-				AE1BCBD51A9FDC3300E79935 /* Icon-60@3x.png */,
-				AE1BCBD61A9FDC3300E79935 /* Icon-72.png */,
-				AE1BCBD71A9FDC3300E79935 /* Icon-72@2x.png */,
-				AE1BCBD81A9FDC3300E79935 /* Icon-76.png */,
-				AE1BCBD91A9FDC3300E79935 /* Icon-76@2x.png */,
-				AE1BCBDA1A9FDC3300E79935 /* Icon-76@3x.png */,
-				AE1BCBDB1A9FDC3300E79935 /* Icon-Small-50.png */,
-				AE1BCBDC1A9FDC3300E79935 /* Icon-Small-50@2x.png */,
-				AE1BCBDD1A9FDC3300E79935 /* Icon-Small.png */,
-				AE1BCBDE1A9FDC3300E79935 /* Icon-Small@2x.png */,
-				AE1BCBDF1A9FDC3300E79935 /* Icon-Small@3x.png */,
-				AE1BCBE01A9FDC3300E79935 /* Icon-Spotlight-40.png */,
-				AE1BCBE11A9FDC3300E79935 /* Icon-Spotlight-40@2x.png */,
-				AE1BCBE21A9FDC3300E79935 /* Icon-Spotlight-40@3x.png */,
-				AE1BCBE31A9FDC3300E79935 /* Icon.png */,
-				AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */,
-				AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */,
-				AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */,
-			);
-			name = icons;
-			sourceTree = "<group>";
-		};
 		AE60A07520664BA100592997 /* IYAF skin */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +548,8 @@
 		AE60A07E20664BE500592997 /* Surbiton Food skin */ = {
 			isa = PBXGroup;
 			children = (
+				AE17783F2066BC1A0037E3D3 /* LaunchScreen.storyboard */,
+				AE17783B2066BAD80037E3D3 /* Images.xcassets */,
 				AE60A08020664C0700592997 /* Home Screen */,
 				AEF8BC441A7CEC8A007241DC /* Info.plist */,
 			);
@@ -748,7 +663,6 @@
 			children = (
 				AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */,
 				AEE46FA11AB8747600F52708 /* Navbar icons */,
-				AE1BCBD21A9FDC2500E79935 /* icons */,
 				AE1BCBD01A9FD3CC00E79935 /* logo.jpg */,
 				AEBA91C11C888A3000708484 /* camera-icon@2x.png */,
 				AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */,
@@ -991,35 +905,24 @@
 				AEDD1A6F20663ECE001BD259 /* PostListViewController.xib in Resources */,
 				AEDD1A7020663ECE001BD259 /* TwitterViewController.xib in Resources */,
 				AEDD1A7120663ECE001BD259 /* logo.jpg in Resources */,
-				AEDD1A7220663ECE001BD259 /* Icon-72@2x.png in Resources */,
 				AEDD1A7320663ECE001BD259 /* InfoViewController.xib in Resources */,
 				AEDD1A7420663ECE001BD259 /* KingstonPound-small-15.png in Resources */,
 				AEDD1A7520663ECE001BD259 /* AboutKingstonPoundViewController.xib in Resources */,
-				AEDD1A7620663ECE001BD259 /* Icon.png in Resources */,
 				AEDD1A7920663ECE001BD259 /* reveal-icon@2x.png in Resources */,
 				AEDD1A7A20663ECE001BD259 /* pin.png in Resources */,
 				AE60A08820664D6700592997 /* HomeViewController.xib in Resources */,
-				AEDD1A7B20663ECE001BD259 /* Icon-Spotlight-40@3x.png in Resources */,
 				AEDD1A7C20663ECE001BD259 /* Screenshots in Resources */,
 				AE60A07320664A0300592997 /* app-background.png in Resources */,
-				AEDD1A7E20663ECE001BD259 /* Icon-60@3x.png in Resources */,
 				AEDD1A8020663ECE001BD259 /* Configurations.plist in Resources */,
 				AEDD1A8120663ECE001BD259 /* Home@2x.png in Resources */,
 				AE17783620669D230037E3D3 /* Info.plist in Resources */,
 				AEDD1A8220663ECE001BD259 /* bell-lg-outline@2x.png in Resources */,
-				AEDD1A8320663ECE001BD259 /* Icon-76@3x.png in Resources */,
 				AEDD1A8420663ECE001BD259 /* EventListViewController.xib in Resources */,
-				AEDD1A8520663ECE001BD259 /* launchimage.png in Resources */,
-				AEDD1A8620663ECE001BD259 /* Icon-Small@2x.png in Resources */,
-				AEDD1A8820663ECE001BD259 /* Icon-60@2x.png in Resources */,
 				AEDD1A8920663ECE001BD259 /* TraderViewController.xib in Resources */,
-				AEDD1A8A20663ECE001BD259 /* Icon@2x.png in Resources */,
 				AEDD1A8B20663ECE001BD259 /* PostViewMoreCellTableViewCell.xib in Resources */,
 				AE60A0952066656100592997 /* background.png in Resources */,
-				AEDD1A8E20663ECE001BD259 /* Icon-Spotlight-40.png in Resources */,
 				AEDD1A8F20663ECE001BD259 /* InfoViewCell.xib in Resources */,
 				AE60A06F206649F700592997 /* menu_info.png in Resources */,
-				AEDD1A9020663ECE001BD259 /* Icon-Spotlight-40@2x.png in Resources */,
 				AEDD1A9120663ECE001BD259 /* AboutAppViewController.xib in Resources */,
 				AEDD1A9220663ECE001BD259 /* UIButtonBarCompose@2x.png in Resources */,
 				AEDD1A9320663ECE001BD259 /* Podfile in Resources */,
@@ -1028,27 +931,17 @@
 				AEDD1A9620663ECE001BD259 /* camera-icon@2x.png in Resources */,
 				AE60A071206649FD00592997 /* menu_performers.png in Resources */,
 				AE60A0932066655C00592997 /* background-bottom.png in Resources */,
-				AEDD1A9820663ECE001BD259 /* Icon-72.png in Resources */,
 				AE60A07220664A0000592997 /* menu_twitter.png in Resources */,
-				AEDD1A9A20663ECE001BD259 /* Icon-60.png in Resources */,
-				AEDD1A9B20663ECE001BD259 /* Icon-Small.png in Resources */,
 				AE60A0942066655F00592997 /* background-top.png in Resources */,
-				AEDD1A9D20663ECE001BD259 /* Icon-76@2x.png in Resources */,
 				AEDD1A9E20663ECE001BD259 /* RearViewController.xib in Resources */,
 				AEDD1A9F20663ECE001BD259 /* UIAccessoryButtonX@2x.png in Resources */,
 				AEDD1AA020663ECE001BD259 /* UploadPhotoViewController.xib in Resources */,
-				AEDD1AA220663ECE001BD259 /* Icon-76.png in Resources */,
-				AEDD1AA520663ECE001BD259 /* Icon-Small-50.png in Resources */,
 				AE60A06E206649F400592997 /* menu_gallery.png in Resources */,
 				AEDD1AA720663ECE001BD259 /* TwitterViewCell.xib in Resources */,
-				AEDD1AAA20663ECE001BD259 /* Icon-Small-50@2x.png in Resources */,
 				AE60A06D206649F100592997 /* menu_events.png in Resources */,
-				AEDD1AAB20663ECE001BD259 /* iTunesArtwork@2x.png in Resources */,
 				AEDD1AAC20663ECE001BD259 /* bell-lg-filled@2x.png in Resources */,
-				AEDD1AAE20663ECE001BD259 /* Icon-Small@3x.png in Resources */,
 				AEDD1AAF20663ECE001BD259 /* reveal-icon.png in Resources */,
 				AEDD1AB020663ECE001BD259 /* PrivacyPolicyViewController.xib in Resources */,
-				AEDD1AB120663ECE001BD259 /* iTunesArtwork.png in Resources */,
 				AEDD1AB220663ECE001BD259 /* EventViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1066,68 +959,49 @@
 				AE7003D41C4CF99300556EF6 /* PostListViewController.xib in Resources */,
 				AE1BCBC41A9FCF6300E79935 /* TwitterViewController.xib in Resources */,
 				AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */,
-				AE1BCBEB1A9FDC3300E79935 /* Icon-72@2x.png in Resources */,
+				AE17783C2066BAD80037E3D3 /* Images.xcassets in Resources */,
 				AE9055E91CA5416300E9C369 /* InfoViewController.xib in Resources */,
 				AEE46FAD1ABB4A1700F52708 /* KingstonPound-small-15.png in Resources */,
 				AEE46FD61ABB55E600F52708 /* AboutKingstonPoundViewController.xib in Resources */,
-				AE1BCBF71A9FDC3300E79935 /* Icon.png in Resources */,
 				AEEF3D261AD3F096003256FD /* indigo-plate.png in Resources */,
 				AEEF3D2A1AD3F096003256FD /* SFF-Logo-700-shadow.png in Resources */,
 				AE1BCBB51A9FC9C700E79935 /* reveal-icon@2x.png in Resources */,
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
-				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
 				AE83538A20602638007CD747 /* Screenshots in Resources */,
 				AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */,
-				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
 				AEDD1ABF20663F2C001BD259 /* Info.plist in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
 				AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */,
 				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
-				AE1BCBEE1A9FDC3300E79935 /* Icon-76@3x.png in Resources */,
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
-				AE0D6D8A1C970688006726CC /* launchimage.png in Resources */,
-				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
-				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
-				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AE835388205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib in Resources */,
 				AEEF3D291AD3F096003256FD /* red-plate.png in Resources */,
-				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
 				AE9055E41CA53EF300E9C369 /* InfoViewCell.xib in Resources */,
-				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
 				AEE46FD11ABB55CC00F52708 /* AboutAppViewController.xib in Resources */,
 				AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */,
 				AEAE29A21C8839B000533C60 /* Podfile in Resources */,
 				AE9055D91CA53AB000E9C369 /* InfoListViewController.xib in Resources */,
 				AEF3AB271AB45D5200B2C6A9 /* TraderViewCell.xib in Resources */,
+				AE1778402066BC1B0037E3D3 /* LaunchScreen.storyboard in Resources */,
 				AEBA91C21C888A3000708484 /* camera-icon@2x.png in Resources */,
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
-				AE1BCBEA1A9FDC3300E79935 /* Icon-72.png in Resources */,
 				AE9055BF1CA43C8D00E9C369 /* yellow-cloth-tile.png in Resources */,
-				AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */,
-				AE1BCBF11A9FDC3300E79935 /* Icon-Small.png in Resources */,
-				AE1BCBED1A9FDC3300E79935 /* Icon-76@2x.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */,
 				AEBA91C71C88A3FB00708484 /* UploadPhotoViewController.xib in Resources */,
 				AEEF3D251AD3F096003256FD /* green-plate.png in Resources */,
-				AE1BCBEC1A9FDC3300E79935 /* Icon-76.png in Resources */,
 				AEEF3D281AD3F096003256FD /* orange-plate.png in Resources */,
 				AEC425421AD913ED0021049E /* cutlery_chopsticks.png in Resources */,
-				AE1BCBEF1A9FDC3300E79935 /* Icon-Small-50.png in Resources */,
 				AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */,
 				AEA056921AA4F82B003E095F /* TwitterViewCell.xib in Resources */,
 				AE835383205C353A007CD747 /* lefi.jpg in Resources */,
 				AEC425461AD913ED0021049E /* cutlery_teaspoon.png in Resources */,
-				AE1BCBF01A9FDC3300E79935 /* Icon-Small-50@2x.png in Resources */,
-				AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x.png in Resources */,
 				AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */,
 				AEEF3D2B1AD3F096003256FD /* white-plate.png in Resources */,
-				AE1BCBF31A9FDC3300E79935 /* Icon-Small@3x.png in Resources */,
 				AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */,
 				AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */,
-				AE1BCBF91A9FDC3300E79935 /* iTunesArtwork.png in Resources */,
 				AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */,
 				AE60A08620664D5200592997 /* HomeViewController.xib in Resources */,
 			);
@@ -1372,7 +1246,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 163746E490982A8BA42FC68C /* Pods-IYAF.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1400,7 +1273,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CB95BF103961E7B9DF70CEF /* Pods-IYAF.production.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1418,7 +1290,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1430,7 +1305,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91B2820AA88861415693CF0A /* Pods-IYAF.development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1448,7 +1322,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1460,7 +1337,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52F838FDCE68F3E1B2D9ADF1 /* Pods-IYAF.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1540,7 +1416,6 @@
 			baseConfigurationReference = F897BC68E01DA4B824198411 /* Pods-Surbiton Food Festival.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1558,7 +1433,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1622,7 +1500,6 @@
 			baseConfigurationReference = 274BDC9C7E98318BE0509638 /* Pods-Surbiton Food Festival.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1640,7 +1517,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1748,7 +1628,6 @@
 			baseConfigurationReference = DB831476E22C3DF8E9F05859 /* Pods-Surbiton Food Festival.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1777,7 +1656,6 @@
 			baseConfigurationReference = C354A297D0B5FE3A0E7F7F53 /* Pods-Surbiton Food Festival.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
