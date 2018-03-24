@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		273A920F3E272DBADEF798A7 /* libPods-Surbiton Food FestivalTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8ADC5D5EDD2954199418CB /* libPods-Surbiton Food FestivalTests.a */; };
 		AE097BA22055BB2B00CAEAF0 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */; };
 		AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
 		AE097BA42055BB2B00CAEAF0 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA02055BB2B00CAEAF0 /* EventViewController.m */; };
@@ -51,7 +50,6 @@
 		AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */; };
 		AE1BCBF91A9FDC3300E79935 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */; };
 		AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */; };
-		AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */; };
 		AE7003D11C4CF99300556EF6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003C81C4CF99300556EF6 /* Post.m */; };
 		AE7003D21C4CF99300556EF6 /* PostBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CA1C4CF99300556EF6 /* PostBuilder.m */; };
 		AE7003D31C4CF99300556EF6 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CC1C4CF99300556EF6 /* PostListViewController.m */; };
@@ -98,6 +96,113 @@
 		AEC425441AD913ED0021049E /* cutlery_fork.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC4253F1AD913ED0021049E /* cutlery_fork.png */; };
 		AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC425401AD913ED0021049E /* cutlery_spoon.png */; };
 		AEC425461AD913ED0021049E /* cutlery_teaspoon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC425411AD913ED0021049E /* cutlery_teaspoon.png */; };
+		AEDD1A3420663ECE001BD259 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369FC1A9BCC3400F15869 /* Venue.m */; };
+		AEDD1A3520663ECE001BD259 /* PostViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CF1C4CF99300556EF6 /* PostViewCell.m */; };
+		AEDD1A3620663ECE001BD259 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
+		AEDD1A3720663ECE001BD259 /* TraderBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB2C1AB45D9000B2C6A9 /* TraderBuilder.m */; };
+		AEDD1A3820663ECE001BD259 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
+		AEDD1A3920663ECE001BD259 /* CustomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCB9F1A9FC59A00E79935 /* CustomAnimationController.m */; };
+		AEDD1A3A20663ECE001BD259 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */; };
+		AEDD1A3B20663ECE001BD259 /* Trader.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB291AB45D8000B2C6A9 /* Trader.m */; };
+		AEDD1A3C20663ECE001BD259 /* TraderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB1F1AB45D1400B2C6A9 /* TraderListViewController.m */; };
+		AEDD1A3D20663ECE001BD259 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA02055BB2B00CAEAF0 /* EventViewController.m */; };
+		AEDD1A3E20663ECE001BD259 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB301A90C564008C6329 /* Tweet.m */; };
+		AEDD1A3F20663ECE001BD259 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBC11A9FCF6300E79935 /* TwitterViewController.m */; };
+		AEDD1A4020663ECE001BD259 /* AboutAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46FCE1ABB55CC00F52708 /* AboutAppViewController.m */; };
+		AEDD1A4120663ECE001BD259 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
+		AEDD1A4220663ECE001BD259 /* TraderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB2F1AB462E100B2C6A9 /* TraderViewController.m */; };
+		AEDD1A4320663ECE001BD259 /* CoverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */; };
+		AEDD1A4420663ECE001BD259 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */; };
+		AEDD1A4520663ECE001BD259 /* Info.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055DA1CA53B6200E9C369 /* Info.m */; };
+		AEDD1A4620663ECE001BD259 /* UploadPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91C41C88A3FB00708484 /* UploadPhotoViewController.m */; };
+		AEDD1A4820663ECE001BD259 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CC1C4CF99300556EF6 /* PostListViewController.m */; };
+		AEDD1A4920663ECE001BD259 /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBA61A9FC62100E79935 /* RearViewController.m */; };
+		AEDD1A4A20663ECE001BD259 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC481A7CEC8A007241DC /* AppDelegate.m */; };
+		AEDD1A4B20663ECE001BD259 /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91BB1C8871E000708484 /* Gallery.m */; };
+		AEDD1A4C20663ECE001BD259 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C41A8CBC3700B96570 /* Event.m */; };
+		AEDD1A4D20663ECE001BD259 /* PostViewMoreCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE835385205FDAB0007CD747 /* PostViewMoreCellTableViewCell.m */; };
+		AEDD1A4E20663ECE001BD259 /* TwitterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA0568F1AA4F82B003E095F /* TwitterViewCell.m */; };
+		AEDD1A4F20663ECE001BD259 /* VenueBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9369F91A9BCBC000F15869 /* VenueBuilder.m */; };
+		AEDD1A5020663ECE001BD259 /* TraderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB241AB45D5200B2C6A9 /* TraderViewCell.m */; };
+		AEDD1A5120663ECE001BD259 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCB9C1A9FAFAA00E79935 /* SWRevealViewController.m */; };
+		AEDD1A5220663ECE001BD259 /* InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055D61CA53AB000E9C369 /* InfoListViewController.m */; };
+		AEDD1A5320663ECE001BD259 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
+		AEDD1A5420663ECE001BD259 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91B71C88641200708484 /* GalleryViewController.m */; };
+		AEDD1A5520663ECE001BD259 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055E61CA5416300E9C369 /* InfoViewController.m */; };
+		AEDD1A5620663ECE001BD259 /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE18C4C11A8CBBB200B96570 /* EventBuilder.m */; };
+		AEDD1A5720663ECE001BD259 /* EventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA62055BB5A00CAEAF0 /* EventViewCell.m */; };
+		AEDD1A5820663ECE001BD259 /* GalleryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA91BE1C8872AC00708484 /* GalleryBuilder.m */; };
+		AEDD1A5920663ECE001BD259 /* MTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF520971A9E2C7600C05D84 /* MTConfiguration.m */; };
+		AEDD1A5A20663ECE001BD259 /* InfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055E11CA53EF300E9C369 /* InfoViewCell.m */; };
+		AEDD1A5B20663ECE001BD259 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003C81C4CF99300556EF6 /* Post.m */; };
+		AEDD1A5C20663ECE001BD259 /* AboutKingstonPoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE46FD31ABB55E600F52708 /* AboutKingstonPoundViewController.m */; };
+		AEDD1A5D20663ECE001BD259 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBFA55F1AB3632800B25A11 /* VenueViewController.m */; };
+		AEDD1A5E20663ECE001BD259 /* InfoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9055DE1CA53BF200E9C369 /* InfoBuilder.m */; };
+		AEDD1A5F20663ECE001BD259 /* PostBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CA1C4CF99300556EF6 /* PostBuilder.m */; };
+		AEDD1A6120663ECE001BD259 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB9FFE420652AE000F60E67 /* UserNotifications.framework */; };
+		AEDD1A6220663ECE001BD259 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE19E59E1AC18A2B00B3F69F /* SystemConfiguration.framework */; };
+		AEDD1A6320663ECE001BD259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1BCBB61A9FCA4D00E79935 /* CoreGraphics.framework */; };
+		AEDD1A6420663ECE001BD259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1BCBA81A9FC77200E79935 /* UIKit.framework */; };
+		AEDD1A6520663ECE001BD259 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9369F31A9BC5E300F15869 /* MapKit.framework */; };
+		AEDD1A6620663ECE001BD259 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEED6CCB1A939DB700B8D84B /* Social.framework */; };
+		AEDD1A6720663ECE001BD259 /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */; };
+		AEDD1A6920663ECE001BD259 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */; };
+		AEDD1A6A20663ECE001BD259 /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7003D01C4CF99300556EF6 /* PostViewCell.xib */; };
+		AEDD1A6B20663ECE001BD259 /* TraderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB201AB45D1400B2C6A9 /* TraderListViewController.xib */; };
+		AEDD1A6E20663ECE001BD259 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBFA5601AB3632800B25A11 /* VenueViewController.xib */; };
+		AEDD1A6F20663ECE001BD259 /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7003CD1C4CF99300556EF6 /* PostListViewController.xib */; };
+		AEDD1A7020663ECE001BD259 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBC21A9FCF6300E79935 /* TwitterViewController.xib */; };
+		AEDD1A7120663ECE001BD259 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD01A9FD3CC00E79935 /* logo.jpg */; };
+		AEDD1A7220663ECE001BD259 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD71A9FDC3300E79935 /* Icon-72@2x.png */; };
+		AEDD1A7320663ECE001BD259 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055E71CA5416300E9C369 /* InfoViewController.xib */; };
+		AEDD1A7420663ECE001BD259 /* KingstonPound-small-15.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */; };
+		AEDD1A7520663ECE001BD259 /* AboutKingstonPoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FD41ABB55E600F52708 /* AboutKingstonPoundViewController.xib */; };
+		AEDD1A7620663ECE001BD259 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE31A9FDC3300E79935 /* Icon.png */; };
+		AEDD1A7920663ECE001BD259 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB31A9FC9C700E79935 /* reveal-icon@2x.png */; };
+		AEDD1A7A20663ECE001BD259 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */; };
+		AEDD1A7B20663ECE001BD259 /* Icon-Spotlight-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE21A9FDC3300E79935 /* Icon-Spotlight-40@3x.png */; };
+		AEDD1A7C20663ECE001BD259 /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = AE83538920602637007CD747 /* Screenshots */; };
+		AEDD1A7E20663ECE001BD259 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD51A9FDC3300E79935 /* Icon-60@3x.png */; };
+		AEDD1A8020663ECE001BD259 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF520941A9E2C1000C05D84 /* Configurations.plist */; };
+		AEDD1A8120663ECE001BD259 /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEAE299D1C848B5200533C60 /* Home@2x.png */; };
+		AEDD1A8220663ECE001BD259 /* bell-lg-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */; };
+		AEDD1A8320663ECE001BD259 /* Icon-76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDA1A9FDC3300E79935 /* Icon-76@3x.png */; };
+		AEDD1A8420663ECE001BD259 /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */; };
+		AEDD1A8520663ECE001BD259 /* launchimage.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0D6D891C970688006726CC /* launchimage.png */; };
+		AEDD1A8620663ECE001BD259 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDE1A9FDC3300E79935 /* Icon-Small@2x.png */; };
+		AEDD1A8820663ECE001BD259 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD41A9FDC3300E79935 /* Icon-60@2x.png */; };
+		AEDD1A8920663ECE001BD259 /* TraderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB301AB462E100B2C6A9 /* TraderViewController.xib */; };
+		AEDD1A8A20663ECE001BD259 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */; };
+		AEDD1A8B20663ECE001BD259 /* PostViewMoreCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE835386205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib */; };
+		AEDD1A8E20663ECE001BD259 /* Icon-Spotlight-40.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE01A9FDC3300E79935 /* Icon-Spotlight-40.png */; };
+		AEDD1A8F20663ECE001BD259 /* InfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055E21CA53EF300E9C369 /* InfoViewCell.xib */; };
+		AEDD1A9020663ECE001BD259 /* Icon-Spotlight-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE11A9FDC3300E79935 /* Icon-Spotlight-40@2x.png */; };
+		AEDD1A9120663ECE001BD259 /* AboutAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FCF1ABB55CC00F52708 /* AboutAppViewController.xib */; };
+		AEDD1A9220663ECE001BD259 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
+		AEDD1A9320663ECE001BD259 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEAE29A11C8839B000533C60 /* Podfile */; };
+		AEDD1A9420663ECE001BD259 /* InfoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9055D71CA53AB000E9C369 /* InfoListViewController.xib */; };
+		AEDD1A9520663ECE001BD259 /* TraderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB251AB45D5200B2C6A9 /* TraderViewCell.xib */; };
+		AEDD1A9620663ECE001BD259 /* camera-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBA91C11C888A3000708484 /* camera-icon@2x.png */; };
+		AEDD1A9820663ECE001BD259 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD61A9FDC3300E79935 /* Icon-72.png */; };
+		AEDD1A9A20663ECE001BD259 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD31A9FDC3300E79935 /* Icon-60.png */; };
+		AEDD1A9B20663ECE001BD259 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDD1A9FDC3300E79935 /* Icon-Small.png */; };
+		AEDD1A9D20663ECE001BD259 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD91A9FDC3300E79935 /* Icon-76@2x.png */; };
+		AEDD1A9E20663ECE001BD259 /* RearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB01A9FC8A600E79935 /* RearViewController.xib */; };
+		AEDD1A9F20663ECE001BD259 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
+		AEDD1AA020663ECE001BD259 /* UploadPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBA91C51C88A3FB00708484 /* UploadPhotoViewController.xib */; };
+		AEDD1AA220663ECE001BD259 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD81A9FDC3300E79935 /* Icon-76.png */; };
+		AEDD1AA520663ECE001BD259 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDB1A9FDC3300E79935 /* Icon-Small-50.png */; };
+		AEDD1AA720663ECE001BD259 /* TwitterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA056901AA4F82B003E095F /* TwitterViewCell.xib */; };
+		AEDD1AAA20663ECE001BD259 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDC1A9FDC3300E79935 /* Icon-Small-50@2x.png */; };
+		AEDD1AAB20663ECE001BD259 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */; };
+		AEDD1AAC20663ECE001BD259 /* bell-lg-filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FAA1AB8866B00F52708 /* bell-lg-filled@2x.png */; };
+		AEDD1AAE20663ECE001BD259 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBDF1A9FDC3300E79935 /* Icon-Small@3x.png */; };
+		AEDD1AAF20663ECE001BD259 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */; };
+		AEDD1AB020663ECE001BD259 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
+		AEDD1AB120663ECE001BD259 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */; };
+		AEDD1AB220663ECE001BD259 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
+		AEDD1ABE20663F28001BD259 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEDD1ABB20663ECE001BD259 /* Info.plist */; };
+		AEDD1ABF20663F2C001BD259 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC441A7CEC8A007241DC /* Info.plist */; };
 		AEDF8D2B1C8AD8D0007391C7 /* CoverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */; };
 		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
 		AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
@@ -133,19 +238,8 @@
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
 		AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC481A7CEC8A007241DC /* AppDelegate.m */; };
 		AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC531A7CEC8A007241DC /* Images.xcassets */; };
-		AEF8BC631A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */; };
 		CCEAD3B9D2C397F01C78D3EA /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		AEF8BC5D1A7CEC8A007241DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AEF8BC381A7CEC8A007241DC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AEF8BC3F1A7CEC8A007241DC;
-			remoteInfo = "Surbiton Food Festival";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		747706AF059784C3C9E5E8C2 /* Pods-Surbiton Food FestivalTests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food FestivalTests.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests.development.xcconfig"; sourceTree = "<group>"; };
@@ -209,7 +303,6 @@
 		AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "team-surbiton-festival.jpg"; sourceTree = "<group>"; };
 		AE7003C71C4CF99300556EF6 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		AE7003C81C4CF99300556EF6 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		AE7003C91C4CF99300556EF6 /* PostBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostBuilder.h; sourceTree = "<group>"; };
@@ -277,6 +370,8 @@
 		AEC4253F1AD913ED0021049E /* cutlery_fork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_fork.png; sourceTree = "<group>"; };
 		AEC425401AD913ED0021049E /* cutlery_spoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_spoon.png; sourceTree = "<group>"; };
 		AEC425411AD913ED0021049E /* cutlery_teaspoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_teaspoon.png; sourceTree = "<group>"; };
+		AEDD1ABA20663ECE001BD259 /* IYAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IYAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDD1ABB20663ECE001BD259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/loz/Documents/Surbiton Food Festival/Info.plist"; sourceTree = "<absolute>"; };
 		AEDF8D291C8AD8D0007391C7 /* CoverHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverHelper.h; sourceTree = "<group>"; };
 		AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverHelper.m; sourceTree = "<group>"; };
 		AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarCompose@2x.png"; sourceTree = "<group>"; };
@@ -325,15 +420,26 @@
 		AEF8BC471A7CEC8A007241DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEF8BC481A7CEC8A007241DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AEF8BC531A7CEC8A007241DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AEF8BC5C1A7CEC8A007241DC /* Surbiton Food FestivalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Surbiton Food FestivalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEF8BC611A7CEC8A007241DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Surbiton_Food_FestivalTests.m; sourceTree = "<group>"; };
 		CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EBB55E721075F2AA4FE827 /* Pods-Surbiton Food FestivalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food FestivalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8ADC5D5EDD2954199418CB /* libPods-Surbiton Food FestivalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food FestivalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AEDD1A6020663ECE001BD259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEDD1A6120663ECE001BD259 /* UserNotifications.framework in Frameworks */,
+				AEDD1A6220663ECE001BD259 /* SystemConfiguration.framework in Frameworks */,
+				AEDD1A6320663ECE001BD259 /* CoreGraphics.framework in Frameworks */,
+				AEDD1A6420663ECE001BD259 /* UIKit.framework in Frameworks */,
+				AEDD1A6520663ECE001BD259 /* MapKit.framework in Frameworks */,
+				AEDD1A6620663ECE001BD259 /* Social.framework in Frameworks */,
+				AEDD1A6720663ECE001BD259 /* libPods-Surbiton Food Festival.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEF8BC3D1A7CEC8A007241DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,14 +451,6 @@
 				AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */,
 				AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */,
 				CCEAD3B9D2C397F01C78D3EA /* libPods-Surbiton Food Festival.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AEF8BC591A7CEC8A007241DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				273A920F3E272DBADEF798A7 /* libPods-Surbiton Food FestivalTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,29 +530,6 @@
 				AE1BCB9C1A9FAFAA00E79935 /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
-			sourceTree = "<group>";
-		};
-		AE1BCBBD1A9FCEB100E79935 /* Front Page */ = {
-			isa = PBXGroup;
-			children = (
-				AE1BCBBE1A9FCEB600E79935 /* Navigation */,
-				AEEF3D371AD5B17E003256FD /* HomeViewController.h */,
-				AEEF3D381AD5B17E003256FD /* HomeViewController.m */,
-				AEEF3D391AD5B17E003256FD /* HomeViewController.xib */,
-			);
-			name = "Front Page";
-			sourceTree = "<group>";
-		};
-		AE1BCBBE1A9FCEB600E79935 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				AE1BCB9E1A9FC59A00E79935 /* CustomAnimationController.h */,
-				AE1BCB9F1A9FC59A00E79935 /* CustomAnimationController.m */,
-				AE1BCBB01A9FC8A600E79935 /* RearViewController.xib */,
-				AE1BCBA51A9FC62100E79935 /* RearViewController.h */,
-				AE1BCBA61A9FC62100E79935 /* RearViewController.m */,
-			);
-			name = Navigation;
 			sourceTree = "<group>";
 		};
 		AE1BCBBF1A9FCF0000E79935 /* Classes */ = {
@@ -545,7 +620,6 @@
 				AEF8BC481A7CEC8A007241DC /* AppDelegate.m */,
 				AEF520971A9E2C7600C05D84 /* MTConfiguration.m */,
 				AEF520961A9E2C7600C05D84 /* MTConfiguration.h */,
-				AE83537A205C32E6007CD747 /* LaunchScreen.storyboard */,
 			);
 			name = CoreApp;
 			sourceTree = "<group>";
@@ -565,8 +639,6 @@
 		AEBBF1F31A9BE98F00B5D3F8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AEEF3D181AD3F077003256FD /* plates */,
-				AE49705E1ABFF41B00AF99B1 /* team-surbiton-festival.jpg */,
 				AEE46FAC1ABB4A1700F52708 /* KingstonPound-small-15.png */,
 				AEE46FA11AB8747600F52708 /* Navbar icons */,
 				AE1BCBD21A9FDC2500E79935 /* icons */,
@@ -577,6 +649,87 @@
 				AEBBF1F41A9BE9AE00B5D3F8 /* pin.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		AEDD1A2B20663DFD001BD259 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AE1BCB9E1A9FC59A00E79935 /* CustomAnimationController.h */,
+				AE1BCB9F1A9FC59A00E79935 /* CustomAnimationController.m */,
+				AE1BCBB01A9FC8A600E79935 /* RearViewController.xib */,
+				AE1BCBA51A9FC62100E79935 /* RearViewController.h */,
+				AE1BCBA61A9FC62100E79935 /* RearViewController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		AEDD1A2C20663E11001BD259 /* Surbiton Food skin */ = {
+			isa = PBXGroup;
+			children = (
+				AEDD1A3020663EA6001BD259 /* Screenshots */,
+				AEF8BC441A7CEC8A007241DC /* Info.plist */,
+				AEDD1A2D20663E3D001BD259 /* Home Screen */,
+				AEF8BC531A7CEC8A007241DC /* Images.xcassets */,
+				AE83537A205C32E6007CD747 /* LaunchScreen.storyboard */,
+			);
+			name = "Surbiton Food skin";
+			sourceTree = "<group>";
+		};
+		AEDD1A2D20663E3D001BD259 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AEDD1A2E20663E47001BD259 /* images */,
+				AEEF3D371AD5B17E003256FD /* HomeViewController.h */,
+				AEEF3D381AD5B17E003256FD /* HomeViewController.m */,
+				AEEF3D391AD5B17E003256FD /* HomeViewController.xib */,
+			);
+			name = "Home Screen";
+			sourceTree = "<group>";
+		};
+		AEDD1A2E20663E47001BD259 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AEDD1A2F20663E4D001BD259 /* plates */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		AEDD1A2F20663E4D001BD259 /* plates */ = {
+			isa = PBXGroup;
+			children = (
+				AE835382205C353A007CD747 /* lefi.jpg */,
+				AE9055BE1CA43C8D00E9C369 /* yellow-cloth-tile.png */,
+				AEC4253D1AD913ED0021049E /* cutlery_chopsticks.png */,
+				AEC4253E1AD913ED0021049E /* cutlery_knife.png */,
+				AEC4253F1AD913ED0021049E /* cutlery_fork.png */,
+				AEC425401AD913ED0021049E /* cutlery_spoon.png */,
+				AEC425411AD913ED0021049E /* cutlery_teaspoon.png */,
+				AEEF3D191AD3F096003256FD /* blue-plate.png */,
+				AEEF3D1B1AD3F096003256FD /* green-plate.png */,
+				AEEF3D1C1AD3F096003256FD /* indigo-plate.png */,
+				AEEF3D1D1AD3F096003256FD /* magenta-plate.png */,
+				AEEF3D1E1AD3F096003256FD /* orange-plate.png */,
+				AEEF3D1F1AD3F096003256FD /* red-plate.png */,
+				AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */,
+				AEEF3D211AD3F096003256FD /* white-plate.png */,
+				AEEF3D221AD3F096003256FD /* yellow-plate.png */,
+			);
+			name = plates;
+			sourceTree = "<group>";
+		};
+		AEDD1A3020663EA6001BD259 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Screenshots;
+			sourceTree = "<group>";
+		};
+		AEDD1ABC20663ED8001BD259 /* IYAF skin */ = {
+			isa = PBXGroup;
+			children = (
+				AEDD1ABB20663ECE001BD259 /* Info.plist */,
+			);
+			name = "IYAF skin";
 			sourceTree = "<group>";
 		};
 		AEE46FA11AB8747600F52708 /* Navbar icons */ = {
@@ -626,29 +779,6 @@
 			name = EventList;
 			sourceTree = "<group>";
 		};
-		AEEF3D181AD3F077003256FD /* plates */ = {
-			isa = PBXGroup;
-			children = (
-				AE835382205C353A007CD747 /* lefi.jpg */,
-				AE9055BE1CA43C8D00E9C369 /* yellow-cloth-tile.png */,
-				AEC4253D1AD913ED0021049E /* cutlery_chopsticks.png */,
-				AEC4253E1AD913ED0021049E /* cutlery_knife.png */,
-				AEC4253F1AD913ED0021049E /* cutlery_fork.png */,
-				AEC425401AD913ED0021049E /* cutlery_spoon.png */,
-				AEC425411AD913ED0021049E /* cutlery_teaspoon.png */,
-				AEEF3D191AD3F096003256FD /* blue-plate.png */,
-				AEEF3D1B1AD3F096003256FD /* green-plate.png */,
-				AEEF3D1C1AD3F096003256FD /* indigo-plate.png */,
-				AEEF3D1D1AD3F096003256FD /* magenta-plate.png */,
-				AEEF3D1E1AD3F096003256FD /* orange-plate.png */,
-				AEEF3D1F1AD3F096003256FD /* red-plate.png */,
-				AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */,
-				AEEF3D211AD3F096003256FD /* white-plate.png */,
-				AEEF3D221AD3F096003256FD /* yellow-plate.png */,
-			);
-			name = plates;
-			sourceTree = "<group>";
-		};
 		AEF3AB091AB4576C00B2C6A9 /* TraderList */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,7 +805,6 @@
 				AE9369F31A9BC5E300F15869 /* MapKit.framework */,
 				AEED6CCB1A939DB700B8D84B /* Social.framework */,
 				AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */,
-				AEF8BC5F1A7CEC8A007241DC /* Surbiton Food FestivalTests */,
 				AEF8BC411A7CEC8A007241DC /* Products */,
 				1974FAAEC8F5A30676063951 /* Pods */,
 				AE83538920602637007CD747 /* Screenshots */,
@@ -687,7 +816,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF8BC401A7CEC8A007241DC /* Surbiton Food Festival.app */,
-				AEF8BC5C1A7CEC8A007241DC /* Surbiton Food FestivalTests.xctest */,
+				AEDD1ABA20663ECE001BD259 /* IYAF.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -695,6 +824,9 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
+				AEDD1ABC20663ED8001BD259 /* IYAF skin */,
+				AEDD1A2C20663E11001BD259 /* Surbiton Food skin */,
+				AEDD1A2B20663DFD001BD259 /* Navigation */,
 				AE9055D41CA53A8B00E9C369 /* InfoList */,
 				AEBA91B51C885ECD00708484 /* Gallery */,
 				AE7003D71C4CF9C600556EF6 /* PostList */,
@@ -703,10 +835,8 @@
 				AEA0568D1AA4F7F1003E095F /* TwitterList */,
 				AEEE5FB91AA06E1F00CA7774 /* EventList */,
 				AE1BCBBF1A9FCF0000E79935 /* Classes */,
-				AE1BCBBD1A9FCEB100E79935 /* Front Page */,
 				AEB4482A1A9E427700A92D09 /* CoreApp */,
 				AEBBF1F31A9BE98F00B5D3F8 /* Images */,
-				AEF8BC531A7CEC8A007241DC /* Images.xcassets */,
 				AEF8BC431A7CEC8A007241DC /* Supporting Files */,
 			);
 			path = "Surbiton Food Festival";
@@ -716,26 +846,8 @@
 			isa = PBXGroup;
 			children = (
 				AE1BCB9A1A9FAFAA00E79935 /* SWRevealViewController */,
-				AEF8BC441A7CEC8A007241DC /* Info.plist */,
 				AEF8BC451A7CEC8A007241DC /* main.m */,
 				AEF520941A9E2C1000C05D84 /* Configurations.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AEF8BC5F1A7CEC8A007241DC /* Surbiton Food FestivalTests */ = {
-			isa = PBXGroup;
-			children = (
-				AEF8BC621A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m */,
-				AEF8BC601A7CEC8A007241DC /* Supporting Files */,
-			);
-			path = "Surbiton Food FestivalTests";
-			sourceTree = "<group>";
-		};
-		AEF8BC601A7CEC8A007241DC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AEF8BC611A7CEC8A007241DC /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -743,6 +855,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AEDD1A3120663ECE001BD259 /* IYAF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEDD1AB520663ECE001BD259 /* Build configuration list for PBXNativeTarget "IYAF" */;
+			buildPhases = (
+				AEDD1A3220663ECE001BD259 /* [CP] Check Pods Manifest.lock */,
+				AEDD1A3320663ECE001BD259 /* Sources */,
+				AEDD1A6020663ECE001BD259 /* Frameworks */,
+				AEDD1A6820663ECE001BD259 /* Resources */,
+				AEDD1AB320663ECE001BD259 /* [CP] Embed Pods Frameworks */,
+				AEDD1AB420663ECE001BD259 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IYAF;
+			productName = "Surbiton Food Festival";
+			productReference = AEDD1ABA20663ECE001BD259 /* IYAF.app */;
+			productType = "com.apple.product-type.application";
+		};
 		AEF8BC3F1A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEF8BC661A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food Festival" */;
@@ -763,27 +895,6 @@
 			productReference = AEF8BC401A7CEC8A007241DC /* Surbiton Food Festival.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AEF8BC5B1A7CEC8A007241DC /* Surbiton Food FestivalTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AEF8BC691A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food FestivalTests" */;
-			buildPhases = (
-				49699930845C7FF61C834589 /* [CP] Check Pods Manifest.lock */,
-				AEF8BC581A7CEC8A007241DC /* Sources */,
-				AEF8BC591A7CEC8A007241DC /* Frameworks */,
-				AEF8BC5A1A7CEC8A007241DC /* Resources */,
-				7E822F3A8ACCB604DC963B52 /* [CP] Embed Pods Frameworks */,
-				2D1A94695C4E50218E3DC78C /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AEF8BC5E1A7CEC8A007241DC /* PBXTargetDependency */,
-			);
-			name = "Surbiton Food FestivalTests";
-			productName = "Surbiton Food FestivalTests";
-			productReference = AEF8BC5C1A7CEC8A007241DC /* Surbiton Food FestivalTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -793,6 +904,9 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Spirit of Seething";
 				TargetAttributes = {
+					AEDD1A3120663ECE001BD259 = {
+						DevelopmentTeam = EAE6QP8NKM;
+					};
 					AEF8BC3F1A7CEC8A007241DC = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = EAE6QP8NKM;
@@ -804,10 +918,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					AEF8BC5B1A7CEC8A007241DC = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = AEF8BC3F1A7CEC8A007241DC;
 					};
 				};
 			};
@@ -825,12 +935,75 @@
 			projectRoot = "";
 			targets = (
 				AEF8BC3F1A7CEC8A007241DC /* Surbiton Food Festival */,
-				AEF8BC5B1A7CEC8A007241DC /* Surbiton Food FestivalTests */,
+				AEDD1A3120663ECE001BD259 /* IYAF */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AEDD1A6820663ECE001BD259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEDD1A6920663ECE001BD259 /* EventViewController.xib in Resources */,
+				AEDD1A6A20663ECE001BD259 /* PostViewCell.xib in Resources */,
+				AEDD1A6B20663ECE001BD259 /* TraderListViewController.xib in Resources */,
+				AEDD1A6E20663ECE001BD259 /* VenueViewController.xib in Resources */,
+				AEDD1A6F20663ECE001BD259 /* PostListViewController.xib in Resources */,
+				AEDD1A7020663ECE001BD259 /* TwitterViewController.xib in Resources */,
+				AEDD1A7120663ECE001BD259 /* logo.jpg in Resources */,
+				AEDD1A7220663ECE001BD259 /* Icon-72@2x.png in Resources */,
+				AEDD1A7320663ECE001BD259 /* InfoViewController.xib in Resources */,
+				AEDD1A7420663ECE001BD259 /* KingstonPound-small-15.png in Resources */,
+				AEDD1A7520663ECE001BD259 /* AboutKingstonPoundViewController.xib in Resources */,
+				AEDD1A7620663ECE001BD259 /* Icon.png in Resources */,
+				AEDD1A7920663ECE001BD259 /* reveal-icon@2x.png in Resources */,
+				AEDD1A7A20663ECE001BD259 /* pin.png in Resources */,
+				AEDD1A7B20663ECE001BD259 /* Icon-Spotlight-40@3x.png in Resources */,
+				AEDD1A7C20663ECE001BD259 /* Screenshots in Resources */,
+				AEDD1A7E20663ECE001BD259 /* Icon-60@3x.png in Resources */,
+				AEDD1ABE20663F28001BD259 /* Info.plist in Resources */,
+				AEDD1A8020663ECE001BD259 /* Configurations.plist in Resources */,
+				AEDD1A8120663ECE001BD259 /* Home@2x.png in Resources */,
+				AEDD1A8220663ECE001BD259 /* bell-lg-outline@2x.png in Resources */,
+				AEDD1A8320663ECE001BD259 /* Icon-76@3x.png in Resources */,
+				AEDD1A8420663ECE001BD259 /* EventListViewController.xib in Resources */,
+				AEDD1A8520663ECE001BD259 /* launchimage.png in Resources */,
+				AEDD1A8620663ECE001BD259 /* Icon-Small@2x.png in Resources */,
+				AEDD1A8820663ECE001BD259 /* Icon-60@2x.png in Resources */,
+				AEDD1A8920663ECE001BD259 /* TraderViewController.xib in Resources */,
+				AEDD1A8A20663ECE001BD259 /* Icon@2x.png in Resources */,
+				AEDD1A8B20663ECE001BD259 /* PostViewMoreCellTableViewCell.xib in Resources */,
+				AEDD1A8E20663ECE001BD259 /* Icon-Spotlight-40.png in Resources */,
+				AEDD1A8F20663ECE001BD259 /* InfoViewCell.xib in Resources */,
+				AEDD1A9020663ECE001BD259 /* Icon-Spotlight-40@2x.png in Resources */,
+				AEDD1A9120663ECE001BD259 /* AboutAppViewController.xib in Resources */,
+				AEDD1A9220663ECE001BD259 /* UIButtonBarCompose@2x.png in Resources */,
+				AEDD1A9320663ECE001BD259 /* Podfile in Resources */,
+				AEDD1A9420663ECE001BD259 /* InfoListViewController.xib in Resources */,
+				AEDD1A9520663ECE001BD259 /* TraderViewCell.xib in Resources */,
+				AEDD1A9620663ECE001BD259 /* camera-icon@2x.png in Resources */,
+				AEDD1A9820663ECE001BD259 /* Icon-72.png in Resources */,
+				AEDD1A9A20663ECE001BD259 /* Icon-60.png in Resources */,
+				AEDD1A9B20663ECE001BD259 /* Icon-Small.png in Resources */,
+				AEDD1A9D20663ECE001BD259 /* Icon-76@2x.png in Resources */,
+				AEDD1A9E20663ECE001BD259 /* RearViewController.xib in Resources */,
+				AEDD1A9F20663ECE001BD259 /* UIAccessoryButtonX@2x.png in Resources */,
+				AEDD1AA020663ECE001BD259 /* UploadPhotoViewController.xib in Resources */,
+				AEDD1AA220663ECE001BD259 /* Icon-76.png in Resources */,
+				AEDD1AA520663ECE001BD259 /* Icon-Small-50.png in Resources */,
+				AEDD1AA720663ECE001BD259 /* TwitterViewCell.xib in Resources */,
+				AEDD1AAA20663ECE001BD259 /* Icon-Small-50@2x.png in Resources */,
+				AEDD1AAB20663ECE001BD259 /* iTunesArtwork@2x.png in Resources */,
+				AEDD1AAC20663ECE001BD259 /* bell-lg-filled@2x.png in Resources */,
+				AEDD1AAE20663ECE001BD259 /* Icon-Small@3x.png in Resources */,
+				AEDD1AAF20663ECE001BD259 /* reveal-icon.png in Resources */,
+				AEDD1AB020663ECE001BD259 /* PrivacyPolicyViewController.xib in Resources */,
+				AEDD1AB120663ECE001BD259 /* iTunesArtwork.png in Resources */,
+				AEDD1AB220663ECE001BD259 /* EventViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEF8BC3E1A7CEC8A007241DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -858,6 +1031,7 @@
 				AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
+				AEDD1ABF20663F2C001BD259 /* Info.plist in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
 				AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */,
 				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
@@ -870,7 +1044,6 @@
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AE835388205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib in Resources */,
-				AE49705F1ABFF41B00AF99B1 /* team-surbiton-festival.jpg in Resources */,
 				AEEF3D291AD3F096003256FD /* red-plate.png in Resources */,
 				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
 				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
@@ -913,49 +1086,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEF8BC5A1A7CEC8A007241DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D1A94695C4E50218E3DC78C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49699930845C7FF61C834589 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Surbiton Food FestivalTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		502DD791415E8FC391738120 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -986,21 +1119,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E822F3A8ACCB604DC963B52 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		80171E30AC4BDAAC78661035 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1017,6 +1135,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEDD1A3220663ECE001BD259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Surbiton Food Festival-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEDD1AB320663ECE001BD259 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEDD1AB420663ECE001BD259 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/ionicons.ttf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/Material-Design-Iconic-Font.ttf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/octicons.ttf",
+				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.otf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/foundation-icons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Material-Design-Iconic-Font.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zocial-regular-webfont.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DD9557D64550EA3D554620A0 /* [CP] Embed Pods Frameworks */ = {
@@ -1037,6 +1218,56 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AEDD1A3320663ECE001BD259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEDD1A3420663ECE001BD259 /* Venue.m in Sources */,
+				AEDD1A3520663ECE001BD259 /* PostViewCell.m in Sources */,
+				AEDD1A3620663ECE001BD259 /* Voucher.m in Sources */,
+				AEDD1A3720663ECE001BD259 /* TraderBuilder.m in Sources */,
+				AEDD1A3820663ECE001BD259 /* VoucherBuilder.m in Sources */,
+				AEDD1A3920663ECE001BD259 /* CustomAnimationController.m in Sources */,
+				AEDD1A3A20663ECE001BD259 /* EventListViewController.m in Sources */,
+				AEDD1A3B20663ECE001BD259 /* Trader.m in Sources */,
+				AEDD1A3C20663ECE001BD259 /* TraderListViewController.m in Sources */,
+				AEDD1A3D20663ECE001BD259 /* EventViewController.m in Sources */,
+				AEDD1A3E20663ECE001BD259 /* Tweet.m in Sources */,
+				AEDD1A3F20663ECE001BD259 /* TwitterViewController.m in Sources */,
+				AEDD1A4020663ECE001BD259 /* AboutAppViewController.m in Sources */,
+				AEDD1A4120663ECE001BD259 /* TweetBuilder.m in Sources */,
+				AEDD1A4220663ECE001BD259 /* TraderViewController.m in Sources */,
+				AEDD1A4320663ECE001BD259 /* CoverHelper.m in Sources */,
+				AEDD1A4420663ECE001BD259 /* PrivacyPolicyViewController.m in Sources */,
+				AEDD1A4520663ECE001BD259 /* Info.m in Sources */,
+				AEDD1A4620663ECE001BD259 /* UploadPhotoViewController.m in Sources */,
+				AEDD1A4820663ECE001BD259 /* PostListViewController.m in Sources */,
+				AEDD1A4920663ECE001BD259 /* RearViewController.m in Sources */,
+				AEDD1A4A20663ECE001BD259 /* AppDelegate.m in Sources */,
+				AEDD1A4B20663ECE001BD259 /* Gallery.m in Sources */,
+				AEDD1A4C20663ECE001BD259 /* Event.m in Sources */,
+				AEDD1A4D20663ECE001BD259 /* PostViewMoreCellTableViewCell.m in Sources */,
+				AEDD1A4E20663ECE001BD259 /* TwitterViewCell.m in Sources */,
+				AEDD1A4F20663ECE001BD259 /* VenueBuilder.m in Sources */,
+				AEDD1A5020663ECE001BD259 /* TraderViewCell.m in Sources */,
+				AEDD1A5120663ECE001BD259 /* SWRevealViewController.m in Sources */,
+				AEDD1A5220663ECE001BD259 /* InfoListViewController.m in Sources */,
+				AEDD1A5320663ECE001BD259 /* main.m in Sources */,
+				AEDD1A5420663ECE001BD259 /* GalleryViewController.m in Sources */,
+				AEDD1A5520663ECE001BD259 /* InfoViewController.m in Sources */,
+				AEDD1A5620663ECE001BD259 /* EventBuilder.m in Sources */,
+				AEDD1A5720663ECE001BD259 /* EventViewCell.m in Sources */,
+				AEDD1A5820663ECE001BD259 /* GalleryBuilder.m in Sources */,
+				AEDD1A5920663ECE001BD259 /* MTConfiguration.m in Sources */,
+				AEDD1A5A20663ECE001BD259 /* InfoViewCell.m in Sources */,
+				AEDD1A5B20663ECE001BD259 /* Post.m in Sources */,
+				AEDD1A5C20663ECE001BD259 /* AboutKingstonPoundViewController.m in Sources */,
+				AEDD1A5D20663ECE001BD259 /* VenueViewController.m in Sources */,
+				AEDD1A5E20663ECE001BD259 /* InfoBuilder.m in Sources */,
+				AEDD1A5F20663ECE001BD259 /* PostBuilder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEF8BC3C1A7CEC8A007241DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1088,25 +1319,131 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEF8BC581A7CEC8A007241DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEF8BC631A7CEC8A007241DC /* Surbiton_Food_FestivalTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		AEF8BC5E1A7CEC8A007241DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AEF8BC3F1A7CEC8A007241DC /* Surbiton Food Festival */;
-			targetProxy = AEF8BC5D1A7CEC8A007241DC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
+		AEDD1AB620663ECE001BD259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90628C835934F524217A592D /* Pods-Surbiton Food Festival.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EAE6QP8NKM;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/loz/Documents/FacebookSDK,
+				);
+				INFOPLIST_FILE = "Surbiton Food Festival copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AEDD1AB720663ECE001BD259 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7570F939FC9713D0CCDD4705 /* Pods-Surbiton Food Festival.production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EAE6QP8NKM;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/loz/Documents/FacebookSDK,
+				);
+				INFOPLIST_FILE = "Surbiton Food Festival copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Production;
+		};
+		AEDD1AB820663ECE001BD259 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 972532AF6AB3EF6F9033FCD9 /* Pods-Surbiton Food Festival.development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EAE6QP8NKM;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/loz/Documents/FacebookSDK,
+				);
+				INFOPLIST_FILE = "Surbiton Food Festival copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Development;
+		};
+		AEDD1AB920663ECE001BD259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D2604E22D054019D6F6BB2 /* Pods-Surbiton Food Festival.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EAE6QP8NKM;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/loz/Documents/FacebookSDK,
+				);
+				INFOPLIST_FILE = "Surbiton Food Festival copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		AEF5208E1A9E2B4600C05D84 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1191,27 +1528,6 @@
 			};
 			name = Development;
 		};
-		AEF520901A9E2B4600C05D84 /* Development */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 747706AF059784C3C9E5E8C2 /* Pods-Surbiton Food FestivalTests.development.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Surbiton Food FestivalTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Surbiton Food Festival.app/Surbiton Food Festival";
-			};
-			name = Development;
-		};
 		AEF520911A9E2B5500C05D84 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1293,27 +1609,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Production;
-		};
-		AEF520931A9E2B5500C05D84 /* Production */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B21F41E6EC7E69F1E327214 /* Pods-Surbiton Food FestivalTests.production.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Surbiton Food FestivalTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Surbiton Food Festival.app/Surbiton Food Festival";
 			};
 			name = Production;
 		};
@@ -1468,47 +1763,20 @@
 			};
 			name = Release;
 		};
-		AEF8BC6A1A7CEC8A007241DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8EBB55E721075F2AA4FE827 /* Pods-Surbiton Food FestivalTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Surbiton Food FestivalTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Surbiton Food Festival.app/Surbiton Food Festival";
-			};
-			name = Debug;
-		};
-		AEF8BC6B1A7CEC8A007241DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87F39B7FF5CE0F7D2B18A5C2 /* Pods-Surbiton Food FestivalTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Surbiton Food FestivalTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Surbiton Food Festival.app/Surbiton Food Festival";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AEDD1AB520663ECE001BD259 /* Build configuration list for PBXNativeTarget "IYAF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEDD1AB620663ECE001BD259 /* Debug */,
+				AEDD1AB720663ECE001BD259 /* Production */,
+				AEDD1AB820663ECE001BD259 /* Development */,
+				AEDD1AB920663ECE001BD259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AEF8BC3B1A7CEC8A007241DC /* Build configuration list for PBXProject "Surbiton Food Festival" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1527,17 +1795,6 @@
 				AEF520921A9E2B5500C05D84 /* Production */,
 				AEF5208F1A9E2B4600C05D84 /* Development */,
 				AEF8BC681A7CEC8A007241DC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AEF8BC691A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food FestivalTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AEF8BC6A1A7CEC8A007241DC /* Debug */,
-				AEF520931A9E2B5500C05D84 /* Production */,
-				AEF520901A9E2B4600C05D84 /* Development */,
-				AEF8BC6B1A7CEC8A007241DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
