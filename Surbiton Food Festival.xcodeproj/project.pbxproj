@@ -50,6 +50,13 @@
 		AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */; };
 		AE1BCBF91A9FDC3300E79935 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */; };
 		AE1BCBFA1A9FDC3300E79935 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */; };
+		AE60A06D206649F100592997 /* menu_events.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05B2066496E00592997 /* menu_events.png */; };
+		AE60A06E206649F400592997 /* menu_gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05A2066496D00592997 /* menu_gallery.png */; };
+		AE60A06F206649F700592997 /* menu_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05C2066496E00592997 /* menu_info.png */; };
+		AE60A070206649FA00592997 /* menu_news.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05E2066496E00592997 /* menu_news.png */; };
+		AE60A071206649FD00592997 /* menu_performers.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05D2066496E00592997 /* menu_performers.png */; };
+		AE60A07220664A0000592997 /* menu_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05F2066496E00592997 /* menu_twitter.png */; };
+		AE60A07320664A0300592997 /* app-background.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A04C2066487300592997 /* app-background.png */; };
 		AE7003D11C4CF99300556EF6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003C81C4CF99300556EF6 /* Post.m */; };
 		AE7003D21C4CF99300556EF6 /* PostBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CA1C4CF99300556EF6 /* PostBuilder.m */; };
 		AE7003D31C4CF99300556EF6 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CC1C4CF99300556EF6 /* PostListViewController.m */; };
@@ -58,7 +65,6 @@
 		AE7003D61C4CF99300556EF6 /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7003D01C4CF99300556EF6 /* PostViewCell.xib */; };
 		AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */; };
 		AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
-		AE83537B205C32E6007CD747 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83537A205C32E6007CD747 /* LaunchScreen.storyboard */; };
 		AE835383205C353A007CD747 /* lefi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE835382205C353A007CD747 /* lefi.jpg */; };
 		AE835387205FDAB0007CD747 /* PostViewMoreCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE835385205FDAB0007CD747 /* PostViewMoreCellTableViewCell.m */; };
 		AE835388205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE835386205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib */; };
@@ -237,7 +243,6 @@
 		AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF520971A9E2C7600C05D84 /* MTConfiguration.m */; };
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
 		AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC481A7CEC8A007241DC /* AppDelegate.m */; };
-		AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC531A7CEC8A007241DC /* Images.xcassets */; };
 		CCEAD3B9D2C397F01C78D3EA /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */; };
 /* End PBXBuildFile section */
 
@@ -303,6 +308,19 @@
 		AE1BCBE41A9FDC3300E79935 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		AE1BCBE61A9FDC3300E79935 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		AE60A04C2066487300592997 /* app-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-background.png"; sourceTree = "<group>"; };
+		AE60A05A2066496D00592997 /* menu_gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_gallery.png; sourceTree = "<group>"; };
+		AE60A05B2066496E00592997 /* menu_events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_events.png; sourceTree = "<group>"; };
+		AE60A05C2066496E00592997 /* menu_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_info.png; sourceTree = "<group>"; };
+		AE60A05D2066496E00592997 /* menu_performers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_performers.png; sourceTree = "<group>"; };
+		AE60A05E2066496E00592997 /* menu_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_news.png; sourceTree = "<group>"; };
+		AE60A05F2066496E00592997 /* menu_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_twitter.png; sourceTree = "<group>"; };
+		AE60A07720664BB100592997 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		AE60A07820664BB100592997 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		AE60A07920664BB100592997 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		AE60A07B20664BC800592997 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "../../../../IphoneDev/IYAF 2016/Surbiton Food Festival/HomeViewController.m"; sourceTree = "<group>"; };
+		AE60A07C20664BC800592997 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeViewController.xib; path = "../../../../IphoneDev/IYAF 2016/Surbiton Food Festival/HomeViewController.xib"; sourceTree = "<group>"; };
+		AE60A07D20664BC800592997 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "../../../../IphoneDev/IYAF 2016/Surbiton Food Festival/HomeViewController.h"; sourceTree = "<group>"; };
 		AE7003C71C4CF99300556EF6 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		AE7003C81C4CF99300556EF6 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		AE7003C91C4CF99300556EF6 /* PostBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostBuilder.h; sourceTree = "<group>"; };
@@ -316,7 +334,6 @@
 		AE72028E1AE5557300D2B730 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
 		AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
 		AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivacyPolicyViewController.xib; sourceTree = "<group>"; };
-		AE83537A205C32E6007CD747 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE835382205C353A007CD747 /* lefi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lefi.jpg; sourceTree = "<group>"; };
 		AE835384205FDAB0007CD747 /* PostViewMoreCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostViewMoreCellTableViewCell.h; sourceTree = "<group>"; };
 		AE835385205FDAB0007CD747 /* PostViewMoreCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostViewMoreCellTableViewCell.m; sourceTree = "<group>"; };
@@ -371,7 +388,7 @@
 		AEC425401AD913ED0021049E /* cutlery_spoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_spoon.png; sourceTree = "<group>"; };
 		AEC425411AD913ED0021049E /* cutlery_teaspoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_teaspoon.png; sourceTree = "<group>"; };
 		AEDD1ABA20663ECE001BD259 /* IYAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IYAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEDD1ABB20663ECE001BD259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/loz/Documents/Surbiton Food Festival/Info.plist"; sourceTree = "<absolute>"; };
+		AEDD1ABB20663ECE001BD259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/loz/Documents/Surbiton Food Festival/Surbiton Food Festival/IYAF skin/Info.plist"; sourceTree = "<absolute>"; };
 		AEDF8D291C8AD8D0007391C7 /* CoverHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverHelper.h; sourceTree = "<group>"; };
 		AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverHelper.m; sourceTree = "<group>"; };
 		AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarCompose@2x.png"; sourceTree = "<group>"; };
@@ -419,7 +436,6 @@
 		AEF8BC451A7CEC8A007241DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AEF8BC471A7CEC8A007241DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEF8BC481A7CEC8A007241DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AEF8BC531A7CEC8A007241DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EBB55E721075F2AA4FE827 /* Pods-Surbiton Food FestivalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food FestivalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8ADC5D5EDD2954199418CB /* libPods-Surbiton Food FestivalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food FestivalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -568,6 +584,86 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		AE60A07520664BA100592997 /* IYAF skin */ = {
+			isa = PBXGroup;
+			children = (
+				AEDD1ABB20663ECE001BD259 /* Info.plist */,
+				AE60A07620664BAB00592997 /* Home Screen */,
+			);
+			path = "IYAF skin";
+			sourceTree = "<group>";
+		};
+		AE60A07620664BAB00592997 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AE60A07D20664BC800592997 /* HomeViewController.h */,
+				AE60A07B20664BC800592997 /* HomeViewController.m */,
+				AE60A07C20664BC800592997 /* HomeViewController.xib */,
+				AE60A07A20664BB700592997 /* images */,
+				AE60A07920664BB100592997 /* HomeViewController.h */,
+				AE60A07720664BB100592997 /* HomeViewController.m */,
+				AE60A07820664BB100592997 /* HomeViewController.xib */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		AE60A07A20664BB700592997 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AE60A05B2066496E00592997 /* menu_events.png */,
+				AE60A05A2066496D00592997 /* menu_gallery.png */,
+				AE60A05C2066496E00592997 /* menu_info.png */,
+				AE60A05E2066496E00592997 /* menu_news.png */,
+				AE60A05D2066496E00592997 /* menu_performers.png */,
+				AE60A05F2066496E00592997 /* menu_twitter.png */,
+				AE60A04C2066487300592997 /* app-background.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		AE60A07E20664BE500592997 /* Surbiton Food skin */ = {
+			isa = PBXGroup;
+			children = (
+				AE60A08020664C0700592997 /* Home Screen */,
+				AEF8BC441A7CEC8A007241DC /* Info.plist */,
+			);
+			path = "Surbiton Food skin";
+			sourceTree = "<group>";
+		};
+		AE60A08020664C0700592997 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AE60A08120664C1500592997 /* images */,
+				AEEF3D371AD5B17E003256FD /* HomeViewController.h */,
+				AEEF3D381AD5B17E003256FD /* HomeViewController.m */,
+				AEEF3D391AD5B17E003256FD /* HomeViewController.xib */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		AE60A08120664C1500592997 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AE835382205C353A007CD747 /* lefi.jpg */,
+				AE9055BE1CA43C8D00E9C369 /* yellow-cloth-tile.png */,
+				AEC4253D1AD913ED0021049E /* cutlery_chopsticks.png */,
+				AEC4253E1AD913ED0021049E /* cutlery_knife.png */,
+				AEC4253F1AD913ED0021049E /* cutlery_fork.png */,
+				AEC425401AD913ED0021049E /* cutlery_spoon.png */,
+				AEC425411AD913ED0021049E /* cutlery_teaspoon.png */,
+				AEEF3D191AD3F096003256FD /* blue-plate.png */,
+				AEEF3D1B1AD3F096003256FD /* green-plate.png */,
+				AEEF3D1C1AD3F096003256FD /* indigo-plate.png */,
+				AEEF3D1D1AD3F096003256FD /* magenta-plate.png */,
+				AEEF3D1E1AD3F096003256FD /* orange-plate.png */,
+				AEEF3D1F1AD3F096003256FD /* red-plate.png */,
+				AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */,
+				AEEF3D211AD3F096003256FD /* white-plate.png */,
+				AEEF3D221AD3F096003256FD /* yellow-plate.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		AE7003D71C4CF9C600556EF6 /* PostList */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,75 +759,6 @@
 			name = Navigation;
 			sourceTree = "<group>";
 		};
-		AEDD1A2C20663E11001BD259 /* Surbiton Food skin */ = {
-			isa = PBXGroup;
-			children = (
-				AEDD1A3020663EA6001BD259 /* Screenshots */,
-				AEF8BC441A7CEC8A007241DC /* Info.plist */,
-				AEDD1A2D20663E3D001BD259 /* Home Screen */,
-				AEF8BC531A7CEC8A007241DC /* Images.xcassets */,
-				AE83537A205C32E6007CD747 /* LaunchScreen.storyboard */,
-			);
-			name = "Surbiton Food skin";
-			sourceTree = "<group>";
-		};
-		AEDD1A2D20663E3D001BD259 /* Home Screen */ = {
-			isa = PBXGroup;
-			children = (
-				AEDD1A2E20663E47001BD259 /* images */,
-				AEEF3D371AD5B17E003256FD /* HomeViewController.h */,
-				AEEF3D381AD5B17E003256FD /* HomeViewController.m */,
-				AEEF3D391AD5B17E003256FD /* HomeViewController.xib */,
-			);
-			name = "Home Screen";
-			sourceTree = "<group>";
-		};
-		AEDD1A2E20663E47001BD259 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				AEDD1A2F20663E4D001BD259 /* plates */,
-			);
-			name = images;
-			sourceTree = "<group>";
-		};
-		AEDD1A2F20663E4D001BD259 /* plates */ = {
-			isa = PBXGroup;
-			children = (
-				AE835382205C353A007CD747 /* lefi.jpg */,
-				AE9055BE1CA43C8D00E9C369 /* yellow-cloth-tile.png */,
-				AEC4253D1AD913ED0021049E /* cutlery_chopsticks.png */,
-				AEC4253E1AD913ED0021049E /* cutlery_knife.png */,
-				AEC4253F1AD913ED0021049E /* cutlery_fork.png */,
-				AEC425401AD913ED0021049E /* cutlery_spoon.png */,
-				AEC425411AD913ED0021049E /* cutlery_teaspoon.png */,
-				AEEF3D191AD3F096003256FD /* blue-plate.png */,
-				AEEF3D1B1AD3F096003256FD /* green-plate.png */,
-				AEEF3D1C1AD3F096003256FD /* indigo-plate.png */,
-				AEEF3D1D1AD3F096003256FD /* magenta-plate.png */,
-				AEEF3D1E1AD3F096003256FD /* orange-plate.png */,
-				AEEF3D1F1AD3F096003256FD /* red-plate.png */,
-				AEEF3D201AD3F096003256FD /* SFF-Logo-700-shadow.png */,
-				AEEF3D211AD3F096003256FD /* white-plate.png */,
-				AEEF3D221AD3F096003256FD /* yellow-plate.png */,
-			);
-			name = plates;
-			sourceTree = "<group>";
-		};
-		AEDD1A3020663EA6001BD259 /* Screenshots */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Screenshots;
-			sourceTree = "<group>";
-		};
-		AEDD1ABC20663ED8001BD259 /* IYAF skin */ = {
-			isa = PBXGroup;
-			children = (
-				AEDD1ABB20663ECE001BD259 /* Info.plist */,
-			);
-			name = "IYAF skin";
-			sourceTree = "<group>";
-		};
 		AEE46FA11AB8747600F52708 /* Navbar icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,8 +851,8 @@
 		AEF8BC421A7CEC8A007241DC /* Surbiton Food Festival */ = {
 			isa = PBXGroup;
 			children = (
-				AEDD1ABC20663ED8001BD259 /* IYAF skin */,
-				AEDD1A2C20663E11001BD259 /* Surbiton Food skin */,
+				AE60A07E20664BE500592997 /* Surbiton Food skin */,
+				AE60A07520664BA100592997 /* IYAF skin */,
 				AEDD1A2B20663DFD001BD259 /* Navigation */,
 				AE9055D41CA53A8B00E9C369 /* InfoList */,
 				AEBA91B51C885ECD00708484 /* Gallery */,
@@ -948,6 +975,7 @@
 				AEDD1A6920663ECE001BD259 /* EventViewController.xib in Resources */,
 				AEDD1A6A20663ECE001BD259 /* PostViewCell.xib in Resources */,
 				AEDD1A6B20663ECE001BD259 /* TraderListViewController.xib in Resources */,
+				AE60A070206649FA00592997 /* menu_news.png in Resources */,
 				AEDD1A6E20663ECE001BD259 /* VenueViewController.xib in Resources */,
 				AEDD1A6F20663ECE001BD259 /* PostListViewController.xib in Resources */,
 				AEDD1A7020663ECE001BD259 /* TwitterViewController.xib in Resources */,
@@ -961,6 +989,7 @@
 				AEDD1A7A20663ECE001BD259 /* pin.png in Resources */,
 				AEDD1A7B20663ECE001BD259 /* Icon-Spotlight-40@3x.png in Resources */,
 				AEDD1A7C20663ECE001BD259 /* Screenshots in Resources */,
+				AE60A07320664A0300592997 /* app-background.png in Resources */,
 				AEDD1A7E20663ECE001BD259 /* Icon-60@3x.png in Resources */,
 				AEDD1ABE20663F28001BD259 /* Info.plist in Resources */,
 				AEDD1A8020663ECE001BD259 /* Configurations.plist in Resources */,
@@ -976,6 +1005,7 @@
 				AEDD1A8B20663ECE001BD259 /* PostViewMoreCellTableViewCell.xib in Resources */,
 				AEDD1A8E20663ECE001BD259 /* Icon-Spotlight-40.png in Resources */,
 				AEDD1A8F20663ECE001BD259 /* InfoViewCell.xib in Resources */,
+				AE60A06F206649F700592997 /* menu_info.png in Resources */,
 				AEDD1A9020663ECE001BD259 /* Icon-Spotlight-40@2x.png in Resources */,
 				AEDD1A9120663ECE001BD259 /* AboutAppViewController.xib in Resources */,
 				AEDD1A9220663ECE001BD259 /* UIButtonBarCompose@2x.png in Resources */,
@@ -983,7 +1013,9 @@
 				AEDD1A9420663ECE001BD259 /* InfoListViewController.xib in Resources */,
 				AEDD1A9520663ECE001BD259 /* TraderViewCell.xib in Resources */,
 				AEDD1A9620663ECE001BD259 /* camera-icon@2x.png in Resources */,
+				AE60A071206649FD00592997 /* menu_performers.png in Resources */,
 				AEDD1A9820663ECE001BD259 /* Icon-72.png in Resources */,
+				AE60A07220664A0000592997 /* menu_twitter.png in Resources */,
 				AEDD1A9A20663ECE001BD259 /* Icon-60.png in Resources */,
 				AEDD1A9B20663ECE001BD259 /* Icon-Small.png in Resources */,
 				AEDD1A9D20663ECE001BD259 /* Icon-76@2x.png in Resources */,
@@ -992,8 +1024,10 @@
 				AEDD1AA020663ECE001BD259 /* UploadPhotoViewController.xib in Resources */,
 				AEDD1AA220663ECE001BD259 /* Icon-76.png in Resources */,
 				AEDD1AA520663ECE001BD259 /* Icon-Small-50.png in Resources */,
+				AE60A06E206649F400592997 /* menu_gallery.png in Resources */,
 				AEDD1AA720663ECE001BD259 /* TwitterViewCell.xib in Resources */,
 				AEDD1AAA20663ECE001BD259 /* Icon-Small-50@2x.png in Resources */,
+				AE60A06D206649F100592997 /* menu_events.png in Resources */,
 				AEDD1AAB20663ECE001BD259 /* iTunesArtwork@2x.png in Resources */,
 				AEDD1AAC20663ECE001BD259 /* bell-lg-filled@2x.png in Resources */,
 				AEDD1AAE20663ECE001BD259 /* Icon-Small@3x.png in Resources */,
@@ -1039,13 +1073,11 @@
 				AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */,
 				AE0D6D8A1C970688006726CC /* launchimage.png in Resources */,
 				AE1BCBF21A9FDC3300E79935 /* Icon-Small@2x.png in Resources */,
-				AE83537B205C32E6007CD747 /* LaunchScreen.storyboard in Resources */,
 				AE1BCBE81A9FDC3300E79935 /* Icon-60@2x.png in Resources */,
 				AEF3AB321AB462E100B2C6A9 /* TraderViewController.xib in Resources */,
 				AE1BCBF81A9FDC3300E79935 /* Icon@2x.png in Resources */,
 				AE835388205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib in Resources */,
 				AEEF3D291AD3F096003256FD /* red-plate.png in Resources */,
-				AEF8BC541A7CEC8A007241DC /* Images.xcassets in Resources */,
 				AE1BCBF41A9FDC3300E79935 /* Icon-Spotlight-40.png in Resources */,
 				AE9055E41CA53EF300E9C369 /* InfoViewCell.xib in Resources */,
 				AE1BCBF51A9FDC3300E79935 /* Icon-Spotlight-40@2x.png in Resources */,
@@ -1336,7 +1368,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Surbiton Food Festival copy2-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1364,7 +1396,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Surbiton Food Festival copy2-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -1397,7 +1429,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Surbiton Food Festival copy2-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1430,7 +1462,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Surbiton Food Festival copy2-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
