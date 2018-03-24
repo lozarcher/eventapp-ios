@@ -73,7 +73,9 @@
     [super viewWillAppear:animated];
     // detect the height of our screen
     int height = [UIScreen mainScreen].bounds.size.height;
-    self.eventImageYconstraint.constant = height / 2.4;
+    
+    self.gapBeforeMenu.constant = height * 0.45;
+    
     [self setUpButtons];
 }
 

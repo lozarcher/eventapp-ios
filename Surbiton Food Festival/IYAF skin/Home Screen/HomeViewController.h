@@ -18,8 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *twitterImage;
 @property (strong, nonatomic) RearViewController *rearViewController;
 @property (weak, nonatomic) IBOutlet UIImageView *aboutButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *gapBeforeMenu;
 -(void)setUpButtons;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *eventImageYconstraint;
 -(void)loadHome;
 
 @end
