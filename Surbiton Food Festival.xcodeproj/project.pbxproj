@@ -57,6 +57,10 @@
 		AE60A071206649FD00592997 /* menu_performers.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05D2066496E00592997 /* menu_performers.png */; };
 		AE60A07220664A0000592997 /* menu_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05F2066496E00592997 /* menu_twitter.png */; };
 		AE60A07320664A0300592997 /* app-background.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A04C2066487300592997 /* app-background.png */; };
+		AE60A08620664D5200592997 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D391AD5B17E003256FD /* HomeViewController.xib */; };
+		AE60A08720664D6400592997 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE60A07720664BB100592997 /* HomeViewController.m */; };
+		AE60A08820664D6700592997 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE60A07820664BB100592997 /* HomeViewController.xib */; };
+		AE60A08A20664DC500592997 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08920664DC400592997 /* Info.plist */; };
 		AE7003D11C4CF99300556EF6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003C81C4CF99300556EF6 /* Post.m */; };
 		AE7003D21C4CF99300556EF6 /* PostBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CA1C4CF99300556EF6 /* PostBuilder.m */; };
 		AE7003D31C4CF99300556EF6 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7003CC1C4CF99300556EF6 /* PostListViewController.m */; };
@@ -207,7 +211,6 @@
 		AEDD1AB020663ECE001BD259 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
 		AEDD1AB120663ECE001BD259 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBE51A9FDC3300E79935 /* iTunesArtwork.png */; };
 		AEDD1AB220663ECE001BD259 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
-		AEDD1ABE20663F28001BD259 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEDD1ABB20663ECE001BD259 /* Info.plist */; };
 		AEDD1ABF20663F2C001BD259 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC441A7CEC8A007241DC /* Info.plist */; };
 		AEDF8D2B1C8AD8D0007391C7 /* CoverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */; };
 		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
@@ -230,7 +233,6 @@
 		AEEF3D2B1AD3F096003256FD /* white-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D211AD3F096003256FD /* white-plate.png */; };
 		AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D221AD3F096003256FD /* yellow-plate.png */; };
 		AEEF3D3A1AD5B17E003256FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF3D381AD5B17E003256FD /* HomeViewController.m */; };
-		AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D391AD5B17E003256FD /* HomeViewController.xib */; };
 		AEF3AB211AB45D1400B2C6A9 /* TraderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB1F1AB45D1400B2C6A9 /* TraderListViewController.m */; };
 		AEF3AB221AB45D1400B2C6A9 /* TraderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEF3AB201AB45D1400B2C6A9 /* TraderListViewController.xib */; };
 		AEF3AB261AB45D5200B2C6A9 /* TraderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF3AB241AB45D5200B2C6A9 /* TraderViewCell.m */; };
@@ -318,9 +320,7 @@
 		AE60A07720664BB100592997 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AE60A07820664BB100592997 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		AE60A07920664BB100592997 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		AE60A07B20664BC800592997 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "../../../../IphoneDev/IYAF 2016/Surbiton Food Festival/HomeViewController.m"; sourceTree = "<group>"; };
-		AE60A07C20664BC800592997 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeViewController.xib; path = "../../../../IphoneDev/IYAF 2016/Surbiton Food Festival/HomeViewController.xib"; sourceTree = "<group>"; };
-		AE60A07D20664BC800592997 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "../../../../IphoneDev/IYAF 2016/Surbiton Food Festival/HomeViewController.h"; sourceTree = "<group>"; };
+		AE60A08920664DC400592997 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE7003C71C4CF99300556EF6 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		AE7003C81C4CF99300556EF6 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		AE7003C91C4CF99300556EF6 /* PostBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostBuilder.h; sourceTree = "<group>"; };
@@ -388,7 +388,6 @@
 		AEC425401AD913ED0021049E /* cutlery_spoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_spoon.png; sourceTree = "<group>"; };
 		AEC425411AD913ED0021049E /* cutlery_teaspoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_teaspoon.png; sourceTree = "<group>"; };
 		AEDD1ABA20663ECE001BD259 /* IYAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IYAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEDD1ABB20663ECE001BD259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/loz/Documents/Surbiton Food Festival/Surbiton Food Festival/IYAF skin/Info.plist"; sourceTree = "<absolute>"; };
 		AEDF8D291C8AD8D0007391C7 /* CoverHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverHelper.h; sourceTree = "<group>"; };
 		AEDF8D2A1C8AD8D0007391C7 /* CoverHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverHelper.m; sourceTree = "<group>"; };
 		AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarCompose@2x.png"; sourceTree = "<group>"; };
@@ -587,7 +586,7 @@
 		AE60A07520664BA100592997 /* IYAF skin */ = {
 			isa = PBXGroup;
 			children = (
-				AEDD1ABB20663ECE001BD259 /* Info.plist */,
+				AE60A08920664DC400592997 /* Info.plist */,
 				AE60A07620664BAB00592997 /* Home Screen */,
 			);
 			path = "IYAF skin";
@@ -596,9 +595,6 @@
 		AE60A07620664BAB00592997 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				AE60A07D20664BC800592997 /* HomeViewController.h */,
-				AE60A07B20664BC800592997 /* HomeViewController.m */,
-				AE60A07C20664BC800592997 /* HomeViewController.xib */,
 				AE60A07A20664BB700592997 /* images */,
 				AE60A07920664BB100592997 /* HomeViewController.h */,
 				AE60A07720664BB100592997 /* HomeViewController.m */,
@@ -987,11 +983,11 @@
 				AEDD1A7620663ECE001BD259 /* Icon.png in Resources */,
 				AEDD1A7920663ECE001BD259 /* reveal-icon@2x.png in Resources */,
 				AEDD1A7A20663ECE001BD259 /* pin.png in Resources */,
+				AE60A08820664D6700592997 /* HomeViewController.xib in Resources */,
 				AEDD1A7B20663ECE001BD259 /* Icon-Spotlight-40@3x.png in Resources */,
 				AEDD1A7C20663ECE001BD259 /* Screenshots in Resources */,
 				AE60A07320664A0300592997 /* app-background.png in Resources */,
 				AEDD1A7E20663ECE001BD259 /* Icon-60@3x.png in Resources */,
-				AEDD1ABE20663F28001BD259 /* Info.plist in Resources */,
 				AEDD1A8020663ECE001BD259 /* Configurations.plist in Resources */,
 				AEDD1A8120663ECE001BD259 /* Home@2x.png in Resources */,
 				AEDD1A8220663ECE001BD259 /* bell-lg-outline@2x.png in Resources */,
@@ -1062,6 +1058,7 @@
 				AEBBF1F51A9BE9AE00B5D3F8 /* pin.png in Resources */,
 				AE1BCBF61A9FDC3300E79935 /* Icon-Spotlight-40@3x.png in Resources */,
 				AE83538A20602638007CD747 /* Screenshots in Resources */,
+				AE60A08A20664DC500592997 /* Info.plist in Resources */,
 				AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */,
 				AE1BCBE91A9FDC3300E79935 /* Icon-60@3x.png in Resources */,
 				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
@@ -1092,7 +1089,6 @@
 				AE9055BF1CA43C8D00E9C369 /* yellow-cloth-tile.png in Resources */,
 				AE1BCBE71A9FDC3300E79935 /* Icon-60.png in Resources */,
 				AE1BCBF11A9FDC3300E79935 /* Icon-Small.png in Resources */,
-				AEEF3D3B1AD5B17E003256FD /* HomeViewController.xib in Resources */,
 				AE1BCBED1A9FDC3300E79935 /* Icon-76@2x.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */,
@@ -1115,6 +1111,7 @@
 				AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */,
 				AE1BCBF91A9FDC3300E79935 /* iTunesArtwork.png in Resources */,
 				AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */,
+				AE60A08620664D5200592997 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1293,6 +1290,7 @@
 				AEDD1A5920663ECE001BD259 /* MTConfiguration.m in Sources */,
 				AEDD1A5A20663ECE001BD259 /* InfoViewCell.m in Sources */,
 				AEDD1A5B20663ECE001BD259 /* Post.m in Sources */,
+				AE60A08720664D6400592997 /* HomeViewController.m in Sources */,
 				AEDD1A5C20663ECE001BD259 /* AboutKingstonPoundViewController.m in Sources */,
 				AEDD1A5D20663ECE001BD259 /* VenueViewController.m in Sources */,
 				AEDD1A5E20663ECE001BD259 /* InfoBuilder.m in Sources */,
@@ -1368,7 +1366,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/IYAF skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1396,7 +1394,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/IYAF skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -1429,7 +1427,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/IYAF skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1462,7 +1460,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/IYAF skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1531,7 +1529,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 972532AF6AB3EF6F9033FCD9 /* Pods-Surbiton Food Festival.development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1541,7 +1538,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/Surbiton Food skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1615,7 +1612,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7570F939FC9713D0CCDD4705 /* Pods-Surbiton Food Festival.production.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1625,7 +1621,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/Surbiton Food skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
@@ -1743,7 +1739,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90628C835934F524217A592D /* Pods-Surbiton Food Festival.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1753,7 +1748,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/Surbiton Food skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1771,7 +1766,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77D2604E22D054019D6F6BB2 /* Pods-Surbiton Food Festival.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EAE6QP8NKM;
@@ -1781,7 +1775,7 @@
 					"$(PROJECT_DIR)",
 					/Users/loz/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Surbiton Food Festival/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/Surbiton Food skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
