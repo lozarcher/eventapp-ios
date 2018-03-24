@@ -53,15 +53,15 @@
     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
 -(void)loadTraders{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
 -(void)loadTwitter{
-     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
+     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:6 inSection:0];
      [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
 -(void)loadGalleryPage{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
 -(void)loadInfoPage{
@@ -71,12 +71,43 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    // detect the height of our screen
-    int height = [UIScreen mainScreen].bounds.size.height;
     
-    self.gapBeforeMenu.constant = height * 0.45;
+    // Iphone X top padding
+    CGFloat topPadding = 0;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        if (window.safeAreaInsets.top > topPadding)
+            topPadding = window.safeAreaInsets.top;
+    }
+    self.topMargin.constant = topPadding;
+    
+    // Position menu according to runtime position of the background images
+    int screenHeight = [UIScreen mainScreen].bounds.size.height;
+    [self.view layoutIfNeeded];
+    CGFloat topImage = self.topImageHeight.constant*1.2;
+    CGFloat bottomImage = screenHeight - (self.bottomImageHeight.constant*0.9);
+    if (topImage < bottomImage) {
+        self.gapBeforeMenu.constant = topImage;
+    } else {
+        self.gapBeforeMenu.constant = bottomImage;
+    }
+    if (self.gapBeforeMenu.constant > screenHeight * 0.45) {
+        self.gapBeforeMenu.constant = screenHeight *0.45;
+    }
+    
+    // Bottom Padding, tweaked for iPhone X
+    CGFloat bottomPadding = screenHeight*0.1;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        if (window.safeAreaInsets.bottom > bottomPadding) {
+            bottomPadding = window.safeAreaInsets.bottom;
+        }
+    }
+    self.gapAfterMenu.constant = bottomPadding;
     
     [self setUpButtons];
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
 }
 
 -(void)setUpButtons {

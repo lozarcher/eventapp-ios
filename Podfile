@@ -5,19 +5,20 @@ platform :ios, '8.0'
 
 workspace 'Surbiton Food Festival'
 
-target 'Surbiton Food Festival' do
-	source 'https://github.com/CocoaPods/Specs.git'
-    	source 'https://github.com/mwaterfall/MWPhotoBrowser.git'
-
+def available_pods
+    source 'https://github.com/CocoaPods/Specs.git'
+    source 'https://github.com/mwaterfall/MWPhotoBrowser.git'
+    
     pod 'MWPhotoBrowser',  '~> 2.1.2'
     pod 'KILabel'
     pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
-    #pod 'DZNEmptyDataSet'
-    #pod 'iRate'
     pod 'FontAwesomeKit'
 end
 
-target 'Surbiton Food FestivalTests' do
-
+target 'Surbiton Food Festival' do
+	available_pods
 end
 
+target 'IYAF' do
+    available_pods
+end

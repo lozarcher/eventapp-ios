@@ -12,12 +12,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="bottomImageHeight" destination="hS2-LM-ygf" id="1lg-Tk-dZe"/>
                 <outlet property="eventImage" destination="mY1-Vd-njn" id="Fzb-V3-Co5"/>
                 <outlet property="galleryImage" destination="zyf-2d-rf8" id="6Pc-hI-bgZ"/>
+                <outlet property="gapAfterMenu" destination="Wnz-1w-Xda" id="9iM-gW-XBh"/>
                 <outlet property="gapBeforeMenu" destination="TeO-JL-UiA" id="gWF-6c-mcl"/>
                 <outlet property="infoImage" destination="xPs-Ux-5h7" id="4Rw-6D-aXH"/>
                 <outlet property="newsImage" destination="d3X-v4-iZJ" id="2SR-N8-T8o"/>
                 <outlet property="performersImage" destination="9IS-MF-cr1" id="PaV-gJ-wsp"/>
+                <outlet property="topImageHeight" destination="GeB-b0-f8u" id="ezi-qU-pxS"/>
+                <outlet property="topMargin" destination="XV7-1s-jZD" id="hOe-dr-0k1"/>
                 <outlet property="twitterImage" destination="4aY-N6-kCs" id="LNo-zo-6dI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,46 +38,48 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="5K7-nz-qsF" secondAttribute="height" multiplier="414:367" id="4CQ-Ua-fJX"/>
+                        <constraint firstAttribute="height" priority="250" constant="283" id="GeB-b0-f8u"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-cZ-u2b">
                     <rect key="frame" x="0.0" y="284.5" width="320" height="283.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="2Re-cZ-u2b" secondAttribute="height" multiplier="207:196" constant="20.07" id="IKM-cs-9hx"/>
+                        <constraint firstAttribute="height" priority="250" constant="283.5" id="hS2-LM-ygf"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_events.png" translatesAutoresizingMaskIntoConstraints="NO" id="mY1-Vd-njn">
-                    <rect key="frame" x="108.5" y="300" width="103" height="21.5"/>
+                    <rect key="frame" x="103" y="300" width="114" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="mY1-Vd-njn" secondAttribute="height" multiplier="233:49" id="cZt-Zc-rpZ"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_performers.png" translatesAutoresizingMaskIntoConstraints="NO" id="9IS-MF-cr1">
-                    <rect key="frame" x="86.5" y="341.5" width="147" height="21.5"/>
+                    <rect key="frame" x="79" y="344" width="162" height="23.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="9IS-MF-cr1" secondAttribute="height" multiplier="69:10" id="qBB-bA-ApI"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_news.png" translatesAutoresizingMaskIntoConstraints="NO" id="d3X-v4-iZJ">
-                    <rect key="frame" x="121.5" y="379" width="77" height="21.5"/>
+                    <rect key="frame" x="117.5" y="383.5" width="85" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="d3X-v4-iZJ" secondAttribute="height" multiplier="25:7" id="wSR-Gx-15i"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_gallery.png" translatesAutoresizingMaskIntoConstraints="NO" id="zyf-2d-rf8">
-                    <rect key="frame" x="107.5" y="417" width="105" height="21"/>
+                    <rect key="frame" x="101.5" y="424" width="117" height="23.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="zyf-2d-rf8" secondAttribute="height" multiplier="5:1" id="qwJ-N9-UiW"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="menu_twitter.png" translatesAutoresizingMaskIntoConstraints="NO" id="4aY-N6-kCs">
-                    <rect key="frame" x="108.5" y="455" width="103" height="21"/>
+                    <rect key="frame" x="103" y="464.5" width="114" height="23"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4aY-N6-kCs" secondAttribute="height" multiplier="123:25" id="jQO-T6-Cee"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_info.png" translatesAutoresizingMaskIntoConstraints="NO" id="xPs-Ux-5h7">
-                    <rect key="frame" x="15.5" y="493" width="289" height="21"/>
+                    <rect key="frame" x="15.5" y="504.5" width="289" height="23.5"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,8 +93,8 @@
                 <constraint firstItem="d3X-v4-iZJ" firstAttribute="top" secondItem="9IS-MF-cr1" secondAttribute="bottom" constant="16" id="Hqt-ES-3FS"/>
                 <constraint firstItem="5K7-nz-qsF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pi0-Oc-fcT"/>
                 <constraint firstItem="xPs-Ux-5h7" firstAttribute="top" secondItem="4aY-N6-kCs" secondAttribute="bottom" constant="17" id="PtR-Vp-WFQ"/>
-                <constraint firstItem="mY1-Vd-njn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="300" placeholder="YES" id="TeO-JL-UiA"/>
-                <constraint firstAttribute="bottom" secondItem="xPs-Ux-5h7" secondAttribute="bottom" constant="54" id="Wnz-1w-Xda"/>
+                <constraint firstItem="mY1-Vd-njn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="300" id="TeO-JL-UiA"/>
+                <constraint firstAttribute="bottom" secondItem="xPs-Ux-5h7" secondAttribute="bottom" constant="40" id="Wnz-1w-Xda"/>
                 <constraint firstItem="5K7-nz-qsF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XV7-1s-jZD"/>
                 <constraint firstItem="4aY-N6-kCs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xd9-rX-34L"/>
                 <constraint firstAttribute="bottom" secondItem="2Re-cZ-u2b" secondAttribute="bottom" id="Y9W-TX-K6c"/>

@@ -51,7 +51,9 @@
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     storePath = [NSString stringWithFormat:@"%@/Traders.plist", aCachesDirectory];
     
-    self.title = NSLocalizedString(@"Traders", nil);
+    NSBundle* mainBundle = [NSBundle mainBundle];
+    NSString *pageTitle = [mainBundle objectForInfoDictionaryKey:@"TraderTitle"];
+    self.title = NSLocalizedString(pageTitle, nil);
     
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
                                                                          style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];

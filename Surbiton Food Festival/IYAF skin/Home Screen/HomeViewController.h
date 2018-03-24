@@ -17,8 +17,12 @@
 @property (weak, nonatomic) IBOutlet UIImageView *galleryImage;
 @property (weak, nonatomic) IBOutlet UIImageView *twitterImage;
 @property (strong, nonatomic) RearViewController *rearViewController;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
 @property (weak, nonatomic) IBOutlet UIImageView *aboutButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topImageHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomImageHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *gapBeforeMenu;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *gapAfterMenu;
 -(void)setUpButtons;
 -(void)loadHome;
 
