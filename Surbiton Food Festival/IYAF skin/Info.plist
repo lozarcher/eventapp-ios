@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Hashtag</key>
+	<string>#iyaf2018</string>
 	<key>TraderTitle</key>
 	<string>Performers</string>
 	<key>CFBundleDevelopmentRegion</key>

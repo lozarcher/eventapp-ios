@@ -324,7 +324,10 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:@"#surbitonfood "];
+        
+        NSBundle* mainBundle = [NSBundle mainBundle];
+        NSString *hashTag = [NSString stringWithFormat:@"%@ ", [mainBundle objectForInfoDictionaryKey:@"Hashtag"]];
+        [tweetSheet setInitialText:hashTag];
         
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
@@ -332,7 +335,7 @@
     {
         UIAlertView *alertView = [[UIAlertView alloc]
                                   initWithTitle:@"Sorry"
-                                  message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup"
+                                  message:@"You can't send a tweet right now. Make sure you have the Twitter app installed, and have at least one Twitter account set up"
                                   delegate:self
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
