@@ -65,7 +65,7 @@
     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
 -(void)loadInfoPage{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:6 inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
 

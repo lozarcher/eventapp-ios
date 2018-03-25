@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73A315C3D943B903FF0D543C /* libPods-IYAF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FAB7ABD5E47CABA4386DB9 /* libPods-IYAF.a */; };
 		852CB6972C3062B62420CA3A /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */; };
 		AE097BA22055BB2B00CAEAF0 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */; };
 		AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
@@ -210,12 +209,14 @@
 		AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF520971A9E2C7600C05D84 /* MTConfiguration.m */; };
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
 		AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC481A7CEC8A007241DC /* AppDelegate.m */; };
+		BB43A1DF3F45E79D2C508573 /* libPods-International Youth Arts Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B23468EC7AEB7571379E5B4C /* libPods-International Youth Arts Festival.a */; };
 		CCEAD3B9D2C397F01C78D3EA /* libPods-Surbiton Food Festival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		163746E490982A8BA42FC68C /* Pods-IYAF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IYAF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IYAF/Pods-IYAF.debug.xcconfig"; sourceTree = "<group>"; };
 		274BDC9C7E98318BE0509638 /* Pods-Surbiton Food Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.production.xcconfig"; sourceTree = "<group>"; };
+		33B4655BAE9C720FA6AE7843 /* Pods-International Youth Arts Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.production.xcconfig"; sourceTree = "<group>"; };
 		52F838FDCE68F3E1B2D9ADF1 /* Pods-IYAF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IYAF.release.xcconfig"; path = "Pods/Target Support Files/Pods-IYAF/Pods-IYAF.release.xcconfig"; sourceTree = "<group>"; };
 		5CB95BF103961E7B9DF70CEF /* Pods-IYAF.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IYAF.production.xcconfig"; path = "Pods/Target Support Files/Pods-IYAF/Pods-IYAF.production.xcconfig"; sourceTree = "<group>"; };
 		68FAB7ABD5E47CABA4386DB9 /* libPods-IYAF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IYAF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,7 +342,7 @@
 		AEC4253F1AD913ED0021049E /* cutlery_fork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_fork.png; sourceTree = "<group>"; };
 		AEC425401AD913ED0021049E /* cutlery_spoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_spoon.png; sourceTree = "<group>"; };
 		AEC425411AD913ED0021049E /* cutlery_teaspoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutlery_teaspoon.png; sourceTree = "<group>"; };
-		AEDD1ABA20663ECE001BD259 /* IYAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IYAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDD1ABA20663ECE001BD259 /* IYAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = IYAF.app; path = "International Youth Arts Festival.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarCompose@2x.png"; sourceTree = "<group>"; };
 		AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIAccessoryButtonX@2x.png"; sourceTree = "<group>"; };
 		AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell-lg-outline@2x.png"; sourceTree = "<group>"; };
@@ -387,9 +388,13 @@
 		AEF8BC451A7CEC8A007241DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AEF8BC471A7CEC8A007241DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEF8BC481A7CEC8A007241DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B23468EC7AEB7571379E5B4C /* libPods-International Youth Arts Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-International Youth Arts Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C354A297D0B5FE3A0E7F7F53 /* Pods-Surbiton Food Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.release.xcconfig"; sourceTree = "<group>"; };
 		CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D047C0D229D14A713633A858 /* Pods-International Youth Arts Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.debug.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.debug.xcconfig"; sourceTree = "<group>"; };
 		DB831476E22C3DF8E9F05859 /* Pods-Surbiton Food Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.debug.xcconfig"; sourceTree = "<group>"; };
+		DBE1F576B53557195413B101 /* Pods-International Youth Arts Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.development.xcconfig"; sourceTree = "<group>"; };
+		F30E2389373A93DF691F4FB4 /* Pods-International Youth Arts Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.release.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.release.xcconfig"; sourceTree = "<group>"; };
 		F897BC68E01DA4B824198411 /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
 		F8EBB55E721075F2AA4FE827 /* Pods-Surbiton Food FestivalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food FestivalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food FestivalTests/Pods-Surbiton Food FestivalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8ADC5D5EDD2954199418CB /* libPods-Surbiton Food FestivalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surbiton Food FestivalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,7 +411,7 @@
 				AEDD1A6420663ECE001BD259 /* UIKit.framework in Frameworks */,
 				AEDD1A6520663ECE001BD259 /* MapKit.framework in Frameworks */,
 				AEDD1A6620663ECE001BD259 /* Social.framework in Frameworks */,
-				73A315C3D943B903FF0D543C /* libPods-IYAF.a in Frameworks */,
+				BB43A1DF3F45E79D2C508573 /* libPods-International Youth Arts Festival.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +448,10 @@
 				5CB95BF103961E7B9DF70CEF /* Pods-IYAF.production.xcconfig */,
 				91B2820AA88861415693CF0A /* Pods-IYAF.development.xcconfig */,
 				52F838FDCE68F3E1B2D9ADF1 /* Pods-IYAF.release.xcconfig */,
+				D047C0D229D14A713633A858 /* Pods-International Youth Arts Festival.debug.xcconfig */,
+				33B4655BAE9C720FA6AE7843 /* Pods-International Youth Arts Festival.production.xcconfig */,
+				DBE1F576B53557195413B101 /* Pods-International Youth Arts Festival.development.xcconfig */,
+				F30E2389373A93DF691F4FB4 /* Pods-International Youth Arts Festival.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -454,6 +463,7 @@
 				CE1B363868E42F6A62D59591 /* libPods-Surbiton Food Festival.a */,
 				FB8ADC5D5EDD2954199418CB /* libPods-Surbiton Food FestivalTests.a */,
 				68FAB7ABD5E47CABA4386DB9 /* libPods-IYAF.a */,
+				B23468EC7AEB7571379E5B4C /* libPods-International Youth Arts Festival.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1028,7 +1038,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-IYAF/Pods-IYAF-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh",
 				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf",
 				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf",
 				"${PODS_ROOT}/FontAwesomeKit/FontAwesomeKit/ionicons.ttf",
@@ -1049,7 +1059,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IYAF/Pods-IYAF-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F7E3512F4E51819E8BAA2A6 /* [CP] Check Pods Manifest.lock */ = {
@@ -1063,7 +1073,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IYAF-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-International Youth Arts Festival-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1130,7 +1140,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IYAF/Pods-IYAF-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DD9557D64550EA3D554620A0 /* [CP] Embed Pods Frameworks */ = {
@@ -1256,7 +1266,7 @@
 /* Begin XCBuildConfiguration section */
 		AEDD1AB620663ECE001BD259 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 163746E490982A8BA42FC68C /* Pods-IYAF.debug.xcconfig */;
+			baseConfigurationReference = D047C0D229D14A713633A858 /* Pods-International Youth Arts Festival.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1284,7 +1294,7 @@
 		};
 		AEDD1AB720663ECE001BD259 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CB95BF103961E7B9DF70CEF /* Pods-IYAF.production.xcconfig */;
+			baseConfigurationReference = 33B4655BAE9C720FA6AE7843 /* Pods-International Youth Arts Festival.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1317,7 +1327,7 @@
 		};
 		AEDD1AB820663ECE001BD259 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91B2820AA88861415693CF0A /* Pods-IYAF.development.xcconfig */;
+			baseConfigurationReference = DBE1F576B53557195413B101 /* Pods-International Youth Arts Festival.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1350,7 +1360,7 @@
 		};
 		AEDD1AB920663ECE001BD259 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52F838FDCE68F3E1B2D9ADF1 /* Pods-IYAF.release.xcconfig */;
+			baseConfigurationReference = F30E2389373A93DF691F4FB4 /* Pods-International Youth Arts Festival.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -19,6 +19,6 @@ target 'Surbiton Food Festival' do
 	available_pods
 end
 
-target 'IYAF' do
+target 'International Youth Arts Festival' do
     available_pods
 end

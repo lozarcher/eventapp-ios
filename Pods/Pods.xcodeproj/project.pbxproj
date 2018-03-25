@@ -10,7 +10,9 @@
 		009A151908658A43868F6DDCE50C13B8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835902BFC75B1487D55388C1BA3D5763 /* ImageIO.framework */; };
 		018A4697015BC6F1F444DE28E62FDBFC /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E20ACDA4816DB51E306891DF7FEAF9D /* SDWebImageDecoder.m */; };
 		0308EED81B27398A876728A7C37D94A3 /* UIBarButtonItemArrowLeft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DFE41BA987119DDF5CA88BC61EF321F /* UIBarButtonItemArrowLeft@3x.png */; };
+		036014421AEA665075C6FEF1962C18D4 /* UITableView+FDIndexPathHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 66800DE8CC03C3C95398EAA180EE3963 /* UITableView+FDIndexPathHeightCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		045BEDDAF4F1273F6CD1FCCE41D27A1D /* UIBarButtonItemGrid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 536988FC33F447B513BAB2CF3673FABB /* UIBarButtonItemGrid@2x.png */; };
+		0469B020D6823A3DC078E20B46E99B4D /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8EE89CFA1DD4BAC0AFDB101CFD8696 /* UITableView+FDTemplateLayoutCell.m */; };
 		06EAB6A51C1A15B27748A404C76B74E3 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C3C074ACB1C4FBA2949001F640542BD3 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		07CF5DB3A72265A46E2A6ADE2F07CD92 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 410130F57C8CCE5FB87C6CCCC3D48D33 /* SDWebImageManager.m */; };
 		09CDF54F0B468FDBAFA617427DDEBA66 /* FAKOcticons.h in Headers */ = {isa = PBXBuildFile; fileRef = 732ADE1EC1785FE1CE4EE5933DA92476 /* FAKOcticons.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -19,9 +21,7 @@
 		107A129C3600AAF75DE7131667E28BCF /* ImageSelectedOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 656F8B0DD818445C6506AD97EB6D3540 /* ImageSelectedOn@3x.png */; };
 		10F436EADDDE7898530ED4C9F3067F87 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84104C3A757314012C8DEBCAB1E40212 /* DALabeledCircularProgressView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		10F94BDBFA2E5250DCAC6BF9CC0C1FFA /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A50EAB5EE6BA0AAC9963D352EE59EF4 /* UIView+WebCacheOperation.m */; };
-		1241239ECE5048B3F82DEA30A528EF18 /* UITableView+FDKeyedHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 816B12DD8BB85E27D48801AF9ACC4468 /* UITableView+FDKeyedHeightCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		15635B5B1040846208F072EE1F72FCF0 /* MWTapDetectingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17215D1D205F064C11A1D923F1C0684E /* MWTapDetectingImageView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1589A2DA624442E93DFE6190E3D4F1CB /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D56CD1A24EE0B7DF211A40C29A57CEE /* UITableView+FDIndexPathHeightCache.m */; };
 		1699A0228511C84084D11FB72B1A6D14 /* ImageError.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF607098F91B2A0D9B84338A28AF2E /* ImageError.png */; };
 		1890F2399E4428591A31FC641E5A8447 /* MWGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2954BFC972A4E02725791110F59F4CFA /* MWGridViewController.m */; };
 		196A5D55DE3B2D359FD30742CF15A87A /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC6DCCACA40E2605A73416D35CD14E /* MWTapDetectingImageView.m */; };
@@ -57,7 +57,6 @@
 		4A2185D12B4BA03741348759B795D10C /* DALabeledCircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD99FAB96979656D0DB42B1EFB35A0F /* DALabeledCircularProgressView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4D244EA047A5EA28A9D25B84D4823F57 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC99E25D02A8B3C35A7398517D419DD /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4DD034DB3D326601376B5D9C2FC9948A /* MWPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC4EEED603A8A1A9D5E25DEE5C25BFE /* MWPhoto.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4E43E00FFD97222B12A4D32960D723CC /* UITableView+FDIndexPathHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 66800DE8CC03C3C95398EAA180EE3963 /* UITableView+FDIndexPathHeightCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		51DCCACECAA6B9CF523CD16E42A19D60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE04A585004F9DF817C709FD46CADC1B /* CoreGraphics.framework */; };
 		5AC1B95C2F059ADF9BA14D7A99A40391 /* FAKZocial.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609BDED0522E0AE3FFBEB689F903BC6 /* FAKZocial.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5AF8B7931B91D1192B2E06BE539AF031 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 159B5BF27AD2A00E525B379F33E2DEB7 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -74,30 +73,34 @@
 		73C6C6902D4EA4CE047A6D8AE7DE3021 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3E10152BE709A49481D3C999DCE00 /* DACircularProgressView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		74702679AE0887943D8A28C090ABEE8B /* ImageSelectedSmallOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F7F9374307911015179D53A575B859B /* ImageSelectedSmallOn@3x.png */; };
 		762B7ED4190F2910707DC0D94FF6AD66 /* KILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0236B022430722E30CFAD65FC6530E4B /* KILabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7B315A4040A827C8A922A76CF6321FAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
+		7AA8E5B50C4377B46561BE65D0AA9E4A /* Pods-International Youth Arts Festival-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA77477830D9E8D4672602A9D4A47AD /* Pods-International Youth Arts Festival-dummy.m */; };
 		7B60D37A6F1DF6C66DE714D3AE4B76AE /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BF98DC51C5A2EA5ED3F95743690F8F /* SDWebImageCompat.m */; };
 		7C41A03FAE5F92B3DBF8533E7C61612F /* DACircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 067BC86687D3E7B8FEDB7E2C0E6985C6 /* DACircularProgress-dummy.m */; };
 		80EEFF9BE3A722A10891A8C72BB63531 /* FAKOcticons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB905FF58418F6B068D058FD9DD494A /* FAKOcticons.m */; };
 		810B2CD5B6C01E50B08BE30A116CD3D2 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E69E4EF4F6EC4B251A2F6BE4A911579 /* NSData+ImageContentType.m */; };
 		81BFFE5736401209DEA96362C2A843CB /* MWTapDetectingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 10BD973EAB0D97B8DD8754F1C58543C6 /* MWTapDetectingView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81CBEE444053865993A650B9B20185FF /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D56CD1A24EE0B7DF211A40C29A57CEE /* UITableView+FDIndexPathHeightCache.m */; };
 		841C036D419EE951D598984A1278D97A /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47D8139B8CB62D2F48CB1B150C20C5 /* FAKIonIcons.m */; };
 		873351008D4C5B6B032598E7960EDE0D /* UIBarButtonItemArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1341B5890DC3899A1A7F19571956B35 /* UIBarButtonItemArrowRight@2x.png */; };
 		8812D0F92C2259EF430F6D1D76A900B5 /* ImageSelectedSmallOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BB331A9FB83540BC14EF2517B64DCA /* ImageSelectedSmallOn@2x.png */; };
 		88AE579FF459056230E6095CB6D51DFE /* KILabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B3220AF255E4C11435A0606A0F3084 /* KILabel-dummy.m */; };
 		88C5129115E6624CB53EA190A0D64173 /* ImageSelectedOff@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 166CE69A60B7F2DA7D68ADE6CDB1C137 /* ImageSelectedOff@3x.png */; };
 		8B73365F9C24B19A79FD96B2DA3945E8 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F245BF9EECD34C61CBD0FB8DDDBCC40 /* SDWebImage-dummy.m */; };
+		8C2BACD46BB0673316A92B4E984CA956 /* UITableView+FDKeyedHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 816B12DD8BB85E27D48801AF9ACC4468 /* UITableView+FDKeyedHeightCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CB03D00E626FD86DD1C0656E4EA1AD2 /* UITableView+FDTemplateLayoutCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D627D0899E9F402738F0EF9513B1710 /* UITableView+FDTemplateLayoutCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8FB09FCECFFF23AB360470FB5613924D /* MWPhotoBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F10241299DF3DCC31470CA3F17A902C /* MWPhotoBrowser.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		900A1C558A5950DB9EFA393B18D7AB6C /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 183ADAE94451804BCF794B353ABEBB5E /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		90A42FA53435F06BBBB08357F9F2656F /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D0C87ACFDF3456B1D32BD70189F7132 /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		90C30A39B599AA11684BB5D25AA908CC /* PlayButtonOverlayLarge@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 288BA530587D5909A66139EC55AF815D /* PlayButtonOverlayLarge@3x.png */; };
 		92F5176EE5888100130A63382B130C92 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9567D5F836A335BC2470F76FCB800611 /* SDImageCache.m */; };
+		95F9BF82A37308A9F7692A784926449B /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B315CA74AC1093DB09D6100121A70 /* UITableView+FDTemplateLayoutCellDebug.m */; };
 		982BB1D72FB4A7EA4CE37E7AA993BBFE /* ImageSelectedSmallOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 721F66D04D3B57837DFCFCFD7A174D27 /* ImageSelectedSmallOff@2x.png */; };
 		9933A0407B7A9EE88BC6F2F75BD23A48 /* MWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AA167AFD1A2133970E6469D2464F0517 /* MWPhoto.m */; };
-		9A18180AFFB0EC49392AB4CC140287C4 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA526707FEA0FF7E7DC2128C42F02E8 /* UITableView+FDTemplateLayoutCellDebug.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9DDDD8CF99D366B64137A48A690CABC9 /* UIImage+MWPhotoBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = C261413B85E5870BB9FBC73615D2AAA4 /* UIImage+MWPhotoBrowser.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9E1E38D3F111E681891F747AB91F6684 /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = FF441118D70E34A8919604510E445F36 /* FAKIcon.m */; };
 		9FA68ED87A2FB217648CAC1AD8B90E82 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B5CF525B2734656791BD8D9C184DF2 /* MBProgressHUD-dummy.m */; };
 		A19F50B0614109EFE9D3C9096D5BC01C /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49270D5B4654F4BDB7EBE27FE4A84FE2 /* SDWebImageDownloader.m */; };
+		A3634287A331524DFE9906EDDF388089 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5633BD1CDC8D34AE89B865A0A9B6353E /* UITableView+FDKeyedHeightCache.m */; };
 		A3D0CC3CB047C7F6339A71D872925834 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 86D01F42FA952731F1AAF955F3AD9FF1 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A545BD18056B83C75994EA18F6AE7EE4 /* SDWebImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 97921E5F8DA9DBE80553E6E6D391B32B /* SDWebImageDecoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A5E0FC777BF836C681424BCAE581C318 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E907914685869B68F2337AED043ECA /* UIImageView+WebCache.m */; };
@@ -105,34 +108,31 @@
 		A7DC82B1C42DD03727EAFCF03BFBF78F /* UIBarButtonItemGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC815617ED2DAA5E5EB5A8BD48F6D13 /* UIBarButtonItemGrid.png */; };
 		A7E9E997FE6E80792675B3EFFC2CE318 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3300B3177E7A6AE0A6B4C80C8C05F6 /* CoreText.framework */; };
 		A861E55CF74CEF28B33658DF5597F49A /* ImageSelectedSmallOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0F9A153447827050415688199C319D /* ImageSelectedSmallOn.png */; };
-		AA59A79FE0E4348EB0A7E220A138578D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
 		AA71C0AA1EE73F78B9D6FFB1BAA7E55C /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD74E6D0331019A09727CF3781236578 /* KILabel.m */; };
 		AE63928A372DDB54713B7D427F68262D /* FAKFontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B919F50FBB54308BFDF0D0CD53CAFA3 /* FAKFontAwesome.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AEBB8BE10E4F500AD5F1ED029FE7EB04 /* Pods-Surbiton Food FestivalTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD16FAE26969FEA8DB368B0695A495C /* Pods-Surbiton Food FestivalTests-dummy.m */; };
+		AFFA91350259D8B64BBFF6B9F728A41D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
 		B4BF4DAF2589A2A070D6CFFBF00DD1D0 /* FAKMaterialIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6318B8E292EBFB29701A4A8F4B3D6 /* FAKMaterialIcons.m */; };
 		B4C3399B4931C41892FBAA9F830B4119 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = BAF6D7C2AE5EEC37F423940BEC01C82D /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B583BB4B0987C0092723DF424F59FEC3 /* UIBarButtonItemArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 09C4A81C4C92B5C5E0D3F42817CB0498 /* UIBarButtonItemArrowRight.png */; };
-		B8D4B58F6221BD70641E38D23C222427 /* UITableView+FDTemplateLayoutCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D627D0899E9F402738F0EF9513B1710 /* UITableView+FDTemplateLayoutCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B5CC0EB0BF633D7C45AD97C7070357FE /* UITableView+FDTemplateLayoutCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 627CA28689AF94C6A63EDD3C2C1D5FB5 /* UITableView+FDTemplateLayoutCell-dummy.m */; };
 		BABD199FD8C56FA157C62D50DA3836FE /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5C23EC0B5945D099B0DB6DE65D63A /* FAKFontAwesome.m */; };
 		BB0D069DF92D3B67C28ECB027C7A3C39 /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 97636E8921A4F248DDB9F2B1E726174B /* SDImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BB26C1B287BF5C838F03AE134D90998C /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5633BD1CDC8D34AE89B865A0A9B6353E /* UITableView+FDKeyedHeightCache.m */; };
 		BC4D0E31AE54522CF698AA514E0BA2FF /* ImageSelectedOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E139F5E3891F01A808D1B1FDBD4856 /* ImageSelectedOn@2x.png */; };
 		BD892324259FBFA46AEF3D0C577CB0B3 /* ImageSelectedOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F24F5CC0E889A446FF0E86F76B38FD0 /* ImageSelectedOff.png */; };
 		BDB8968AB58282FAEA89DEBC0E0925EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
 		BDE3B0D9010E99D1CD3A4D496F3D9FAF /* UIBarButtonItemGrid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78048238EE0A8DCA2109414E447659 /* UIBarButtonItemGrid@3x.png */; };
 		BF3148311A0776E0EE61054BBA9684BF /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835902BFC75B1487D55388C1BA3D5763 /* ImageIO.framework */; };
+		C1714EA0964A26D95E6861787E6C301B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
 		C20C3A07E906CE67DC92113F57BDDFDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
-		C2347E9C46F9275DEB1B6C2B06358481 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B315CA74AC1093DB09D6100121A70 /* UITableView+FDTemplateLayoutCellDebug.m */; };
 		C47E6EB72FF219B79552340AB7A5B5FA /* FAKIonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 90D27CE75C910539DC8594698E1DEAFA /* FAKIonIcons.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C589886D0D440524BA8A957E985B043D /* MWPhotoBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2729D2F9695E79F50F79E7F068F9111D /* MWPhotoBrowser-dummy.m */; };
+		C75D044B163C1557B729AFAB16273116 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA526707FEA0FF7E7DC2128C42F02E8 /* UITableView+FDTemplateLayoutCellDebug.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C9C692B8FEDD6F91694F3E03AFDD1979 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
 		CB2AD2CD212E121CCF1B0DDE602F948B /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B55635302FA528DB45836C5DF278920 /* FAKZocial.m */; };
 		CFF724B680F8B73DAD792EF5D9AB6314 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E820C136E1AD144166D98A336E23342 /* UIImage+GIF.m */; };
-		D00D5641DA4E7F61859FD4DAC301B067 /* UITableView+FDTemplateLayoutCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 627CA28689AF94C6A63EDD3C2C1D5FB5 /* UITableView+FDTemplateLayoutCell-dummy.m */; };
 		D18A2BADD54231618238A8BB5E5B8D80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
 		DAD9AE12320B2A9E6B51C53E0CF82894 /* DACircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = E1F71C1397F67FD02AA0F67ADA1BD41A /* DACircularProgressView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DCFC5412E6FE69171BB940D66C6C3527 /* MWPhotoProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C75E9E4B126A764F70F1F523EC395FBD /* MWPhotoProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DEE41CD7BD8000C59A7435EE24BDE95C /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8EE89CFA1DD4BAC0AFDB101CFD8696 /* UITableView+FDTemplateLayoutCell.m */; };
 		DF65B1F34A8EE06E7CDEC6CEA4205065 /* UIBarButtonItemArrowRight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A1CB2983FF37C5D97229E21729035A /* UIBarButtonItemArrowRight@3x.png */; };
 		E256EA58D7BF8F4AE259178B8FD04255 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */; };
 		E3FE6486EBCECC16338136206ECE82B7 /* PlayButtonOverlayLargeTap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C924D4C78388BE7F596743D6063805E9 /* PlayButtonOverlayLargeTap@2x.png */; };
@@ -148,16 +148,30 @@
 		FC62429674E1098AC8687DB6D01C96F6 /* PlayButtonOverlayLarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2608551650F0BFD01959FA0EC332AF3 /* PlayButtonOverlayLarge@2x.png */; };
 		FC8FC87380E30B8735C82C9A762E0B4D /* ImageError@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9652AD0F4FAF7DA94E5C4F822822E14B /* ImageError@3x.png */; };
 		FED1C2C07D96808FC325D1AA6C97810C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8866E0A64692ED0504FE825ABA39C625 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FF7A3D5BE6978C055843B8E9EDD0102B /* Pods-Surbiton Food Festival-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6659A0310B98A2BF3896BE5F598EF3E /* Pods-Surbiton Food Festival-dummy.m */; };
+		FF7A3D5BE6978C055843B8E9EDD0102B /* Pods-Surbiton Food Festival-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E8914A84345182AA27F91D93C83C06 /* Pods-Surbiton Food Festival-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0F90A72797427DFF529BA28B9B82D8FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDF2C5864FB87D44328AD1069E812614;
+			remoteInfo = SDWebImage;
+		};
 		1F4FE647F6846F9AC8E2BEA60E6D2450 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EDF2C5864FB87D44328AD1069E812614;
 			remoteInfo = SDWebImage;
+		};
+		1F7420B778227B3CF8D4F7BB851E7376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C82F33AB94F66F19C29649DE0FE51706;
+			remoteInfo = DACircularProgress;
 		};
 		24C756FB96002EAC18FF8D5F78ADC2C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -166,12 +180,26 @@
 			remoteGlobalIDString = 0103985B4A1B76AD2A88D0AE816C6905;
 			remoteInfo = MBProgressHUD;
 		};
+		26BD5F5DF7F9399AC97E588DFD304B44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9CF28FAB7189F08A5E981B6A7F3CB87;
+			remoteInfo = FontAwesomeKit;
+		};
 		5015D45EA64CBC40BAD5FAD385ABA1F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 65FD9654925B0116A642A80A838C4954;
+			remoteGlobalIDString = 2BCADB8058BCE21216744D4FF41685AF;
 			remoteInfo = "UITableView+FDTemplateLayoutCell";
+		};
+		54739D01D6B5510316613B3129C5B9EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7769074B0C8F0766C05653454FE49E2;
+			remoteInfo = KILabel;
 		};
 		7FCC4DFD4D44A14EB86068FAB36C35D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -201,6 +229,20 @@
 			remoteGlobalIDString = A7769074B0C8F0766C05653454FE49E2;
 			remoteInfo = KILabel;
 		};
+		A439A47F894D297A3E674DAA3198B7DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0103985B4A1B76AD2A88D0AE816C6905;
+			remoteInfo = MBProgressHUD;
+		};
+		A51226A107758F0AD35D935269A12C7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BCADB8058BCE21216744D4FF41685AF;
+			remoteInfo = "UITableView+FDTemplateLayoutCell";
+		};
 		C64534637C2DCEABB933FAF4EFBF4BF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -214,6 +256,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 624FE0C30D87B72F354DD168B162AB32;
 			remoteInfo = "MWPhotoBrowser-MWPhotoBrowser";
+		};
+		E945851A37F56E8ABB079C84D05D4485 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9E468029AF4C77D341FE426D477EC03;
+			remoteInfo = MWPhotoBrowser;
 		};
 		EA9FF352B8DABEB2C1339A51956F8915 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -234,22 +283,21 @@
 /* Begin PBXFileReference section */
 		00B5CF525B2734656791BD8D9C184DF2 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		0236B022430722E30CFAD65FC6530E4B /* KILabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KILabel.h; path = KILabel/Source/KILabel.h; sourceTree = "<group>"; };
-		029DF46820441024C57CEB0D9AC3EBD5 /* Pods-Surbiton Food FestivalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food FestivalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		03261CCE01176F8CDFEE9E7234D1C3D7 /* UIBarButtonItemArrowLeft.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = UIBarButtonItemArrowLeft.png; path = Pod/Assets/UIBarButtonItemArrowLeft.png; sourceTree = "<group>"; };
 		04DF2A87F443BD9A02478FC7262C20AF /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
 		067BC86687D3E7B8FEDB7E2C0E6985C6 /* DACircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DACircularProgress-dummy.m"; sourceTree = "<group>"; };
 		0828FE58CB5DDDCD6CD55F8EB02CAB2A /* FAKFoundationIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFoundationIcons.h; path = FontAwesomeKit/FAKFoundationIcons.h; sourceTree = "<group>"; };
 		0949B9EF45A92C2299599425B3F17C2E /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
 		09C4A81C4C92B5C5E0D3F42817CB0498 /* UIBarButtonItemArrowRight.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = UIBarButtonItemArrowRight.png; path = Pod/Assets/UIBarButtonItemArrowRight.png; sourceTree = "<group>"; };
+		09E1C917F74CBED07E68947CF52B9726 /* libKILabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKILabel.a; path = libKILabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F98360EDDD81F3752AC35B94DE2C36 /* MWPhotoBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MWPhotoBrowser-prefix.pch"; sourceTree = "<group>"; };
-		0B50AA1BDF1E5844F643430E365CC915 /* Pods-Surbiton Food FestivalTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surbiton Food FestivalTests-frameworks.sh"; sourceTree = "<group>"; };
 		0B76642F704BDCC59E85E6BA7B93C2CA /* MWZoomingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWZoomingScrollView.m; path = Pod/Classes/MWZoomingScrollView.m; sourceTree = "<group>"; };
-		0C4B9343748B476F7D85F89CFC1D02C2 /* libDACircularProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDACircularProgress.a; path = libDACircularProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EF2F7D3BA33DA84F824C98559AD499C /* libFontAwesomeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFontAwesomeKit.a; path = libFontAwesomeKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9808CA61DC5B475911715AE832199F /* Pods-International Youth Arts Festival-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-International Youth Arts Festival-frameworks.sh"; sourceTree = "<group>"; };
 		10BD973EAB0D97B8DD8754F1C58543C6 /* MWTapDetectingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWTapDetectingView.h; path = Pod/Classes/MWTapDetectingView.h; sourceTree = "<group>"; };
 		122AE1C5D996F6AA1689EDF6E2E93B10 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		12CF5A582F6DA3DD04070998F5451FA5 /* UIImage+MWPhotoBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MWPhotoBrowser.m"; path = "Pod/Classes/UIImage+MWPhotoBrowser.m"; sourceTree = "<group>"; };
-		143A9E0989E004F14BD700C2221CC5F6 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MWPhotoBrowser.bundle; path = "MWPhotoBrowser-MWPhotoBrowser.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		145488E68219500189C3D85F5CFF9A53 /* libMWPhotoBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMWPhotoBrowser.a; path = libMWPhotoBrowser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		155B1BE392E3836EF603E0C1AD4CDF9D /* Pods-Surbiton Food Festival-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Surbiton Food Festival-acknowledgements.markdown"; sourceTree = "<group>"; };
 		159B5BF27AD2A00E525B379F33E2DEB7 /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		166CE69A60B7F2DA7D68ADE6CDB1C137 /* ImageSelectedOff@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageSelectedOff@3x.png"; path = "Pod/Assets/ImageSelectedOff@3x.png"; sourceTree = "<group>"; };
 		17215D1D205F064C11A1D923F1C0684E /* MWTapDetectingImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWTapDetectingImageView.h; path = Pod/Classes/MWTapDetectingImageView.h; sourceTree = "<group>"; };
@@ -261,50 +309,53 @@
 		1F7F9374307911015179D53A575B859B /* ImageSelectedSmallOn@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageSelectedSmallOn@3x.png"; path = "Pod/Assets/ImageSelectedSmallOn@3x.png"; sourceTree = "<group>"; };
 		21D487667B9062B6E0E2D2008DDE39BA /* FontAwesomeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesomeKit.xcconfig; sourceTree = "<group>"; };
 		2307655C24E9BE23D382065DF01BCDD8 /* ResourceBundle-MWPhotoBrowser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MWPhotoBrowser-Info.plist"; sourceTree = "<group>"; };
+		2502FDF0BE0E257FC6F2CAD859535F70 /* Pods-International Youth Arts Festival-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-International Youth Arts Festival-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2609BDED0522E0AE3FFBEB689F903BC6 /* FAKZocial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKZocial.h; path = FontAwesomeKit/FAKZocial.h; sourceTree = "<group>"; };
 		2729D2F9695E79F50F79E7F068F9111D /* MWPhotoBrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MWPhotoBrowser-dummy.m"; sourceTree = "<group>"; };
 		288BA530587D5909A66139EC55AF815D /* PlayButtonOverlayLarge@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PlayButtonOverlayLarge@3x.png"; path = "Pod/Assets/PlayButtonOverlayLarge@3x.png"; sourceTree = "<group>"; };
 		2954BFC972A4E02725791110F59F4CFA /* MWGridViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWGridViewController.m; path = Pod/Classes/MWGridViewController.m; sourceTree = "<group>"; };
 		2B55635302FA528DB45836C5DF278920 /* FAKZocial.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKZocial.m; path = FontAwesomeKit/FAKZocial.m; sourceTree = "<group>"; };
-		2BD16FAE26969FEA8DB368B0695A495C /* Pods-Surbiton Food FestivalTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surbiton Food FestivalTests-dummy.m"; sourceTree = "<group>"; };
 		2D0C87ACFDF3456B1D32BD70189F7132 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
 		2DEF607098F91B2A0D9B84338A28AF2E /* ImageError.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ImageError.png; path = Pod/Assets/ImageError.png; sourceTree = "<group>"; };
 		2E69E4EF4F6EC4B251A2F6BE4A911579 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		347CF2AB392045E92F9E8488D0F25930 /* PlayButtonOverlayLarge.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = PlayButtonOverlayLarge.png; path = Pod/Assets/PlayButtonOverlayLarge.png; sourceTree = "<group>"; };
+		35A86892C44F49A34ECAA58DE5B3A2C2 /* Pods-Surbiton Food Festival-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surbiton Food Festival-frameworks.sh"; sourceTree = "<group>"; };
 		3790A4AA07D3CD9116B3A8CB42C36731 /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
 		3B596821F3F3CCA528500609492CFA6D /* MWCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWCommon.h; path = Pod/Classes/MWCommon.h; sourceTree = "<group>"; };
 		3D627D0899E9F402738F0EF9513B1710 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCell.h"; path = "Classes/UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		3FCA431585BD85A4E10AB265AC960D5F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		4010830120D2C6673ECF87BCE3D379A4 /* MWGridCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWGridCell.m; path = Pod/Classes/MWGridCell.m; sourceTree = "<group>"; };
-		40E4AC52495D405AB019BFD597D3A862 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Surbiton Food Festival.a"; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		410130F57C8CCE5FB87C6CCCC3D48D33 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
 		41BB331A9FB83540BC14EF2517B64DCA /* ImageSelectedSmallOn@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageSelectedSmallOn@2x.png"; path = "Pod/Assets/ImageSelectedSmallOn@2x.png"; sourceTree = "<group>"; };
 		44BC95EFC3D5377BDD2B411417091A6B /* MWZoomingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWZoomingScrollView.h; path = Pod/Classes/MWZoomingScrollView.h; sourceTree = "<group>"; };
 		47A1CF9217044F5975CE6AD698BAA320 /* UITableView+FDTemplateLayoutCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell-prefix.pch"; sourceTree = "<group>"; };
 		49270D5B4654F4BDB7EBE27FE4A84FE2 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
-		4A46FD93C147B8E5C7D3A67A543FED60 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDWebImage.a; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC4EEED603A8A1A9D5E25DEE5C25BFE /* MWPhoto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWPhoto.h; path = Pod/Classes/MWPhoto.h; sourceTree = "<group>"; };
+		4CA2A8A3525720DFA5632132C086AE9F /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDWebImage.a; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDFCA1EE4E4358F41A08178CCCBADE3 /* FAKFoundationIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFoundationIcons.m; path = FontAwesomeKit/FAKFoundationIcons.m; sourceTree = "<group>"; };
 		4D56CD1A24EE0B7DF211A40C29A57CEE /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDIndexPathHeightCache.m"; path = "Classes/UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
 		4DC29D3B327671AFE7C105D2B0864555 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "zocial-regular-webfont.ttf"; path = "FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 		4F10241299DF3DCC31470CA3F17A902C /* MWPhotoBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWPhotoBrowser.h; path = Pod/Classes/MWPhotoBrowser.h; sourceTree = "<group>"; };
+		501AF46C43CE3C72BE0E4C8DE3B3288C /* Pods-Surbiton Food Festival-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surbiton Food Festival-resources.sh"; sourceTree = "<group>"; };
 		536988FC33F447B513BAB2CF3673FABB /* UIBarButtonItemGrid@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "UIBarButtonItemGrid@2x.png"; path = "Pod/Assets/UIBarButtonItemGrid@2x.png"; sourceTree = "<group>"; };
 		53A10986F385268D71FC9D3D8F310E0C /* foundation-icons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "foundation-icons.ttf"; path = "FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
 		53E909FBE96DD5A72357387587D2FB83 /* FAKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIcon.h; path = FontAwesomeKit/FAKIcon.h; sourceTree = "<group>"; };
 		5633BD1CDC8D34AE89B865A0A9B6353E /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDKeyedHeightCache.m"; path = "Classes/UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
 		5691E3EB23C0F169B354CF874485AD91 /* PlayButtonOverlayLargeTap@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PlayButtonOverlayLargeTap@3x.png"; path = "Pod/Assets/PlayButtonOverlayLargeTap@3x.png"; sourceTree = "<group>"; };
-		5A2BA82B09BA49F80B61D364E92D8308 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		592A7EF4891567EDEB5941A1ECCDAE46 /* libPods-International Youth Arts Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-International Youth Arts Festival.a"; path = "libPods-International Youth Arts Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E20ACDA4816DB51E306891DF7FEAF9D /* SDWebImageDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDecoder.m; path = SDWebImage/SDWebImageDecoder.m; sourceTree = "<group>"; };
 		5EF37F3B35BBE2F957661E47922302D8 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		6097BC01A113F3EE9AECDAF47F05BC06 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		60F15FB821D886CBB2B8709B3E49BE9C /* Pods-International Youth Arts Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-International Youth Arts Festival.production.xcconfig"; sourceTree = "<group>"; };
 		627CA28689AF94C6A63EDD3C2C1D5FB5 /* UITableView+FDTemplateLayoutCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell-dummy.m"; sourceTree = "<group>"; };
-		6310A89E42C3C9C89027210A1A32B6E6 /* Pods-Surbiton Food Festival-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surbiton Food Festival-resources.sh"; sourceTree = "<group>"; };
+		6457B85E372008B04647FB3B314FB946 /* libPods-Surbiton Food Festival.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Surbiton Food Festival.a"; path = "libPods-Surbiton Food Festival.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		656F8B0DD818445C6506AD97EB6D3540 /* ImageSelectedOn@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageSelectedOn@3x.png"; path = "Pod/Assets/ImageSelectedOn@3x.png"; sourceTree = "<group>"; };
 		6600FAE0772BA4D66CEEB4D53AF08670 /* VideoOverlay.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = VideoOverlay.png; path = Pod/Assets/VideoOverlay.png; sourceTree = "<group>"; };
 		66800DE8CC03C3C95398EAA180EE3963 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDIndexPathHeightCache.h"; path = "Classes/UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		6750F751D2459011C2C861C4ABC054D6 /* Pods-Surbiton Food Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food Festival.debug.xcconfig"; sourceTree = "<group>"; };
 		6A50EAB5EE6BA0AAC9963D352EE59EF4 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		6B648529794FCAF34DBD5F0CC05A0546 /* Pods-Surbiton Food FestivalTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food FestivalTests.production.xcconfig"; sourceTree = "<group>"; };
 		6C0F9A153447827050415688199C319D /* ImageSelectedSmallOn.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ImageSelectedSmallOn.png; path = Pod/Assets/ImageSelectedSmallOn.png; sourceTree = "<group>"; };
+		6C8B5357A2268D926FBC23D1EE5BFAE4 /* Pods-International Youth Arts Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-International Youth Arts Festival.release.xcconfig"; sourceTree = "<group>"; };
 		6E47D8139B8CB62D2F48CB1B150C20C5 /* FAKIonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIonIcons.m; path = FontAwesomeKit/FAKIonIcons.m; sourceTree = "<group>"; };
 		6E976131C477B7CAE89DD53B4FA517C2 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
 		6F245BF9EECD34C61CBD0FB8DDDBCC40 /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
@@ -312,23 +363,24 @@
 		6F9B62F130890DC2C1AAFCF909CAF05D /* MWPhotoBrowserPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWPhotoBrowserPrivate.h; path = Pod/Classes/MWPhotoBrowserPrivate.h; sourceTree = "<group>"; };
 		721F66D04D3B57837DFCFCFD7A174D27 /* ImageSelectedSmallOff@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageSelectedSmallOff@2x.png"; path = "Pod/Assets/ImageSelectedSmallOff@2x.png"; sourceTree = "<group>"; };
 		732ADE1EC1785FE1CE4EE5933DA92476 /* FAKOcticons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKOcticons.h; path = FontAwesomeKit/FAKOcticons.h; sourceTree = "<group>"; };
+		74E8914A84345182AA27F91D93C83C06 /* Pods-Surbiton Food Festival-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surbiton Food Festival-dummy.m"; sourceTree = "<group>"; };
 		771CA7EA0628DB8CFC1DA1959BA7F2BA /* MWPhotoBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWPhotoBrowser.m; path = Pod/Classes/MWPhotoBrowser.m; sourceTree = "<group>"; };
 		790761208FA86499426B46FD363D5929 /* FontAwesomeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FontAwesomeKit.h; path = FontAwesomeKit/FontAwesomeKit.h; sourceTree = "<group>"; };
-		790F79B253153E7A25B5B848B0B6757F /* Pods-Surbiton Food Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food Festival.release.xcconfig"; sourceTree = "<group>"; };
 		79C97AC65902AFA2B95FF0B693749FF9 /* ImageSelectedOff@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageSelectedOff@2x.png"; path = "Pod/Assets/ImageSelectedOff@2x.png"; sourceTree = "<group>"; };
 		7A78048238EE0A8DCA2109414E447659 /* UIBarButtonItemGrid@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "UIBarButtonItemGrid@3x.png"; path = "Pod/Assets/UIBarButtonItemGrid@3x.png"; sourceTree = "<group>"; };
 		7B8F40D0BEC066C5254E58A2D160E97F /* MWGridCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWGridCell.h; path = Pod/Classes/MWGridCell.h; sourceTree = "<group>"; };
+		814B917DAF3D95B91D60C729C304F939 /* Pods-International Youth Arts Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-International Youth Arts Festival.debug.xcconfig"; sourceTree = "<group>"; };
 		816B12DD8BB85E27D48801AF9ACC4468 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDKeyedHeightCache.h"; path = "Classes/UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		835902BFC75B1487D55388C1BA3D5763 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		84104C3A757314012C8DEBCAB1E40212 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DALabeledCircularProgressView.m; path = DACircularProgress/DALabeledCircularProgressView.m; sourceTree = "<group>"; };
 		86A62164DBF99A33A41ABDBF900DD7A2 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
 		86D01F42FA952731F1AAF955F3AD9FF1 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
-		87AA6CF70D7CDDCABD7D678C88AC897F /* libMWPhotoBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMWPhotoBrowser.a; path = libMWPhotoBrowser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		88194F01B5BA88EE528BBB11C45D5752 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8866E0A64692ED0504FE825ABA39C625 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		89B3220AF255E4C11435A0606A0F3084 /* KILabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KILabel-dummy.m"; sourceTree = "<group>"; };
+		8AB88B20AA3AAA1416088A2A8C51E280 /* Pods-International Youth Arts Festival-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-International Youth Arts Festival-resources.sh"; sourceTree = "<group>"; };
 		8AD754028E39754CD8E6F4A0E8E654E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8B919F50FBB54308BFDF0D0CD53CAFA3 /* FAKFontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFontAwesome.h; path = FontAwesomeKit/FAKFontAwesome.h; sourceTree = "<group>"; };
-		8CCF7417B1AF41C7CE96A8B6601FDC02 /* libKILabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKILabel.a; path = libKILabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF3E10152BE709A49481D3C999DCE00 /* DACircularProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DACircularProgressView.m; path = DACircularProgress/DACircularProgressView.m; sourceTree = "<group>"; };
 		8DFE41BA987119DDF5CA88BC61EF321F /* UIBarButtonItemArrowLeft@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "UIBarButtonItemArrowLeft@3x.png"; path = "Pod/Assets/UIBarButtonItemArrowLeft@3x.png"; sourceTree = "<group>"; };
 		8E820C136E1AD144166D98A336E23342 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
@@ -337,11 +389,11 @@
 		91948DABE77D961DA4AA55BC5473806F /* KILabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KILabel.xcconfig; sourceTree = "<group>"; };
 		9274AD66A0249323BC05FE6A8963C1D1 /* UIBarButtonItemArrowLeft@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "UIBarButtonItemArrowLeft@2x.png"; path = "Pod/Assets/UIBarButtonItemArrowLeft@2x.png"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9420DAAD8B2EA41C369E6B393EE9C8D8 /* libUITableView+FDTemplateLayoutCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libUITableView+FDTemplateLayoutCell.a"; path = "libUITableView+FDTemplateLayoutCell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BFE8EFC7F1FEBB74D22C9A64DD6EBF /* ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = ionicons.ttf; path = FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
 		9567D5F836A335BC2470F76FCB800611 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		9652AD0F4FAF7DA94E5C4F822822E14B /* ImageError@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageError@3x.png"; path = "Pod/Assets/ImageError@3x.png"; sourceTree = "<group>"; };
 		96738FCB81E8D9D9FF5A20794FEFA0A7 /* ImageSelectedSmallOff@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageSelectedSmallOff@3x.png"; path = "Pod/Assets/ImageSelectedSmallOff@3x.png"; sourceTree = "<group>"; };
+		970B342B1755DDD4C3F9FA88483861C6 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MWPhotoBrowser.bundle; path = "MWPhotoBrowser-MWPhotoBrowser.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		972975BFA6D8FA4BB1ED39ABF8302DE9 /* VideoOverlay@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "VideoOverlay@3x.png"; path = "Pod/Assets/VideoOverlay@3x.png"; sourceTree = "<group>"; };
 		97636E8921A4F248DDB9F2B1E726174B /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		97921E5F8DA9DBE80553E6E6D391B32B /* SDWebImageDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDecoder.h; path = SDWebImage/SDWebImageDecoder.h; sourceTree = "<group>"; };
@@ -353,20 +405,19 @@
 		9A94569CA3B5FADC0ACC875E17462D77 /* MWTapDetectingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWTapDetectingView.m; path = Pod/Classes/MWTapDetectingView.m; sourceTree = "<group>"; };
 		9AA526707FEA0FF7E7DC2128C42F02E8 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCellDebug.h"; path = "Classes/UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
 		9DB905FF58418F6B068D058FD9DD494A /* FAKOcticons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKOcticons.m; path = FontAwesomeKit/FAKOcticons.m; sourceTree = "<group>"; };
-		9EEFF425387F52953BBB0D538CB5CEF7 /* Pods-Surbiton Food Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food Festival.debug.xcconfig"; sourceTree = "<group>"; };
 		9FC91BB19C9ADA54F2FF5D09EFC74C46 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		A5BF98DC51C5A2EA5ED3F95743690F8F /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
-		A6659A0310B98A2BF3896BE5F598EF3E /* Pods-Surbiton Food Festival-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Surbiton Food Festival-dummy.m"; sourceTree = "<group>"; };
 		AA167AFD1A2133970E6469D2464F0517 /* MWPhoto.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWPhoto.m; path = Pod/Classes/MWPhoto.m; sourceTree = "<group>"; };
 		AB59A52668DBAEE11751D9910BD5FA67 /* MWPhotoBrowser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MWPhotoBrowser.xcconfig; sourceTree = "<group>"; };
 		B1341B5890DC3899A1A7F19571956B35 /* UIBarButtonItemArrowRight@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "UIBarButtonItemArrowRight@2x.png"; path = "Pod/Assets/UIBarButtonItemArrowRight@2x.png"; sourceTree = "<group>"; };
-		B431D41CE6586A2B6C6E284FC5C07F5B /* Pods-Surbiton Food Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food Festival.production.xcconfig"; sourceTree = "<group>"; };
+		B1C2DFAB73567313C45E4E3E3D22D50E /* Pods-Surbiton Food Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food Festival.release.xcconfig"; sourceTree = "<group>"; };
 		B5BBE560F1C0870AC9A951EEFF971993 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		B879308A2AC2AA708CA36FC5D3E3C00B /* ImageSelectedSmallOff.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ImageSelectedSmallOff.png; path = Pod/Assets/ImageSelectedSmallOff.png; sourceTree = "<group>"; };
 		BA6B315CA74AC1093DB09D6100121A70 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDTemplateLayoutCellDebug.m"; path = "Classes/UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		BAF6D7C2AE5EEC37F423940BEC01C82D /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
+		BD186A1F6C1F011958F33E1544CA473B /* libUITableView+FDTemplateLayoutCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libUITableView+FDTemplateLayoutCell.a"; path = "libUITableView+FDTemplateLayoutCell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD267B16CE3012B0244070C77D985D80 /* ImageSelectedOn.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ImageSelectedOn.png; path = Pod/Assets/ImageSelectedOn.png; sourceTree = "<group>"; };
-		BEC41D9DD498130B20F53E4D72795A95 /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
+		BE75E6E3B01481D4580208A86751D44B /* Pods-Surbiton Food Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food Festival.production.xcconfig"; sourceTree = "<group>"; };
 		BFC815617ED2DAA5E5EB5A8BD48F6D13 /* UIBarButtonItemGrid.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = UIBarButtonItemGrid.png; path = Pod/Assets/UIBarButtonItemGrid.png; sourceTree = "<group>"; };
 		BFD99FAB96979656D0DB42B1EFB35A0F /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DALabeledCircularProgressView.h; path = DACircularProgress/DALabeledCircularProgressView.h; sourceTree = "<group>"; };
 		C072D0D287F3492C92CA69C482BECC56 /* UITableView+FDTemplateLayoutCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITableView+FDTemplateLayoutCell.xcconfig"; sourceTree = "<group>"; };
@@ -375,39 +426,37 @@
 		C3C074ACB1C4FBA2949001F640542BD3 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		C4E139F5E3891F01A808D1B1FDBD4856 /* ImageSelectedOn@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageSelectedOn@2x.png"; path = "Pod/Assets/ImageSelectedOn@2x.png"; sourceTree = "<group>"; };
 		C75E9E4B126A764F70F1F523EC395FBD /* MWPhotoProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWPhotoProtocol.h; path = Pod/Classes/MWPhotoProtocol.h; sourceTree = "<group>"; };
-		C7F7F0DB17E33D848EE7828D06C5FC34 /* Pods-Surbiton Food Festival-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surbiton Food Festival-frameworks.sh"; sourceTree = "<group>"; };
-		C89DE290822F3E04C185FFA14733A7EA /* Pods-Surbiton Food FestivalTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Surbiton Food FestivalTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C924D4C78388BE7F596743D6063805E9 /* PlayButtonOverlayLargeTap@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PlayButtonOverlayLargeTap@2x.png"; path = "Pod/Assets/PlayButtonOverlayLargeTap@2x.png"; sourceTree = "<group>"; };
 		C98C04A19CA3A4213E37E08C69B75F65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		C9E907914685869B68F2337AED043ECA /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		CA90FD7522CA8BA42B75A250239ECAD8 /* octicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = octicons.ttf; path = FontAwesomeKit/octicons.ttf; sourceTree = "<group>"; };
-		CBFC488E73736EF460D7E552EF486AB0 /* libPods-Surbiton Food FestivalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Surbiton Food FestivalTests.a"; path = "libPods-Surbiton Food FestivalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7E54DFD986141D51F068E97D95B3B0 /* FontAwesomeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesomeKit-prefix.pch"; sourceTree = "<group>"; };
 		CD74E6D0331019A09727CF3781236578 /* KILabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KILabel.m; path = KILabel/Source/KILabel.m; sourceTree = "<group>"; };
 		CF3300B3177E7A6AE0A6B4C80C8C05F6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		CF59819F084A6071C17EC2725162F0B5 /* Pods-International Youth Arts Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-International Youth Arts Festival.development.xcconfig"; sourceTree = "<group>"; };
 		D1D69CAD5CA882B64A89A22D33FAD965 /* Material-Design-Iconic-Font.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Material-Design-Iconic-Font.ttf"; path = "FontAwesomeKit/Material-Design-Iconic-Font.ttf"; sourceTree = "<group>"; };
-		D205CA41D580771E1528C5B53E8B867A /* Pods-Surbiton Food FestivalTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Surbiton Food FestivalTests-resources.sh"; sourceTree = "<group>"; };
 		D3768B50DDE71A42299BA048263C9003 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
-		D53C3933E482D65A859CEF8682D93C21 /* Pods-Surbiton Food Festival-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Surbiton Food Festival-acknowledgements.plist"; sourceTree = "<group>"; };
+		D549355736F4FC392394791ADF3CD280 /* libFontAwesomeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFontAwesomeKit.a; path = libFontAwesomeKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A41CCD64515850825825CF8C1BB8BD /* PlayButtonOverlayLargeTap.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = PlayButtonOverlayLargeTap.png; path = Pod/Assets/PlayButtonOverlayLargeTap.png; sourceTree = "<group>"; };
-		D89364CE306255F7276E2A7C09939DE1 /* Pods-Surbiton Food FestivalTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Surbiton Food FestivalTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D81D276DD2CC941C0FB3739D308A7C6F /* libDACircularProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDACircularProgress.a; path = libDACircularProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D935E551BE54444B36E604D170ADA423 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		DAC99E25D02A8B3C35A7398517D419DD /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		DF8C1BE7DC6DC892417D74B230237D3C /* MWCaptionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWCaptionView.m; path = Pod/Classes/MWCaptionView.m; sourceTree = "<group>"; };
 		DF9513BD802C7AC6FFA55C93B21F13BA /* MWGridViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWGridViewController.h; path = Pod/Classes/MWGridViewController.h; sourceTree = "<group>"; };
 		E1F71C1397F67FD02AA0F67ADA1BD41A /* DACircularProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DACircularProgressView.h; path = DACircularProgress/DACircularProgressView.h; sourceTree = "<group>"; };
 		E2608551650F0BFD01959FA0EC332AF3 /* PlayButtonOverlayLarge@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PlayButtonOverlayLarge@2x.png"; path = "Pod/Assets/PlayButtonOverlayLarge@2x.png"; sourceTree = "<group>"; };
-		E89DD057AEB17B0CBFDD7AD8CBBB2795 /* Pods-Surbiton Food FestivalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food FestivalTests.release.xcconfig"; sourceTree = "<group>"; };
+		E7C24BF0CA55C49110CFB48C538EEDDD /* Pods-International Youth Arts Festival-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-International Youth Arts Festival-acknowledgements.plist"; sourceTree = "<group>"; };
 		E934F7CAB5CFB89C230C7FB8705345E5 /* DACircularProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DACircularProgress.xcconfig; sourceTree = "<group>"; };
 		E9B94D01D2676EF992D5B362B50104F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		EAB910DAFC8149BE887E08790DC2A70C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		EAF6318B8E292EBFB29701A4A8F4B3D6 /* FAKMaterialIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKMaterialIcons.m; path = FontAwesomeKit/FAKMaterialIcons.m; sourceTree = "<group>"; };
 		ED4B70B776F34928CBFBB53847B3156D /* MWCaptionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWCaptionView.h; path = Pod/Classes/MWCaptionView.h; sourceTree = "<group>"; };
-		EE6B6D722D8A0FB61B5479710F49C632 /* Pods-Surbiton Food Festival-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Surbiton Food Festival-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EDAD9CC60C292EC0B85FC93C430D9D71 /* Pods-Surbiton Food Festival-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Surbiton Food Festival-acknowledgements.plist"; sourceTree = "<group>"; };
+		EEA77477830D9E8D4672602A9D4A47AD /* Pods-International Youth Arts Festival-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-International Youth Arts Festival-dummy.m"; sourceTree = "<group>"; };
 		EF8A09804EAE0DFFC1F30FA6B62468D1 /* VideoOverlay@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "VideoOverlay@2x.png"; path = "Pod/Assets/VideoOverlay@2x.png"; sourceTree = "<group>"; };
 		F168972495014FDD0F85A44055C54262 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.otf; path = FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		F46E5DB80502C30D0569B0D9CDA76DDA /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
 		F5837FC020BB0E88FBCAE41C72E231F5 /* ImageError@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ImageError@2x.png"; path = "Pod/Assets/ImageError@2x.png"; sourceTree = "<group>"; };
-		FC79DAC7D26589A6F970E526717900E1 /* Pods-Surbiton Food FestivalTests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Surbiton Food FestivalTests.development.xcconfig"; sourceTree = "<group>"; };
 		FD8CAD510986D3940D1A03D95482C0DC /* FAKMaterialIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKMaterialIcons.h; path = FontAwesomeKit/FAKMaterialIcons.h; sourceTree = "<group>"; };
 		FE04A585004F9DF817C709FD46CADC1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		FF441118D70E34A8919604510E445F36 /* FAKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIcon.m; path = FontAwesomeKit/FAKIcon.m; sourceTree = "<group>"; };
@@ -431,11 +480,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7363191D0E16779C3783384514494FEC /* Frameworks */ = {
+		4BA57391D2C67B0D1E07DDE9DB89B552 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B315A4040A827C8A922A76CF6321FAD /* Foundation.framework in Frameworks */,
+				C1714EA0964A26D95E6861787E6C301B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,20 +517,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D898448C7F149D58AF3508A8E8B8A4A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA59A79FE0E4348EB0A7E220A138578D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AB7BBD90E58BD3B258C89281D61C936E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E256EA58D7BF8F4AE259178B8FD04255 /* Foundation.framework in Frameworks */,
 				EF7B26176A83DF42CF4EA03335264AE4 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDDFDDC4B611F7CD7A5DFE3EC8FC7CB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFFA91350259D8B64BBFF6B9F728A41D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,26 +724,52 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				785553737B06AFC3DA711DDEB7D56194 /* Frameworks */,
 				8F036CAC9789E4D6B99539A62490518C /* Pods */,
-				F5D5A47991B92EA0AF23C54315A7FC38 /* Products */,
-				E6A68376919D4990973E8FE15266835C /* Targets Support Files */,
+				8546859DE2E9BC74ABD3467FEDAE5B36 /* Products */,
+				8724C1F91C891F9EE385866DED5F2D5B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7EAF597FC045841F83AC834580687453 /* Pods-Surbiton Food FestivalTests */ = {
+		8546859DE2E9BC74ABD3467FEDAE5B36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C89DE290822F3E04C185FFA14733A7EA /* Pods-Surbiton Food FestivalTests-acknowledgements.markdown */,
-				D89364CE306255F7276E2A7C09939DE1 /* Pods-Surbiton Food FestivalTests-acknowledgements.plist */,
-				2BD16FAE26969FEA8DB368B0695A495C /* Pods-Surbiton Food FestivalTests-dummy.m */,
-				0B50AA1BDF1E5844F643430E365CC915 /* Pods-Surbiton Food FestivalTests-frameworks.sh */,
-				D205CA41D580771E1528C5B53E8B867A /* Pods-Surbiton Food FestivalTests-resources.sh */,
-				029DF46820441024C57CEB0D9AC3EBD5 /* Pods-Surbiton Food FestivalTests.debug.xcconfig */,
-				FC79DAC7D26589A6F970E526717900E1 /* Pods-Surbiton Food FestivalTests.development.xcconfig */,
-				6B648529794FCAF34DBD5F0CC05A0546 /* Pods-Surbiton Food FestivalTests.production.xcconfig */,
-				E89DD057AEB17B0CBFDD7AD8CBBB2795 /* Pods-Surbiton Food FestivalTests.release.xcconfig */,
+				D81D276DD2CC941C0FB3739D308A7C6F /* libDACircularProgress.a */,
+				D549355736F4FC392394791ADF3CD280 /* libFontAwesomeKit.a */,
+				09E1C917F74CBED07E68947CF52B9726 /* libKILabel.a */,
+				88194F01B5BA88EE528BBB11C45D5752 /* libMBProgressHUD.a */,
+				145488E68219500189C3D85F5CFF9A53 /* libMWPhotoBrowser.a */,
+				592A7EF4891567EDEB5941A1ECCDAE46 /* libPods-International Youth Arts Festival.a */,
+				6457B85E372008B04647FB3B314FB946 /* libPods-Surbiton Food Festival.a */,
+				4CA2A8A3525720DFA5632132C086AE9F /* libSDWebImage.a */,
+				BD186A1F6C1F011958F33E1544CA473B /* libUITableView+FDTemplateLayoutCell.a */,
+				970B342B1755DDD4C3F9FA88483861C6 /* MWPhotoBrowser.bundle */,
 			);
-			name = "Pods-Surbiton Food FestivalTests";
-			path = "Target Support Files/Pods-Surbiton Food FestivalTests";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		865EB577F74F72DEDE9C8B006DDED130 /* Pods-Surbiton Food Festival */ = {
+			isa = PBXGroup;
+			children = (
+				155B1BE392E3836EF603E0C1AD4CDF9D /* Pods-Surbiton Food Festival-acknowledgements.markdown */,
+				EDAD9CC60C292EC0B85FC93C430D9D71 /* Pods-Surbiton Food Festival-acknowledgements.plist */,
+				74E8914A84345182AA27F91D93C83C06 /* Pods-Surbiton Food Festival-dummy.m */,
+				35A86892C44F49A34ECAA58DE5B3A2C2 /* Pods-Surbiton Food Festival-frameworks.sh */,
+				501AF46C43CE3C72BE0E4C8DE3B3288C /* Pods-Surbiton Food Festival-resources.sh */,
+				6750F751D2459011C2C861C4ABC054D6 /* Pods-Surbiton Food Festival.debug.xcconfig */,
+				F46E5DB80502C30D0569B0D9CDA76DDA /* Pods-Surbiton Food Festival.development.xcconfig */,
+				BE75E6E3B01481D4580208A86751D44B /* Pods-Surbiton Food Festival.production.xcconfig */,
+				B1C2DFAB73567313C45E4E3E3D22D50E /* Pods-Surbiton Food Festival.release.xcconfig */,
+			);
+			name = "Pods-Surbiton Food Festival";
+			path = "Target Support Files/Pods-Surbiton Food Festival";
+			sourceTree = "<group>";
+		};
+		8724C1F91C891F9EE385866DED5F2D5B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7A5ABD2990EE7CEBEC48963BF2749A5 /* Pods-International Youth Arts Festival */,
+				865EB577F74F72DEDE9C8B006DDED130 /* Pods-Surbiton Food Festival */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		8B954DB1EDA5841245B5F480B1A2C549 /* MBProgressHUD */ = {
@@ -821,30 +896,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		C97BF7A9540CC7A0DDE32DEFB41161D9 /* Pods-Surbiton Food Festival */ = {
+		D7A5ABD2990EE7CEBEC48963BF2749A5 /* Pods-International Youth Arts Festival */ = {
 			isa = PBXGroup;
 			children = (
-				EE6B6D722D8A0FB61B5479710F49C632 /* Pods-Surbiton Food Festival-acknowledgements.markdown */,
-				D53C3933E482D65A859CEF8682D93C21 /* Pods-Surbiton Food Festival-acknowledgements.plist */,
-				A6659A0310B98A2BF3896BE5F598EF3E /* Pods-Surbiton Food Festival-dummy.m */,
-				C7F7F0DB17E33D848EE7828D06C5FC34 /* Pods-Surbiton Food Festival-frameworks.sh */,
-				6310A89E42C3C9C89027210A1A32B6E6 /* Pods-Surbiton Food Festival-resources.sh */,
-				9EEFF425387F52953BBB0D538CB5CEF7 /* Pods-Surbiton Food Festival.debug.xcconfig */,
-				BEC41D9DD498130B20F53E4D72795A95 /* Pods-Surbiton Food Festival.development.xcconfig */,
-				B431D41CE6586A2B6C6E284FC5C07F5B /* Pods-Surbiton Food Festival.production.xcconfig */,
-				790F79B253153E7A25B5B848B0B6757F /* Pods-Surbiton Food Festival.release.xcconfig */,
+				2502FDF0BE0E257FC6F2CAD859535F70 /* Pods-International Youth Arts Festival-acknowledgements.markdown */,
+				E7C24BF0CA55C49110CFB48C538EEDDD /* Pods-International Youth Arts Festival-acknowledgements.plist */,
+				EEA77477830D9E8D4672602A9D4A47AD /* Pods-International Youth Arts Festival-dummy.m */,
+				0C9808CA61DC5B475911715AE832199F /* Pods-International Youth Arts Festival-frameworks.sh */,
+				8AB88B20AA3AAA1416088A2A8C51E280 /* Pods-International Youth Arts Festival-resources.sh */,
+				814B917DAF3D95B91D60C729C304F939 /* Pods-International Youth Arts Festival.debug.xcconfig */,
+				CF59819F084A6071C17EC2725162F0B5 /* Pods-International Youth Arts Festival.development.xcconfig */,
+				60F15FB821D886CBB2B8709B3E49BE9C /* Pods-International Youth Arts Festival.production.xcconfig */,
+				6C8B5357A2268D926FBC23D1EE5BFAE4 /* Pods-International Youth Arts Festival.release.xcconfig */,
 			);
-			name = "Pods-Surbiton Food Festival";
-			path = "Target Support Files/Pods-Surbiton Food Festival";
-			sourceTree = "<group>";
-		};
-		E6A68376919D4990973E8FE15266835C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C97BF7A9540CC7A0DDE32DEFB41161D9 /* Pods-Surbiton Food Festival */,
-				7EAF597FC045841F83AC834580687453 /* Pods-Surbiton Food FestivalTests */,
-			);
-			name = "Targets Support Files";
+			name = "Pods-International Youth Arts Festival";
+			path = "Target Support Files/Pods-International Youth Arts Festival";
 			sourceTree = "<group>";
 		};
 		E7036ABA6412E412DC5C80426AC240F9 /* Support Files */ = {
@@ -874,23 +940,6 @@
 				2FF6AAF4799E9F0D0E372656CF0AD02C /* Resources */,
 			);
 			name = Octicons;
-			sourceTree = "<group>";
-		};
-		F5D5A47991B92EA0AF23C54315A7FC38 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0C4B9343748B476F7D85F89CFC1D02C2 /* libDACircularProgress.a */,
-				0EF2F7D3BA33DA84F824C98559AD499C /* libFontAwesomeKit.a */,
-				8CCF7417B1AF41C7CE96A8B6601FDC02 /* libKILabel.a */,
-				5A2BA82B09BA49F80B61D364E92D8308 /* libMBProgressHUD.a */,
-				87AA6CF70D7CDDCABD7D678C88AC897F /* libMWPhotoBrowser.a */,
-				40E4AC52495D405AB019BFD597D3A862 /* libPods-Surbiton Food Festival.a */,
-				CBFC488E73736EF460D7E552EF486AB0 /* libPods-Surbiton Food FestivalTests.a */,
-				4A46FD93C147B8E5C7D3A67A543FED60 /* libSDWebImage.a */,
-				9420DAAD8B2EA41C369E6B393EE9C8D8 /* libUITableView+FDTemplateLayoutCell.a */,
-				143A9E0989E004F14BD700C2221CC5F6 /* MWPhotoBrowser.bundle */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F65303664E02E328453F4EE6F68419AA /* Resources */ = {
@@ -998,6 +1047,17 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1B2F2B59E946192A8CA0803CB8F0A0BF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036014421AEA665075C6FEF1962C18D4 /* UITableView+FDIndexPathHeightCache.h in Headers */,
+				8C2BACD46BB0673316A92B4E984CA956 /* UITableView+FDKeyedHeightCache.h in Headers */,
+				8CB03D00E626FD86DD1C0656E4EA1AD2 /* UITableView+FDTemplateLayoutCell.h in Headers */,
+				C75D044B163C1557B729AFAB16273116 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DFE06754E4C68D81D566BF89ABCE735 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1079,17 +1139,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEAFC5D842A2193F3607648324EE4C84 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E43E00FFD97222B12A4D32960D723CC /* UITableView+FDIndexPathHeightCache.h in Headers */,
-				1241239ECE5048B3F82DEA30A528EF18 /* UITableView+FDKeyedHeightCache.h in Headers */,
-				B8D4B58F6221BD70641E38D23C222427 /* UITableView+FDTemplateLayoutCell.h in Headers */,
-				9A18180AFFB0EC49392AB4CC140287C4 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -1107,23 +1156,24 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = 5A2BA82B09BA49F80B61D364E92D8308 /* libMBProgressHUD.a */;
+			productReference = 88194F01B5BA88EE528BBB11C45D5752 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		03855EF124590F418B9D7F01F58EF980 /* Pods-Surbiton Food FestivalTests */ = {
+		2BCADB8058BCE21216744D4FF41685AF /* UITableView+FDTemplateLayoutCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C601881A0B1F719E903BA1D6DE346686 /* Build configuration list for PBXNativeTarget "Pods-Surbiton Food FestivalTests" */;
+			buildConfigurationList = 2B57E1E2819EB2CF8F1A9E2422E1A70A /* Build configuration list for PBXNativeTarget "UITableView+FDTemplateLayoutCell" */;
 			buildPhases = (
-				64F025AC0BF4237A06F01029F36E9028 /* Sources */,
-				9D898448C7F149D58AF3508A8E8B8A4A /* Frameworks */,
+				5CB30043610E491EFCFD62E994A4CDAC /* Sources */,
+				BDDFDDC4B611F7CD7A5DFE3EC8FC7CB0 /* Frameworks */,
+				1B2F2B59E946192A8CA0803CB8F0A0BF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Surbiton Food FestivalTests";
-			productName = "Pods-Surbiton Food FestivalTests";
-			productReference = CBFC488E73736EF460D7E552EF486AB0 /* libPods-Surbiton Food FestivalTests.a */;
+			name = "UITableView+FDTemplateLayoutCell";
+			productName = "UITableView+FDTemplateLayoutCell";
+			productReference = BD186A1F6C1F011958F33E1544CA473B /* libUITableView+FDTemplateLayoutCell.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		624FE0C30D87B72F354DD168B162AB32 /* MWPhotoBrowser-MWPhotoBrowser */ = {
@@ -1140,25 +1190,8 @@
 			);
 			name = "MWPhotoBrowser-MWPhotoBrowser";
 			productName = "MWPhotoBrowser-MWPhotoBrowser";
-			productReference = 143A9E0989E004F14BD700C2221CC5F6 /* MWPhotoBrowser.bundle */;
+			productReference = 970B342B1755DDD4C3F9FA88483861C6 /* MWPhotoBrowser.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		65FD9654925B0116A642A80A838C4954 /* UITableView+FDTemplateLayoutCell */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7D07C572A4C584885F6853D52EC8BA77 /* Build configuration list for PBXNativeTarget "UITableView+FDTemplateLayoutCell" */;
-			buildPhases = (
-				DE6A6ACE744E361DA9B814DD8A2D6D20 /* Sources */,
-				7363191D0E16779C3783384514494FEC /* Frameworks */,
-				FEAFC5D842A2193F3607648324EE4C84 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "UITableView+FDTemplateLayoutCell";
-			productName = "UITableView+FDTemplateLayoutCell";
-			productReference = 9420DAAD8B2EA41C369E6B393EE9C8D8 /* libUITableView+FDTemplateLayoutCell.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 		A7769074B0C8F0766C05653454FE49E2 /* KILabel */ = {
 			isa = PBXNativeTarget;
@@ -1174,7 +1207,30 @@
 			);
 			name = KILabel;
 			productName = KILabel;
-			productReference = 8CCF7417B1AF41C7CE96A8B6601FDC02 /* libKILabel.a */;
+			productReference = 09E1C917F74CBED07E68947CF52B9726 /* libKILabel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A8ED7E70C174D88B92D85C2DFF448A81 /* Pods-International Youth Arts Festival */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41702E1E3A81DF5E029644126F63CA6B /* Build configuration list for PBXNativeTarget "Pods-International Youth Arts Festival" */;
+			buildPhases = (
+				07B44B994C76D1045BD1BA8827C6C040 /* Sources */,
+				4BA57391D2C67B0D1E07DDE9DB89B552 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				292CA15535810ACFEF2D731DB96C41D2 /* PBXTargetDependency */,
+				B9BF9D3EBDAAD000DD374A73058E707C /* PBXTargetDependency */,
+				8D0F27267C9996D33A7993F1F955800E /* PBXTargetDependency */,
+				14619CD9A1A61CAD0F77DB8D38E703A7 /* PBXTargetDependency */,
+				192F4CB4B7002E3694D70DB339BA97E8 /* PBXTargetDependency */,
+				38436B8774F41DD61491235881C511A2 /* PBXTargetDependency */,
+				91D5373CFA53456E01B1E1A2B247A1BC /* PBXTargetDependency */,
+			);
+			name = "Pods-International Youth Arts Festival";
+			productName = "Pods-International Youth Arts Festival";
+			productReference = 592A7EF4891567EDEB5941A1ECCDAE46 /* libPods-International Youth Arts Festival.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		B9CF28FAB7189F08A5E981B6A7F3CB87 /* FontAwesomeKit */ = {
@@ -1191,7 +1247,7 @@
 			);
 			name = FontAwesomeKit;
 			productName = FontAwesomeKit;
-			productReference = 0EF2F7D3BA33DA84F824C98559AD499C /* libFontAwesomeKit.a */;
+			productReference = D549355736F4FC392394791ADF3CD280 /* libFontAwesomeKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		C82F33AB94F66F19C29649DE0FE51706 /* DACircularProgress */ = {
@@ -1208,7 +1264,7 @@
 			);
 			name = DACircularProgress;
 			productName = DACircularProgress;
-			productReference = 0C4B9343748B476F7D85F89CFC1D02C2 /* libDACircularProgress.a */;
+			productReference = D81D276DD2CC941C0FB3739D308A7C6F /* libDACircularProgress.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		E33A21CCFBFAA6904AF533E9711E2D1B /* Pods-Surbiton Food Festival */ = {
@@ -1231,7 +1287,7 @@
 			);
 			name = "Pods-Surbiton Food Festival";
 			productName = "Pods-Surbiton Food Festival";
-			productReference = 40E4AC52495D405AB019BFD597D3A862 /* libPods-Surbiton Food Festival.a */;
+			productReference = 6457B85E372008B04647FB3B314FB946 /* libPods-Surbiton Food Festival.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		E9E468029AF4C77D341FE426D477EC03 /* MWPhotoBrowser */ = {
@@ -1252,7 +1308,7 @@
 			);
 			name = MWPhotoBrowser;
 			productName = MWPhotoBrowser;
-			productReference = 87AA6CF70D7CDDCABD7D678C88AC897F /* libMWPhotoBrowser.a */;
+			productReference = 145488E68219500189C3D85F5CFF9A53 /* libMWPhotoBrowser.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		EDF2C5864FB87D44328AD1069E812614 /* SDWebImage */ = {
@@ -1269,7 +1325,7 @@
 			);
 			name = SDWebImage;
 			productName = SDWebImage;
-			productReference = 4A46FD93C147B8E5C7D3A67A543FED60 /* libSDWebImage.a */;
+			productReference = 4CA2A8A3525720DFA5632132C086AE9F /* libSDWebImage.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1289,7 +1345,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F5D5A47991B92EA0AF23C54315A7FC38 /* Products */;
+			productRefGroup = 8546859DE2E9BC74ABD3467FEDAE5B36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1299,10 +1355,10 @@
 				0103985B4A1B76AD2A88D0AE816C6905 /* MBProgressHUD */,
 				E9E468029AF4C77D341FE426D477EC03 /* MWPhotoBrowser */,
 				624FE0C30D87B72F354DD168B162AB32 /* MWPhotoBrowser-MWPhotoBrowser */,
+				A8ED7E70C174D88B92D85C2DFF448A81 /* Pods-International Youth Arts Festival */,
 				E33A21CCFBFAA6904AF533E9711E2D1B /* Pods-Surbiton Food Festival */,
-				03855EF124590F418B9D7F01F58EF980 /* Pods-Surbiton Food FestivalTests */,
 				EDF2C5864FB87D44328AD1069E812614 /* SDWebImage */,
-				65FD9654925B0116A642A80A838C4954 /* UITableView+FDTemplateLayoutCell */,
+				2BCADB8058BCE21216744D4FF41685AF /* UITableView+FDTemplateLayoutCell */,
 			);
 		};
 /* End PBXProject section */
@@ -1351,6 +1407,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		07B44B994C76D1045BD1BA8827C6C040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AA8E5B50C4377B46561BE65D0AA9E4A /* Pods-International Youth Arts Festival-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		297A8CDCF7DA647415A830DE443F5E31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1392,18 +1456,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5CB30043610E491EFCFD62E994A4CDAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81CBEE444053865993A650B9B20185FF /* UITableView+FDIndexPathHeightCache.m in Sources */,
+				A3634287A331524DFE9906EDDF388089 /* UITableView+FDKeyedHeightCache.m in Sources */,
+				B5CC0EB0BF633D7C45AD97C7070357FE /* UITableView+FDTemplateLayoutCell-dummy.m in Sources */,
+				0469B020D6823A3DC078E20B46E99B4D /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				95F9BF82A37308A9F7692A784926449B /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62097096683D91717655CF2F4890FEC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64F025AC0BF4237A06F01029F36E9028 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEBB8BE10E4F500AD5F1ED029FE7EB04 /* Pods-Surbiton Food FestivalTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1456,32 +1524,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6A6ACE744E361DA9B814DD8A2D6D20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1589A2DA624442E93DFE6190E3D4F1CB /* UITableView+FDIndexPathHeightCache.m in Sources */,
-				BB26C1B287BF5C838F03AE134D90998C /* UITableView+FDKeyedHeightCache.m in Sources */,
-				D00D5641DA4E7F61859FD4DAC301B067 /* UITableView+FDTemplateLayoutCell-dummy.m in Sources */,
-				DEE41CD7BD8000C59A7435EE24BDE95C /* UITableView+FDTemplateLayoutCell.m in Sources */,
-				C2347E9C46F9275DEB1B6C2B06358481 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		13172D4C5F0D3E45A3423F6D94596AAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UITableView+FDTemplateLayoutCell";
-			target = 65FD9654925B0116A642A80A838C4954 /* UITableView+FDTemplateLayoutCell */;
+			target = 2BCADB8058BCE21216744D4FF41685AF /* UITableView+FDTemplateLayoutCell */;
 			targetProxy = 5015D45EA64CBC40BAD5FAD385ABA1F8 /* PBXContainerItemProxy */;
+		};
+		14619CD9A1A61CAD0F77DB8D38E703A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 0103985B4A1B76AD2A88D0AE816C6905 /* MBProgressHUD */;
+			targetProxy = A439A47F894D297A3E674DAA3198B7DE /* PBXContainerItemProxy */;
+		};
+		192F4CB4B7002E3694D70DB339BA97E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MWPhotoBrowser;
+			target = E9E468029AF4C77D341FE426D477EC03 /* MWPhotoBrowser */;
+			targetProxy = E945851A37F56E8ABB079C84D05D4485 /* PBXContainerItemProxy */;
+		};
+		292CA15535810ACFEF2D731DB96C41D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DACircularProgress;
+			target = C82F33AB94F66F19C29649DE0FE51706 /* DACircularProgress */;
+			targetProxy = 1F7420B778227B3CF8D4F7BB851E7376 /* PBXContainerItemProxy */;
 		};
 		30DE8738CC18883DBB617E5A5DE8E567 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MWPhotoBrowser;
 			target = E9E468029AF4C77D341FE426D477EC03 /* MWPhotoBrowser */;
 			targetProxy = F1AD38AA21DE4A57D1AEE653336E0E77 /* PBXContainerItemProxy */;
+		};
+		38436B8774F41DD61491235881C511A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			target = EDF2C5864FB87D44328AD1069E812614 /* SDWebImage */;
+			targetProxy = 0F90A72797427DFF529BA28B9B82D8FB /* PBXContainerItemProxy */;
 		};
 		5226318A75DE43B84D506F4C4E120B86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1507,6 +1587,18 @@
 			target = 0103985B4A1B76AD2A88D0AE816C6905 /* MBProgressHUD */;
 			targetProxy = C64534637C2DCEABB933FAF4EFBF4BF5 /* PBXContainerItemProxy */;
 		};
+		8D0F27267C9996D33A7993F1F955800E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KILabel;
+			target = A7769074B0C8F0766C05653454FE49E2 /* KILabel */;
+			targetProxy = 54739D01D6B5510316613B3129C5B9EB /* PBXContainerItemProxy */;
+		};
+		91D5373CFA53456E01B1E1A2B247A1BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UITableView+FDTemplateLayoutCell";
+			target = 2BCADB8058BCE21216744D4FF41685AF /* UITableView+FDTemplateLayoutCell */;
+			targetProxy = A51226A107758F0AD35D935269A12C7C /* PBXContainerItemProxy */;
+		};
 		928B0F4F99424AB1C40D38B175BC2EEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KILabel;
@@ -1530,6 +1622,12 @@
 			name = "MWPhotoBrowser-MWPhotoBrowser";
 			target = 624FE0C30D87B72F354DD168B162AB32 /* MWPhotoBrowser-MWPhotoBrowser */;
 			targetProxy = E3DDD5D3B8FCB981C69DFF5010B169F6 /* PBXContainerItemProxy */;
+		};
+		B9BF9D3EBDAAD000DD374A73058E707C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesomeKit;
+			target = B9CF28FAB7189F08A5E981B6A7F3CB87 /* FontAwesomeKit */;
+			targetProxy = 26BD5F5DF7F9399AC97E588DFD304B44 /* PBXContainerItemProxy */;
 		};
 		EC4DA3433CD819E344748C5B6F1BF4CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1620,6 +1718,28 @@
 			};
 			name = Production;
 		};
+		0572DF4B05FF8911ADD3F62913EA22AD /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C072D0D287F3492C92CA69C482BECC56 /* UITableView+FDTemplateLayoutCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Development;
+		};
 		0A98A2F3388159AC53191E5DF43B5EEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91948DABE77D961DA4AA55BC5473806F /* KILabel.xcconfig */;
@@ -1641,7 +1761,29 @@
 			};
 			name = Debug;
 		};
-		21AC14C217844A6ECD96B60F6B652E26 /* Debug */ = {
+		0D0E3D3D99A7A3C6CC7A0006B63E0113 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C072D0D287F3492C92CA69C482BECC56 /* UITableView+FDTemplateLayoutCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
+		};
+		1A424D32DB43D3591B7DFA575B34F3B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C072D0D287F3492C92CA69C482BECC56 /* UITableView+FDTemplateLayoutCell.xcconfig */;
 			buildSettings = {
@@ -1708,7 +1850,7 @@
 		};
 		3D3B59CDBB79F67F9BDAC6619EFF3635 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 790F79B253153E7A25B5B848B0B6757F /* Pods-Surbiton Food Festival.release.xcconfig */;
+			baseConfigurationReference = B1C2DFAB73567313C45E4E3E3D22D50E /* Pods-Surbiton Food Festival.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1737,49 +1879,6 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/KILabel/KILabel-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Production;
-		};
-		48A42D679F62EB8F91765100F24EA6BE /* Development */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC79DAC7D26589A6F970E526717900E1 /* Pods-Surbiton Food FestivalTests.development.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Development;
-		};
-		4E4DDE0492666F854E0F37352C49665C /* Production */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C072D0D287F3492C92CA69C482BECC56 /* UITableView+FDTemplateLayoutCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -1837,7 +1936,7 @@
 		};
 		57074F4B9E7EDC0FF750E47D0198FB6A /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEC41D9DD498130B20F53E4D72795A95 /* Pods-Surbiton Food Festival.development.xcconfig */;
+			baseConfigurationReference = F46E5DB80502C30D0569B0D9CDA76DDA /* Pods-Surbiton Food Festival.development.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1895,28 +1994,6 @@
 			};
 			name = Development;
 		};
-		6692792F11475EB4873D4B96AC39204B /* Development */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C072D0D287F3492C92CA69C482BECC56 /* UITableView+FDTemplateLayoutCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Development;
-		};
 		70543841FF3C6023236497E9E0D6F761 /* Development */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3790A4AA07D3CD9116B3A8CB42C36731 /* SDWebImage.xcconfig */;
@@ -1938,27 +2015,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Development;
-		};
-		7C849E3B6EF1FA68F7898D2E59526057 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E89DD057AEB17B0CBFDD7AD8CBBB2795 /* Pods-Surbiton Food FestivalTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		88C3EBF64115CAF12ED7BF8F728DE991 /* Production */ = {
 			isa = XCBuildConfiguration;
@@ -2003,6 +2059,28 @@
 			};
 			name = Debug;
 		};
+		8DC1A215D1AF9A647C988DF25F301842 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C072D0D287F3492C92CA69C482BECC56 /* UITableView+FDTemplateLayoutCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		93121112B7D17AC32EA069ECE9F54597 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FC91BB19C9ADA54F2FF5D09EFC74C46 /* MBProgressHUD.xcconfig */;
@@ -2025,28 +2103,6 @@
 			};
 			name = Debug;
 		};
-		97C66976158A391A74D953916A19B0A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C072D0D287F3492C92CA69C482BECC56 /* UITableView+FDTemplateLayoutCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		9B42C16ABFD63DCD39040B1EA57F0A03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E934F7CAB5CFB89C230C7FB8705345E5 /* DACircularProgress.xcconfig */;
@@ -2067,6 +2123,27 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		9E63183AAA597BEA53E84862A120057D /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60F15FB821D886CBB2B8709B3E49BE9C /* Pods-International Youth Arts Festival.production.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
 		};
 		9EAA1BE4ADD35F5B9AD3026C9ABECCF0 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2175,7 +2252,7 @@
 		};
 		B5519D9B87CA26B2A0251B8BD86D5BE6 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B431D41CE6586A2B6C6E284FC5C07F5B /* Pods-Surbiton Food Festival.production.xcconfig */;
+			baseConfigurationReference = BE75E6E3B01481D4580208A86751D44B /* Pods-Surbiton Food Festival.production.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2193,6 +2270,27 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Production;
+		};
+		BD175CDAE6B0E9C0778A30687A1AAECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C8B5357A2268D926FBC23D1EE5BFAE4 /* Pods-International Youth Arts Festival.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		BFE57BC01E177F95821728861995925C /* Production */ = {
 			isa = XCBuildConfiguration;
@@ -2360,27 +2458,6 @@
 			};
 			name = Release;
 		};
-		CCF1E4A5D906AFC19128EF503C9D957A /* Production */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B648529794FCAF34DBD5F0CC05A0546 /* Pods-Surbiton Food FestivalTests.production.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Production;
-		};
 		D0157D8BE09DA59F9B7AE9D2417A1D17 /* Production */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB59A52668DBAEE11751D9910BD5FA67 /* MWPhotoBrowser.xcconfig */;
@@ -2503,7 +2580,7 @@
 		};
 		DDD34F220C9E143EF3501B0C895025BE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EEFF425387F52953BBB0D538CB5CEF7 /* Pods-Surbiton Food Festival.debug.xcconfig */;
+			baseConfigurationReference = 6750F751D2459011C2C861C4ABC054D6 /* Pods-Surbiton Food Festival.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2521,9 +2598,9 @@
 			};
 			name = Debug;
 		};
-		E87A3264E9153613CB84A83B9DA9CCD9 /* Debug */ = {
+		E1108ADB772F18447BDF860466DBA52B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 029DF46820441024C57CEB0D9AC3EBD5 /* Pods-Surbiton Food FestivalTests.debug.xcconfig */;
+			baseConfigurationReference = 814B917DAF3D95B91D60C729C304F939 /* Pods-International Youth Arts Festival.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2622,6 +2699,27 @@
 			};
 			name = Debug;
 		};
+		FE33192213D381822EFF4CDACBCF00BD /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF59819F084A6071C17EC2725162F0B5 /* Pods-International Youth Arts Festival.development.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Development;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2636,6 +2734,17 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2B57E1E2819EB2CF8F1A9E2422E1A70A /* Build configuration list for PBXNativeTarget "UITableView+FDTemplateLayoutCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A424D32DB43D3591B7DFA575B34F3B4 /* Debug */,
+				0572DF4B05FF8911ADD3F62913EA22AD /* Development */,
+				0D0E3D3D99A7A3C6CC7A0006B63E0113 /* Production */,
+				8DC1A215D1AF9A647C988DF25F301842 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2643,6 +2752,17 @@
 				015BF7A89D568C616A4C51C577D249D5 /* Development */,
 				C0161D974B5005B62F0114DA33D2C1E4 /* Production */,
 				DA03565BE765DB55C6448FB363A44481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41702E1E3A81DF5E029644126F63CA6B /* Build configuration list for PBXNativeTarget "Pods-International Youth Arts Festival" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1108ADB772F18447BDF860466DBA52B /* Debug */,
+				FE33192213D381822EFF4CDACBCF00BD /* Development */,
+				9E63183AAA597BEA53E84862A120057D /* Production */,
+				BD175CDAE6B0E9C0778A30687A1AAECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2669,17 +2789,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D07C572A4C584885F6853D52EC8BA77 /* Build configuration list for PBXNativeTarget "UITableView+FDTemplateLayoutCell" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				21AC14C217844A6ECD96B60F6B652E26 /* Debug */,
-				6692792F11475EB4873D4B96AC39204B /* Development */,
-				4E4DDE0492666F854E0F37352C49665C /* Production */,
-				97C66976158A391A74D953916A19B0A0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8AF7998EE48652C9F655CA3152DB4C97 /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2698,17 +2807,6 @@
 				FA17C03A3716E493412A358347962718 /* Development */,
 				88C3EBF64115CAF12ED7BF8F728DE991 /* Production */,
 				A531FA8629F119E19CCBDF89C69496AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C601881A0B1F719E903BA1D6DE346686 /* Build configuration list for PBXNativeTarget "Pods-Surbiton Food FestivalTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E87A3264E9153613CB84A83B9DA9CCD9 /* Debug */,
-				48A42D679F62EB8F91765100F24EA6BE /* Development */,
-				CCF1E4A5D906AFC19128EF503C9D957A /* Production */,
-				7C849E3B6EF1FA68F7898D2E59526057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
