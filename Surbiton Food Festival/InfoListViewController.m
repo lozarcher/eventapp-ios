@@ -51,7 +51,10 @@
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     storePath = [NSString stringWithFormat:@"%@/Infos.plist", aCachesDirectory];
     
-    self.title = NSLocalizedString(@"Get Involved", nil);
+    NSBundle* mainBundle = [NSBundle mainBundle];
+    NSString *pageTitle = [mainBundle objectForInfoDictionaryKey:@"InfoTitle"];
+    if (!pageTitle) pageTitle = @"Info";
+    self.title = NSLocalizedString(pageTitle, nil);
     
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
                                                                          style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];

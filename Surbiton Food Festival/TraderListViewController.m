@@ -53,6 +53,7 @@
     
     NSBundle* mainBundle = [NSBundle mainBundle];
     NSString *pageTitle = [mainBundle objectForInfoDictionaryKey:@"TraderTitle"];
+    if (!pageTitle) pageTitle = @"Traders";
     self.title = NSLocalizedString(pageTitle, nil);
     
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
