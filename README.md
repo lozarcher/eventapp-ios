@@ -10,7 +10,7 @@
 
 ### Related Repositories
 
-![Android App](https://github.com/lozarcher/eventapp-android) 
+[Android App](https://github.com/lozarcher/eventapp-android) 
 
 These apps gets their data by accessing REST endpoints exposed by the project [eventapp-feeder](https://github.com/lozarcher/eventapp-feeder/).
 
