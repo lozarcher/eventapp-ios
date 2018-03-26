@@ -1,7 +1,12 @@
-# eventapp-ios-foodfest
-## Surbiton Food Festival iPhone app
+# eventapp-ios
+## Festival iPhone app
+### Surbiton Food Festival
 
-![iPhone screenshot](https://github.com/lozarcher/eventapp-ios-foodfest/blob/master/Screenshots/foodfestialiphone.png)
+![Surbiton Food screenshot](https://github.com/lozarcher/eventapp-ios-foodfest/blob/master/Screenshots/foodfestialiphone.png) 
+
+### International Youth Arts Festival
+
+![IYAF screenshot](https://github.com/lozarcher/eventapp-ios-foodfest/blob/master/Screenshots/iyaf2016.jpg) 
 
 # Data
 
