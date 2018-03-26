@@ -1,5 +1,8 @@
 # eventapp-ios
 ## Festival iPhone app
+
+This repository is currently set up for two festival apps, shown below. The theme is chosen at build time by selecting the appropriate target.
+
 ### Surbiton Food Festival
 
 ![Surbiton Food screenshot](https://github.com/lozarcher/eventapp-ios-foodfest/blob/master/Screenshots/foodfestialiphone.png) 
