@@ -13,5 +13,3 @@
 [Android App: eventapp-android](https://github.com/lozarcher/eventapp-android) 
 
 [eventapp-feeder](https://github.com/lozarcher/eventapp-feeder/), which exposes data as REST endpoints to be consumed by the apps.
-
-
