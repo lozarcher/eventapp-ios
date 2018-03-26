@@ -10,5 +10,5 @@
 
 # Data
 
-The app gets its data by accessing REST endpoints exposed by the project [eventapp-feeder-iyaf](https://github.com/lozarcher/eventapp-feeder-iyaf/).
+The app gets its data by accessing REST endpoints exposed by the project [eventapp-feeder](https://github.com/lozarcher/eventapp-feeder/).
 
