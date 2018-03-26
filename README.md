@@ -1,13 +1,13 @@
 # eventapp-ios
 ## Festival iPhone app
 
-This repository is currently set up for two festival apps, shown below. The theme is chosen at build time by selecting the appropriate target.
+This project is is currently responsible for two festival apps in the store, shown below. The theme is chosen at build time by selecting the appropriate target.
 
-### Surbiton Food Festival
+### Surbiton Food Festival - [Store](http://onelink.to/surbitonfood)
 
 ![Surbiton Food screenshot](https://github.com/lozarcher/eventapp-ios-foodfest/blob/master/Screenshots/foodfestialiphone.png) 
 
-### International Youth Arts Festival
+### International Youth Arts Festival - [Store](http://onelink.to/iyaf)
 
 ![IYAF screenshot](https://github.com/lozarcher/eventapp-ios-foodfest/blob/master/Screenshots/iyaf2016.jpg) 
 
