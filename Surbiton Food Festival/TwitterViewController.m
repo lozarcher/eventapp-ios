@@ -8,6 +8,7 @@
     [super viewDidLoad];
     
     TWTRAPIClient *client = [[TWTRAPIClient alloc] init];
+    
     NSBundle* mainBundle = [NSBundle mainBundle];
     NSString *twitterSearchTerm = [mainBundle objectForInfoDictionaryKey:@"Twitter Search Term"];
     self.dataSource = [[TWTRSearchTimelineDataSource alloc] initWithSearchQuery:twitterSearchTerm APIClient:client];
@@ -17,6 +18,7 @@
     self.title = NSLocalizedString(title, nil);
 
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationController.navigationBar.translucent = NO;
 
 }
 
