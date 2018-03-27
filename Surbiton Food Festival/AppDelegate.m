@@ -12,17 +12,43 @@
 #import "HomeViewController.h"
 #import "RearViewController.h"
 #import "CustomAnimationController.h"
+#import <TwitterKit/TWTRKit.h>
 
 @interface AppDelegate ()<SWRevealViewControllerDelegate>
 @end
 
 @implementation AppDelegate
 
+-(void)getGuestUserToken {
+    [[Twitter sharedInstance].sessionStore
+     fetchGuestSessionWithCompletion:^(TWTRGuestSession *guestSession, NSError *error) {
+         if(guestSession) {
+             NSLog(@"Got guest sesssion %@",guestSession.accessToken);
+         } else {
+             NSLog(@"error: %@", [error localizedDescription]);
+         }
+     }];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSLog(@"Configuration > %@", [MTConfiguration configuration]);
     
     NSLog(@"Environment name > %@", [MTConfiguration environmentName]);
+
+    NSString *keyFile = [[NSBundle mainBundle]  pathForResource:@"keys" ofType:@"plist"];
+    NSDictionary *keyDictionary = [NSDictionary dictionaryWithContentsOfFile:keyFile];
+    
+    if (keyDictionary) {
+        NSString *twitterKey = [keyDictionary objectForKey:@"Twitter key"];
+        NSString *twitterSecret = [keyDictionary objectForKey:@"Twitter secret"];
+        NSLog(@"Key : %@", twitterKey);
+        [[Twitter sharedInstance] startWithConsumerKey:twitterKey consumerSecret:twitterSecret];
+        
+        [self getGuestUserToken];
+    } else {
+        NSLog(@"Cannot load keys.plist for Twitter key and secret");
+    }
     
     self.locationManager = [[CLLocationManager alloc] init];
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)

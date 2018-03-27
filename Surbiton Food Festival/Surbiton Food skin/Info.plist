@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Twitter Search Term</key>
+	<string>from:@surbitonfoodfes OR #surbitonfood</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>twitter</string>
+		<string>twitterauth</string>
+	</array>
 	<key>InfoTitle</key>
 	<string>Get Involved</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -30,6 +37,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb928002470546276</string>
+				<string>twitterkit-&lt;consumerKey&gt;</string>
 			</array>
 		</dict>
 	</array>

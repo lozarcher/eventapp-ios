@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>twitter</string>
+		<string>twitterauth</string>
+	</array>
+	<key>Twitter Search Term</key>
+	<string>from:@IYAF OR #iyaf</string>
 	<key>InfoTitle</key>
 	<string>Info</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -29,6 +36,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>twitterkit-&lt;consumerKey&gt;</string>
 				<string>fb928002470546276</string>
 			</array>
 		</dict>
@@ -42,7 +50,7 @@
 	<key>FacebookDisplayName</key>
 	<string>International Youth Arts Festival</string>
 	<key>Hashtag</key>
-	<string>#iyaf2018</string>
+	<string>#iyaf</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
