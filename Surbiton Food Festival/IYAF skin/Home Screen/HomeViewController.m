@@ -72,28 +72,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    // Iphone X top padding
-    CGFloat topPadding = 0;
-    if (@available(iOS 11.0, *)) {
-        UIWindow *window = UIApplication.sharedApplication.keyWindow;
-        if (window.safeAreaInsets.top > topPadding)
-            topPadding = window.safeAreaInsets.top;
-    }
-    self.topMargin.constant = topPadding;
-    
     // Position menu according to runtime position of the background images
     int screenHeight = [UIScreen mainScreen].bounds.size.height;
     [self.view layoutIfNeeded];
-    CGFloat topImage = self.topImageHeight.constant*1.2;
-    CGFloat bottomImage = screenHeight - (self.bottomImageHeight.constant*0.9);
-    if (topImage < bottomImage) {
-        self.gapBeforeMenu.constant = topImage;
-    } else {
-        self.gapBeforeMenu.constant = bottomImage;
-    }
-    if (self.gapBeforeMenu.constant > screenHeight * 0.45) {
-        self.gapBeforeMenu.constant = screenHeight *0.45;
-    }
+
+    self.gapBeforeMenu.constant = screenHeight *0.45;
     
     // Bottom Padding, tweaked for iPhone X
     CGFloat bottomPadding = screenHeight*0.1;

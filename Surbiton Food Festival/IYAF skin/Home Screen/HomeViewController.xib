@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
-                <outlet property="bottomImageHeight" destination="hS2-LM-ygf" id="1lg-Tk-dZe"/>
                 <outlet property="eventImage" destination="mY1-Vd-njn" id="Fzb-V3-Co5"/>
                 <outlet property="galleryImage" destination="zyf-2d-rf8" id="6Pc-hI-bgZ"/>
                 <outlet property="gapAfterMenu" destination="Wnz-1w-Xda" id="9iM-gW-XBh"/>
@@ -20,8 +19,6 @@
                 <outlet property="infoImage" destination="xPs-Ux-5h7" id="4Rw-6D-aXH"/>
                 <outlet property="newsImage" destination="d3X-v4-iZJ" id="2SR-N8-T8o"/>
                 <outlet property="performersImage" destination="9IS-MF-cr1" id="PaV-gJ-wsp"/>
-                <outlet property="topImageHeight" destination="GeB-b0-f8u" id="ezi-qU-pxS"/>
-                <outlet property="topMargin" destination="XV7-1s-jZD" id="hOe-dr-0k1"/>
                 <outlet property="twitterImage" destination="4aY-N6-kCs" id="LNo-zo-6dI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,22 +28,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dcs-7O-2yM" userLabel="Plain Background Image">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dcs-7O-2yM" userLabel="Background Image">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-top.png" translatesAutoresizingMaskIntoConstraints="NO" id="5K7-nz-qsF">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="5K7-nz-qsF" secondAttribute="height" multiplier="414:367" id="4CQ-Ua-fJX"/>
-                        <constraint firstAttribute="height" priority="250" constant="283" id="GeB-b0-f8u"/>
-                    </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-cZ-u2b">
-                    <rect key="frame" x="0.0" y="284.5" width="320" height="283.5"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="2Re-cZ-u2b" secondAttribute="height" multiplier="207:196" constant="20.07" id="IKM-cs-9hx"/>
-                        <constraint firstAttribute="height" priority="250" constant="283.5" id="hS2-LM-ygf"/>
-                    </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_events.png" translatesAutoresizingMaskIntoConstraints="NO" id="mY1-Vd-njn">
                     <rect key="frame" x="103" y="300" width="114" height="24"/>
@@ -91,22 +74,16 @@
                 <constraint firstItem="zyf-2d-rf8" firstAttribute="height" secondItem="4aY-N6-kCs" secondAttribute="height" id="FH9-ew-eNZ"/>
                 <constraint firstItem="9IS-MF-cr1" firstAttribute="top" secondItem="mY1-Vd-njn" secondAttribute="bottom" constant="20.333333333333314" id="GqI-vu-rAJ"/>
                 <constraint firstItem="d3X-v4-iZJ" firstAttribute="top" secondItem="9IS-MF-cr1" secondAttribute="bottom" constant="16" id="Hqt-ES-3FS"/>
-                <constraint firstItem="5K7-nz-qsF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pi0-Oc-fcT"/>
                 <constraint firstItem="xPs-Ux-5h7" firstAttribute="top" secondItem="4aY-N6-kCs" secondAttribute="bottom" constant="17" id="PtR-Vp-WFQ"/>
                 <constraint firstItem="mY1-Vd-njn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="300" id="TeO-JL-UiA"/>
                 <constraint firstAttribute="bottom" secondItem="xPs-Ux-5h7" secondAttribute="bottom" constant="40" id="Wnz-1w-Xda"/>
-                <constraint firstItem="5K7-nz-qsF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XV7-1s-jZD"/>
                 <constraint firstItem="4aY-N6-kCs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xd9-rX-34L"/>
-                <constraint firstAttribute="bottom" secondItem="2Re-cZ-u2b" secondAttribute="bottom" id="Y9W-TX-K6c"/>
                 <constraint firstItem="xPs-Ux-5h7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YCU-i8-Qio"/>
                 <constraint firstItem="Dcs-7O-2yM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b1N-kz-nIM"/>
                 <constraint firstItem="zyf-2d-rf8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cj8-Ev-R13"/>
-                <constraint firstItem="2Re-cZ-u2b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e7i-ik-ahM"/>
                 <constraint firstAttribute="trailing" secondItem="Dcs-7O-2yM" secondAttribute="trailing" id="gar-Gp-orC"/>
-                <constraint firstAttribute="trailing" secondItem="5K7-nz-qsF" secondAttribute="trailing" id="hYx-7J-srA"/>
                 <constraint firstItem="d3X-v4-iZJ" firstAttribute="height" secondItem="mY1-Vd-njn" secondAttribute="height" id="hns-8e-pVj"/>
                 <constraint firstItem="xPs-Ux-5h7" firstAttribute="height" secondItem="9IS-MF-cr1" secondAttribute="height" id="lhe-Wv-CpL"/>
-                <constraint firstAttribute="trailing" secondItem="2Re-cZ-u2b" secondAttribute="trailing" id="mOj-A8-QEh"/>
                 <constraint firstItem="4aY-N6-kCs" firstAttribute="height" secondItem="9IS-MF-cr1" secondAttribute="height" id="n4m-BP-ITL"/>
                 <constraint firstItem="4aY-N6-kCs" firstAttribute="top" secondItem="zyf-2d-rf8" secondAttribute="bottom" constant="17" id="nZG-gf-udb"/>
                 <constraint firstItem="Dcs-7O-2yM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oOX-RT-wI1"/>
@@ -120,9 +97,7 @@
         </view>
     </objects>
     <resources>
-        <image name="background-bottom.png" width="720" height="582"/>
-        <image name="background-top.png" width="720" height="680"/>
-        <image name="background.png" width="720" height="21"/>
+        <image name="app_background.png" width="1080" height="1920"/>
         <image name="menu_events.png" width="412" height="99"/>
         <image name="menu_gallery.png" width="464" height="91"/>
         <image name="menu_info.png" width="289" height="90"/>
