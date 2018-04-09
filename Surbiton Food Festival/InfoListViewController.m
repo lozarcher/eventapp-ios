@@ -14,6 +14,7 @@
 #import "MTConfiguration.h"
 #import "InfoViewController.h"
 #import "AppDelegate.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 
 @implementation InfoListViewController
 
@@ -28,6 +29,8 @@
     UINib *cellNib = [UINib nibWithNibName:@"InfoViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"InfoViewCell"];
     
+    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+
     //initialise the message label
     messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -134,18 +137,13 @@
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.prototypeCell)
-    {
-        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"InfoViewCell"];
-    }
-    Info *info = [self getInfoForIndexPath:indexPath];
-    [self.prototypeCell populateDataInCell:info];
-    
-    [self.prototypeCell layoutIfNeeded];
-    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
+    return [tableView fd_heightForCellWithIdentifier:@"InfoViewCell" configuration:^(id cell) {
+        Info *info = [self getInfoForIndexPath:indexPath];
+        [cell populateDataInCell:info];
+    }];
 }
 
 - (Info*)getInfoForIndexPath:(NSIndexPath *)indexPath {

@@ -35,6 +35,10 @@
 		AE1BCBCE1A9FD0A400E79935 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */; };
 		AE1BCBCF1A9FD0A400E79935 /* EventListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */; };
 		AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBD01A9FD3CC00E79935 /* logo.jpg */; };
+		AE1D0399207BEF32006A5D4C /* iyaf2-25.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1D0395207BEF31006A5D4C /* iyaf2-25.png */; };
+		AE1D039A207BEF32006A5D4C /* iyaf1-781.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1D0396207BEF31006A5D4C /* iyaf1-781.png */; };
+		AE1D039B207BEF32006A5D4C /* iyaf-iphone-x-2436.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1D0397207BEF31006A5D4C /* iyaf-iphone-x-2436.png */; };
+		AE1D039C207BEF32006A5D4C /* iyaf1-3.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1D0398207BEF32006A5D4C /* iyaf1-3.png */; };
 		AE376ADA207986E90017F79D /* app_background.png in Resources */ = {isa = PBXBuildFile; fileRef = AE376AD82079445F0017F79D /* app_background.png */; };
 		AE60A06D206649F100592997 /* menu_events.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05B2066496E00592997 /* menu_events.png */; };
 		AE60A06E206649F400592997 /* menu_gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05A2066496D00592997 /* menu_gallery.png */; };
@@ -252,6 +256,10 @@
 		AE1BCBCC1A9FD0A400E79935 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
 		AE1BCBCD1A9FD0A400E79935 /* EventListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListViewController.xib; sourceTree = "<group>"; };
 		AE1BCBD01A9FD3CC00E79935 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
+		AE1D0395207BEF31006A5D4C /* iyaf2-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iyaf2-25.png"; sourceTree = "<group>"; };
+		AE1D0396207BEF31006A5D4C /* iyaf1-781.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iyaf1-781.png"; sourceTree = "<group>"; };
+		AE1D0397207BEF31006A5D4C /* iyaf-iphone-x-2436.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iyaf-iphone-x-2436.png"; sourceTree = "<group>"; };
+		AE1D0398207BEF32006A5D4C /* iyaf1-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iyaf1-3.png"; sourceTree = "<group>"; };
 		AE376AD82079445F0017F79D /* app_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_background.png; sourceTree = "<group>"; };
 		AE60A05A2066496D00592997 /* menu_gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_gallery.png; sourceTree = "<group>"; };
 		AE60A05B2066496E00592997 /* menu_events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_events.png; sourceTree = "<group>"; };
@@ -518,6 +526,10 @@
 		AE60A07A20664BB700592997 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AE1D0397207BEF31006A5D4C /* iyaf-iphone-x-2436.png */,
+				AE1D0398207BEF32006A5D4C /* iyaf1-3.png */,
+				AE1D0396207BEF31006A5D4C /* iyaf1-781.png */,
+				AE1D0395207BEF31006A5D4C /* iyaf2-25.png */,
 				AE376AD82079445F0017F79D /* app_background.png */,
 				AE1778492066C2510037E3D3 /* creativeyouth.png */,
 				AE60A08F2066635000592997 /* background.png */,
@@ -944,6 +956,7 @@
 				AE1BCBD11A9FD3CC00E79935 /* logo.jpg in Resources */,
 				AE17783C2066BAD80037E3D3 /* Images.xcassets in Resources */,
 				AE9055E91CA5416300E9C369 /* InfoViewController.xib in Resources */,
+				AE1D039C207BEF32006A5D4C /* iyaf1-3.png in Resources */,
 				AEE46FAD1ABB4A1700F52708 /* KingstonPound-small-15.png in Resources */,
 				AEE46FD61ABB55E600F52708 /* AboutKingstonPoundViewController.xib in Resources */,
 				AEEF3D261AD3F096003256FD /* indigo-plate.png in Resources */,
@@ -971,11 +984,13 @@
 				AE1778402066BC1B0037E3D3 /* LaunchScreen.storyboard in Resources */,
 				AEBA91C21C888A3000708484 /* camera-icon@2x.png in Resources */,
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
+				AE1D039A207BEF32006A5D4C /* iyaf1-781.png in Resources */,
 				AE9055BF1CA43C8D00E9C369 /* yellow-cloth-tile.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */,
 				AEBA91C71C88A3FB00708484 /* UploadPhotoViewController.xib in Resources */,
 				AEEF3D251AD3F096003256FD /* green-plate.png in Resources */,
+				AE1D0399207BEF32006A5D4C /* iyaf2-25.png in Resources */,
 				AEEF3D281AD3F096003256FD /* orange-plate.png in Resources */,
 				AEC425421AD913ED0021049E /* cutlery_chopsticks.png in Resources */,
 				AEEF3D2C1AD3F096003256FD /* yellow-plate.png in Resources */,
@@ -983,6 +998,7 @@
 				AEC425461AD913ED0021049E /* cutlery_teaspoon.png in Resources */,
 				AEE46FAB1AB8866B00F52708 /* bell-lg-filled@2x.png in Resources */,
 				AEEF3D2B1AD3F096003256FD /* white-plate.png in Resources */,
+				AE1D039B207BEF32006A5D4C /* iyaf-iphone-x-2436.png in Resources */,
 				AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */,
 				AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */,
 				AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */,
@@ -1000,6 +1016,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework",
@@ -1012,6 +1029,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMAnalogClock.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KILabel.framework",
@@ -1110,6 +1128,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework",
@@ -1122,6 +1141,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMAnalogClock.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KILabel.framework",

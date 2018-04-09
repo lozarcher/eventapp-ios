@@ -8,7 +8,7 @@ workspace 'Surbiton Food Festival'
 def available_pods
     source 'https://github.com/CocoaPods/Specs.git'
     source 'https://github.com/mwaterfall/MWPhotoBrowser.git'
-    
+    pod 'BEMAnalogClock'
     pod 'TwitterKit'
     pod 'MWPhotoBrowser',  '~> 2.1.2'
     pod 'KILabel'

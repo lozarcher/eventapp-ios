@@ -14,6 +14,7 @@
 #import "MTConfiguration.h"
 #import "TraderViewController.h"
 #import "AppDelegate.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 
 @implementation TraderListViewController
 
@@ -28,6 +29,8 @@
     UINib *cellNib = [UINib nibWithNibName:@"TraderViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"TraderViewCell"];
     
+    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+
     //initialise the message label
     messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -134,18 +137,12 @@
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.prototypeCell)
-    {
-        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"TraderViewCell"];
-    }
-    Trader *trader = [self getTraderForIndexPath:indexPath];
-    [self.prototypeCell populateDataInCell:trader];
-    
-    [self.prototypeCell layoutIfNeeded];
-    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
+    return [tableView fd_heightForCellWithIdentifier:@"TraderViewCell" configuration:^(id cell) {
+        Trader *trader = [self getTraderForIndexPath:indexPath];
+        [cell populateDataInCell:trader];
+    }];
 }
 
 - (Trader*)getTraderForIndexPath:(NSIndexPath *)indexPath {

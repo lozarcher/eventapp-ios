@@ -14,6 +14,7 @@
 #import "EventViewCell.h"
 #import "MTConfiguration.h"
 #import "AppDelegate.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 
 @implementation EventListViewController
 
@@ -23,7 +24,8 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
-    
+    tableView.fd_debugLogEnabled = YES;
+
     [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];;
 
     _eventDays = [[NSMutableDictionary alloc] init];
@@ -33,6 +35,8 @@
     UINib *cellNib = [UINib nibWithNibName:@"EventViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"EventViewCell"];
     
+    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor purpleColor];
@@ -73,7 +77,6 @@
     [self refreshEvents:self];
     [self setFilteredEvents];
 }
-
 
 //event handler when event occurs
 -(void)favouriteEventHandler: (NSNotification *) notification
@@ -317,7 +320,7 @@
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     EventViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"EventViewCell"];;
-    
+
     // Cell text (event title)
     Event *event = [self getEventForIndexPath:indexPath];
     NSLog(@"Cell label %@", [event name]);
@@ -329,18 +332,16 @@
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.prototypeCell)
-    {
-        self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"EventViewCell"];
-    }
     Event *event = [self getEventForIndexPath:indexPath];
-    [self.prototypeCell populateDataInCell:event isFavourite:[self isFavourited:[event id]]];
-    
-    [self.prototypeCell layoutIfNeeded];
-    CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
+    CGFloat height = [tableView fd_heightForCellWithIdentifier:@"EventViewCell" cacheByKey:event.id configuration:^(id cell) {
+        [cell populateDataInCell:event isFavourite:[self isFavourited:[event id]]];
+        [cell setNeedsLayout];
+        [cell layoutIfNeeded];
+    }];
+    NSLog(@"Height of cell %@ is %f", event.id, height);
+    return height;
 }
 
 - (Event*)getEventForIndexPath:(NSIndexPath *)indexPath {

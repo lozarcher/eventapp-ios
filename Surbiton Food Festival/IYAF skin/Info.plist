@@ -2,15 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>twitter</string>
-		<string>twitterauth</string>
-	</array>
-	<key>Twitter Search Term</key>
-	<string>from:@IYAF OR #iyaf</string>
-	<key>InfoTitle</key>
-	<string>Info</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -28,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1</string>
+	<string>3.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -51,8 +42,15 @@
 	<string>International Youth Arts Festival</string>
 	<key>Hashtag</key>
 	<string>#iyaf</string>
+	<key>InfoTitle</key>
+	<string>Info</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>twitter</string>
+		<string>twitterauth</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -65,13 +63,15 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Use your camera to upload a photo to our photo gallery</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We&apos;ll only use this to show your location on the map</string>
+	<string>We'll only use this to show your location on the map</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This permission will let you send photos to our photo gallery</string>
 	<key>NSRemindersUsageDescription</key>
 	<string>If you request a reminder for an event, this app can set it for you.</string>
 	<key>TraderTitle</key>
 	<string>Performers</string>
+	<key>Twitter Search Term</key>
+	<string>from:@IYAF OR #iyaf</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
