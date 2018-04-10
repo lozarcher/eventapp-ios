@@ -1,6 +1,5 @@
 // FABSearchTimelineViewController.h
 #import <UIKit/UIKit.h>
-#import <TwitterKit/TWTRKit.h>
-
+#import <TwitterKit/TwitterKit.h>
 @interface TwitterViewController : TWTRTimelineViewController
 @end

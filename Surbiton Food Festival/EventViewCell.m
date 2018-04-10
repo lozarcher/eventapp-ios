@@ -14,14 +14,14 @@
 
 @implementation EventViewCell
 
-@synthesize eventNameLabel, venueLabel, favouriteImage, favourited, event, clockView;
+@synthesize eventNameLabel, venueLabel, favouriteImage, favourited, event, clockView, timeLabel;
 
 - (void)awakeFromNib {
     // Initialization code
     [super awakeFromNib];
     self.favourited = false;
     self.clockView.delegate = self;
-    self.fd_enforceFrameLayout = NO;
+    self.fd_enforceFrameLayout = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -32,9 +32,7 @@
 
 -(void)populateDataInCell:(Event *)event isFavourite:(BOOL)isFavourite {
     self.event = event;
-    //eventNameLabel.text = [event name];
-    eventNameLabel.text = [NSString stringWithFormat:@"%@ Really really really really really really really really really really long title", [event name]];
-
+    eventNameLabel.text = [event name];
     
     NSTimeInterval seconds = [event.startTime doubleValue]/1000;
     NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
@@ -44,12 +42,14 @@
     
     if ([startDateString isEqualToString:@"01:00"]) {
         startDateString = @"All day";
+        self.clockView.hours = 0;
+        self.clockView.minutes = 0;
+    } else {
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startDate];
+        self.clockView.hours = [components hour];
+        self.clockView.minutes = [components minute];
     }
-    
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startDate];
-    self.clockView.hours = [components hour];
-    self.clockView.minutes = [components minute];
     self.clockView.seconds = 0;
     self.clockView.secondHandAlpha = 0;
     self.clockView.borderColor = UIColor.grayColor;
@@ -70,9 +70,10 @@
     if ([location isKindOfClass:[NSNull class]]) {
         location = @"Surbiton";
     }
-    venueLabel.text = [NSString stringWithFormat:@"Really really really really really really really really really really long%@ @ %@",startDateString, location];
-    [venueLabel sizeToFit];
-
+    venueLabel.text = location;
+    
+    timeLabel.text = startDateString;
+    
     self.favourited = isFavourite;
     [self setFavouritedIcon:self.favourited];
     
@@ -130,12 +131,20 @@
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    CGFloat totalHeight = 0;
-    NSLog(@"eventNameLabel size %f", [self.eventNameLabel sizeThatFits:size].height);
-    NSLog(@"venueLabel size %f", [self.venueLabel sizeThatFits:size].height);
-    totalHeight += [self.eventNameLabel sizeThatFits:size].height;
-    totalHeight += [self.venueLabel sizeThatFits:size].height;
-    totalHeight += 21;
+    CGFloat leftSideHeight = 91;
+    
+    CGFloat rightSideHeight = 0;
+    size.width = size.width - 140;
+    rightSideHeight += [self.eventNameLabel sizeThatFits:size].height;
+    rightSideHeight += [self.venueLabel sizeThatFits:size].height;
+    rightSideHeight += 21;
+    
+    CGFloat totalHeight;
+    if (rightSideHeight > leftSideHeight) {
+        totalHeight = rightSideHeight;
+    } else {
+        totalHeight = leftSideHeight;
+    }
     return CGSizeMake(size.width, totalHeight);
 }
 

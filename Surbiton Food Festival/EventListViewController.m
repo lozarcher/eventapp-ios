@@ -24,7 +24,7 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
-    tableView.fd_debugLogEnabled = YES;
+    tableView.fd_debugLogEnabled = NO;
 
     [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];;
 
