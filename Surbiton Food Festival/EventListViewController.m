@@ -24,7 +24,7 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
-    tableView.fd_debugLogEnabled = YES;
+    //tableView.fd_debugLogEnabled = YES;
 
     [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];;
 
@@ -336,10 +336,7 @@
     Event *event = [self getEventForIndexPath:indexPath];
     CGFloat height = [tableView fd_heightForCellWithIdentifier:@"EventViewCell" cacheByKey:event.id configuration:^(id cell) {
         [cell populateDataInCell:event isFavourite:[self isFavourited:[event id]]];
-        [cell setNeedsLayout];
-        [cell layoutIfNeeded];
     }];
-    NSLog(@"Height of cell %@ is %f", event.id, height);
     return height;
 }
 

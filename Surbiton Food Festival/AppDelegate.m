@@ -12,7 +12,7 @@
 #import "HomeViewController.h"
 #import "RearViewController.h"
 #import "CustomAnimationController.h"
-#import <TwitterKit/TWTRKit.h>
+#import <TwitterKit/TwitterKit.h>
 
 @interface AppDelegate ()<SWRevealViewControllerDelegate>
 @end
