@@ -22,6 +22,23 @@
     self.favourited = false;
     self.clockView.delegate = self;
     self.fd_enforceFrameLayout = YES;
+    
+    self.clockView.seconds = 0;
+    self.clockView.secondHandAlpha = 0;
+    self.clockView.borderColor = UIColor.grayColor;
+    self.clockView.faceBackgroundColor = UIColor.lightGrayColor;
+    self.clockView.faceBackgroundAlpha = 0.2;
+    self.clockView.borderWidth = 2;
+    
+    self.clockView.minuteHandColor = UIColor.grayColor;
+    self.clockView.minuteHandWidth = 2;
+    self.clockView.minuteHandOffsideLength = 5;
+    
+    self.clockView.hourHandColor = UIColor.grayColor;
+    self.clockView.hourHandWidth = 2;
+    self.clockView.hourHandOffsideLength = 5;
+    self.clockView.hourHandLength = 15;
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -44,27 +61,16 @@
         startDateString = @"All day";
         self.clockView.hours = 0;
         self.clockView.minutes = 0;
+        NSLog(@"Set event %@ all day", event.name);
+
     } else {
         NSCalendar *calendar = [NSCalendar currentCalendar];
         NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startDate];
         self.clockView.hours = [components hour];
         self.clockView.minutes = [components minute];
+        NSLog(@"Set event %@ hours %ld minutes %ld", event.name, (long)[components hour], (long)[components minute]);
     }
-    self.clockView.seconds = 0;
-    self.clockView.secondHandAlpha = 0;
-    self.clockView.borderColor = UIColor.grayColor;
-    self.clockView.faceBackgroundColor = UIColor.lightGrayColor;
-    self.clockView.faceBackgroundAlpha = 0.2;
-    self.clockView.borderWidth = 2;
-    
-    self.clockView.minuteHandColor = UIColor.grayColor;
-    self.clockView.minuteHandWidth = 2;
-    self.clockView.minuteHandOffsideLength = 5;
-
-    self.clockView.hourHandColor = UIColor.grayColor;
-    self.clockView.hourHandWidth = 2;
-    self.clockView.hourHandOffsideLength = 5;
-    self.clockView.hourHandLength = 15;
+    [self.clockView reloadClock];
     
     NSString *location = event.location;
     if ([location isKindOfClass:[NSNull class]]) {
@@ -81,6 +87,8 @@
     singleTap.numberOfTapsRequired = 1;
     [self.favouriteImage setUserInteractionEnabled:YES];
     [self.favouriteImage addGestureRecognizer:singleTap];
+    
+    [self setNeedsDisplay];
 }
 
 - (UIColor *)analogClock:(BEMAnalogClockView *)clock graduationColorForIndex:(NSInteger)index {
