@@ -14,7 +14,7 @@
 
 @implementation EventViewCell
 
-@synthesize eventNameLabel, venueLabel, favouriteImage, favourited, event, clockView, timeLabel;
+@synthesize eventNameLabel, venueLabel, favouriteImage, favourited, event, plateImage, clockView, timeLabel;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -27,32 +27,34 @@
     
     self.clockView.seconds = 0;
     self.clockView.secondHandAlpha = 0;
-    self.clockView.borderColor = UIColor.grayColor;
-    self.clockView.faceBackgroundColor = UIColor.lightGrayColor;
-    self.clockView.faceBackgroundAlpha = 0.2;
-    self.clockView.borderWidth = 2;
+    self.clockView.borderColor = UIColor.whiteColor;
+    self.clockView.faceBackgroundAlpha = 0;
+    self.clockView.borderWidth = 0;
     
-    self.clockView.minuteHandColor = UIColor.grayColor;
+    self.clockView.minuteHandColor = UIColor.whiteColor;
     self.clockView.minuteHandWidth = 2;
-    self.clockView.minuteHandOffsideLength = 5;
+    self.clockView.minuteHandOffsideLength = 3;
     
-    self.clockView.hourHandColor = UIColor.grayColor;
+    self.clockView.hourHandColor = UIColor.whiteColor;
     self.clockView.hourHandWidth = 2;
-    self.clockView.hourHandOffsideLength = 5;
-    self.clockView.hourHandLength = 15;
-
+    self.clockView.hourHandOffsideLength = 3;
+    self.clockView.hourHandLength = 12;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
 -(void)populateDataInCell:(Event *)event isFavourite:(BOOL)isFavourite {
     self.event = event;
+
     eventNameLabel.text = [event name];
     
+    [self.plateImage setImage:[self imageForOrdinal:event.ordinal]];
+    [self.plateImage setNeedsDisplay];
     NSTimeInterval seconds = [event.startTime doubleValue]/1000;
     NSDate *startDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -64,7 +66,7 @@
         self.clockView.hours = 0;
         self.clockView.minutes = 0;
         NSLog(@"Set event %@ all day", event.name);
-
+        
     } else {
         NSCalendar *calendar = [NSCalendar currentCalendar];
         NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startDate];
@@ -95,17 +97,18 @@
 
 - (UIColor *)analogClock:(BEMAnalogClockView *)clock graduationColorForIndex:(NSInteger)index {
     if ((index % 5) == 0){
-        return UIColor.lightGrayColor;
+        return UIColor.whiteColor;
     } else {
         return UIColor.whiteColor;
     }
 }
 
 - (CGFloat)analogClock:(BEMAnalogClockView *)clock graduationAlphaForIndex:(NSInteger)index {
+    return 0;
     if ((index % 5) == 0){
-        return 1;
+        return 0;
     } else {
-        return 0.2;
+        return 1;
     }
 }
 
@@ -117,13 +120,13 @@
     self.favourited = !self.favourited;
     [self setFavouritedIcon:self.favourited];
     //trigger event
-
+    
     NSDictionary *dict = [NSDictionary dictionaryWithObject:self.event forKey:@"event"];
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"favouriteEvent"
      object:dict
      userInfo:dict];
-    }
+}
 
 -(void)setFavouritedIcon:(BOOL)favourited {
     FAKFontAwesome *favIcon;
@@ -131,17 +134,17 @@
     if (favourited) {
         favIcon = [FAKFontAwesome heartIconWithSize:21];
         [favIcon addAttribute:NSForegroundColorAttributeName value:[UIColor
-                                                                     redColor]];
+                                                                    redColor]];
     } else {
         favIcon = [FAKFontAwesome heartOIconWithSize:21];
         [favIcon addAttribute:NSForegroundColorAttributeName value:[UIColor
-                                                                     grayColor]];
+                                                                    grayColor]];
     }
     [self.favouriteImage setImage:[favIcon imageWithSize:CGSizeMake(21,21)]];
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    CGFloat leftSideHeight = 91;
+    CGFloat leftSideHeight = 100;
     
     CGFloat rightSideHeight = 0;
     size.width = size.width - 140;
@@ -158,4 +161,17 @@
     return CGSizeMake(size.width, totalHeight);
 }
 
+-(UIImage *)imageForOrdinal:(int)ordinal {
+    NSArray *images = [[NSArray alloc] initWithObjects:
+        [UIImage imageNamed:@"red-plate.png"],
+        [UIImage imageNamed:@"yellow-plate.png"],
+        [UIImage imageNamed:@"blue-plate.png"],
+        [UIImage imageNamed:@"orange-plate.png"],
+        [UIImage imageNamed:@"magenta-plate.png"],
+        [UIImage imageNamed:@"indigo-plate.png"],
+                       nil];
+    return images[(ordinal % images.count)];
+}
+
 @end
+

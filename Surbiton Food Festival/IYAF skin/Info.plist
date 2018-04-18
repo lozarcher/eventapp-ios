@@ -8,8 +8,6 @@
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIcons</key>
 	<dict/>
-	<key>CFBundleIcons~ipad</key>
-	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -63,7 +61,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Use your camera to upload a photo to our photo gallery</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We'll only use this to show your location on the map</string>
+	<string>We&apos;ll only use this to show your location on the map</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This permission will let you send photos to our photo gallery</string>
 	<key>NSRemindersUsageDescription</key>
