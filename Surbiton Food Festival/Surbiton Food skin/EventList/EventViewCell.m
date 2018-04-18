@@ -33,12 +33,12 @@
     
     self.clockView.minuteHandColor = UIColor.whiteColor;
     self.clockView.minuteHandWidth = 2;
-    self.clockView.minuteHandOffsideLength = 5;
+    self.clockView.minuteHandOffsideLength = 3;
     
     self.clockView.hourHandColor = UIColor.whiteColor;
     self.clockView.hourHandWidth = 2;
-    self.clockView.hourHandOffsideLength = 5;
-    self.clockView.hourHandLength = 15;
+    self.clockView.hourHandOffsideLength = 3;
+    self.clockView.hourHandLength = 12;
     
 }
 
