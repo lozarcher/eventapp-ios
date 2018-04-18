@@ -25,6 +25,7 @@
     NSArray *results = [parsedObject valueForKey:@"data"];
     NSLog(@"Count %lu", (unsigned long)results.count);
     
+    int index = 0;
     for (NSDictionary *eventDic in results) {
         Event *event = [[Event alloc] init];
         
@@ -38,8 +39,9 @@
                 [event setValue:[eventDic valueForKey:key] forKey:mappedKey];
             }
         }
-        
+        event.ordinal = index;
         [events addObject:event];
+        index++;
     }
     
     return events;

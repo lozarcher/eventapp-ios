@@ -11,6 +11,7 @@
 
 @interface Event : NSObject
 @property (strong, nonatomic) NSString *id;
+@property int *ordinal;
 @property (strong, nonatomic) NSString *desc;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *endTime;
