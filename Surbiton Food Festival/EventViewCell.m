@@ -20,6 +20,8 @@
     // Initialization code
     [super awakeFromNib];
     self.favourited = false;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+
     self.clockView.delegate = self;
     self.fd_enforceFrameLayout = YES;
     
