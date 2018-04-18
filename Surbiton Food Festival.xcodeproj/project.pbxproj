@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		0024C92EF1F17E280517C9F4 /* Pods_Surbiton_Food_Festival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE483175EB1FA2610D2E771 /* Pods_Surbiton_Food_Festival.framework */; };
 		AE097BA22055BB2B00CAEAF0 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */; };
-		AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
 		AE097BA42055BB2B00CAEAF0 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA02055BB2B00CAEAF0 /* EventViewController.m */; };
-		AE097BA72055BB5A00CAEAF0 /* EventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA62055BB5A00CAEAF0 /* EventViewCell.m */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
 		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
 		AE17783620669D230037E3D3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08920664DC400592997 /* Info.plist */; };
@@ -40,6 +38,8 @@
 		AE1D039B207BEF32006A5D4C /* iyaf-iphone-x-2436.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1D0397207BEF31006A5D4C /* iyaf-iphone-x-2436.png */; };
 		AE1D039C207BEF32006A5D4C /* iyaf1-3.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1D0398207BEF32006A5D4C /* iyaf1-3.png */; };
 		AE376ADA207986E90017F79D /* app_background.png in Resources */ = {isa = PBXBuildFile; fileRef = AE376AD82079445F0017F79D /* app_background.png */; };
+		AE5645E22087CC850005221F /* EventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5645E02087CC850005221F /* EventViewCell.m */; };
+		AE5645E32087CC850005221F /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE5645E12087CC850005221F /* EventViewCell.xib */; };
 		AE60A06D206649F100592997 /* menu_events.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05B2066496E00592997 /* menu_events.png */; };
 		AE60A06E206649F400592997 /* menu_gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05A2066496D00592997 /* menu_gallery.png */; };
 		AE60A06F206649F700592997 /* menu_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05C2066496E00592997 /* menu_info.png */; };
@@ -261,6 +261,9 @@
 		AE1D0397207BEF31006A5D4C /* iyaf-iphone-x-2436.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iyaf-iphone-x-2436.png"; sourceTree = "<group>"; };
 		AE1D0398207BEF32006A5D4C /* iyaf1-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iyaf1-3.png"; sourceTree = "<group>"; };
 		AE376AD82079445F0017F79D /* app_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_background.png; sourceTree = "<group>"; };
+		AE5645DF2087CC850005221F /* EventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewCell.h; sourceTree = "<group>"; };
+		AE5645E02087CC850005221F /* EventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewCell.m; sourceTree = "<group>"; };
+		AE5645E12087CC850005221F /* EventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewCell.xib; sourceTree = "<group>"; };
 		AE60A05A2066496D00592997 /* menu_gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_gallery.png; sourceTree = "<group>"; };
 		AE60A05B2066496E00592997 /* menu_events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_events.png; sourceTree = "<group>"; };
 		AE60A05C2066496E00592997 /* menu_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_info.png; sourceTree = "<group>"; };
@@ -500,6 +503,16 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		AE5645DE2087CC850005221F /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				AE5645DF2087CC850005221F /* EventViewCell.h */,
+				AE5645E02087CC850005221F /* EventViewCell.m */,
+				AE5645E12087CC850005221F /* EventViewCell.xib */,
+			);
+			path = EventList;
+			sourceTree = "<group>";
+		};
 		AE60A07520664BA100592997 /* IYAF skin */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +559,7 @@
 		AE60A07E20664BE500592997 /* Surbiton Food skin */ = {
 			isa = PBXGroup;
 			children = (
+				AE5645DE2087CC850005221F /* EventList */,
 				AE17783F2066BC1A0037E3D3 /* LaunchScreen.storyboard */,
 				AE17783B2066BAD80037E3D3 /* Images.xcassets */,
 				AE60A08020664C0700592997 /* Home Screen */,
@@ -985,6 +999,7 @@
 				AEBA91C21C888A3000708484 /* camera-icon@2x.png in Resources */,
 				AEC425431AD913ED0021049E /* cutlery_knife.png in Resources */,
 				AE1D039A207BEF32006A5D4C /* iyaf1-781.png in Resources */,
+				AE5645E32087CC850005221F /* EventViewCell.xib in Resources */,
 				AE9055BF1CA43C8D00E9C369 /* yellow-cloth-tile.png in Resources */,
 				AE1BCBB11A9FC8A600E79935 /* RearViewController.xib in Resources */,
 				AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */,
@@ -1001,7 +1016,6 @@
 				AE1D039B207BEF32006A5D4C /* iyaf-iphone-x-2436.png in Resources */,
 				AE1BCBB41A9FC9C700E79935 /* reveal-icon.png in Resources */,
 				AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */,
-				AE097BA32055BB2B00CAEAF0 /* EventViewCell.xib in Resources */,
 				AE60A08620664D5200592997 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1023,6 +1037,8 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1034,6 +1050,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1048,11 +1066,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1066,11 +1086,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1127,6 +1149,8 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1138,6 +1162,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1216,6 +1242,7 @@
 			files = (
 				AE9369FD1A9BCC3400F15869 /* Venue.m in Sources */,
 				AE7003D51C4CF99300556EF6 /* PostViewCell.m in Sources */,
+				AE5645E22087CC850005221F /* EventViewCell.m in Sources */,
 				AE1382631AA1422B00714884 /* Voucher.m in Sources */,
 				AEF3AB2D1AB45D9000B2C6A9 /* TraderBuilder.m in Sources */,
 				AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */,
@@ -1247,7 +1274,6 @@
 				AEBA91B91C88641200708484 /* GalleryViewController.m in Sources */,
 				AE9055E81CA5416300E9C369 /* InfoViewController.m in Sources */,
 				AE18C4C21A8CBBB200B96570 /* EventBuilder.m in Sources */,
-				AE097BA72055BB5A00CAEAF0 /* EventViewCell.m in Sources */,
 				AEBA91BF1C8872AC00708484 /* GalleryBuilder.m in Sources */,
 				AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */,
 				AE9055E31CA53EF300E9C369 /* InfoViewCell.m in Sources */,

@@ -1,5 +1,5 @@
 #import "TwitterViewController.h"
-#import <TwitterKit/TwitterKit.h>
+#import <TwitterKit/TWTRKit.h>
 #import "AppDelegate.h"
 
 @implementation TwitterViewController

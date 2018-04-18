@@ -132,6 +132,55 @@ strip_invalid_archs() {
   STRIP_BINARY_RETVAL=1
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
+  install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework"
+fi
+if [[ "$CONFIGURATION" == "Production" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
+  install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework"
+fi
+if [[ "$CONFIGURATION" == "Development" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
+  install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
+  install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework"
+fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi
