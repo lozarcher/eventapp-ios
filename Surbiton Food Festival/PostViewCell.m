@@ -51,10 +51,7 @@
                                  }
                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                     post.cachedImage = image;
-                                    [self.postImageView setImage:image];
-                                    [self.tableView beginUpdates];
-                                    [self.tableView endUpdates];
-                                    //});
+                                    [self setPostImage:image];
                                 }];
         }
     }
@@ -119,6 +116,7 @@
 }
 
 -(void)setPostImage:(UIImage *)image {
+    [self.tableView beginUpdates];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat newFrameWidth = screenRect.size.width;
     CGFloat newFrameHeight = image.size.height * (newFrameWidth / image.size.width);
@@ -126,6 +124,7 @@
     [self.postImageView setFrame:newFrame];
     [self.postImageView setImage:image];
     self.imageHeightConstraint.constant = newFrameHeight;
+    [self.tableView endUpdates];
 }
 
 // If you are not using auto layout, override this method, enable it by setting

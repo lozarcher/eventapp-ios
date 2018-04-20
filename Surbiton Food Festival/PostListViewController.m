@@ -175,7 +175,6 @@
         return [tableView fd_heightForCellWithIdentifier:@"MoreCell" configuration:^(id cell) {}];
     } else {
         return [tableView fd_heightForCellWithIdentifier:@"PostViewCell" configuration:^(id cell) {
-            [cell preloadImage:[self getPostForIndexPath:indexPath]];
             [cell populateDataInCell:[self getPostForIndexPath:indexPath] indexPath:indexPath tableView:tableView];
         }];
     }
