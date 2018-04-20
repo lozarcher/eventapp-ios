@@ -82,6 +82,8 @@
 
 -(void)setImage:(UIImage *)image {
     [traderImageView setImage:image];
+    [traderImageView setNeedsLayout];
+    [traderImageView layoutIfNeeded];
     if (traderImageView.frame.size.width < (traderImageView.image.size.width)) {
         _imageHeightConstraint.constant = traderImageView.frame.size.width / (traderImageView.image.size.width) * (traderImageView.image.size.height);
     } else {

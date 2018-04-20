@@ -118,8 +118,10 @@
 
 -(void)setImage:(UIImage *)image {
     [eventImageView setImage:image];
+    [eventImageView setNeedsLayout];
+    [eventImageView layoutIfNeeded];
     if (eventImageView.frame.size.width < (eventImageView.image.size.width)) {
-        _imageHeightConstraint.constant = eventImageView.frame.size.width / (eventImageView.image.size.width) * (eventImageView.image.size.height);
+        _imageHeightConstraint.constant = (eventImageView.frame.size.width / (eventImageView.image.size.width)) * eventImageView.image.size.height;
     } else {
         _imageHeightConstraint.constant = image.size.height;
     }

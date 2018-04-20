@@ -65,6 +65,8 @@
 
 -(void)setImage:(UIImage *)image {
     [infoImage setImage:image];
+    [infoImage setNeedsLayout];
+    [infoImage layoutIfNeeded];
     if (infoImage.frame.size.width < (infoImage.image.size.width)) {
         _imageHeightConstraint.constant = infoImage.frame.size.width / (infoImage.image.size.width) * (infoImage.image.size.height);
     } else {

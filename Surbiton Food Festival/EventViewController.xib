@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventViewController">
             <connections>
@@ -37,10 +31,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQq-j8-8vG">
-                    <rect key="frame" x="0.0" y="62" width="374" height="605"/>
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
                     <subviews>
                         <label opaque="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-MM-PZl" customClass="KILabel">
-                            <rect key="frame" x="5" y="166" width="364" height="24"/>
+                            <rect key="frame" x="10" y="166" width="354" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="Am9-1K-NhD"/>
                             </constraints>
@@ -96,8 +90,8 @@
                                 <action selector="mapButtonPressed:" destination="-1" eventType="touchUpInside" id="dHc-XU-JeN"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTO-0B-RXy">
-                            <rect key="frame" x="147" y="198" width="80" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTO-0B-RXy">
+                            <rect key="frame" x="147" y="200" width="80" height="30"/>
                             <state key="normal" title="Buy Tickets"/>
                             <connections>
                                 <action selector="ticketsButtonPressed:" destination="-1" eventType="touchUpInside" id="sT6-th-EIN"/>
@@ -119,9 +113,9 @@
                         <constraint firstItem="OGy-TT-QuX" firstAttribute="centerX" secondItem="1Ae-xI-Eha" secondAttribute="centerX" id="bu9-yK-NTe"/>
                         <constraint firstItem="wcB-7E-gsq" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leading" constant="5" id="cCS-uY-EOO"/>
                         <constraint firstAttribute="centerX" secondItem="uZn-ms-reu" secondAttribute="centerX" id="eHO-ZV-L5A"/>
-                        <constraint firstAttribute="bottom" secondItem="Gmn-MM-PZl" secondAttribute="bottom" priority="250" constant="415" id="eed-eC-8mz"/>
+                        <constraint firstAttribute="bottom" secondItem="Gmn-MM-PZl" secondAttribute="bottom" priority="250" constant="200" id="eed-eC-8mz"/>
                         <constraint firstItem="wcB-7E-gsq" firstAttribute="top" secondItem="sva-8t-ahH" secondAttribute="bottom" constant="10" id="gSX-uM-QfA"/>
-                        <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leading" constant="5" id="jYh-PB-Jva"/>
+                        <constraint firstItem="Gmn-MM-PZl" firstAttribute="leading" secondItem="GQq-j8-8vG" secondAttribute="leading" constant="10" id="jYh-PB-Jva"/>
                         <constraint firstItem="sva-8t-ahH" firstAttribute="top" secondItem="1Ae-xI-Eha" secondAttribute="bottom" constant="10" id="k9Y-gT-dkO"/>
                         <constraint firstAttribute="centerX" secondItem="sva-8t-ahH" secondAttribute="centerX" id="k9z-Zz-7LQ"/>
                         <constraint firstAttribute="centerX" secondItem="wcB-7E-gsq" secondAttribute="centerX" constant="0.5" id="mxA-uK-ZTg"/>
@@ -137,7 +131,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="GQq-j8-8vG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8FT-4B-cWp"/>
-                <constraint firstItem="GQq-j8-8vG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="OIV-Sy-qF6"/>
+                <constraint firstItem="GQq-j8-8vG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jw8-jx-SyX"/>
                 <constraint firstAttribute="trailing" secondItem="GQq-j8-8vG" secondAttribute="trailing" constant="1" id="fHZ-kQ-x2Q"/>
                 <constraint firstAttribute="bottom" secondItem="GQq-j8-8vG" secondAttribute="bottom" id="pf5-2s-aSW"/>
             </constraints>
