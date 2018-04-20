@@ -29,7 +29,6 @@
 
 -(void)populateDataInCell:(Trader *)trader {
     //traderNameLabel.text = [trader name];
-    NSLog(@"Kingston pound: %@", trader.kingstonPound);
     [kingstonPoundImage setHidden:([trader.kingstonPound intValue] != 1)];
     traderNameLabel.text = [trader name];
         

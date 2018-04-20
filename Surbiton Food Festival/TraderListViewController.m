@@ -129,7 +129,6 @@
     
     // Cell text (event title)
     Trader *trader = [self getTraderForIndexPath:indexPath];
-    NSLog(@"Cell label %@", [trader  name]);
     [cell populateDataInCell:trader];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

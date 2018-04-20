@@ -129,7 +129,6 @@
     
     // Cell text (event title)
     Info *info = [self getInfoForIndexPath:indexPath];
-    NSLog(@"Cell label %@", [info title]);
     [cell populateDataInCell:info];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
