@@ -322,7 +322,6 @@
 
     // Cell text (event title)
     Event *event = [self getEventForIndexPath:indexPath];
-    NSLog(@"Cell label %@", [event name]);
     
     [cell populateDataInCell:event isFavourite:[self isFavourited:[event id]]];
     
@@ -495,14 +494,6 @@
             [eventsForDay addObject:event];
         }
         [_eventDays setObject:eventsForDay forKey:dateAtMidnight];
-    }
-    
-    for(id key in _eventDays) {
-        NSLog(@"Date: %@", key);
-        NSArray *eventsForDay = [_eventDays objectForKey:key];
-        for (Event *event in eventsForDay) {
-            NSLog(@"Event %@", event.name);
-        }
     }
 }
 

@@ -14,7 +14,7 @@
 
 @implementation EventViewCell
 
-@synthesize eventNameLabel, venueLabel, favouriteImage, favourited, event, plateImage, clockView, timeLabel;
+@synthesize eventNameLabel, venueLabel, favouriteImage, favourited, event, plateImage, clockView;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -65,14 +65,11 @@
         startDateString = @"All day";
         self.clockView.hours = 0;
         self.clockView.minutes = 0;
-        NSLog(@"Set event %@ all day", event.name);
-        
     } else {
         NSCalendar *calendar = [NSCalendar currentCalendar];
         NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startDate];
         self.clockView.hours = [components hour];
         self.clockView.minutes = [components minute];
-        NSLog(@"Set event %@ hours %ld minutes %ld", event.name, (long)[components hour], (long)[components minute]);
     }
     [self.clockView reloadClock];
     
@@ -80,10 +77,8 @@
     if ([location isKindOfClass:[NSNull class]]) {
         location = @"Surbiton";
     }
-    venueLabel.text = location;
-    
-    timeLabel.text = startDateString;
-    
+    venueLabel.text = [NSString stringWithFormat:@"%@ @ %@", startDateString, location];
+        
     self.favourited = isFavourite;
     [self setFavouritedIcon:self.favourited];
     
@@ -144,7 +139,7 @@
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    CGFloat leftSideHeight = 100;
+    CGFloat leftSideHeight = 81;
     
     CGFloat rightSideHeight = 0;
     size.width = size.width - 140;

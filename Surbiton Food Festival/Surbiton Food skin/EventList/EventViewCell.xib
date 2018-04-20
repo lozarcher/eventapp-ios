@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Venue" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="91E-3o-lHs">
-                        <rect key="frame" x="82" y="30.666666666666671" width="315" height="16"/>
+                        <rect key="frame" x="77" y="30.333333333333329" width="320" height="16"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                         </accessibility>
@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="1000" text="Event Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="wam-w0-qEA">
-                        <rect key="frame" x="82" y="10.000000000000002" width="315" height="19.666666666666671"/>
+                        <rect key="frame" x="77" y="9.9999999999999982" width="320" height="19.333333333333329"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                         </accessibility>
@@ -69,12 +69,6 @@
                             <constraint firstAttribute="height" constant="20" id="CQx-lp-RdX"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1u-pk-k5b">
-                        <rect key="frame" x="1.6666666666666643" y="77" width="66" height="15.666666666666671"/>
-                        <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="AOK-8a-vJC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6Py-za-0DO"/>
@@ -83,16 +77,14 @@
                     <constraint firstItem="ge4-WK-otx" firstAttribute="centerX" secondItem="BGT-Up-sCd" secondAttribute="centerX" id="IHd-Nl-2nO"/>
                     <constraint firstAttribute="trailing" secondItem="AOK-8a-vJC" secondAttribute="trailing" id="KLb-IM-Bk3"/>
                     <constraint firstItem="AOK-8a-vJC" firstAttribute="leading" secondItem="wam-w0-qEA" secondAttribute="trailing" constant="5" id="NY2-Ss-Kl0"/>
-                    <constraint firstItem="o1u-pk-k5b" firstAttribute="centerX" secondItem="BGT-Up-sCd" secondAttribute="centerX" id="V9P-QL-9xh"/>
                     <constraint firstItem="ge4-WK-otx" firstAttribute="centerY" secondItem="BGT-Up-sCd" secondAttribute="centerY" id="XEE-Q6-R00"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BGT-Up-sCd" secondAttribute="bottom" constant="10" id="Y5d-cK-93H"/>
                     <constraint firstItem="AOK-8a-vJC" firstAttribute="leading" secondItem="91E-3o-lHs" secondAttribute="trailing" constant="5" id="b3f-nO-g8I"/>
                     <constraint firstItem="wam-w0-qEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="hjh-ge-Vc6"/>
-                    <constraint firstItem="wam-w0-qEA" firstAttribute="leading" secondItem="ge4-WK-otx" secondAttribute="trailing" constant="10" id="jHN-iy-8FK"/>
+                    <constraint firstItem="wam-w0-qEA" firstAttribute="leading" secondItem="ge4-WK-otx" secondAttribute="trailing" constant="5" id="jHN-iy-8FK"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="91E-3o-lHs" secondAttribute="bottom" constant="10" id="lIV-jX-EcM"/>
-                    <constraint firstItem="o1u-pk-k5b" firstAttribute="top" secondItem="ge4-WK-otx" secondAttribute="bottom" id="oiX-pI-2p9"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="o1u-pk-k5b" secondAttribute="bottom" constant="10" id="qpL-i7-Oct"/>
                     <constraint firstItem="BGT-Up-sCd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="qpd-c2-VG4"/>
-                    <constraint firstItem="91E-3o-lHs" firstAttribute="leading" secondItem="ge4-WK-otx" secondAttribute="trailing" constant="10" id="uiI-3c-fbc"/>
+                    <constraint firstItem="91E-3o-lHs" firstAttribute="leading" secondItem="ge4-WK-otx" secondAttribute="trailing" constant="5" id="uiI-3c-fbc"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -100,7 +92,6 @@
                 <outlet property="eventNameLabel" destination="wam-w0-qEA" id="Gvh-cS-bvk"/>
                 <outlet property="favouriteImage" destination="AOK-8a-vJC" id="z6k-Yx-hQb"/>
                 <outlet property="plateImage" destination="ge4-WK-otx" id="ffb-fT-Nax"/>
-                <outlet property="timeLabel" destination="o1u-pk-k5b" id="P4o-ty-PwE"/>
                 <outlet property="venueLabel" destination="91E-3o-lHs" id="XPE-lX-n8g"/>
             </connections>
             <point key="canvasLocation" x="236" y="207"/>
