@@ -35,7 +35,6 @@
     NSLog(@"Configuration > %@", [MTConfiguration configuration]);
     
     NSLog(@"Environment name > %@", [MTConfiguration environmentName]);
-    [Fabric with:@[[Crashlytics class]]];
     
     NSString *keyFile = [[NSBundle mainBundle]  pathForResource:@"keys" ofType:@"plist"];
     NSDictionary *keyDictionary = [NSDictionary dictionaryWithContentsOfFile:keyFile];
@@ -78,9 +77,10 @@
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    [Fabric with:@[[Crashlytics class]]];
+
     return YES;
-    
-    
 }
 
 
