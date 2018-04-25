@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0024C92EF1F17E280517C9F4 /* Pods_Surbiton_Food_Festival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE483175EB1FA2610D2E771 /* Pods_Surbiton_Food_Festival.framework */; };
+		442C1DD18B0AE85E9188EB69 /* Pods_International_Youth_Arts_Festival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7D92C8EFF07F0DE91B410F /* Pods_International_Youth_Arts_Festival.framework */; };
+		4804D5FD42EDDAB89522D32E /* Pods_Surbiton_Food_Festival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4773B01650ED83C820088A39 /* Pods_Surbiton_Food_Festival.framework */; };
 		AE097BA22055BB2B00CAEAF0 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */; };
 		AE097BA42055BB2B00CAEAF0 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA02055BB2B00CAEAF0 /* EventViewController.m */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
@@ -207,18 +208,17 @@
 		AEF520981A9E2C7600C05D84 /* MTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF520971A9E2C7600C05D84 /* MTConfiguration.m */; };
 		AEF8BC461A7CEC8A007241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC451A7CEC8A007241DC /* main.m */; };
 		AEF8BC491A7CEC8A007241DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF8BC481A7CEC8A007241DC /* AppDelegate.m */; };
-		C69A01FE1FF7765C24D041E1 /* Pods_International_Youth_Arts_Festival.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835610DF07E82BF5E3582BDD /* Pods_International_Youth_Arts_Festival.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		17AF65B78EDED0968F4B1CC4 /* Pods-International Youth Arts Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.debug.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.debug.xcconfig"; sourceTree = "<group>"; };
-		312CF31AD42165DBA8A44E52 /* Pods-Surbiton Food Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.production.xcconfig"; sourceTree = "<group>"; };
-		3DE483175EB1FA2610D2E771 /* Pods_Surbiton_Food_Festival.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surbiton_Food_Festival.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46F933EA9F9960EAE3D14864 /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
-		54A2603D90DBC9C46BFD5CD0 /* Pods-International Youth Arts Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.production.xcconfig"; sourceTree = "<group>"; };
-		6237782C6190F0C8B5321850 /* Pods-International Youth Arts Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.release.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.release.xcconfig"; sourceTree = "<group>"; };
-		835610DF07E82BF5E3582BDD /* Pods_International_Youth_Arts_Festival.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_International_Youth_Arts_Festival.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DFA7192FE5B94BEBACE70D1 /* Pods-International Youth Arts Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.development.xcconfig"; sourceTree = "<group>"; };
+		0C065F2FED1A1502A0498264 /* Pods-Surbiton Food Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.production.xcconfig"; sourceTree = "<group>"; };
+		202B2E59C66D5587E9CFF81F /* Pods-International Youth Arts Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.debug.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.debug.xcconfig"; sourceTree = "<group>"; };
+		3881F9239E1618ED14FFB6BF /* Pods-Surbiton Food Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.development.xcconfig"; sourceTree = "<group>"; };
+		4773B01650ED83C820088A39 /* Pods_Surbiton_Food_Festival.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surbiton_Food_Festival.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D7D92C8EFF07F0DE91B410F /* Pods_International_Youth_Arts_Festival.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_International_Youth_Arts_Festival.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80280B4751F954DEC94BAB37 /* Pods-International Youth Arts Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.release.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.release.xcconfig"; sourceTree = "<group>"; };
+		8CEA91DA03376D3F1BDE6360 /* Pods-Surbiton Food Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.release.xcconfig"; sourceTree = "<group>"; };
+		A29E87DA29A9DBFACB91A3C9 /* Pods-International Youth Arts Festival.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.development.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.development.xcconfig"; sourceTree = "<group>"; };
 		AE097B9D2055BB2A00CAEAF0 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		AE097B9E2055BB2A00CAEAF0 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewCell.xib; sourceTree = "<group>"; };
@@ -386,8 +386,8 @@
 		AEF8BC451A7CEC8A007241DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AEF8BC471A7CEC8A007241DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEF8BC481A7CEC8A007241DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BF5DEABFC5B688ED0D6A670D /* Pods-Surbiton Food Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.debug.xcconfig"; sourceTree = "<group>"; };
-		F51AF0304B8FE85344741770 /* Pods-Surbiton Food Festival.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.release.xcconfig"; sourceTree = "<group>"; };
+		C7A3B5B1A252801157A354A9 /* Pods-International Youth Arts Festival.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-International Youth Arts Festival.production.xcconfig"; path = "Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival.production.xcconfig"; sourceTree = "<group>"; };
+		FC7A4E8F85BC94F5625FE0F0 /* Pods-Surbiton Food Festival.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surbiton Food Festival.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,7 +401,7 @@
 				AEDD1A6420663ECE001BD259 /* UIKit.framework in Frameworks */,
 				AEDD1A6520663ECE001BD259 /* MapKit.framework in Frameworks */,
 				AEDD1A6620663ECE001BD259 /* Social.framework in Frameworks */,
-				C69A01FE1FF7765C24D041E1 /* Pods_International_Youth_Arts_Festival.framework in Frameworks */,
+				442C1DD18B0AE85E9188EB69 /* Pods_International_Youth_Arts_Festival.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,34 +415,19 @@
 				AE1BCBA91A9FC77200E79935 /* UIKit.framework in Frameworks */,
 				AE9369F41A9BC5E300F15869 /* MapKit.framework in Frameworks */,
 				AEED6CCC1A939DB700B8D84B /* Social.framework in Frameworks */,
-				0024C92EF1F17E280517C9F4 /* Pods_Surbiton_Food_Festival.framework in Frameworks */,
+				4804D5FD42EDDAB89522D32E /* Pods_Surbiton_Food_Festival.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		279CCC5A3BF2EA50883575CD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				17AF65B78EDED0968F4B1CC4 /* Pods-International Youth Arts Festival.debug.xcconfig */,
-				54A2603D90DBC9C46BFD5CD0 /* Pods-International Youth Arts Festival.production.xcconfig */,
-				9DFA7192FE5B94BEBACE70D1 /* Pods-International Youth Arts Festival.development.xcconfig */,
-				6237782C6190F0C8B5321850 /* Pods-International Youth Arts Festival.release.xcconfig */,
-				BF5DEABFC5B688ED0D6A670D /* Pods-Surbiton Food Festival.debug.xcconfig */,
-				312CF31AD42165DBA8A44E52 /* Pods-Surbiton Food Festival.production.xcconfig */,
-				46F933EA9F9960EAE3D14864 /* Pods-Surbiton Food Festival.development.xcconfig */,
-				F51AF0304B8FE85344741770 /* Pods-Surbiton Food Festival.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		5749656D9CB7325C8DCC423D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				AEB9FFE420652AE000F60E67 /* UserNotifications.framework */,
-				835610DF07E82BF5E3582BDD /* Pods_International_Youth_Arts_Festival.framework */,
-				3DE483175EB1FA2610D2E771 /* Pods_Surbiton_Food_Festival.framework */,
+				5D7D92C8EFF07F0DE91B410F /* Pods_International_Youth_Arts_Festival.framework */,
+				4773B01650ED83C820088A39 /* Pods_Surbiton_Food_Festival.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -769,7 +754,7 @@
 				AEF8BC411A7CEC8A007241DC /* Products */,
 				AE83538920602637007CD747 /* Screenshots */,
 				5749656D9CB7325C8DCC423D /* Frameworks */,
-				279CCC5A3BF2EA50883575CD /* Pods */,
+				B49CB7A1DF4B8AF53E8FC32B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -813,6 +798,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B49CB7A1DF4B8AF53E8FC32B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				202B2E59C66D5587E9CFF81F /* Pods-International Youth Arts Festival.debug.xcconfig */,
+				C7A3B5B1A252801157A354A9 /* Pods-International Youth Arts Festival.production.xcconfig */,
+				A29E87DA29A9DBFACB91A3C9 /* Pods-International Youth Arts Festival.development.xcconfig */,
+				80280B4751F954DEC94BAB37 /* Pods-International Youth Arts Festival.release.xcconfig */,
+				FC7A4E8F85BC94F5625FE0F0 /* Pods-Surbiton Food Festival.debug.xcconfig */,
+				0C065F2FED1A1502A0498264 /* Pods-Surbiton Food Festival.production.xcconfig */,
+				3881F9239E1618ED14FFB6BF /* Pods-Surbiton Food Festival.development.xcconfig */,
+				8CEA91DA03376D3F1BDE6360 /* Pods-Surbiton Food Festival.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -820,12 +820,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEDD1AB520663ECE001BD259 /* Build configuration list for PBXNativeTarget "International Youth Arts Festival" */;
 			buildPhases = (
-				8E1D0CF2D194784A00F3BCA8 /* [CP] Check Pods Manifest.lock */,
+				5F574B9DE8BDAC12C83C89F0 /* [CP] Check Pods Manifest.lock */,
 				AEDD1A3320663ECE001BD259 /* Sources */,
 				AEDD1A6020663ECE001BD259 /* Frameworks */,
 				AEDD1A6820663ECE001BD259 /* Resources */,
-				49E6580DFDCB93B3A275C194 /* [CP] Embed Pods Frameworks */,
-				5A61F151A2F48BE2407F615D /* [CP] Copy Pods Resources */,
+				4E4C852E7C343348CB16F56E /* [CP] Embed Pods Frameworks */,
+				3712C71F5ACDC043C477A54E /* [CP] Copy Pods Resources */,
+				AE4E6DB42090C4A30051AB79 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -840,13 +841,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEF8BC661A7CEC8A007241DC /* Build configuration list for PBXNativeTarget "Surbiton Food Festival" */;
 			buildPhases = (
-				72DC4E3BC0245DB19331B270 /* [CP] Check Pods Manifest.lock */,
+				8E088F43AD1993089F7C5BAC /* [CP] Check Pods Manifest.lock */,
 				AEF8BC3C1A7CEC8A007241DC /* Sources */,
 				AEF8BC3D1A7CEC8A007241DC /* Frameworks */,
 				AEF8BC3E1A7CEC8A007241DC /* Resources */,
-				8F5996A3B9F3EE21A2A53989 /* [CP] Embed Pods Frameworks */,
-				62009C8FA3EC6B643DA9A9B6 /* [CP] Copy Pods Resources */,
 				AE9E649F206A4D6C00863DDD /* ShellScript */,
+				8485AEF125CF6A0949299D96 /* [CP] Embed Pods Frameworks */,
+				F255EA515077C1DC10D6FD5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1023,7 +1024,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		49E6580DFDCB93B3A275C194 /* [CP] Embed Pods Frameworks */ = {
+		3712C71F5ACDC043C477A54E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E4C852E7C343348CB16F56E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1059,65 +1080,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A61F151A2F48BE2407F615D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62009C8FA3EC6B643DA9A9B6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		72DC4E3BC0245DB19331B270 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Surbiton Food Festival-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8E1D0CF2D194784A00F3BCA8 /* [CP] Check Pods Manifest.lock */ = {
+		5F574B9DE8BDAC12C83C89F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1135,7 +1098,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F5996A3B9F3EE21A2A53989 /* [CP] Embed Pods Frameworks */ = {
+		8485AEF125CF6A0949299D96 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1171,6 +1134,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8E088F43AD1993089F7C5BAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Surbiton Food Festival-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE4E6DB42090C4A30051AB79 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f33e96542099ca70ea2f9d5bc4ecb316653b3e9f de0c468ef04b433a8882b55fea5a413391fd2346466b2c4208db4939bd2f05b8";
+		};
 		AE9E649F206A4D6C00863DDD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1182,7 +1176,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\n\n#Grabs info from plist\nplist=$SRCROOT\"/\"$INFOPLIST_FILE\n\n";
+			shellScript = "#!/bin/sh\n\n#Grabs info from plist\nplist=$SRCROOT\"/\"$INFOPLIST_FILE\n\n\"${PODS_ROOT}/Fabric/run\" f33e96542099ca70ea2f9d5bc4ecb316653b3e9f de0c468ef04b433a8882b55fea5a413391fd2346466b2c4208db4939bd2f05b8";
+		};
+		F255EA515077C1DC10D6FD5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1290,7 +1304,7 @@
 /* Begin XCBuildConfiguration section */
 		AEDD1AB620663ECE001BD259 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17AF65B78EDED0968F4B1CC4 /* Pods-International Youth Arts Festival.debug.xcconfig */;
+			baseConfigurationReference = 202B2E59C66D5587E9CFF81F /* Pods-International Youth Arts Festival.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1318,7 +1332,7 @@
 		};
 		AEDD1AB720663ECE001BD259 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54A2603D90DBC9C46BFD5CD0 /* Pods-International Youth Arts Festival.production.xcconfig */;
+			baseConfigurationReference = C7A3B5B1A252801157A354A9 /* Pods-International Youth Arts Festival.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1338,7 +1352,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1348,7 +1365,7 @@
 		};
 		AEDD1AB820663ECE001BD259 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DFA7192FE5B94BEBACE70D1 /* Pods-International Youth Arts Festival.development.xcconfig */;
+			baseConfigurationReference = A29E87DA29A9DBFACB91A3C9 /* Pods-International Youth Arts Festival.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1368,7 +1385,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1378,7 +1398,7 @@
 		};
 		AEDD1AB920663ECE001BD259 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6237782C6190F0C8B5321850 /* Pods-International Youth Arts Festival.release.xcconfig */;
+			baseConfigurationReference = 80280B4751F954DEC94BAB37 /* Pods-International Youth Arts Festival.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1457,7 +1477,7 @@
 		};
 		AEF5208F1A9E2B4600C05D84 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46F933EA9F9960EAE3D14864 /* Pods-Surbiton Food Festival.development.xcconfig */;
+			baseConfigurationReference = 3881F9239E1618ED14FFB6BF /* Pods-Surbiton Food Festival.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1477,7 +1497,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1538,7 +1561,7 @@
 		};
 		AEF520921A9E2B5500C05D84 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 312CF31AD42165DBA8A44E52 /* Pods-Surbiton Food Festival.production.xcconfig */;
+			baseConfigurationReference = 0C065F2FED1A1502A0498264 /* Pods-Surbiton Food Festival.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1558,7 +1581,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1663,7 +1689,7 @@
 		};
 		AEF8BC671A7CEC8A007241DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF5DEABFC5B688ED0D6A670D /* Pods-Surbiton Food Festival.debug.xcconfig */;
+			baseConfigurationReference = FC7A4E8F85BC94F5625FE0F0 /* Pods-Surbiton Food Festival.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1691,7 +1717,7 @@
 		};
 		AEF8BC681A7CEC8A007241DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F51AF0304B8FE85344741770 /* Pods-Surbiton Food Festival.release.xcconfig */;
+			baseConfigurationReference = 8CEA91DA03376D3F1BDE6360 /* Pods-Surbiton Food Festival.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

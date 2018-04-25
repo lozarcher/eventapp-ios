@@ -35,7 +35,8 @@
     NSLog(@"Configuration > %@", [MTConfiguration configuration]);
     
     NSLog(@"Environment name > %@", [MTConfiguration environmentName]);
-
+    [Fabric with:@[[Crashlytics class]]];
+    
     NSString *keyFile = [[NSBundle mainBundle]  pathForResource:@"keys" ofType:@"plist"];
     NSDictionary *keyDictionary = [NSDictionary dictionaryWithContentsOfFile:keyFile];
     
