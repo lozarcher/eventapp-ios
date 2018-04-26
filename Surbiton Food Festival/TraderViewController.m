@@ -8,6 +8,7 @@
 
 #import "TraderViewController.h"
 #import "UIImageView+WebCache.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface TraderViewController ()
 
@@ -72,12 +73,20 @@
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                 if (image) {
                                     [self setImage:image];
+                                    if (error != nil) {
+                                        [CrashlyticsKit recordError:error];
+                                    }
                                 }
                             }
          ];
     } else {
         [self setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
+    
+    [Answers logContentViewWithName:trader.name
+                        contentType:@"Trader List"
+                          contentId:trader.id
+                   customAttributes:@{}];
 }
 
 -(void)setImage:(UIImage *)image {

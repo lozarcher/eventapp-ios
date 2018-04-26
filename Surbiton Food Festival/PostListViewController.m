@@ -14,8 +14,8 @@
 #import "UIImageView+WebCache.h"
 #import "AppDelegate.h"
 #import "FontAwesomeKit/FAKFontAwesome.h"
-
 #import "UITableView+FDTemplateLayoutCell.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation PostListViewController
 
@@ -70,6 +70,11 @@
 
     [self activateSpinner:YES];
     [self refreshPosts:self];
+    
+    [Answers logContentViewWithName:@"Post List View"
+                        contentType:@"Post List"
+                          contentId:@"postlist"
+                   customAttributes:@{}];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -236,7 +241,8 @@
     NSLog(@"Connection failed! Error - %@ %@",
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
-    
+    [CrashlyticsKit recordError:error];
+
     [self activateSpinner:NO];
     [self.refreshControl endRefreshing];
     // Get events from cache instead
@@ -246,6 +252,7 @@
         NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
         if (readError != nil) {
             NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+            [CrashlyticsKit recordError:readError];
         } else {
             NSLog(@"Using cached data");
             [self getPostFromData:data];
@@ -257,6 +264,7 @@
         if (parseError != nil) {
             NSLog(@"Local post cache parse error: %@", [parseError localizedDescription]);
             [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+            [CrashlyticsKit recordError:parseError];
         }
     }
 }
@@ -274,6 +282,7 @@
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
         NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
+        [CrashlyticsKit recordError:writeError];
     } else {
         NSLog(@"Wrote to file %@", storePath);
     }
@@ -307,6 +316,7 @@
     }
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
+        [CrashlyticsKit recordError:error];
     }
     NSLog(@"Got %lu posts from data", (unsigned long)posts.count);
     

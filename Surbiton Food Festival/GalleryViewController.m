@@ -12,6 +12,7 @@
 #import "GalleryBuilder.h"
 #import "Gallery.h"
 #import "UploadPhotoViewController.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface GalleryViewController ()
 @property MWPhotoBrowser *browser;
@@ -54,6 +55,10 @@
 
     [self.navigationController addChildViewController:_browser];
 
+    [Answers logContentViewWithName:@"Gallery View"
+                        contentType:@"Gallery"
+                          contentId:@"gallery"
+                   customAttributes:@{}];
 }
 
 -(IBAction)doAddPhoto:(id)sender
@@ -178,7 +183,8 @@
     NSLog(@"Connection failed! Error - %@ %@",
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
-    
+    [CrashlyticsKit recordError:error];
+
     [self activateSpinner:NO];
     // Get events from cache instead
     NSError *parseError;
@@ -187,6 +193,7 @@
         NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
         if (readError != nil) {
             NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+            [CrashlyticsKit recordError:readError];
         } else {
             NSLog(@"Using cached data");
             [self getGalleryFromData:data];
@@ -197,6 +204,7 @@
         if (parseError != nil) {
             NSLog(@"Local post cache parse error: %@", [parseError localizedDescription]);
             [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+            [CrashlyticsKit recordError:parseError];
         }
     }
 }
@@ -213,6 +221,7 @@
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
         NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
+        [CrashlyticsKit recordError:writeError];
     } else {
         NSLog(@"Wrote to file %@", storePath);
     }
@@ -238,6 +247,7 @@
     }
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
+        [CrashlyticsKit recordError:error];
     }
     NSLog(@"Got %lu photos from gallery data", (unsigned long)gallery.count);
     [_browser reloadData];

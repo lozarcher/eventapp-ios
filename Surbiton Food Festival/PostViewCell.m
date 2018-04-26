@@ -52,6 +52,9 @@
                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                     post.cachedImage = image;
                                     [self setPostImage:image];
+                                    if (error != nil) {
+                                        [CrashlyticsKit recordError:error];
+                                    }
                                 }];
         }
     }

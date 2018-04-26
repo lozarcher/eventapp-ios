@@ -15,6 +15,7 @@
 #import "TraderViewController.h"
 #import "AppDelegate.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation TraderListViewController
 
@@ -65,6 +66,11 @@
     
     [self activateSpinner:YES];
     [self refreshTraders:self];
+    
+    [Answers logContentViewWithName:@"Trader List View"
+                        contentType:@"Trader List"
+                          contentId:@"traderlist"
+                   customAttributes:@{}];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -197,6 +203,7 @@
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
     
+    [CrashlyticsKit recordError:error];
     [self activateSpinner:NO];
     [self.refreshControl endRefreshing];
     // Get events from cache instead
@@ -206,6 +213,7 @@
         NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
         if (readError != nil) {
             NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+            [CrashlyticsKit recordError:readError];
         } else {
             NSLog(@"Using cached data");
             [self getTradersFromData:data];
@@ -217,6 +225,7 @@
         if (parseError != nil) {
             NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
             [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
+            [CrashlyticsKit recordError:parseError];
         }
     }
 }
@@ -235,6 +244,7 @@
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
         NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
+        [CrashlyticsKit recordError:writeError];
     } else {
         NSLog(@"Wrote to file %@", storePath);
     }
@@ -262,6 +272,7 @@
     }
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
+        [CrashlyticsKit recordError:error];
     }
     NSLog(@"Got %lu traders from data", (unsigned long)traders.count);
     return error;

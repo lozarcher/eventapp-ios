@@ -9,6 +9,7 @@
 #import "TraderViewCell.h"
 #import "Trader.h"
 #import "UIImageView+WebCache.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation TraderViewCell
 
@@ -39,6 +40,9 @@
                              }
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                 [traderImage setImage:image];
+                                if (error != nil) {
+                                    [CrashlyticsKit recordError:error];
+                                }
                             }];
     } else {
         [traderImage setImage:[UIImage imageNamed:@"logo.jpg"]];

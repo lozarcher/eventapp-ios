@@ -15,6 +15,7 @@
 #import "MTConfiguration.h"
 #import "AppDelegate.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation EventListViewController
 
@@ -76,6 +77,11 @@
     [self activateSpinner:YES];
     [self refreshEvents:self];
     [self setFilteredEvents];
+    
+    [Answers logContentViewWithName:@"Events List"
+                        contentType:@"Events"
+                          contentId:@"eventslist"
+                   customAttributes:@{}];
 }
 
 //event handler when event occurs
@@ -206,6 +212,9 @@
                                       }];
                                   } else {
                                       NSLog(@"Notification permission not granted");
+                                  }
+                                  if (error != nil) {
+                                      [CrashlyticsKit recordError:error];
                                   }
                               }];
     }
@@ -394,7 +403,8 @@
     NSLog(@"Connection failed! Error - %@ %@",
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
-    
+    [CrashlyticsKit recordError:error];
+
     [self activateSpinner:NO];
     [self.refreshControl endRefreshing];
     // Get events from cache instead
@@ -404,6 +414,7 @@
         NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
         if (readError != nil) {
             NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+            [CrashlyticsKit recordError:error];
         } else {
             NSLog(@"Using cached data");
             [self getEventsFromData:data];
@@ -414,6 +425,7 @@
     if (_events == nil || parseError != nil) {
         if (parseError != nil) {
             NSLog(@"Local event cache parse error: %@", [parseError localizedDescription]);
+            [CrashlyticsKit recordError:parseError];
             [[NSFileManager defaultManager] removeItemAtPath:storePath error:NULL];
         }
     }
@@ -433,6 +445,8 @@
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
         NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
+        [CrashlyticsKit recordError:writeError];
+
     } else {
         NSLog(@"Wrote to file %@", storePath);
     }
@@ -462,6 +476,7 @@
     [self createEventDays:events];
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
+        [CrashlyticsKit recordError:error];
     }
     NSLog(@"Got %lu events from data", (unsigned long)events.count);
 

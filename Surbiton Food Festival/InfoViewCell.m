@@ -9,6 +9,7 @@
 #import "InfoViewCell.h"
 #import "Info.h"
 #import "UIImageView+WebCache.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation InfoViewCell
 
@@ -36,6 +37,9 @@
                              }
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                 [infoImage setImage:image];
+                                if (error != nil) {
+                                    [CrashlyticsKit recordError:error];
+                                }
                             }];
     } else {
         [infoImage setImage:[UIImage imageNamed:@"logo.jpg"]];

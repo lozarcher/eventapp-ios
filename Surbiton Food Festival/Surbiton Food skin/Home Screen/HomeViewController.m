@@ -80,8 +80,13 @@
 
     self.menuTop.constant = newTopConstraint;
     self.menuBottom.constant = newBottomConstraint;
-
+    
     [self setUpButtons];
+    
+    [Answers logContentViewWithName:@"Home View"
+                        contentType:@"Home View"
+                          contentId:@"home"
+                   customAttributes:@{}];
 }
 
 -(void)setUpButtons {

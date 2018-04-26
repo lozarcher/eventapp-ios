@@ -11,6 +11,7 @@
 #import "VenueViewController.h"
 #import "FontAwesomeKit/FAKFontAwesome.h"
 #import <UIKit/UIKit.h>
+#import <Crashlytics/Crashlytics.h>
 
 @implementation EventViewController
 
@@ -63,6 +64,9 @@
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                 if (image) {
                                     [self setImage:image];
+                                    if (error != nil) {
+                                        [CrashlyticsKit recordError:error];
+                                    }
                                 }
                             }
          ];
@@ -114,6 +118,11 @@
     if ([event.ticketUrl isKindOfClass:[NSNull class]]) {
         [self.buyTicketsButton removeFromSuperview];
     }
+    
+    [Answers logContentViewWithName:event.name
+                        contentType:@"Events"
+                          contentId:event.id
+                   customAttributes:@{}];
 }
 
 -(void)setImage:(UIImage *)image {
@@ -169,8 +178,12 @@
      object:dict
      userInfo:dict];
     self.event.isFavourite = !self.event.isFavourite;
-    [self setFavouriteButtonIcon];}
-
+    [self setFavouriteButtonIcon];
+    [Answers logContentViewWithName:[NSString stringWithFormat:@"Favourite: %@",event.name]
+                        contentType:@"Favourite"
+                          contentId:[NSString stringWithFormat:@"f%@",event.id]
+                   customAttributes:@{}];
+}
 
 - (IBAction)ticketsButtonPressed:(id)sender {
     NSString *urlString = event.ticketUrl;

@@ -15,6 +15,7 @@
 #import "InfoViewController.h"
 #import "AppDelegate.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation InfoListViewController
 
@@ -65,6 +66,11 @@
     
     [self activateSpinner:YES];
     [self refreshInfo:self];
+    
+    [Answers logContentViewWithName:@"Info List View"
+                        contentType:@"Info List"
+                          contentId:@"infolist"
+                   customAttributes:@{}];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -197,7 +203,8 @@
     NSLog(@"Connection failed! Error - %@ %@",
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
-    
+    [CrashlyticsKit recordError:error];
+
     [self activateSpinner:NO];
     [self.refreshControl endRefreshing];
     // Get events from cache instead
@@ -207,6 +214,7 @@
         NSData *data = [NSData dataWithContentsOfFile:storePath options:NSDataReadingMappedIfSafe error:&readError];
         if (readError != nil) {
             NSLog(@"Could not read from file: %@", [readError localizedDescription]);
+            [CrashlyticsKit recordError:readError];
         } else {
             NSLog(@"Using cached data");
             [self getInfoFromData:data];
@@ -236,6 +244,7 @@
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
     if (writeError != nil) {
         NSLog(@"Could not write to file: %@", [writeError localizedDescription]);
+        [CrashlyticsKit recordError:writeError];
     } else {
         NSLog(@"Wrote to file %@", storePath);
     }
@@ -263,6 +272,7 @@
     }
     if (error != nil) {
         NSLog(@"Error : %@", [error description]);
+        [CrashlyticsKit recordError:error];
     }
     NSLog(@"Got %lu info items from data", (unsigned long)_infoItems.count);
     return error;

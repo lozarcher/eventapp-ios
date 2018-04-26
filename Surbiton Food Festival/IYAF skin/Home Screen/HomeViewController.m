@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "SWRevealViewController.h"
 #import "EventViewController.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface HomeViewController ()
 
@@ -91,6 +92,11 @@
     [self setUpButtons];
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
+    
+    [Answers logContentViewWithName:@"Home View"
+                        contentType:@"Home View"
+                          contentId:@"home"
+                   customAttributes:@{}];
 }
 
 -(void)setUpButtons {

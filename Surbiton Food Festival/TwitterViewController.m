@@ -1,6 +1,7 @@
 #import "TwitterViewController.h"
 #import <TwitterKit/TWTRKit.h>
 #import "AppDelegate.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation TwitterViewController
 
@@ -26,6 +27,11 @@
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
                                                                          style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     self.navigationItem.leftBarButtonItem = revealButtonItem;
+    
+    [Answers logContentViewWithName:@"Twitter View"
+                        contentType:@"Twitter List"
+                          contentId:@"twitterlist"
+                   customAttributes:@{}];
     
 }
 

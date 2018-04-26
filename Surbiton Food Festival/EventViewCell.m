@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "FontAwesomeKit/FAKFontAwesome.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation EventViewCell
 
@@ -123,6 +124,10 @@
      postNotificationName:@"favouriteEvent"
      object:dict
      userInfo:dict];
+    [Answers logContentViewWithName:[NSString stringWithFormat:@"Favourite: %@",event.name]
+                        contentType:@"Favourite"
+                          contentId:[NSString stringWithFormat:@"f%@",event.id]
+                   customAttributes:@{}];
     }
 
 -(void)setFavouritedIcon:(BOOL)favourited {

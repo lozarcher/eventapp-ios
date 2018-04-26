@@ -8,6 +8,7 @@
 
 #import "InfoViewController.h"
 #import "UIImageView+WebCache.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface InfoViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
@@ -57,10 +58,17 @@
                              }
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                 [self setImage:image];
+                                if (error != nil) {
+                                    [CrashlyticsKit recordError:error];
+                                }
                             }];
     } else {
         [self setImage:[UIImage imageNamed:@"logo.jpg"]];
     }
+    [Answers logContentViewWithName:info.title
+                        contentType:@"Info List"
+                          contentId:info.id
+                   customAttributes:@{}];
 }
 
 -(void)setImage:(UIImage *)image {

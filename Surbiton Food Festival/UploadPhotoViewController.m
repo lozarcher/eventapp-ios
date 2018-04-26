@@ -42,6 +42,11 @@
     self.title = NSLocalizedString(@"Upload a Photo", nil);
 
     self.httpQueue = [[NSOperationQueue alloc] init];
+    
+    [Answers logContentViewWithName:@"Gallery Upload"
+                        contentType:@"Gallery"
+                          contentId:@"gallery-upload"
+                   customAttributes:@{}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -185,6 +190,8 @@
                                        [self performSelectorOnMainThread:@selector(showMessage:)
                                                               withObject:@"Sorry, there was a network error when uploading your photo. Please try later"
                                                            waitUntilDone:YES];
+                                       [CrashlyticsKit recordError:error];
+                                       
                                    }
                                    else{
                                        if (status == 200) {
