@@ -74,9 +74,12 @@
     [super viewWillAppear:animated];
     
     // Position menu according to runtime position of the background images
-    int screenHeight = [UIScreen mainScreen].bounds.size.height;
-    [self.view layoutIfNeeded];
-
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    int screenHeight = screenSize.height;
+    
+    [self.backgroundImage setImage:[self backgroundImageForScreenSize:screenSize]];
+    [self.backgroundImage setNeedsDisplay];
+    
     self.gapBeforeMenu.constant = screenHeight *0.45;
     
     // Bottom Padding, tweaked for iPhone X
@@ -132,6 +135,43 @@
     [self.galleryImage  addGestureRecognizer:galleryTap];
     
 }
+
+-(UIImage *)backgroundImageForScreenSize:(CGSize)size {
+    NSDictionary *backgroundImages = [NSDictionary
+                                      dictionaryWithObjects:
+                                           [NSArray arrayWithObjects:
+                                            @"app_background_0444.png",
+                                            @"app_background_0562.png",
+                                            @"app_background_0766.png", nil]
+                                      forKeys:
+                                          [NSArray arrayWithObjects:
+                                           [NSNumber numberWithFloat:0.444f],
+                                           [NSNumber numberWithFloat:0.562f],
+                                           [NSNumber numberWithFloat:0.766f], nil]
+                                          ];
+    
+    NSNumber *screenAspect = [NSNumber numberWithFloat:(size.width / size.height)];
+    NSLog(@"Screen size is %f %f", size.width, size.height);
+    NSLog(@"Aspect is %f", [screenAspect floatValue]);
+
+    float bestDistance = 999.0;
+    NSString *bestImageFile = 0;
+    for (NSNumber *imageAspect in [backgroundImages allKeys]) {
+        NSLog(@"Comparing aspect with %f", [imageAspect floatValue]);
+        float thisDistance = fabsf([screenAspect floatValue] - [imageAspect floatValue]);
+        if (thisDistance < bestDistance) {
+            bestDistance = thisDistance;
+            bestImageFile = [backgroundImages objectForKey:imageAspect];
+            NSLog(@"Best aspect so far is %f", [imageAspect floatValue]);
+            NSLog(@"This is image %@", bestImageFile);
+        }
+    }
+    
+    NSLog(@"Best image : %@", bestImageFile);
+    
+    return [UIImage imageNamed:bestImageFile];
+}
+
 
 
 @end

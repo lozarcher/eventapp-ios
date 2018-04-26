@@ -10,6 +10,7 @@
 #import "RearViewController.h"
 
 @interface HomeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 @property (weak, nonatomic) IBOutlet UIImageView *performersImage;
 @property (weak, nonatomic) IBOutlet UIImageView *newsImage;
