@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
-#import "BEMAnalogClock/BEMAnalogClockView.h"
 
-@interface EventViewCell : UITableViewCell <BEMAnalogClockDelegate>
+@interface EventViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *venueLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *favouriteImage;
-@property (weak, nonatomic) IBOutlet BEMAnalogClockView *clockView;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 @property BOOL favourited;
 -(void)populateDataInCell:(Event *)event isFavourite:(BOOL)isFavourite;
 @property Event *event;

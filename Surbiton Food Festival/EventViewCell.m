@@ -15,32 +15,15 @@
 
 @implementation EventViewCell
 
-@synthesize eventNameLabel, venueLabel, favouriteImage, favourited, event, clockView, timeLabel;
+@synthesize eventNameLabel, venueLabel, favouriteImage, favourited, event, eventImage;
 
 - (void)awakeFromNib {
     // Initialization code
     [super awakeFromNib];
     self.favourited = false;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-
-    self.clockView.delegate = self;
+    
     self.fd_enforceFrameLayout = YES;
-    
-    self.clockView.seconds = 0;
-    self.clockView.secondHandAlpha = 0;
-    self.clockView.borderColor = UIColor.grayColor;
-    self.clockView.faceBackgroundColor = UIColor.lightGrayColor;
-    self.clockView.faceBackgroundAlpha = 0.2;
-    self.clockView.borderWidth = 2;
-    
-    self.clockView.minuteHandColor = UIColor.grayColor;
-    self.clockView.minuteHandWidth = 2;
-    self.clockView.minuteHandOffsideLength = 5;
-    
-    self.clockView.hourHandColor = UIColor.grayColor;
-    self.clockView.hourHandWidth = 2;
-    self.clockView.hourHandOffsideLength = 5;
-    self.clockView.hourHandLength = 15;
 
 }
 
@@ -52,6 +35,24 @@
 
 -(void)populateDataInCell:(Event *)event isFavourite:(BOOL)isFavourite {
     self.event = event;
+    
+    self.eventImage.layer.cornerRadius = 5.0;
+    self.eventImage.layer.masksToBounds = YES;
+    
+    if (![[event coverUrl] isKindOfClass:[NSNull class]]) {
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadImageWithURL:[NSURL URLWithString:[event coverUrl]] options:0
+                             progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                             }
+                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                [self.eventImage setImage:image];
+                                if (error != nil) {
+                                    [CrashlyticsKit recordError:error];
+                                }
+                            }];
+    }
+
+    
     eventNameLabel.text = [event name];
     
     NSTimeInterval seconds = [event.startTime doubleValue]/1000;
@@ -62,26 +63,14 @@
     
     if ([startDateString isEqualToString:@"01:00"]) {
         startDateString = @"All day";
-        self.clockView.hours = 0;
-        self.clockView.minutes = 0;
         NSLog(@"Set event %@ all day", event.name);
-
-    } else {
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startDate];
-        self.clockView.hours = [components hour];
-        self.clockView.minutes = [components minute];
-        NSLog(@"Set event %@ hours %ld minutes %ld", event.name, (long)[components hour], (long)[components minute]);
     }
-    [self.clockView reloadClock];
     
     NSString *location = event.location;
     if ([location isKindOfClass:[NSNull class]]) {
         location = @"Surbiton";
     }
-    venueLabel.text = location;
-    
-    timeLabel.text = startDateString;
+    venueLabel.text = [NSString stringWithFormat:@"%@ @ %@", startDateString, location];
     
     self.favourited = isFavourite;
     [self setFavouritedIcon:self.favourited];
@@ -91,28 +80,8 @@
     [self.favouriteImage setUserInteractionEnabled:YES];
     [self.favouriteImage addGestureRecognizer:singleTap];
     
-    [self setNeedsDisplay];
 }
 
-- (UIColor *)analogClock:(BEMAnalogClockView *)clock graduationColorForIndex:(NSInteger)index {
-    if ((index % 5) == 0){
-        return UIColor.lightGrayColor;
-    } else {
-        return UIColor.whiteColor;
-    }
-}
-
-- (CGFloat)analogClock:(BEMAnalogClockView *)clock graduationAlphaForIndex:(NSInteger)index {
-    if ((index % 5) == 0){
-        return 1;
-    } else {
-        return 0.2;
-    }
-}
-
-- (CGFloat)analogClock:(BEMAnalogClockView *)clock graduationOffsetForIndex:(NSInteger)index {
-    return 0;
-}
 
 -(void)favouriteTapDetected{
     self.favourited = !self.favourited;
@@ -146,8 +115,8 @@
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    CGFloat leftSideHeight = 91;
-    
+    CGFloat leftSideHeight = 81;
+
     CGFloat rightSideHeight = 0;
     size.width = size.width - 140;
     rightSideHeight += [self.eventNameLabel sizeThatFits:size].height;
