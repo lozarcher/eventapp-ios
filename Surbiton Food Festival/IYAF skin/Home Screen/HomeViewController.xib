@@ -39,31 +39,31 @@
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_performers.png" translatesAutoresizingMaskIntoConstraints="NO" id="9IS-MF-cr1">
-                    <rect key="frame" x="-34.666666666666657" y="384.66666666666669" width="444.33333333333326" height="64.333333333333314"/>
+                    <rect key="frame" x="-34" y="384.66666666666669" width="443" height="64.333333333333314"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="9IS-MF-cr1" secondAttribute="height" multiplier="69:10" id="qBB-bA-ApI"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_news.png" translatesAutoresizingMaskIntoConstraints="NO" id="d3X-v4-iZJ">
-                    <rect key="frame" x="72.333333333333329" y="465" width="230.33333333333337" height="64.666666666666629"/>
+                    <rect key="frame" x="73.333333333333329" y="465" width="228.33333333333337" height="64"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="d3X-v4-iZJ" secondAttribute="height" multiplier="25:7" id="wSR-Gx-15i"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_gallery.png" translatesAutoresizingMaskIntoConstraints="NO" id="zyf-2d-rf8">
-                    <rect key="frame" x="26.666666666666657" y="546" width="321.66666666666674" height="64.333333333333371"/>
+                    <rect key="frame" x="26" y="545.66666666666663" width="323.33333333333331" height="64.666666666666629"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="zyf-2d-rf8" secondAttribute="height" multiplier="5:1" id="qwJ-N9-UiW"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="menu_twitter.png" translatesAutoresizingMaskIntoConstraints="NO" id="4aY-N6-kCs">
-                    <rect key="frame" x="31" y="627.33333333333337" width="313" height="63.666666666666629"/>
+                    <rect key="frame" x="29.666666666666657" y="627.33333333333337" width="315.66666666666674" height="64"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4aY-N6-kCs" secondAttribute="height" multiplier="123:25" id="jQO-T6-Cee"/>
                     </constraints>
                 </imageView>
                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_info.png" translatesAutoresizingMaskIntoConstraints="NO" id="xPs-Ux-5h7">
-                    <rect key="frame" x="43" y="708" width="289" height="64"/>
+                    <rect key="frame" x="43" y="708.33333333333337" width="289" height="63.666666666666629"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,7 +98,7 @@
         </view>
     </objects>
     <resources>
-        <image name="app_background_0444.png" width="1081" height="2436"/>
+        <image name="app_background_0444.png" width="1125" height="2536"/>
         <image name="menu_events.png" width="412" height="99"/>
         <image name="menu_gallery.png" width="464" height="91"/>
         <image name="menu_info.png" width="289" height="90"/>

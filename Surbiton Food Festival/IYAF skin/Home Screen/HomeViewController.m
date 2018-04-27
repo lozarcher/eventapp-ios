@@ -39,7 +39,7 @@
     }
     
     self.navigationItem.leftBarButtonItem = revealButtonItem;
-    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
 }
 -(void)loadHome {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
