@@ -9,6 +9,7 @@
 #import "TraderViewCell.h"
 #import "Trader.h"
 #import "UIImageView+WebCache.h"
+
 #import <Crashlytics/Crashlytics.h>
 
 @implementation TraderViewCell
@@ -32,7 +33,10 @@
     //traderNameLabel.text = [trader name];
     [kingstonPoundImage setHidden:([trader.kingstonPound intValue] != 1)];
     traderNameLabel.text = [trader name];
-        
+    
+    self.traderImage.layer.cornerRadius = 5.0;
+    self.traderImage.layer.masksToBounds = YES;
+    
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     if (![[trader profileImg] isKindOfClass:[NSNull class]]) {
         [manager downloadImageWithURL:[NSURL URLWithString:[trader profileImg]] options:0
