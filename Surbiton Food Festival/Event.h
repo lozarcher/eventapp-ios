@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSString *profileUrl;
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) NSString *ticketUrl;
+@property (strong, nonatomic) NSString *eventId;
 @property (strong, nonatomic) Venue *venue;
 @property BOOL isFavourite;
 @end

@@ -125,6 +125,26 @@
                    customAttributes:@{}];
 }
 
+- (IBAction)shareButtonPressed:(id)sender {
+    NSString *textToShare = event.name;
+    NSURL *eventUrl = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.facebook.com/events/%@", event.eventId]];
+    NSArray *objectsToShare = @[textToShare, eventUrl];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    
+    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo,
+                                   @"com.apple.mobilenotes.SharingExtension",
+                                   @"com.apple.reminders.RemindersEditorExtension"];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
+
 -(void)setImage:(UIImage *)image {
     [eventImageView setImage:image];
     [eventImageView setNeedsLayout];
@@ -143,10 +163,10 @@
     } else {
         favIcon = [FAKFontAwesome heartOIconWithSize:20];
     }
-    
+    FAKFontAwesome *shareIcon = [FAKFontAwesome shareSquareOIconWithSize:20];
     UIBarButtonItem *favButtonItem = [[UIBarButtonItem alloc] initWithImage:[favIcon imageWithSize:CGSizeMake(20,20)] style:UIBarButtonItemStylePlain target:self action:@selector(favouriteButtonPressed:)];
-    self.navigationItem.rightBarButtonItem = favButtonItem;
-    
+    UIBarButtonItem *shareButtonItem = [[UIBarButtonItem alloc] initWithImage:[shareIcon imageWithSize:CGSizeMake(20,20)] style:UIBarButtonItemStylePlain target:self action:@selector(shareButtonPressed:)];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:favButtonItem, shareButtonItem, nil];
 }
 
 - (void)didReceiveMemoryWarning {
