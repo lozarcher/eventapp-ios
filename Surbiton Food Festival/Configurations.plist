@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Release</key>
+	<dict>
+		<key>serviceHostname</key>
+		<string>https://eventapp.lozarcher.co.uk</string>
+		<key>environmentName</key>
+		<string>Prod</string>
+	</dict>
 	<key>Production</key>
 	<dict>
 		<key>serviceHostname</key>
