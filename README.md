@@ -9,7 +9,7 @@ This project is is currently responsible for two festival apps in the store, sho
 
 ### International Youth Arts Festival - [Store](http://onelink.to/iyaf)
 
-![IYAF screenshot](https://github.com/lozarcher/eventapp-ios-foodfest/blob/master/Screenshots/iyaf2018.png) 
+![IYAF screenshot](http://eventapp.lozarcher.co.uk/iyaf2018.jpg) 
 
 ### Related Repositories
 
