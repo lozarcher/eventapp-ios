@@ -1,7 +1,7 @@
 # eventapp-ios
 ## Festival iPhone app
 
-This project is is currently responsible for two festival apps in the store, shown below. The theme is chosen at build time by selecting the appropriate target.
+This project currently builds two festival apps in the store, shown below. The theme is chosen at build time by selecting the appropriate target.
 
 ### Surbiton Food Festival - [Store](http://onelink.to/surbitonfood)
 
