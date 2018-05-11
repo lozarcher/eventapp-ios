@@ -8,9 +8,10 @@
 
 #import "EventBuilder.h"
 #import "Event.h"
+#import "Category.h"
 
 @implementation EventBuilder
-+ (NSArray *)eventsFromJSON:(NSData *)objectNotation error:(NSError **)error
++ (NSDictionary *)eventsFromJSON:(NSData *)objectNotation error:(NSError **)error
 {
     NSError *localError = nil;
     NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:objectNotation options:0 error:&localError];
@@ -21,12 +22,13 @@
     }
     
     NSMutableArray *events = [[NSMutableArray alloc] init];
-    //NSDictionary *eventObject = [parsedObject valueForKey:@"events"];
-    NSArray *results = [parsedObject valueForKey:@"data"];
-    NSLog(@"Count %lu", (unsigned long)results.count);
+    NSMutableArray *categories = [[NSMutableArray alloc] init];
+    
+    NSArray *eventResults = [parsedObject valueForKey:@"events"];
+    NSLog(@"Count %lu events", (unsigned long)eventResults.count);
     
     int index = 0;
-    for (NSDictionary *eventDic in results) {
+    for (NSDictionary *eventDic in eventResults) {
         Event *event = [[Event alloc] init];
         
         for (NSString *key in eventDic) {
@@ -44,6 +46,21 @@
         index++;
     }
     
-    return events;
+    NSArray *categoryResults = [parsedObject valueForKey:@"categories"];
+    NSLog(@"Count %lu categories", (unsigned long)categoryResults.count);
+    for (NSDictionary *categoryDic in categoryResults) {
+        Category *category = [[Category alloc] init];
+        
+        for (NSString *key in categoryDic) {
+            if ([category respondsToSelector:NSSelectorFromString(key)]) {
+                NSString *mappedKey = key;
+                [category setValue:[categoryDic valueForKey:key] forKey:mappedKey];
+            }
+        }
+        [categories addObject:category];
+    }
+    
+    NSDictionary *eventFeed = [[NSDictionary alloc] initWithObjectsAndKeys:events, @"events", categories, @"categories", nil];
+    return eventFeed;
 }
 @end

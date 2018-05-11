@@ -13,6 +13,7 @@
 
 @interface EventListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate, UNUserNotificationCenterDelegate> {
     NSArray *_events;
+    NSArray *_categories;
     NSMutableArray *_filteredEvents;
     NSMutableDictionary *_eventDays;
     NSMutableArray *_eventDayKeys;

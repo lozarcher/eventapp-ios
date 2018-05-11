@@ -9,6 +9,7 @@
 
 #import "EventListViewController.h"
 #import "Event.h"
+#import "Category.h"
 #import "EventBuilder.h"
 #import "EventViewController.h"
 #import "EventViewCell.h"
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
+    
     //tableView.fd_debugLogEnabled = YES;
 
     [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];;
@@ -32,12 +34,12 @@
     _eventDays = [[NSMutableDictionary alloc] init];
     _eventDayKeys = [[NSMutableArray alloc] init];
     
-    // Register cell Nib
-    UINib *cellNib = [UINib nibWithNibName:@"EventViewCell" bundle:nil];
-    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"EventViewCell"];
-    
-    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    // Register cell Nibs
+    UINib *eventCellNib = [UINib nibWithNibName:@"EventViewCell" bundle:nil];
+    [self.tableView registerNib:eventCellNib forCellReuseIdentifier:@"EventViewCell"];
 
+    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor purpleColor];
@@ -48,7 +50,7 @@
     [tableView addSubview:self.refreshControl];
     
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    storePath = [NSString stringWithFormat:@"%@/Events.plist", aCachesDirectory];
+    storePath = [NSString stringWithFormat:@"%@/Eventsv4.plist", aCachesDirectory];
     
     self.title = NSLocalizedString(@"Event Calendar", nil);
     
@@ -249,7 +251,7 @@
 - (void)refreshEvents:(id)sender {
     NSLog(@"Fetching data from URL");
     NSString *serviceHostname = [MTConfiguration serviceHostname];
-    NSString *urlAsString = [NSString stringWithFormat:@"%@/events", serviceHostname];
+    NSString *urlAsString = [NSString stringWithFormat:@"%@/v4/events", serviceHostname];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", url);
     // Create the request.
@@ -466,10 +468,14 @@
 
 -(NSError *)getEventsFromData:(NSData *)data {
     NSError *error = nil;
-    NSArray *events = [EventBuilder eventsFromJSON:data error:&error];
+    NSDictionary *eventFeed = [EventBuilder eventsFromJSON:data error:&error];
     
+    NSArray *events = [eventFeed objectForKey:@"events"];
+    NSArray *categories = [eventFeed objectForKey:@"categories"];
+
     if ([events count] > 0) {
         _events = events;
+        _categories = categories;
     } else {
         [self activateSpinner:NO];
     }
@@ -479,6 +485,7 @@
         [CrashlyticsKit recordError:error];
     }
     NSLog(@"Got %lu events from data", (unsigned long)events.count);
+    NSLog(@"Got %lu categories from data", (unsigned long)categories.count);
 
     return error;
 }
@@ -530,4 +537,5 @@
         }
     }
 }
+
 @end
