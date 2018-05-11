@@ -126,7 +126,6 @@
             if ([event.categories containsObject:selectedCategory.id]) {
                 [filteredEvents addObject:event];
             }
-            NSLog(@"Checking categories list %@ to see if it contains %@", event.categories, selectedCategory.id);
         }
         _filteredEvents = filteredEvents;
         return;
@@ -283,8 +282,6 @@
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         UILabel *noDataLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height)];
         if ([self showFavouriteEvents]) {
-            noDataLabel.text             = @"There are no events to show";
-        } else {
             noDataLabel.text             = @"You don't have any favourite events yet";
         }
         noDataLabel.numberOfLines = 0;
