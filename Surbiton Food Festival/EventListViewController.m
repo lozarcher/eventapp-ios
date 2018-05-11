@@ -20,7 +20,7 @@
 
 @implementation EventListViewController
 
-@synthesize tableView, spinner, showFavourites, favourites;
+@synthesize tableView, spinner, favourites, selectedCategory;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,13 +59,6 @@
                                                                          style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
     self.navigationItem.leftBarButtonItem = revealButtonItem;
     
-    // Favourite icons
-    FAKFontAwesome *favIcon = [FAKFontAwesome heartIconWithSize:21];
-    self.favouritesTab.image = [favIcon imageWithSize:CGSizeMake(21,21)];
-    FAKFontAwesome *listIcon = [FAKFontAwesome listAltIconWithSize:21];
-    self.allEventsTab.image = [listIcon imageWithSize:CGSizeMake(21,21)];
-    self.showFavourites = NO;
-    
     // Load favourites from NSUserDefaults
     [self loadFavourites];
     
@@ -76,7 +69,6 @@
      name:@"favouriteEvent"
      object:nil ];
     
-    [self.tabBar setSelectedItem:[self.tabBar.items objectAtIndex:0]];
     [self activateSpinner:YES];
     [self refreshEvents:self];
     [self setFilteredEvents];
@@ -90,14 +82,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    CGFloat bottomPadding = 50;
-    if (@available(iOS 11.0, *)) {
-        UIWindow *window = UIApplication.sharedApplication.keyWindow;
-        if (window.safeAreaInsets.bottom > 0)
-            bottomPadding += window.safeAreaInsets.bottom;
-    }
-    self.tabBarHeight.constant = bottomPadding;
     
     self.title = NSLocalizedString(@"Event Calendar", nil);
     [self setEdgesForExtendedLayout:NO];
@@ -121,33 +105,32 @@
 
 -(void)setFilteredEvents {
     NSMutableArray *filteredEvents = [[NSMutableArray alloc] init];
-    if (showFavourites) {
+    
+    if ([self showAllEvents]) {
+        _filteredEvents = [_events mutableCopy];
+        return;
+    }
+
+    if ([self showFavouriteEvents]) {
         for (Event *event in _events) {
             if ([self.favourites objectForKey:event.id]) {
                 [filteredEvents addObject:event];
             }
         }
-    } else {
-        filteredEvents = [_events mutableCopy];
+        _filteredEvents = filteredEvents;
+        return;
     }
-    _filteredEvents = filteredEvents;
-}
-
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
-    NSLog(@"Tab Bar select detected %@",tabBar.selectedItem);
-    showFavourites = [self.tabBar.selectedItem isEqual:self.favouritesTab];
-    if (showFavourites) {
-        self.title = @"Your Favourite Events";
-        NSLog(@"Showing favourites");
-    } else {
-        self.title = @"Event Calendar";
-        NSLog(@"Showing all events");
-
+    
+    if ([self showFilteredEvents]) {
+        for (Event *event in _events) {
+            if ([event.categories containsObject:selectedCategory.id]) {
+                [filteredEvents addObject:event];
+            }
+            NSLog(@"Checking categories list %@ to see if it contains %@", event.categories, selectedCategory.id);
+        }
+        _filteredEvents = filteredEvents;
+        return;
     }
-    [self setFilteredEvents];
-    [self createEventDays:_filteredEvents];
-
-    [tableView reloadData];
 }
 
 -(void)loadHome:(id)sender {
@@ -226,7 +209,7 @@
                               }];
     }
     
-    if (showFavourites) {
+    if ([self showFavouriteEvents]) {
         [self setFilteredEvents];
         [self createEventDays:_filteredEvents];
         [tableView reloadData];
@@ -298,14 +281,16 @@
     } else {
         // Display a message when the table is empty
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        if (showFavourites) {
-            UILabel *noDataLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height)];
+        UILabel *noDataLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height)];
+        if ([self showFavouriteEvents]) {
+            noDataLabel.text             = @"There are no events to show";
+        } else {
             noDataLabel.text             = @"You don't have any favourite events yet";
-            noDataLabel.numberOfLines = 0;
-            noDataLabel.textColor        = [UIColor blackColor];
-            noDataLabel.textAlignment    = NSTextAlignmentCenter;
-            self.tableView.backgroundView = noDataLabel;
         }
+        noDataLabel.numberOfLines = 0;
+        noDataLabel.textColor        = [UIColor blackColor];
+        noDataLabel.textAlignment    = NSTextAlignmentCenter;
+        self.tableView.backgroundView = noDataLabel;
         
         return 0;
     }
@@ -483,6 +468,7 @@
     if ([events count] > 0) {
         _events = events;
         _categories = categories;
+        selectedCategory = [_categories objectAtIndex:0];
     } else {
         [self activateSpinner:NO];
     }
@@ -546,16 +532,27 @@
     }
 }
 
+-(BOOL)showFavouriteEvents {
+    return [selectedCategory.categoryType isEqualToString:@"FAVOURITES"];
+}
+
+-(BOOL)showAllEvents {
+    return [selectedCategory.categoryType isEqualToString:@"ALL"];
+}
+
+-(BOOL)showFilteredEvents {
+    return [selectedCategory.categoryType isEqualToString:@"FILTER"];
+}
+
+            
 #pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
 
 - (NSInteger)numberOfItemsInSelectionList:(HTHorizontalSelectionList *)selectionList {
-    NSLog(@"Number of items in category list %lu", (unsigned long)_categories.count);
     return _categories.count;
 }
 
 - (NSString *)selectionList:(HTHorizontalSelectionList *)selectionList titleForItemWithIndex:(NSInteger)index {
     Category *category = [_categories objectAtIndex:index];
-    NSLog(@"Loaded category into category list %@", category.category);
     return category.category;
 }
 
@@ -563,6 +560,15 @@
 
 - (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index {
     // update the view for the corresponding index
+    selectedCategory = [_categories objectAtIndex:index];
+    
+    [self setFilteredEvents];
+    [self createEventDays:_filteredEvents];
+    
+    [tableView reloadData];
+    [tableView setContentOffset:CGPointZero animated:NO];
+
 }
 
+            
 @end

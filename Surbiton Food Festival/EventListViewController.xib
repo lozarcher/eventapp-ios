@@ -11,11 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventListViewController">
             <connections>
-                <outlet property="allEventsTab" destination="Y4d-GP-6K8" id="FpQ-hH-Fej"/>
                 <outlet property="categoriesListView" destination="ZQG-Pa-VIf" id="vB2-g7-hHp"/>
-                <outlet property="favouritesTab" destination="txq-zy-AdP" id="cVT-f8-kJh"/>
-                <outlet property="tabBar" destination="bAm-HN-moQ" id="TZd-Q2-Ex6"/>
-                <outlet property="tabBarHeight" destination="DvB-e0-umh" id="Bsg-9E-Ze8"/>
                 <outlet property="tableView" destination="KLF-8L-gYZ" id="bJs-EF-UHi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,27 +22,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-8L-gYZ">
-                    <rect key="frame" x="0.0" y="50" width="375" height="568"/>
+                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="AVb-K4-Okp"/>
                         <outlet property="delegate" destination="-1" id="Bur-rN-XWk"/>
                     </connections>
                 </tableView>
-                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAm-HN-moQ">
-                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="49" id="DvB-e0-umh"/>
-                    </constraints>
-                    <items>
-                        <tabBarItem title="All Events" id="Y4d-GP-6K8"/>
-                        <tabBarItem title="Favourites" id="txq-zy-AdP"/>
-                    </items>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="W47-ma-2wS"/>
-                    </connections>
-                </tabBar>
                 <view autoresizesSubviews="NO" contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQG-Pa-VIf" customClass="HTHorizontalSelectionList">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,11 +39,8 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="bAm-HN-moQ" secondAttribute="trailing" id="H7M-q6-MER"/>
-                <constraint firstItem="bAm-HN-moQ" firstAttribute="top" secondItem="KLF-8L-gYZ" secondAttribute="bottom" id="Knn-Kb-nhA"/>
+                <constraint firstAttribute="bottom" secondItem="KLF-8L-gYZ" secondAttribute="bottom" id="3nT-Lb-dzD"/>
                 <constraint firstAttribute="trailing" secondItem="KLF-8L-gYZ" secondAttribute="trailing" id="SW3-Ar-o7X"/>
-                <constraint firstItem="bAm-HN-moQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WaC-pA-tv4"/>
-                <constraint firstAttribute="bottom" secondItem="bAm-HN-moQ" secondAttribute="bottom" id="X1C-55-vg5"/>
                 <constraint firstItem="KLF-8L-gYZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZAg-YH-9OS"/>
                 <constraint firstItem="KLF-8L-gYZ" firstAttribute="top" secondItem="ZQG-Pa-VIf" secondAttribute="bottom" id="buG-KA-yha"/>
                 <constraint firstAttribute="trailing" secondItem="ZQG-Pa-VIf" secondAttribute="trailing" id="iLQ-4V-dil"/>
