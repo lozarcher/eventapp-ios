@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "EventViewCell.h"
 #import "FontAwesomeKit/FAKFontAwesome.h"
+#import "HTHorizontalSelectionList/HTHorizontalSelectionList.h"
 #import <UserNotifications/UserNotifications.h>
 
-@interface EventListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate, UNUserNotificationCenterDelegate> {
+@interface EventListViewController : UIViewController <NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource, UITabBarDelegate, UNUserNotificationCenterDelegate, HTHorizontalSelectionListDataSource, HTHorizontalSelectionListDelegate> {
     NSArray *_events;
     NSArray *_categories;
     NSMutableArray *_filteredEvents;
@@ -22,6 +23,7 @@
 }
 
 @property (retain,nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet HTHorizontalSelectionList *categoriesListView;
 @property (retain,nonatomic) UIRefreshControl *refreshControl;
 @property (retain,nonatomic) UIActivityIndicatorView *spinner;
 @property (nonatomic, strong) EventViewCell *prototypeCell;

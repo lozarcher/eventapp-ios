@@ -15,6 +15,7 @@ def available_pods
     pod 'MWPhotoBrowser',  '~> 2.1.2'
     pod 'KILabel'
     pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
+    pod 'HTHorizontalSelectionList', '~> 0.7.4'
     pod 'FontAwesomeKit'
 end
 

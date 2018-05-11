@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventListViewController">
             <connections>
                 <outlet property="allEventsTab" destination="Y4d-GP-6K8" id="FpQ-hH-Fej"/>
+                <outlet property="categoriesListView" destination="ZQG-Pa-VIf" id="vB2-g7-hHp"/>
                 <outlet property="favouritesTab" destination="txq-zy-AdP" id="cVT-f8-kJh"/>
                 <outlet property="tabBar" destination="bAm-HN-moQ" id="TZd-Q2-Ex6"/>
                 <outlet property="tabBarHeight" destination="DvB-e0-umh" id="Bsg-9E-Ze8"/>
@@ -25,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-8L-gYZ">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <rect key="frame" x="0.0" y="50" width="375" height="568"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="AVb-K4-Okp"/>
@@ -46,16 +47,26 @@
                         <outlet property="delegate" destination="-1" id="W47-ma-2wS"/>
                     </connections>
                 </tabBar>
+                <view autoresizesSubviews="NO" contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQG-Pa-VIf" customClass="HTHorizontalSelectionList">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="BCa-BF-Pvx"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="bAm-HN-moQ" secondAttribute="trailing" id="H7M-q6-MER"/>
-                <constraint firstItem="KLF-8L-gYZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KOe-gy-rJQ"/>
                 <constraint firstItem="bAm-HN-moQ" firstAttribute="top" secondItem="KLF-8L-gYZ" secondAttribute="bottom" id="Knn-Kb-nhA"/>
                 <constraint firstAttribute="trailing" secondItem="KLF-8L-gYZ" secondAttribute="trailing" id="SW3-Ar-o7X"/>
                 <constraint firstItem="bAm-HN-moQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WaC-pA-tv4"/>
                 <constraint firstAttribute="bottom" secondItem="bAm-HN-moQ" secondAttribute="bottom" id="X1C-55-vg5"/>
                 <constraint firstItem="KLF-8L-gYZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZAg-YH-9OS"/>
+                <constraint firstItem="KLF-8L-gYZ" firstAttribute="top" secondItem="ZQG-Pa-VIf" secondAttribute="bottom" id="buG-KA-yha"/>
+                <constraint firstAttribute="trailing" secondItem="ZQG-Pa-VIf" secondAttribute="trailing" id="iLQ-4V-dil"/>
+                <constraint firstItem="ZQG-Pa-VIf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yJk-7Q-cEq"/>
+                <constraint firstItem="ZQG-Pa-VIf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zSt-T8-3wv"/>
             </constraints>
             <point key="canvasLocation" x="354.5" y="417.5"/>
         </view>

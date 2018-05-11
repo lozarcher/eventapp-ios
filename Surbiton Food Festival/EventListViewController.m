@@ -26,6 +26,8 @@
     [super viewDidLoad];
     tableView.dataSource = self;
     tableView.delegate = self;
+    self.categoriesListView.delegate = self;
+    self.categoriesListView.dataSource = self;
     
     //tableView.fd_debugLogEnabled = YES;
 
@@ -52,7 +54,6 @@
     NSString *aCachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     storePath = [NSString stringWithFormat:@"%@/Eventsv4.plist", aCachesDirectory];
     
-    self.title = NSLocalizedString(@"Event Calendar", nil);
     
     UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home.png"]
                                                                          style:UIBarButtonItemStylePlain target:self action:@selector(loadHome:)];
@@ -84,6 +85,26 @@
                         contentType:@"Events"
                           contentId:@"eventslist"
                    customAttributes:@{}];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    CGFloat bottomPadding = 50;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        if (window.safeAreaInsets.bottom > 0)
+            bottomPadding += window.safeAreaInsets.bottom;
+    }
+    self.tabBarHeight.constant = bottomPadding;
+    
+    self.title = NSLocalizedString(@"Event Calendar", nil);
+    [self setEdgesForExtendedLayout:NO];
+    UINavigationBar *bar = [self.navigationController navigationBar];
+    
+    [bar setBarTintColor:[UIColor colorWithRed:0.976 green:0.976 blue:0.976 alpha:1]];
+    [bar setTranslucent:NO];
 }
 
 //event handler when event occurs
@@ -134,22 +155,6 @@
     [appDelegate.homeViewController loadHome];
 }
 
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    CGFloat bottomPadding = 50;
-    if (@available(iOS 11.0, *)) {
-        UIWindow *window = UIApplication.sharedApplication.keyWindow;
-        if (window.safeAreaInsets.bottom > 0)
-            bottomPadding += window.safeAreaInsets.bottom;
-    }
-    self.tabBarHeight.constant = bottomPadding;
-    
-    [self setFilteredEvents];
-    [self createEventDays:_filteredEvents];
-    [tableView reloadData];
-}
 
 - (void) viewDidLayoutSubviews {
     self.spinner.center = self.view.center;
@@ -421,6 +426,7 @@
             NSLog(@"Using cached data");
             [self getEventsFromData:data];
             [tableView reloadData];
+            [self.categoriesListView reloadData];
         }
     }
     
@@ -442,6 +448,7 @@
     [self.refreshControl endRefreshing];
     [self getEventsFromData:receivedData];
     [tableView reloadData];
+    [self.categoriesListView reloadData];
     [self activateSpinner:NO];
     NSError* writeError;
     [receivedData writeToFile:storePath options:NSDataWritingAtomic error:&writeError];
@@ -486,9 +493,10 @@
     }
     NSLog(@"Got %lu events from data", (unsigned long)events.count);
     NSLog(@"Got %lu categories from data", (unsigned long)categories.count);
-
+    
     return error;
 }
+
 
 -(void)createEventDays:(NSArray *)events {
     [_eventDayKeys removeAllObjects];
@@ -536,6 +544,25 @@
             [spinner stopAnimating];
         }
     }
+}
+
+#pragma mark - HTHorizontalSelectionListDataSource Protocol Methods
+
+- (NSInteger)numberOfItemsInSelectionList:(HTHorizontalSelectionList *)selectionList {
+    NSLog(@"Number of items in category list %lu", (unsigned long)_categories.count);
+    return _categories.count;
+}
+
+- (NSString *)selectionList:(HTHorizontalSelectionList *)selectionList titleForItemWithIndex:(NSInteger)index {
+    Category *category = [_categories objectAtIndex:index];
+    NSLog(@"Loaded category into category list %@", category.category);
+    return category.category;
+}
+
+#pragma mark - HTHorizontalSelectionListDelegate Protocol Methods
+
+- (void)selectionList:(HTHorizontalSelectionList *)selectionList didSelectButtonWithIndex:(NSInteger)index {
+    // update the view for the corresponding index
 }
 
 @end
