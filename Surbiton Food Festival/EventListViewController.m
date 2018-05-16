@@ -101,6 +101,7 @@
     } else {
         NSLog(@"Error: did not receive cell in event list notification handler");
     }
+    [self.tableView reloadData];
 }
 
 -(void)setFilteredEvents {
