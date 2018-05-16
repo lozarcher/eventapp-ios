@@ -115,7 +115,7 @@
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    CGFloat leftSideHeight = 86;
+    CGFloat leftSideHeight = 101;
 
     CGFloat rightSideHeight = 0;
     size.width = size.width - 140;

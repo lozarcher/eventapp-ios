@@ -19,11 +19,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1GZ-Pa-6Fk">
-                        <rect key="frame" x="9" y="18.5" width="60" height="60"/>
+                        <rect key="frame" x="14" y="11" width="75" height="75"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="Evp-Vb-jkA"/>
+                            <constraint firstAttribute="height" constant="75" id="Evp-Vb-jkA"/>
                             <constraint firstAttribute="width" constant="70" id="KTL-G6-Ok1"/>
-                            <constraint firstAttribute="width" constant="60" id="V91-0a-oz9"/>
+                            <constraint firstAttribute="width" constant="75" id="V91-0a-oz9"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -32,7 +32,7 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnn-Z3-I8e">
-                        <rect key="frame" x="79" y="39" width="42" height="20.5"/>
+                        <rect key="frame" x="103" y="39" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -53,8 +53,8 @@
                     <constraint firstItem="c5w-qQ-GkR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cnn-Z3-I8e" secondAttribute="trailing" constant="10" id="KrZ-Ps-tIb"/>
                     <constraint firstAttribute="trailing" secondItem="c5w-qQ-GkR" secondAttribute="trailing" id="TmG-r8-4cD"/>
                     <constraint firstItem="c5w-qQ-GkR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VNE-xY-MDo"/>
-                    <constraint firstItem="cnn-Z3-I8e" firstAttribute="leading" secondItem="1GZ-Pa-6Fk" secondAttribute="trailing" constant="10" id="piQ-Wr-qyU"/>
-                    <constraint firstItem="1GZ-Pa-6Fk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="uI8-ad-e25"/>
+                    <constraint firstItem="cnn-Z3-I8e" firstAttribute="leading" secondItem="1GZ-Pa-6Fk" secondAttribute="trailing" constant="14" id="piQ-Wr-qyU"/>
+                    <constraint firstItem="1GZ-Pa-6Fk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="uI8-ad-e25"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

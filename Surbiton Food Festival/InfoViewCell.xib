@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNN-dO-tem">
-                        <rect key="frame" x="9" y="7" width="75" height="75"/>
+                        <rect key="frame" x="14" y="7" width="75" height="75"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="75" id="CJo-pc-jKi"/>
                             <constraint firstAttribute="width" constant="75" id="eXp-Jj-hEX"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM7-sZ-cwA">
-                        <rect key="frame" x="94" y="34" width="192" height="20.5"/>
+                        <rect key="frame" x="103" y="34" width="183" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -34,9 +34,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="hM7-sZ-cwA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1f9-nA-FcJ"/>
-                    <constraint firstItem="vNN-dO-tem" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="7lC-qN-EBI"/>
+                    <constraint firstItem="vNN-dO-tem" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="7lC-qN-EBI"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vNN-dO-tem" secondAttribute="bottom" constant="7" id="MOe-zy-Fmc"/>
-                    <constraint firstItem="hM7-sZ-cwA" firstAttribute="leading" secondItem="vNN-dO-tem" secondAttribute="trailing" constant="10" id="QgT-HX-GUA"/>
+                    <constraint firstItem="hM7-sZ-cwA" firstAttribute="leading" secondItem="vNN-dO-tem" secondAttribute="trailing" constant="14" id="QgT-HX-GUA"/>
                     <constraint firstItem="vNN-dO-tem" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="eow-eq-R2O"/>
                     <constraint firstAttribute="trailing" secondItem="hM7-sZ-cwA" secondAttribute="trailing" id="vdb-xM-Olz"/>
                 </constraints>

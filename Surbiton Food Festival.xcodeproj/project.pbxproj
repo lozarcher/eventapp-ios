@@ -57,6 +57,7 @@
 		AE7003D61C4CF99300556EF6 /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7003D01C4CF99300556EF6 /* PostViewCell.xib */; };
 		AE7202911AE5557300D2B730 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE72028F1AE5557300D2B730 /* PrivacyPolicyViewController.m */; };
 		AE7202921AE5557300D2B730 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
+		AE79DEE120AC3A9B00A376B1 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE56CBD20A5816D0010A427 /* Category.m */; };
 		AE835383205C353A007CD747 /* lefi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE835382205C353A007CD747 /* lefi.jpg */; };
 		AE835387205FDAB0007CD747 /* PostViewMoreCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE835385205FDAB0007CD747 /* PostViewMoreCellTableViewCell.m */; };
 		AE835388205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE835386205FDAB0007CD747 /* PostViewMoreCellTableViewCell.xib */; };
@@ -1051,7 +1052,9 @@
 				"${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/HTHorizontalSelectionList/HTHorizontalSelectionList.framework",
 				"${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework",
+				"${BUILT_PRODUCTS_DIR}/M13BadgeView/M13BadgeView.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -1064,7 +1067,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMAnalogClock.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTHorizontalSelectionList.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KILabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13BadgeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -1105,7 +1110,9 @@
 				"${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/HTHorizontalSelectionList/HTHorizontalSelectionList.framework",
 				"${BUILT_PRODUCTS_DIR}/KILabel/KILabel.framework",
+				"${BUILT_PRODUCTS_DIR}/M13BadgeView/M13BadgeView.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -1118,7 +1125,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMAnalogClock.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTHorizontalSelectionList.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KILabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13BadgeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -1235,6 +1244,7 @@
 				AEDD1A5520663ECE001BD259 /* InfoViewController.m in Sources */,
 				AEDD1A5620663ECE001BD259 /* EventBuilder.m in Sources */,
 				AEDD1A5720663ECE001BD259 /* EventViewCell.m in Sources */,
+				AE79DEE120AC3A9B00A376B1 /* Category.m in Sources */,
 				AEDD1A5820663ECE001BD259 /* GalleryBuilder.m in Sources */,
 				AEDD1A5920663ECE001BD259 /* MTConfiguration.m in Sources */,
 				AEDD1A5A20663ECE001BD259 /* InfoViewCell.m in Sources */,
@@ -1312,7 +1322,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/loz/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/IYAF skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1340,7 +1349,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/loz/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/IYAF skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1350,10 +1358,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"$(inherited)",
-					"-ObjC",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1373,7 +1378,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/loz/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/IYAF skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1383,10 +1387,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"$(inherited)",
-					"-ObjC",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1406,7 +1407,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/loz/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/IYAF skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1485,7 +1485,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/loz/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/Surbiton Food skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1495,10 +1494,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"$(inherited)",
-					"-ObjC",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1569,7 +1565,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/loz/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/Surbiton Food skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1579,10 +1574,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"$(inherited)",
-					"-ObjC",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1697,7 +1689,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/loz/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/Surbiton Food skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1725,7 +1716,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/loz/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Surbiton Food Festival/Surbiton Food skin/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
