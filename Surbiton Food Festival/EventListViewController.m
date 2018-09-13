@@ -168,7 +168,7 @@
         content.body = [NSString localizedUserNotificationStringForKey:message
                                                              arguments:nil];
         content.sound = [UNNotificationSound defaultSound];
-        [content setValue:@(YES) forKey:@"shouldAlwaysAlertWhileAppIsForeground"];
+        //[content setValue:@(YES) forKey:@"shouldAlwaysAlertWhileAppIsForeground"];
         
         NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
         NSDateComponents *timeOffset= [[NSDateComponents alloc] init];
