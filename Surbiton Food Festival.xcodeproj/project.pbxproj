@@ -13,7 +13,6 @@
 		AE097BA42055BB2B00CAEAF0 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE097BA02055BB2B00CAEAF0 /* EventViewController.m */; };
 		AE1382631AA1422B00714884 /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382621AA1422B00714884 /* Voucher.m */; };
 		AE1382661AA1426D00714884 /* VoucherBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1382651AA1426D00714884 /* VoucherBuilder.m */; };
-		AE17783620669D230037E3D3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE60A08920664DC400592997 /* Info.plist */; };
 		AE17783C2066BAD80037E3D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE17783B2066BAD80037E3D3 /* Images.xcassets */; };
 		AE1778402066BC1B0037E3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE17783F2066BC1A0037E3D3 /* LaunchScreen.storyboard */; };
 		AE1778432066BD160037E3D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1778412066BD120037E3D3 /* Images.xcassets */; };
@@ -174,7 +173,6 @@
 		AEDD1AAF20663ECE001BD259 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1BCBB21A9FC9C700E79935 /* reveal-icon.png */; };
 		AEDD1AB020663ECE001BD259 /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7202901AE5557300D2B730 /* PrivacyPolicyViewController.xib */; };
 		AEDD1AB220663ECE001BD259 /* EventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE097B9F2055BB2B00CAEAF0 /* EventViewCell.xib */; };
-		AEDD1ABF20663F2C001BD259 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF8BC441A7CEC8A007241DC /* Info.plist */; };
 		AEE46FA51AB875C000F52708 /* UIButtonBarCompose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA41AB875C000F52708 /* UIButtonBarCompose@2x.png */; };
 		AEE46FA71AB8764900F52708 /* UIAccessoryButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA61AB8764900F52708 /* UIAccessoryButtonX@2x.png */; };
 		AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE46FA81AB8865900F52708 /* bell-lg-outline@2x.png */; };
@@ -927,7 +925,6 @@
 				AEDD1A8020663ECE001BD259 /* Configurations.plist in Resources */,
 				AEDD1A8120663ECE001BD259 /* Home@2x.png in Resources */,
 				AE5DF8982092258D0012CF0B /* app_background_0444.png in Resources */,
-				AE17783620669D230037E3D3 /* Info.plist in Resources */,
 				AEDD1A8220663ECE001BD259 /* bell-lg-outline@2x.png in Resources */,
 				AEDD1A8420663ECE001BD259 /* EventListViewController.xib in Resources */,
 				AEDD1A8920663ECE001BD259 /* TraderViewController.xib in Resources */,
@@ -982,7 +979,6 @@
 				AE83538A20602638007CD747 /* Screenshots in Resources */,
 				AEC425451AD913ED0021049E /* cutlery_spoon.png in Resources */,
 				AEEF3D231AD3F096003256FD /* blue-plate.png in Resources */,
-				AEDD1ABF20663F2C001BD259 /* Info.plist in Resources */,
 				AEF520951A9E2C1000C05D84 /* Configurations.plist in Resources */,
 				AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */,
 				AEE46FA91AB8865900F52708 /* bell-lg-outline@2x.png in Resources */,
@@ -1182,7 +1178,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\n\n#Grabs info from plist\nplist=$SRCROOT\"/\"$INFOPLIST_FILE\n\n\"${PODS_ROOT}/Fabric/run\" f33e96542099ca70ea2f9d5bc4ecb316653b3e9f de0c468ef04b433a8882b55fea5a413391fd2346466b2c4208db4939bd2f05b8";
+			shellScript = "#!/bin/sh\n\n#Grabs info from plist\nplist=$SRCROOT\"/\"$INFOPLIST_FILE\n\n\"${PODS_ROOT}/Fabric/run\" f33e96542099ca70ea2f9d5bc4ecb316653b3e9f de0c468ef04b433a8882b55fea5a413391fd2346466b2c4208db4939bd2f05b8\n";
 		};
 		F255EA515077C1DC10D6FD5C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1358,7 +1354,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1387,7 +1386,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.IYAF-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1494,7 +1496,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1574,7 +1579,10 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spirit-of-seething.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
