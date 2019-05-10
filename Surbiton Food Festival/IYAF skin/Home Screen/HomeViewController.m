@@ -145,11 +145,11 @@
 -(UIImage *)backgroundImageForScreenSize:(CGSize)size {
     NSArray *backgroundImages = [NSArray
                                       arrayWithObjects:
-                                            @"IYAF1.jpg",
-                                            @"IYAF2.jpg",
-                                            @"IYAF3.jpg",
-                                            @"IYAF4.jpg",
-                                            @"IYAF5.jpg", nil];
+                                            @"iyaf1.jpg",
+                                            @"iyaf2.jpg",
+                                            @"iyaf3.jpg",
+                                            @"iyaf4.jpg",
+                                            @"iyaf5.jpg", nil];
     
     uint32_t rndImageIndex = arc4random_uniform([backgroundImages count]);
     NSString *randomImage = [backgroundImages objectAtIndex:rndImageIndex];
