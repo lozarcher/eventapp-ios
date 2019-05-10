@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "537644FCBA500ECC9EFB464AA28E0249"
+               BlueprintIdentifier = "86A13310D39E03A2D65D294F6EDB9A1F"
                BlueprintName = "KILabel"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "KILabel.framework">

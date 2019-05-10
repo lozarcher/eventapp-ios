@@ -70,13 +70,19 @@
     [self.rearViewController tableView:self.rearViewController.rearTableView didSelectRowAtIndexPath:indexPath];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     // Position menu according to runtime position of the background images
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     int screenHeight = screenSize.height;
     
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+
     [self.backgroundImage setImage:[self backgroundImageForScreenSize:screenSize]];
     [self.backgroundImage setNeedsDisplay];
     
@@ -137,39 +143,31 @@
 }
 
 -(UIImage *)backgroundImageForScreenSize:(CGSize)size {
-    NSDictionary *backgroundImages = [NSDictionary
-                                      dictionaryWithObjects:
-                                           [NSArray arrayWithObjects:
-                                            @"app_background_0444.png",
-                                            @"app_background_0562.png",
-                                            @"app_background_0766.png", nil]
-                                      forKeys:
-                                          [NSArray arrayWithObjects:
-                                           [NSNumber numberWithFloat:0.444f],
-                                           [NSNumber numberWithFloat:0.562f],
-                                           [NSNumber numberWithFloat:0.766f], nil]
-                                          ];
+    NSArray *backgroundImages = [NSArray
+                                      arrayWithObjects:
+                                            @"IYAF1.jpg",
+                                            @"IYAF2.jpg",
+                                            @"IYAF3.jpg",
+                                            @"IYAF4.jpg",
+                                            @"IYAF5.jpg", nil];
     
-    NSNumber *screenAspect = [NSNumber numberWithFloat:(size.width / size.height)];
-    NSLog(@"Screen size is %f %f", size.width, size.height);
-    NSLog(@"Aspect is %f", [screenAspect floatValue]);
+    uint32_t rndImageIndex = arc4random_uniform([backgroundImages count]);
+    NSString *randomImage = [backgroundImages objectAtIndex:rndImageIndex];
 
-    float bestDistance = 999.0;
-    NSString *bestImageFile = 0;
-    for (NSNumber *imageAspect in [backgroundImages allKeys]) {
-        NSLog(@"Comparing aspect with %f", [imageAspect floatValue]);
-        float thisDistance = fabsf([screenAspect floatValue] - [imageAspect floatValue]);
-        if (thisDistance < bestDistance) {
-            bestDistance = thisDistance;
-            bestImageFile = [backgroundImages objectForKey:imageAspect];
-            NSLog(@"Best aspect so far is %f", [imageAspect floatValue]);
-            NSLog(@"This is image %@", bestImageFile);
-        }
+    NSLog(@"Background Image : %@", randomImage);
+    CGFloat safeArea;
+
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        safeArea = window.safeAreaInsets.top;
+    } else {
+        safeArea = 0.0;
     }
+    NSLog(@"Safe area : %f", safeArea);
+
+    self.topMargin.constant = 35 + safeArea;
     
-    NSLog(@"Best image : %@", bestImageFile);
-    
-    return [UIImage imageNamed:bestImageFile];
+    return [UIImage imageNamed:randomImage];
 }
 
 

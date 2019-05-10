@@ -39,12 +39,6 @@
 		AE5DF899209225900012CF0B /* app_background_0766.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5DF89020921BFF0012CF0B /* app_background_0766.png */; };
 		AE5DF89A209225930012CF0B /* app_background_0562.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5DF89320921C000012CF0B /* app_background_0562.png */; };
 		AE5DF89B209225990012CF0B /* black_on_white in Resources */ = {isa = PBXBuildFile; fileRef = AE5DF89120921C000012CF0B /* black_on_white */; };
-		AE60A06D206649F100592997 /* menu_events.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05B2066496E00592997 /* menu_events.png */; };
-		AE60A06E206649F400592997 /* menu_gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05A2066496D00592997 /* menu_gallery.png */; };
-		AE60A06F206649F700592997 /* menu_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05C2066496E00592997 /* menu_info.png */; };
-		AE60A070206649FA00592997 /* menu_news.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05E2066496E00592997 /* menu_news.png */; };
-		AE60A071206649FD00592997 /* menu_performers.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05D2066496E00592997 /* menu_performers.png */; };
-		AE60A07220664A0000592997 /* menu_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = AE60A05F2066496E00592997 /* menu_twitter.png */; };
 		AE60A08620664D5200592997 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEEF3D391AD5B17E003256FD /* HomeViewController.xib */; };
 		AE60A08720664D6400592997 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE60A07720664BB100592997 /* HomeViewController.m */; };
 		AE60A08820664D6700592997 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE60A07820664BB100592997 /* HomeViewController.xib */; };
@@ -77,6 +71,18 @@
 		AE9E64A4206A51FB00863DDD /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9E64A2206A4F4400863DDD /* keys.plist */; };
 		AEAE299E1C848B5200533C60 /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEAE299D1C848B5200533C60 /* Home@2x.png */; };
 		AEAE29A21C8839B000533C60 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEAE29A11C8839B000533C60 /* Podfile */; };
+		AEB8265F228600F40058EA16 /* IYAF1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEB8265A228600F20058EA16 /* IYAF1.jpg */; };
+		AEB82660228600F40058EA16 /* IYAF5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEB8265B228600F20058EA16 /* IYAF5.jpg */; };
+		AEB82661228600F40058EA16 /* IYAF4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEB8265C228600F30058EA16 /* IYAF4.jpg */; };
+		AEB82662228600F40058EA16 /* IYAF3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEB8265D228600F40058EA16 /* IYAF3.jpg */; };
+		AEB82663228600F40058EA16 /* IYAF2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEB8265E228600F40058EA16 /* IYAF2.jpg */; };
+		AEB8266B228603200058EA16 /* menu_events.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB82667228602ED0058EA16 /* menu_events.png */; };
+		AEB8266C228603230058EA16 /* menu_gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB82669228602EE0058EA16 /* menu_gallery.png */; };
+		AEB8266D228603250058EA16 /* menu_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB82668228602EE0058EA16 /* menu_info.png */; };
+		AEB8266E228603270058EA16 /* menu_news.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB82665228602ED0058EA16 /* menu_news.png */; };
+		AEB8266F2286032A0058EA16 /* menu_performers.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB8266A228602EE0058EA16 /* menu_performers.png */; };
+		AEB826702286032C0058EA16 /* menu_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB82666228602ED0058EA16 /* menu_twitter.png */; };
+		AEB82672228603870058EA16 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB82671228603870058EA16 /* logo.png */; };
 		AEB9DB2E1A90C559008C6329 /* TweetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */; };
 		AEB9DB311A90C564008C6329 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB9DB301A90C564008C6329 /* Tweet.m */; };
 		AEB9FFE520652AE000F60E67 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB9FFE420652AE000F60E67 /* UserNotifications.framework */; };
@@ -312,6 +318,18 @@
 		AE9E64A2206A4F4400863DDD /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		AEAE299D1C848B5200533C60 /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
 		AEAE29A11C8839B000533C60 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AEB8265A228600F20058EA16 /* IYAF1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IYAF1.jpg; sourceTree = "<group>"; };
+		AEB8265B228600F20058EA16 /* IYAF5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IYAF5.jpg; sourceTree = "<group>"; };
+		AEB8265C228600F30058EA16 /* IYAF4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IYAF4.jpg; sourceTree = "<group>"; };
+		AEB8265D228600F40058EA16 /* IYAF3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IYAF3.jpg; sourceTree = "<group>"; };
+		AEB8265E228600F40058EA16 /* IYAF2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IYAF2.jpg; sourceTree = "<group>"; };
+		AEB82665228602ED0058EA16 /* menu_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_news.png; sourceTree = "<group>"; };
+		AEB82666228602ED0058EA16 /* menu_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_twitter.png; sourceTree = "<group>"; };
+		AEB82667228602ED0058EA16 /* menu_events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_events.png; sourceTree = "<group>"; };
+		AEB82668228602EE0058EA16 /* menu_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_info.png; sourceTree = "<group>"; };
+		AEB82669228602EE0058EA16 /* menu_gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_gallery.png; sourceTree = "<group>"; };
+		AEB8266A228602EE0058EA16 /* menu_performers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_performers.png; sourceTree = "<group>"; };
+		AEB82671228603870058EA16 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		AEB9DB2C1A90C559008C6329 /* TweetBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetBuilder.h; sourceTree = "<group>"; };
 		AEB9DB2D1A90C559008C6329 /* TweetBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetBuilder.m; sourceTree = "<group>"; };
 		AEB9DB2F1A90C564008C6329 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
@@ -524,17 +542,24 @@
 		AE60A07A20664BB700592997 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AEB82671228603870058EA16 /* logo.png */,
+				AEB82667228602ED0058EA16 /* menu_events.png */,
+				AEB82669228602EE0058EA16 /* menu_gallery.png */,
+				AEB82668228602EE0058EA16 /* menu_info.png */,
+				AEB82665228602ED0058EA16 /* menu_news.png */,
+				AEB8266A228602EE0058EA16 /* menu_performers.png */,
+				AEB82666228602ED0058EA16 /* menu_twitter.png */,
+				AEB82664228602DA0058EA16 /* white_on_black */,
+				AEB8265A228600F20058EA16 /* IYAF1.jpg */,
+				AEB8265E228600F40058EA16 /* IYAF2.jpg */,
+				AEB8265D228600F40058EA16 /* IYAF3.jpg */,
+				AEB8265C228600F30058EA16 /* IYAF4.jpg */,
+				AEB8265B228600F20058EA16 /* IYAF5.jpg */,
 				AE5DF89220921C000012CF0B /* app_background_0444.png */,
 				AE5DF89020921BFF0012CF0B /* app_background_0766.png */,
 				AE5DF89320921C000012CF0B /* app_background_0562.png */,
 				AE5DF89120921C000012CF0B /* black_on_white */,
 				AE1778492066C2510037E3D3 /* creativeyouth.png */,
-				AE60A05B2066496E00592997 /* menu_events.png */,
-				AE60A05A2066496D00592997 /* menu_gallery.png */,
-				AE60A05C2066496E00592997 /* menu_info.png */,
-				AE60A05E2066496E00592997 /* menu_news.png */,
-				AE60A05D2066496E00592997 /* menu_performers.png */,
-				AE60A05F2066496E00592997 /* menu_twitter.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -636,6 +661,19 @@
 				AEF520961A9E2C7600C05D84 /* MTConfiguration.h */,
 			);
 			name = CoreApp;
+			sourceTree = "<group>";
+		};
+		AEB82664228602DA0058EA16 /* white_on_black */ = {
+			isa = PBXGroup;
+			children = (
+				AE60A05B2066496E00592997 /* menu_events.png */,
+				AE60A05A2066496D00592997 /* menu_gallery.png */,
+				AE60A05C2066496E00592997 /* menu_info.png */,
+				AE60A05E2066496E00592997 /* menu_news.png */,
+				AE60A05D2066496E00592997 /* menu_performers.png */,
+				AE60A05F2066496E00592997 /* menu_twitter.png */,
+			);
+			path = white_on_black;
 			sourceTree = "<group>";
 		};
 		AEBA91B51C885ECD00708484 /* Gallery */ = {
@@ -887,6 +925,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -907,13 +946,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEDD1A6920663ECE001BD259 /* EventViewController.xib in Resources */,
+				AEB8266E228603270058EA16 /* menu_news.png in Resources */,
 				AEDD1A6A20663ECE001BD259 /* PostViewCell.xib in Resources */,
 				AEDD1A6B20663ECE001BD259 /* TraderListViewController.xib in Resources */,
-				AE60A070206649FA00592997 /* menu_news.png in Resources */,
 				AEDD1A6E20663ECE001BD259 /* VenueViewController.xib in Resources */,
+				AEB82661228600F40058EA16 /* IYAF4.jpg in Resources */,
 				AEDD1A6F20663ECE001BD259 /* PostListViewController.xib in Resources */,
 				AEDD1A7120663ECE001BD259 /* logo.jpg in Resources */,
 				AEDD1A7320663ECE001BD259 /* InfoViewController.xib in Resources */,
+				AEB8266F2286032A0058EA16 /* menu_performers.png in Resources */,
 				AE17784C2066C28D0037E3D3 /* creativeyouth.png in Resources */,
 				AE1778462066C16C0037E3D3 /* LaunchScreen.storyboard in Resources */,
 				AEDD1A7420663ECE001BD259 /* KingstonPound-small-15.png in Resources */,
@@ -921,6 +962,7 @@
 				AEDD1A7920663ECE001BD259 /* reveal-icon@2x.png in Resources */,
 				AEDD1A7A20663ECE001BD259 /* pin.png in Resources */,
 				AE60A08820664D6700592997 /* HomeViewController.xib in Resources */,
+				AEB82662228600F40058EA16 /* IYAF3.jpg in Resources */,
 				AEDD1A7C20663ECE001BD259 /* Screenshots in Resources */,
 				AEDD1A8020663ECE001BD259 /* Configurations.plist in Resources */,
 				AEDD1A8120663ECE001BD259 /* Home@2x.png in Resources */,
@@ -931,24 +973,27 @@
 				AE5DF89B209225990012CF0B /* black_on_white in Resources */,
 				AEDD1A8B20663ECE001BD259 /* PostViewMoreCellTableViewCell.xib in Resources */,
 				AEDD1A8F20663ECE001BD259 /* InfoViewCell.xib in Resources */,
+				AEB82672228603870058EA16 /* logo.png in Resources */,
 				AE1778432066BD160037E3D3 /* Images.xcassets in Resources */,
-				AE60A06F206649F700592997 /* menu_info.png in Resources */,
+				AEB8266C228603230058EA16 /* menu_gallery.png in Resources */,
 				AEDD1A9120663ECE001BD259 /* AboutAppViewController.xib in Resources */,
 				AEDD1A9220663ECE001BD259 /* UIButtonBarCompose@2x.png in Resources */,
+				AEB8266B228603200058EA16 /* menu_events.png in Resources */,
 				AE5DF89A209225930012CF0B /* app_background_0562.png in Resources */,
 				AEDD1A9320663ECE001BD259 /* Podfile in Resources */,
 				AEDD1A9420663ECE001BD259 /* InfoListViewController.xib in Resources */,
 				AE9E64A4206A51FB00863DDD /* keys.plist in Resources */,
 				AEDD1A9520663ECE001BD259 /* TraderViewCell.xib in Resources */,
+				AEB8265F228600F40058EA16 /* IYAF1.jpg in Resources */,
 				AEDD1A9620663ECE001BD259 /* camera-icon@2x.png in Resources */,
-				AE60A071206649FD00592997 /* menu_performers.png in Resources */,
-				AE60A07220664A0000592997 /* menu_twitter.png in Resources */,
 				AE5DF899209225900012CF0B /* app_background_0766.png in Resources */,
+				AEB8266D228603250058EA16 /* menu_info.png in Resources */,
 				AEDD1A9E20663ECE001BD259 /* RearViewController.xib in Resources */,
 				AEDD1A9F20663ECE001BD259 /* UIAccessoryButtonX@2x.png in Resources */,
+				AEB826702286032C0058EA16 /* menu_twitter.png in Resources */,
+				AEB82660228600F40058EA16 /* IYAF5.jpg in Resources */,
 				AEDD1AA020663ECE001BD259 /* UploadPhotoViewController.xib in Resources */,
-				AE60A06E206649F400592997 /* menu_gallery.png in Resources */,
-				AE60A06D206649F100592997 /* menu_events.png in Resources */,
+				AEB82663228600F40058EA16 /* IYAF2.jpg in Resources */,
 				AEDD1AAC20663ECE001BD259 /* bell-lg-filled@2x.png in Resources */,
 				AEDD1AAF20663ECE001BD259 /* reveal-icon.png in Resources */,
 				AEDD1AB020663ECE001BD259 /* PrivacyPolicyViewController.xib in Resources */,
@@ -1024,18 +1069,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4E4C852E7C343348CB16F56E /* [CP] Embed Pods Frameworks */ = {
@@ -1044,7 +1087,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
@@ -1075,7 +1118,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-International Youth Arts Festival/Pods-International Youth Arts Festival-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F574B9DE8BDAC12C83C89F0 /* [CP] Check Pods Manifest.lock */ = {
@@ -1102,7 +1145,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BEMAnalogClock/BEMAnalogClock.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
@@ -1133,7 +1176,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E088F43AD1993089F7C5BAC /* [CP] Check Pods Manifest.lock */ = {
@@ -1186,18 +1229,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Surbiton Food Festival/Pods-Surbiton Food Festival-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
